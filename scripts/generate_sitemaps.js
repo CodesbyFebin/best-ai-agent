@@ -55,7 +55,7 @@ function imageSitemap() {
 }
 
 const sitemapGroups = {
-  "ai-agent-sitemap.xml": routes.filter((r) => ["core", "pillars", "guides", "research", "buyers-guides", "reddit", "entity", "india-geo", "directories", "Buyer Guides", "Reddit & Community Intent", "Entity Pages", "India GEO Targeting", "Directories", "Open Source AI Agents", "Security & Compliance", "Industry AI Agents", "Longtail Engine", "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence", "Voice AI Agents", "Business AI Agents", "AI Agent Builders", "Coding Agents", "MCP Servers", "Glossary", "Tutorials", "Alternatives", "Free AI Agents"].includes(r.category)),
+  "ai-agent-sitemap.xml": routes.filter((r) => ["core", "pillars", "guides", "research", "buyers-guides", "reddit", "entity", "india-geo", "directories", "Buyer Guides", "Reddit & Community Intent", "Entity Pages", "India GEO Targeting", "Directories", "Open Source AI Agents", "Security & Compliance", "Industry AI Agents", "Longtail Engine", "Long-tail Guides", "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence", "Voice AI Agents", "Business AI Agents", "AI Agent Builders", "Coding Agents", "MCP Servers", "Glossary", "Tutorials", "Alternatives", "Free AI Agents"].includes(r.category)),
   "tool-sitemap.xml": routes.filter((r) => ["reviews", "tools", "Tool Reviews", "Tool Profiles"].includes(r.category)),
   "comparison-sitemap.xml": routes.filter((r) => r.category === "comparisons" || r.category === "Comparisons"),
   "pricing-sitemap.xml": routes.filter((r) => r.category === "pricing" || r.category === "Pricing" || r.category === "Pricing Intelligence"),
@@ -135,7 +135,7 @@ write("indexnow-key.txt", INDEXNOW_KEY);
 write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 const feedItems = routes
-  .filter((r) => ["core", "pillars", "reviews", "tools", "comparisons", "pricing", "alternatives", "tutorials", "glossary", "mcp", "buyers-guides", "entity", "india-geo", "directories", "reddit", "calculators"].includes(r.category))
+  .filter((r) => ["core", "pillars", "reviews", "tools", "comparisons", "pricing", "alternatives", "tutorials", "glossary", "mcp", "buyers-guides", "entity", "india-geo", "directories", "reddit", "calculators", "longtail"].includes(r.category))
   .sort((a, b) => b.priority.localeCompare(a.priority))
   .slice(0, 30);
 
@@ -197,6 +197,7 @@ write("llms.txt", [
   section("Directories", routes.filter((r) => r.category === "directories")),
   section("Reddit Reviews", routes.filter((r) => r.category === "reddit")),
   section("Calculators", routes.filter((r) => r.category === "calculators")),
+  section("Longtail Guides", routes.filter((r) => r.category === "longtail")),
   section("Security and Compliance", routes.filter((r) => ["guides", "editorial"].includes(r.category))),
   "## Authors",
   ...AUTHORS.map((author) => `- [${author.name}](${SITE_URL}/authors/${author.slug}) - ${author.role}. ${author.description}`),

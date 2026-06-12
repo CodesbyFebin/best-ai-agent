@@ -1,0 +1,21 @@
+{
+  "name": "BestAIAgent.in",
+  "short_name": "BestAIAgent",
+  "description": "India's trusted AI agent review platform with INR pricing, DPDP compliance checks, and expert reviews.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "icons": [
+    {
+      "src": "/assets/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

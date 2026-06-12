@@ -154,6 +154,16 @@ export const EDITORIAL_ROUTES = [
     description: "Affiliate disclosure and pricing disclaimer for BestAIAgent.in. We may earn commissions without making fake partnership claims.",
   },
   {
+    path: "/corrections-policy",
+    title: "Corrections Policy",
+    description: "How BestAIAgent.in corrects factual errors, updates pricing, and verifies AI agent information.",
+  },
+  {
+    path: "/about-editorial-team",
+    title: "About Editorial Team",
+    description: "Meet the BestAIAgent.in editorial team: former engineers, procurement specialists, and AI researchers focused on India-market relevance.",
+  },
+  {
     path: "/contact",
     title: "Contact BestAIAgent.in",
     description: "Contact the BestAIAgent.in editorial team for corrections, review updates, vendor submissions, and AI agent research requests.",

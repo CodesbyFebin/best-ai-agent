@@ -321,20 +321,20 @@ function formatSlug(slug: string) {
 }
 
 export default function ProductProfile({ product, onBack, onCompare, isInCompareList, routeTo }: ProductProfileProps) {
-  const extra = productExtraDetails[product.slug] || productExtraDetails['cursor-ai'];
+  const extra = productExtraDetails[product.slug];
   const asset = getToolAsset(product.slug);
   const screenshotSrc = asset.screenshot || defaultAsset.screenshot;
   const screenshotAlt = asset.screenshotAlt || `${product.name} workspace and AI agent interface preview`;
   const [copiedUrl, setCopiedUrl] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'benchmarks' | 'code' | 'alternatives' | 'reviews'>('overview');
-  const reviewResources = reviewResourceMap[product.slug] || reviewResourceMap['cursor-ai'];
+  const reviewResources = reviewResourceMap[product.slug];
   const resourceGroups = [
-    { label: 'Pricing', slugs: [reviewResources.pricing], view: 'article' },
-    { label: 'Alternatives', slugs: [reviewResources.alternatives], view: 'article' },
-    { label: 'Comparisons', slugs: Array.from(new Set([...(product.comparisonSlugs || []), ...reviewResources.comparisons])), view: 'compare' },
-    { label: 'Tutorial', slugs: [reviewResources.tutorial], view: 'article' },
-    { label: 'Entity', slugs: [reviewResources.entity], view: 'article' },
-    { label: 'Category hub', slugs: [reviewResources.category], view: 'article' },
+    { label: 'Pricing', slugs: [reviewResources?.pricing].filter(Boolean), view: 'article' },
+    { label: 'Alternatives', slugs: [reviewResources?.alternatives].filter(Boolean), view: 'article' },
+    { label: 'Comparisons', slugs: Array.from(new Set([...(product.comparisonSlugs || []), ...(reviewResources?.comparisons || [])])), view: 'compare' },
+    { label: 'Tutorial', slugs: [reviewResources?.tutorial].filter(Boolean), view: 'article' },
+    { label: 'Entity', slugs: [reviewResources?.entity].filter(Boolean), view: 'article' },
+    { label: 'Category hub', slugs: [reviewResources?.category].filter(Boolean), view: 'article' },
   ];
 
   const handleCopyUrl = () => {
@@ -345,93 +345,8 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
     });
   };
 
-  // Generate machine-readable JSON-LD Schema payloads for Review and SoftwareApplication
-  const jsonLdMarkup = useMemo(() => {
-    const numericPriceMatch = product.startingPriceUSD.match(/\d+(\.\d+)?/);
-    const numericPrice = numericPriceMatch ? parseFloat(numericPriceMatch[0]) : 0;
-
-    const softwareAppSchema = {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": product.name,
-      "operatingSystem": "All",
-      "applicationCategory": "DeveloperApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": numericPrice,
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": product.overallScore,
-        "bestRating": "10",
-        "ratingCount": "157"
-      }
-    };
-
-    const reviewSchema = {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "SoftwareApplication",
-        "name": product.name,
-        "image": `https://bestaiagent.in${asset.logo}`
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": product.overallScore,
-        "bestRating": "10",
-        "worstRating": "1"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Arshdeep Singh"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "BestAIAgent.in",
-        "url": "https://bestaiagent.in"
-      },
-      "reviewBody": product.summary,
-      "positiveNotes": {
-        "@type": "ItemList",
-        "itemListElement": product.pros.map((p, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "name": p
-        }))
-      },
-      "negativeNotes": {
-        "@type": "ItemList",
-        "itemListElement": product.cons.map((c, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "name": c
-        }))
-      },
-      "reviewAspects": [
-        "Ease of Use: " + product.scores.easeOfUse,
-        "Features Depth: " + product.scores.features,
-        "Documentation & SDKs: " + product.scores.docs,
-        "APIs & Ecosystem: " + product.scores.integrations,
-        "Value for Money: " + product.scores.value,
-        "System Reliability: " + product.scores.reliability,
-        "India Localization Fit: " + product.scores.indiaFit,
-        "Enterprise Scalability: " + product.scores.scalability
-      ]
-    };
-
-    return [softwareAppSchema, reviewSchema];
-  }, [asset.logo, product]);
-
   return (
     <div className="space-y-8" id={`product-profile-${product.id}`}>
-
-      {/* Dynamic machine-readable JSON-LD Schema Injector */}
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLdMarkup)}
-      </script>
-
       {/* Custom visual indicator highlighting active AEO optimized schemas */}
       <div className="bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-blue-500/5 border border-emerald-150 rounded-xl p-3 flex items-center justify-between text-xs text-slate-700">
         <div className="flex items-center gap-2">
@@ -573,7 +488,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
       {/* Tabs Menu */}
       <div className="border-b border-slate-200">
         <div className="flex flex-wrap -mb-px gap-2">
-          {(['overview', 'benchmarks', 'code', 'alternatives', 'reviews'] as const).map((tab) => (
+          {(['overview', 'benchmarks', 'code', 'alternatives', 'reviews'] as const).filter(tab => tab === 'overview' || extra).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -659,7 +574,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
               </div>
 
               {/* Hand-on Real World use Cases */}
-              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+              {extra && <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
                 <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
                   <Sliders className="w-5 h-5 text-emerald-600" /> Real-world deployment scenarios
                 </h3>
@@ -671,7 +586,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>}
 
               <section className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4" aria-labelledby="workspace-preview">
                 <h3 id="workspace-preview" className="text-base font-bold text-slate-950 flex items-center gap-1.5">
@@ -768,7 +683,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           )}
 
           {/* TAB: BENCHMARKS */}
-          {activeTab === 'benchmarks' && (
+          {activeTab === 'benchmarks' && extra && (
             <div className="space-y-6">
               <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
                 <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
@@ -802,7 +717,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           )}
 
           {/* TAB: CODE EXAMPLES */}
-          {activeTab === 'code' && (
+          {activeTab === 'code' && extra && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
               <div className="border-b pb-3 flex justify-between items-center flex-wrap gap-2">
                 <div>
@@ -821,7 +736,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           )}
 
           {/* TAB: ALTERNATIVES */}
-          {activeTab === 'alternatives' && (
+          {activeTab === 'alternatives' && extra && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
               <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
                 <ArrowLeftRight className="w-5 h-5 text-emerald-600" /> Non-commodity alternatives matrix
@@ -845,7 +760,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           )}
 
           {/* TAB: REVIEWS */}
-          {activeTab === 'reviews' && (
+          {activeTab === 'reviews' && extra && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
               <div className="border-b pb-3">
                 <h3 className="text-base font-bold text-slate-950">Curated practitioner evaluations</h3>
@@ -967,9 +882,9 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
             </button>
           </div>
 
-          </div>
-
         </div>
+
       </div>
-    );
-  }
+    </div>
+  );
+}

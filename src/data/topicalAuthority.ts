@@ -351,6 +351,9 @@ const clusters: TopicalCluster[] = [
     P('best-ai-agent-for-seo', 'Best AI Agent for SEO', 'AI agents for SEO workflows, content briefs, internal linking, and technical audits.', 0.72, 'best ai agent for seo'),
     P('best-ai-agent-for-linkedin', 'Best AI Agent for LinkedIn', 'AI agents for LinkedIn outreach, content, lead generation, and CRM follow-up.', 0.70, 'best ai agent for linkedin'),
     P('vapi-for-appointment-booking', 'Vapi for Appointment Booking', 'How Vapi fits appointment booking, lead qualification, and call routing workflows.', 0.70, 'vapi for appointment booking'),
+    P('best-ai-agent-for-lawyers', 'Best AI Agent for Lawyers', 'AI agents for legal research, contract review, case analysis, and compliance for Indian law firms.', 0.75, 'best ai agent for lawyers'),
+    P('best-ai-agent-for-recruiters', 'Best AI Agent for Recruiters', 'AI agents for candidate screening, interview scheduling, resume parsing, and communication.', 0.74, 'best ai agent for recruiters'),
+    P('best-ai-agent-for-schools', 'Best AI Agent for Schools', 'AI agents for student tutoring, parent communication, homework help, and admin automation.', 0.73, 'best ai agent for schools'),
   ]},
 ];
 

@@ -4,6 +4,100 @@ import type { SiloPage, FAQItem } from './silos';
 // Manual silo pages with rich content
 const manualSiloPages: SiloPage[] = [
   // =========================================================
+  // SILO 0: EDITORIAL & TRUST PILLAR
+  // =========================================================
+  {
+    title: 'Editorial Methodology: How We Test & Rank AI Agents',
+    slug: 'methodology',
+    metaTitle: 'Editorial Methodology: How We Test & Rank AI Agents',
+    metaDescription: 'Transparent editorial methodology covering our scoring framework, testing protocols, update cadence, and evaluation criteria for AI agent reviews in India.',
+    h1: 'Editorial Methodology: How We Test & Rank AI Agents',
+    directAnswer: 'We test AI agents hands-on with the same rigor as a software procurement team. Each tool is scored across 10 dimensions using our proprietary 42-point framework, with special emphasis on India-specific factors.',
+    primaryKeyword: 'editorial methodology',
+    siloId: 'editorial',
+    author: 'Arshdeep Singh, Chief AI Analyst',
+    publishedAt: '2026-06-11',
+    updatedAt: '2026-06-11',
+    bodySections: [
+      {
+        heading: 'Hands-On Testing Process',
+        text: 'Every AI agent review follows a standardized testing protocol: Sandbox Setup, Core Workflows, Benchmark Testing, Integration Tests, and India Compliance Check.'
+      },
+      {
+        heading: 'Scoring Framework Dimensions',
+        text: 'Our 42-point scoring system evaluates AI agents across 8 core pillars with special focus on India-specific factors: Features, Pricing, India Localization, Security, Documentation, Performance, Community, and ROI.'
+      }
+    ],
+    faqs: [
+      { question: 'How often are tools re-tested?', answer: 'Monthly for pricing, quarterly for full reviews, annually for methodology updates.' },
+      { question: 'Do vendors pay for positive reviews?', answer: 'No. We do not accept payment for reviews. All recommendations are based on hands-on testing.' },
+      { question: 'What makes your India testing different?', answer: 'We test in AWS Mumbai, check Hindi support, verify GST compliance, and evaluate INR billing options.' }
+    ],
+    relatedPagesSlugs: ['editorial-policy', 'review-policy', 'best-ai-agent'],
+    clusterId: 'editorial-trust',
+    clusterHubSlug: 'methodology'
+  },
+  {
+    title: 'Editorial Policy: Independence & Conflict of Interest',
+    slug: 'editorial-policy',
+    metaTitle: 'Editorial Policy: Independence, Affiliate Disclosure & Conflict of Interest',
+    metaDescription: 'Our editorial independence standards, affiliate disclosure practices, and conflict-of-interest handling for AI agent reviews.',
+    h1: 'Editorial Policy: Independence & Conflict of Interest',
+    directAnswer: 'BestAIAgent.in maintains strict editorial independence. We do not accept payment for reviews, test all tools hands-on, and disclose all affiliate relationships.',
+    primaryKeyword: 'editorial policy',
+    siloId: 'editorial',
+    author: 'BestAIAgent.in Editorial Team',
+    publishedAt: '2026-06-11',
+    updatedAt: '2026-06-11',
+    bodySections: [
+      {
+        heading: 'Independence Standards',
+        text: 'No Pay-for-Play Reviews. Every tool is purchased/subscribed at retail price. Tests run on neutral cloud infrastructure.'
+      },
+      {
+        heading: 'Affiliate Disclosure',
+        text: 'We use affiliate links to fund our testing infrastructure. All commissions are disclosed quarterly with complete transparency.'
+      }
+    ],
+    faqs: [
+      { question: 'How do vendors influence content?', answer: 'Vendors cannot influence scores or rankings. Reviews are written before any vendor contact.' },
+      { question: 'What revenue funds the site?', answer: 'Affiliate commissions (60%), Sponsored content (25%), Donations (15%).' }
+    ],
+    relatedPagesSlugs: ['methodology', 'review-policy', 'best-ai-agent'],
+    clusterId: 'editorial-trust',
+    clusterHubSlug: 'methodology'
+  },
+  {
+    title: 'AI Agent Scoring System: Our 42-Point Evaluation Rubric',
+    slug: 'review-policy',
+    metaTitle: 'AI Agent Scoring System: Our 42-Point Evaluation Rubric',
+    metaDescription: 'Detailed breakdown of our scoring rubric: 8 core dimensions, sub-criteria weights, and overall score calculation for Indian buyers.',
+    h1: 'AI Agent Scoring System: Our 42-Point Evaluation Rubric',
+    directAnswer: 'Our scoring system evaluates AI agents across 8 core pillars with special focus on India-specific factors like INR pricing, regional language support, and DPDP compliance.',
+    primaryKeyword: 'ai agent scoring system',
+    siloId: 'editorial',
+    author: 'Arshdeep Singh, Chief AI Analyst',
+    publishedAt: '2026-06-11',
+    updatedAt: '2026-06-11',
+    bodySections: [
+      {
+        heading: 'Core Dimensions Explained',
+        text: 'Features (15%), Pricing (15%), India Fit (15%), Security (10%), Documentation (10%), Performance (10%), Community (5%), Support (3%), ROI (2%).'
+      },
+      {
+        heading: 'Scoring Bands',
+        text: '9.0-10.0 = Exceptional, 8.0-8.9 = Excellent, 7.0-7.9 = Good, 6.0-6.9 = Average, Below 6.0 = Not Recommended.'
+      }
+    ],
+    faqs: [
+      { question: 'How are scores calculated?', answer: 'Each dimension scored on 1-10 scale. The weighted sum produces a final score out of 10.' },
+      { question: 'What testing tools do we use?', answer: 'SWE-bench, GAIA, custom India voice tests, and our proprietary ROI calculator.' }
+    ],
+    relatedPagesSlugs: ['methodology', 'editorial-policy', 'best-ai-agent'],
+    clusterId: 'editorial-trust',
+    clusterHubSlug: 'methodology'
+  },
+  // =========================================================
   // SILO A: REVIEWS PILLAR & SUPPORT CORES
   // =========================================================
   {

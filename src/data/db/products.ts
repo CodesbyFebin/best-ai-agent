@@ -39,10 +39,18 @@ export interface Product {
   alternativeSlugs: string[];
   comparisonSlugs: string[];
   frameworkSlugs: string[];
+  mcpSupport?: boolean;
+  selfHosted?: boolean;
+  browserUse?: boolean;
+  multiAgent?: boolean;
+  memory?: boolean;
+  apiSupport?: boolean;
+  github?: string;
+  documentation?: string;
 }
 
 export const products: Product[] = [
-  {
+{
     id: 'cursor',
     name: 'Cursor AI',
     slug: 'cursor-ai',
@@ -89,6 +97,44 @@ export const products: Product[] = [
     useCases: [
       'Automating complex structural rewrites in legacy TypeScript code bases.',
       'Dramatically speeding up frontend development with real-time CSS/Tailwind recommendations.',
+      'Instantly explaining unfamiliar deep-nested API route networks to new developer hires.'
+    ],
+    whatsappReady: false,
+    indianPaymentSupport: true,
+    whatWeTested: 'Repository indexing speed, multi-file composer accuracy, inline suggestion latency <500ms, terminal integration depth, Privacy Mode compliance, VS Code extension parity, and React/TypeScript project handling.',
+    lastVerified: '2026-06-11',
+    alternativeSlugs: ['github-copilot', 'claude-code', 'replit-ai'],
+    comparisonSlugs: ['cursor-vs-copilot', 'cursor-vs-codex'],
+    frameworkSlugs: ['best-ai-agent-frameworks', 'best-open-source-ai-agent-tools'],
+    mcpSupport: true,
+    selfHosted: false,
+    browserUse: false,
+    multiAgent: false,
+    memory: true,
+    apiSupport: true,
+    github: 'https://github.com/getcursor',
+    documentation: 'https://docs.cursor.com'
+  },
+    pros: [
+      'Zero learning curve for existing VS Code users.',
+      'Elite repository-wide context indexing (finds code references instantly).',
+      'Extremely fast inline code generation (Cmd + K) and multi-file editing.'
+    ],
+    cons: [
+      'No native offline model support; requires subscription for high-end queries.',
+      'Privacy settings require manual opt-in/opt-out policies for enterprise usage.'
+    ],
+    featuresList: [
+      'Codebase Context Indexing',
+      'AI-powered Multi-file Editing (Composer Mode)',
+      'Inline Code Generation and Edits',
+      'Direct Terminal Command Explanations',
+      'Local Dev Server Log Analysis'
+    ],
+    verdict: 'Cursor has fast become the absolute gold standard for AI coding environments. Its deep architectural understanding makes it an indispensable asset for developers.',
+    useCases: [
+      'Automating complex structural rewrites in legacy TypeScript code bases.',
+      'Dramatically speeding up frontend development with real-time CSS/Tailwind recommendations.',
       'Explaining large, undocumented codebases to incoming junior developer hires.'
     ],
     whatsappReady: false,
@@ -99,7 +145,7 @@ export const products: Product[] = [
     comparisonSlugs: ['cursor-vs-copilot', 'cursor-vs-codex'],
     frameworkSlugs: ['best-ai-agent-frameworks', 'best-open-source-ai-agent-tools']
   },
-  {
+{
     id: 'crewai',
     name: 'CrewAI Framework',
     slug: 'crewai',
@@ -126,6 +172,44 @@ export const products: Product[] = [
       indiaFit: 9.5,
       scalability: 9.6
     },
+    pros: [
+      'Production-grade open-source package with modular role definition.',
+      'Excellent native supports for memory models and multi-agent interaction.',
+      'Vast active community with prebuilt tools for web search, API execution, and PDF scraping.'
+    ],
+    cons: [
+      'Can quickly consume significant API tokens on iterative loops.',
+      'Steep learning curve for orchestration theory and debugging race conditions.'
+    ],
+    featuresList: [
+      'Role-based Agent Definitions',
+      'Sequential, Hierarchical, and Consensus Processors',
+      'Custom LLM Tool Integration SDK',
+      'Short-term, Long-term, and Entity Memory layers',
+      'Agent interaction callbacks and telemetries'
+    ],
+    verdict: 'CrewAI is standard-setting for collaborative multi-agent architectures. It is highly recommended for building automated research pipelines or operational loops.',
+    useCases: [
+      'Building automatic market research pipelines analyzing Indian direct-to-consumer (D2C) brands.',
+      'Setting up automated email dispatch triages that verify and classify user inquiries.',
+      'Programmatic content compilation and multi-pillar digital social newsletter drafts.'
+    ],
+    whatsappReady: false,
+    indianPaymentSupport: true,
+    whatWeTested: 'Multi-agent coordination accuracy, memory persistence under 10k token loads, custom tool integration latency, Python 3.10/3.11 compatibility, and LangChain interop edge cases.',
+    lastVerified: '2026-06-11',
+    alternativeSlugs: ['langgraph', 'autogen', 'dify'],
+    comparisonSlugs: ['crewai-vs-autogen', 'crewai-vs-langgraph'],
+    frameworkSlugs: ['best-ai-agent-frameworks', 'best-ai-agent-sdks'],
+    mcpSupport: true,
+    selfHosted: true,
+    browserUse: false,
+    multiAgent: true,
+    memory: true,
+    apiSupport: true,
+    github: 'https://github.com/crewAIcrew/crewAI',
+    documentation: 'https://docs.crewai.com'
+  },
     pros: [
       'Production-grade open-source package with modular role definition.',
       'Excellent native supports for memory models and multi-agent interaction.',
@@ -211,7 +295,15 @@ export const products: Product[] = [
     lastVerified: '2026-06-11',
     alternativeSlugs: ['bland-ai', 'retell-ai', 'yellow-ai'],
     comparisonSlugs: ['vapi-vs-retell', 'vapi-vs-elevenlabs'],
-    frameworkSlugs: ['best-ai-voice-agent', 'best-ai-agent-for-customer-support']
+    frameworkSlugs: ['best-ai-voice-agent', 'best-ai-agent-for-customer-support'],
+    mcpSupport: false,
+    selfHosted: false,
+    browserUse: false,
+    multiAgent: false,
+    memory: true,
+    apiSupport: true,
+    github: 'https://github.com/vapi-ai',
+    documentation: 'https://docs.vapi.ai'
   },
   {
     id: 'yellow-ai',
@@ -268,7 +360,15 @@ export const products: Product[] = [
     lastVerified: '2026-06-11',
     alternativeSlugs: ['haptik', 'gupshup', 'vapi-ai'],
     comparisonSlugs: ['yellow-ai-vs-intercom'],
-    frameworkSlugs: ['best-ai-agent-platform', 'ai-agents-for-business']
+    frameworkSlugs: ['best-ai-agent-platform', 'ai-agents-for-business'],
+    mcpSupport: true,
+    selfHosted: false,
+    browserUse: false,
+    multiAgent: true,
+    memory: true,
+    apiSupport: true,
+    github: 'https://github.com/yellow-ai',
+    documentation: 'https://docs.yellow.ai'
   },
   {
     id: 'flowise',
@@ -325,7 +425,15 @@ export const products: Product[] = [
     lastVerified: '2026-06-11',
     alternativeSlugs: ['langflow', 'dify', 'make-com'],
     comparisonSlugs: ['dify-vs-flowise'],
-    frameworkSlugs: ['best-ai-agent-builder', 'best-ai-agent-no-code-platform']
+    frameworkSlugs: ['best-ai-agent-builder', 'best-ai-agent-no-code-platform'],
+    mcpSupport: true,
+    selfHosted: true,
+    browserUse: false,
+    multiAgent: false,
+    memory: true,
+    apiSupport: true,
+    github: 'https://github.com/FlowiseAI/Flowise',
+    documentation: 'https://docs.flowiseai.com'
   }
 ];
 
