@@ -831,3 +831,28 @@ Based in Bengaluru, Karnataka, we serve Indian businesses nationwide with AI age
 **Sitemaps**: 11 XML files
 **Entities**: 35 structured tool definitions
 **SEO Score**: 80/100 (target: 90+)
+---
+
+# Additional Notes for Contributors
+
+## Content Repository Structure
+
+All markdown content in the `content/\*` directory follows a consistent format with frontmatter headers that enable automated schema generation and SEO optimization. Each file starts with:
+1. Title for display
+2. SEO Title for search engines
+3. Meta Description for snippets
+4. URL Slug for routing
+5. H1 for main heading
+6. Quick Answer for featured snippets
+
+## Indian Language Support
+
+All AI agent reviews include Hindi and regional language considerations. Our editorial team tests:
+- Hinglish conversation flows
+- Devanagari script rendering
+- Regional language accuracy
+- Transliteration handling
+
+## Version History
+- v2.0.0: Added 8 agent attributes, 6 EEAT pages, 6 longtail guides
+- v1.0.0: Initial launch with core tool database
