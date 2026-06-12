@@ -1,0 +1,38 @@
+# BestAIAgent.in robots.txt
+# Updated: 2026-06-11
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://bestaiagent.in/sitemap.xml
+Sitemap: https://bestaiagent.in/ai-agent-sitemap.xml
+Sitemap: https://bestaiagent.in/tool-sitemap.xml
+Sitemap: https://bestaiagent.in/comparison-sitemap.xml
+Sitemap: https://bestaiagent.in/pricing-sitemap.xml
+Sitemap: https://bestaiagent.in/alternatives-sitemap.xml
+Sitemap: https://bestaiagent.in/tutorials-sitemap.xml
+Sitemap: https://bestaiagent.in/glossary-sitemap.xml
+Sitemap: https://bestaiagent.in/mcp-sitemap.xml
+Sitemap: https://bestaiagent.in/image-sitemap.xml
+Sitemap: https://bestaiagent.in/feed.xml
+Sitemap: https://bestaiagent.in/llms.txt

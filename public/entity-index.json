@@ -1,0 +1,900 @@
+[
+  {
+    "entity": "AI Agent",
+    "slug": "ai-agent",
+    "definition": "AI Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/",
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/agentbench-guide",
+      "/agentops-review",
+      "/ai-agent-benchmarks",
+      "/ai-agent-builders-hub",
+      "/ai-agent-comparison",
+      "/ai-agent-cost-calculator",
+      "/ai-agent-directory",
+      "/ai-agent-examples",
+      "/ai-agent-for-indian-smes",
+      "/ai-agent-for-indian-startups",
+      "/ai-agent-for-whatsapp-business",
+      "/ai-agent-github-projects",
+      "/ai-agent-learning-path",
+      "/ai-agent-news",
+      "/ai-agent-pricing-india",
+      "/ai-agent-project-ideas",
+      "/ai-agent-projects"
+    ],
+    "relatedConcepts": [
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "AI Coding Agent",
+    "slug": "ai-coding-agent",
+    "definition": "AI Coding Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-coding-agents",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-ides",
+      "/best-ai-coding-agent-reddit",
+      "/best-free-ai-coding-agents",
+      "/coding-agents",
+      "/coding-agents-directory",
+      "/coding-agents-hub",
+      "/tools/cursor-ai",
+      "/what-is-swe-bench"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "AI Voice Agent",
+    "slug": "ai-voice-agent",
+    "definition": "AI Voice Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-ai-voice-agent",
+      "/best-ai-voice-agent-platform",
+      "/best-free-ai-voice-agent",
+      "/voice-agents-directory",
+      "/voice-ai-hub"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "AI Agent Builder",
+    "slug": "ai-agent-builder",
+    "definition": "AI Agent Builder is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/ai-agent-builders-hub",
+      "/authors/priya-iyer",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-builder-reddit",
+      "/best-free-ai-agent-builder",
+      "/best-no-code-ai-agent-builder",
+      "/flowise-review",
+      "/flowise-vs-dify",
+      "/flowise-vs-n8n"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "MCP",
+      "LangGraph",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "MCP",
+    "slug": "mcp",
+    "definition": "MCP is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agent-trends",
+      "/best-mcp-servers",
+      "/glossary-hub",
+      "/how-to-connect-claude-to-mcp",
+      "/how-to-create-mcp-server",
+      "/implementation-tutorials-hub",
+      "/mcp-directory",
+      "/mcp-for-ai-agents",
+      "/mcp-hosting",
+      "/mcp-hub",
+      "/mcp-marketplace",
+      "/mcp-security",
+      "/mcp-servers",
+      "/mcp-servers-directory",
+      "/mcp-use-cases",
+      "/mcp-vs-api",
+      "/mcp/what-is-mcp",
+      "/tutorials-hub",
+      "/what-is-mcp"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "LangGraph",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "LangGraph",
+    "slug": "langgraph",
+    "definition": "LangGraph is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/ai-agent-github-projects",
+      "/autogen-review",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-orchestration-platform",
+      "/best-free-ai-agent-builder",
+      "/best-free-open-source-ai-agents",
+      "/best-open-source-ai-agent-tools",
+      "/best-open-source-ai-agents",
+      "/crewai-alternatives",
+      "/crewai-review",
+      "/dify-review",
+      "/how-to-build-multi-agent-system",
+      "/how-to-create-an-ai-agent",
+      "/how-to-setup-langgraph",
+      "/langgraph-entity",
+      "/langgraph-review",
+      "/langgraph-vs-crewai"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "CrewAI"
+    ]
+  },
+  {
+    "entity": "CrewAI",
+    "slug": "crewai",
+    "definition": "CrewAI is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/ai-agent-github-projects",
+      "/autogen-review",
+      "/autogen-vs-crewai",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-orchestration-platform",
+      "/best-free-ai-agent-builder",
+      "/best-free-open-source-ai-agents",
+      "/best-open-source-ai-agent-tools",
+      "/best-open-source-ai-agents",
+      "/crewai-alternatives",
+      "/crewai-entity",
+      "/crewai-pricing",
+      "/crewai-review",
+      "/how-to-build-ai-agent-with-crewai",
+      "/how-to-build-multi-agent-system",
+      "/how-to-create-an-ai-agent",
+      "/implementation-tutorials-hub",
+      "/langgraph-review",
+      "/langgraph-vs-crewai"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Cursor",
+    "slug": "cursor",
+    "definition": "Cursor is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-coding-agents",
+      "/alternatives-hub",
+      "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-code-review",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-debugging",
+      "/best-ai-agent-for-ecommerce",
+      "/best-ai-agent-for-javascript",
+      "/best-ai-agent-for-nextjs",
+      "/best-ai-agent-for-python",
+      "/best-ai-agent-for-react",
+      "/best-ai-agent-for-vs-code",
+      "/best-ai-coding-agent-reddit",
+      "/best-free-ai-coding-agents",
+      "/claude-code-alternatives",
+      "/claude-vs-cursor",
+      "/coding-agents",
+      "/coding-agents-directory",
+      "/cursor-ai",
+      "/cursor-ai-entity"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "GitHub Copilot",
+    "slug": "github-copilot",
+    "definition": "GitHub Copilot is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/alternatives-hub",
+      "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-debugging",
+      "/best-ai-agent-for-ecommerce",
+      "/best-ai-agent-for-javascript",
+      "/best-ai-agent-for-nextjs",
+      "/best-ai-agent-for-python",
+      "/best-ai-agent-for-react",
+      "/best-ai-agent-for-vs-code",
+      "/best-free-ai-coding-agents",
+      "/claude-code-alternatives",
+      "/copilot-free-vs-paid",
+      "/copilot-vs-claude-code",
+      "/cursor-alternatives",
+      "/cursor-vs-github-copilot",
+      "/github-copilot",
+      "/github-copilot-alternatives",
+      "/github-copilot-entity",
+      "/github-copilot-pricing"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Claude Code",
+    "slug": "claude-code",
+    "definition": "Claude Code is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-coding-agents",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-debugging",
+      "/best-ai-agent-for-javascript",
+      "/best-ai-agent-for-nextjs",
+      "/best-ai-agent-for-python",
+      "/best-ai-agent-for-react",
+      "/best-ai-coding-agent-reddit",
+      "/claude-code",
+      "/claude-code-alternatives",
+      "/claude-code-entity",
+      "/claude-code-pricing",
+      "/claude-code-reddit-review",
+      "/coding-agents",
+      "/coding-agents-directory",
+      "/copilot-vs-claude-code",
+      "/cursor-alternatives",
+      "/cursor-vs-claude-code",
+      "/github-copilot-alternatives",
+      "/how-to-set-up-claude-code"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Vapi",
+    "slug": "vapi",
+    "definition": "Vapi is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/alternatives-hub",
+      "/best-ai-agent-for-appointment-booking",
+      "/best-ai-agent-for-call-centers",
+      "/best-ai-agent-for-outbound-calling",
+      "/best-ai-phone-agent",
+      "/best-ai-voice-agent",
+      "/best-ai-voice-agent-platform",
+      "/best-free-ai-voice-agent",
+      "/bland-review",
+      "/elevenlabs-conversational-ai-review",
+      "/how-to-use-vapi",
+      "/implementation-tutorials-hub",
+      "/retell-alternatives",
+      "/retell-review",
+      "/tutorials-hub",
+      "/vapi-alternatives",
+      "/vapi-cost-calculator",
+      "/vapi-entity",
+      "/vapi-for-appointment-booking",
+      "/vapi-pricing"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Retell",
+    "slug": "retell",
+    "definition": "Retell is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/alternatives-hub",
+      "/best-ai-agent-for-call-centers",
+      "/best-ai-agent-for-outbound-calling",
+      "/best-ai-phone-agent",
+      "/best-ai-voice-agent",
+      "/best-ai-voice-agent-platform",
+      "/bland-review",
+      "/elevenlabs-conversational-ai-review",
+      "/how-to-use-retell",
+      "/implementation-tutorials-hub",
+      "/retell-alternatives",
+      "/retell-cost-calculator",
+      "/retell-entity",
+      "/retell-pricing",
+      "/retell-reddit-review",
+      "/retell-review",
+      "/retell-vs-bland",
+      "/tutorials-hub",
+      "/vapi-alternatives",
+      "/vapi-review"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Flowise",
+    "slug": "flowise",
+    "definition": "Flowise is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/ai-agent-github-projects",
+      "/alternatives-hub",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-maker",
+      "/best-ai-agent-no-code-platform",
+      "/best-ai-agent-workflow-builder",
+      "/best-free-ai-agent-builder",
+      "/best-no-code-ai-agent-builder",
+      "/best-open-source-ai-agent-tools",
+      "/crewai-alternatives",
+      "/dify-alternatives",
+      "/dify-pricing",
+      "/dify-review",
+      "/flowise-alternatives",
+      "/flowise-entity",
+      "/flowise-pricing",
+      "/flowise-reddit-review"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Dify",
+    "slug": "dify",
+    "definition": "Dify is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/alternatives-hub",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-maker",
+      "/best-ai-agent-no-code-platform",
+      "/best-ai-agent-workflow-builder",
+      "/best-free-ai-agent-builder",
+      "/best-no-code-ai-agent-builder",
+      "/best-open-source-ai-agent-tools",
+      "/crewai-alternatives",
+      "/dify-alternatives",
+      "/dify-entity",
+      "/dify-pricing",
+      "/dify-review",
+      "/dify-vs-langflow",
+      "/flowise-alternatives",
+      "/flowise-pricing",
+      "/flowise-review"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "AutoGen",
+    "slug": "autogen",
+    "definition": "AutoGen is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agent-github-projects",
+      "/autogen-entity",
+      "/autogen-review",
+      "/autogen-vs-crewai",
+      "/best-free-open-source-ai-agents",
+      "/best-open-source-ai-agent-tools",
+      "/best-open-source-ai-agents",
+      "/crewai-alternatives",
+      "/crewai-review",
+      "/langgraph-review",
+      "/open-source-agents",
+      "/open-source-agents-directory"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Yellow.ai",
+    "slug": "yellow-ai",
+    "definition": "Yellow.ai is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agent-for-whatsapp-business",
+      "/best-ai-agent-automation-platform",
+      "/best-ai-agent-for-agencies",
+      "/best-ai-agent-for-appointment-booking",
+      "/best-ai-agent-for-consultants",
+      "/best-ai-agent-for-hospitals",
+      "/best-ai-agent-for-inbound-support",
+      "/best-ai-agent-for-law-firms",
+      "/best-ai-agent-for-real-estate",
+      "/best-ai-agent-for-small-business",
+      "/best-ai-agent-for-whatsapp",
+      "/best-ai-agent-for-whatsapp-support",
+      "/best-ai-call-center-agent",
+      "/best-ai-voice-agent",
+      "/intercom-alternatives",
+      "/retell-alternatives",
+      "/vapi-alternatives",
+      "/yellow-ai-alternatives",
+      "/yellow-ai-entity",
+      "/yellow-ai-pricing"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Intercom",
+    "slug": "intercom",
+    "definition": "Intercom is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agent-for-whatsapp-business",
+      "/ai-agents-for-support-automation",
+      "/alternatives-hub",
+      "/best-ai-agent-for-inbound-support",
+      "/best-ai-agent-for-real-estate",
+      "/best-ai-agent-for-whatsapp",
+      "/best-ai-agent-for-whatsapp-support",
+      "/intercom-alternatives",
+      "/intercom-entity",
+      "/intercom-pricing",
+      "/intercom-review",
+      "/intercom-vs-zendesk-ai",
+      "/yellow-ai-alternatives",
+      "/yellow-ai-pricing",
+      "/yellow-ai-vs-intercom"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "n8n",
+    "slug": "n8n",
+    "definition": "n8n is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/agent-builders",
+      "/agent-builders-directory",
+      "/ai-agents-for-workflow-automation",
+      "/alternatives-hub",
+      "/best-ai-agent-automation-platform",
+      "/best-ai-agent-builder",
+      "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-workflow-builder",
+      "/best-free-ai-agent-builder",
+      "/best-no-code-ai-agent-builder",
+      "/dify-alternatives",
+      "/dify-pricing",
+      "/dify-review",
+      "/flowise-alternatives",
+      "/flowise-pricing",
+      "/flowise-review",
+      "/flowise-vs-n8n",
+      "/n8n-alternatives",
+      "/n8n-pricing",
+      "/n8n-review"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Make",
+    "slug": "make",
+    "definition": "Make is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agents-for-workflow-automation",
+      "/best-ai-agent-automation-platform",
+      "/best-ai-agent-for-small-business",
+      "/best-ai-agent-maker",
+      "/best-ai-agent-workflow-builder",
+      "/n8n-alternatives",
+      "/n8n-pricing"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Zapier",
+    "slug": "zapier",
+    "definition": "Zapier is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-agents-for-workflow-automation",
+      "/best-ai-agent-automation-platform",
+      "/best-ai-agent-for-small-business",
+      "/best-free-ai-agent-for-business",
+      "/best-no-code-ai-agent-builder",
+      "/n8n-alternatives",
+      "/n8n-pricing"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "ElevenLabs",
+    "slug": "elevenlabs",
+    "definition": "ElevenLabs is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-free-ai-voice-agent",
+      "/elevenlabs-conversational-ai-review",
+      "/voice-agents-directory"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Bland.ai",
+    "slug": "bland-ai",
+    "definition": "Bland.ai is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-ai-voice-agent-platform",
+      "/voice-agents-directory"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Windsurf",
+    "slug": "windsurf",
+    "definition": "Windsurf is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-coding-agents",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-ecommerce",
+      "/best-ai-agent-for-nextjs",
+      "/best-ai-agent-for-react",
+      "/best-ai-coding-agent-reddit",
+      "/claude-code-alternatives",
+      "/coding-agents",
+      "/coding-agents-directory",
+      "/cursor-alternatives",
+      "/github-copilot-alternatives",
+      "/windsurf",
+      "/windsurf-alternatives",
+      "/windsurf-pricing",
+      "/windsurf-vs-cursor"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Replit AI",
+    "slug": "replit-ai",
+    "definition": "Replit AI is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-ai-agent-platform"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Tabnine",
+    "slug": "tabnine",
+    "definition": "Tabnine is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-debugging",
+      "/best-ai-agent-for-javascript",
+      "/best-ai-agent-for-python",
+      "/best-ai-agent-for-vs-code",
+      "/best-free-ai-coding-agents"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Amazon CodeWhisperer",
+    "slug": "amazon-codewhisperer",
+    "definition": "Amazon CodeWhisperer is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "OpenAI Codex",
+    "slug": "openai-codex",
+    "definition": "OpenAI Codex is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Qodo",
+    "slug": "qodo",
+    "definition": "Qodo is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-ai-agent-for-code-review"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "LangChain",
+    "slug": "langchain",
+    "definition": "LangChain is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/llamaindex-review",
+      "/llamaindex-vs-langchain"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "LlamaIndex",
+    "slug": "llamaindex",
+    "definition": "LlamaIndex is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/best-free-open-source-ai-agents",
+      "/llamaindex-review",
+      "/llamaindex-vs-langchain"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Vercel AI SDK",
+    "slug": "vercel-ai-sdk",
+    "definition": "Vercel AI SDK is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "ChatGPT",
+    "slug": "chatgpt",
+    "definition": "ChatGPT is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Claude",
+    "slug": "claude",
+    "definition": "Claude is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [
+      "/ai-coding-agents",
+      "/best-ai-agent-for-coding",
+      "/best-ai-agent-for-debugging",
+      "/best-ai-agent-for-javascript",
+      "/best-ai-agent-for-nextjs",
+      "/best-ai-agent-for-python",
+      "/best-ai-agent-for-react",
+      "/best-ai-coding-agent-reddit",
+      "/claude-code",
+      "/claude-code-alternatives",
+      "/claude-code-entity",
+      "/claude-code-pricing",
+      "/claude-code-reddit-review",
+      "/claude-vs-cursor",
+      "/coding-agents",
+      "/coding-agents-directory",
+      "/copilot-vs-claude-code",
+      "/cursor-alternatives",
+      "/cursor-vs-claude-code",
+      "/github-copilot-alternatives"
+    ],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Google Gemini",
+    "slug": "google-gemini",
+    "definition": "Google Gemini is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  },
+  {
+    "entity": "Perplexity",
+    "slug": "perplexity",
+    "definition": "Perplexity is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
+    "pages": [],
+    "relatedConcepts": [
+      "AI Agent",
+      "AI Coding Agent",
+      "AI Voice Agent",
+      "AI Agent Builder",
+      "MCP",
+      "LangGraph"
+    ]
+  }
+]

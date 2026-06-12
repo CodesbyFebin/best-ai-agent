@@ -1,0 +1,6243 @@
+{
+  "generatedAt": "2026-06-11",
+  "nodes": [
+    {
+      "id": "/",
+      "type": "home",
+      "label": "Best AI Agents in India 2026",
+      "url": "https://bestaiagent.in"
+    },
+    {
+      "id": "/affiliate-disclosure",
+      "type": "editorial",
+      "label": "Affiliate Disclosure",
+      "url": "https://bestaiagent.in/affiliate-disclosure"
+    },
+    {
+      "id": "/agent-builders",
+      "type": "directories",
+      "label": "AI Agent Builders Directory: No-Code Platforms",
+      "url": "https://bestaiagent.in/agent-builders"
+    },
+    {
+      "id": "/agent-builders-directory",
+      "type": "directories",
+      "label": "AI Agent Builders Directory: No-Code Platforms",
+      "url": "https://bestaiagent.in/agent-builders-directory"
+    },
+    {
+      "id": "/agentbench-guide",
+      "type": "research",
+      "label": "AgentBench Guide 2026 – Complete Explanation",
+      "url": "https://bestaiagent.in/agentbench-guide"
+    },
+    {
+      "id": "/agentops-review",
+      "type": "reviews",
+      "label": "AgentOps Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/agentops-review"
+    },
+    {
+      "id": "/ai-agent-benchmarks",
+      "type": "research",
+      "label": "AI Agent Benchmarks 2026 – Complete Guide",
+      "url": "https://bestaiagent.in/ai-agent-benchmarks"
+    },
+    {
+      "id": "/ai-agent-builders-hub",
+      "type": "hubs",
+      "label": "AI Agent Builders Hub",
+      "url": "https://bestaiagent.in/ai-agent-builders-hub"
+    },
+    {
+      "id": "/ai-agent-comparison",
+      "type": "ai-agent-core",
+      "label": "AI Agent Comparison: Head-to-Head Tool Analysis",
+      "url": "https://bestaiagent.in/ai-agent-comparison"
+    },
+    {
+      "id": "/ai-agent-cost-calculator",
+      "type": "longtail-engine",
+      "label": "AI Agent Cost Calculator: Estimate Monthly Spend",
+      "url": "https://bestaiagent.in/ai-agent-cost-calculator"
+    },
+    {
+      "id": "/ai-agent-directory",
+      "type": "directories",
+      "label": "AI Agent Directory: Browse All Tools",
+      "url": "https://bestaiagent.in/ai-agent-directory"
+    },
+    {
+      "id": "/ai-agent-examples",
+      "type": "core",
+      "label": "AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses",
+      "url": "https://bestaiagent.in/ai-agent-examples"
+    },
+    {
+      "id": "/ai-agent-for-indian-smes",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for Indian SMEs: Automation Guide",
+      "url": "https://bestaiagent.in/ai-agent-for-indian-smes"
+    },
+    {
+      "id": "/ai-agent-for-indian-startups",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for Indian Startups: Budget & Scale",
+      "url": "https://bestaiagent.in/ai-agent-for-indian-startups"
+    },
+    {
+      "id": "/ai-agent-for-whatsapp-business",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for WhatsApp Business in India",
+      "url": "https://bestaiagent.in/ai-agent-for-whatsapp-business"
+    },
+    {
+      "id": "/ai-agent-github-projects",
+      "type": "courses-certifications",
+      "label": "AI Agent GitHub Projects: Open-Source Examples",
+      "url": "https://bestaiagent.in/ai-agent-github-projects"
+    },
+    {
+      "id": "/ai-agent-learning-path",
+      "type": "courses-certifications",
+      "label": "AI Agent Learning Path: Beginner to Expert Roadmap",
+      "url": "https://bestaiagent.in/ai-agent-learning-path"
+    },
+    {
+      "id": "/ai-agent-news",
+      "type": "core",
+      "label": "AI Agent News 2026 – Latest Developments for Indian Developers",
+      "url": "https://bestaiagent.in/ai-agent-news"
+    },
+    {
+      "id": "/ai-agent-pricing-india",
+      "type": "industry-ai-agents",
+      "label": "AI Agent Pricing in India: INR Estimates & GST Notes",
+      "url": "https://bestaiagent.in/ai-agent-pricing-india"
+    },
+    {
+      "id": "/ai-agent-project-ideas",
+      "type": "courses-certifications",
+      "label": "AI Agent Project Ideas: Beginner to Advanced",
+      "url": "https://bestaiagent.in/ai-agent-project-ideas"
+    },
+    {
+      "id": "/ai-agent-projects",
+      "type": "courses",
+      "label": "AI Agent Projects 2026 – 20 Project Ideas for Indian Developers",
+      "url": "https://bestaiagent.in/ai-agent-projects"
+    },
+    {
+      "id": "/ai-agent-ranking",
+      "type": "ai-agent-core",
+      "label": "AI Agent Rankings: Editorial Scorecards & Methodology",
+      "url": "https://bestaiagent.in/ai-agent-ranking"
+    },
+    {
+      "id": "/ai-agent-research",
+      "type": "research-benchmarks",
+      "label": "AI Agent Research: Latest Papers & Findings",
+      "url": "https://bestaiagent.in/ai-agent-research"
+    },
+    {
+      "id": "/ai-agent-scoring-system",
+      "type": "editorial",
+      "label": "AI Agent Scoring System",
+      "url": "https://bestaiagent.in/ai-agent-scoring-system"
+    },
+    {
+      "id": "/ai-agent-security",
+      "type": "guides",
+      "label": "AI Agent Security 2026 – Complete Guide for Indian Enterprises",
+      "url": "https://bestaiagent.in/ai-agent-security"
+    },
+    {
+      "id": "/ai-agent-tools",
+      "type": "editorial",
+      "label": "AI Agent Tools Directory",
+      "url": "https://bestaiagent.in/ai-agent-tools"
+    },
+    {
+      "id": "/ai-agent-trends",
+      "type": "core",
+      "label": "AI Agent Trends 2026 – What's Shaping AI Agents in India",
+      "url": "https://bestaiagent.in/ai-agent-trends"
+    },
+    {
+      "id": "/ai-agent-use-cases",
+      "type": "core",
+      "label": "AI Agent Use Cases 2026 – Complete Guide for Indian Businesses",
+      "url": "https://bestaiagent.in/ai-agent-use-cases"
+    },
+    {
+      "id": "/ai-agents-for-business",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Business: Complete Guide for 2026",
+      "url": "https://bestaiagent.in/ai-agents-for-business"
+    },
+    {
+      "id": "/ai-agents-for-crm",
+      "type": "business-ai-agents",
+      "label": "AI Agents for CRM: Salesforce, HubSpot & Zoho Integration",
+      "url": "https://bestaiagent.in/ai-agents-for-crm"
+    },
+    {
+      "id": "/ai-agents-for-enterprises",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Enterprise: Procurement & Scale Guide",
+      "url": "https://bestaiagent.in/ai-agents-for-enterprises"
+    },
+    {
+      "id": "/ai-agents-for-finance",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Finance: Accounting, Invoicing & Compliance",
+      "url": "https://bestaiagent.in/ai-agents-for-finance"
+    },
+    {
+      "id": "/ai-agents-for-healthcare",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Healthcare: Appointment & Patient Support",
+      "url": "https://bestaiagent.in/ai-agents-for-healthcare"
+    },
+    {
+      "id": "/ai-agents-for-hr",
+      "type": "business-ai-agents",
+      "label": "AI Agents for HR: Recruitment, Onboarding & Employee Support",
+      "url": "https://bestaiagent.in/ai-agents-for-hr"
+    },
+    {
+      "id": "/ai-agents-for-marketing",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Marketing: Content, Campaigns & Analytics",
+      "url": "https://bestaiagent.in/ai-agents-for-marketing"
+    },
+    {
+      "id": "/ai-agents-for-procurement",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Procurement: Vendor Management & PO Automation",
+      "url": "https://bestaiagent.in/ai-agents-for-procurement"
+    },
+    {
+      "id": "/ai-agents-for-sales",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Sales: Lead Qualification & CRM Automation",
+      "url": "https://bestaiagent.in/ai-agents-for-sales"
+    },
+    {
+      "id": "/ai-agents-for-security",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Security: Threat Detection & Compliance",
+      "url": "https://bestaiagent.in/ai-agents-for-security"
+    },
+    {
+      "id": "/ai-agents-for-smes",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Indian SMEs: Budget-Friendly Automation",
+      "url": "https://bestaiagent.in/ai-agents-for-smes"
+    },
+    {
+      "id": "/ai-agents-for-support-automation",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Customer Support Automation",
+      "url": "https://bestaiagent.in/ai-agents-for-support-automation"
+    },
+    {
+      "id": "/ai-agents-for-workflow-automation",
+      "type": "business-ai-agents",
+      "label": "AI Agents for Workflow Automation: n8n, Make & Zapier",
+      "url": "https://bestaiagent.in/ai-agents-for-workflow-automation"
+    },
+    {
+      "id": "/ai-coding-agents",
+      "type": "coding-agents",
+      "label": "AI Coding Agents: Complete Guide for Developers",
+      "url": "https://bestaiagent.in/ai-coding-agents"
+    },
+    {
+      "id": "/ai-support-agent-roi-calculator",
+      "type": "longtail-engine",
+      "label": "AI Support Agent ROI Calculator: Cost Savings",
+      "url": "https://bestaiagent.in/ai-support-agent-roi-calculator"
+    },
+    {
+      "id": "/alternatives-hub",
+      "type": "hubs",
+      "label": "AI Agent Alternatives Hub",
+      "url": "https://bestaiagent.in/alternatives-hub"
+    },
+    {
+      "id": "/apollo-review",
+      "type": "reviews",
+      "label": "Apollo Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/apollo-review"
+    },
+    {
+      "id": "/artisan-review",
+      "type": "reviews",
+      "label": "Artisan Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/artisan-review"
+    },
+    {
+      "id": "/authors/arshdeep-singh",
+      "type": "authors",
+      "label": "Arshdeep Singh",
+      "url": "https://bestaiagent.in/authors/arshdeep-singh"
+    },
+    {
+      "id": "/authors/karan-mehra",
+      "type": "authors",
+      "label": "Karan Mehra",
+      "url": "https://bestaiagent.in/authors/karan-mehra"
+    },
+    {
+      "id": "/authors/priya-iyer",
+      "type": "authors",
+      "label": "Priya Iyer",
+      "url": "https://bestaiagent.in/authors/priya-iyer"
+    },
+    {
+      "id": "/autogen-entity",
+      "type": "entity-pages",
+      "label": "AutoGen: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/autogen-entity"
+    },
+    {
+      "id": "/autogen-review",
+      "type": "reviews",
+      "label": "AutoGen Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/autogen-review"
+    },
+    {
+      "id": "/autogen-vs-crewai",
+      "type": "comparisons",
+      "label": "AutoGen vs CrewAI – Which Multi-Agent Framework Wins in 2026?",
+      "url": "https://bestaiagent.in/autogen-vs-crewai"
+    },
+    {
+      "id": "/best-ai-agent",
+      "type": "core",
+      "label": "Best AI Agent 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent"
+    },
+    {
+      "id": "/best-ai-agent-app-builder",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent App Builder: No-Code to Production",
+      "url": "https://bestaiagent.in/best-ai-agent-app-builder"
+    },
+    {
+      "id": "/best-ai-agent-automation-platform",
+      "type": "pillars",
+      "label": "Best AI Agent Automation Platform 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-automation-platform"
+    },
+    {
+      "id": "/best-ai-agent-builder",
+      "type": "pillars",
+      "label": "Best AI Agent Builder 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-builder"
+    },
+    {
+      "id": "/best-ai-agent-builder-reddit",
+      "type": "reddit-community-intent",
+      "label": "Best AI Agent Builder on Reddit: No-Code Picks",
+      "url": "https://bestaiagent.in/best-ai-agent-builder-reddit"
+    },
+    {
+      "id": "/best-ai-agent-certification",
+      "type": "courses-certifications",
+      "label": "Best AI Agent Certification: Professional Credentials",
+      "url": "https://bestaiagent.in/best-ai-agent-certification"
+    },
+    {
+      "id": "/best-ai-agent-course",
+      "type": "courses",
+      "label": "Best AI Agent Course 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-course"
+    },
+    {
+      "id": "/best-ai-agent-course-for-beginners",
+      "type": "courses-certifications",
+      "label": "Best AI Agent Course for Beginners: Start Here",
+      "url": "https://bestaiagent.in/best-ai-agent-course-for-beginners"
+    },
+    {
+      "id": "/best-ai-agent-course-reddit",
+      "type": "tutorials",
+      "label": "Best AI Agent Courses on Reddit: Community Recommendations",
+      "url": "https://bestaiagent.in/best-ai-agent-course-reddit"
+    },
+    {
+      "id": "/best-ai-agent-creator",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent Creator: Visual & Code-First Platforms",
+      "url": "https://bestaiagent.in/best-ai-agent-creator"
+    },
+    {
+      "id": "/best-ai-agent-development-platform",
+      "type": "pillars",
+      "label": "Best AI Agent Development Platform 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-development-platform"
+    },
+    {
+      "id": "/best-ai-agent-extension-for-vs-code",
+      "type": "coding-agents",
+      "label": "Best AI Agent Extension for VS Code in 2026",
+      "url": "https://bestaiagent.in/best-ai-agent-extension-for-vs-code"
+    },
+    {
+      "id": "/best-ai-agent-for-accountants",
+      "type": "pillars",
+      "label": "Best AI Agent for Accountants 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-accountants"
+    },
+    {
+      "id": "/best-ai-agent-for-agencies",
+      "type": "pillars",
+      "label": "Best AI Agent for Agencies 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-agencies"
+    },
+    {
+      "id": "/best-ai-agent-for-appointment-booking",
+      "type": "pillars",
+      "label": "Best AI Agent for Appointment Booking 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-appointment-booking"
+    },
+    {
+      "id": "/best-ai-agent-for-backend-development",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Backend Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-backend-development"
+    },
+    {
+      "id": "/best-ai-agent-for-banking",
+      "type": "pillars",
+      "label": "Best AI Agent for Banking 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-banking"
+    },
+    {
+      "id": "/best-ai-agent-for-business",
+      "type": "pillars",
+      "label": "Best AI Agent for Business – 2026 Guide for Indian Enterprises",
+      "url": "https://bestaiagent.in/best-ai-agent-for-business"
+    },
+    {
+      "id": "/best-ai-agent-for-call-centers",
+      "type": "voice-ai-agents",
+      "label": "Best AI Agent for Call Centers: India Setup Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-call-centers"
+    },
+    {
+      "id": "/best-ai-agent-for-code-review",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Code Review in 2026",
+      "url": "https://bestaiagent.in/best-ai-agent-for-code-review"
+    },
+    {
+      "id": "/best-ai-agent-for-coding",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Coding in India 2026",
+      "url": "https://bestaiagent.in/best-ai-agent-for-coding"
+    },
+    {
+      "id": "/best-ai-agent-for-consultants",
+      "type": "pillars",
+      "label": "Best AI Agent for Consultants 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-consultants"
+    },
+    {
+      "id": "/best-ai-agent-for-content-creators",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Content Creators in India",
+      "url": "https://bestaiagent.in/best-ai-agent-for-content-creators"
+    },
+    {
+      "id": "/best-ai-agent-for-crm",
+      "type": "pillars",
+      "label": "Best AI Agent for CRM 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-crm"
+    },
+    {
+      "id": "/best-ai-agent-for-customer-support",
+      "type": "pillars",
+      "label": "Best AI Agent for Customer Support – 2026 Guide for Indian Support Teams",
+      "url": "https://bestaiagent.in/best-ai-agent-for-customer-support"
+    },
+    {
+      "id": "/best-ai-agent-for-customer-support-in-saas",
+      "type": "longtail",
+      "label": "Best AI Agent for Customer Support in SaaS 2026 – India Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-customer-support-in-saas"
+    },
+    {
+      "id": "/best-ai-agent-for-data-analysis",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Data Analysis & Visualization",
+      "url": "https://bestaiagent.in/best-ai-agent-for-data-analysis"
+    },
+    {
+      "id": "/best-ai-agent-for-debugging",
+      "type": "pillars",
+      "label": "Best AI Agent for Debugging 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-debugging"
+    },
+    {
+      "id": "/best-ai-agent-for-developers",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Developers: Coding & Automation",
+      "url": "https://bestaiagent.in/best-ai-agent-for-developers"
+    },
+    {
+      "id": "/best-ai-agent-for-ecommerce",
+      "type": "pillars",
+      "label": "Best AI Agent for Ecommerce 2026 – Top AI Tools for Indian Online Stores",
+      "url": "https://bestaiagent.in/best-ai-agent-for-ecommerce"
+    },
+    {
+      "id": "/best-ai-agent-for-education",
+      "type": "pillars",
+      "label": "Best AI Agent for Education 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-education"
+    },
+    {
+      "id": "/best-ai-agent-for-email",
+      "type": "longtail",
+      "label": "Best AI Agent for Email 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-email"
+    },
+    {
+      "id": "/best-ai-agent-for-enterprises",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Enterprises: Procurement Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-enterprises"
+    },
+    {
+      "id": "/best-ai-agent-for-freelancers",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Freelancers: Solo Developer Tools",
+      "url": "https://bestaiagent.in/best-ai-agent-for-freelancers"
+    },
+    {
+      "id": "/best-ai-agent-for-frontend-development",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Frontend Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-frontend-development"
+    },
+    {
+      "id": "/best-ai-agent-for-healthcare-calls",
+      "type": "pillars",
+      "label": "Best AI Agent for Healthcare Calls 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-healthcare-calls"
+    },
+    {
+      "id": "/best-ai-agent-for-hospitals",
+      "type": "pillars",
+      "label": "Best AI Agent for Hospitals 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-hospitals"
+    },
+    {
+      "id": "/best-ai-agent-for-ides",
+      "type": "coding-agents",
+      "label": "Best AI Agent for IDEs: Multi-Editor Comparison",
+      "url": "https://bestaiagent.in/best-ai-agent-for-ides"
+    },
+    {
+      "id": "/best-ai-agent-for-inbound-support",
+      "type": "pillars",
+      "label": "Best AI Agent for Inbound Support 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-inbound-support"
+    },
+    {
+      "id": "/best-ai-agent-for-indian-businesses",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Indian Businesses: Complete Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-indian-businesses"
+    },
+    {
+      "id": "/best-ai-agent-for-javascript",
+      "type": "pillars",
+      "label": "Best AI Agent for JavaScript 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-javascript"
+    },
+    {
+      "id": "/best-ai-agent-for-job-applications",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Job Applications: Auto-Apply Tools",
+      "url": "https://bestaiagent.in/best-ai-agent-for-job-applications"
+    },
+    {
+      "id": "/best-ai-agent-for-job-search",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Job Search & Applications",
+      "url": "https://bestaiagent.in/best-ai-agent-for-job-search"
+    },
+    {
+      "id": "/best-ai-agent-for-law-firms",
+      "type": "pillars",
+      "label": "Best AI Agent for Law Firms 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-law-firms"
+    },
+    {
+      "id": "/best-ai-agent-for-lead-generation",
+      "type": "pillars",
+      "label": "Best AI Agent for Lead Generation 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-lead-generation"
+    },
+    {
+      "id": "/best-ai-agent-for-lead-generation-in-real-estate",
+      "type": "longtail",
+      "label": "Best AI Agent for Lead Generation in Real Estate 2026 – India Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-lead-generation-in-real-estate"
+    },
+    {
+      "id": "/best-ai-agent-for-lead-qualification",
+      "type": "pillars",
+      "label": "Best AI Agent for Lead Qualification 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-lead-qualification"
+    },
+    {
+      "id": "/best-ai-agent-for-legal",
+      "type": "business-ai-agents",
+      "label": "Best AI Agent for Legal: Document Review & Research",
+      "url": "https://bestaiagent.in/best-ai-agent-for-legal"
+    },
+    {
+      "id": "/best-ai-agent-for-linkedin",
+      "type": "longtail",
+      "label": "Best AI Agent for LinkedIn 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-linkedin"
+    },
+    {
+      "id": "/best-ai-agent-for-logistics",
+      "type": "pillars",
+      "label": "Best AI Agent for Logistics 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-logistics"
+    },
+    {
+      "id": "/best-ai-agent-for-manufacturing",
+      "type": "pillars",
+      "label": "Best AI Agent for Manufacturing 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-manufacturing"
+    },
+    {
+      "id": "/best-ai-agent-for-marketing",
+      "type": "pillars",
+      "label": "Best AI Agent for Marketing – 2026 Guide for Indian Marketers",
+      "url": "https://bestaiagent.in/best-ai-agent-for-marketing"
+    },
+    {
+      "id": "/best-ai-agent-for-nextjs",
+      "type": "pillars",
+      "label": "Best AI Agent for Next.js 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-nextjs"
+    },
+    {
+      "id": "/best-ai-agent-for-nodejs",
+      "type": "longtail",
+      "label": "Best AI Agent for NodeJS 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-nodejs"
+    },
+    {
+      "id": "/best-ai-agent-for-outbound-calling",
+      "type": "pillars",
+      "label": "Best AI Agent for Outbound Calling 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-outbound-calling"
+    },
+    {
+      "id": "/best-ai-agent-for-patient-scheduling-in-hospitals",
+      "type": "longtail",
+      "label": "Best AI Agent for Patient Scheduling in Hospitals 2026 – India Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-patient-scheduling-in-hospitals"
+    },
+    {
+      "id": "/best-ai-agent-for-personal-use",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Personal Use: Productivity & Assistant",
+      "url": "https://bestaiagent.in/best-ai-agent-for-personal-use"
+    },
+    {
+      "id": "/best-ai-agent-for-presentations",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Presentations: Slide Generation",
+      "url": "https://bestaiagent.in/best-ai-agent-for-presentations"
+    },
+    {
+      "id": "/best-ai-agent-for-productivity",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Productivity: Task & Workflow Automation",
+      "url": "https://bestaiagent.in/best-ai-agent-for-productivity"
+    },
+    {
+      "id": "/best-ai-agent-for-python",
+      "type": "pillars",
+      "label": "Best AI Agent for Python 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-python"
+    },
+    {
+      "id": "/best-ai-agent-for-react",
+      "type": "pillars",
+      "label": "Best AI Agent for React 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-react"
+    },
+    {
+      "id": "/best-ai-agent-for-real-estate",
+      "type": "pillars",
+      "label": "Best AI Agent for Real Estate 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-real-estate"
+    },
+    {
+      "id": "/best-ai-agent-for-real-estate-calls",
+      "type": "pillars",
+      "label": "Best AI Agent for Real Estate Calls 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-real-estate-calls"
+    },
+    {
+      "id": "/best-ai-agent-for-recruiting",
+      "type": "pillars",
+      "label": "Best AI Agent for Recruiting 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-recruiting"
+    },
+    {
+      "id": "/best-ai-agent-for-research",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent for Research: Academic & Professional",
+      "url": "https://bestaiagent.in/best-ai-agent-for-research"
+    },
+    {
+      "id": "/best-ai-agent-for-saas",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for SaaS Companies in India",
+      "url": "https://bestaiagent.in/best-ai-agent-for-saas"
+    },
+    {
+      "id": "/best-ai-agent-for-sales",
+      "type": "pillars",
+      "label": "Best AI Agent for Sales 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-sales"
+    },
+    {
+      "id": "/best-ai-agent-for-seo",
+      "type": "longtail",
+      "label": "Best AI Agent for SEO 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-seo"
+    },
+    {
+      "id": "/best-ai-agent-for-shopify",
+      "type": "longtail",
+      "label": "Best AI Agent for Shopify 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-shopify"
+    },
+    {
+      "id": "/best-ai-agent-for-small-business",
+      "type": "pillars",
+      "label": "Best AI Agent for Small Business 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-small-business"
+    },
+    {
+      "id": "/best-ai-agent-for-solopreneurs",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Solopreneurs: One-Person Business",
+      "url": "https://bestaiagent.in/best-ai-agent-for-solopreneurs"
+    },
+    {
+      "id": "/best-ai-agent-for-startups",
+      "type": "pillars",
+      "label": "Best AI Agent for Startups 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-startups"
+    },
+    {
+      "id": "/best-ai-agent-for-students",
+      "type": "buyers-guides",
+      "label": "Best AI Agent for Students: Free & Educational",
+      "url": "https://bestaiagent.in/best-ai-agent-for-students"
+    },
+    {
+      "id": "/best-ai-agent-for-vs-code",
+      "type": "coding-agents",
+      "label": "Best AI Agent for VS Code: Cursor, Copilot & Extensions",
+      "url": "https://bestaiagent.in/best-ai-agent-for-vs-code"
+    },
+    {
+      "id": "/best-ai-agent-for-whatsapp",
+      "type": "pillars",
+      "label": "Best AI Agent for WhatsApp 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-whatsapp"
+    },
+    {
+      "id": "/best-ai-agent-for-whatsapp-support",
+      "type": "pillars",
+      "label": "Best AI Agent for WhatsApp Support 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-whatsapp-support"
+    },
+    {
+      "id": "/best-ai-agent-for-wordpress",
+      "type": "longtail",
+      "label": "Best AI Agent for WordPress 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-wordpress"
+    },
+    {
+      "id": "/best-ai-agent-for-youtube",
+      "type": "longtail",
+      "label": "Best AI Agent for YouTube 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-youtube"
+    },
+    {
+      "id": "/best-ai-agent-india",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent in India 2026: INR Pricing & DPDP Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-india"
+    },
+    {
+      "id": "/best-ai-agent-maker",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent Maker: Drag-and-Drop Agent Building",
+      "url": "https://bestaiagent.in/best-ai-agent-maker"
+    },
+    {
+      "id": "/best-ai-agent-management-platform",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent Management Platform: Monitoring & Ops",
+      "url": "https://bestaiagent.in/best-ai-agent-management-platform"
+    },
+    {
+      "id": "/best-ai-agent-no-code-platform",
+      "type": "ai-agent-builders",
+      "label": "Best No-Code AI Agent Platform in 2026",
+      "url": "https://bestaiagent.in/best-ai-agent-no-code-platform"
+    },
+    {
+      "id": "/best-ai-agent-orchestration-platform",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent Orchestration Platform: Multi-Agent Systems",
+      "url": "https://bestaiagent.in/best-ai-agent-orchestration-platform"
+    },
+    {
+      "id": "/best-ai-agent-personal-assistant",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent Personal Assistant: Daily Automation",
+      "url": "https://bestaiagent.in/best-ai-agent-personal-assistant"
+    },
+    {
+      "id": "/best-ai-agent-platform",
+      "type": "pillars",
+      "label": "Best AI Agent Platform 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-platform"
+    },
+    {
+      "id": "/best-ai-agent-reddit",
+      "type": "reddit-community-intent",
+      "label": "Best AI Agent According to Reddit: Community Rankings",
+      "url": "https://bestaiagent.in/best-ai-agent-reddit"
+    },
+    {
+      "id": "/best-ai-agent-with-memory",
+      "type": "research-benchmarks",
+      "label": "Best AI Agent with Memory: Long-Term Context",
+      "url": "https://bestaiagent.in/best-ai-agent-with-memory"
+    },
+    {
+      "id": "/best-ai-agent-workflow-builder",
+      "type": "pillars",
+      "label": "Best AI Agent Workflow Builder 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-workflow-builder"
+    },
+    {
+      "id": "/best-ai-agent-workflow-tools",
+      "type": "voice-ai-agents",
+      "label": "Best AI Agent Workflow Tools: Connectors & Integrations",
+      "url": "https://bestaiagent.in/best-ai-agent-workflow-tools"
+    },
+    {
+      "id": "/best-ai-agents",
+      "type": "core",
+      "label": "Best AI Agents 2026 – India's Independent Authority Guide",
+      "url": "https://bestaiagent.in/best-ai-agents"
+    },
+    {
+      "id": "/best-ai-agents-for-business",
+      "type": "pillars",
+      "label": "Best AI Agents for Business 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agents-for-business"
+    },
+    {
+      "id": "/best-ai-call-center-agent",
+      "type": "pillars",
+      "label": "Best AI Call Center Agent 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-call-center-agent"
+    },
+    {
+      "id": "/best-ai-coding-agent-reddit",
+      "type": "reddit-community-intent",
+      "label": "Best AI Coding Agent on Reddit: Developer Picks",
+      "url": "https://bestaiagent.in/best-ai-coding-agent-reddit"
+    },
+    {
+      "id": "/best-ai-phone-agent",
+      "type": "pillars",
+      "label": "Best AI Phone Agent 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-phone-agent"
+    },
+    {
+      "id": "/best-ai-voice-agent",
+      "type": "pillars",
+      "label": "Best AI Voice Agent 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-voice-agent"
+    },
+    {
+      "id": "/best-ai-voice-agent-platform",
+      "type": "voice-ai-agents",
+      "label": "Best AI Voice Agent Platform: Vapi, Retell & Bland.ai",
+      "url": "https://bestaiagent.in/best-ai-voice-agent-platform"
+    },
+    {
+      "id": "/best-free-ai-agent-builder",
+      "type": "free",
+      "label": "Best Free AI Agent Builder 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/best-free-ai-agent-builder"
+    },
+    {
+      "id": "/best-free-ai-agent-for-business",
+      "type": "free",
+      "label": "Best Free AI Agent for Business 2026 – Complete Guide for Indian SMBs",
+      "url": "https://bestaiagent.in/best-free-ai-agent-for-business"
+    },
+    {
+      "id": "/best-free-ai-agents",
+      "type": "free",
+      "label": "Best Free AI Agents 2026 – Complete Guide for Indian Users",
+      "url": "https://bestaiagent.in/best-free-ai-agents"
+    },
+    {
+      "id": "/best-free-ai-coding-agents",
+      "type": "free",
+      "label": "Best Free AI Coding Agents 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/best-free-ai-coding-agents"
+    },
+    {
+      "id": "/best-free-ai-voice-agent",
+      "type": "free",
+      "label": "Best Free AI Voice Agents 2026 – Complete Guide for Indian Startups",
+      "url": "https://bestaiagent.in/best-free-ai-voice-agent"
+    },
+    {
+      "id": "/best-free-open-source-ai-agents",
+      "type": "free",
+      "label": "Best Free Open-Source AI Agents 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/best-free-open-source-ai-agents"
+    },
+    {
+      "id": "/best-mcp-servers",
+      "type": "mcp",
+      "label": "Best MCP Servers 2026 – Complete Directory for Indian Developers",
+      "url": "https://bestaiagent.in/best-mcp-servers"
+    },
+    {
+      "id": "/best-no-code-ai-agent-builder",
+      "type": "pillars",
+      "label": "Best No-Code AI Agent Builder 2026 – India’s Independent Guide",
+      "url": "https://bestaiagent.in/best-no-code-ai-agent-builder"
+    },
+    {
+      "id": "/best-open-source-ai-agent-tools",
+      "type": "open-source-ai-agents",
+      "label": "Best Open-Source AI Agent Tools in 2026",
+      "url": "https://bestaiagent.in/best-open-source-ai-agent-tools"
+    },
+    {
+      "id": "/best-open-source-ai-agents",
+      "type": "pillars",
+      "label": "Best Open-Source AI Agents 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-open-source-ai-agents"
+    },
+    {
+      "id": "/bland-review",
+      "type": "reviews",
+      "label": "Bland AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/bland-review"
+    },
+    {
+      "id": "/business-agents",
+      "type": "directories",
+      "label": "Business Agents Directory: Automation Tools",
+      "url": "https://bestaiagent.in/business-agents"
+    },
+    {
+      "id": "/business-agents-directory",
+      "type": "directories",
+      "label": "Business AI Agents Directory: Automation Tools",
+      "url": "https://bestaiagent.in/business-agents-directory"
+    },
+    {
+      "id": "/business-ai-hub",
+      "type": "hubs",
+      "label": "Business AI Agents Hub",
+      "url": "https://bestaiagent.in/business-ai-hub"
+    },
+    {
+      "id": "/buyers-guides",
+      "type": "buyers-guides",
+      "label": "AI Agent Buyer Guides: Choose the Right Tool",
+      "url": "https://bestaiagent.in/buyers-guides"
+    },
+    {
+      "id": "/buyers-guides-hub",
+      "type": "hubs",
+      "label": "AI Agent Buyer Guides Hub",
+      "url": "https://bestaiagent.in/buyers-guides-hub"
+    },
+    {
+      "id": "/calculators-hub",
+      "type": "hubs",
+      "label": "AI Agent Calculators Hub",
+      "url": "https://bestaiagent.in/calculators-hub"
+    },
+    {
+      "id": "/claude-code",
+      "type": "reviews",
+      "label": "Claude Code Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/claude-code"
+    },
+    {
+      "id": "/claude-code-alternatives",
+      "type": "alternatives",
+      "label": "Claude Code Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/claude-code-alternatives"
+    },
+    {
+      "id": "/claude-code-entity",
+      "type": "entity-pages",
+      "label": "Claude Code: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/claude-code-entity"
+    },
+    {
+      "id": "/claude-code-pricing",
+      "type": "pricing",
+      "label": "Claude Code Pricing 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/claude-code-pricing"
+    },
+    {
+      "id": "/claude-code-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "Claude Code Reddit Review: Developer Community Insights",
+      "url": "https://bestaiagent.in/claude-code-reddit-review"
+    },
+    {
+      "id": "/claude-vs-cursor",
+      "type": "comparisons",
+      "label": "Claude VS Code vs Cursor AI – Which AI Coding Assistant Wins in 2026?",
+      "url": "https://bestaiagent.in/claude-vs-cursor"
+    },
+    {
+      "id": "/clay-review",
+      "type": "reviews",
+      "label": "Clay Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/clay-review"
+    },
+    {
+      "id": "/clay-vs-apollo",
+      "type": "comparisons",
+      "label": "Clay AI vs Apollo AI – Which Lead Generation Platform Wins in 2026?",
+      "url": "https://bestaiagent.in/clay-vs-apollo"
+    },
+    {
+      "id": "/coding-agents",
+      "type": "directories",
+      "label": "Coding Agents Directory: AI Developer Tools",
+      "url": "https://bestaiagent.in/coding-agents"
+    },
+    {
+      "id": "/coding-agents-directory",
+      "type": "directories",
+      "label": "Coding Agents Directory: AI Developer Tools",
+      "url": "https://bestaiagent.in/coding-agents-directory"
+    },
+    {
+      "id": "/coding-agents-hub",
+      "type": "hubs",
+      "label": "Coding AI Agents Hub",
+      "url": "https://bestaiagent.in/coding-agents-hub"
+    },
+    {
+      "id": "/contact",
+      "type": "editorial",
+      "label": "Contact BestAIAgent.in",
+      "url": "https://bestaiagent.in/contact"
+    },
+    {
+      "id": "/copilot-free-vs-paid",
+      "type": "pricing",
+      "label": "GitHub Copilot Free vs Paid 2026 – Which Plan is Right for You?",
+      "url": "https://bestaiagent.in/copilot-free-vs-paid"
+    },
+    {
+      "id": "/copilot-vs-claude-code",
+      "type": "comparisons",
+      "label": "GitHub Copilot vs Claude Code – Which AI Coding Assistant Wins in 2026?",
+      "url": "https://bestaiagent.in/copilot-vs-claude-code"
+    },
+    {
+      "id": "/crewai-alternatives",
+      "type": "alternatives",
+      "label": "CrewAI Alternatives: LangGraph, AutoGen & Flowise",
+      "url": "https://bestaiagent.in/crewai-alternatives"
+    },
+    {
+      "id": "/crewai-entity",
+      "type": "entity-pages",
+      "label": "CrewAI: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/crewai-entity"
+    },
+    {
+      "id": "/crewai-pricing",
+      "type": "pricing-intelligence",
+      "label": "CrewAI Pricing: Open-Source, Cloud & Team Costs",
+      "url": "https://bestaiagent.in/crewai-pricing"
+    },
+    {
+      "id": "/crewai-review",
+      "type": "reviews",
+      "label": "CrewAI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/crewai-review"
+    },
+    {
+      "id": "/cursor-ai",
+      "type": "reviews",
+      "label": "Cursor AI Review: India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/cursor-ai"
+    },
+    {
+      "id": "/cursor-ai-entity",
+      "type": "entity-pages",
+      "label": "Cursor AI: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/cursor-ai-entity"
+    },
+    {
+      "id": "/cursor-ai-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "Cursor AI Reddit Review: What Developers Say",
+      "url": "https://bestaiagent.in/cursor-ai-reddit-review"
+    },
+    {
+      "id": "/cursor-alternatives",
+      "type": "alternatives",
+      "label": "Cursor Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/cursor-alternatives"
+    },
+    {
+      "id": "/cursor-cost-calculator",
+      "type": "longtail-engine",
+      "label": "Cursor AI Cost Calculator: Team Pricing Estimator",
+      "url": "https://bestaiagent.in/cursor-cost-calculator"
+    },
+    {
+      "id": "/cursor-for-python-debugging",
+      "type": "longtail",
+      "label": "Cursor for Python Debugging 2026 – Complete Guide",
+      "url": "https://bestaiagent.in/cursor-for-python-debugging"
+    },
+    {
+      "id": "/cursor-free-vs-pro",
+      "type": "pricing",
+      "label": "Cursor Free vs Pro 2026 – Which Plan is Right for You?",
+      "url": "https://bestaiagent.in/cursor-free-vs-pro"
+    },
+    {
+      "id": "/cursor-pricing",
+      "type": "pricing",
+      "label": "Cursor Pricing 2026 – Complete Guide for Indian Users",
+      "url": "https://bestaiagent.in/cursor-pricing"
+    },
+    {
+      "id": "/cursor-pricing-india",
+      "type": "pricing",
+      "label": "Cursor Pricing India 2026 – Complete INR Breakdown",
+      "url": "https://bestaiagent.in/cursor-pricing-india"
+    },
+    {
+      "id": "/cursor-vs-claude-code",
+      "type": "comparisons",
+      "label": "Cursor vs Claude Code – Which AI Coding Assistant Wins in 2026?",
+      "url": "https://bestaiagent.in/cursor-vs-claude-code"
+    },
+    {
+      "id": "/cursor-vs-github-copilot",
+      "type": "comparisons",
+      "label": "Cursor AI vs GitHub Copilot – Which AI Coding Assistant Wins in 2026?",
+      "url": "https://bestaiagent.in/cursor-vs-github-copilot"
+    },
+    {
+      "id": "/dify-alternatives",
+      "type": "alternatives",
+      "label": "Dify Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/dify-alternatives"
+    },
+    {
+      "id": "/dify-entity",
+      "type": "entity-pages",
+      "label": "Dify: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/dify-entity"
+    },
+    {
+      "id": "/dify-pricing",
+      "type": "pricing",
+      "label": "Dify Pricing 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/dify-pricing"
+    },
+    {
+      "id": "/dify-review",
+      "type": "reviews",
+      "label": "Dify Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/dify-review"
+    },
+    {
+      "id": "/dify-vs-langflow",
+      "type": "comparisons",
+      "label": "Dify vs LangFlow – Which AI App Builder Wins in 2026?",
+      "url": "https://bestaiagent.in/dify-vs-langflow"
+    },
+    {
+      "id": "/directories-hub",
+      "type": "hubs",
+      "label": "AI Agent Directories Hub",
+      "url": "https://bestaiagent.in/directories-hub"
+    },
+    {
+      "id": "/dpdp-act-ai-compliance",
+      "type": "security-compliance",
+      "label": "DPDP Act 2023 Compliance for AI Agents: Complete Checklist",
+      "url": "https://bestaiagent.in/dpdp-act-ai-compliance"
+    },
+    {
+      "id": "/editorial-policy",
+      "type": "editorial",
+      "label": "Editorial Policy, Independence, Corrections, and Affiliate Disclosure",
+      "url": "https://bestaiagent.in/editorial-policy"
+    },
+    {
+      "id": "/elevenlabs-conversational-ai-review",
+      "type": "reviews",
+      "label": "ElevenLabs Conversational AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/elevenlabs-conversational-ai-review"
+    },
+    {
+      "id": "/entity",
+      "type": "entity-pages",
+      "label": "AI Agent Entity Pages: Structured Definitions",
+      "url": "https://bestaiagent.in/entity"
+    },
+    {
+      "id": "/entity-hub",
+      "type": "hubs",
+      "label": "AI Agent Entity Pages Hub",
+      "url": "https://bestaiagent.in/entity-hub"
+    },
+    {
+      "id": "/flowise-alternatives",
+      "type": "alternatives",
+      "label": "Flowise Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/flowise-alternatives"
+    },
+    {
+      "id": "/flowise-entity",
+      "type": "entity-pages",
+      "label": "Flowise: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/flowise-entity"
+    },
+    {
+      "id": "/flowise-pricing",
+      "type": "pricing",
+      "label": "Flowise Pricing 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/flowise-pricing"
+    },
+    {
+      "id": "/flowise-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "Flowise Reddit Review: No-Code AI Builder Feedback",
+      "url": "https://bestaiagent.in/flowise-reddit-review"
+    },
+    {
+      "id": "/flowise-review",
+      "type": "reviews",
+      "label": "Flowise Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/flowise-review"
+    },
+    {
+      "id": "/flowise-vs-dify",
+      "type": "comparisons",
+      "label": "Flowise vs Dify 2026 – Which AI Agent Builder Wins for Indian Developers?",
+      "url": "https://bestaiagent.in/flowise-vs-dify"
+    },
+    {
+      "id": "/flowise-vs-n8n",
+      "type": "comparisons",
+      "label": "Flowise vs n8n – Which AI Agent Builder Wins in 2026?",
+      "url": "https://bestaiagent.in/flowise-vs-n8n"
+    },
+    {
+      "id": "/free-agents",
+      "type": "directories",
+      "label": "Free AI Agents Directory: No-Cost Options",
+      "url": "https://bestaiagent.in/free-agents"
+    },
+    {
+      "id": "/free-agents-directory",
+      "type": "directories",
+      "label": "Free AI Agents Directory: No-Cost Options",
+      "url": "https://bestaiagent.in/free-agents-directory"
+    },
+    {
+      "id": "/free-ai-agents-hub",
+      "type": "hubs",
+      "label": "Free AI Agents Hub",
+      "url": "https://bestaiagent.in/free-ai-agents-hub"
+    },
+    {
+      "id": "/future-of-ai-agents",
+      "type": "core",
+      "label": "Future of AI Agents 2026–2030 – Predictions for India",
+      "url": "https://bestaiagent.in/future-of-ai-agents"
+    },
+    {
+      "id": "/gaia-benchmark-guide",
+      "type": "research",
+      "label": "GAIA Benchmark Guide 2026 – Complete Explanation",
+      "url": "https://bestaiagent.in/gaia-benchmark-guide"
+    },
+    {
+      "id": "/github-copilot",
+      "type": "reviews",
+      "label": "GitHub Copilot Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/github-copilot"
+    },
+    {
+      "id": "/github-copilot-alternatives",
+      "type": "alternatives",
+      "label": "GitHub Copilot Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/github-copilot-alternatives"
+    },
+    {
+      "id": "/github-copilot-entity",
+      "type": "entity-pages",
+      "label": "GitHub Copilot: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/github-copilot-entity"
+    },
+    {
+      "id": "/github-copilot-pricing",
+      "type": "pricing",
+      "label": "GitHub Copilot Pricing 2026 – Complete Guide for Indian Users",
+      "url": "https://bestaiagent.in/github-copilot-pricing"
+    },
+    {
+      "id": "/github-copilot-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "GitHub Copilot Reddit Review: Community Consensus",
+      "url": "https://bestaiagent.in/github-copilot-reddit-review"
+    },
+    {
+      "id": "/glossary-hub",
+      "type": "hubs",
+      "label": "AI Agent Glossary Hub",
+      "url": "https://bestaiagent.in/glossary-hub"
+    },
+    {
+      "id": "/how-to-build-ai-agent-with-crewai",
+      "type": "tutorials",
+      "label": "How to Build an AI Agent with CrewAI – Complete Tutorial",
+      "url": "https://bestaiagent.in/how-to-build-ai-agent-with-crewai"
+    },
+    {
+      "id": "/how-to-build-ai-agent-with-flowise",
+      "type": "tutorials",
+      "label": "How to Build an AI Agent with Flowise – Complete Tutorial",
+      "url": "https://bestaiagent.in/how-to-build-ai-agent-with-flowise"
+    },
+    {
+      "id": "/how-to-build-an-ai-agent",
+      "type": "courses",
+      "label": "How to Build an AI Agent – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-build-an-ai-agent"
+    },
+    {
+      "id": "/how-to-build-multi-agent-system",
+      "type": "tutorials",
+      "label": "How to Build a Multi-Agent System – Complete Tutorial",
+      "url": "https://bestaiagent.in/how-to-build-multi-agent-system"
+    },
+    {
+      "id": "/how-to-connect-claude-to-mcp",
+      "type": "tutorials",
+      "label": "How to Connect Claude to MCP – Complete Tutorial",
+      "url": "https://bestaiagent.in/how-to-connect-claude-to-mcp"
+    },
+    {
+      "id": "/how-to-create-an-ai-agent",
+      "type": "courses-certifications",
+      "label": "How to Create an AI Agent: No-Code to Code Guide",
+      "url": "https://bestaiagent.in/how-to-create-an-ai-agent"
+    },
+    {
+      "id": "/how-to-create-mcp-server",
+      "type": "tutorials",
+      "label": "How to Create an MCP Server – Complete Tutorial",
+      "url": "https://bestaiagent.in/how-to-create-mcp-server"
+    },
+    {
+      "id": "/how-to-install-cursor",
+      "type": "tutorials",
+      "label": "How to Install Cursor AI – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-install-cursor"
+    },
+    {
+      "id": "/how-to-integrate-ai-agent-with-whatsapp",
+      "type": "tutorials",
+      "label": "How to Integrate AI Agent with WhatsApp Business API",
+      "url": "https://bestaiagent.in/how-to-integrate-ai-agent-with-whatsapp"
+    },
+    {
+      "id": "/how-to-set-up-claude-code",
+      "type": "tutorials",
+      "label": "How to Set Up Claude Code – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-set-up-claude-code"
+    },
+    {
+      "id": "/how-to-setup-langgraph",
+      "type": "tutorials",
+      "label": "How to Set Up LangGraph: Graph-Based Agent Orchestration",
+      "url": "https://bestaiagent.in/how-to-setup-langgraph"
+    },
+    {
+      "id": "/how-to-use-cursor-ai",
+      "type": "tutorials",
+      "label": "How to Use Cursor AI – Complete Tutorial for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-use-cursor-ai"
+    },
+    {
+      "id": "/how-to-use-github-copilot",
+      "type": "tutorials",
+      "label": "How to Use GitHub Copilot – Complete Tutorial for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-use-github-copilot"
+    },
+    {
+      "id": "/how-to-use-retell",
+      "type": "tutorials",
+      "label": "How to Use Retell AI – Complete Tutorial for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-use-retell"
+    },
+    {
+      "id": "/how-to-use-vapi",
+      "type": "tutorials",
+      "label": "How to Use Vapi AI – Complete Tutorial for Indian Developers",
+      "url": "https://bestaiagent.in/how-to-use-vapi"
+    },
+    {
+      "id": "/hubspot-ai-vs-salesforce-ai",
+      "type": "comparisons",
+      "label": "HubSpot AI vs Salesforce AI – Which CRM AI Wins in 2026?",
+      "url": "https://bestaiagent.in/hubspot-ai-vs-salesforce-ai"
+    },
+    {
+      "id": "/humaneval-guide",
+      "type": "research",
+      "label": "HumanEval Guide 2026 – Complete Explanation",
+      "url": "https://bestaiagent.in/humaneval-guide"
+    },
+    {
+      "id": "/implementation-tutorials-hub",
+      "type": "tutorials",
+      "label": "Implementation Tutorials Hub",
+      "url": "https://bestaiagent.in/implementation-tutorials-hub"
+    },
+    {
+      "id": "/india",
+      "type": "industry-ai-agents",
+      "label": "AI Agents in India: Pricing, DPDP & Buyer Guides",
+      "url": "https://bestaiagent.in/india"
+    },
+    {
+      "id": "/india-hub",
+      "type": "hubs",
+      "label": "AI Agents India Hub",
+      "url": "https://bestaiagent.in/india-hub"
+    },
+    {
+      "id": "/industry-ai-agents-hub",
+      "type": "industry-ai-agents",
+      "label": "Industry AI Agents Hub",
+      "url": "https://bestaiagent.in/industry-ai-agents-hub"
+    },
+    {
+      "id": "/intercom-alternatives",
+      "type": "alternatives",
+      "label": "Intercom Alternatives 2026 – Best Competitors for Indian SaaS",
+      "url": "https://bestaiagent.in/intercom-alternatives"
+    },
+    {
+      "id": "/intercom-entity",
+      "type": "entity-pages",
+      "label": "Intercom: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/intercom-entity"
+    },
+    {
+      "id": "/intercom-pricing",
+      "type": "pricing",
+      "label": "Intercom Pricing 2026 – Complete Guide for Indian SaaS Companies",
+      "url": "https://bestaiagent.in/intercom-pricing"
+    },
+    {
+      "id": "/intercom-review",
+      "type": "reviews",
+      "label": "Intercom AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/intercom-review"
+    },
+    {
+      "id": "/intercom-vs-zendesk-ai",
+      "type": "comparisons",
+      "label": "Intercom vs Zendesk AI – Which Support Platform Wins in 2026?",
+      "url": "https://bestaiagent.in/intercom-vs-zendesk-ai"
+    },
+    {
+      "id": "/jasper-vs-copy-ai",
+      "type": "comparisons",
+      "label": "Jasper vs Copy.ai – Which AI Content Tool Wins in 2026?",
+      "url": "https://bestaiagent.in/jasper-vs-copy-ai"
+    },
+    {
+      "id": "/langflow-review",
+      "type": "reviews",
+      "label": "LangFlow Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/langflow-review"
+    },
+    {
+      "id": "/langgraph-entity",
+      "type": "entity-pages",
+      "label": "LangGraph: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/langgraph-entity"
+    },
+    {
+      "id": "/langgraph-review",
+      "type": "reviews",
+      "label": "LangGraph Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/langgraph-review"
+    },
+    {
+      "id": "/langgraph-vs-crewai",
+      "type": "comparisons",
+      "label": "LangGraph vs CrewAI – Which Multi-Agent Framework Wins in 2026?",
+      "url": "https://bestaiagent.in/langgraph-vs-crewai"
+    },
+    {
+      "id": "/llamaindex-review",
+      "type": "reviews",
+      "label": "LlamaIndex Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/llamaindex-review"
+    },
+    {
+      "id": "/llamaindex-vs-langchain",
+      "type": "comparisons",
+      "label": "LlamaIndex vs LangChain – Which Framework Wins in 2026?",
+      "url": "https://bestaiagent.in/llamaindex-vs-langchain"
+    },
+    {
+      "id": "/longtail-ai-agent-hub",
+      "type": "longtail-engine",
+      "label": "Longtail AI Agent Hub",
+      "url": "https://bestaiagent.in/longtail-ai-agent-hub"
+    },
+    {
+      "id": "/longtail-hub",
+      "type": "longtail-engine",
+      "label": "AI Agent Longtail Hub: Niche Use Cases & Tools",
+      "url": "https://bestaiagent.in/longtail-hub"
+    },
+    {
+      "id": "/mcp-directory",
+      "type": "mcp",
+      "label": "MCP Directory 2026 – Complete List of Model Context Protocol Servers",
+      "url": "https://bestaiagent.in/mcp-directory"
+    },
+    {
+      "id": "/mcp-for-ai-agents",
+      "type": "mcp-servers",
+      "label": "MCP for AI Agents: Integration Guide",
+      "url": "https://bestaiagent.in/mcp-for-ai-agents"
+    },
+    {
+      "id": "/mcp-hosting",
+      "type": "mcp-servers",
+      "label": "MCP Hosting: Self-Hosted vs Managed Server Deployment",
+      "url": "https://bestaiagent.in/mcp-hosting"
+    },
+    {
+      "id": "/mcp-hub",
+      "type": "hubs",
+      "label": "MCP Hub",
+      "url": "https://bestaiagent.in/mcp-hub"
+    },
+    {
+      "id": "/mcp-marketplace",
+      "type": "mcp-servers",
+      "label": "MCP Marketplace: Find & Deploy Servers",
+      "url": "https://bestaiagent.in/mcp-marketplace"
+    },
+    {
+      "id": "/mcp-security",
+      "type": "mcp",
+      "label": "MCP Security 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/mcp-security"
+    },
+    {
+      "id": "/mcp-servers",
+      "type": "directories",
+      "label": "MCP Servers Directory: Model Context Protocol",
+      "url": "https://bestaiagent.in/mcp-servers"
+    },
+    {
+      "id": "/mcp-servers-directory",
+      "type": "directories",
+      "label": "MCP Servers Directory: Model Context Protocol",
+      "url": "https://bestaiagent.in/mcp-servers-directory"
+    },
+    {
+      "id": "/mcp-use-cases",
+      "type": "mcp-servers",
+      "label": "MCP Use Cases: Real-World AI Agent Integrations",
+      "url": "https://bestaiagent.in/mcp-use-cases"
+    },
+    {
+      "id": "/mcp-vs-api",
+      "type": "mcp",
+      "label": "MCP vs API – Complete Comparison for Indian Developers",
+      "url": "https://bestaiagent.in/mcp-vs-api"
+    },
+    {
+      "id": "/mcp/what-is-mcp",
+      "type": "mcp",
+      "label": "What is MCP (Model Context Protocol)? Complete Guide 2026",
+      "url": "https://bestaiagent.in/mcp/what-is-mcp"
+    },
+    {
+      "id": "/methodology",
+      "type": "editorial",
+      "label": "Editorial Methodology and 42-Point AI Agent Scoring Framework",
+      "url": "https://bestaiagent.in/methodology"
+    },
+    {
+      "id": "/n8n-alternatives",
+      "type": "alternatives",
+      "label": "n8n Alternatives 2026 – Best Competitors for Indian Agencies",
+      "url": "https://bestaiagent.in/n8n-alternatives"
+    },
+    {
+      "id": "/n8n-pricing",
+      "type": "pricing",
+      "label": "n8n Pricing 2026 – Complete Guide for Indian Agencies",
+      "url": "https://bestaiagent.in/n8n-pricing"
+    },
+    {
+      "id": "/n8n-review",
+      "type": "reviews",
+      "label": "n8n Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/n8n-review"
+    },
+    {
+      "id": "/open-interpreter-review",
+      "type": "reviews",
+      "label": "Open Interpreter Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/open-interpreter-review"
+    },
+    {
+      "id": "/open-source-agents",
+      "type": "directories",
+      "label": "Open-Source Agents Directory",
+      "url": "https://bestaiagent.in/open-source-agents"
+    },
+    {
+      "id": "/open-source-agents-directory",
+      "type": "directories",
+      "label": "Open-Source AI Agents Directory",
+      "url": "https://bestaiagent.in/open-source-agents-directory"
+    },
+    {
+      "id": "/openai-agents-sdk-review",
+      "type": "reviews",
+      "label": "OpenAI Agents SDK Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/openai-agents-sdk-review"
+    },
+    {
+      "id": "/openai-agents-sdk-vs-langgraph",
+      "type": "comparisons",
+      "label": "OpenAI Agents SDK vs LangGraph – Which Agent Framework Wins in 2026?",
+      "url": "https://bestaiagent.in/openai-agents-sdk-vs-langgraph"
+    },
+    {
+      "id": "/pricing-hub",
+      "type": "hubs",
+      "label": "AI Agent Pricing Hub",
+      "url": "https://bestaiagent.in/pricing-hub"
+    },
+    {
+      "id": "/reddit",
+      "type": "reddit-community-intent",
+      "label": "AI Agent Reddit Reviews Hub",
+      "url": "https://bestaiagent.in/reddit"
+    },
+    {
+      "id": "/reddit-hub",
+      "type": "hubs",
+      "label": "AI Agent Reddit Reviews Hub",
+      "url": "https://bestaiagent.in/reddit-hub"
+    },
+    {
+      "id": "/replit-agent",
+      "type": "reviews",
+      "label": "Replit Agent Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/replit-agent"
+    },
+    {
+      "id": "/replit-vs-cursor",
+      "type": "comparisons",
+      "label": "Replit vs Cursor AI – Which AI Coding Assistant Wins for Students and Developers in 2026?",
+      "url": "https://bestaiagent.in/replit-vs-cursor"
+    },
+    {
+      "id": "/retell-alternatives",
+      "type": "alternatives",
+      "label": "Retell AI Alternatives 2026 – Best Competitors for Indian Enterprises",
+      "url": "https://bestaiagent.in/retell-alternatives"
+    },
+    {
+      "id": "/retell-cost-calculator",
+      "type": "longtail-engine",
+      "label": "Retell AI Cost Calculator: Call Center Pricing",
+      "url": "https://bestaiagent.in/retell-cost-calculator"
+    },
+    {
+      "id": "/retell-entity",
+      "type": "entity-pages",
+      "label": "Retell AI: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/retell-entity"
+    },
+    {
+      "id": "/retell-pricing",
+      "type": "pricing-intelligence",
+      "label": "Retell AI Pricing in INR: Call Center & Voice Agent Costs",
+      "url": "https://bestaiagent.in/retell-pricing"
+    },
+    {
+      "id": "/retell-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "Retell AI Reddit Review: Call Center AI Feedback",
+      "url": "https://bestaiagent.in/retell-reddit-review"
+    },
+    {
+      "id": "/retell-review",
+      "type": "reviews",
+      "label": "Retell AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/retell-review"
+    },
+    {
+      "id": "/retell-vs-bland",
+      "type": "comparisons",
+      "label": "Retell AI vs Bland AI – Which Voice Agent Platform Wins in 2026?",
+      "url": "https://bestaiagent.in/retell-vs-bland"
+    },
+    {
+      "id": "/semantic-kernel-review",
+      "type": "reviews",
+      "label": "Semantic Kernel Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/semantic-kernel-review"
+    },
+    {
+      "id": "/superagent-review",
+      "type": "reviews",
+      "label": "Superagent Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/superagent-review"
+    },
+    {
+      "id": "/swe-bench-guide",
+      "type": "research",
+      "label": "SWE-Bench Guide 2026 – Complete Explanation",
+      "url": "https://bestaiagent.in/swe-bench-guide"
+    },
+    {
+      "id": "/tools/cursor-ai",
+      "type": "tools",
+      "label": "Cursor AI: AI Coding Agent Tool Profile",
+      "url": "https://bestaiagent.in/tools/cursor-ai"
+    },
+    {
+      "id": "/tutorials-hub",
+      "type": "hubs",
+      "label": "AI Agent Tutorials Hub",
+      "url": "https://bestaiagent.in/tutorials-hub"
+    },
+    {
+      "id": "/vapi-alternatives",
+      "type": "alternatives",
+      "label": "Vapi Alternatives 2026 – Best Competitors for Indian Startups",
+      "url": "https://bestaiagent.in/vapi-alternatives"
+    },
+    {
+      "id": "/vapi-cost-calculator",
+      "type": "longtail-engine",
+      "label": "Vapi Cost Calculator: Voice Agent Pricing Estimator",
+      "url": "https://bestaiagent.in/vapi-cost-calculator"
+    },
+    {
+      "id": "/vapi-entity",
+      "type": "entity-pages",
+      "label": "Vapi AI: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/vapi-entity"
+    },
+    {
+      "id": "/vapi-for-appointment-booking",
+      "type": "longtail",
+      "label": "Vapi for Appointment Booking 2026 – Complete Guide",
+      "url": "https://bestaiagent.in/vapi-for-appointment-booking"
+    },
+    {
+      "id": "/vapi-pricing",
+      "type": "pricing",
+      "label": "Vapi Pricing 2026 – Complete Guide for Indian Startups",
+      "url": "https://bestaiagent.in/vapi-pricing"
+    },
+    {
+      "id": "/vapi-pricing-calculator",
+      "type": "pricing",
+      "label": "Vapi Pricing Calculator 2026 – Estimate Your Voice Agent Costs",
+      "url": "https://bestaiagent.in/vapi-pricing-calculator"
+    },
+    {
+      "id": "/vapi-reddit-review",
+      "type": "reddit-community-intent",
+      "label": "Vapi Reddit Review: Voice AI Developer Feedback",
+      "url": "https://bestaiagent.in/vapi-reddit-review"
+    },
+    {
+      "id": "/vapi-review",
+      "type": "reviews",
+      "label": "Vapi AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/vapi-review"
+    },
+    {
+      "id": "/vapi-vs-bland",
+      "type": "comparisons",
+      "label": "Vapi vs Bland AI – Which Voice Agent Platform Wins in 2026?",
+      "url": "https://bestaiagent.in/vapi-vs-bland"
+    },
+    {
+      "id": "/vapi-vs-retell",
+      "type": "comparisons",
+      "label": "Vapi AI vs Retell AI – Which Voice Agent Platform Wins in 2026?",
+      "url": "https://bestaiagent.in/vapi-vs-retell"
+    },
+    {
+      "id": "/voice-agents",
+      "type": "directories",
+      "label": "Voice Agents Directory: Telephony & TTS",
+      "url": "https://bestaiagent.in/voice-agents"
+    },
+    {
+      "id": "/voice-agents-directory",
+      "type": "directories",
+      "label": "Voice AI Agents Directory: Telephony & TTS",
+      "url": "https://bestaiagent.in/voice-agents-directory"
+    },
+    {
+      "id": "/voice-ai-hub",
+      "type": "hubs",
+      "label": "Voice AI Agents Hub",
+      "url": "https://bestaiagent.in/voice-ai-hub"
+    },
+    {
+      "id": "/what-is-agentic-ai",
+      "type": "glossary",
+      "label": "What is Agentic AI? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-agentic-ai"
+    },
+    {
+      "id": "/what-is-agentops",
+      "type": "glossary",
+      "label": "What is AgentOps? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-agentops"
+    },
+    {
+      "id": "/what-is-ai-agent-memory",
+      "type": "glossary",
+      "label": "What Is AI Agent Memory? Short-Term, Long-Term & Entity",
+      "url": "https://bestaiagent.in/what-is-ai-agent-memory"
+    },
+    {
+      "id": "/what-is-an-ai-agent",
+      "type": "core",
+      "label": "What is an AI Agent? Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/what-is-an-ai-agent"
+    },
+    {
+      "id": "/what-is-context-window",
+      "type": "glossary",
+      "label": "What is Context Window? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-context-window"
+    },
+    {
+      "id": "/what-is-crewai",
+      "type": "glossary",
+      "label": "What is CrewAI? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-crewai"
+    },
+    {
+      "id": "/what-is-function-calling",
+      "type": "glossary",
+      "label": "What is Function Calling in AI? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-function-calling"
+    },
+    {
+      "id": "/what-is-gaia",
+      "type": "glossary",
+      "label": "What is GAIA Benchmark? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-gaia"
+    },
+    {
+      "id": "/what-is-langgraph",
+      "type": "glossary",
+      "label": "What is LangGraph? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-langgraph"
+    },
+    {
+      "id": "/what-is-mcp",
+      "type": "glossary",
+      "label": "What is MCP (Model Context Protocol)? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-mcp"
+    },
+    {
+      "id": "/what-is-multi-agent-system",
+      "type": "glossary",
+      "label": "What is a Multi-Agent System? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-multi-agent-system"
+    },
+    {
+      "id": "/what-is-rag",
+      "type": "glossary",
+      "label": "What is RAG (Retrieval-Augmented Generation)? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-rag"
+    },
+    {
+      "id": "/what-is-swe-bench",
+      "type": "glossary",
+      "label": "What is SWE-Bench? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-swe-bench"
+    },
+    {
+      "id": "/what-is-tool-use",
+      "type": "glossary",
+      "label": "What is Tool Use in AI? Complete Guide 2026",
+      "url": "https://bestaiagent.in/what-is-tool-use"
+    },
+    {
+      "id": "/windsurf",
+      "type": "reviews",
+      "label": "Windsurf Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/windsurf"
+    },
+    {
+      "id": "/windsurf-alternatives",
+      "type": "alternatives",
+      "label": "Windsurf Alternatives 2026 – Best Competitors for Indian Developers",
+      "url": "https://bestaiagent.in/windsurf-alternatives"
+    },
+    {
+      "id": "/windsurf-pricing",
+      "type": "pricing",
+      "label": "Windsurf Pricing 2026 – Complete Guide for Indian Developers",
+      "url": "https://bestaiagent.in/windsurf-pricing"
+    },
+    {
+      "id": "/windsurf-vs-cursor",
+      "type": "comparisons",
+      "label": "Windsurf vs Cursor AI – Which AI Coding Assistant Wins for Frontend Developers in 2026?",
+      "url": "https://bestaiagent.in/windsurf-vs-cursor"
+    },
+    {
+      "id": "/yellow-ai-alternatives",
+      "type": "alternatives",
+      "label": "Yellow.ai Alternatives: Haptik, Wati & Intercom",
+      "url": "https://bestaiagent.in/yellow-ai-alternatives"
+    },
+    {
+      "id": "/yellow-ai-entity",
+      "type": "entity-pages",
+      "label": "Yellow.ai: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/yellow-ai-entity"
+    },
+    {
+      "id": "/yellow-ai-pricing",
+      "type": "pricing",
+      "label": "Yellow.ai Pricing 2026 – Complete Guide for Indian Enterprises",
+      "url": "https://bestaiagent.in/yellow-ai-pricing"
+    },
+    {
+      "id": "/yellow-ai-review",
+      "type": "reviews",
+      "label": "Yellow.ai Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/yellow-ai-review"
+    },
+    {
+      "id": "/yellow-ai-vs-intercom",
+      "type": "comparisons",
+      "label": "Yellow.ai vs Intercom AI – Which AI Agent Wins for Indian Customer Support?",
+      "url": "https://bestaiagent.in/yellow-ai-vs-intercom"
+    },
+    {
+      "id": "entity:AI Agent",
+      "type": "entity",
+      "label": "AI Agent"
+    },
+    {
+      "id": "entity:AI Coding Agent",
+      "type": "entity",
+      "label": "AI Coding Agent"
+    },
+    {
+      "id": "entity:AI Voice Agent",
+      "type": "entity",
+      "label": "AI Voice Agent"
+    },
+    {
+      "id": "entity:AI Agent Builder",
+      "type": "entity",
+      "label": "AI Agent Builder"
+    },
+    {
+      "id": "entity:MCP",
+      "type": "entity",
+      "label": "MCP"
+    },
+    {
+      "id": "entity:LangGraph",
+      "type": "entity",
+      "label": "LangGraph"
+    },
+    {
+      "id": "entity:CrewAI",
+      "type": "entity",
+      "label": "CrewAI"
+    },
+    {
+      "id": "entity:Cursor",
+      "type": "entity",
+      "label": "Cursor"
+    },
+    {
+      "id": "entity:GitHub Copilot",
+      "type": "entity",
+      "label": "GitHub Copilot"
+    },
+    {
+      "id": "entity:Claude Code",
+      "type": "entity",
+      "label": "Claude Code"
+    },
+    {
+      "id": "entity:Vapi",
+      "type": "entity",
+      "label": "Vapi"
+    },
+    {
+      "id": "entity:Retell",
+      "type": "entity",
+      "label": "Retell"
+    },
+    {
+      "id": "entity:Flowise",
+      "type": "entity",
+      "label": "Flowise"
+    },
+    {
+      "id": "entity:Dify",
+      "type": "entity",
+      "label": "Dify"
+    },
+    {
+      "id": "entity:AutoGen",
+      "type": "entity",
+      "label": "AutoGen"
+    },
+    {
+      "id": "entity:Yellow.ai",
+      "type": "entity",
+      "label": "Yellow.ai"
+    },
+    {
+      "id": "entity:Intercom",
+      "type": "entity",
+      "label": "Intercom"
+    },
+    {
+      "id": "entity:n8n",
+      "type": "entity",
+      "label": "n8n"
+    },
+    {
+      "id": "entity:Make",
+      "type": "entity",
+      "label": "Make"
+    },
+    {
+      "id": "entity:Zapier",
+      "type": "entity",
+      "label": "Zapier"
+    },
+    {
+      "id": "entity:ElevenLabs",
+      "type": "entity",
+      "label": "ElevenLabs"
+    },
+    {
+      "id": "entity:Bland.ai",
+      "type": "entity",
+      "label": "Bland.ai"
+    },
+    {
+      "id": "entity:Windsurf",
+      "type": "entity",
+      "label": "Windsurf"
+    },
+    {
+      "id": "entity:Replit AI",
+      "type": "entity",
+      "label": "Replit AI"
+    },
+    {
+      "id": "entity:Tabnine",
+      "type": "entity",
+      "label": "Tabnine"
+    },
+    {
+      "id": "entity:Amazon CodeWhisperer",
+      "type": "entity",
+      "label": "Amazon CodeWhisperer"
+    },
+    {
+      "id": "entity:OpenAI Codex",
+      "type": "entity",
+      "label": "OpenAI Codex"
+    },
+    {
+      "id": "entity:Qodo",
+      "type": "entity",
+      "label": "Qodo"
+    },
+    {
+      "id": "entity:LangChain",
+      "type": "entity",
+      "label": "LangChain"
+    },
+    {
+      "id": "entity:LlamaIndex",
+      "type": "entity",
+      "label": "LlamaIndex"
+    },
+    {
+      "id": "entity:Vercel AI SDK",
+      "type": "entity",
+      "label": "Vercel AI SDK"
+    },
+    {
+      "id": "entity:ChatGPT",
+      "type": "entity",
+      "label": "ChatGPT"
+    },
+    {
+      "id": "entity:Claude",
+      "type": "entity",
+      "label": "Claude"
+    },
+    {
+      "id": "entity:Google Gemini",
+      "type": "entity",
+      "label": "Google Gemini"
+    },
+    {
+      "id": "entity:Perplexity",
+      "type": "entity",
+      "label": "Perplexity"
+    }
+  ],
+  "edges": [
+    {
+      "from": "/",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/affiliate-disclosure",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/agent-builders",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/agent-builders-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/agentbench-guide",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/agentops-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-benchmarks",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-builders-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-comparison",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-examples",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-for-indian-smes",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-for-indian-startups",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-for-whatsapp-business",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-github-projects",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-learning-path",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-news",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-pricing-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-project-ideas",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-projects",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-ranking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-research",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-scoring-system",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-security",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-trends",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-use-cases",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-business",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-crm",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-enterprises",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-finance",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-healthcare",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-hr",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-marketing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-procurement",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-sales",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-security",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-smes",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-support-automation",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agents-for-workflow-automation",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-coding-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-support-agent-roi-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/alternatives-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/apollo-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/artisan-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/authors/arshdeep-singh",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/authors/karan-mehra",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/authors/priya-iyer",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/autogen-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/autogen-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/autogen-vs-crewai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-app-builder",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-automation-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-builder",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-builder-reddit",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-certification",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-course",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-course-for-beginners",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-course-reddit",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-creator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-development-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-extension-for-vs-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-accountants",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-agencies",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-appointment-booking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-backend-development",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-banking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-business",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-call-centers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-code-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-coding",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-consultants",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-content-creators",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-crm",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-customer-support",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-customer-support-in-saas",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-data-analysis",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-debugging",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-developers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-ecommerce",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-education",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-email",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-enterprises",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-freelancers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-frontend-development",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-healthcare-calls",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-hospitals",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-ides",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-inbound-support",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-indian-businesses",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-javascript",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-job-applications",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-job-search",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-law-firms",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-lead-generation",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-lead-generation-in-real-estate",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-lead-qualification",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-legal",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-linkedin",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-logistics",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-manufacturing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-marketing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-nextjs",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-nodejs",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-outbound-calling",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-patient-scheduling-in-hospitals",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-personal-use",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-presentations",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-productivity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-python",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-react",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-real-estate",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-real-estate-calls",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-recruiting",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-research",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-saas",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-sales",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-seo",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-shopify",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-small-business",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-solopreneurs",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-startups",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-students",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-vs-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-whatsapp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-whatsapp-support",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-wordpress",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-youtube",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-maker",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-management-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-no-code-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-orchestration-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-personal-assistant",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-reddit",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-with-memory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-workflow-builder",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-workflow-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agents-for-business",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-call-center-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-coding-agent-reddit",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-phone-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-voice-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-voice-agent-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-ai-agent-builder",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-ai-agent-for-business",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-ai-agents",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-ai-coding-agents",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-ai-voice-agent",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-free-open-source-ai-agents",
+      "to": "/free-ai-agents-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-mcp-servers",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-no-code-ai-agent-builder",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-open-source-ai-agent-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-open-source-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/bland-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/business-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/business-agents-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/business-ai-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/buyers-guides",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/buyers-guides-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/calculators-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-vs-cursor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/clay-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/clay-vs-apollo",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/coding-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/coding-agents-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/coding-agents-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/contact",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/copilot-free-vs-paid",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/copilot-vs-claude-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/crewai-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/crewai-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/crewai-pricing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-ai-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-ai-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-for-python-debugging",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-free-vs-pro",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-pricing-india",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-vs-claude-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cursor-vs-github-copilot",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dify-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dify-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dify-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dify-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dify-vs-langflow",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/directories-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/dpdp-act-ai-compliance",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/editorial-policy",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/elevenlabs-conversational-ai-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/entity-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-vs-dify",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flowise-vs-n8n",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/free-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/free-agents-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/free-ai-agents-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/future-of-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gaia-benchmark-guide",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-copilot-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-copilot-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-copilot-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-copilot-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/glossary-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-build-ai-agent-with-crewai",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-build-ai-agent-with-flowise",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-build-an-ai-agent",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-build-multi-agent-system",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-connect-claude-to-mcp",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-create-an-ai-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-create-mcp-server",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-install-cursor",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-integrate-ai-agent-with-whatsapp",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-set-up-claude-code",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-setup-langgraph",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-cursor-ai",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-github-copilot",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-retell",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-vapi",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hubspot-ai-vs-salesforce-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/humaneval-guide",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/implementation-tutorials-hub",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/india-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/industry-ai-agents-hub",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/intercom-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/intercom-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/intercom-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/intercom-vs-zendesk-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/jasper-vs-copy-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/langflow-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/langgraph-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/langgraph-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/langgraph-vs-crewai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/llamaindex-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/llamaindex-vs-langchain",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/longtail-ai-agent-hub",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/longtail-hub",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-directory",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-for-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-hosting",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-marketplace",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-security",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-servers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-servers-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-cases",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-vs-api",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp/what-is-mcp",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/methodology",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/n8n-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/n8n-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/n8n-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/open-interpreter-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/open-source-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/open-source-agents-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/openai-agents-sdk-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/openai-agents-sdk-vs-langgraph",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/pricing-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/reddit",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/reddit-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/replit-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/replit-vs-cursor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-pricing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/retell-vs-bland",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/semantic-kernel-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/superagent-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/swe-bench-guide",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tutorials-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-for-appointment-booking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-pricing-calculator",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-reddit-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-vs-bland",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vapi-vs-retell",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-agents-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-hub",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-agentic-ai",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-agentops",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-ai-agent-memory",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-an-ai-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-context-window",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-crewai",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-function-calling",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-gaia",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-langgraph",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-mcp",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-multi-agent-system",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-rag",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-swe-bench",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/what-is-tool-use",
+      "to": "/glossary-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/windsurf",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/windsurf-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/windsurf-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/windsurf-vs-cursor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/yellow-ai-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/yellow-ai-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/yellow-ai-pricing",
+      "to": "/pricing-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/yellow-ai-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/yellow-ai-vs-intercom",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/agentops-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/apollo-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/apollo-review",
+      "to": "/clay-vs-apollo",
+      "relation": "competitor"
+    },
+    {
+      "from": "/artisan-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/autogen-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/autogen-review",
+      "to": "/autogen-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/bland-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/bland-review",
+      "to": "/retell-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/bland-review",
+      "to": "/vapi-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/claude-code",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/claude-code-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/copilot-vs-claude-code",
+      "relation": "competitor"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/cursor-vs-claude-code",
+      "relation": "competitor"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/claude-code-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/claude-code",
+      "to": "/how-to-set-up-claude-code",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/clay-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/clay-review",
+      "to": "/clay-vs-apollo",
+      "relation": "competitor"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "/autogen-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "/langgraph-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "/crewai-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/crewai-review",
+      "to": "/how-to-build-ai-agent-with-crewai",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-free-vs-pro",
+      "relation": "pricing"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-pricing-india",
+      "relation": "pricing"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/claude-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-vs-claude-code",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-vs-github-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/replit-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/windsurf-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/how-to-install-cursor",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/how-to-use-cursor-ai",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/dify-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/dify-review",
+      "to": "/dify-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/dify-review",
+      "to": "/dify-vs-langflow",
+      "relation": "competitor"
+    },
+    {
+      "from": "/dify-review",
+      "to": "/flowise-vs-dify",
+      "relation": "competitor"
+    },
+    {
+      "from": "/dify-review",
+      "to": "/dify-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/elevenlabs-conversational-ai-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/flowise-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/flowise-vs-dify",
+      "relation": "competitor"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/flowise-vs-n8n",
+      "relation": "competitor"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/flowise-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/flowise-review",
+      "to": "/how-to-build-ai-agent-with-flowise",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "/github-copilot-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "/cursor-vs-github-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "/github-copilot-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/github-copilot",
+      "to": "/how-to-use-github-copilot",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "/intercom-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "/intercom-vs-zendesk-ai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "/yellow-ai-vs-intercom",
+      "relation": "competitor"
+    },
+    {
+      "from": "/intercom-review",
+      "to": "/intercom-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/langflow-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/langflow-review",
+      "to": "/dify-vs-langflow",
+      "relation": "competitor"
+    },
+    {
+      "from": "/langgraph-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/langgraph-review",
+      "to": "/langgraph-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/langgraph-review",
+      "to": "/openai-agents-sdk-vs-langgraph",
+      "relation": "competitor"
+    },
+    {
+      "from": "/langgraph-review",
+      "to": "/how-to-setup-langgraph",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/llamaindex-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/llamaindex-review",
+      "to": "/llamaindex-vs-langchain",
+      "relation": "competitor"
+    },
+    {
+      "from": "/n8n-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/n8n-review",
+      "to": "/n8n-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/n8n-review",
+      "to": "/flowise-vs-n8n",
+      "relation": "competitor"
+    },
+    {
+      "from": "/n8n-review",
+      "to": "/n8n-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/open-interpreter-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/openai-agents-sdk-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/openai-agents-sdk-review",
+      "to": "/openai-agents-sdk-vs-langgraph",
+      "relation": "competitor"
+    },
+    {
+      "from": "/replit-agent",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/retell-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/retell-review",
+      "to": "/retell-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/retell-review",
+      "to": "/vapi-vs-retell",
+      "relation": "competitor"
+    },
+    {
+      "from": "/retell-review",
+      "to": "/retell-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/retell-review",
+      "to": "/how-to-use-retell",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/semantic-kernel-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/superagent-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "Tool Profiles",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-free-vs-pro",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-pricing-india",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/claude-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-vs-claude-code",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-vs-github-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/replit-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/windsurf-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/cursor-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/how-to-install-cursor",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/how-to-use-cursor-ai",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/vapi-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/vapi-pricing-calculator",
+      "relation": "pricing"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/vapi-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/vapi-vs-retell",
+      "relation": "competitor"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/vapi-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/vapi-review",
+      "to": "/how-to-use-vapi",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/windsurf",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/windsurf",
+      "to": "/windsurf-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/windsurf",
+      "to": "/windsurf-vs-cursor",
+      "relation": "competitor"
+    },
+    {
+      "from": "/windsurf",
+      "to": "/windsurf-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/yellow-ai-review",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/yellow-ai-review",
+      "to": "/yellow-ai-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/yellow-ai-review",
+      "to": "/yellow-ai-vs-intercom",
+      "relation": "competitor"
+    },
+    {
+      "from": "/yellow-ai-review",
+      "to": "/yellow-ai-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/agentbench-guide",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/agentops-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-benchmarks",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-builders-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-comparison",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-cost-calculator",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-examples",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-for-indian-smes",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-for-indian-startups",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-for-whatsapp-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-learning-path",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-news",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-pricing-india",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-project-ideas",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-agent-for-ides",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-coding-agent-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-free-ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/coding-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/coding-agents-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/tools/cursor-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/what-is-swe-bench",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Voice Agent",
+      "to": "/best-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Voice Agent",
+      "to": "/best-ai-voice-agent-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Voice Agent",
+      "to": "/best-free-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Voice Agent",
+      "to": "/voice-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Voice Agent",
+      "to": "/voice-ai-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/ai-agent-builders-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/authors/priya-iyer",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/best-no-code-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/flowise-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/flowise-vs-dify",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/flowise-vs-n8n",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-trends",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/best-mcp-servers",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/glossary-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/how-to-connect-claude-to-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/how-to-create-mcp-server",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/implementation-tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-for-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-hosting",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-marketplace",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-security",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-servers",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-servers-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-use-cases",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp-vs-api",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/mcp/what-is-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/what-is-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/autogen-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-ai-agent-orchestration-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-free-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-open-source-ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/crewai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/crewai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/dify-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/how-to-build-multi-agent-system",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/how-to-create-an-ai-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/how-to-setup-langgraph",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/langgraph-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/langgraph-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/langgraph-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/autogen-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/autogen-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-ai-agent-orchestration-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-free-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-open-source-ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/best-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/crewai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/crewai-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/crewai-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/crewai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/how-to-build-ai-agent-with-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/how-to-build-multi-agent-system",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/how-to-create-an-ai-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/implementation-tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/langgraph-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/langgraph-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-code-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-debugging",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-ecommerce",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-javascript",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-nextjs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-python",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-react",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-coding-agent-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-free-ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/claude-vs-cursor",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/coding-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/cursor-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/cursor-ai-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-debugging",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-ecommerce",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-javascript",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-nextjs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-python",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-react",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-free-ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/copilot-free-vs-paid",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/copilot-vs-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/cursor-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/cursor-vs-github-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/github-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/github-copilot-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/github-copilot-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/github-copilot-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-debugging",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-javascript",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-nextjs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-python",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-agent-for-react",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/best-ai-coding-agent-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code-reddit-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/coding-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/copilot-vs-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/cursor-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/cursor-vs-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/github-copilot-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/how-to-set-up-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-agent-for-appointment-booking",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-agent-for-call-centers",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-agent-for-outbound-calling",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-phone-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-ai-voice-agent-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/best-free-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/bland-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/elevenlabs-conversational-ai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/how-to-use-vapi",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/implementation-tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/retell-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/retell-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/vapi-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/vapi-cost-calculator",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/vapi-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/vapi-for-appointment-booking",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/vapi-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/best-ai-agent-for-call-centers",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/best-ai-agent-for-outbound-calling",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/best-ai-phone-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/best-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/best-ai-voice-agent-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/bland-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/elevenlabs-conversational-ai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/how-to-use-retell",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/implementation-tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-cost-calculator",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-reddit-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/retell-vs-bland",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/tutorials-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/vapi-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/vapi-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-ai-agent-maker",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-ai-agent-no-code-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-ai-agent-workflow-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-no-code-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/best-open-source-ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/crewai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/dify-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/dify-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/dify-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/flowise-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/flowise-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/flowise-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Flowise",
+      "to": "/flowise-reddit-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-ai-agent-maker",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-ai-agent-no-code-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-ai-agent-workflow-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-no-code-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/best-open-source-ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/crewai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/dify-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/dify-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/dify-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/dify-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/dify-vs-langflow",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/flowise-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/flowise-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/flowise-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/autogen-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/autogen-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/autogen-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/best-free-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/best-open-source-ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/best-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/crewai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/crewai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/langgraph-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/open-source-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/open-source-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/ai-agent-for-whatsapp-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-automation-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-agencies",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-appointment-booking",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-consultants",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-hospitals",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-inbound-support",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-law-firms",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-real-estate",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-small-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-whatsapp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-agent-for-whatsapp-support",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-call-center-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/best-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/intercom-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/retell-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/vapi-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/yellow-ai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/yellow-ai-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
+      "to": "/yellow-ai-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/ai-agent-for-whatsapp-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/ai-agents-for-support-automation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/best-ai-agent-for-inbound-support",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/best-ai-agent-for-real-estate",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/best-ai-agent-for-whatsapp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/best-ai-agent-for-whatsapp-support",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/intercom-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/intercom-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/intercom-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/intercom-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/intercom-vs-zendesk-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/yellow-ai-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/yellow-ai-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/yellow-ai-vs-intercom",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/agent-builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/agent-builders-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/ai-agents-for-workflow-automation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-ai-agent-automation-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-ai-agent-workflow-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-free-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/best-no-code-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/dify-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/dify-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/dify-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/flowise-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/flowise-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/flowise-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/flowise-vs-n8n",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/n8n-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/n8n-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
+      "to": "/n8n-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/ai-agents-for-workflow-automation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/best-ai-agent-automation-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/best-ai-agent-for-small-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/best-ai-agent-maker",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/best-ai-agent-workflow-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/n8n-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Make",
+      "to": "/n8n-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/ai-agents-for-workflow-automation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/best-ai-agent-automation-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/best-ai-agent-for-small-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/best-free-ai-agent-for-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/best-no-code-ai-agent-builder",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/n8n-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Zapier",
+      "to": "/n8n-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:ElevenLabs",
+      "to": "/best-free-ai-voice-agent",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:ElevenLabs",
+      "to": "/elevenlabs-conversational-ai-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:ElevenLabs",
+      "to": "/voice-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Bland.ai",
+      "to": "/best-ai-voice-agent-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Bland.ai",
+      "to": "/voice-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-ecommerce",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-nextjs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-react",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-coding-agent-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/coding-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/cursor-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/github-copilot-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/windsurf",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/windsurf-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/windsurf-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/windsurf-vs-cursor",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Replit AI",
+      "to": "/best-ai-agent-platform",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-for-debugging",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-for-javascript",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-for-python",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-free-ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Qodo",
+      "to": "/best-ai-agent-for-code-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangChain",
+      "to": "/llamaindex-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangChain",
+      "to": "/llamaindex-vs-langchain",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LlamaIndex",
+      "to": "/best-free-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LlamaIndex",
+      "to": "/llamaindex-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LlamaIndex",
+      "to": "/llamaindex-vs-langchain",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-debugging",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-javascript",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-nextjs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-python",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-agent-for-react",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/best-ai-coding-agent-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-code-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-code-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-code-reddit-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/claude-vs-cursor",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/coding-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/copilot-vs-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/cursor-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/cursor-vs-claude-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
+      "to": "/github-copilot-alternatives",
+      "relation": "mentionedOn"
+    }
+  ]
+}

@@ -1,400 +1,513 @@
 import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
-import path from 'path';
-import fs from 'fs';
+import path from 'node:path';
+import fs from 'node:fs';
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const isProd = process.env.NODE_ENV === 'production';
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
+const BASE_URL = 'https://bestaiagent.in';
+
+type RouteMeta = {
+  path: string;
+  canonicalPath?: string;
+  title: string;
+  description: string;
+  h1?: string;
+  category?: string;
+  categoryLabel?: string;
+  slug?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  schemas?: unknown[];
+  robots?: string;
+};
+
+type AnalyzeRequest = {
+  content?: string;
+  filename?: string;
+  mimeType?: string;
+};
+
+type RecommendRequest = {
+  prompt?: string;
+  industry?: string;
+  budget?: string;
+  languagePreference?: string;
+};
+
+const escapeHtml = (value: string) =>
+  value.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char] || char));
+
+const titleCase = (slug: string) =>
+  slug
+    .split(/[-/]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+
+function homePageSchemas() {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'BestAIAgent.in',
+      url: BASE_URL,
+      description:
+        'India-focused AI agent comparison and review platform covering coding agents, business agents, voice agents, AI builders, MCP servers, pricing, alternatives, tutorials, and glossary definitions with INR and DPDP context.',
+      sameAs: [
+        'https://twitter.com/bestaiagentin',
+        'https://github.com/bestaiagentin',
+      ],
+      areaServed: {
+        '@type': 'Country',
+        name: 'India',
+      },
+      inLanguage: 'en-IN',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${BASE_URL}/#website`,
+      name: 'BestAIAgent.in',
+      url: BASE_URL,
+      description:
+        "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
+      inLanguage: 'en-IN',
+      publisher: { '@id': `${BASE_URL}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${BASE_URL}/search?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${BASE_URL}/#webpage`,
+      name: 'Best AI Agents in India 2026',
+      description:
+        'Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation.',
+      url: BASE_URL,
+      isPartOf: { '@id': `${BASE_URL}/#website` },
+      about: { '@id': `${BASE_URL}/#organization` },
+      breadcrumb: { '@id': `${BASE_URL}/#breadcrumb` },
+      inLanguage: 'en-IN',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': `${BASE_URL}/#collection`,
+      name: 'Best AI Agents Directory — India 2026',
+      description:
+        'Curated collection of AI agents reviewed for Indian startups, SMEs, developers, and enterprises.',
+      url: BASE_URL,
+      isPartOf: { '@id': `${BASE_URL}/#website` },
+    },
+  ];
+}
+
+const homeFAQs = [
+  { q: 'What is the best AI agent in India?', a: 'The best AI agent depends on your use case. Cursor AI leads for coding, Vapi and Retell are strong for voice automation, Yellow.ai and Intercom fit customer support, while Flowise, Dify, CrewAI, and LangGraph are better for building custom agents.' },
+  { q: 'Which AI agent is best for coding?', a: 'Cursor AI is the strongest choice for multi-file IDE coding assistance, with GitHub Copilot as an alternative for inline suggestions. Both support TypeScript, Python, and React workflows.' },
+  { q: 'What is the best free AI agent?', a: 'Flowise, Dify Community Edition, and CrewAI offer strong free tiers for Indian teams. Many vendors provide trial periods without credit card requirements for initial testing.' },
+  { q: 'Which AI agent is best for Indian businesses?', a: 'Yellow.ai and Intercom lead for customer support automation, Vapi and Retell for voice workflows, and Flowise for internal process automation. Choose based on your integration needs.' },
+  { q: 'Which AI agent supports WhatsApp automation?', a: 'Yellow.ai, Wati, and Intercom offer native WhatsApp Business API integration. Ensure compliance with Meta messaging templates and DPDP consent requirements for Indian users.' },
+  { q: 'What is the best AI agent builder?', a: 'Flowise, Dify, n8n, and LangGraph are the top builders. Flowise and Dify suit visual no-code workflows, while LangGraph and CrewAI are better for code-first agent pipelines.' },
+  { q: 'Are AI agents DPDP compliant?', a: 'DPDP compliance depends on configuration. Review consent flows, data retention policies, cross-border transfer rules, and vendor processing terms. Indian-hosted deployments may reduce risk.' },
+  { q: 'How much do AI agents cost in India?', a: 'Free tiers exist for Flowise, Dify, and open-source tools. Paid agents range from ₹1,500 to ₹15,000 per user per month. Enterprise pricing varies by volume and support needs.' },
+  { q: 'Is Cursor better than GitHub Copilot?', a: 'Cursor excels at multi-file editing and project-wide refactoring. Copilot is stronger for inline completions and GitHub-native workflows. The best choice depends on your team workflow.' },
+  { q: 'What is MCP in AI agents?', a: 'Model Context Protocol (MCP) is a standard for connecting AI agents to external tools, data sources, and APIs. It enables agents to read files, query databases, and call external services safely.' },
+  { q: 'Which AI agent is best for startups?', a: 'Start with Flowise or Dify for internal automation, Vapi for voice, and Cursor for engineering. All offer free tiers suitable for early-stage budgets and quick iteration.' },
+  { q: 'Which AI agent is best for customer support?', a: 'Yellow.ai, Intercom Fin, and Tidio are strong for Indian customer support. Evaluate WhatsApp integration, Hindi support, pricing transparency, and DPDP compliance.' },
+];
+
+function homepageFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFAQs.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  };
+}
+
+function homepageBreadcrumbSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${BASE_URL}/#breadcrumb`,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: BASE_URL,
+      },
+    ],
+  };
+}
+
+function homepageItemlistSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Top AI Agents in India 2026',
+    description: 'India-focused editorial rankings of the best AI agents across coding, business, voice, and building categories.',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Cursor AI — Best for coding', url: `${BASE_URL}/tools/cursor-ai` },
+      { '@type': 'ListItem', position: 2, name: 'Yellow.ai — Best for Indian business support', url: `${BASE_URL}/tools/yellow-ai` },
+      { '@type': 'ListItem', position: 3, name: 'Vapi — Best for voice automation', url: `${BASE_URL}/tools/vapi-ai` },
+      { '@type': 'ListItem', position: 4, name: 'Flowise — Best visual builder', url: `${BASE_URL}/tools/flowise` },
+      { '@type': 'ListItem', position: 5, name: 'CrewAI — Best open-source agent framework', url: `${BASE_URL}/tools/crewai` },
+    ],
+  };
+}
+
+const defaultHomeMeta: RouteMeta = {
+  path: '/',
+  title: 'Best AI Agents in India 2026: Compare Tools, Builders, Coding Agents and Business Automation',
+  description:
+    'Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation. Independent rankings with INR pricing, DPDP checks, and expert reviews.',
+  h1: 'Best AI Agents in India 2026',
+  slug: 'home',
+  ogImage: '/assets/og/home.png',
+  ogImageAlt: 'BestAIAgent.in AI agent category dashboard preview',
+  schemas: [
+    ...homePageSchemas(),
+    homepageFaqSchema(),
+    homepageBreadcrumbSchema(),
+    homepageItemlistSchema(),
+  ],
+};
+
+function readRouteMeta(): Record<string, RouteMeta> {
+  const candidates = [
+    path.resolve(process.cwd(), 'public/route-meta.json'),
+    path.resolve(process.cwd(), 'dist/route-meta.json'),
+    path.resolve(__dirname, 'route-meta.json'),
+  ];
+  for (const file of candidates) {
+    if (fs.existsSync(file)) {
+      return JSON.parse(fs.readFileSync(file, 'utf8')) as Record<string, RouteMeta>;
+    }
+  }
+  return { '/': defaultHomeMeta };
+}
+
+let routeMeta = readRouteMeta();
+const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/preview', '/compare']);
+
+routeMeta['/'] = defaultHomeMeta;
+
+function normalizePath(inputPath: string) {
+  const clean = inputPath.split('?')[0].replace(/\/+$/, '');
+  return clean || '/';
+}
+
+function fallbackMeta(reqPath: string): RouteMeta {
+  const isAuthor = reqPath.startsWith('/authors/');
+  const isTool = reqPath.startsWith('/tools/');
+  const isComparison = reqPath.includes('-vs-');
+  const isPricing = reqPath.includes('-pricing');
+  const label = titleCase(reqPath);
+  const title = isAuthor
+    ? `${label} - AI Agent Author | BestAIAgent.in`
+    : isTool
+      ? `${label.replace(/^Tools /, '')} Review, Pricing and India Fit | BestAIAgent.in`
+      : isComparison
+        ? `${label} Comparison for India | BestAIAgent.in`
+        : isPricing
+          ? `${label} in INR: Pricing, GST and Plan Guide | BestAIAgent.in`
+          : `${label} | BestAIAgent.in`;
+
+  return {
+    path: reqPath,
+    slug: reqPath.replace(/^\//, '') || 'home',
+    title,
+    description: `${label} with India-focused AI agent analysis, INR pricing notes, GST and DPDP considerations, comparisons, FAQs, and implementation guidance.`,
+    schemas: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${BASE_URL}${reqPath}#webpage`,
+        name: title,
+        description: `${label} from BestAIAgent.in.`,
+        url: `${BASE_URL}${reqPath}`,
+        inLanguage: 'en-IN',
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        '@id': `${BASE_URL}${reqPath}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+          { '@type': 'ListItem', position: 2, name: label, item: `${BASE_URL}${reqPath}` },
+        ],
+      },
+    ],
+  };
+}
+
+function routeImageMeta(meta: RouteMeta) {
+  const pathName = normalizePath(meta.canonicalPath || meta.path || '/');
+  const slug = meta.slug || pathName.replace(/^\//, '') || 'home';
+  let image = meta.ogImage;
+  let alt = meta.ogImageAlt;
+
+  if (!image) {
+    if (pathName === '/') image = '/assets/og/home.png';
+    else if (pathName.startsWith('/tools/')) image = `/assets/og/${pathName.replace('/tools/', '')}.png`;
+    else if (slug.includes('-vs-')) image = `/assets/comparisons/${slug}.png`;
+    else if (slug.endsWith('-hub')) image = `/assets/og/${slug}.png`;
+    else image = '/assets/brand/og-default.png';
+  }
+
+  if (!alt) {
+    if (pathName.startsWith('/tools/')) alt = `${titleCase(pathName.replace('/tools/', ''))} review preview image on BestAIAgent.in`;
+    else if (slug.includes('-vs-')) alt = `${titleCase(slug)} comparison preview image on BestAIAgent.in`;
+    else if (slug.endsWith('-hub')) alt = `${titleCase(slug)} hub preview image on BestAIAgent.in`;
+    else alt = 'BestAIAgent.in independent AI agent authority preview image';
+  }
+
+  return {
+    image: image.startsWith('http') ? image : `${BASE_URL}${image}`,
+    alt: escapeHtml(alt),
+  };
+}
+
+function getRouteMeta(reqPath: string): RouteMeta {
+  const pathName = normalizePath(reqPath);
+  if (noindexPaths.has(pathName)) {
+    return { ...fallbackMeta(pathName), robots: 'noindex,follow' };
+  }
+  return routeMeta[pathName] || fallbackMeta(pathName);
+}
+
+function schemaScript(meta: RouteMeta) {
+  const schemas = meta.schemas && meta.schemas.length ? meta.schemas : fallbackMeta(meta.path).schemas || [];
+  return schemas
+    .map((schema) => `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`)
+    .join('\n  ');
+}
+
+function injectMeta(html: string, meta: RouteMeta) {
+  const canonicalPath = meta.canonicalPath || meta.path || '/';
+  const canonical = `${BASE_URL}${canonicalPath === '/' ? '' : canonicalPath}`;
+  const title = escapeHtml(meta.title || defaultHomeMeta.title);
+  const description = escapeHtml(meta.description || defaultHomeMeta.description);
+  const robots = meta.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const imageMeta = routeImageMeta(meta);
+  const tags = [
+    `<title>${title}</title>`,
+    `<meta name="description" content="${description}" />`,
+    `<meta name="robots" content="${robots}" />`,
+    `<link rel="canonical" href="${canonical}" />`,
+    `<meta property="og:type" content="website" />`,
+    `<meta property="og:site_name" content="BestAIAgent.in" />`,
+    `<meta property="og:url" content="${canonical}" />`,
+    `<meta property="og:title" content="${title}" />`,
+    `<meta property="og:description" content="${description}" />`,
+    `<meta property="og:image" content="${imageMeta.image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="${imageMeta.alt}" />`,
+    `<meta property="og:locale" content="en_IN" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:site" content="@bestaiagentin" />`,
+    `<meta name="twitter:creator" content="@arshdeepsingh_" />`,
+    `<meta name="twitter:title" content="${title}" />`,
+    `<meta name="twitter:description" content="${description}" />`,
+    `<meta name="twitter:image" content="${imageMeta.image}" />`,
+    `<meta name="twitter:image:alt" content="${imageMeta.alt}" />`,
+    schemaScript(meta),
+  ].join('\n  ');
+
+  let out = html
+    .replace(/<title>[\s\S]*?<\/title>\s*/g, '')
+    .replace(/<meta name="description"[^>]*>\s*/g, '')
+    .replace(/<meta name="robots"[^>]*>\s*/g, '')
+    .replace(/<link rel="canonical"[^>]*>\s*/g, '')
+    .replace(/<meta property="og:(?:type|site_name|url|title|description|image|image:width|image:height|image:alt|locale)"[^>]*>\s*/g, '')
+    .replace(/<meta name="twitter:(?:card|site|creator|title|description|image|image:alt)"[^>]*>\s*/g, '');
+
+  out = out.replace(/<!-- ROUTE_SEO_START -->[\s\S]*?<!-- ROUTE_SEO_END -->/, `<!-- ROUTE_SEO_START -->\n  ${tags}\n  <!-- ROUTE_SEO_END -->`);
+  if (!out.includes('<!-- ROUTE_SEO_START -->')) {
+    out = out.replace('</head>', `  <!-- ROUTE_SEO_START -->\n  ${tags}\n  <!-- ROUTE_SEO_END -->\n  </head>`);
+  }
+  return out;
+}
+
+function contentTypeFor(fileName: string) {
+  if (fileName.endsWith('.xml')) return fileName === 'feed.xml' ? 'application/rss+xml; charset=utf-8' : 'application/xml; charset=utf-8';
+  if (fileName.endsWith('.txt')) return 'text/plain; charset=utf-8';
+  if (fileName.endsWith('.json')) return 'application/json; charset=utf-8';
+  return 'text/plain; charset=utf-8';
+}
+
+function sendGeneratedFile(res: express.Response, fileName: string) {
+  const candidates = [
+    path.resolve(process.cwd(), 'public', fileName),
+    path.resolve(process.cwd(), 'dist', fileName),
+    path.resolve(__dirname, fileName),
+  ];
+  const file = candidates.find((candidate) => fs.existsSync(candidate));
+  if (!file) return res.status(404).send('Not found');
+  res.setHeader('Content-Type', contentTypeFor(fileName));
+  return res.send(fs.readFileSync(file, 'utf8'));
+}
+
+function simulatedRecommendation(prompt: string) {
+  const lower = prompt.toLowerCase();
+  if (lower.includes('code') || lower.includes('developer') || lower.includes('frontend') || lower.includes('backend')) {
+    return `### Recommended AI Coding Stack\n\n1. **Cursor AI** - Best for multi-file repository work, React/TypeScript refactors, and fast prototyping. Estimated Pro pricing is typically around ₹1,700/month before tax depending on exchange rate.\n2. **GitHub Copilot** - Best for GitHub-first teams that want inline IDE suggestions with lighter workflow change.\n\n**India checklist:** confirm card billing, GST invoice treatment, privacy mode, repository exclusions, and DPDP-safe handling of client code.`;
+  }
+  if (lower.includes('whatsapp') || lower.includes('voice') || lower.includes('call') || lower.includes('support')) {
+    return `### Recommended Customer Automation Stack\n\n1. **Vapi** - Best for voice-agent prototypes, appointment booking, and call summaries.\n2. **Yellow.ai** - Best for enterprise WhatsApp and omnichannel support with India-market procurement fit.\n\n**India checklist:** test Hindi/Hinglish calls, WhatsApp opt-ins, Razorpay or UPI payment handoff, escalation rules, and DPDP Act 2023 consent language.`;
+  }
+  return `### Recommended AI Agent Stack\n\n1. **Flowise** - Best for visual RAG and workflow prototypes that can be self-hosted.\n2. **n8n** - Best for automation-heavy workflows across CRM, sheets, email, and webhooks.\n3. **CrewAI** - Best for Python teams building role-based multi-agent workflows.\n\n**India checklist:** estimate INR usage, GST treatment, hosting region, DPDP exposure, and support ownership before scaling.`;
+}
 
 async function startServer() {
   const app = express();
-  app.use(express.json());
+  app.use(express.json({ limit: '2mb' }));
 
-  // Setup Server-Side Gemini API Client
   const apiKey = process.env.GEMINI_API_KEY;
-  let ai: GoogleGenAI | null = null;
-  
-  if (apiKey && apiKey !== "MY_GEMINI_API_KEY") {
-    try {
-      ai = new GoogleGenAI({
-        apiKey: apiKey,
-        httpOptions: {
-          headers: {
-            'User-Agent': 'aistudio-build',
-          }
-        }
-      });
-      console.log("Server: Gemini API Client initialized successfully.");
-    } catch (e) {
-      console.error("Server: Failed to init GoogleGenAI SDK", e);
+  const ai = apiKey && apiKey !== 'MY_GEMINI_API_KEY' ? new GoogleGenAI({ apiKey }) : null;
+
+  app.get('/', (req, res, next) => {
+    const view = typeof req.query.view === 'string' ? req.query.view : '';
+    const article = typeof req.query.article === 'string' ? req.query.article : '';
+    const product = typeof req.query.product === 'string' ? req.query.product : '';
+    const silo = typeof req.query.silo === 'string' ? req.query.silo : '';
+    if (product) return res.redirect(301, `/tools/${product}`);
+    if (article) return res.redirect(301, `/${article}`);
+    if (view === 'article' && article) return res.redirect(301, `/${article}`);
+    if (view === 'product' && product) return res.redirect(301, `/tools/${product}`);
+    if (view === 'silo-pillar' && silo) {
+      const siloMap: Record<string, string> = {
+        reviews: '/best-ai-agent',
+        builders: '/ai-agent-builders-hub',
+        'coding-agents': '/coding-agents-hub',
+        frameworks: '/ai-agent-builders-hub',
+        business: '/business-ai-hub',
+        research: '/ai-agent-trends',
+        mcp: '/mcp-hub',
+      };
+      return res.redirect(301, siloMap[silo] || '/best-ai-agent');
     }
-  } else {
-    console.warn("Server: GEMINI_API_KEY missing or placeholder in environment. Personalized recommendations will run in simulated expert mode.");
-  }
-
-  // --- API ROUTING KEY ENDPOINTS ---
-
-  // SEO & LLM Crawler Protocols
-  app.get('/llms.txt', (req, res) => {
-    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    let txt = `# BestAIAgent.in - Topical Authority Index for AI crawlers\n`;
-    txt += `This directory lists our comprehensive 100-Pillar Topical Authority Map built for Google, ChatGPT, Gemini, Claude, Perplexity, Copilot, and AI Overviews.\n\n`;
-    
-    const clusters = [
-      { name: "AI Agent Core", slugs: ["best-ai-agent", "best-ai-agents", "what-is-an-ai-agent", "ai-agent-examples", "ai-agent-use-cases", "ai-agent-trends", "ai-agent-news", "ai-agent-benchmarks", "ai-agent-ranking", "ai-agent-comparison"] },
-      { name: "AI Agent Builders", slugs: ["best-ai-agent-builder", "best-ai-agent-creator", "best-ai-agent-maker", "best-ai-agent-platform", "best-ai-agent-app-builder", "best-ai-agent-workflow-builder", "best-ai-agent-no-code-platform", "best-ai-agent-development-platform", "best-ai-agent-orchestration-platform", "best-ai-agent-management-platform"] },
-      { name: "Coding Agents", slugs: ["ai-coding-agents", "best-ai-agent-for-coding", "best-ai-agent-for-vs-code", "best-ai-agent-extension-for-vs-code", "best-ai-agent-for-ides", "best-ai-agent-for-code-review", "best-ai-agent-for-frontend-development", "best-ai-agent-for-backend-development", "best-ai-agent-for-python", "best-ai-agent-for-javascript"] },
-      { name: "Frameworks & SDKs", slugs: ["best-ai-agent-frameworks", "best-ai-agent-framework", "best-ai-agent-orchestration-tools", "best-ai-agent-sdks", "best-ai-agent-libraries", "best-open-source-ai-agent-tools", "best-ai-agent-development-tools", "best-ai-agent-prompt-tools", "best-ai-agent-memory-systems", "best-ai-agent-observability-tools"] },
-      { name: "Business & SME Agents", slugs: ["ai-agents-for-business", "ai-agents-for-enterprises", "ai-agents-for-smes", "ai-agents-for-workflow-automation", "ai-agents-for-support-automation", "ai-agents-for-finance", "ai-agents-for-security", "ai-agents-for-healthcare", "ai-agents-for-hr", "ai-agents-for-procurement"] },
-      { name: "Research & Education", slugs: ["best-ai-agent-course", "best-ai-agent-certification", "best-ai-agent-course-for-beginners", "best-ai-agent-course-reddit", "how-to-build-an-ai-agent", "how-to-create-an-ai-agent", "ai-agent-projects", "ai-agent-project-ideas", "ai-agent-github-projects", "ai-agent-learning-path"] },
-      { name: "Personal & Productivity", slugs: ["best-ai-agent-for-personal-use", "best-ai-agent-personal-assistant", "best-ai-agent-for-research", "best-ai-agent-for-email", "best-ai-agent-for-presentations", "best-ai-agent-for-data-analysis", "best-ai-agent-for-job-search", "best-ai-agent-for-job-applications", "best-ai-agent-for-productivity", "best-ai-agent-with-memory"] },
-      { name: "Voice & Automation", slugs: ["best-ai-voice-agent", "best-ai-voice-agent-platform", "best-ai-agent-for-whatsapp", "best-ai-agent-for-customer-support", "best-ai-agent-for-call-centers", "best-ai-agent-for-sales", "best-ai-agent-for-marketing", "best-ai-agent-for-crm", "best-ai-agent-automation-platform", "best-ai-agent-workflow-tools"] },
-      { name: "Tool Comparisons", slugs: ["chatgpt-vs-claude", "chatgpt-vs-gemini", "chatgpt-vs-perplexity", "cursor-vs-copilot", "cursor-vs-claude", "crewai-vs-autogen", "langgraph-vs-crewai", "flowise-vs-dify", "vapi-vs-retell", "yellow-ai-vs-vapi"] },
-      { name: "MCP & Next-Gen Hub", slugs: ["what-is-mcp", "best-mcp-servers", "mcp-directory", "mcp-marketplace", "mcp-hosting", "mcp-security", "mcp-use-cases", "mcp-for-ai-agents", "mcp-vs-api", "future-of-ai-agents"] }
-    ];
-
-    clusters.forEach(c => {
-      txt += `\n## ${c.name}\n`;
-      c.slugs.forEach(s => {
-        txt += `- https://bestaiagent.in/#view=article&article=${s}\n`;
-      });
-    });
-
-    res.send(txt);
+    return next();
   });
 
-  const getSitemapXML = (urls: string[]) => {
-    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-    urls.forEach(u => {
-      xml += `  <url>\n`;
-      xml += `    <loc>https://bestaiagent.in/#view=article&amp;article=${u}</loc>\n`;
-      xml += `    <lastmod>2026-06-11</lastmod>\n`;
-      xml += `    <changefreq>weekly</changefreq>\n`;
-      xml += `    <priority>0.80</priority>\n`;
-      xml += `  </url>\n`;
-    });
-    xml += `</urlset>`;
-    return xml;
-  };
+  app.get([
+    '/robots.txt',
+    '/sitemap.xml',
+    '/ai-agent-sitemap.xml',
+    '/tool-sitemap.xml',
+    '/comparison-sitemap.xml',
+    '/pricing-sitemap.xml',
+    '/alternatives-sitemap.xml',
+    '/tutorials-sitemap.xml',
+    '/glossary-sitemap.xml',
+    '/mcp-sitemap.xml',
+    '/author-sitemap.xml',
+    '/hub-sitemap.xml',
+    '/image-sitemap.xml',
+    '/feed.xml',
+    '/llms.txt',
+    '/route-meta.json',
+  ], (req, res) => sendGeneratedFile(res, req.path.slice(1)));
 
-  app.get('/ai-agent-sitemap.xml', (req, res) => {
-    res.setHeader('Content-Type', 'application/xml');
-    const slugs = [
-      "best-ai-agent", "best-ai-agents", "what-is-an-ai-agent", "ai-agent-examples", "ai-agent-use-cases", "ai-agent-trends", "ai-agent-news", "ai-agent-benchmarks", "ai-agent-ranking", "ai-agent-comparison",
-      "best-ai-agent-builder", "best-ai-agent-creator", "best-ai-agent-maker", "best-ai-agent-platform", "best-ai-agent-app-builder", "best-ai-agent-workflow-builder", "best-ai-agent-no-code-platform", "best-ai-agent-development-platform", "best-ai-agent-orchestration-platform", "best-ai-agent-management-platform",
-      "ai-coding-agents", "best-ai-agent-for-coding", "best-ai-agent-for-vs-code", "best-ai-agent-extension-for-vs-code", "best-ai-agent-for-ides", "best-ai-agent-for-code-review", "best-ai-agent-for-frontend-development", "best-ai-agent-for-backend-development", "best-ai-agent-for-python", "best-ai-agent-for-javascript",
-      "best-ai-agent-frameworks", "best-ai-agent-framework", "best-ai-agent-orchestration-tools", "best-ai-agent-sdks", "best-ai-agent-libraries", "best-open-source-ai-agent-tools", "best-ai-agent-development-tools", "best-ai-agent-prompt-tools", "best-ai-agent-memory-systems", "best-ai-agent-observability-tools",
-      "ai-agents-for-business", "ai-agents-for-enterprises", "ai-agents-for-smes", "ai-agents-for-workflow-automation", "ai-agents-for-support-automation", "ai-agents-for-finance", "ai-agents-for-security", "ai-agents-for-healthcare", "ai-agents-for-hr", "ai-agents-for-procurement",
-      "best-ai-agent-course", "best-ai-agent-certification", "best-ai-agent-course-for-beginners", "best-ai-agent-course-reddit", "how-to-build-an-ai-agent", "how-to-create-an-ai-agent", "ai-agent-projects", "ai-agent-project-ideas", "ai-agent-github-projects", "ai-agent-learning-path",
-      "best-ai-agent-for-personal-use", "best-ai-agent-personal-assistant", "best-ai-agent-for-research", "best-ai-agent-for-email", "best-ai-agent-for-presentations", "best-ai-agent-for-data-analysis", "best-ai-agent-for-job-search", "best-ai-agent-for-job-applications", "best-ai-agent-for-productivity", "best-ai-agent-with-memory",
-      "best-ai-voice-agent", "best-ai-voice-agent-platform", "best-ai-agent-for-whatsapp", "best-ai-agent-for-customer-support", "best-ai-agent-for-call-centers", "best-ai-agent-for-sales", "best-ai-agent-for-marketing", "best-ai-agent-for-crm", "best-ai-agent-automation-platform", "best-ai-agent-workflow-tools",
-      "what-is-mcp", "best-mcp-servers", "mcp-directory", "mcp-marketplace", "mcp-hosting", "mcp-security", "mcp-use-cases", "mcp-for-ai-agents", "mcp-vs-api", "future-of-ai-agents"
-    ];
-    res.send(getSitemapXML(slugs));
-  });
-
-  app.get('/tool-sitemap.xml', (req, res) => {
-    res.setHeader('Content-Type', 'application/xml');
-    const tools = ['cursor', 'vapi', 'crewai', 'yellow-ai', 'flowise-ai', 'reclaim-ai', 'n8n', 'relevance-ai'];
-    res.send(getSitemapXML(tools));
-  });
-
-  app.get('/comparison-sitemap.xml', (req, res) => {
-    res.setHeader('Content-Type', 'application/xml');
-    const comparisons = ["chatgpt-vs-claude", "chatgpt-vs-gemini", "chatgpt-vs-perplexity", "cursor-vs-copilot", "cursor-vs-claude", "crewai-vs-autogen", "langgraph-vs-crewai", "flowise-vs-dify", "vapi-vs-retell", "yellow-ai-vs-vapi"];
-    res.send(getSitemapXML(comparisons));
-  });
-
-  // 0. Google Drive Document Analyzer using Gemini API
   app.post('/api/analyze-doc', async (req, res) => {
     try {
-      const { content, filename, mimeType } = req.body;
-      if (!content || typeof content !== 'string') {
-        return res.status(400).json({ error: 'Content payload is required for review.' });
-      }
-
-      console.log(`Server: Analyzing Google Drive document "${filename}" (${mimeType}), length: ${content.length}`);
-
+      const { content = '', filename = 'uploaded document', mimeType = 'text/plain' } = req.body as AnalyzeRequest;
+      if (!content.trim()) return res.status(400).json({ error: 'Content payload is required for review.' });
       if (ai) {
-        const model = 'gemini-3.5-flash';
-        const formattedPrompt = `You are the Principal AI Architect at BestAIAgent.in. Evaluate the following document retrieved from our user's secure Google Drive.
-File Name: "${filename}"
-Mime Type: "${mimeType}"
-
-Document Content Snippet:
-"""
-${content.slice(0, 5000)}
-"""
-
-Please run an expert "AI Agent Capability Review" and "SME Workflow Fitness Audit" on this text.
-Provide:
-1. **Executive Summary**: 2-sentence capture of what the document is about and its technology context.
-2. **Identified Automation Gaps**: Highlight 2 or 3 opportunities where deploying specific AI agents (e.g. Cursor AI for code, Vapi for voice, Yellow.ai for WhatsApp, n8n/Flowise for CRM workflows) would yield immediate cost savings or speed up operations.
-3. **Actionable Implementation Checklist**: Give concrete, step-by-step guidance tailored to India (using INR cost estimates, DPDP compliance suggestions, or local server nodes).
-4. **Tool Recommendations Scorecard**: List 2 exact recommendation tools from our platform, detailing exactly how they can integrate with this content.
-
-Write in a helpful, analytical, professional, and sophisticated tone. Output in clean Markdown format.`;
-
         const response = await ai.models.generateContent({
-          model,
-          contents: formattedPrompt,
-          config: {
-            systemInstruction: "You are the Lead Technical Architect for BestAIAgent.in, India's most trusted comparison platform and authority portal for AI agents. Speak clearly, objectively, and with professional composure. Give extremely concrete, evidence-based suggestions, mentioning actual specifications, pricing estimates in INR, and practical implementation trade-offs."
-          }
+          model: 'gemini-2.0-flash',
+          contents: `Audit this document for AI agent automation opportunities in India.\nFilename: ${filename}\nMime type: ${mimeType}\n\n${content.slice(0, 5000)}`,
         });
-
-        res.json({ text: response.text });
-      } else {
-        // High-quality expert-engineered simulated review when API key is simulated
-        console.log("Server: Running document analysis in simulated expert mode...");
-        
-        // Custom report matching different document keywords
-        const cLower = content.toLowerCase() + " " + filename.toLowerCase();
-        let report = "";
-
-        if (cLower.includes('code') || cLower.includes('software') || cLower.includes('github') || cLower.includes('bug') || cLower.includes('develop') || cLower.includes('api')) {
-          report = `### 📊 AI Agent Capability Review & Audit: Software Development Focus
-**Document Analyzed:** \`${filename}\` | **Audit Time:** June 2026
-
-#### 1. Executive Summary
-This document addresses software development procedures, code frameworks, or engineering workflows. Transitioning this scope in part or in full to high-benchmark coding agents can reduce time-to-production by **40% to 65%**.
-
-#### 2. Identified Automation Gaps & Opportunities
-* **Inline Composer Integration**: The file highlights routine boilerplate or testing structures that developers spend **10+ hours/week** manually writing.
-* **Continuous Integration Agent Checks**: PR validations can be expedited by wiring agentic pipelines to review logs and correct syntactas.
-
-#### 3. Recommended Tools Scorecard
-* **Cursor AI (Silo C - Developer Rating: 9.6)**
-  - *SME Fitness:* High. Ideal for indexing your workspace, locating duplicate definitions, and completing large refactor blocks.
-  - *INR Price:* Free tier / Pro tier at **₹1,680/mo ($20/mo)**.
-* **CrewAI (Silo D - Orchestration Rating: 9.4)**
-  - *SME Fitness:* Exceptional for setting up task-oriented multi-agent validation loops to test API payloads before merge.
-  - *INR Price:* Free (Open Source framework).
-
-#### 4. Actionable India-Sovereign Checklist
-- [ ] **Establish Sandbox Memory Controls:** Ensure Cursor is configured to exclude your custom private source files from background foundational training models to retain security.
-- [ ] **Deploy local Flowise RAG Nodes:** Wire your files securely using local API endpoints housed on Mumbai cloud storage configurations for absolute DPDP data stability.`;
-        } else if (cLower.includes('customer') || cLower.includes('support') || cLower.includes('sales') || cLower.includes('lead') || cLower.includes('chat') || cLower.includes('whatsapp') || cLower.includes('voice')) {
-          report = `### 📊 AI Agent Capability Review & Audit: CRM & Outreach Focus
-**Document Analyzed:** \`${filename}\` | **Audit Time:** June 2026
-
-#### 1. Executive Summary
-This workspace document focuses on consumer outreach, client inquiries, or customer support touchpoints. Automating these workflows using regional NLP bots will resolve **70%+** of routine queries instantly.
-
-#### 2. Identified Automation Gaps & Opportunities
-* **Indian Dialect Conversational Support**: Customer queries require rapid, localized conversational feedback. Voice agents can process Hinglish requests without losing context.
-* **Direct CRM & WhatsApp Integration**: Manual logging of lead sheets can be fully bypassed by linking meta messaging APIs directly to database endpoints.
-
-#### 3. Recommended Tools Scorecard
-* **Yellow.ai (Silo E - Enterprise Rating: 9.3)**
-  - *SME Fitness:* Unmatched for sovereign Indian enterprise WhatsApp automation, enabling seamless payment trigger links (UPI) inside active chat sessions.
-  - *INR Price:* Customized quote with introductory SME tiers.
-* **Vapi AI (Silo E - Voice Rating: 9.5)**
-  - *SME Fitness:* Ultra-fast sub-second speech agents perfect for handling incoming regional inquiries in Hinglish, Hindi, or Tamil.
-  - *INR Price:* Low pay-as-you-go billing starting at **₹12/hr**.
-
-#### 4. Actionable India-Sovereign Checklist
-- [ ] **Consent Separability Notices:** Format your WhatsApp entry dialogues to separate company terms from operations, keeping interactions 100% compliant with the DPDP Act of 2023.
-- [ ] **Configure Regional Twilio Trunks:** Setup your support voice lines utilizing localized telecom access protocols to assure low-latency audio transmission.`;
-        } else {
-          report = `### 📊 AI Agent Capability Review & Audit: Operational SME Workflows
-**Document Analyzed:** \`${filename}\` | **Audit Time:** June 2026
-
-#### 1. Executive Summary
-This document concerns operational guidelines, office checklists, or internal SME administrative templates. Infusing basic RAG pipelines can automate routine search times and retrieve institutional knowledge in seconds.
-
-#### 2. Identified Automation Gaps & Opportunities
-* **Semantic File Retrieval**: Team members lose substantial productivity digging for static manual definitions or checklist guidelines.
-* **Automated Status Checking**: Task assignments and reporting status lines can be programmatically updated based on emails or notes.
-
-#### 3. Recommended Tools Scorecard
-* **Flowise AI (Silo B - No-Code Builder: 9.1)**
-  - *SME Fitness:* Perfect for small business teams wanting visual drag-and-drop orchestration to link Drive files with private local database search indexes.
-  - *INR Price:* **₹0 (Free & Open Source)**.
-* **Reclaim AI (Silo E - Productivity Rating: 8.8)**
-  - *SME Fitness:* Best suited for automating administrative calendar slotting, optimizing team meetings, and protecting deep focus slots.
-  - *INR Price:* Free basic capabilities / Pro is **₹670/mo ($8/mo)**.
-
-#### 4. Actionable India-Sovereign Checklist
-- [ ] **Localize Repository Databases:** Keep any sensitive business sheets or compliance archives mapped specifically within local sovereign data structures.
-- [ ] **Setup Flowise n8n Integrations:** Build a simple automated flow to update calendar slots whenever a status cell is updated in Google Sheets logs.`;
-        }
-
-        res.json({ text: report });
+        return res.json({ text: response.text });
       }
+      return res.json({
+        text: `### AI Agent Capability Review\n\n**Document analyzed:** \`${filename}\`\n\nThis document appears suitable for an AI workflow audit. Start by classifying the workflow, identifying personal data, and mapping repetitive tasks to a bounded agent.\n\n**Recommended stack:** Flowise or n8n for workflow automation, Cursor for engineering documents, and Vapi or Yellow.ai for voice/WhatsApp support workflows.\n\n**India readiness checklist:** estimate INR cost, review GST invoice handling, document DPDP Act 2023 purpose limitation, and test Hindi/Hinglish examples before production.`,
+      });
     } catch (error: any) {
-      console.error("Server: Analyze doc API error:", error);
-      res.status(500).json({ error: error.message || 'Error processing document analysis' });
+      return res.status(500).json({ error: error.message || 'Error processing document analysis' });
     }
   });
 
-  // 1. Personalized AI Recommendation Engine
   app.post('/api/recommend', async (req, res) => {
     try {
-      const { prompt, industry, budget, languagePreference } = req.body;
-      
-      if (!prompt || typeof prompt !== 'string') {
-        return res.status(400).json({ error: 'Prompt description is required.' });
-      }
-
-      console.log(`Server: Requesting recommendations for description: "${prompt.slice(0, 50)}...", industry: ${industry}, budget: ${budget}`);
-
+      const { prompt = '', industry, budget, languagePreference } = req.body as RecommendRequest;
+      if (!prompt.trim()) return res.status(400).json({ error: 'Prompt description is required.' });
       if (ai) {
-        // Prepare prompt using the user guidelines
-        const model = 'gemini-3.5-flash';
-        const formattedPrompt = `Suggest the best AI Agents, Visual Builders, or Orchestration Frameworks for this scenario:
-User Query: "${prompt}"
-Business Sector: ${industry || 'Unspecified'}
-Budget Target / Deployment Strategy: ${budget || 'Unspecified'}
-Language Preference: ${languagePreference || 'English / Hinglish'}
-
-Guidelines:
-1. Suggest 2 or 3 exact tools. Specify why they match this request.
-2. We highly recommend and review these specific tools inside our database:
-   - Cursor AI (for autonomous development/front-end coding, score: 9.6)
-   - CrewAI (for multi-agent orchestration/Python, score: 9.4)
-   - Vapi AI (for real-time low-latency voice bots/supports Hindi/Tamil/Hinglish, score: 9.5)
-   - Yellow.ai (for official corporate WhatsApp checkouts and payments, score: 9.3)
-   - Flowise (for drag-and-drop no-code RAG/APIs workflows, score: 9.1)
-3. Incorporate local Indian business nuances (e.g., mention WhatsApp Business APIs, UPI payment gates, Hinglish dialect settings, DPDP Act compliance, and Mumbai servers) where applicable.
-4. Highlight estimated costs in INR (Indian Rupee) and give an immediate practical first step for starting.
-5. Double check that you do not generate placeholder or generic text. Return your final guidance in elegant Markdown format with bullet points and clear sections.`;
-
         const response = await ai.models.generateContent({
-          model,
-          contents: formattedPrompt,
-          config: {
-            systemInstruction: "You are the Lead Technical Architect for BestAIAgent.in, India's most trusted comparison platform and authority portal for AI agents. Speak clearly, objectively, and with professional composure. Give extremely concrete, evidence-based suggestions, mentioning actual specifications, pricing estimates in INR, and practical implementation trade-offs."
-          }
+          model: 'gemini-2.0-flash',
+          contents: `Recommend 2-3 AI agents for an Indian buyer.\nQuery: ${prompt}\nIndustry: ${industry || 'Unspecified'}\nBudget: ${budget || 'Unspecified'}\nLanguage: ${languagePreference || 'English/Hinglish'}\nInclude INR estimates, DPDP notes, GST/procurement notes, and first implementation step.`,
         });
-
-        res.json({ text: response.text });
-      } else {
-        // High-quality simulated responses when API key is not yet set
-        console.log("Server: Running recommendation in simulated expert mode...");
-        
-        let customDoc = "";
-        const pLower = prompt.toLowerCase();
-        
-        if (pLower.includes('vs code') || pLower.includes('code') || pLower.includes('program') || pLower.includes('frontend') || pLower.includes('backend') || pLower.includes('developer')) {
-          customDoc = `### Recommendations for AI Coding & Software Engineering:
-
-Here is our expert analysis based on your coding, IDE, and developer assistant request:
-
-1. **Cursor AI (Silo C Champion)** 
-   - **Best For:** Absolute code generation speed, inline editing, and deep workspace context indexing.
-   - **Indian Context:** Fully supports international payment profiles for Indian developers. Trusted across Bangalore, Pune, and Hyderabad tech startups.
-   - **INR Price Estimate:** Free tier includes basic queries. Pro tier is **₹1,680/mo ($20/mo)**.
-   - **Why it fits:** It operates as a direct VS Code fork, meaning you don't lose any of your existing keyboard macros or theme extensions.
-
-2. **CrewAI (Silo D Platform)**
-   - **Best For:** Creating role-based multi-agent assemblies that write, test, and package software modules sequentially.
-   - **INR Price Estimate:** **₹0 (Open Source)**. You only pay for your model tokens (e.g., GPT-4o or Gemini Flash direct API costs).
-   - **Why it fits:** Extremely clean Python code structure. Allowing teams to automate routine PR validation and software unit-testing.
-
-**Next Action Step:** We suggest downloading Cursor AI, indexing your local server source folder, and prompting "composer" (Cmd+I) to draft your initial endpoint. Let our interactive charts compare these in Silo C for deep specs.`;
-        } else if (pLower.includes('whatsapp') || pLower.includes('customer') || pLower.includes('support') || pLower.includes('voice') || pLower.includes('phone') || pLower.includes('call')) {
-          customDoc = `### Recommendations for Personalized Customer Support & Local Outreach:
-
-Here is our expert evaluation for client-centric automations, localized helplines, and WhatsApp bots in India:
-
-1. **Vapi AI (Voice Leader)**
-   - **Best For:** Immediate, millisecond, human-like voice conversationalists covering phone lines and web agents.
-   - **Indian Context:** Incredible dialect handling. Handles Hinglish words seamlessly without breaking character, plus Tamil, Telugu, and Hindi accents.
-   - **INR Price Estimate:** Pay-as-you-go starting at approximately **₹12 per hour of call time**.
-   - **Why it fits:** Easily hooks into Twilio numbers and routes customer summaries direct to Zoho CRM.
-
-2. **Yellow.ai (Omnichannel Enterprise Leader)**
-   - **Best For:** Scale and DPDP compliance. Officially integrated with verified Meta WhatsApp Business APIs.
-   - **Indian Context:** Incorporates UPI checkouts. Customers can purchase products and confirm COD shipping natively inside WhatsApp.
-   - **INR Price Estimate:** Custom quote (Enterprise tier). Free trial is available.
-
-**Next Action Step:** Check out our visual comparators for Vapi and Yellow.ai. We suggest booting a free Vapi account, typing a Hinglish prompt, and requesting a test phone-call demo in 2 minutes.`;
-        } else {
-          customDoc = `### Recommendations for Business Operations & SME Workflow Automation:
-
-Based on your custom workflow requirements, here are our top recommend tools evaluated in our index:
-
-1. **Flowise AI (No-Code/Low-Code Champion)**
-   - **Best For:** Cost-focused SMEs seeking to connect company databases to AI chatbots visually.
-   - **Indian Context:** Can be hosted on affordable Indian cloud instances (e.g., AWS Mumbai region) keeping data strictly sovereign.
-   - **INR Price Estimate:** **₹0 (Free, Open Source)**.
-   - **Why it fits:** Easy drag-and-drop nodes to parse legacy excel spreadsheets and query them in plain English.
-
-2. **CrewAI Framework (Technical Orchestrator)**
-   - **Best For:** Automated research pipelines, commercial email triage, and multi-step marketing drafts.
-   - **INR Price Estimate:** **₹0 (Open Source)**. Setup on AWS Mumbai or digital environments.
-
-**Next Action Step:** Try our visual Score Customizer. Increase the weight for "Value for Money" and "Developer Ease" to see how Flowise ranks as the ultimate SMB solution.`;
-        }
-
-        res.json({ text: customDoc });
+        return res.json({ text: response.text });
       }
+      return res.json({ text: simulatedRecommendation(prompt) });
     } catch (error: any) {
-      console.error("Server: Recommendation API error:", error);
-      res.status(500).json({ error: error.message || 'Error processing recommendation' });
+      return res.status(500).json({ error: error.message || 'Error processing recommendation' });
     }
   });
 
-  // 2. Lead Capture
   app.post('/api/submit-lead', (req, res) => {
-    console.log("Server: Lead captured successfully:", req.body);
-    res.json({
-      success: true,
-      message: "Lead captured. Our technical automation advisor will reach out to schedule your consult within 24 business hours."
-    });
+    console.log('Lead captured:', req.body);
+    res.json({ success: true, message: 'Lead captured. Our automation advisor will reach out within 24 business hours.' });
   });
 
-  // 3. Tool Submission
   app.post('/api/submit-tool', (req, res) => {
-    console.log("Server: Tool suggestion received:", req.body);
-    res.json({
-      success: true,
-      message: "Tool successfully entered into the pipeline. Our chief editor will inspect your system benchmarks and docs within 3-5 standard business days."
-    });
+    console.log('Tool submission received:', req.body);
+    res.json({ success: true, message: 'Tool submitted for editorial review.' });
   });
 
-  // 4. Newsletter Subscription
   app.post('/api/subscribe', (req, res) => {
-    const { email } = req.body;
-    if (!email) {
-      return res.status(400).json({ error: 'Email address is required.' });
-    }
-    console.log(`Server: New newsletter subscriber: ${email}`);
-    res.json({
-      success: true,
-      message: "Subscribed! Welcome to BestAIAgent.in. Receive our curated weekly comparison checklists every Thursday."
-    });
+    const { email } = req.body as { email?: string };
+    if (!email) return res.status(400).json({ error: 'Email address is required.' });
+    res.json({ success: true, message: 'Subscribed to BestAIAgent.in updates.' });
   });
-
-  // --- VITE MIDDLEWARE CONFIGURATION ---
 
   if (!isProd) {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
+    app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
+    const vite = await createViteServer({ server: { middlewareMode: true }, appType: 'custom' });
     app.use(vite.middlewares);
+    app.get('*', async (req, res, next) => {
+      try {
+        const template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf8');
+        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, getRouteMeta(req.path)));
+        res.status(200).set({ 'Content-Type': 'text/html; charset=utf-8' }).send(html);
+      } catch (error) {
+        vite.ssrFixStacktrace(error as Error);
+        next(error);
+      }
+    });
   } else {
-    // Serve static files in production
-    const distPath = path.resolve('./dist');
-    app.use(express.static(distPath));
+    const distPath = path.resolve(process.cwd(), 'dist');
+    app.use(express.static(distPath, { index: false }));
     app.get('*', (req, res) => {
-      res.sendFile(path.resolve(distPath, 'index.html'));
+      const htmlPath = path.join(distPath, 'index.html');
+      if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
+      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), getRouteMeta(req.path));
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(html);
     });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server: Running on http://0.0.0.0:${PORT} (isProd: ${isProd})`);
+    console.log(`Server running on http://0.0.0.0:${PORT} (isProd: ${isProd})`);
   });
 }
 

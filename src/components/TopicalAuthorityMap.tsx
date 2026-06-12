@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { topicalClusters, getAuthorityPageMetadata, isTopicalAuthoritySlug } from '../data/topicalAuthority';
+import { topicalClusters, allTopicalPages, getAuthorityPageMetadata } from '../data/topicalAuthority';
 import { 
   Network, 
   Map, 
@@ -48,10 +48,11 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
     : topicalClusters.filter(c => c.id === activeClusterId);
 
   // Stats calculation
-  const totalArticlesCount = 100;
-  const megaCount = 14;
-  const commercialCount = 21;
-  const supportingCount = 65;
+  const totalArticlesCount = allTopicalPages.length;
+  const authorityTypes = allTopicalPages.map((item) => getAuthorityPageMetadata(item.slug).type);
+  const megaCount = authorityTypes.filter((type) => type === 'Mega').length;
+  const commercialCount = authorityTypes.filter((type) => type === 'Commercial').length;
+  const supportingCount = authorityTypes.filter((type) => type === 'Supporting').length;
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4 sm:px-6">
@@ -80,7 +81,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
           </h2>
           
           <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-            By building a unified entity graph instead of random keywords, BestAIAgent.in establishes verified baseline authority for Google, ChatGPT, Gemini, Claude, and Perplexity crawlers. Our system maps <strong>10 thematic clusters</strong> optimized with GEO/LLM-compliant structures.
+            By building a unified entity graph instead of random keywords, BestAIAgent.in establishes verified baseline authority for Google, ChatGPT, Gemini, Claude, and Perplexity crawlers. Our system maps <strong>{topicalClusters.length} thematic clusters</strong> optimized with GEO/LLM-compliant structures.
           </p>
 
           {/* CLAW CRAWLER BUTTONS */}
@@ -115,16 +116,16 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
         <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs space-y-1">
           <p className="text-slate-400 text-[10px] font-bold uppercase font-mono tracking-wider">Total Cluster Entities</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-slate-900">100</span>
+            <span className="text-3xl font-black text-slate-900">{totalArticlesCount}</span>
             <span className="text-xs text-emerald-600 font-bold">100% Covered</span>
           </div>
-          <p className="text-slate-500 text-[11px] font-light">Categorized into 10 key domain silos.</p>
+          <p className="text-slate-500 text-[11px] font-light">Categorized into {topicalClusters.length} key domain clusters.</p>
         </div>
 
         <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs space-y-1 border-l-4 border-l-rose-500">
           <p className="text-slate-400 text-[10px] font-bold uppercase font-mono tracking-wider">1. Mega Pillars</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-rose-600">14</span>
+            <span className="text-3xl font-black text-rose-600">{megaCount}</span>
             <span className="text-slate-500 text-xs font-medium">Pages</span>
           </div>
           <p className="text-slate-500 text-[11px] font-light">Deep architecture guides (8k–15k words).</p>
@@ -133,7 +134,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
         <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs space-y-1 border-l-4 border-l-blue-500">
           <p className="text-slate-400 text-[10px] font-bold uppercase font-mono tracking-wider">2. Commercial Pillars</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-blue-600">21</span>
+            <span className="text-3xl font-black text-blue-600">{commercialCount}</span>
             <span className="text-slate-500 text-xs font-medium">Pages</span>
           </div>
           <p className="text-slate-500 text-[11px] font-light">Reviews &amp; listicles (3k–8k words).</p>
@@ -142,7 +143,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
         <div className="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs space-y-1 border-l-4 border-l-emerald-500">
           <p className="text-slate-400 text-[10px] font-bold uppercase font-mono tracking-wider">3. Supporting Pages</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-black text-emerald-600">65</span>
+            <span className="text-3xl font-black text-emerald-600">{supportingCount}</span>
             <span className="text-slate-500 text-xs font-medium">Pages</span>
           </div>
           <p className="text-slate-500 text-[11px] font-light">Targeted tutorials &amp; FAQs (2k–5k words).</p>
@@ -241,11 +242,10 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
         {/* CLUSTERS DIVERGENT CONTAINER */}
         <div className="space-y-10 pt-4">
           {filteredClusters.map(cluster => {
-            // Find slugs inside this cluster matching query
-            const matchedSlugs = cluster.slugs.filter(slug => {
-              const meta = getAuthorityPageMetadata(slug);
+            const matchedPages = cluster.pages.filter(topicalPage => {
+              const meta = getAuthorityPageMetadata(topicalPage.slug);
               
-              const matchesSearch = slug.toLowerCase().includes(searchQuery.toLowerCase()) || 
+              const matchesSearch = topicalPage.slug.toLowerCase().includes(searchQuery.toLowerCase()) || 
                                     meta.primaryKeyword.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                     meta.title.toLowerCase().includes(searchQuery.toLowerCase());
                                     
@@ -254,7 +254,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
               return matchesSearch && matchesType;
             });
 
-            if (matchedSlugs.length === 0) return null;
+            if (matchedPages.length === 0) return null;
 
             return (
               <div key={cluster.id} className="space-y-4">
@@ -267,13 +267,13 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
                     <p className="text-xs text-slate-500 font-light max-w-2xl">{cluster.description}</p>
                   </div>
                   <span className="text-[10px] bg-slate-100 text-slate-500 px-2 py-1 rounded font-mono font-bold uppercase tracking-wider self-start sm:self-center">
-                    {matchedSlugs.length} Entity Slugs Listed
+                    {matchedPages.length} Entity Slugs Listed
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {matchedSlugs.map(slug => {
-                    const page = getAuthorityPageMetadata(slug);
+                  {matchedPages.map(topicalPage => {
+                    const page = getAuthorityPageMetadata(topicalPage.slug);
                     
                     let pillColor = "bg-rose-50 text-rose-700 border-rose-100";
                     if (page.type === "Commercial") pillColor = "bg-blue-50 text-blue-700 border-blue-100";
@@ -281,8 +281,8 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
 
                     return (
                       <div 
-                        key={slug} 
-                        onClick={() => onSelectArticle(slug)}
+                        key={topicalPage.slug} 
+                        onClick={() => onSelectArticle(topicalPage.slug)}
                         className="bg-white border border-slate-150 hover:border-emerald-500 hover:bg-slate-50/50 p-5 rounded-2xl transition duration-150 group cursor-pointer flex flex-col justify-between space-y-4 relative overflow-hidden"
                       >
                         <div className="space-y-2.5">
@@ -300,7 +300,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
                               {page.title.split(':')[0]}
                             </h4>
                             <p className="text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1">
-                              Slug: <span className="text-slate-650 shrink-0 font-extrabold">/{slug}</span>
+                              Slug: <span className="text-slate-650 shrink-0 font-extrabold">/{topicalPage.slug}</span>
                             </p>
                           </div>
 

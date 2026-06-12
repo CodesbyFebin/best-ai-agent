@@ -182,7 +182,7 @@ export default function IndiaMcpCustomizer({
 
   // Copy Hub URL
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#view=silo-pillar&silo=mcp');
+    navigator.clipboard.writeText(window.location.origin + '/mcp-hub');
     setCopiedShare(true);
     setTimeout(() => setCopiedShare(false), 2000);
   };

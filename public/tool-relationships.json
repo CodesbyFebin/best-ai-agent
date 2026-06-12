@@ -1,0 +1,386 @@
+[
+  {
+    "tool": "AgentOps",
+    "review": "/agentops-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Apollo",
+    "review": "/apollo-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/clay-vs-apollo"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Artisan",
+    "review": "/artisan-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "AutoGen",
+    "review": "/autogen-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/autogen-vs-crewai"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Bland AI",
+    "review": "/bland-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/retell-vs-bland",
+      "/vapi-vs-bland"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Claude Code",
+    "review": "/claude-code",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/claude-code-pricing"
+    ],
+    "competitors": [
+      "/copilot-vs-claude-code",
+      "/cursor-vs-claude-code"
+    ],
+    "alternatives": [
+      "/claude-code-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-set-up-claude-code"
+    ]
+  },
+  {
+    "tool": "Clay",
+    "review": "/clay-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/clay-vs-apollo"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "CrewAI",
+    "review": "/crewai-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/autogen-vs-crewai",
+      "/langgraph-vs-crewai"
+    ],
+    "alternatives": [
+      "/crewai-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-build-ai-agent-with-crewai"
+    ]
+  },
+  {
+    "tool": "Cursor AI Review: India's Independent Assessment (June 2026)",
+    "review": "/cursor-ai",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/cursor-free-vs-pro",
+      "/cursor-pricing",
+      "/cursor-pricing-india"
+    ],
+    "competitors": [
+      "/claude-vs-cursor",
+      "/cursor-vs-claude-code",
+      "/cursor-vs-github-copilot",
+      "/replit-vs-cursor",
+      "/windsurf-vs-cursor"
+    ],
+    "alternatives": [
+      "/cursor-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-install-cursor",
+      "/how-to-use-cursor-ai"
+    ]
+  },
+  {
+    "tool": "Dify",
+    "review": "/dify-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/dify-pricing"
+    ],
+    "competitors": [
+      "/dify-vs-langflow",
+      "/flowise-vs-dify"
+    ],
+    "alternatives": [
+      "/dify-alternatives"
+    ],
+    "tutorials": []
+  },
+  {
+    "tool": "ElevenLabs Conversational AI",
+    "review": "/elevenlabs-conversational-ai-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Flowise",
+    "review": "/flowise-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/flowise-pricing"
+    ],
+    "competitors": [
+      "/flowise-vs-dify",
+      "/flowise-vs-n8n"
+    ],
+    "alternatives": [
+      "/flowise-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-build-ai-agent-with-flowise"
+    ]
+  },
+  {
+    "tool": "GitHub Copilot",
+    "review": "/github-copilot",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/github-copilot-pricing"
+    ],
+    "competitors": [
+      "/cursor-vs-github-copilot"
+    ],
+    "alternatives": [
+      "/github-copilot-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-github-copilot"
+    ]
+  },
+  {
+    "tool": "Intercom AI",
+    "review": "/intercom-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/intercom-pricing"
+    ],
+    "competitors": [
+      "/intercom-vs-zendesk-ai",
+      "/yellow-ai-vs-intercom"
+    ],
+    "alternatives": [
+      "/intercom-alternatives"
+    ],
+    "tutorials": []
+  },
+  {
+    "tool": "LangFlow",
+    "review": "/langflow-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/dify-vs-langflow"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "LangGraph",
+    "review": "/langgraph-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/langgraph-vs-crewai",
+      "/openai-agents-sdk-vs-langgraph"
+    ],
+    "alternatives": [],
+    "tutorials": [
+      "/how-to-setup-langgraph"
+    ]
+  },
+  {
+    "tool": "LlamaIndex",
+    "review": "/llamaindex-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/llamaindex-vs-langchain"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "n8n",
+    "review": "/n8n-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/n8n-pricing"
+    ],
+    "competitors": [
+      "/flowise-vs-n8n"
+    ],
+    "alternatives": [
+      "/n8n-alternatives"
+    ],
+    "tutorials": []
+  },
+  {
+    "tool": "Open Interpreter",
+    "review": "/open-interpreter-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "OpenAI Agents SDK",
+    "review": "/openai-agents-sdk-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/openai-agents-sdk-vs-langgraph"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Replit Agent",
+    "review": "/replit-agent",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Retell AI",
+    "review": "/retell-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/retell-vs-bland",
+      "/vapi-vs-retell"
+    ],
+    "alternatives": [
+      "/retell-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-retell"
+    ]
+  },
+  {
+    "tool": "Semantic Kernel",
+    "review": "/semantic-kernel-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Superagent",
+    "review": "/superagent-review",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Cursor AI: AI Coding Agent Tool Profile",
+    "review": "/tools/cursor-ai",
+    "category": "Tool Profiles",
+    "pricing": [
+      "/cursor-free-vs-pro",
+      "/cursor-pricing",
+      "/cursor-pricing-india"
+    ],
+    "competitors": [
+      "/claude-vs-cursor",
+      "/cursor-vs-claude-code",
+      "/cursor-vs-github-copilot",
+      "/replit-vs-cursor",
+      "/windsurf-vs-cursor"
+    ],
+    "alternatives": [
+      "/cursor-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-install-cursor",
+      "/how-to-use-cursor-ai"
+    ]
+  },
+  {
+    "tool": "Vapi AI",
+    "review": "/vapi-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/vapi-pricing",
+      "/vapi-pricing-calculator"
+    ],
+    "competitors": [
+      "/vapi-vs-bland",
+      "/vapi-vs-retell"
+    ],
+    "alternatives": [
+      "/vapi-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-vapi"
+    ]
+  },
+  {
+    "tool": "Windsurf",
+    "review": "/windsurf",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/windsurf-pricing"
+    ],
+    "competitors": [
+      "/windsurf-vs-cursor"
+    ],
+    "alternatives": [
+      "/windsurf-alternatives"
+    ],
+    "tutorials": []
+  },
+  {
+    "tool": "Yellow.ai",
+    "review": "/yellow-ai-review",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/yellow-ai-pricing"
+    ],
+    "competitors": [
+      "/yellow-ai-vs-intercom"
+    ],
+    "alternatives": [
+      "/yellow-ai-alternatives"
+    ],
+    "tutorials": []
+  }
+]
