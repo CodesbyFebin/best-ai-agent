@@ -434,7 +434,7 @@ export default function IndiaMcpCustomizer({
         "name": "BestAIAgent.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bestaiagent.in/assets/logo.png"
+          "url": "https://bestaiagent.in/assets/brand/logo.png"
         }
       }
     };
@@ -501,27 +501,39 @@ export default function IndiaMcpCustomizer({
 
       {/* 2. Anchor Subpage Navigation */}
       <div className="border-b border-slate-200 pb-px">
-        <div className="flex flex-wrap gap-2 sm:gap-6 -mb-px">
+        <div className="flex flex-wrap gap-2 sm:gap-6 -mb-px" role="tablist" aria-label="MCP Hub sections">
           <button
             onClick={() => setActiveTab('registry')}
+            role="tab"
+            aria-selected={activeTab === 'registry'}
+            aria-controls="mcp-registry-panel"
             className={`cursor-pointer pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider border-b-2 transition ${activeTab === 'registry' ? 'border-teal-600 text-teal-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
           >
             📋 MCP Registry Explorer
           </button>
           <button
             onClick={() => setActiveTab('templates')}
+            role="tab"
+            aria-selected={activeTab === 'templates'}
+            aria-controls="mcp-templates-panel"
             className={`cursor-pointer pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider border-b-2 transition ${activeTab === 'templates' ? 'border-teal-600 text-teal-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
           >
             ⚙️ Configuration Templates
           </button>
           <button
             onClick={() => setActiveTab('developer-tools')}
+            role="tab"
+            aria-selected={activeTab === 'developer-tools'}
+            aria-controls="mcp-devtools-panel"
             className={`cursor-pointer pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider border-b-2 transition ${activeTab === 'developer-tools' ? 'border-teal-600 text-teal-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
           >
             🛠️ Dev Tools &amp; Testing
           </button>
           <button
             onClick={() => setActiveTab('aeo-answer')}
+            role="tab"
+            aria-selected={activeTab === 'aeo-answer'}
+            aria-controls="mcp-aeo-panel"
             className={`cursor-pointer pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider border-b-2 transition ${activeTab === 'aeo-answer' ? 'border-teal-600 text-teal-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
           >
             🌐 AEO Search Q&amp;A
@@ -529,12 +541,12 @@ export default function IndiaMcpCustomizer({
         </div>
       </div>
 
-      {/* 3. Tab Content Viewport */}
+{/* 3. Tab Content Viewport */}
       <div>
         
         {/* TAB: REGISTRY EXPLORER */}
         {activeTab === 'registry' && (
-          <div className="space-y-8 animate-fade-in">
+          <div id="mcp-registry-panel" role="tabpanel" className="space-y-8 animate-fade-in">
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
               
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-5">
@@ -765,7 +777,7 @@ export default function IndiaMcpCustomizer({
 
         {/* TAB: TEMPLATES CONFIG BUILDER */}
         {activeTab === 'templates' && (
-          <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-8 animate-fade-in">
+          <div id="mcp-templates-panel" role="tabpanel" className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-8 animate-fade-in">
             
             <div className="space-y-1">
               <h3 className="text-lg font-black text-slate-950">Interactive MCP Server Configuration Blueprint</h3>
@@ -927,7 +939,7 @@ export default function IndiaMcpCustomizer({
 
         {/* TAB: DEVELOPER TOOLS & TESTING */}
         {activeTab === 'developer-tools' && (
-          <div className="space-y-8 animate-fade-in">
+          <div id="mcp-devtools-panel" role="tabpanel" className="space-y-8 animate-fade-in">
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
               
               <div className="space-y-1">
@@ -1026,7 +1038,7 @@ export default function IndiaMcpCustomizer({
 
         {/* TAB: AEO SEARCH FAQ CONSOLE */}
         {activeTab === 'aeo-answer' && (
-          <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 animate-fade-in animate-fade-in">
+          <div id="mcp-aeo-panel" role="tabpanel" className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 animate-fade-in animate-fade-in">
             <div className="border-b border-slate-100 pb-3">
               <h3 className="text-lg font-black text-slate-950">AEO Topic FAQ Console</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light">

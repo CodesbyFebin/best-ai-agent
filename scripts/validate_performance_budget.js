@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const assetsDir = path.join(process.cwd(), "dist", "assets");
+const assetsDir = fs.existsSync(path.join(process.cwd(), "dist", "assets"))
+  ? path.join(process.cwd(), "dist", "assets")
+  : path.join(process.cwd(), "dist", "client", "assets");
 const errors = [];
 const warnings = [];
 

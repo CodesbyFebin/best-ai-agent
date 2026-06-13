@@ -219,6 +219,12 @@ const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/previe
 
 routeMeta['/'] = defaultHomeMeta;
 
+const redirectRoutes = new Map(
+  Object.entries(routeMeta)
+    .filter(([, meta]) => meta.canonicalPath && meta.canonicalPath !== meta.path)
+    .map(([pathName, meta]) => [pathName, meta.canonicalPath || meta.path]),
+);
+
 function normalizePath(inputPath: string) {
   const clean = inputPath.split('?')[0].replace(/\/+$/, '');
   return clean || '/';
@@ -295,12 +301,12 @@ function routeImageMeta(meta: RouteMeta) {
   };
 }
 
-function getRouteMeta(reqPath: string): RouteMeta {
+function getRouteMeta(reqPath: string): RouteMeta | null {
   const pathName = normalizePath(reqPath);
   if (noindexPaths.has(pathName)) {
     return { ...fallbackMeta(pathName), robots: 'noindex,follow' };
   }
-  return routeMeta[pathName] || fallbackMeta(pathName);
+  return routeMeta[pathName] || null;
 }
 
 function schemaScript(meta: RouteMeta) {
@@ -402,6 +408,15 @@ async function startServer() {
     }
     if (isPreviewHost(req.headers.host)) {
       res.setHeader('X-Robots-Tag', PREVIEW_ROBOTS);
+    }
+    return next();
+  });
+
+  app.use((req, res, next) => {
+    const pathName = normalizePath(req.path);
+    const target = redirectRoutes.get(pathName);
+    if (target) {
+      return res.redirect(301, `${BASE_URL}${target}`);
     }
     return next();
   });
@@ -618,9 +633,17 @@ async function startServer() {
     const vite = await createViteServer({ server: { middlewareMode: true }, appType: 'custom' });
     app.use(vite.middlewares);
     app.get('*', async (req, res, next) => {
+      const pathName = normalizePath(req.path);
+      if (!routeMeta[pathName] && !noindexPaths.has(pathName)) {
+        return res.status(404).send('Not found');
+      }
       try {
         const template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf8');
-        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, getRouteMeta(req.path), { noindexPreview: isPreviewHost(req.headers.host) }));
+        const meta = getRouteMeta(req.path);
+        if (!meta) {
+          return res.status(404).send('Not found');
+        }
+        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, meta, { noindexPreview: isPreviewHost(req.headers.host) }));
         res.status(200).set({ 'Content-Type': 'text/html; charset=utf-8' }).send(html);
       } catch (error) {
         vite.ssrFixStacktrace(error as Error);
@@ -631,9 +654,13 @@ async function startServer() {
     const distPath = path.resolve(process.cwd(), 'dist', 'client');
     app.use('/client', express.static(distPath, { index: false }));
     app.get('*', (req, res) => {
+      const pathName = normalizePath(req.path);
+      if (!routeMeta[pathName] && !noindexPaths.has(pathName)) return res.status(404).send('Not found');
       const htmlPath = path.join(distPath, 'index.html');
       if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
-      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), getRouteMeta(req.path), { noindexPreview: isPreviewHost(req.headers.host) });
+      const meta = getRouteMeta(req.path);
+      if (!meta) return res.status(404).send('Not found');
+      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.send(html);
     });

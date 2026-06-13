@@ -208,6 +208,7 @@ export default function App() {
       : 'https://bestaiagent.in';
 
   const publicUrl = (pathName: string) => `${SITE_URL}${pathName === '/' ? '/' : pathName}`;
+  const BRAND_LOGO_URL = publicUrl('/assets/brand/logo.png');
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     let pageTitle = "BestAIAgent.in | India's AI Agent Authority Review Hub";
@@ -710,7 +711,7 @@ export default function App() {
       "@type": "Organization",
       "name": "BestAIAgent.in",
       "url": "https://bestaiagent.in",
-      "logo": "https://bestaiagent.in/logo.png",
+      "logo": BRAND_LOGO_URL,
       "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
       "address": {
         "@type": "PostalAddress",
@@ -803,7 +804,7 @@ export default function App() {
                 "name": "BestAIAgent.in",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://bestaiagent.in/logo.png"
+                  "url": BRAND_LOGO_URL
                 }
               },
               "description": p.metaDescription,
@@ -921,7 +922,7 @@ export default function App() {
                 "name": "BestAIAgent.in",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://bestaiagent.in/logo.png"
+                  "url": BRAND_LOGO_URL
                 }
               },
               "itemReviewed": {
@@ -1284,11 +1285,7 @@ try {
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
             <a href="/" onClick={(event) => navigateToPath(event, '/')} className="flex items-center gap-2 text-left focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded p-1">
-              <span className="flex items-center justify-center w-10 h-10 bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white rounded-xl shadow-md font-black text-lg tracking-tight">IN</span>
-              <div>
-                <span className="block text-xl font-bold text-slate-900 tracking-tight leading-none font-sans">Best<span className="text-emerald-600">AIAgent</span>.in</span>
-                <p className="text-[10px] text-slate-500 font-medium tracking-wide">INDIAN ENGINES BENCHMARK INDEX</p>
-              </div>
+              <img src="/assets/brand/logo.png" alt="BestAIAgent.in" width={900} height={289} className="h-11 sm:h-12 w-auto max-w-[190px] sm:max-w-[240px] rounded-md object-contain shadow-sm" loading="eager" decoding="async" />
             </a>
           </div>
 
@@ -1424,7 +1421,7 @@ try {
                 <div className="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] gap-8 lg:gap-12 items-start">
                   <div className="space-y-6">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-emerald-300 text-xs font-semibold">
-                      <img src="/assets/brand/logo-mark.svg" alt="BestAIAgent.in brand mark" width={20} height={20} className="w-5 h-5 rounded" loading="eager" decoding="async" />
+                      <img src="/assets/brand/logo-mark.png" alt="BestAIAgent.in brand mark" width={20} height={20} className="w-5 h-5 rounded" loading="eager" decoding="async" />
                       <Star className="w-3.5 h-3.5 fill-emerald-300 text-emerald-300" /> Independent India-first AI agent rankings
                     </div>
                     <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight select-none">
@@ -2940,6 +2937,8 @@ try {
                         navigator.clipboard.writeText(shareUrl).then(() => {
                           setCopiedArticleSlug(page.slug);
                           setTimeout(() => setCopiedArticleSlug(null), 2000);
+                        }).catch(() => {
+                          setCopiedArticleSlug(null);
                         });
                       }}
                       className={`cursor-pointer inline-flex items-center gap-1.5 bg-white hover:bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold transition uppercase tracking-wider ${copiedArticleSlug === page.slug ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'text-slate-700'}`}
@@ -3359,7 +3358,63 @@ try {
             VIEW C-SPECIFIC: SINGLE PRODUCT ENHANCED PROFILE
             ========================================== */}
           {currentView === 'product' && (() => {
-            const productObj = products.find(p => p.slug === selectedProductSlug) || products[0];
+            const productObj = products.find(p => p.slug === selectedProductSlug) || (() => {
+              const directoryProduct = directoryTools.find(tool => getDirectoryToolSlug(tool.name) === selectedProductSlug);
+              if (!directoryProduct) return null;
+              const asset = getToolAsset(selectedProductSlug);
+              const isOpenSource = directoryProduct.pricing === 'Open Source';
+              const baseScore = Number(directoryProduct.score.toFixed(1));
+              return {
+                id: selectedProductSlug,
+                name: directoryProduct.name,
+                slug: selectedProductSlug,
+                vendorName: new URL(directoryProduct.websiteUrl).hostname,
+                vendorUrl: directoryProduct.websiteUrl,
+                logoUrl: asset.logo,
+                summary: directoryProduct.description,
+                bestFor: directoryProduct.bestFor,
+                bestForProfiles: [directoryProduct.category],
+                limitations: ['Verify current vendor pricing, privacy terms, and regional availability before purchase.'],
+                pricingModel: directoryProduct.pricing,
+                startingPriceINR: isOpenSource ? '₹0 (Free / Self-Hosted)' : 'Contact vendor',
+                startingPriceUSD: isOpenSource ? '$0' : 'Contact vendor',
+                freeTrial: !isOpenSource,
+                openSource: isOpenSource,
+                overallScore: baseScore,
+                scores: {
+                  easeOfUse: baseScore,
+                  features: baseScore,
+                  docs: baseScore,
+                  integrations: baseScore,
+                  value: baseScore,
+                  reliability: baseScore,
+                  indiaFit: baseScore,
+                  scalability: baseScore,
+                },
+                pros: [],
+                cons: [],
+                featuresList: [directoryProduct.category],
+                verdict: directoryProduct.description,
+                useCases: [directoryProduct.bestFor],
+                whatsappReady: false,
+                indianPaymentSupport: false,
+                whatWeTested: 'Directory profile generated from BestAIAgent.in editorial taxonomy; full hands-on review pending where not explicitly marked as verified.',
+                lastVerified: '2026-06-12',
+                alternativeSlugs: [],
+                comparisonSlugs: [],
+                frameworkSlugs: [],
+                confidenceLevel: 72,
+                verificationStatus: 'pending' as const,
+              };
+            })();
+            if (!productObj) {
+              return (
+                <div className="text-center py-20 bg-white border border-slate-200 rounded-2xl shadow-sm">
+                  <p className="text-slate-500 mt-4 font-semibold">Product profile not found.</p>
+                  <button onClick={() => routeTo('home')} className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-bold uppercase">Back to homepage</button>
+                </div>
+              );
+            }
             const toggleCompare = (slug: string) => {
               if (compareList.includes(slug)) {
                 setCompareList(compareList.filter(s => s !== slug));

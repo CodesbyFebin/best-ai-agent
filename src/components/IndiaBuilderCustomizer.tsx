@@ -792,10 +792,13 @@ export default function IndiaBuilderCustomizer({
         </div>
 
         {/* Dynamic Tabs */}
-        <div className="flex flex-wrap border-b border-slate-150 gap-2">
+        <div className="flex flex-wrap border-b border-slate-150 gap-2" role="tablist" aria-label="Builder guide steps">
           {['1. Define Operational Boundaries', '2. Local Compliance & Integration', '3. Developer & Stack Fit', '4. Real Total Cost of Ownership'].map((tabLabel, idx) => (
             <button
               key={idx}
+              role="tab"
+              aria-selected={activeTabChoose === idx}
+              aria-controls={`tab-panel-${idx}`}
               onClick={() => setActiveTabChoose(idx)}
               className={`pb-3 px-3 text-xs font-bold transition-all relative ${activeTabChoose === idx ? 'text-slate-950' : 'text-slate-450 hover:text-slate-600'}`}
             >
@@ -810,7 +813,7 @@ export default function IndiaBuilderCustomizer({
         {/* Tab content matching requested specs */}
         <div className="p-5 bg-slate-50 border border-slate-100 rounded-2xl text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
           {activeTabChoose === 0 && (
-            <div className="space-y-2">
+            <div id="tab-panel-0" role="tabpanel" className="space-y-2">
               <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Visual No-Code Panel vs Dynamic Low-Code Developer Tool</h4>
               <p>Do you need rapid visual drag-and-drop mechanics for non-technical founders, or total programmatic control for your technical team?</p>
               <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
@@ -820,7 +823,7 @@ export default function IndiaBuilderCustomizer({
             </div>
           )}
           {activeTabChoose === 1 && (
-            <div className="space-y-2">
+            <div id="tab-panel-1" role="tabpanel" className="space-y-2">
               <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">DPDP Regulatory Alignment and Indian Payment Systems</h4>
               <p>B2C and consumer agent platforms must meet statutory requirements inside Indian borders:</p>
               <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
@@ -830,7 +833,7 @@ export default function IndiaBuilderCustomizer({
             </div>
           )}
           {activeTabChoose === 2 && (
-            <div className="space-y-2">
+            <div id="tab-panel-2" role="tabpanel" className="space-y-2">
               <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Tech Stack Matching & Language Handling</h4>
               <p>Choosing a build framework that aligns with your engineers skills limits costly software friction:</p>
               <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
@@ -840,7 +843,7 @@ export default function IndiaBuilderCustomizer({
             </div>
           )}
           {activeTabChoose === 3 && (
-            <div className="space-y-2">
+            <div id="tab-panel-3" role="tabpanel" className="space-y-2">
               <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">SaaS Subscription Costs vs Pay-As-You-Go self-hosted budgets</h4>
               <p>Self-hosting and managing your own server keys dramatically reduces long-term overhead:</p>
               <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">

@@ -548,66 +548,69 @@ export default function IndiaPillarCustomizer({
           <p className="text-slate-500 text-xs mt-1">Four operational pillars evaluated for Indian SMEs and tech leaders.</p>
         </div>
 
-        {/* Tab Buttons */}
-        <div className="flex flex-wrap border-b border-slate-150 gap-2">
-          {['1. Define Clear Boundaries', '2. Local Compliance Hub', '3. Stack Fit & Docs', '4. Real Operational Cost'].map((tabLabel, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveTabChoose(idx)}
-              className={`pb-3 px-3 text-xs font-bold transition-all relative ${activeTabChoose === idx ? 'text-slate-950' : 'text-slate-400 hover:text-slate-600'}`}
-            >
-              {tabLabel}
-              {activeTabChoose === idx && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600"></div>
-              )}
-            </button>
-          ))}
-        </div>
+{/* Tab Buttons */}
+         <div className="flex flex-wrap border-b border-slate-150 gap-2" role="tablist" aria-label="Choose guidance steps">
+           {['1. Define Clear Boundaries', '2. Local Compliance Hub', '3. Stack Fit & Docs', '4. Real Operational Cost'].map((tabLabel, idx) => (
+             <button
+               key={idx}
+               role="tab"
+               aria-selected={activeTabChoose === idx}
+               aria-controls={`tab-panel-${idx}`}
+               onClick={() => setActiveTabChoose(idx)}
+               className={`pb-3 px-3 text-xs font-bold transition-all relative ${activeTabChoose === idx ? 'text-slate-950' : 'text-slate-400 hover:text-slate-600'}`}
+             >
+               {tabLabel}
+               {activeTabChoose === idx && (
+                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600"></div>
+               )}
+             </button>
+           ))}
+         </div>
 
-        {/* Tab Content */}
-        <div className="p-5 bg-slate-50 border border-slate-100 rounded-2xl text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3">
-          {activeTabChoose === 0 && (
-            <div className="space-y-2">
-              <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Operational Boundaries: Copilot vs Autonomous Agent</h4>
-              <p>Is the agent acting as an advisory virtual copilot or does it require autonomous tool-execution permissions?</p>
-              <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
-                <li><strong className="text-slate-900">Copilots:</strong> Perfect for engineering codebases. They help draft boilerplate and trace database schema indexes, but require active human review before deployment.</li>
-                <li><strong className="text-slate-900">Autonomous Agents:</strong> Ideal for operations, customer triage, and CRM pipelines. They trigger webhooks, take phone calls, and resolve customer support chats completely independently.</li>
-              </ul>
-            </div>
-          )}
-          {activeTabChoose === 1 && (
-            <div className="space-y-2">
-              <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Under the hood legal compliance with DPDP Act of 2023</h4>
-              <p>If your business processes customer data in India (especially B2C), your AI integrations must follow statutory rules:</p>
-              <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
-                <li><strong className="text-slate-900">Data Residency:</strong> Sensitive information (Aadhaar cards, transactions, UPI credentials, call recordings) should reside securely in localized cloud centers (e.g., Central India Mumbai datasets).</li>
-                <li><strong className="text-slate-900">Token-Level Scrubbing:</strong> Your API pipelines must mask personally identifiable information (PII) before routing queries to external global model servers.</li>
-                <li><strong className="text-slate-900">DPDP Consent Formats:</strong> Interactive chatbots must display transparent notices and give users immediate opt-out features (e.g. typing &apos;Delete my profile&apos; triggers automatic log erasure).</li>
-              </ul>
-            </div>
-          )}
-          {activeTabChoose === 2 && (
-            <div className="space-y-2">
-              <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Developer Documentation and Stack Fit</h4>
-              <p>Matching the technical skill profile of your team prevents severe implementation friction.</p>
-              <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
-                <li><strong className="text-slate-900">Python Teams:</strong> Frameworks like CrewAI are excellent, letting engineers configure collaborative role-playing agents using python decorators and custom tool objects.</li>
-                <li><strong className="text-slate-900">No-Code / Visual Builders:</strong> Visual systems such as Flowise AI let SME owners or business analysts drag and drop modular nodes, connect to postgres easily, and build proof-of-concepts without writing any backend scripts.</li>
-              </ul>
-            </div>
-          )}
-          {activeTabChoose === 3 && (
-            <div className="space-y-2">
-              <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Total TCO: Subscription Fees vs Pay-As-You-Go Token Spends</h4>
-              <p>Calculating the true long-term operational budget allows businesses to avoid crippling cost surprises:</p>
-              <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
-                <li><strong className="text-slate-900">Voice Agents (e.g., Vapi, Bland):</strong> Charged per call minute (typically equivalent to roughly ₹12 - ₹20 per hour). This is 90% cheaper than traditional outbound call centers.</li>
-                <li><strong className="text-slate-900">SaaS Builder Subscriptions:</strong> Managed platforms charge high token margin markups. swappng to visual, self-hosted tools (like Flowise on Docker) connected directly to raw LLM keys reduces expenses by up to 80%.</li>
-              </ul>
-            </div>
-          )}
-        </div>
+{/* Tab Content */}
+          <div className="p-5 bg-slate-50 border border-slate-100 rounded-2xl text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3">
+            {activeTabChoose === 0 && (
+              <div id="tab-panel-0" role="tabpanel" className="space-y-2">
+                <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Operational Boundaries: Copilot vs Autonomous Agent</h4>
+                <p>Is the agent acting as an advisory virtual copilot or does it require autonomous tool-execution permissions?</p>
+                <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
+                  <li><strong className="text-slate-900">Copilots:</strong> Perfect for engineering codebases. They help draft boilerplate and trace database schema indexes, but require active human review before deployment.</li>
+                  <li><strong className="text-slate-900">Autonomous Agents:</strong> Ideal for operations, customer triage, and CRM pipelines. They trigger webhooks, take phone calls, and resolve customer support chats completely independently.</li>
+                </ul>
+              </div>
+            )}
+            {activeTabChoose === 1 && (
+              <div id="tab-panel-1" role="tabpanel" className="space-y-2">
+                <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Under the hood legal compliance with DPDP Act of 2023</h4>
+                <p>If your business processes customer data in India (especially B2C), your AI integrations must follow statutory rules:</p>
+                <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
+                  <li><strong className="text-slate-900">Data Residency:</strong> Sensitive information (Aadhaar cards, transactions, UPI credentials, call recordings) should reside securely in localized cloud centers (e.g., Central India Mumbai datasets).</li>
+                  <li><strong className="text-slate-900">Token-Level Scrubbing:</strong> Your API pipelines must mask personally identifiable information (PII) before routing queries to external global model servers.</li>
+                  <li><strong className="text-slate-900">DPDP Consent Formats:</strong> Interactive chatbots must display transparent notices and give users immediate opt-out features (e.g. typing &apos;Delete my profile&apos; triggers automatic log erasure).</li>
+                </ul>
+              </div>
+            )}
+            {activeTabChoose === 2 && (
+              <div id="tab-panel-2" role="tabpanel" className="space-y-2">
+                <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Developer Documentation and Stack Fit</h4>
+                <p>Matching the technical skill profile of your team prevents severe implementation friction.</p>
+                <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
+                  <li><strong className="text-slate-900">Python Teams:</strong> Frameworks like CrewAI are excellent, letting engineers configure collaborative role-playing agents using python decorators and custom tool objects.</li>
+                  <li><strong className="text-slate-900">No-Code / Visual Builders:</strong> Visual systems such as Flowise AI let SME owners or business analysts drag and drop modular nodes, connect to postgres easily, and build proof-of-concepts without writing any backend scripts.</li>
+                </ul>
+              </div>
+            )}
+            {activeTabChoose === 3 && (
+              <div id="tab-panel-3" role="tabpanel" className="space-y-2">
+                <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Total TCO: Subscription Fees vs Pay-As-You-Go Token Spends</h4>
+                <p>Calculating the true long-term operational budget allows businesses to avoid crippling cost surprises:</p>
+                <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
+                  <li><strong className="text-slate-900">Voice Agents (e.g., Vapi, Bland):</strong> Charged per call minute (typically equivalent to roughly ₹12 - ₹20 per hour). This is 90% cheaper than traditional outbound call centers.</li>
+                  <li><strong className="text-slate-900">SaaS Builder Subscriptions:</strong> Managed platforms charge high token margin markups. swappng to visual, self-hosted tools (like Flowise on Docker) connected directly to raw LLM keys reduces expenses by up to 80%.</li>
+                </ul>
+              </div>
+            )}
+          </div>
       </div>
 
       {/* Interactive Tool Playground Feature: Hinglish Multi-Dialect Translation Tool */}

@@ -33,6 +33,16 @@ const CATEGORY_LABELS = {
   calculators: "Calculators",
 };
 
+const TOOL_REVIEW_SLUG_OVERRIDES = {
+  vapi: "vapi-ai",
+  retell: "retell-ai",
+  intercom: "intercom-ai",
+  bland: "bland-ai",
+  replit: "replit-ai",
+  elevenlabs: "elevenlabs",
+  "elevenlabs-conversational-ai": "elevenlabs",
+};
+
 export const HUBS = [
   {
     slug: "coding-agents-hub",
@@ -210,8 +220,9 @@ export const EDITORIAL_ROUTES = [
   },
   {
     path: "/about-editorial-team",
+    canonicalPath: "/about",
     title: "About Editorial Team",
-    description: "Meet the BestAIAgent.in editorial team: former engineers, procurement specialists, and AI researchers focused on India-market relevance.",
+    description: "Canonical redirect to the BestAIAgent.in About page with editorial team, ownership, and transparency details.",
   },
   {
     path: "/contact",
@@ -332,6 +343,11 @@ export function cleanSlug(raw, filePath) {
 
 export function contentRoute(category, slug) {
   if (category === "tools") return `/tools/${slug}`;
+  if (category === "reviews" && slug.endsWith("-review")) {
+    const base = slug.replace(/-review$/, "");
+    const toolSlug = TOOL_REVIEW_SLUG_OVERRIDES[base] || base;
+    return `/tools/${toolSlug}`;
+  }
   if (category === "mcp" && slug === "what-is-mcp") return "/mcp/what-is-mcp";
   if (category === "comparisons") return `/${slug}`;
   return `/${slug}`;
@@ -543,11 +559,21 @@ export function extractFaqs(markdown) {
 }
 
 export function buildContentEntries() {
-  return walkMarkdown().map((filePath) => {
+  return walkMarkdown().flatMap((filePath) => {
     const markdown = fs.readFileSync(filePath, "utf8");
     const category = categoryFromFile(filePath);
-    const slug = cleanSlug(field(markdown, "URL Slug"), filePath);
+    const rawSlug = cleanSlug(field(markdown, "URL Slug"), filePath);
+    if (path.basename(filePath) === "index.md") return [];
+
+    const slug = rawSlug;
     const pathName = contentRoute(category, slug);
+    const aliases = [];
+    if (category === "reviews" && slug.endsWith("-review")) {
+      const reviewBase = slug.replace(/-review$/, "");
+      aliases.push(`/${slug}`);
+      const legacyToolSlug = TOOL_REVIEW_SLUG_OVERRIDES[reviewBase];
+      if (legacyToolSlug && legacyToolSlug !== reviewBase) aliases.push(`/tools/${reviewBase}`);
+    }
     const title = field(markdown, "SEO Title") || h1(markdown) || titleCase(slug);
     const description = field(markdown, "Meta Description") || `${title} with India-focused AI agent analysis, INR pricing notes, DPDP considerations, comparisons, FAQs, and implementation guidance.`;
     const pageH1 = h1(markdown) || title;
@@ -564,7 +590,7 @@ export function buildContentEntries() {
       categoryLabel: CATEGORY_LABELS[category] || titleCase(category),
       slug,
       path: pathName,
-      aliases: category === "reviews" && slug.endsWith("-review") ? [`/tools/${slug.replace(/-review$/, "")}`] : [],
+      aliases,
       title,
       description,
       h1: pageH1,
@@ -581,7 +607,7 @@ export function buildContentEntries() {
       ...trustSignalsFor(category, path.relative(ROOT, filePath)),
     };
     entry.schemas = pageSchema(entry);
-    return entry;
+    return [entry];
   });
 }
 
@@ -689,13 +715,15 @@ export function buildTopicalEntries(existingPaths = new Set()) {
 
 export function buildEditorialEntries() {
   const editorial = EDITORIAL_ROUTES.map((route) => {
+    const canonicalPath = route.canonicalPath || route.path;
     const meta = {
       source: "generated-editorial",
       category: "editorial",
       categoryLabel: "Editorial",
       slug: route.path.slice(1),
       path: route.path,
-      aliases: [],
+      canonicalPath: canonicalPath === route.path ? undefined : canonicalPath,
+      aliases: canonicalPath === route.path ? [] : [canonicalPath],
       title: `${route.title} | BestAIAgent.in`,
       description: route.description,
       h1: route.title,
@@ -765,7 +793,7 @@ export function buildRouteMeta() {
   for (const entry of entries) {
     routeMap[entry.path] = entry;
     for (const alias of entry.aliases || []) {
-      routeMap[alias] = { ...entry, path: alias, canonicalPath: entry.path };
+      routeMap[alias] = { ...entry, path: alias, canonicalPath: entry.path, aliases: entry.aliases };
     }
   }
   routeMap["/"] = {
@@ -795,7 +823,7 @@ export function buildRouteMeta() {
         name: "BestAIAgent.in",
         url: SITE_URL,
         description: "India-focused AI agent reviews, comparisons, pricing guides, tutorials, and glossary definitions.",
-        logo: `${SITE_URL}/logo.png`,
+        logo: `${SITE_URL}/assets/brand/logo.png`,
         areaServed: { "@type": "Country", name: "India" },
       },
       {
@@ -871,6 +899,44 @@ export function buildRouteMeta() {
       },
     ],
   };
+  const addLegacyRedirect = (alias, target) => {
+    const targetMeta = routeMap[target];
+    if (!targetMeta) return;
+    routeMap[alias] = {
+      ...targetMeta,
+      path: alias,
+      canonicalPath: target,
+      slug: target.replace(/^\//, '') || 'home',
+      aliases: [alias],
+    };
+  };
+
+  [
+    ['/pricing', '/pricing-hub'],
+    ['/editorial-board', '/about'],
+    ['/our-testing-lab', '/how-we-test-ai-agents'],
+    ['/rankings', '/ai-agent-rankings-2026'],
+    ['/awards', '/ai-agent-awards-2026'],
+    ['/reports/market-map', '/ai-agent-market-map-2026'],
+    ['/industry-report', '/ai-agent-industry-report-2026'],
+    ['/market-map/ai-agent-market-map-2026', '/ai-agent-market-map-2026'],
+    ['/statistics/ai-agent-statistics-2026', '/ai-agent-statistics-2026'],
+    ['/trust/cookie-settings', '/cookie-settings'],
+    ['/mcp/registry', '/mcp-registry'],
+    ['/mcp/rankings', '/mcp-registry'],
+    ['/mcp-rankings', '/mcp-registry'],
+    ['/mcp/comparisons', '/mcp-server-comparisons'],
+    ['/mcp-comparisons', '/mcp-server-comparisons'],
+    ['/mcp/frameworks', '/mcp-tutorials'],
+    ['/mcp-frameworks', '/mcp-tutorials'],
+    ['/mcp/security', '/mcp-security'],
+    ['/mcp/tutorials', '/mcp-tutorials'],
+    ['/mcp/servers', '/mcp-servers'],
+    ['/mcp/marketplace', '/mcp-marketplace'],
+    ['/vector-dbs/pinecone', '/pinecone'],
+    ['/benchmarks', '/ai-agent-benchmarks-2026'],
+  ].forEach(([alias, target]) => addLegacyRedirect(alias, target));
+
   return routeMap;
 }
 

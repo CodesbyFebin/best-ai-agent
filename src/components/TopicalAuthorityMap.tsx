@@ -166,10 +166,17 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
             const meta = getAuthorityPageMetadata(item.slug);
             if (!meta) return null;
             return (
-              <div
+              <button
                 key={item.slug}
                 onClick={() => onSelectArticle(item.slug)}
-                className="bg-white border border-slate-200/80 hover:border-emerald-400 p-4 rounded-xl hover:shadow-xs transition duration-200 cursor-pointer group flex flex-col justify-between space-y-3"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onSelectArticle(item.slug);
+                  }
+                }}
+                className="bg-white border border-slate-200/80 hover:border-emerald-400 p-4 rounded-xl hover:shadow-xs transition duration-200 cursor-pointer group flex flex-col justify-between space-y-3 text-left"
+                type="button"
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-[10px] font-mono font-bold text-slate-400">
@@ -187,7 +194,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
                 <div className="text-[10px] font-mono font-bold text-emerald-600 flex items-center gap-1 uppercase tracking-wider pt-2 border-t border-slate-50 group-hover:gap-1.5 transition-all">
                   Inspect Pillar <ArrowRight className="w-3 h-3" />
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
@@ -282,10 +289,17 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
                     if (page.type === "Supporting") pillColor = "bg-emerald-50 text-emerald-700 border-emerald-100";
 
                     return (
-                      <div
+                      <button
                         key={page.slug}
                         onClick={() => onSelectArticle(page.slug)}
-                        className="bg-white border border-slate-150 hover:border-emerald-500 hover:bg-slate-50/50 p-5 rounded-2xl transition duration-150 group cursor-pointer flex flex-col justify-between space-y-4 relative overflow-hidden"
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            onSelectArticle(page.slug);
+                          }
+                        }}
+                        className="bg-white border border-slate-150 hover:border-emerald-500 hover:bg-slate-50/50 p-5 rounded-2xl transition duration-150 group cursor-pointer flex flex-col justify-between space-y-4 relative overflow-hidden text-left"
+                        type="button"
                       >
                         <div className="space-y-2.5">
                           <div className="flex items-center justify-between gap-2">
@@ -315,7 +329,7 @@ export default function TopicalAuthorityMap({ onSelectArticle, onBack }: Topical
                           <span>Read Live Authority Pillar</span>
                           <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />
                         </div>
-                      </div>
+                      </button>
                     );
                   })}
                 </div>

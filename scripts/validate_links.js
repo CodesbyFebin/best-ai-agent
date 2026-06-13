@@ -8,7 +8,7 @@ const errors = [];
 
 function checkPath(source, raw) {
   if (!raw || raw.startsWith("//")) return;
-  if (raw.startsWith("/api/") || raw.startsWith("/assets/")) return;
+  if (raw.startsWith("/api/") || raw.startsWith("/assets/") || raw.startsWith("/downloads/")) return;
   const clean = raw.split(/[?#]/)[0].replace(/\/$/, "") || "/";
   if (clean.includes("#")) errors.push(`${source}: hash URL found (${raw})`);
   if (!validPaths.has(clean)) {

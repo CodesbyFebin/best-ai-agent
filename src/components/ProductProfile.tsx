@@ -286,6 +286,46 @@ const reviewResourceMap: Record<string, {
     category: 'coding-agents-hub',
     comparisons: ['cursor-vs-copilot', 'cursor-vs-codex'],
   },
+  'github-copilot': {
+    pricing: 'github-copilot-pricing',
+    alternatives: 'github-copilot-alternatives',
+    tutorial: 'how-to-use-github-copilot',
+    entity: 'github-copilot-entity',
+    category: 'coding-agents-hub',
+    comparisons: ['cursor-vs-copilot', 'copilot-vs-claude-code'],
+  },
+  'claude-code': {
+    pricing: 'claude-code-pricing',
+    alternatives: 'claude-code-alternatives',
+    tutorial: 'how-to-set-up-claude-code',
+    entity: 'claude-code-entity',
+    category: 'coding-agents-hub',
+    comparisons: ['cursor-vs-claude-code', 'copilot-vs-claude-code'],
+  },
+  codex: {
+    pricing: 'codex-pricing',
+    alternatives: 'codex-alternatives',
+    tutorial: 'how-to-use-codex',
+    entity: 'codex-entity',
+    category: 'coding-agents-hub',
+    comparisons: ['cursor-vs-codex'],
+  },
+  windsurf: {
+    pricing: 'windsurf-pricing',
+    alternatives: 'windsurf-alternatives',
+    tutorial: 'how-to-use-windsurf',
+    entity: 'windsurf-entity',
+    category: 'coding-agents-hub',
+    comparisons: ['windsurf-vs-cursor'],
+  },
+  'replit-ai': {
+    pricing: 'replit-pricing',
+    alternatives: 'replit-alternatives',
+    tutorial: 'how-to-use-replit-agent',
+    entity: 'replit-entity',
+    category: 'coding-agents-hub',
+    comparisons: ['replit-vs-cursor'],
+  },
   crewai: {
     pricing: 'crewai-pricing',
     alternatives: 'crewai-alternatives',
@@ -302,21 +342,29 @@ const reviewResourceMap: Record<string, {
     category: 'voice-ai-hub',
     comparisons: ['vapi-vs-retell', 'vapi-vs-elevenlabs'],
   },
+  'retell-ai': {
+    pricing: 'retell-pricing',
+    alternatives: 'retell-alternatives',
+    tutorial: 'how-to-use-retell',
+    entity: 'retell-entity',
+    category: 'voice-ai-hub',
+    comparisons: ['vapi-vs-retell', 'retell-vs-bland'],
+  },
   'yellow-ai': {
     pricing: 'yellow-ai-pricing',
     alternatives: 'yellow-ai-alternatives',
-    tutorial: 'how-to-integrate-ai-agent-with-whatsapp',
+    tutorial: 'how-to-use-yellow-ai',
     entity: 'yellow-ai-entity',
     category: 'business-ai-hub',
     comparisons: ['yellow-ai-vs-intercom', 'yellow-ai-vs-wati'],
   },
-  flowise: {
-    pricing: 'flowise-pricing',
-    alternatives: 'flowise-alternatives',
-    tutorial: 'how-to-build-ai-agent-with-flowise',
-    entity: 'flowise-entity',
-    category: 'ai-agent-builders-hub',
-    comparisons: ['dify-vs-flowise', 'flowise-vs-langflow'],
+'intercom-ai': {
+    pricing: 'intercom-pricing',
+    alternatives: 'intercom-alternatives',
+    tutorial: 'how-to-use-intercom',
+    entity: 'intercom-entity',
+    category: 'business-ai-hub',
+    comparisons: ['intercom-vs-zendesk-ai', 'yellow-ai-vs-intercom'],
   },
 };
 
@@ -336,6 +384,38 @@ const reviewIntegrityBySlug: Record<string, {
     affiliateStatus: 'May contain affiliate links; score assigned independently.',
     changelog: '2026-06-12 — Added review integrity metadata, MCP support notes, and DPDP-aware privacy checks.',
   },
+  'github-copilot': {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added GitHub workspace, agent mode, and India procurement notes.',
+  },
+  'claude-code': {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added terminal-native workflow, privacy, and pricing verification notes.',
+  },
+  windsurf: {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added Cascade workflow, pricing, and developer context notes.',
+  },
+  'replit-ai': {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added Replit Agent workspace, pricing, and deployment notes.',
+  },
   'vapi-ai': {
     author: 'Karan Mehra, Enterprise Lead',
     factChecker: 'Priya Iyer, Core Engineer',
@@ -344,6 +424,14 @@ const reviewIntegrityBySlug: Record<string, {
     affiliateStatus: 'May contain affiliate links; score assigned independently.',
     changelog: '2026-06-12 — Added voice latency verification, pricing check date, and India workflow notes.',
   },
+  'retell-ai': {
+    author: 'Karan Mehra, Enterprise Lead',
+    factChecker: 'Priya Iyer, Core Engineer',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added call-center pricing, latency, and CRM integration verification.',
+  },
   'yellow-ai': {
     author: 'Karan Mehra, Enterprise Lead',
     factChecker: 'Arshdeep Singh, Chief AI Analyst',
@@ -351,6 +439,14 @@ const reviewIntegrityBySlug: Record<string, {
     pricingChecked: '2026-06-12',
     affiliateStatus: 'May contain affiliate links; score assigned independently.',
     changelog: '2026-06-12 — Added WhatsApp commerce, DPDP, and procurement verification notes.',
+  },
+  'intercom-ai': {
+    author: 'Karan Mehra, Enterprise Lead',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added Fin AI, support automation, and India procurement notes.',
   },
   'flowise': {
     author: 'Priya Iyer, Core Engineer',
@@ -413,6 +509,8 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
     navigator.clipboard.writeText(shareUrl).then(() => {
       setCopiedUrl(true);
       setTimeout(() => setCopiedUrl(false), 2000);
+    }).catch(() => {
+      setCopiedUrl(false);
     });
   };
 
@@ -561,31 +659,34 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
         </div>
       </section>
 
-      {/* Tabs Menu */}
-      <div className="border-b border-slate-200">
-        <div className="flex flex-wrap -mb-px gap-2">
-          {(['overview', 'benchmarks', 'code', 'alternatives', 'reviews'] as const).filter(tab => tab === 'overview' || extra).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`cursor-pointer pb-3 text-xs uppercase tracking-wider font-bold border-b-2 transition-all px-3 ${activeTab === tab ? 'border-emerald-600 text-emerald-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
-            >
-              {tab}
-            </button>
-          ))}
+{/* Tabs Menu */}
+        <div className="border-b border-slate-200">
+          <div className="flex flex-wrap -mb-px gap-2" role="tablist" aria-label="Product profile sections">
+            {(['overview', 'benchmarks', 'code', 'alternatives', 'reviews'] as const).filter(tab => tab === 'overview' || extra).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                role="tab"
+                aria-selected={activeTab === tab}
+                aria-controls={`product-tab-${tab}`}
+                className={`cursor-pointer pb-3 text-xs uppercase tracking-wider font-bold border-b-2 transition-all px-3 ${activeTab === tab ? 'border-emerald-600 text-emerald-700' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
 
       {/* Tab Viewport Contents */}
       <div className="grid lg:grid-cols-3 gap-8">
 
-        {/* Left Side Content Area (Spans 2 columns) */}
+{/* Left Side Content Area (Spans 2 columns) */}
         <div className="lg:col-span-2 space-y-8">
-
+          
           {/* TAB: OVERVIEW */}
           {activeTab === 'overview' && (
-            <div className="space-y-8">
-
+            <div id="product-tab-overview" role="tabpanel" className="space-y-8">
+              
               {/* Detailed scorecard list */}
               <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
                 <h3 className="text-base font-bold text-slate-900 border-b pb-3 flex items-center gap-1.5">
@@ -796,7 +897,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
 
           {/* TAB: BENCHMARKS */}
           {activeTab === 'benchmarks' && extra && (
-            <div className="space-y-6">
+            <div id="product-tab-benchmarks" role="tabpanel" className="space-y-6">
               <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
                 <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
                   <Award className="w-5 h-5 text-emerald-600" /> Standardized Benchmark Performance
@@ -830,7 +931,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
 
           {/* TAB: CODE EXAMPLES */}
           {activeTab === 'code' && extra && (
-            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+            <div id="product-tab-code" role="tabpanel" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
               <div className="border-b pb-3 flex justify-between items-center flex-wrap gap-2">
                 <div>
                   <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
@@ -849,7 +950,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
 
           {/* TAB: ALTERNATIVES */}
           {activeTab === 'alternatives' && extra && (
-            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+            <div id="product-tab-alternatives" role="tabpanel" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
               <h3 className="text-base font-bold text-slate-950 flex items-center gap-1.5">
                 <ArrowLeftRight className="w-5 h-5 text-emerald-600" /> Non-commodity alternatives matrix
               </h3>
@@ -873,7 +974,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
 
           {/* TAB: REVIEWS */}
           {activeTab === 'reviews' && extra && (
-            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
+            <div id="product-tab-reviews" role="tabpanel" className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
               <div className="border-b pb-3">
                 <h3 className="text-base font-bold text-slate-950">Editorial verification notes</h3>
                 <p className="text-slate-400 text-xs">Evidence summary from the current review pass. No user rating is shown unless it is collected and verified.</p>

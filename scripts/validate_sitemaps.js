@@ -15,6 +15,7 @@ const required = [
   "mcp-sitemap.xml",
   "author-sitemap.xml",
   "hub-sitemap.xml",
+  "calculators-sitemap.xml",
   "feed.xml",
   "llms.txt",
   "indexnow-key.txt",
@@ -53,7 +54,7 @@ for (const name of required.filter((n) => n.endsWith(".xml"))) {
 
 const robots = fs.existsSync(path.join(PUBLIC_DIR, "robots.txt")) ? fs.readFileSync(path.join(PUBLIC_DIR, "robots.txt"), "utf8") : "";
 for (const sitemap of required.filter((n) => n.endsWith(".xml") || n === "llms.txt")) {
-  if (!robots.includes(`${SITE_URL}/${sitemap}`) && sitemap !== "author-sitemap.xml" && sitemap !== "hub-sitemap.xml") {
+  if (!robots.includes(`${SITE_URL}/${sitemap}`) && sitemap !== "author-sitemap.xml" && sitemap !== "hub-sitemap.xml" && sitemap !== "calculators-sitemap.xml") {
     errors.push(`robots.txt missing reference to ${sitemap}`);
   }
 }

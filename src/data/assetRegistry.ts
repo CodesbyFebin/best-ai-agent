@@ -114,8 +114,8 @@ export const categoryAssets: Record<string, CategoryAsset> = {
 };
 
 export const defaultAsset = {
-    logo: '/assets/brand/logo-mark.svg',
-    logoAlt: 'BestAIAgent.in neutral brand mark',
+    logo: '/assets/brand/logo-mark.png',
+    logoAlt: 'BestAIAgent.in brand mark',
     ogImage: '/assets/brand/og-default.png',
     ogImageAlt: 'BestAIAgent.in independent AI agent authority preview image',
     screenshot: '/assets/screenshots/placeholder-workflow.png',

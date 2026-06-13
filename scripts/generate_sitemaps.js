@@ -4,11 +4,14 @@ import { AUTHORS, HUBS, PUBLIC_DIR, SITE_URL, TODAY, buildRouteMeta, ensurePubli
 
 ensurePublicDir();
 
+const normalizeRelatedSlug = (slug) => slug.replace(/^\//, "").replace(/\/$/, "");
+
 const routeMap = buildRouteMeta();
 const routes = Object.values(routeMap)
   .filter((route, index, arr) => route.path && route.path === (route.canonicalPath || route.path) && arr.findIndex((other) => other.path === route.path) === index)
   .sort((a, b) => a.path.localeCompare(b.path));
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "7f4f2d728f93411eb9a03bestaiagentin";
+
 
 function write(name, content) {
   fs.writeFileSync(path.join(PUBLIC_DIR, name), content.endsWith("\n") ? content : `${content}\n`);
@@ -110,6 +113,10 @@ write("robots.txt", [
   "Allow: /",
   "User-agent: PerplexityBot",
   "Allow: /",
+  "User-agent: Google-Extended",
+  "Allow: /",
+  "User-agent: OAI-SearchBot",
+  "Allow: /",
   "User-agent: Applebot",
   "Allow: /",
   "User-agent: DuckDuckBot",
@@ -126,6 +133,9 @@ write("robots.txt", [
   `Sitemap: ${SITE_URL}/tutorials-sitemap.xml`,
   `Sitemap: ${SITE_URL}/glossary-sitemap.xml`,
   `Sitemap: ${SITE_URL}/mcp-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/author-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/hub-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/calculators-sitemap.xml`,
   `Sitemap: ${SITE_URL}/image-sitemap.xml`,
   `Sitemap: ${SITE_URL}/feed.xml`,
   `Sitemap: ${SITE_URL}/llms.txt`,
@@ -164,7 +174,11 @@ write("feed.xml", [
   "</rss>",
 ].join("\n"));
 
-const section = (title, entries) => [`## ${title}`, ...entries.map((entry) => `- [${entry.h1 || entry.title}](${SITE_URL}${entry.path}) - ${entry.description}`), ""].join("\n");
+const section = (title, entries) => [`## ${title}`, ...entries.map((entry) => {
+  const label = String(entry.h1 || entry.title).replace(/\[[^\]]+\]\(([^)]+)\)/g, "").replace(/\s+/g, " ").trim();
+  const description = String(entry.description || "").replace(/\[[^\]]+\]\(([^)]+)\)/g, (_match, url) => url).replace(/\s+/g, " ").trim().slice(0, 260);
+  return `- [${label}](${SITE_URL}${entry.path}) - ${description}`;
+}), ""].join("\n");
 
 write("llms.txt", [
   "# BestAIAgent.in",
@@ -209,46 +223,14 @@ write("llms.txt", [
   `- LLM crawler file: ${SITE_URL}/llms.txt`,
   `- Content index: ${SITE_URL}/content-index.json`,
   `- Legacy content index: ${SITE_URL}/contentIndex.json`,
+  `- AI entity index: ${SITE_URL}/ai-index.json`,
+  `- Entity graph: ${SITE_URL}/entity-graph.json`,
   `- Entity index: ${SITE_URL}/entity-index.json`,
+  `- Benchmark index: ${SITE_URL}/benchmark-index.json`,
+  `- Ranking index: ${SITE_URL}/ranking-index.json`,
+  `- Tool relationships: ${SITE_URL}/tool-relationships.json`,
   `- Knowledge graph: ${SITE_URL}/knowledge-graph.json`,
 ].join("\n"));
-
-const contentIndex = routes.map((route) => ({
-  path: route.path,
-  canonical: `${SITE_URL}${route.path === "/" ? "/" : route.path}`,
-  slug: route.slug,
-  title: route.title,
-  description: route.description,
-  h1: route.h1,
-  category: route.category,
-  categoryLabel: route.categoryLabel,
-  parentHub:
-    route.category === "pricing" ? "/pricing-hub" :
-    route.category === "alternatives" ? "/alternatives-hub" :
-    route.category === "tutorials" || route.category === "courses" ? "/tutorials-hub" :
-    route.category === "glossary" ? "/glossary-hub" :
-    route.category === "mcp" ? "/mcp-hub" :
-    route.category === "free" ? "/free-ai-agents-hub" :
-    route.category === "reviews" || route.category === "tools" ? "/best-ai-agent" :
-    route.category === "comparisons" ? "/best-ai-agent" :
-    route.category === "hubs" ? "/" :
-    "/best-ai-agent",
-  lastmod: route.lastmod || TODAY,
-  lastUpdated: route.lastUpdated || route.lastmod || TODAY,
-  lastReviewed: route.lastReviewed || TODAY,
-  nextReview: route.nextReview || "2026-09-11",
-  lastVerified: route.lastVerified || TODAY,
-  verificationStatus: route.verificationStatus || "mapped",
-  confidenceLevel: route.confidenceLevel || 75,
-  sourcesUsed: route.sourcesUsed || ["editorial_review"],
-  editorialReviewDate: route.editorialReviewDate || TODAY,
-  changefreq: route.changefreq,
-  priority: route.priority,
-  schemaTypes: route.schemaTypes || [],
-  relatedPages: route.related || [],
-  wordCount: route.words,
-  source: route.source,
-}));
 
 const importantEntities = [
   "AI Agent",
@@ -288,6 +270,56 @@ const importantEntities = [
   "Perplexity",
 ];
 
+const bySlug = Object.fromEntries(routes.map((route) => [route.slug, route]));
+const validRoutePaths = new Set(routes.map((route) => route.path));
+const validSlugSet = new Set(routes.map((route) => route.slug));
+const routeForSlug = (slug) => bySlug[slug]?.path || (validRoutePaths.has(`/${slug}`) ? `/${slug}` : undefined);
+const toolRoutes = routes.filter((route) => ["reviews", "tools"].includes(route.category));
+const pricingRoutes = routes.filter((route) => route.category === "pricing");
+const comparisonRoutes = routes.filter((route) => route.category === "comparisons");
+const alternativeRoutes = routes.filter((route) => route.category === "alternatives");
+const tutorialRoutes = routes.filter((route) => route.category === "tutorials");
+
+const contentIndex = routes.map((route) => ({
+  path: route.path,
+  canonical: `${SITE_URL}${route.path === "/" ? "/" : route.path}`,
+  slug: route.slug,
+  title: route.title,
+  description: route.description,
+  h1: route.h1,
+  category: route.category,
+  categoryLabel: route.categoryLabel,
+  parentHub:
+    route.category === "pricing" ? "/pricing-hub" :
+    route.category === "alternatives" ? "/alternatives-hub" :
+    route.category === "tutorials" || route.category === "courses" ? "/tutorials-hub" :
+    route.category === "glossary" ? "/glossary-hub" :
+    route.category === "mcp" ? "/mcp-hub" :
+    route.category === "free" ? "/free-ai-agents-hub" :
+    route.category === "reviews" || route.category === "tools" ? "/best-ai-agent" :
+    route.category === "comparisons" ? "/best-ai-agent" :
+    route.category === "hubs" ? "/" :
+    "/best-ai-agent",
+  lastmod: route.lastmod || TODAY,
+  lastUpdated: route.lastUpdated || route.lastmod || TODAY,
+  lastReviewed: route.lastReviewed || TODAY,
+  nextReview: route.nextReview || "2026-09-11",
+  lastVerified: route.lastVerified || TODAY,
+  verificationStatus: route.verificationStatus || "mapped",
+  confidenceLevel: route.confidenceLevel || 75,
+  sourcesUsed: route.sourcesUsed || ["editorial_review"],
+  editorialReviewDate: route.editorialReviewDate || TODAY,
+  changefreq: route.changefreq,
+  priority: route.priority,
+  schemaTypes: route.schemaTypes || [],
+  relatedPages: (route.related || [])
+    .map((slug) => normalizeRelatedSlug(slug))
+    .filter((slug) => validSlugSet.has(slug) || validRoutePaths.has(`/${slug}`))
+    .slice(0, 24),
+  wordCount: route.words,
+  source: route.source,
+}));
+
 const findRoutes = (needle) => {
   const normalized = needle.toLowerCase().replace(/\s+/g, "-");
   return routes
@@ -303,14 +335,6 @@ const entityIndex = importantEntities.map((entity) => ({
   pages: findRoutes(entity),
   relatedConcepts: importantEntities.filter((other) => other !== entity).slice(0, 6),
 }));
-
-const bySlug = Object.fromEntries(routes.map((route) => [route.slug, route]));
-const routeForSlug = (slug) => bySlug[slug]?.path || `/${slug}`;
-const toolRoutes = routes.filter((route) => ["reviews", "tools"].includes(route.category));
-const pricingRoutes = routes.filter((route) => route.category === "pricing");
-const comparisonRoutes = routes.filter((route) => route.category === "comparisons");
-const alternativeRoutes = routes.filter((route) => route.category === "alternatives");
-const tutorialRoutes = routes.filter((route) => route.category === "tutorials");
 
 const relationships = [];
 for (const tool of toolRoutes) {
