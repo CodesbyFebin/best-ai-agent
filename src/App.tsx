@@ -51,6 +51,7 @@ import { allTopicalPages, isTopicalAuthoritySlug, topicalClusters } from './data
 import { Database } from 'lucide-react';
 import { publicUrl, SITE_URL } from './lib/siteUrl';
 import TrustPage from './components/TrustPage';
+import AuthorityExpansionBlock from './components/AuthorityExpansionBlock';
 
 const ProductProfile = lazy(() => import('./components/ProductProfile'));
 const ComparisonPage = lazy(() => import('./components/ComparisonPage'));
@@ -1125,6 +1126,121 @@ try {
     alert(`Success! Generated dynamic pSEO route: /${selectedSiloId}/${cleanSlug}\nThis contains structured tables, schema markup, and dynamic internal links.`);
     setNewSEOArticleSlug('');
   };
+
+  const currentAuthorityExpansion = (() => {
+    if (currentView === 'not-found' || currentView === 'author' || currentView === 'topical-map' || currentView === 'editorial') return null;
+    if (currentView === 'home') {
+      return {
+        slug: 'home',
+        title: 'BestAIAgent.in: India AI Agent Authority',
+        description: 'BestAIAgent.in helps Indian founders, developers, SMEs, agencies, and enterprises compare AI agents, coding tools, voice agents, builders, MCP servers, pricing, alternatives, and implementation guides.',
+        primaryKeyword: 'best ai agents india',
+        category: 'Home',
+        intent: 'commercial research',
+        variant: 'hub' as const,
+      };
+    }
+    if (currentView === 'article') {
+      const page = getPageBySlug(selectedArticleSlug);
+      if (!page) return null;
+      return {
+        slug: page.slug,
+        title: page.title,
+        description: page.metaDescription || page.directAnswer,
+        primaryKeyword: page.primaryKeyword,
+        category: page.category || page.siloId,
+        intent: page.intent,
+        variant: page.pageType === 'hub' ? 'hub' as const : 'guide' as const,
+      };
+    }
+    if (currentView === 'product') {
+      const product = products.find(item => item.slug === selectedProductSlug);
+      if (!product) return null;
+      return {
+        slug: product.slug,
+        title: `${product.name} Review`,
+        description: product.summary,
+        primaryKeyword: `${product.name} review`,
+        category: product.pricingModel,
+        intent: 'commercial review',
+        variant: 'review' as const,
+      };
+    }
+    if (currentView === 'compare') {
+      const comparison = comparisonPages.find(item => item.slug === selectedArticleSlug);
+      return {
+        slug: comparison?.slug || 'compare',
+        title: comparison?.title || 'AI Agent Comparison Board',
+        description: comparison?.metaDescription || 'Compare AI agents side by side by pricing, India fit, integrations, features, reliability, and implementation readiness.',
+        primaryKeyword: comparison?.primaryKeyword || 'ai agent comparison',
+        category: 'Comparisons',
+        intent: 'comparison',
+        variant: 'comparison' as const,
+      };
+    }
+    if (['about', 'contact', 'disclosure', 'policy', 'methodology', 'team', 'authority'].includes(currentView)) {
+      const key = currentView === 'disclosure' ? 'affiliate-disclosure' : selectedArticleSlug || currentView;
+      const trustPage = trustPages[key] || authorityPages[key] || trustPages[currentView];
+      if (!trustPage) return null;
+      return {
+        slug: trustPage.slug,
+        title: trustPage.title,
+        description: trustPage.metaDescription,
+        primaryKeyword: trustPage.title.toLowerCase(),
+        category: trustPage.view,
+        intent: 'trust and authority',
+        variant: 'trust' as const,
+      };
+    }
+    const utilityMap: Record<string, { slug: string; title: string; description: string; keyword: string; variant: 'guide' | 'hub' | 'tool' }> = {
+      chat: {
+        slug: 'ai-agent-advisor',
+        title: 'AI Agent Advisor',
+        description: 'AI Agent Advisor helps Indian buyers narrow down AI agent tools by workflow, budget, DPDP exposure, integration needs, and team capability.',
+        keyword: 'ai agent advisor',
+        variant: 'tool',
+      },
+      tuner: {
+        slug: 'ai-agent-score-tuner',
+        title: 'AI Agent Score Tuner',
+        description: 'AI Agent Score Tuner helps teams weight pricing, security, India fit, integrations, reliability, and workflow value before choosing AI agents.',
+        keyword: 'ai agent score tuner',
+        variant: 'tool',
+      },
+      scoring: {
+        slug: 'ai-agent-scoring-system',
+        title: 'AI Agent Scoring System',
+        description: 'BestAIAgent.in scoring system explains how AI agents are evaluated across capability, usability, reliability, security, pricing, and India fit.',
+        keyword: 'ai agent scoring system',
+        variant: 'guide',
+      },
+      compliance: {
+        slug: 'dpdp-act-ai-compliance',
+        title: 'DPDP Act AI Compliance',
+        description: 'DPDP Act AI compliance helps Indian teams assess consent, purpose limitation, deletion, retention, access control, and vendor responsibilities for AI agent workflows.',
+        keyword: 'dpdp act ai compliance',
+        variant: 'guide',
+      },
+      drive: {
+        slug: 'google-drive-ai-agent-workspace',
+        title: 'Google Drive AI Agent Workspace',
+        description: 'Google Drive AI Agent Workspace helps organize AI agent research, exports, scoring evidence, checklists, and editorial collaboration assets.',
+        keyword: 'google drive ai agent workspace',
+        variant: 'tool',
+      },
+    };
+    const utility = utilityMap[currentView];
+    if (!utility) return null;
+    return {
+      slug: utility.slug,
+      title: utility.title,
+      description: utility.description,
+      primaryKeyword: utility.keyword,
+      category: 'Utility',
+      intent: 'tool workflow',
+      variant: utility.variant,
+    };
+  })();
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-emerald-100 development-frame">
@@ -4413,6 +4529,18 @@ try {
 
           {currentView === 'topical-map' && (
             <TopicalAuthorityMap onSelectArticle={(slug) => routeTo('article', undefined, slug)} onBack={() => routeTo('home')} />
+          )}
+
+          {currentAuthorityExpansion && (
+            <AuthorityExpansionBlock
+              slug={currentAuthorityExpansion.slug}
+              title={currentAuthorityExpansion.title}
+              description={currentAuthorityExpansion.description}
+              primaryKeyword={currentAuthorityExpansion.primaryKeyword}
+              category={currentAuthorityExpansion.category}
+              intent={currentAuthorityExpansion.intent}
+              variant={currentAuthorityExpansion.variant}
+            />
           )}
 
         </Suspense>
