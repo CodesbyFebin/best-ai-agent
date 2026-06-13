@@ -615,3 +615,4 @@ export const agentEntities: AuthorityEntity[] = [
     lastVerified: D,
     officialLinks: [],
   },
+];

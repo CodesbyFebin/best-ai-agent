@@ -326,3 +326,4 @@ export const modelEntities: AuthorityEntity[] = [
     lastVerified: D,
     officialLinks: [],
   },
+];
