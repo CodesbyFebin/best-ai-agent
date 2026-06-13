@@ -560,13 +560,13 @@ export const siloPages: SiloPage[] = [
     bodySections: [
       {
         heading: 'ROI Implications for Indian Startups',
-        text: 'By implementing automated agent triage in front-office support, small and medium enterprises (SMEs) can cut customer query backlogs by 78%, while maintaining safe data policies. Our reviews show massive efficiency gains when integrating the system into popular regional suites like Zoho CRM.'
+        text: 'Automated agent triage can reduce repetitive front-office workload when the workflow is narrow, measurable, and reviewed by humans. Indian SMEs should test backlog reduction, response quality, escalation accuracy, and data-handling safeguards before scaling the system into tools such as Zoho CRM.'
       }
     ],
     faqs: [
       {
         question: 'Does Vapi AI support Hinglish?',
-        answer: 'Yes! Vapi AI features excellent native Hinglish model maps, letting the voice assistant naturally weave back and forth between Hindi and English seamlessly.'
+        answer: 'Vapi AI can be configured with speech and language-model components that may support Hinglish workflows, but quality depends on the model, prompts, telephony setup, accents, and test data.'
       }
     ],
     relatedPagesSlugs: ['best-ai-agent', 'best-ai-agent-no-code-platform', 'ai-agents-for-business'],
@@ -612,7 +612,7 @@ export const siloPages: SiloPage[] = [
     bodySections: [
       {
         heading: 'Evaluating the Real Cost of AI Workloads',
-        text: 'Many proprietary platforms charge substantial markups on direct token usage. By swapping to local deployments of Flowise, companies retain complete control of API routing templates, decreasing overhead up to 80%.'
+        text: 'Many managed platforms include convenience, support, and orchestration costs on top of model usage. Self-hosted tools such as Flowise can offer more control, but teams should compare hosting, API usage, maintenance, monitoring, and support costs before assuming savings.'
       }
     ],
     faqs: [

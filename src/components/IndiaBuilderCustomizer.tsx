@@ -199,7 +199,7 @@ const BUILDER_FAQ: FAQQuestion[] = [
   },
   {
     question: "Does Relevance AI support native integrations with Indian CRM systems?",
-    answer: "Yes, via custom webhook nodes, Relevance AI connects natively to Zoho CRM, LeadSquared, and standard Zapier or Make triggers to enrich enterprise workflows on-the-fly."
+    answer: "Relevance AI can often be connected to CRM workflows through webhooks, APIs, or automation tools such as Zapier and Make. Buyers should verify the exact Zoho CRM, LeadSquared, or custom CRM integration path before purchase."
   },
   {
     question: "Is Dify.ai better than Flowise for student projects and quick MVPs?",
@@ -207,11 +207,11 @@ const BUILDER_FAQ: FAQQuestion[] = [
   },
   {
     question: "How does Yellow.ai support DPDP data sovereignty compliance?",
-    answer: "Yellow.ai routes and stores enterprise personal data within localized cloud instances located in Mumbai, including complete PII token-level masking pipelines before syncing prompts globally."
+    answer: "Yellow.ai buyers should verify deployment region, retention controls, data-processing terms, masking options, and DPDP responsibilities during procurement. Do not assume data residency or compliance without vendor confirmation."
   },
   {
     question: "What is the true cost advantage of n8n for workflow builder pipelines?",
-    answer: "n8n offers an open fair-code community edition which can be hosted on a basic $10/month cloud server. This is 90% cheaper than premium Zapier, Make, or custom enterprise SaaS subscription tiers."
+    answer: "n8n offers an open fair-code community edition that can be self-hosted. It may reduce subscription costs for technical teams, but the real comparison should include hosting, maintenance, workflow complexity, and support time."
   },
   {
     question: "Does Flowise support multi-agent collaboration blocks?",

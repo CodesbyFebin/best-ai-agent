@@ -1143,14 +1143,15 @@ try {
     if (currentView === 'article') {
       const page = getPageBySlug(selectedArticleSlug);
       if (!page) return null;
+      const pageMeta = page as SiloPage & { category?: string; intent?: string; pageType?: string };
       return {
         slug: page.slug,
         title: page.title,
         description: page.metaDescription || page.directAnswer,
         primaryKeyword: page.primaryKeyword,
-        category: page.category || page.siloId,
-        intent: page.intent,
-        variant: page.pageType === 'hub' ? 'hub' as const : 'guide' as const,
+        category: pageMeta.category || page.siloId,
+        intent: pageMeta.intent,
+        variant: pageMeta.pageType === 'hub' ? 'hub' as const : 'guide' as const,
       };
     }
     if (currentView === 'product') {
@@ -2386,7 +2387,7 @@ try {
                   )}
 
                   {/* =========================================================
-                    A. THE MASSIVE COMMUNITY UGC INTELLIGENCE SANDBOX (14k+ Words)
+                    Community and implementation perspective layer
                     ========================================================= */}
                   {(() => {
                     const baseUgcs = generateRobustPillarUgc(activeSilo.id);
@@ -3128,15 +3129,15 @@ try {
                             <ul className="space-y-2 text-xs sm:text-sm text-slate-755 font-light leading-relaxed">
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-700 font-extrabold">✓</span>
-                                <span><strong>DPDP Consent Framework:</strong> All credentials and user indices must enforce secure local validation inside Mumbai regional cloud hubs.</span>
+                                <span><strong>DPDP Consent Framework:</strong> Any workflow that touches personal data should define consent, access control, retention, deletion, and vendor-processing responsibilities before launch.</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-700 font-extrabold">✓</span>
-                                <span><strong>Sub-Second Response Targets:</strong> Prioritize orchestration tools with local edge caching configurations to achieve latency milestones under 600ms.</span>
+                                <span><strong>Latency Targets:</strong> Prioritize orchestration tools with observable response times, fallback handling, and infrastructure choices that fit the workflow's real service-level needs.</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <span className="text-emerald-700 font-extrabold">✓</span>
-                                <span><strong>Cost vs Value Index:</strong> Shifting towards self-hosted open weight model pipelines yields average processing cost reductions matching 78%.</span>
+                                <span><strong>Cost vs Value Index:</strong> Self-hosted or direct API architectures may reduce platform markups, but teams should model token, hosting, monitoring, and support costs before switching.</span>
                               </li>
                             </ul>
                           </div>
@@ -3151,7 +3152,7 @@ try {
                                 <thead className="bg-slate-50 text-slate-800 uppercase font-mono text-[10px] border-b border-slate-200">
                                   <tr>
                                     <th className="p-3">Solution Name</th>
-                                    <th className="p-3 text-center">Security Score</th>
+                                    <th className="p-3 text-center">Editorial Fit</th>
                                     <th className="p-3">Pricing Tier</th>
                                     <th className="p-3">Best Recommended For</th>
                                   </tr>
@@ -3184,9 +3185,9 @@ try {
                                 <CheckCircle className="w-4 h-4 text-emerald-700" /> Standard Advantages (Pros)
                               </h4>
                               <ul className="space-y-1.5 text-xs text-slate-700 font-light list-none">
-                                <li className="flex items-center gap-1">✓ Complete local compliance blueprints under DPDP Act</li>
-                                <li className="flex items-center gap-1">✓ Support for Hinglish/bilingual voice channels out of the box</li>
-                                <li className="flex items-center gap-1">✓ Substantial decrease in human support costs (up to 78% average savings)</li>
+                                <li className="flex items-center gap-1">✓ DPDP-aware review prompts for personal-data workflows</li>
+                                <li className="flex items-center gap-1">✓ Hinglish and bilingual evaluation where the vendor or model supports it</li>
+                                <li className="flex items-center gap-1">✓ ROI framing based on measurable workflow savings, not demo claims</li>
                               </ul>
                             </div>
 
@@ -3219,7 +3220,7 @@ try {
                           <div className="bg-slate-900 text-slate-250 p-5 rounded-2xl space-y-3 border border-slate-800">
                             <div className="flex items-center justify-between">
                               <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 font-mono">Budget &amp; Procurement Estimations</h4>
-                              <span className="text-[10px] bg-emerald-500/15 text-emerald-400 px-2 py-0.5 rounded font-mono">UPI Support Enabled</span>
+                              <span className="text-[10px] bg-emerald-500/15 text-emerald-400 px-2 py-0.5 rounded font-mono">UPI/GST Check</span>
                             </div>
                             <div className="grid grid-cols-3 gap-2 text-center py-2 border-y border-slate-800">
                               <div>
@@ -3232,11 +3233,11 @@ try {
                               </div>
                               <div>
                                 <p className="text-[9px] text-slate-400 font-mono">ENTERPRISE</p>
-                                <p className="text-sm font-black text-white">Custom MOQ</p>
+                                <p className="text-sm font-black text-white">Custom Quote</p>
                               </div>
                             </div>
                             <p className="text-[10px] text-slate-400 font-light leading-snug">
-                              All estimates specify taxes compliant with Indian GST (18%) and support payment methods including standard credit profiles, Net Banking, and instant UPI checkout triggers.
+                              Pricing and payment support can vary by vendor. Confirm GST invoices, card billing, UPI/Razorpay availability, forex markup, and official tax treatment before procurement.
                             </p>
                           </div>
 
@@ -3244,7 +3245,7 @@ try {
                           <div className="flex items-center gap-3 bg-emerald-500/5 border border-emerald-500/10 p-4 rounded-xl">
                             <span className="text-[9px] bg-emerald-600 text-white font-extrabold uppercase px-2 py-1 rounded tracking-wider font-mono">BEST FOR</span>
                             <p className="text-xs sm:text-sm text-slate-850 font-extrabold">
-                              Teams looking to integrate direct sovereign compliant systems with minimal latency and strict regional isolation.
+                              Teams that need measurable workflow improvement, clear data controls, practical implementation guidance, and India-aware procurement checks.
                             </p>
                           </div>
 
@@ -3252,11 +3253,11 @@ try {
                           <div className="border border-slate-200 p-5 rounded-2xl space-y-2 bg-gradient-to-r from-emerald-500/5 to-transparent">
                             <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">Final Editorial Verdict</h4>
                             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-light">
-                              "{page.evaluationVerdict || 'We grade this entity category as highly qualified and structurally sustainable. Integrating these configurations yields immediate operational multipliers for startups and developers alike.'}"
+                              "{page.evaluationVerdict || 'This category can be valuable when the workflow is specific, measurable, and governed with clear human review, cost controls, and privacy safeguards.'}"
                             </p>
                             <div className="pt-2 border-t border-slate-100 flex items-center gap-2">
                               <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-mono text-[9px] font-bold">AS</div>
-                              <span className="text-[10px] font-bold text-slate-650 uppercase font-mono">Arshdeep Singh, Chief AI Analyst [Singapore-Mumbai Index]</span>
+                              <span className="text-[10px] font-bold text-slate-650 uppercase font-mono">Arshdeep Singh, BestAIAgent.in Editorial Team</span>
                             </div>
                           </div>
 
@@ -3268,7 +3269,7 @@ try {
                   {/* Contextual verification tool list for reviews silo */}
                   {page.siloId === 'reviews' && (
                     <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
-                      <h3 className="text-lg font-bold text-slate-950">Direct Index Scores for {page.primaryKeyword} Focus</h3>
+                      <h3 className="text-lg font-bold text-slate-950">Related tools for {page.primaryKeyword} research</h3>
                       <div className="space-y-3">
                         {products.map(p => (
                           <div key={p.id} className="p-4 bg-slate-50 rounded-xl border border-slate-200 flex justify-between items-center gap-4">
@@ -3293,15 +3294,15 @@ try {
                       {page.faqs.length === 0 ? (
                         <>
                           <div className="border border-slate-100 rounded-xl p-4">
-                            <h4 className="text-xs sm:text-sm font-bold text-slate-900">Which is the best solution for regional SMEs bootstrapping operations?</h4>
+                            <h4 className="text-xs sm:text-sm font-bold text-slate-900">Which AI agent approach is best for budget-conscious SMEs?</h4>
                             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                              For startups scaling on minimal capital, visual builders like Flowise deployed locally provide the quickest ROI, decreasing standard API markups by up to 80%.
+                              Budget-conscious SMEs should start with one narrow workflow, compare SaaS and self-hosted options, and estimate total cost across subscription, usage, hosting, support, and implementation time.
                             </p>
                           </div>
                           <div className="border border-slate-100 rounded-xl p-4">
-                            <h4 className="text-xs sm:text-sm font-bold text-slate-900">Are voice agents compliant with local Indian corporate policies?</h4>
+                            <h4 className="text-xs sm:text-sm font-bold text-slate-900">Are voice agents automatically compliant with Indian privacy expectations?</h4>
                             <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                              Yes! Leading developers utilize low-latency pipelines backed by strict server vaults located inside Indian soil, ensuring complete compliance with the DPDP directives.
+                              No. Voice agents need a DPDP-aware review of consent, call recording, retention, deletion, escalation, vendor processing terms, and whether sensitive data is handled appropriately.
                             </p>
                           </div>
                         </>
@@ -3323,7 +3324,7 @@ try {
                       <h4 className="text-xs font-bold uppercase tracking-widest leading-none">Automated Schema.org / JSON-LD structured data</h4>
                     </div>
                     <p className="text-[11px] text-slate-400 leading-relaxed font-light">
-                      Our programmatic engine auto-injects perfect schema tags (FAQPage, BroadcrumbList, Article, WebSite) for crawlers to extract this page safely. Here is the simulated metadata payload.
+                      Our programmatic engine injects structured JSON-LD patterns such as FAQPage, BreadcrumbList, Article, and WebPage where appropriate. Below is an illustrative metadata pattern for crawler review.
                     </p>
                     <pre className="bg-slate-950 text-slate-400 p-4 rounded-lg overflow-x-auto text-[10px] font-mono leading-relaxed border border-slate-800">
                       {`{

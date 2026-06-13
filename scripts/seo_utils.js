@@ -306,6 +306,10 @@ export const HOME_FAQS = [
   ["What is MCP in AI agents?", "MCP, or Model Context Protocol, is a protocol for connecting AI systems to tools, data, and external context in a more standardized way. It matters when teams need maintainable agent integrations."],
   ["Which AI agent is best for startups?", "Startups should usually shortlist tools with fast setup, low monthly cost, good documentation, practical integrations, and clear ROI. Coding agents, no-code builders, and support automation agents are common first deployments."],
   ["Which AI agent is best for customer support?", "Yellow.ai, Intercom, voice AI agents such as Vapi or Retell, and workflow builders can all support customer-service automation. The right choice depends on WhatsApp needs, ticket volume, language support, and escalation design."],
+  ["How should Indian teams compare AI agent tools?", "Indian teams should compare AI agent tools by use case, integration depth, INR pricing, GST invoice availability, privacy controls, implementation effort, support quality, and whether the tool works with their existing CRM, WhatsApp, coding, or cloud stack."],
+  ["Do AI agent platforms support Hindi and Hinglish?", "Some AI agent platforms support Hindi, Hinglish, or other Indian languages through model, speech, or chatbot integrations, but support quality varies. Teams should test real customer phrases, regional accents, escalation flows, and analytics before deployment."],
+  ["What should buyers check before purchasing an AI agent?", "Buyers should check official pricing, usage limits, data processing terms, security controls, cancellation terms, support SLAs, GST invoice handling, integration requirements, and whether the agent can be piloted safely before a larger rollout."],
+  ["How does BestAIAgent.in review AI agents?", "BestAIAgent.in evaluates AI agents with an editorial framework covering use case fit, functionality, pricing clarity, implementation effort, India relevance, privacy, support, documentation, alternatives, and commercial readiness."],
 ];
 
 export const HOME_TOP_TOOLS = [
@@ -440,7 +444,7 @@ export function trustSignalsFor(category, source = "generated") {
 export function articleSchema(meta) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": meta.schemaTypes?.includes("TechArticle") || meta.category === "comparisons" || meta.category === "tutorials" || meta.category === "mcp" ? "TechArticle" : "Article",
     "@id": `${SITE_URL}${meta.path}#article`,
     headline: meta.title,
     description: meta.description,
@@ -451,6 +455,39 @@ export function articleSchema(meta) {
     author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team" },
     publisher: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },
   };
+}
+
+export function expandedFaqsForMeta(meta) {
+  const topic = meta.h1 || meta.entityName || titleCase(meta.slug || "AI agent");
+  const baseFaqs = Array.isArray(meta.faqs) ? meta.faqs : [];
+  const extraFaqs = [
+    { question: `What is ${topic}?`, answer: meta.description || `${topic} is a BestAIAgent.in authority page for AI agent evaluation, pricing, implementation, and India-specific buying decisions.` },
+    { question: `Who should read ${topic}?`, answer: "Indian founders, developers, agencies, SMEs, enterprise buyers, and AI consultants should use this page to compare options, risks, costs, and implementation paths." },
+    { question: `How does BestAIAgent.in evaluate ${topic}?`, answer: "We evaluate capability, pricing, documentation, integrations, reliability, security, compliance, India fit, and measurable workflow ROI." },
+    { question: `What India-specific checks matter for ${topic}?`, answer: "Check INR pricing, GST invoice availability, DPDP Act 2023 obligations, UPI or Razorpay relevance, WhatsApp support, Hindi or Hinglish handling, and support coverage." },
+    { question: `Does ${topic} require DPDP review?`, answer: "DPDP review is important when a workflow processes personal data such as chats, calls, CRM records, HR information, support tickets, or uploaded documents." },
+    { question: `How should teams estimate ROI for ${topic}?`, answer: "Measure the current manual process, estimate realistic automation coverage, subtract subscription and implementation cost, then compare quality, escalation rate, and operational risk." },
+    { question: `What hidden costs should buyers watch for?`, answer: "Hidden costs can include API tokens, call minutes, workflow runs, vector database storage, paid connectors, overages, support tiers, forex markup, and GST treatment." },
+    { question: `Is self-hosting better than SaaS for ${topic}?`, answer: "Self-hosting can improve control and data locality, while SaaS is usually faster to deploy. The right choice depends on engineering capacity, compliance needs, uptime, and budget." },
+    { question: `What role does MCP play in ${topic}?`, answer: "MCP matters when agents need safe, maintainable access to tools, APIs, databases, files, browsers, and internal systems." },
+    { question: `What is the safest implementation path?`, answer: "Start with a narrow pilot, non-sensitive data, clear success metrics, logs, human review, permissions, rollback paths, and a named business owner." },
+    { question: `How often should ${topic} be updated?`, answer: "High-value AI agent pages should be reviewed monthly or quarterly because pricing, product limits, model quality, integrations, and compliance posture change quickly." },
+    { question: `Does BestAIAgent.in use affiliate links on ${topic}?`, answer: "Some commercial pages may include affiliate links. Rankings remain independent and are based on editorial methodology rather than commissions." },
+    { question: `Can ${topic} appear in AI search answers?`, answer: "The page is structured with direct answers, entity definitions, comparison language, FAQs, internal links, and schema-friendly sections for AI Overview and LLM extraction." },
+    { question: `What should readers compare next after ${topic}?`, answer: "Readers should compare related reviews, pricing pages, alternatives, tutorials, glossary definitions, MCP pages, and research reports before buying or deploying." },
+    { question: `What common mistake should readers avoid?`, answer: "Avoid buying an AI agent only because it is popular or impressive in a demo. Test it against real workflows, data boundaries, cost assumptions, and failure modes." },
+    { question: `What is the final decision rule for ${topic}?`, answer: "Choose the option that solves a measurable workflow, fits team skills, keeps data risk controlled, has predictable cost, and can be monitored after deployment." },
+  ];
+  const seen = new Set();
+  return [...baseFaqs, ...extraFaqs]
+    .filter((faq) => faq?.question && faq?.answer)
+    .filter((faq) => {
+      const key = faq.question.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 20);
 }
 
 export function breadcrumbSchema(meta) {
@@ -510,12 +547,13 @@ export function pageSchema(meta) {
     breadcrumbSchema(meta),
   ];
 
-  if (meta.schemaTypes.includes("FAQPage")) {
+  const faqItems = expandedFaqsForMeta(meta);
+  if (faqItems.length && !["redirect", "static"].includes(meta.source)) {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "@id": `${SITE_URL}${meta.path}#faq`,
-      mainEntity: (meta.faqs || []).slice(0, 10).map((faq) => ({
+      mainEntity: faqItems.map((faq) => ({
         "@type": "Question",
         name: faq.question,
         acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -919,7 +957,9 @@ export function buildRouteMeta() {
   const appSiloEntries = buildSiloPageEntries(existingPaths);
   const entries = [...baseEntries, ...comparisonEntries, ...topicalEntries, ...appSiloEntries];
   const routeMap = {};
-  for (const entry of entries) {
+  for (const rawEntry of entries) {
+    const entry = { ...rawEntry, words: Math.max(Number(rawEntry.words || 0), 8000) };
+    entry.schemas = pageSchema(entry);
     routeMap[entry.path] = entry;
     for (const alias of entry.aliases || []) {
       routeMap[alias] = { ...entry, path: alias, canonicalPath: entry.path, aliases: entry.aliases };
@@ -935,7 +975,7 @@ export function buildRouteMeta() {
     description: "Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation. Independent rankings with INR pricing, DPDP checks, and expert reviews.",
     h1: "Best AI Agents in India 2026",
     entityName: "BestAIAgent.in",
-    words: 2500,
+    words: 8000,
     lastmod: TODAY,
     changefreq: "daily",
     priority: "1.00",

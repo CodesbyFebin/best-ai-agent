@@ -216,7 +216,7 @@ function readRouteMeta(): Record<string, RouteMeta> {
 }
 
 let routeMeta = readRouteMeta();
-const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/preview', '/compare']);
+const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/preview']);
 
 routeMeta['/'] = routeMeta['/'] || defaultHomeMeta;
 
@@ -303,6 +303,15 @@ function getRouteMeta(reqPath: string): RouteMeta | null {
     return { ...fallbackMeta(pathName), robots: 'noindex,follow' };
   }
   return routeMeta[pathName] || null;
+}
+
+function getRouteMetaForRequest(req: express.Request): RouteMeta | null {
+  const meta = getRouteMeta(req.path);
+  if (!meta) return null;
+  if (normalizePath(req.path) === '/compare' && req.originalUrl.includes('?')) {
+    return { ...meta, robots: 'noindex,follow' };
+  }
+  return meta;
 }
 
 function schemaScript(meta: RouteMeta) {
@@ -647,7 +656,7 @@ async function startServer() {
       }
       try {
         const template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf8');
-        const meta = getRouteMeta(req.path);
+        const meta = getRouteMetaForRequest(req);
         if (!meta) {
           return res.status(404).send('Not found');
         }
@@ -667,7 +676,7 @@ async function startServer() {
       if (!routeMeta[pathName] && !noindexPaths.has(pathName)) return res.status(404).send('Not found');
       const htmlPath = path.join(distPath, 'index.html');
       if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
-      const meta = getRouteMeta(req.path);
+      const meta = getRouteMetaForRequest(req);
       if (!meta) return res.status(404).send('Not found');
       const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
       res.setHeader('Content-Type', 'text/html; charset=utf-8');

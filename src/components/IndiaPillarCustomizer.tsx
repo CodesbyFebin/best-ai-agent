@@ -605,8 +605,8 @@ export default function IndiaPillarCustomizer({
                 <h4 className="font-extrabold text-slate-950 text-sm sm:text-base">Total TCO: Subscription Fees vs Pay-As-You-Go Token Spends</h4>
                 <p>Calculating the true long-term operational budget allows businesses to avoid crippling cost surprises:</p>
                 <ul className="list-disc pl-5 space-y-1 mt-2 text-slate-600">
-                  <li><strong className="text-slate-900">Voice Agents (e.g., Vapi, Bland):</strong> Charged per call minute (typically equivalent to roughly ₹12 - ₹20 per hour). This is 90% cheaper than traditional outbound call centers.</li>
-                  <li><strong className="text-slate-900">SaaS Builder Subscriptions:</strong> Managed platforms charge high token margin markups. swappng to visual, self-hosted tools (like Flowise on Docker) connected directly to raw LLM keys reduces expenses by up to 80%.</li>
+                  <li><strong className="text-slate-900">Voice Agents (e.g., Vapi, Bland):</strong> Often charged per call minute. Compare the official per-minute rate, telephony costs, model costs, GST treatment, and human escalation cost before estimating savings.</li>
+                  <li><strong className="text-slate-900">SaaS Builder Subscriptions:</strong> Managed platforms may include orchestration and support costs. Switching to visual, self-hosted tools such as Flowise on Docker can improve control, but savings depend on hosting, model usage, maintenance, and support needs.</li>
                 </ul>
               </div>
             )}
