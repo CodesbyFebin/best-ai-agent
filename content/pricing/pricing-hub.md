@@ -360,7 +360,7 @@ Agencies should package it around a specific outcome, maintain reusable template
     "@id": "https://bestaiagent.in/#website"
   },
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11"
+  "dateModified": "2026-06-13"
 }
 ```
 
@@ -373,7 +373,7 @@ Agencies should package it around a specific outcome, maintain reusable template
   "description": "INR pricing, GST invoice notes, free-vs-paid comparisons, ROI models, and procurement guidance for AI agent tools in India.",
   "url": "https://bestaiagent.in/pricing-hub",
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11",
+  "dateModified": "2026-06-13",
   "author": {
     "@type": "Organization",
     "name": "BestAIAgent.in Editorial Team"

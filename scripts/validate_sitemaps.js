@@ -27,6 +27,8 @@ const required = [
   "route-meta.json",
 ];
 
+const SITE_URL_PATTERN = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 const errors = [];
 
 for (const name of required) {
@@ -40,11 +42,13 @@ for (const name of required.filter((n) => n.endsWith(".xml"))) {
   const text = fs.readFileSync(file, "utf8");
   if (!text.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) errors.push(`${name}: missing XML declaration`);
   if (text.includes("#")) errors.push(`${name}: hash URL found`);
-  if (/https:\/\/bestaiagent\.in\/\//.test(text)) errors.push(`${name}: double slash URL found`);
+  if (new RegExp(`${SITE_URL_PATTERN}//`).test(text)) errors.push(`${name}: double slash URL found`);
   if (text.includes("bestaigent.in")) errors.push(`${name}: stale misspelled domain`);
   if (name === "feed.xml" && !text.includes("<rss version=\"2.0\"")) errors.push("feed.xml is not RSS 2.0");
   if (name !== "feed.xml" && name !== "sitemap.xml") {
-    for (const block of text.matchAll(/<url>[\s\S]*?<\/url>/g)) {
+    const urlBlocks = [...text.matchAll(/<url>[\s\S]*?<\/url>/g)];
+    if (urlBlocks.length === 0) errors.push(`${name}: sitemap has no URL entries`);
+    for (const block of urlBlocks) {
       for (const tag of ["loc", "lastmod", "changefreq", "priority"]) {
         if (!block[0].includes(`<${tag}>`)) errors.push(`${name}: URL block missing ${tag}`);
       }
@@ -54,7 +58,7 @@ for (const name of required.filter((n) => n.endsWith(".xml"))) {
 
 const robots = fs.existsSync(path.join(PUBLIC_DIR, "robots.txt")) ? fs.readFileSync(path.join(PUBLIC_DIR, "robots.txt"), "utf8") : "";
 for (const sitemap of required.filter((n) => n.endsWith(".xml") || n === "llms.txt")) {
-  if (!robots.includes(`${SITE_URL}/${sitemap}`) && sitemap !== "author-sitemap.xml" && sitemap !== "hub-sitemap.xml" && sitemap !== "calculators-sitemap.xml") {
+  if (!robots.includes(`${SITE_URL}/${sitemap}`) && sitemap !== "author-sitemap.xml" && sitemap !== "hub-sitemap.xml") {
     errors.push(`robots.txt missing reference to ${sitemap}`);
   }
 }

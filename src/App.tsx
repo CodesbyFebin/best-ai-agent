@@ -36,7 +36,7 @@ import {
   Map,
   Network
 } from 'lucide-react';
-import { authorityPages, authorityFooterLinks, trustFooterLinks, trustPages, type TrustPageContent } from './data/trustContent';
+import { authorityPages, trustPages, type TrustPageContent } from './data/trustContent';
 import { products, silos, siloPages, getPageBySlug, getRelatedPages, SiloPage, Product } from './data/db';
 import { comparisonPages } from './data/comparisons';
 import { authorProfiles } from './data/authors';
@@ -45,19 +45,21 @@ import { getCategoryAsset, getToolAsset } from './data/assetRegistry';
 import { getExternalLinks, type ExternalLinkType } from './data/externalLinks';
 import BrandTile from './components/BrandTile';
 import OfficialExternalLink from './components/ExternalLink';
+import { pillarUgcData, generateRobustPillarUgc, UgcReview } from './data/pillarUgc';
+import { getDetailedFaqList, FAQItemDetailed } from './data/pillarFaqs';
+import { allTopicalPages, isTopicalAuthoritySlug, topicalClusters } from './data/topicalAuthority';
+import { Database } from 'lucide-react';
+import { publicUrl, SITE_URL } from './lib/siteUrl';
+import TrustPage from './components/TrustPage';
+
 const ProductProfile = lazy(() => import('./components/ProductProfile'));
 const ComparisonPage = lazy(() => import('./components/ComparisonPage'));
 const IndiaPillarCustomizer = lazy(() => import('./components/IndiaPillarCustomizer'));
 const IndiaBuilderCustomizer = lazy(() => import('./components/IndiaBuilderCustomizer'));
 const IndiaMcpCustomizer = lazy(() => import('./components/IndiaMcpCustomizer'));
 const IndiaGeneralPillarCustomizer = lazy(() => import('./components/IndiaGeneralPillarCustomizer'));
-import { pillarUgcData, generateRobustPillarUgc, UgcReview } from './data/pillarUgc';
-import { getDetailedFaqList, FAQItemDetailed } from './data/pillarFaqs';
 const GoogleDriveDashboard = lazy(() => import('./components/GoogleDriveDashboard'));
 const TopicalAuthorityMap = lazy(() => import('./components/TopicalAuthorityMap'));
-import { allTopicalPages, isTopicalAuthoritySlug, topicalClusters } from './data/topicalAuthority';
-import { Database } from 'lucide-react';
-import TrustPage from './components/TrustPage';
 
 const directorySlugOverrides: Record<string, string> = {
   ChatGPT: 'chatgpt',
@@ -201,13 +203,6 @@ export default function App() {
   const [newUgcUseCase, setNewUgcUseCase] = useState('');
   const [newUgcContent, setNewUgcContent] = useState('');
 
-  // SEO top-level helpers
-  const SITE_URL =
-    typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SITE_URL
-      ? import.meta.env.VITE_SITE_URL.replace(/\/$/, '')
-      : 'https://bestaiagent.in';
-
-  const publicUrl = (pathName: string) => `${SITE_URL}${pathName === '/' ? '/' : pathName}`;
   const BRAND_LOGO_URL = publicUrl('/assets/brand/logo.png');
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -259,9 +254,6 @@ export default function App() {
 
     const routePath = pathForRoute(currentView, selectedSiloId, selectedArticleSlug, selectedProductSlug);
     const canonical = publicUrl(routePath === '/' ? '/' : routePath);
-    const canonicalHash = typeof window !== 'undefined' && window.location.hash
-      ? `${canonical}${window.location.hash.startsWith('#') ? '' : '#'}${window.location.hash.replace(/^#/, '')}`
-      : canonical;
     const metaDescription = currentView === 'product'
       ? products.find(item => item.slug === selectedProductSlug)?.summary
       : currentView === 'article'
@@ -464,14 +456,16 @@ export default function App() {
   };
 
   const mainNavLinks = [
-    { label: 'Leaderboard', href: '/best-ai-agent' },
-    { label: 'Comparisons', href: '/compare' },
-    { label: 'AI Agents', href: '/ai-agent-tools' },
-    { label: 'MCP Directory', href: '/mcp-directory' },
-    { label: 'Rankings', href: '/ai-agent-rankings' },
-    { label: 'Methodology', href: '/methodology' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Best AI Agents', href: '/best-ai-agent' },
+    { label: 'Coding Agents', href: '/coding-agents-hub' },
+    { label: 'Business AI', href: '/business-ai-hub' },
+    { label: 'Voice AI', href: '/voice-ai-hub' },
+    { label: 'Builders', href: '/ai-agent-builders-hub' },
+    { label: 'Pricing', href: '/pricing-hub' },
+    { label: 'Alternatives', href: '/alternatives-hub' },
+    { label: 'Tutorials', href: '/tutorials-hub' },
+    { label: 'Glossary', href: '/glossary-hub' },
+    { label: 'MCP', href: '/mcp-hub' },
   ];
 
   const homeQuickLinks = [
@@ -586,7 +580,7 @@ export default function App() {
       ],
     },
     {
-      title: 'Pricing and Procurement',
+      title: 'Pricing Intelligence',
       href: '/pricing-hub',
       summary: 'Use INR-oriented pricing guides to estimate monthly tool costs, user-seat math, API usage, GST invoice availability, card or UPI payment fit, and enterprise procurement friction. Pricing can change, so every guide uses careful estimates and official-site verification notes.',
       links: [
@@ -596,7 +590,7 @@ export default function App() {
       ],
     },
     {
-      title: 'Alternatives and Competitors',
+      title: 'Alternatives',
       href: '/alternatives-hub',
       summary: 'Compare practical alternatives when a tool is too expensive, too technical, too limited, or not procurement-friendly for India. These pages help buyers short-list replacements for Cursor, Copilot, Vapi, Retell, Flowise, Dify, Intercom, and automation platforms.',
       links: [
@@ -606,7 +600,7 @@ export default function App() {
       ],
     },
     {
-      title: 'Tutorials and Implementation',
+      title: 'Tutorials',
       href: '/tutorials-hub',
       summary: 'Follow implementation tutorials for coding agents, voice bots, MCP servers, agent builders, and workflow automations. Guides focus on realistic Indian use cases such as WhatsApp lead capture, support triage, API-connected workflows, and internal team rollout checklists.',
       links: [
@@ -616,7 +610,7 @@ export default function App() {
       ],
     },
     {
-      title: 'Glossary and Entity Pages',
+      title: 'Glossary',
       href: '/glossary-hub',
       summary: 'Learn the core AI agent vocabulary: RAG, MCP, function calling, tool use, context windows, AgentOps, multi-agent systems, and memory. Each definition connects to reviews, comparisons, tutorials, and buyer guides so humans and AI systems can understand the content graph.',
       links: [
@@ -626,7 +620,7 @@ export default function App() {
       ],
     },
     {
-      title: 'MCP Ecosystem',
+      title: 'MCP Servers',
       href: '/mcp-hub',
       summary: 'Track Model Context Protocol explainers, server directories, security notes, and implementation guidance for developers connecting AI agents to tools and data. MCP pages are written for engineering teams evaluating safer, maintainable agent integrations.',
       links: [
@@ -636,7 +630,7 @@ export default function App() {
       ],
     },
     {
-      title: 'Free AI Agents',
+      title: 'Open Source AI Agents',
       href: '/free-ai-agents-hub',
       summary: 'Discover free, open-source, trial-friendly, and lower-cost AI agents for Indian students, solo founders, agencies, and early-stage startups. This cluster separates genuinely useful free tiers from tools that become expensive after limited testing.',
       links: [
@@ -648,18 +642,18 @@ export default function App() {
   ];
 
   const homepageFaqs = [
-    ['What is the best AI agent in India in 2026?', 'The best AI agent depends on the job. Cursor is a strong coding choice, Vapi and Retell fit voice workflows, Yellow.ai and Intercom suit business support, while Flowise, Dify, CrewAI, and LangGraph fit agent building.'],
-    ['How does BestAIAgent.in score AI agents?', 'We use a 42-point editorial framework covering capability, ease of use, documentation, integrations, reliability, India fit, DPDP considerations, pricing transparency, and implementation readiness.'],
-    ['Are INR prices exact?', 'No. INR prices are estimates because exchange rates, taxes, usage tiers, and vendor plans can change. Buyers should confirm the current official price, GST invoice support, and procurement terms before purchase.'],
-    ['Which AI agents are best for Indian SMEs?', 'Indian SMEs typically need low setup effort, clear pricing, WhatsApp or CRM integration, support workflows, and invoice-friendly billing. Business AI and voice AI hubs are the best starting points.'],
-    ['Which AI agents are best for developers?', 'Developers should compare Cursor, GitHub Copilot, Claude Code-style tools, CrewAI, LangGraph, Flowise, and Dify depending on whether they need coding assistance, agent orchestration, or workflow builders.'],
-    ['Do AI agents support Hindi or Hinglish?', 'Some voice and chat platforms may support Hindi, Hinglish, or regional-language workflows depending on the model, telephony stack, and vendor plan. Always test accent handling and fallback flows before production.'],
-    ['What is DPDP Act relevance for AI agents?', 'AI agents can process personal data in chats, calls, CRM notes, and support tickets. Indian businesses should review consent, retention, access control, vendor processing terms, and deletion workflows.'],
-    ['Do these tools support UPI or Razorpay?', 'Many global SaaS tools rely on cards or invoices, while India-first vendors may support UPI, Razorpay, or GST-ready invoicing. Payment support should be checked on the vendor site before buying.'],
-    ['What is the difference between AI agent builders and AI agents?', 'AI agents are tools that perform tasks or decisions. AI agent builders are platforms such as Flowise, Dify, n8n, CrewAI, or LangGraph that help teams create custom agents.'],
-    ['Which pages should I read first?', 'Start with the best AI agents guide, then visit the relevant hub for coding, business, voice, builders, pricing, alternatives, tutorials, glossary, MCP, or free tools.'],
-    ['Does BestAIAgent.in use affiliate links?', 'Some pages may include affiliate links, but rankings remain independent and based on editorial methodology. Affiliate disclosure and pricing disclaimers are visible across commercial pages.'],
-    ['How often are pages reviewed?', 'Major pages show freshness signals such as last reviewed and pricing check dates. Pricing, features, integrations, and compliance notes should be rechecked periodically because AI tools change quickly.'],
+    ['What is the best AI agent in India?', 'The best AI agent depends on the use case. Cursor AI is strong for coding, Vapi and Retell are strong for voice automation, Yellow.ai and Intercom fit customer support, while Flowise, Dify, CrewAI, and LangGraph fit custom agent building.'],
+    ['Which AI agent is best for coding?', 'Cursor AI is usually the strongest coding-agent starting point for Indian developer teams, while GitHub Copilot, Claude Code-style tools, and Windsurf are important alternatives to compare by IDE fit, pricing, and code-review workflow.'],
+    ['What is the best free AI agent?', 'The best free AI agent depends on whether you need coding, automation, voice, or builder workflows. Flowise, Dify, CrewAI, and open-source frameworks are useful starting points, but free tiers often require technical setup or have usage limits.'],
+    ['Which AI agent is best for Indian businesses?', 'Indian businesses should prioritize clear INR cost estimates, WhatsApp or CRM integration, GST invoice availability, support SLAs, DPDP-aware data handling, and team onboarding effort before choosing an AI agent.'],
+    ['Which AI agent supports WhatsApp automation?', 'Yellow.ai, Intercom-style support platforms, some voice AI stacks, and workflow tools may support WhatsApp workflows depending on vendor integrations, WhatsApp Business API setup, template approvals, and escalation requirements.'],
+    ['What is the best AI agent builder?', 'Flowise and Dify are useful visual builders, while CrewAI and LangGraph are stronger developer frameworks for custom multi-agent workflows. The best builder depends on engineering skill, hosting preference, and integration depth.'],
+    ['Are AI agents DPDP compliant?', 'AI agents are not automatically DPDP compliant. Indian businesses should review consent, purpose limitation, access control, data retention, deletion workflows, vendor processing terms, and whether personal data is handled safely.'],
+    ['How much do AI agents cost in India?', 'AI agent costs in India vary from free open-source tools to paid SaaS subscriptions and usage-based API bills. INR estimates depend on exchange rates, GST treatment, user seats, call minutes, messages, tokens, and vendor plan limits.'],
+    ['Is Cursor better than GitHub Copilot?', 'Cursor is often better for AI-native IDE workflows and repo-level coding assistance, while GitHub Copilot remains strong for developers already embedded in GitHub and supported IDEs. The better choice depends on workflow and budget.'],
+    ['What is MCP in AI agents?', 'MCP, or Model Context Protocol, is a protocol for connecting AI systems to tools, data, and external context in a more standardized way. It matters when teams need maintainable agent integrations.'],
+    ['Which AI agent is best for startups?', 'Startups should usually shortlist tools with fast setup, low monthly cost, good documentation, practical integrations, and clear ROI. Coding agents, no-code builders, and support automation agents are common first deployments.'],
+    ['Which AI agent is best for customer support?', 'Yellow.ai, Intercom, voice AI agents such as Vapi or Retell, and workflow builders can all support customer-service automation. The right choice depends on WhatsApp needs, ticket volume, language support, and escalation design.'],
   ];
 
   // Live Sync routing Hash and parameters for copyable URLs sharing
@@ -710,7 +704,7 @@ export default function App() {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "BestAIAgent.in",
-      "url": "https://bestaiagent.in",
+      "url": SITE_URL,
       "logo": BRAND_LOGO_URL,
       "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
       "address": {
@@ -726,11 +720,11 @@ export default function App() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "BestAIAgent.in",
-      "url": "https://bestaiagent.in",
+      "url": SITE_URL,
       "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://bestaiagent.in/search?q={search_term_string}",
+        "target": `${SITE_URL}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string"
       }
     };
@@ -751,12 +745,12 @@ export default function App() {
           "@type": "ItemList",
           "name": `${s.pillarTitle} Category Hub`,
           "description": s.description,
-          "url": `https://bestaiagent.in${pathForRoute('silo-pillar', s.id)}`,
+          "url": publicUrl(pathForRoute('silo-pillar', s.id)),
           "itemListElement": products.map((p, idx) => ({
             "@type": "ListItem",
             "position": idx + 1,
             "name": p.name,
-            "url": `https://bestaiagent.in/tools/${p.slug}`
+            "url": publicUrl(`/tools/${p.slug}`)
           }))
         };
       }
@@ -774,19 +768,19 @@ export default function App() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://bestaiagent.in/"
+                  "item": SITE_URL
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": p.siloId === 'reviews' ? 'Reviews' : 'Research',
-                  "item": `https://bestaiagent.in${pathForRoute('silo-pillar', p.siloId)}`
+                  "item": publicUrl(pathForRoute('silo-pillar', p.siloId))
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": p.title,
-                  "item": `https://bestaiagent.in/${p.slug}`
+                  "item": publicUrl(`/${p.slug}`)
                 }
               ]
             },
@@ -808,7 +802,7 @@ export default function App() {
                 }
               },
               "description": p.metaDescription,
-              "mainEntityOfPage": `https://bestaiagent.in/${p.slug}`
+              "mainEntityOfPage": publicUrl(`/${p.slug}`)
             }
           ]
         };
@@ -821,20 +815,20 @@ export default function App() {
           "@graph": [
             {
               "@type": "WebPage",
-              "@id": `https://bestaiagent.in/${page.slug}#webpage`,
+              "@id": `${publicUrl(`/${page.slug}`)}#webpage`,
               "name": page.metaTitle,
               "description": page.metaDescription,
-              "url": `https://bestaiagent.in/${page.slug}`,
-              "isPartOf": { "@id": "https://bestaiagent.in/#website" },
+              "url": publicUrl(`/${page.slug}`),
+              "isPartOf": { "@id": `${SITE_URL}/#website` },
               "author": { "@type": "Person", "name": page.author },
               "dateModified": page.updated
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `https://bestaiagent.in/${page.slug}#breadcrumb`,
+              "@id": `${publicUrl(`/${page.slug}`)}#breadcrumb`,
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestaiagent.in/" },
-                { "@type": "ListItem", "position": 2, "name": page.view === 'authority' ? 'Authority Assets' : page.view === 'methodology' ? 'Methodology' : 'Trust', "item": `https://bestaiagent.in/${page.slug}` }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+                { "@type": "ListItem", "position": 2, "name": page.view === 'authority' ? 'Authority Assets' : page.view === 'methodology' ? 'Methodology' : 'Trust', "item": publicUrl(`/${page.slug}`) }
               ]
             }
           ]
@@ -848,20 +842,20 @@ export default function App() {
           "@graph": [
             {
               "@type": "WebPage",
-              "@id": `https://bestaiagent.in/${page.slug}#webpage`,
+              "@id": `${publicUrl(`/${page.slug}`)}#webpage`,
               "name": page.metaTitle,
               "description": page.metaDescription,
-              "url": `https://bestaiagent.in/${page.slug}`,
-              "isPartOf": { "@id": "https://bestaiagent.in/#website" },
+              "url": publicUrl(`/${page.slug}`),
+              "isPartOf": { "@id": `${SITE_URL}/#website` },
               "author": { "@type": "Person", "name": page.author },
               "dateModified": page.updated
             },
             {
               "@type": "BreadcrumbList",
-              "@id": `https://bestaiagent.in/${page.slug}#breadcrumb`,
+              "@id": `${publicUrl(`/${page.slug}`)}#breadcrumb`,
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestaiagent.in/" },
-                { "@type": "ListItem", "position": 2, "name": "Authority Assets", "item": `https://bestaiagent.in/${page.slug}` }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+                { "@type": "ListItem", "position": 2, "name": "Authority Assets", "item": publicUrl(`/${page.slug}`) }
               ]
             }
           ]
@@ -875,8 +869,8 @@ export default function App() {
           "@graph": [
             {
               "@type": "SoftwareApplication",
-              "@id": `https://bestaiagent.in/tools/${p.slug}#software`,
-              "url": `https://bestaiagent.in/tools/${p.slug}`,
+              "@id": `${publicUrl(`/tools/${p.slug}`)}#software`,
+              "url": publicUrl(`/tools/${p.slug}`),
               "name": p.name,
               "image": p.logoUrl,
               "description": p.summary,
@@ -897,67 +891,11 @@ export default function App() {
                   }
                 }
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": p.overallScore,
-                "bestRating": "10",
-                "worstRating": "1",
-                "ratingCount": "189"
-              },
               "featureList": p.featuresList,
               "publisher": {
                 "@type": "Organization",
                 "name": p.vendorName || "BestAIAgent.in",
-                "url": p.vendorUrl || "https://bestaiagent.in"
-              }
-            },
-            {
-              "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Arshdeep Singh"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "BestAIAgent.in",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": BRAND_LOGO_URL
-                }
-              },
-              "itemReviewed": {
-                "@type": "SoftwareApplication",
-                "name": p.name,
-                "image": p.logoUrl,
-                "operatingSystem": "Linux, Windows, macOS, Cloud-Based, Web-SaaS",
-                "applicationCategory": p.slug === 'cursor-ai' || p.slug === 'claude-code' ? "DeveloperApplication" : "BusinessApplication"
-              },
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": p.overallScore,
-                "bestRating": "10",
-                "worstRating": "1"
-              },
-              "reviewBody": p.verdict,
-              "description": p.summary,
-              "name": `${p.name} - Detailed Expert Performance & Trust Evaluation`,
-              "datePublished": "2026-06-11",
-              "dateModified": "2026-06-11",
-              "positiveNotes": {
-                "@type": "ItemList",
-                "itemListElement": p.pros.map((pro, index) => ({
-                  "@type": "ListItem",
-                  "position": index + 1,
-                  "name": pro
-                }))
-              },
-              "negativeNotes": {
-                "@type": "ItemList",
-                "itemListElement": p.cons.map((con, index) => ({
-                  "@type": "ListItem",
-                  "position": index + 1,
-                  "name": con
-                }))
+                "url": p.vendorUrl || SITE_URL
               }
             }
           ]
@@ -972,7 +910,7 @@ export default function App() {
           "name": author.name,
           "jobTitle": author.role,
           "description": author.bio,
-          "url": `https://bestaiagent.in/authors/${author.slug}`,
+          "url": publicUrl(`/authors/${author.slug}`),
           "worksFor": {
             "@type": "Organization",
             "name": "BestAIAgent.in"
@@ -2072,15 +2010,20 @@ try {
                   <div className="space-y-4">
                     <h2 className="text-xl sm:text-2xl font-black text-slate-900">Entity Definition</h2>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      An AI agent is software that uses an AI model, instructions, tools, memory, integrations, and workflow logic to complete tasks with varying levels of autonomy. In business settings, AI agents may handle coding, customer support, sales qualification, voice calls, internal automation, research, or multi-step tool use.
+                      An AI agent is software that can reason, use tools, follow goals, automate workflows, and complete tasks with limited human input.
                     </p>
+                    <p className="text-[10px] font-black uppercase tracking-wider text-slate-500">Related Entities</p>
                     <div className="flex flex-wrap gap-2 text-xs font-bold">
                       {[
+                        ['AI Agent', '/what-is-an-ai-agent'],
+                        ['AI Coding Agent', '/coding-agents-hub'],
+                        ['AI Voice Agent', '/voice-ai-hub'],
+                        ['AI Agent Builder', '/ai-agent-builders-hub'],
+                        ['MCP', '/what-is-mcp'],
                         ['What is RAG', '/what-is-rag'],
-                        ['What is MCP', '/what-is-mcp'],
-                        ['What is function calling', '/what-is-function-calling'],
-                        ['What is tool use', '/what-is-tool-use'],
-                        ['What is agentic AI', '/what-is-agentic-ai'],
+                        ['Function Calling', '/what-is-function-calling'],
+                        ['Tool Use', '/what-is-tool-use'],
+                        ['AgentOps', '/what-is-agentops'],
                       ].map(([label, href]) => (
                         <a key={href} href={href} onClick={(event) => navigateToPath(event, href)} className="rounded-full border border-slate-200 px-3 py-1.5 text-slate-700 hover:text-emerald-700 hover:border-emerald-300 transition">
                           {label}
@@ -3281,8 +3224,8 @@ try {
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestaiagent.in/" },
-        { "@type": "ListItem", "position": 2, "name": "${page.siloId}", "item": "https://bestaiagent.in/${page.siloId}" },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "${SITE_URL}/" },
+        { "@type": "ListItem", "position": 2, "name": "${page.siloId}", "item": "${SITE_URL}/${page.siloId}" },
         { "@type": "ListItem", "position": 3, "name": "${page.primaryKeyword}" }
       ]
     }
@@ -4515,19 +4458,24 @@ try {
               </div>
             </div>
             <div className="space-y-3">
-              <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Authority Assets</h4>
+              <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Learn</h4>
               <div className="flex flex-col gap-2 text-xs">
-                {authorityFooterLinks.map(link => (
-                  <a key={link.path} href={link.path} onClick={(event) => navigateToPath(event, link.path)} className="text-slate-400 hover:text-white hover:underline transition">{link.label}</a>
-                ))}
+                <a href="/tutorials-hub" onClick={(event) => navigateToPath(event, '/tutorials-hub')} className="text-slate-400 hover:text-white hover:underline transition">Tutorials</a>
+                <a href="/glossary-hub" onClick={(event) => navigateToPath(event, '/glossary-hub')} className="text-slate-400 hover:text-white hover:underline transition">Glossary</a>
+                <a href="/mcp-directory" onClick={(event) => navigateToPath(event, '/mcp-directory')} className="text-slate-400 hover:text-white hover:underline transition">MCP Directory</a>
+                <a href="/ai-agent-security" onClick={(event) => navigateToPath(event, '/ai-agent-security')} className="text-slate-400 hover:text-white hover:underline transition">AI Agent Security</a>
+                <a href="/how-to-build-an-ai-agent" onClick={(event) => navigateToPath(event, '/how-to-build-an-ai-agent')} className="text-slate-400 hover:text-white hover:underline transition">How to Build an AI Agent</a>
               </div>
             </div>
             <div className="space-y-3">
               <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Trust</h4>
               <div className="flex flex-col gap-2 text-xs">
-                {trustFooterLinks.map(link => (
-                  <a key={link.path} href={link.path} onClick={(event) => navigateToPath(event, link.path)} className="text-slate-400 hover:text-white hover:underline transition">{link.label}</a>
-                ))}
+                <a href="/methodology" onClick={(event) => navigateToPath(event, '/methodology')} className="text-slate-400 hover:text-white hover:underline transition">Methodology</a>
+                <a href="/editorial-policy" onClick={(event) => navigateToPath(event, '/editorial-policy')} className="text-slate-400 hover:text-white hover:underline transition">Editorial Policy</a>
+                <a href="/ai-agent-scoring-system" onClick={(event) => navigateToPath(event, '/ai-agent-scoring-system')} className="text-slate-400 hover:text-white hover:underline transition">AI Agent Scoring System</a>
+                <a href="/team" onClick={(event) => navigateToPath(event, '/team')} className="text-slate-400 hover:text-white hover:underline transition">Authors</a>
+                <a href="/affiliate-disclosure" onClick={(event) => navigateToPath(event, '/affiliate-disclosure')} className="text-slate-400 hover:text-white hover:underline transition">Affiliate Disclosure</a>
+                <a href="/contact" onClick={(event) => navigateToPath(event, '/contact')} className="text-slate-400 hover:text-white hover:underline transition">Contact</a>
               </div>
             </div>
             <div className="space-y-3">

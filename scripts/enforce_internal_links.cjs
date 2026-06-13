@@ -2,8 +2,9 @@
 
 /**
  * Internal Link Enforcement Script
- * Parses every markdown file and ensures minimum 10 contextual internal links
- * (exceptions for very short glossary entries). Fails build if violated.
+ * Parses indexable markdown files from the generated route registry and ensures
+ * a minimum of 10 contextual internal links. Non-indexable stubs are skipped
+ * because they are intentionally excluded from sitemaps and route metadata.
  */
 
 const fs = require('fs');
@@ -74,27 +75,42 @@ function isExempt(filePath) {
 function validateInternalLinks() {
   const contentDir = path.join(process.cwd(), 'content');
   const markdownFiles = getMarkdownFiles(contentDir);
+  const routeMetaPath = path.join(process.cwd(), 'public', 'route-meta.json');
+  const routeMeta = fs.existsSync(routeMetaPath) ? JSON.parse(fs.readFileSync(routeMetaPath, 'utf8')) : {};
+  const indexableSources = new Set(
+    Object.values(routeMeta)
+      .map(entry => entry && entry.source)
+      .filter(source => typeof source === 'string' && source.startsWith('content/'))
+  );
   
   let hasErrors = false;
   const minLinks = 10;
+  let checked = 0;
+  let skipped = 0;
   
-  console.log(`Checking ${markdownFiles.length} markdown files for internal links...`);
+  console.log(`Checking ${indexableSources.size} indexable markdown files for internal links...`);
   
   for (const filePath of markdownFiles) {
     try {
+      const relativePath = path.relative(process.cwd(), filePath);
+      if (!indexableSources.has(relativePath)) {
+        skipped++;
+        continue;
+      }
       const fileContent = fs.readFileSync(filePath, 'utf8');
       const internalLinkCount = countInternalLinks(fileContent);
+      checked++;
       
       const exempt = isExempt(filePath);
       
       if (internalLinkCount < minLinks && !exempt) {
-        console.warn(`⚠️  ${path.relative(process.cwd(), filePath)}: ${internalLinkCount} internal links (minimum ${minLinks} recommended)`);
+        console.error(`❌ ${relativePath}: ${internalLinkCount} internal links (minimum ${minLinks} required)`);
+        hasErrors = true;
       } else if (internalLinkCount < minLinks && exempt) {
-        console.log(`ℹ️  ${path.relative(process.cwd(), filePath)}: ${internalLinkCount} internal links (document-type exemption)`);
+        console.log(`ℹ️  ${relativePath}: ${internalLinkCount} internal links (document-type exemption)`);
       } else {
         // Log passing files at verbose level (only if many files)
         if (markdownFiles.length < 20) {
-          const relativePath = path.relative(process.cwd(), filePath);
           console.log(`✅ ${relativePath}: ${internalLinkCount} internal links`);
         }
       }
@@ -108,7 +124,8 @@ function validateInternalLinks() {
     console.error(`\n❌ Internal link validation failed. Please add more internal links to meet the minimum of ${minLinks} per file.`);
     process.exit(1);
   } else {
-    console.log(`\n✅ All markdown files meet the internal link requirement (minimum ${minLinks} links per file).`);
+    console.log(`\n✅ ${checked} indexable markdown files meet the internal link requirement (minimum ${minLinks} links per file).`);
+    if (skipped) console.log(`Skipped ${skipped} non-indexable markdown stubs.`);
     process.exit(0);
   }
 }

@@ -6,7 +6,7 @@ const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "public");
 const CONTENT = path.join(ROOT, "content");
 const SRC = path.join(ROOT, "src");
-const SITE_URL = "https://bestaiagent.in";
+const SITE_URL = (process.env.SITE_URL || "https://bestaiagent.in").replace(/\/$/, "");
 const TODAY = new Date().toISOString().split("T")[0];
 
 const reportNames = {
@@ -337,7 +337,7 @@ ${table(validationTable, ["Check", "Status", "Notes"])}
 
 ${issueList([
   unresolvedLinks.length ? `${unresolvedLinks.length} unresolved internal links remain.` : "",
-  missingDownloads.length ? `${missingDownloads.length} download links point to missing PDF assets.` : "",
+  missingDownloads.length ? `${missingDownloads.length} download links point to missing PDF assets.` : "Missing PDF assets resolved.",
   contentIssues.length ? `${contentIssues.length} markdown files are below the recommended content-quality pattern.` : "",
 ].filter(Boolean), 20)}
 
@@ -351,12 +351,13 @@ ${issueList([
 - Added machine-readable LLM references in \`llms.txt\`.
 - Added canonical redirect metadata for legacy MCP, pricing, rankings, awards, and testing-lab routes.
 - Fixed duplicate topical slug generation for \`n8n-alternatives\`.
+- Created missing PDF assets for rankings, awards, methodology, market map, and industry report downloads.
 - Updated performance budget validation to read Vite's \`dist/client/assets\` output.
 
 ## Recommended Next Actions
 
 ${issueList([
-  `Create or remove the ${missingDownloads.length} missing download assets before promoting report pages.`,
+  missingDownloads.length ? `Create or remove the ${missingDownloads.length} missing download assets before promoting report pages.` : "Keep PDF assets in sync whenever report pages are updated.",
   "Expand thin MCP server, rankings, awards, statistics, and trust markdown files where they are intended to rank organically.",
   "Run a live crawl after deployment to confirm 301 redirects and server-rendered canonical tags.",
 ].filter(Boolean), 10)}
@@ -705,6 +706,7 @@ Generated: ${TODAY}
 - Product profiles now avoid rendering the wrong product for unknown tool slugs.
 - Topical authority coverage expanded for Codex, Windsurf, Replit, n8n, LangGraph, AutoGen, Dify, Yellow.ai, and Intercom.
 - Duplicate topical slug issue fixed for \`n8n-alternatives\`.
+- Missing PDF assets created for rankings, awards, methodology, market map, and industry report downloads.
 - Performance validation now matches the Vite output path.
 
 ## White-Hat Guardrails
@@ -719,7 +721,7 @@ Generated: ${TODAY}
 ## Remaining Growth Work
 
 ${issueList([
-  `Create or remove ${missingDownloads.length} missing PDF assets before pushing report links live.`,
+  missingDownloads.length ? `Create or remove ${missingDownloads.length} missing PDF assets before pushing report links live.` : "Keep PDF assets in sync whenever report pages are updated.",
   `Expand ${contentIssues.length} thin or incomplete markdown files where organic ranking is expected.`,
   "Confirm live HTTP status codes for all legacy redirects after deployment.",
   "Submit canonical sitemap URLs to Google Search Console, Bing Webmaster Tools, and IndexNow after deployment.",

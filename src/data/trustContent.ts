@@ -289,29 +289,3 @@ export const authorityPages: Record<string, TrustPageContent> = {
   'ai-agent-cost-report': { slug: 'ai-agent-cost-report', view: 'authority', title: 'AI Agent Cost Report 2026', metaTitle: 'AI Agent Cost Report 2026 | Pricing Analysis', metaDescription: 'Detailed analysis of AI agent pricing models, cost breakdowns, and budget planning.', h1: 'AI Agent Cost Report 2026', eyebrow: 'Research', updated: '2026-06-12', author: 'Finance Team', factChecker: 'Data Team', verificationStatus: 'Verified', confidenceLevel: '92/100', sections: [{ heading: 'Pricing Models', body: ['Subscription: 62% market share', 'Pay-per-use: 28% market share', 'Enterprise: 10% market share'] }], related: [] },
   'ai-agent-adoption-report': { slug: 'ai-agent-adoption-report', view: 'authority', title: 'AI Agent Adoption Report 2026', metaTitle: 'AI Agent Adoption Report 2026 | BestAIAgent.in', metaDescription: 'Analysis of AI agent adoption rates across industries and regions.', h1: 'AI Agent Adoption Report 2026', eyebrow: 'Research', updated: '2026-06-12', author: 'Research Team', factChecker: 'Data Team', verificationStatus: 'Verified', confidenceLevel: '94/100', sections: [{ heading: 'Industry Adoption', body: ['E-commerce: 85%', 'SaaS: 82%', 'Healthcare: 72%', 'Finance: 68%'] }], related: [] },
 };
-
-export const trustFooterLinks = [
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
-  { label: 'Privacy Policy', path: '/privacy-policy' },
-  { label: 'Terms', path: '/terms' },
-  { label: 'Affiliate Disclosure', path: '/affiliate-disclosure' },
-  { label: 'Editorial Policy', path: '/editorial-policy' },
-  { label: 'Methodology', path: '/methodology' },
-  { label: 'Corrections Policy', path: '/corrections-policy' },
-  { label: 'Data Deletion Request', path: '/data-deletion-request' },
-  { label: 'Team', path: '/team' },
-];
-
-export const authorityFooterLinks = [
-  { label: 'MCP Directory', path: '/mcp-directory' },
-  { label: 'AI Agent Market Map', path: '/ai-agent-market-map' },
-  { label: 'AI Agent Benchmark', path: '/ai-agent-benchmark' },
-  { label: 'AI Agent Rankings', path: '/ai-agent-rankings' },
-  { label: 'AI Agent Awards', path: '/ai-agent-awards' },
-  { label: 'AI Agent Glossary', path: '/ai-agent-glossary' },
-  { label: 'AI Agent Statistics', path: '/ai-agent-statistics' },
-  { label: 'Industry Report', path: '/industry-report' },
-  { label: 'Cost Report', path: '/ai-agent-cost-report' },
-  { label: 'Adoption Report', path: '/ai-agent-adoption-report' },
-];

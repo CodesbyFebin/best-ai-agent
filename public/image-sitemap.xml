@@ -3,8 +3,14 @@
   <url>
     <loc>https://bestaiagent.in/</loc>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/apple-touch-icon.png</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/favicon-16.png</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/favicon-192.png</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/favicon-32.png</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/favicon-384.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/favicon.svg</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/logo-mark.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/logo-mark.svg</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/brand/logo.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/logo.svg</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/og-default.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/brand/twitter-card.png</image:loc></image:image>
@@ -81,6 +87,7 @@
     <image:image><image:loc>https://bestaiagent.in/assets/comparisons/yellow-ai-vs-intercom.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/comparisons/yellow-ai-vs-kore-ai.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/comparisons/yellow-ai-vs-wati.png</image:loc></image:image>
+    <image:image><image:loc>https://bestaiagent.in/assets/logo.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/og/ai-agent-builders-hub.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/og/alternatives-hub.png</image:loc></image:image>
     <image:image><image:loc>https://bestaiagent.in/assets/og/best-ai-agent.png</image:loc></image:image>

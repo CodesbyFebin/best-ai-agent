@@ -1,3 +1,5 @@
+import { publicUrl } from '../lib/siteUrl';
+
 export interface Citation {
   id: string;
   title: string;
@@ -47,7 +49,7 @@ const lowAuthority: Citation[] = [
   {
     id: 'user-feedback',
     title: 'User Satisfaction Survey Results',
-    url: 'https://bestaiagent.in/survey',
+    url: publicUrl('/survey'),
     publicationDate: '2026-06-05',
     authorityScore: 1
   }

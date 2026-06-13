@@ -404,7 +404,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
     "@id": "https://bestaiagent.in/#website"
   },
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11"
+  "dateModified": "2026-06-13"
 }
 ```
 
@@ -417,7 +417,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
   "description": "Compare the best AI agents in 2026 for Indian developers and businesses. Comprehensive guide covering coding, business, voice, automation agents with India-specific pricing, compliance, and recommendations.",
   "url": "https://bestaiagent.in/best-ai-agent",
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11",
+  "dateModified": "2026-06-13",
   "author": {
     "@type": "Organization",
     "name": "BestAIAgent.in Editorial Team"

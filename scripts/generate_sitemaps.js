@@ -57,18 +57,20 @@ function imageSitemap() {
   ].join("\n");
 }
 
+const categoryMatches = (route, categories) => categories.includes(route.category) || categories.includes(route.categoryLabel);
+
 const sitemapGroups = {
-  "ai-agent-sitemap.xml": routes.filter((r) => ["core", "pillars", "guides", "research", "buyers-guides", "reddit", "entity", "india-geo", "directories", "Buyer Guides", "Reddit & Community Intent", "Entity Pages", "India GEO Targeting", "Directories", "Open Source AI Agents", "Security & Compliance", "Industry AI Agents", "Longtail Engine", "Long-tail Guides", "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence", "Voice AI Agents", "Business AI Agents", "AI Agent Builders", "Coding Agents", "MCP Servers", "Glossary", "Tutorials", "Alternatives", "Free AI Agents"].includes(r.category)),
-  "tool-sitemap.xml": routes.filter((r) => ["reviews", "tools", "Tool Reviews", "Tool Profiles"].includes(r.category)),
+  "ai-agent-sitemap.xml": routes.filter((r) => categoryMatches(r, ["core", "pillars", "guides", "research", "frameworks", "buyers-guides", "reddit", "entity", "india-geo", "directories", "AI Agent Core", "AI Frameworks & Tools", "Buyer Guides", "Reddit & Community Intent", "Entity Pages", "India GEO Targeting", "Directories", "Open Source AI Agents", "Security & Compliance", "Industry AI Agents", "Longtail Engine", "Long-tail Guides", "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence", "Voice AI Agents", "Business AI Agents", "AI Agent Builders", "Coding Agents", "MCP Servers", "Glossary", "Tutorials", "Alternatives", "Free AI Agents"])),
+  "tool-sitemap.xml": routes.filter((r) => categoryMatches(r, ["reviews", "tools", "Tool Reviews", "Tool Profiles"])),
   "comparison-sitemap.xml": routes.filter((r) => r.category === "comparisons" || r.category === "Comparisons"),
-  "pricing-sitemap.xml": routes.filter((r) => r.category === "pricing" || r.category === "Pricing" || r.category === "Pricing Intelligence"),
-  "alternatives-sitemap.xml": routes.filter((r) => r.category === "alternatives" || r.category === "Alternatives"),
-  "tutorials-sitemap.xml": routes.filter((r) => ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications"].includes(r.category)),
-  "glossary-sitemap.xml": routes.filter((r) => r.category === "glossary" || r.category === "Glossary"),
-  "mcp-sitemap.xml": routes.filter((r) => r.category === "mcp" || r.category === "MCP" || r.category === "MCP Servers"),
-  "author-sitemap.xml": routes.filter((r) => r.category === "authors" || r.category === "Authors"),
-  "hub-sitemap.xml": routes.filter((r) => r.category === "hubs" || r.category === "editorial" || r.category === "home" || r.category === "Hubs" || r.category === "Editorial" || r.category === "Home"),
-  "calculators-sitemap.xml": routes.filter((r) => r.category === "calculators" || r.category === "Calculators"),
+  "pricing-sitemap.xml": routes.filter((r) => categoryMatches(r, ["pricing", "Pricing", "Pricing Intelligence"])),
+  "alternatives-sitemap.xml": routes.filter((r) => categoryMatches(r, ["alternatives", "Alternatives"])),
+  "tutorials-sitemap.xml": routes.filter((r) => categoryMatches(r, ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications"])),
+  "glossary-sitemap.xml": routes.filter((r) => categoryMatches(r, ["glossary", "Glossary"])),
+  "mcp-sitemap.xml": routes.filter((r) => categoryMatches(r, ["mcp", "MCP", "MCP Servers"])),
+  "author-sitemap.xml": routes.filter((r) => categoryMatches(r, ["authors", "Authors"])),
+  "hub-sitemap.xml": routes.filter((r) => categoryMatches(r, ["hubs", "editorial", "home", "Hubs", "Editorial", "Home"])),
+  "calculators-sitemap.xml": routes.filter((r) => categoryMatches(r, ["calculators", "Calculators"]) || /calculator/i.test(r.path)),
 };
 
 for (const [name, entries] of Object.entries(sitemapGroups)) {
@@ -143,36 +145,6 @@ write("robots.txt", [
 
 write("indexnow-key.txt", INDEXNOW_KEY);
 write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
-
-const feedItems = routes
-  .filter((r) => ["core", "pillars", "reviews", "tools", "comparisons", "pricing", "alternatives", "tutorials", "glossary", "mcp", "buyers-guides", "entity", "india-geo", "directories", "reddit", "calculators", "longtail"].includes(r.category))
-  .sort((a, b) => b.priority.localeCompare(a.priority))
-  .slice(0, 30);
-
-write("feed.xml", [
-  '<?xml version="1.0" encoding="UTF-8"?>',
-  '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">',
-  "  <channel>",
-  "    <title>BestAIAgent.in - AI Agent Reviews, Pricing and Guides</title>",
-  `    <link>${SITE_URL}</link>`,
-  "    <description>Independent India-focused AI agent reviews, rankings, comparisons, pricing pages, tutorials, and glossary guides.</description>",
-  "    <language>en-IN</language>",
-  `    <lastBuildDate>${new Date(`${TODAY}T12:00:00Z`).toUTCString()}</lastBuildDate>`,
-  `    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />`,
-  ...feedItems.map((item) => [
-    "    <item>",
-    `      <title><![CDATA[${item.title}]]></title>`,
-    `      <link>${SITE_URL}${item.path}</link>`,
-    `      <guid isPermaLink="true">${SITE_URL}${item.path}</guid>`,
-    `      <description><![CDATA[${item.description}]]></description>`,
-    `      <pubDate>${new Date(`${item.lastmod || TODAY}T12:00:00Z`).toUTCString()}</pubDate>`,
-    "      <dc:creator>BestAIAgent.in Editorial Team</dc:creator>",
-    `      <category>${xmlEscape(item.categoryLabel)}</category>`,
-    "    </item>",
-  ].join("\n")),
-  "  </channel>",
-  "</rss>",
-].join("\n"));
 
 const section = (title, entries) => [`## ${title}`, ...entries.map((entry) => {
   const label = String(entry.h1 || entry.title).replace(/\[[^\]]+\]\(([^)]+)\)/g, "").replace(/\s+/g, " ").trim();

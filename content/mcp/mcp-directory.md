@@ -1,4 +1,4 @@
-# MCP Directory 2026 – Complete List of Model Context Protocol Servers [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
+# MCP Directory 2026 – Complete List of Model Context Protocol Servers [MCP server registry](/mcp-directory) [AI agent pricing in INR](/pricing-hub)
 
 ## SEO Title
 MCP Directory 2026 – Complete List of Model Context Protocol Servers
@@ -285,7 +285,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
     "@id": "https://bestaiagent.in/#website"
   },
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11"
+  "dateModified": "2026-06-13"
 }
 ```
 
@@ -298,7 +298,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
   "description": "Browse the complete MCP directory for 2026. Find MCP servers for files, databases, APIs, and Indian services. Updated monthly with new servers.",
   "url": "https://bestaiagent.in/mcp-directory",
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11",
+  "dateModified": "2026-06-13",
   "author": {
     "@type": "Organization",
     "name": "BestAIAgent.in Editorial Team"

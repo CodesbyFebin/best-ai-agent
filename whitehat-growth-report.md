@@ -6,16 +6,16 @@ Generated: 2026-06-13
 
 | Area | Score |
 |---|---:|
-| Crawlability | 96/100 |
+| Crawlability | 72/100 |
 | Canonicalization | 96/100 |
 | Sitemaps | 82/100 |
 | Robots | 94/100 |
 | LLM Readiness | 92/100 |
 | GEO | 90/100 |
-| EEAT | 94/100 |
+| EEAT | 78/100 |
 | Performance | 94/100 |
 | Content Quality | 81/100 |
-| Overall | 91/100 |
+| Overall | 87/100 |
 
 ## White-Hat Actions Completed
 
@@ -29,6 +29,7 @@ Generated: 2026-06-13
 - Product profiles now avoid rendering the wrong product for unknown tool slugs.
 - Topical authority coverage expanded for Codex, Windsurf, Replit, n8n, LangGraph, AutoGen, Dify, Yellow.ai, and Intercom.
 - Duplicate topical slug issue fixed for `n8n-alternatives`.
+- Missing PDF assets created for rankings, awards, methodology, market map, and industry report downloads.
 - Performance validation now matches the Vite output path.
 
 ## White-Hat Guardrails
@@ -42,7 +43,7 @@ Generated: 2026-06-13
 
 ## Remaining Growth Work
 
-- Create or remove 5 missing PDF assets before pushing report links live.
-- Expand 220 thin or incomplete markdown files where organic ranking is expected.
+- Keep PDF assets in sync whenever report pages are updated.
+- Expand 215 thin or incomplete markdown files where organic ranking is expected.
 - Confirm live HTTP status codes for all legacy redirects after deployment.
 - Submit canonical sitemap URLs to Google Search Console, Bing Webmaster Tools, and IndexNow after deployment.

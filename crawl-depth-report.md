@@ -4,10 +4,10 @@ Generated: 2026-06-13
 
 ## Crawl Graph
 
-- Routes analyzed: 480
-- Internal links analyzed: 74
-- Unresolved links: 0
-- Routes with computed depth from homepage: 36
+- Routes analyzed: 401
+- Internal links analyzed: 72
+- Unresolved links: 23
+- Routes with computed depth from homepage: 24
 
 ## Depth Buckets
 
@@ -15,32 +15,21 @@ Generated: 2026-06-13
 | --- | --- |
 | 0 | 1 |
 | 1 | 20 |
-| 2 | 9 |
-| 3+ | 6 |
-| Unreached | 444 |
+| 2 | 3 |
+| 3+ | 0 |
+| Unreached | 377 |
 
 ## Deeper Pages
 
-- /mcp-directory depth=3
-- /mcp-registry depth=3
-- /tools/crewai depth=3
-- /editorial-policy depth=3
-- /ai-agent-scoring-system depth=3
-- /mcp-for-ai-agents depth=3
+- None
 
 ## Unreached Routes
 
-- /cursor-vs-claude-code
-- /cursor-vs-github-copilot
-- /dify-vs-langflow
-- /flowise-vs-dify
-- /flowise-vs-n8n
 - /hubspot-ai-vs-salesforce-ai
 - /intercom-vs-zendesk-ai
 - /jasper-vs-copy-ai
 - /langgraph-vs-crewai
 - /llamaindex-vs-langchain
-- /brave-vs-tavily-vs-serpapi
 - /openai-agents-sdk-vs-langgraph
 - /replit-vs-cursor
 - /retell-vs-bland
@@ -53,20 +42,26 @@ Generated: 2026-06-13
 - /ai-agent-trends
 - /ai-agent-use-cases
 - /best-ai-agent
+- /best-ai-agents
 - /future-of-ai-agents
 - /what-is-an-ai-agent
 - /ai-agent-projects
 - /best-ai-agent-course
 - /how-to-build-an-ai-agent
-- /benchmark-methodology
-- /review-policy
-- /anthropic
-- /openai
-- /langchain
-- /gpt-4
 - /pinecone
 - /best-free-ai-agent-builder
 - /best-free-ai-agent-for-business
 - /best-free-ai-agents
 - /best-free-ai-coding-agents
 - /best-free-ai-voice-agent
+- /best-free-open-source-ai-agents
+- /what-is-agentic-ai
+- /what-is-agentops
+- /what-is-context-window
+- /what-is-crewai
+- /what-is-function-calling
+- /what-is-gaia
+- /what-is-langgraph
+- /what-is-mcp
+- /what-is-multi-agent-system
+- /what-is-rag

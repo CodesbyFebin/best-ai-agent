@@ -3,6 +3,12 @@ build/
 dist/
 coverage/
 public/client/
+public/assets/index-*.js
+public/assets/index-*.css
+public/assets/vendor-*.js
+public/assets/page-*.js
+public/assets/rolldown-runtime-*.js
+public/assets/India*.js
 .DS_Store
 *.log
 .env*

@@ -4,6 +4,7 @@ import { GoogleGenAI } from '@google/genai';
 import path from 'node:path';
 import fs from 'node:fs';
 import dotenv from 'dotenv';
+import { publicUrl, SITE_URL, normalizePath } from './src/lib/siteUrl';
 import { fileURLToPath } from 'node:url';
 
 dotenv.config();
@@ -12,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = Number(process.env.PORT || 3000);
-const BASE_URL = 'https://bestaiagent.in';
+const BASE_URL = SITE_URL;
 const PRODUCTION_HOSTS = new Set(['bestaiagent.in']);
 const PREVIEW_ROBOTS = 'noindex, nofollow, noarchive';
 
@@ -217,18 +218,13 @@ function readRouteMeta(): Record<string, RouteMeta> {
 let routeMeta = readRouteMeta();
 const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/preview', '/compare']);
 
-routeMeta['/'] = defaultHomeMeta;
+routeMeta['/'] = routeMeta['/'] || defaultHomeMeta;
 
 const redirectRoutes = new Map(
   Object.entries(routeMeta)
     .filter(([, meta]) => meta.canonicalPath && meta.canonicalPath !== meta.path)
     .map(([pathName, meta]) => [pathName, meta.canonicalPath || meta.path]),
 );
-
-function normalizePath(inputPath: string) {
-  const clean = inputPath.split('?')[0].replace(/\/+$/, '');
-  return clean || '/';
-}
 
 function fallbackMeta(reqPath: string): RouteMeta {
   const isAuthor = reqPath.startsWith('/authors/');
@@ -296,7 +292,7 @@ function routeImageMeta(meta: RouteMeta) {
   }
 
   return {
-    image: image.startsWith('http') ? image : `${BASE_URL}${image}`,
+    image: publicUrl(image),
     alt: escapeHtml(alt),
   };
 }
@@ -404,10 +400,21 @@ async function startServer() {
   app.use(express.json({ limit: '2mb' }));
   app.use((req, res, next) => {
     if (isWwwProductionHost(req.headers.host)) {
-      return res.redirect(308, `${BASE_URL}${req.originalUrl}`);
+      const pathName = normalizePath(req.path);
+      const query = req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '';
+      return res.redirect(308, `${BASE_URL}${pathName}${query}`);
     }
     if (isPreviewHost(req.headers.host)) {
       res.setHeader('X-Robots-Tag', PREVIEW_ROBOTS);
+    }
+    return next();
+  });
+
+  app.use((req, res, next) => {
+    const pathName = normalizePath(req.path);
+    if (req.path !== pathName) {
+      const query = req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '';
+      return res.redirect(301, `${pathName}${query}`);
     }
     return next();
   });
@@ -512,6 +519,7 @@ async function startServer() {
     '/mcp-sitemap.xml',
     '/author-sitemap.xml',
     '/hub-sitemap.xml',
+    '/calculators-sitemap.xml',
     '/image-sitemap.xml',
     '/feed.xml',
     '/llms.txt',
@@ -652,7 +660,8 @@ async function startServer() {
     });
   } else {
     const distPath = path.resolve(process.cwd(), 'dist', 'client');
-    app.use('/client', express.static(distPath, { index: false }));
+    app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
+    app.use(express.static(distPath, { index: false }));
     app.get('*', (req, res) => {
       const pathName = normalizePath(req.path);
       if (!routeMeta[pathName] && !noindexPaths.has(pathName)) return res.status(404).send('Not found');

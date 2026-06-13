@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://bestaiagent.in';
+const BASE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 const CONTENT_DIRS = [
   'content/editorial',
   'content/pillars',
@@ -14,7 +14,6 @@ const CONTENT_DIRS = [
   'content/mcp/tutorials',
   'content/mcp/comparisons',
   'content/mcp/marketplace',
-  'content/mcp/registry',
   'content/mcp/rankings'
 ];
 
@@ -46,7 +45,7 @@ function generateSitemap() {
         loc: BASE_URL + '/' + route,
         lastmod: today,
         changefreq: 'weekly',
-        priority: route.includes('mcp/registry') ? 0.8 : 0.6
+        priority: route.includes('mcp-directory') ? 0.8 : 0.6
       });
     }
   }

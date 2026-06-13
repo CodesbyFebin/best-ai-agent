@@ -4,6 +4,7 @@ import path from "node:path";
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const MARKER = "<!-- FULL_EXPANSION_V1 -->";
 const MIN_WORDS = 1500;
+const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 
 function walk(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -91,7 +92,7 @@ function extractRating(markdown) {
 }
 
 function baseUrl(slug) {
-  return `https://bestaiagent.in/${slug}`;
+  return `${SITE_URL}/${slug.replace(/^\/+/, '')}`;
 }
 
 function faqJson(title, faqs) {
@@ -122,7 +123,7 @@ function articleJson(title, slug) {
     publisher: {
       "@type": "Organization",
       name: "BestAIAgent.in",
-      url: "https://bestaiagent.in",
+      url: SITE_URL,
     },
     inLanguage: "en-IN",
   };
@@ -137,7 +138,7 @@ function breadcrumbJson(title, slug) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://bestaiagent.in",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",

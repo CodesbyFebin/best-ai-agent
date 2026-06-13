@@ -4,10 +4,10 @@ Generated: 2026-06-13
 
 ## Googlebot Readiness
 
-- Canonical route count: 480
-- Sitemap URLs: 317
-- Redirect aliases: 67
-- Unresolved internal links: 0
+- Canonical route count: 401
+- Sitemap URLs: 254
+- Redirect aliases: 51
+- Unresolved internal links: 23
 - Canonical collisions: 0
 - `/index` routes: 0
 
@@ -17,9 +17,9 @@ Generated: 2026-06-13
 | --- | --- | --- |
 | robots.txt | present | PASS |
 | Sitemap index | present | PASS |
-| Canonical redirects | 67 aliases | PASS |
+| Canonical redirects | 51 aliases | PASS |
 | Soft 404 risk | none | PASS |
-| Internal link errors | 0 | PASS |
+| Internal link errors | 23 | WARN |
 
 ## Google-Safe Notes
 

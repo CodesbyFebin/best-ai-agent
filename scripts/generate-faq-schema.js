@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const CONTENT_DIR = path.resolve(__dirname, "../content");
 const PUBLIC_DIR = path.resolve(__dirname, "../public");
-const SITE_URL = "https://bestaiagent.in";
+const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 
 function extractFrontmatterAndBody(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);

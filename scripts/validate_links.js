@@ -4,6 +4,7 @@ import { PUBLIC_DIR, SITE_URL, buildRouteMeta, walkMarkdown } from "./seo_utils.
 
 const routeMap = buildRouteMeta();
 const validPaths = new Set(Object.keys(routeMap));
+const indexableSources = new Set(Object.values(routeMap).map((entry) => entry.source).filter(Boolean));
 const errors = [];
 
 function checkPath(source, raw) {
@@ -17,6 +18,8 @@ function checkPath(source, raw) {
 }
 
 for (const file of walkMarkdown()) {
+  const source = path.relative(process.cwd(), file);
+  if (!indexableSources.has(source)) continue;
   const markdown = fs.readFileSync(file, "utf8");
   for (const match of markdown.matchAll(/\]\((\/[^)\s]+)\)/g)) checkPath(file, match[1]);
   for (const match of markdown.matchAll(/https:\/\/bestaiagent\.in(\/[^\s"')<]*)/g)) checkPath(file, match[1]);

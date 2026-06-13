@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "tsx server.ts",
     "generate:seo": "node scripts/generate_sitemaps.js",
-    "build": "node scripts/generate_sitemaps.js && node scripts/generate-rss.cjs && node scripts/generate-ai-index.cjs && rm -rf public/client && vite build && cp -R dist/client public/client && esbuild server.ts --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.js",
-    "start": "node dist/server.js",
+    "build": "node scripts/generate_sitemaps.js && node scripts/generate-rss.cjs && node scripts/generate-ai-index.cjs && rm -rf public/client && vite build && mkdir -p dist/client/assets/brand && cp -R public/assets/brand/. dist/client/assets/brand/ && cp public/site.webmanifest dist/client/site.webmanifest && cp public/favicon.ico dist/client/favicon.ico && cp -R dist/client/assets/. public/assets/ && cp public/route-meta.json dist/ && cp public/contentIndex.json dist/ && cp public/content-index.json dist/ && esbuild server.ts --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.js",
+    "start": "NODE_ENV=production node dist/server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js public/client",
     "lint": "tsc --noEmit",

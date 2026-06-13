@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://bestaiagent.in';
+const BASE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 const RSS_FILE = 'public/feed.xml';
 const EXCLUDED_DIRS = ['content/trust', 'content/editorial', 'content/reddit'];
 const MAX_ITEMS = 50;
@@ -49,7 +49,7 @@ function parseFrontMatter(content) {
   content.split('\n').forEach(line => {
     const [key, ...value] = line.split(':');
     if (key && value.length) {
-      obj[key.trim()] = value.join(':').trim();
+      obj[key.trim()] = value.join(':').trim().replace(/^["']|["']$/g, '');
     }
   });
   return obj;
@@ -88,7 +88,8 @@ function generateRSS() {
       const frontmatter = parseFrontMatter(frontMatch[1]);
       const title = frontmatter.title || slug.split('/').pop().replace(/-/g, ' ');
       const description = frontmatter.description || stripMarkdown(raw);
-      const link = `${BASE_URL}/${slug}`;
+      const canonicalPath = frontmatter.url && frontmatter.url.startsWith('/') ? frontmatter.url : `/${slug}`;
+      const link = `${BASE_URL}${canonicalPath}`;
       const pubDate = getPubDate(frontmatter);
       const author = frontmatter.author || 'BestAIAgent.in Editorial Team';
       const category = getCategoryFromPath(file);

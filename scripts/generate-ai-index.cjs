@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://bestaiagent.in';
+const BASE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 
 function extractEntitiesFromFile(filePath) {
   if (!fs.existsSync(filePath)) return [];

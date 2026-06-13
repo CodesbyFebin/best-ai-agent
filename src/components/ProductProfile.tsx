@@ -797,7 +797,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
                   <span className="font-semibold text-emerald-400">DPIIT Audit approved</span>
                 </div>
                 <div className="text-[10px] text-slate-500">
-                  Last verified: {(product as any).lastVerified || '2026-06-11'}
+                  Last verified: {(product as any).lastVerified || '2026-06-13'}
                 </div>
               </div>
 

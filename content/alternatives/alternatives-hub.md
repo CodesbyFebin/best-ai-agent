@@ -381,7 +381,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
     "@id": "https://bestaiagent.in/#website"
   },
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11"
+  "dateModified": "2026-06-13"
 }
 ```
 
@@ -394,7 +394,7 @@ Common failures include unclear ownership, weak prompts, no test set, missing hu
   "description": "Alternative shortlists for Cursor, GitHub Copilot, Vapi, Retell, n8n, Flowise, Dify, Intercom, and other AI agent tools.",
   "url": "https://bestaiagent.in/alternatives-hub",
   "inLanguage": "en-IN",
-  "dateModified": "2026-06-11",
+  "dateModified": "2026-06-13",
   "author": {
     "@type": "Organization",
     "name": "BestAIAgent.in Editorial Team"

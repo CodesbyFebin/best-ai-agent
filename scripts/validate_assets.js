@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const PUBLIC_DIR = path.join(ROOT, 'public');
+const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 const REGISTRY = path.join(ROOT, 'src/data/assetRegistry.ts');
 const IMAGE_SITEMAP = path.join(PUBLIC_DIR, 'image-sitemap.xml');
 const MAX_IMAGE_BYTES = 250 * 1024;
@@ -98,7 +99,7 @@ if (!fs.existsSync(IMAGE_SITEMAP)) {
   const imageSitemap = fs.readFileSync(IMAGE_SITEMAP, 'utf8');
   if (!imageSitemap.includes('<image:image>')) fail('image-sitemap.xml has no image:image entries.');
   for (const assetPath of requiredFiles) {
-    if (!imageSitemap.includes(`https://bestaiagent.in${assetPath}`)) {
+    if (!imageSitemap.includes(`${SITE_URL}${assetPath}`)) {
       fail(`image-sitemap.xml is missing ${assetPath}`);
     }
   }
@@ -114,7 +115,7 @@ for (const file of sourceFiles) {
   const source = fs.readFileSync(file, 'utf8');
   const hotlinks = [...source.matchAll(/https?:\/\/[^'")\s]+\.(?:svg|png|webp|avif|jpe?g)/gi)];
   for (const match of hotlinks) {
-    if (match[0].startsWith('https://bestaiagent.in/')) continue;
+    if (match[0].startsWith(`${SITE_URL}/`)) continue;
     warn(`External image reference requires approval: ${path.relative(ROOT, file)} -> ${match[0]}`);
   }
 }

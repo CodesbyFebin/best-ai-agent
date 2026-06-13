@@ -22,6 +22,7 @@ import {
   Info
 } from 'lucide-react';
 import { SiloPage } from '../data/db';
+import { publicUrl, SITE_URL } from '../lib/siteUrl';
 
 interface IndiaMcpCustomizerProps {
   activeSiloPages: SiloPage[];
@@ -405,7 +406,7 @@ export default function IndiaMcpCustomizer({
       "publisher": {
         "@type": "Organization",
         "name": "BestAIAgent.in",
-        "url": "https://bestaiagent.in"
+        "url": SITE_URL
       },
       "dataset": serversList.map(srv => ({
         "@type": "Dataset",
@@ -434,7 +435,7 @@ export default function IndiaMcpCustomizer({
         "name": "BestAIAgent.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bestaiagent.in/assets/brand/logo.png"
+          "url": publicUrl('/assets/brand/logo.png')
         }
       }
     };

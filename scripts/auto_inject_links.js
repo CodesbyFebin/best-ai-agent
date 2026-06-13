@@ -6,7 +6,7 @@ const MIN_LINKS = 10;
 
 const SUGGESTIONS = [
   { pattern: /\bCursor\b/i, link: "/tools/cursor-ai", text: "Cursor AI review" },
-  { pattern: /\bMCP server\b/i, link: "/mcp/registry", text: "MCP server registry" },
+  { pattern: /\bMCP server\b/i, link: "/mcp-directory", text: "MCP server registry" },
   { pattern: /\bIndia pricing\b/i, link: "/pricing", text: "AI agent pricing in INR" },
   { pattern: /\bVapi\b/i, link: "/tools/vapi-ai", text: "Vapi voice agent review" },
   { pattern: /\bCrewAI\b/i, link: "/tools/crewai", text: "CrewAI multi-agent review" },

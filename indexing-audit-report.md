@@ -2,23 +2,23 @@
 
 Generated: 2026-06-13
 
-## Overall Score: 91/100
+## Overall Score: 87/100
 
 | Area | Score |
 |---|---:|
-| crawlability | 96/100 |
+| crawlability | 72/100 |
 | canonicalization | 96/100 |
 | sitemaps | 82/100 |
 | robots | 94/100 |
 | llmReadiness | 92/100 |
 | geo | 90/100 |
-| eeat | 94/100 |
+| eeat | 78/100 |
 | performance | 94/100 |
 | contentQuality | 81/100 |
 
 ## Executive Summary
 
-BestAIAgent.in is now closer to indexing readiness. The audit found 480 canonical routes, 317 sitemap URLs, 67 redirect aliases, and 74 unique internal links across markdown content.
+BestAIAgent.in is now closer to indexing readiness. The audit found 401 canonical routes, 254 sitemap URLs, 51 redirect aliases, and 72 unique internal links across markdown content.
 
 ## Validation Status
 
@@ -36,8 +36,9 @@ BestAIAgent.in is now closer to indexing readiness. The audit found 480 canonica
 
 ## Critical Findings
 
-- 5 download links point to missing PDF assets.
-- 220 markdown files are below the recommended content-quality pattern.
+- 23 unresolved internal links remain.
+- Missing PDF assets resolved.
+- 215 markdown files are below the recommended content-quality pattern.
 
 ## Implemented Safe Fixes
 
@@ -49,10 +50,11 @@ BestAIAgent.in is now closer to indexing readiness. The audit found 480 canonica
 - Added machine-readable LLM references in `llms.txt`.
 - Added canonical redirect metadata for legacy MCP, pricing, rankings, awards, and testing-lab routes.
 - Fixed duplicate topical slug generation for `n8n-alternatives`.
+- Created missing PDF assets for rankings, awards, methodology, market map, and industry report downloads.
 - Updated performance budget validation to read Vite's `dist/client/assets` output.
 
 ## Recommended Next Actions
 
-- Create or remove the 5 missing download assets before promoting report pages.
+- Keep PDF assets in sync whenever report pages are updated.
 - Expand thin MCP server, rankings, awards, statistics, and trust markdown files where they are intended to rank organically.
 - Run a live crawl after deployment to confirm 301 redirects and server-rendered canonical tags.

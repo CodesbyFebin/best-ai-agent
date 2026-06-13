@@ -1,5 +1,32 @@
 [
   {
+    "tool": "Best AI Agent Alternatives and Self",
+    "review": "/best-ai-agent-alternatives",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Best AI Agent for Human Resources",
+    "review": "/best-ai-agent-for-hr",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Best AI Agents for Automation",
+    "review": "/best-ai-agents-for-automation",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
     "tool": "Claude Code",
     "review": "/claude-code",
     "category": "Tool Reviews",
@@ -7,6 +34,8 @@
       "/claude-code-pricing"
     ],
     "competitors": [
+      "/claude-code-vs-codex",
+      "/claude-code-vs-cursor",
       "/copilot-vs-claude-code",
       "/cursor-vs-claude-code"
     ],
@@ -27,10 +56,16 @@
       "/cursor-pricing-india"
     ],
     "competitors": [
+      "/claude-code-vs-cursor",
       "/claude-vs-cursor",
       "/cursor-vs-claude-code",
+      "/cursor-vs-codex",
+      "/cursor-vs-copilot",
       "/cursor-vs-github-copilot",
-      "/cursor-windsurf-copilot",
+      "/cursor-vs-qodo",
+      "/cursor-vs-replit-ai",
+      "/cursor-vs-tabnine",
+      "/cursor-vs-windsurf",
       "/replit-vs-cursor",
       "/windsurf-vs-cursor"
     ],
@@ -50,7 +85,10 @@
       "/github-copilot-pricing"
     ],
     "competitors": [
-      "/cursor-vs-github-copilot"
+      "/cursor-vs-github-copilot",
+      "/github-copilot-vs-amazon-codewhisperer",
+      "/github-copilot-vs-tabnine",
+      "/github-copilot-vs-windsurf"
     ],
     "alternatives": [
       "/github-copilot-alternatives"
@@ -105,7 +143,10 @@
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
-      "/autogen-vs-crewai"
+      "/autogen-vs-crewai",
+      "/autogen-vs-langgraph",
+      "/crewai-vs-autogen",
+      "/langgraph-vs-autogen"
     ],
     "alternatives": [
       "/autogen-alternatives"
@@ -121,7 +162,9 @@
     "pricing": [],
     "competitors": [
       "/retell-vs-bland",
-      "/vapi-vs-bland"
+      "/retell-vs-bland-ai",
+      "/vapi-vs-bland",
+      "/vapi-vs-bland-ai"
     ],
     "alternatives": [],
     "tutorials": []
@@ -144,6 +187,9 @@
     "pricing": [],
     "competitors": [
       "/autogen-vs-crewai",
+      "/crewai-vs-autogen",
+      "/crewai-vs-langgraph",
+      "/flowise-vs-crewai",
       "/langgraph-vs-crewai"
     ],
     "alternatives": [
@@ -163,10 +209,16 @@
       "/cursor-pricing-india"
     ],
     "competitors": [
+      "/claude-code-vs-cursor",
       "/claude-vs-cursor",
       "/cursor-vs-claude-code",
+      "/cursor-vs-codex",
+      "/cursor-vs-copilot",
       "/cursor-vs-github-copilot",
-      "/cursor-windsurf-copilot",
+      "/cursor-vs-qodo",
+      "/cursor-vs-replit-ai",
+      "/cursor-vs-tabnine",
+      "/cursor-vs-windsurf",
       "/replit-vs-cursor",
       "/windsurf-vs-cursor"
     ],
@@ -186,7 +238,9 @@
       "/dify-pricing"
     ],
     "competitors": [
+      "/dify-vs-flowise",
       "/dify-vs-langflow",
+      "/dify-vs-langgraph",
       "/flowise-vs-dify"
     ],
     "alternatives": [
@@ -213,7 +267,10 @@
       "/flowise-pricing"
     ],
     "competitors": [
+      "/dify-vs-flowise",
+      "/flowise-vs-crewai",
       "/flowise-vs-dify",
+      "/flowise-vs-langflow",
       "/flowise-vs-n8n"
     ],
     "alternatives": [
@@ -231,6 +288,8 @@
       "/intercom-pricing"
     ],
     "competitors": [
+      "/intercom-vs-freshdesk",
+      "/intercom-vs-zendesk",
       "/intercom-vs-zendesk-ai",
       "/yellow-ai-vs-intercom"
     ],
@@ -247,7 +306,8 @@
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
-      "/dify-vs-langflow"
+      "/dify-vs-langflow",
+      "/flowise-vs-langflow"
     ],
     "alternatives": [],
     "tutorials": []
@@ -258,6 +318,10 @@
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
+      "/autogen-vs-langgraph",
+      "/crewai-vs-langgraph",
+      "/dify-vs-langgraph",
+      "/langgraph-vs-autogen",
       "/langgraph-vs-crewai",
       "/openai-agents-sdk-vs-langgraph"
     ],
@@ -274,6 +338,7 @@
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
+      "/langchain-vs-llamaindex",
       "/llamaindex-vs-langchain"
     ],
     "alternatives": [],
@@ -287,7 +352,10 @@
       "/n8n-pricing"
     ],
     "competitors": [
-      "/flowise-vs-n8n"
+      "/flowise-vs-n8n",
+      "/n8n-vs-activepieces",
+      "/n8n-vs-make",
+      "/n8n-vs-zapier"
     ],
     "alternatives": [
       "/n8n-alternatives"
@@ -323,6 +391,8 @@
     "pricing": [],
     "competitors": [
       "/retell-vs-bland",
+      "/retell-vs-bland-ai",
+      "/retell-vs-elevenlabs",
       "/vapi-vs-retell"
     ],
     "alternatives": [
@@ -360,7 +430,10 @@
     ],
     "competitors": [
       "/vapi-vs-bland",
-      "/vapi-vs-retell"
+      "/vapi-vs-bland-ai",
+      "/vapi-vs-elevenlabs",
+      "/vapi-vs-retell",
+      "/vapi-vs-synthflow"
     ],
     "alternatives": [
       "/vapi-alternatives"
@@ -377,7 +450,10 @@
       "/yellow-ai-pricing"
     ],
     "competitors": [
-      "/yellow-ai-vs-intercom"
+      "/yellow-ai-vs-haptik",
+      "/yellow-ai-vs-intercom",
+      "/yellow-ai-vs-kore-ai",
+      "/yellow-ai-vs-wati"
     ],
     "alternatives": [
       "/yellow-ai-alternatives"
@@ -394,7 +470,9 @@
       "/windsurf-pricing"
     ],
     "competitors": [
-      "/cursor-windsurf-copilot",
+      "/cursor-vs-windsurf",
+      "/github-copilot-vs-windsurf",
+      "/replit-ai-vs-windsurf",
       "/windsurf-vs-cursor"
     ],
     "alternatives": [

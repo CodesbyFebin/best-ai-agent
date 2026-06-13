@@ -36,7 +36,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-04-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'VS Code fork with deep repo context' },
     toolB: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'Native inline completions for VS Code' },
     fields: [
@@ -61,7 +61,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Arshdeep Singh, Chief AI Analyst',
     publishedAt: '2026-03-12',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'ChatGPT', slug: 'chatgpt', tagline: 'OpenAI general-purpose flagship' },
     toolB: { name: 'Claude', slug: 'claude', tagline: 'Anthropic nuance-focused assistant' },
     fields: [
@@ -86,7 +86,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-22',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'CrewAI', slug: 'crewai', tagline: 'Role-based multi-agent orchestration' },
     toolB: { name: 'AutoGen', slug: 'autogen', tagline: 'Conversational multi-agent framework' },
     fields: [
@@ -111,7 +111,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-01',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'VS Code fork with deep repo context' },
     toolB: { name: 'OpenAI Codex', slug: 'openai-codex', tagline: 'API-first code generation engine' },
     fields: [
@@ -136,7 +136,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-15',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'AI-powered code editor' },
     toolB: { name: 'Qodo', slug: 'qodo', tagline: 'AI code review and quality platform' },
     fields: [
@@ -161,7 +161,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Arshdeep Singh, Chief AI Analyst',
     publishedAt: '2026-04-20',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'Inline IDE completions' },
     toolB: { name: 'OpenAI Codex', slug: 'openai-codex', tagline: 'API-first code generation' },
     fields: [
@@ -186,7 +186,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-10',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Claude Code', slug: 'claude-code', tagline: 'Terminal-native AI coding' },
     toolB: { name: 'OpenAI Codex', slug: 'openai-codex', tagline: 'API-first code generation' },
     fields: [
@@ -211,7 +211,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-10',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Flowise', slug: 'flowise', tagline: 'Open-source LangChain visual builder' },
     toolB: { name: 'LangFlow', slug: 'langflow', tagline: 'Multi-model visual AI builder' },
     fields: [
@@ -236,7 +236,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-20',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Flowise', slug: 'flowise', tagline: 'Visual no-code agent builder' },
     toolB: { name: 'CrewAI', slug: 'crewai', tagline: 'Code-first multi-agent framework' },
     fields: [
@@ -261,7 +261,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-25',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Vapi', slug: 'vapi-ai', tagline: 'Telephony-native voice agents' },
     toolB: { name: 'ElevenLabs', slug: 'elevenlabs', tagline: 'Premium voice synthesis' },
     fields: [
@@ -286,7 +286,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-05',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Retell AI', slug: 'retell-ai', tagline: 'Business voice AI platform' },
     toolB: { name: 'ElevenLabs', slug: 'elevenlabs', tagline: 'Premium voice synthesis' },
     fields: [
@@ -311,7 +311,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-25',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'VS Code fork with deep repo context' },
     toolB: { name: 'Windsurf', slug: 'windsurf', tagline: 'AI-native code editor' },
     fields: [
@@ -336,7 +336,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-15',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Dify', slug: 'dify', tagline: 'Managed LLM app platform' },
     toolB: { name: 'LangFlow', slug: 'langflow', tagline: 'Multi-model visual builder' },
     fields: [
@@ -361,7 +361,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'LangGraph', slug: 'langgraph', tagline: 'Graph-based agent orchestration' },
     toolB: { name: 'AutoGen', slug: 'autogen', tagline: 'Conversational multi-agent framework' },
     fields: [
@@ -386,7 +386,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-28',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Yellow.ai', slug: 'yellow-ai', tagline: 'India-native conversational AI' },
     toolB: { name: 'Intercom', slug: 'intercom', tagline: 'Global customer support platform' },
     fields: [
@@ -411,7 +411,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-12',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Vapi', slug: 'vapi-ai', tagline: 'Developer-first voice AI' },
     toolB: { name: 'Bland.ai', slug: 'bland-ai', tagline: 'Enterprise voice AI platform' },
     fields: [
@@ -436,7 +436,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-28',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'Desktop AI code editor' },
     toolB: { name: 'Replit AI', slug: 'replit-ai', tagline: 'Cloud-native AI coding' },
     fields: [
@@ -461,7 +461,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-08',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'GitHub-native AI coding' },
     toolB: { name: 'Amazon CodeWhisperer', slug: 'amazon-codewhisperer', tagline: 'AWS-native AI coding' },
     fields: [
@@ -486,7 +486,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Arshdeep Singh, Chief AI Analyst',
     publishedAt: '2026-04-22',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Claude', slug: 'claude', tagline: 'Anthropic reasoning-focused AI' },
     toolB: { name: 'Google Gemini', slug: 'google-gemini', tagline: 'Google multimodal AI' },
     fields: [
@@ -511,7 +511,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Arshdeep Singh, Chief AI Analyst',
     publishedAt: '2026-04-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'ChatGPT', slug: 'chatgpt', tagline: 'OpenAI general-purpose AI' },
     toolB: { name: 'Perplexity', slug: 'perplexity', tagline: 'AI-powered search engine' },
     fields: [
@@ -536,7 +536,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-15',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Dify', slug: 'dify', tagline: 'No-code LLM platform' },
     toolB: { name: 'LangGraph', slug: 'langgraph', tagline: 'Code-first agent orchestration' },
     fields: [
@@ -561,7 +561,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-22',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Retell AI', slug: 'retell-ai', tagline: 'Developer-first voice AI' },
     toolB: { name: 'Bland.ai', slug: 'bland-ai', tagline: 'Enterprise voice platform' },
     fields: [
@@ -586,7 +586,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-01',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Yellow.ai', slug: 'yellow-ai', tagline: 'Enterprise conversational AI' },
     toolB: { name: 'Wati', slug: 'wati', tagline: 'WhatsApp-first customer platform' },
     fields: [
@@ -611,7 +611,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-10',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Intercom', slug: 'intercom', tagline: 'Modern customer support' },
     toolB: { name: 'Zendesk', slug: 'zendesk', tagline: 'Enterprise ticketing platform' },
     fields: [
@@ -636,7 +636,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-20',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'n8n', slug: 'n8n', tagline: 'Open-source workflow automation' },
     toolB: { name: 'Make', slug: 'make', tagline: 'Visual no-code automation' },
     fields: [
@@ -661,7 +661,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-12',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'n8n', slug: 'n8n', tagline: 'Open-source automation' },
     toolB: { name: 'Zapier', slug: 'zapier', tagline: 'No-code automation leader' },
     fields: [
@@ -686,7 +686,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-05',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'CrewAI', slug: 'crewai', tagline: 'Role-based multi-agent framework' },
     toolB: { name: 'LangGraph', slug: 'langgraph', tagline: 'Graph-based agent orchestration' },
     fields: [
@@ -711,7 +711,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-08',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Vapi', slug: 'vapi-ai', tagline: 'Developer-first voice AI' },
     toolB: { name: 'Retell AI', slug: 'retell-ai', tagline: 'Enterprise voice AI' },
     fields: [
@@ -736,7 +736,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-30',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'VS Code fork with deep context' },
     toolB: { name: 'Tabnine', slug: 'tabnine', tagline: 'Privacy-first AI coding' },
     fields: [
@@ -761,7 +761,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'GitHub-native AI coding' },
     toolB: { name: 'Tabnine', slug: 'tabnine', tagline: 'Privacy-first AI coding' },
     fields: [
@@ -786,7 +786,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-25',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Claude Code', slug: 'claude-code', tagline: 'Terminal-native AI coding' },
     toolB: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'IDE-integrated AI coding' },
     fields: [
@@ -811,7 +811,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-04-05',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Dify', slug: 'dify', tagline: 'Managed LLM app platform' },
     toolB: { name: 'Flowise', slug: 'flowise', tagline: 'Open-source LangChain builder' },
     fields: [
@@ -836,7 +836,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-20',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'AutoGen', slug: 'autogen', tagline: 'Conversational multi-agent' },
     toolB: { name: 'LangGraph', slug: 'langgraph', tagline: 'Graph-based orchestration' },
     fields: [
@@ -861,7 +861,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-15',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Yellow.ai', slug: 'yellow-ai', tagline: 'Enterprise conversational AI' },
     toolB: { name: 'Haptik', slug: 'haptik', tagline: 'India chatbot platform' },
     fields: [
@@ -886,7 +886,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-28',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Vapi', slug: 'vapi-ai', tagline: 'Developer-first voice AI' },
     toolB: { name: 'Synthflow', slug: 'synthflow', tagline: 'No-code voice AI for SMB' },
     fields: [
@@ -911,7 +911,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-06-01',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'Inline IDE completions' },
     toolB: { name: 'Windsurf', slug: 'windsurf', tagline: 'AI-native code editor' },
     fields: [
@@ -936,7 +936,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Arshdeep Singh, Chief AI Analyst',
     publishedAt: '2026-04-25',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'ChatGPT', slug: 'chatgpt', tagline: 'OpenAI general-purpose AI' },
     toolB: { name: 'Claude + Gemini', slug: 'claude-and-gemini', tagline: 'Anthropic + Google AI' },
     fields: [
@@ -961,7 +961,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-06-05',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Replit AI', slug: 'replit-ai', tagline: 'Cloud-native AI coding' },
     toolB: { name: 'Windsurf', slug: 'windsurf', tagline: 'Desktop AI code editor' },
     fields: [
@@ -986,7 +986,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-25',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Intercom', slug: 'intercom', tagline: 'Modern customer support' },
     toolB: { name: 'Freshdesk', slug: 'freshdesk', tagline: 'India-native support platform' },
     fields: [
@@ -1011,7 +1011,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-12',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'LangChain', slug: 'langchain', tagline: 'Agent orchestration framework' },
     toolB: { name: 'LlamaIndex', slug: 'llamaindex', tagline: 'Data indexing and RAG framework' },
     fields: [
@@ -1036,7 +1036,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-08',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'OpenAI API', slug: 'openai-api', tagline: 'GPT-4o and o-series models' },
     toolB: { name: 'Anthropic API', slug: 'anthropic-api', tagline: 'Claude 3.5 models' },
     fields: [
@@ -1061,7 +1061,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-05-30',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Vercel AI SDK', slug: 'vercel-ai-sdk', tagline: 'React/Next.js AI toolkit' },
     toolB: { name: 'LangChain', slug: 'langchain', tagline: 'Agent orchestration framework' },
     fields: [
@@ -1086,7 +1086,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-22',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'n8n', slug: 'n8n', tagline: 'Open-source workflow automation' },
     toolB: { name: 'Activepieces', slug: 'activepieces', tagline: 'Modern open-source automation' },
     fields: [
@@ -1111,7 +1111,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Karan Mehra, Enterprise Lead',
     publishedAt: '2026-05-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Yellow.ai', slug: 'yellow-ai', tagline: 'Modern conversational AI' },
     toolB: { name: 'Kore.ai', slug: 'kore-ai', tagline: 'Enterprise AI platform' },
     fields: [
@@ -1136,7 +1136,7 @@ export const comparisonPages: ComparisonPage[] = [
     siloId: 'comparisons',
     author: 'Priya Iyer, Core Engineer',
     publishedAt: '2026-04-18',
-    updatedAt: '2026-06-11',
+    updatedAt: '2026-06-13',
     toolA: { name: 'Cursor AI', slug: 'cursor-ai', tagline: 'VS Code fork with deep repo context' },
     toolB: { name: 'GitHub Copilot', slug: 'github-copilot', tagline: 'Native inline completions for VS Code' },
     fields: [

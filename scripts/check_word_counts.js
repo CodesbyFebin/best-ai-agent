@@ -1,18 +1,21 @@
 import fs from "node:fs";
-import { walkMarkdown, wordCount } from "./seo_utils.js";
+import path from "node:path";
+import { buildRouteMeta, walkMarkdown, wordCount } from "./seo_utils.js";
 
 const under1500 = [];
 const under2500 = [];
 const hardFailures = [];
-const shortFormCategories = new Set(["editorial", "longtail", "reports"]);
+const routeMap = buildRouteMeta();
+const indexableSources = new Set(Object.values(routeMap).map((entry) => entry.source).filter(Boolean));
 
 for (const file of walkMarkdown()) {
+  const source = path.relative(process.cwd(), file);
+  if (!indexableSources.has(source)) continue;
   const words = wordCount(fs.readFileSync(file, "utf8"));
-  const category = file.split("/content/")[1]?.split("/")[0] || "";
   const entry = `${words} ${file}`;
   if (words < 1500) {
     under1500.push(entry);
-    if (!shortFormCategories.has(category)) hardFailures.push(entry);
+    hardFailures.push(entry);
   }
   if (words < 2500) under2500.push(`${words} ${file}`);
 }

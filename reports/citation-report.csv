@@ -1,6 +1,2 @@
 citation_id,title,source,url,verification_status,confidence_level
-authority-pricing,"Cursor AI Pricing Guide",,https://cursor.ai/pricing,,undefined
-authority-conformance,"DPDP Act Compliance Framework",,https://dpdact.gov/guide,,undefined
-performance-latency,"AI Agent Latency Benchmark",,https://ai-performance.gitbook.com/latency,,undefined
-best-practices,"AI Agent Implementation Guide",,https://bestpractices.ai/guide,,undefined
-user-feedback,"User Satisfaction Survey Results",,https://bestaiagent.in/survey,,undefined
+ERROR: Could not load citations.ts

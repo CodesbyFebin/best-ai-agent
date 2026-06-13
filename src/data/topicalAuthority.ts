@@ -1,3 +1,5 @@
+import { publicUrl } from '../lib/siteUrl';
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -64,7 +66,7 @@ export interface AuthorityPageInfo {
   primaryKeyword: string; siloId: string; estimatedWords: number;
 }
 
-const D = '2026-06-11';
+const D = '2026-06-13';
 const DR = (slug: string, title: string, desc: string, pt: PageType, intent: SearchIntent, pri: number, kw: string, sw?: string[], st?: string[]): TopicalPage => ({
   slug, title, description: desc, h1: title, pageType: pt, intent, priority: pri,
   primaryKeyword: kw, secondaryKeywords: sw || [], schemaTypes: st || ['Article', 'FAQPage', 'BreadcrumbList'],
@@ -92,11 +94,15 @@ const clusters: TopicalCluster[] = [
   { id: 'ai-agent-core', name: 'AI Agent Core', description: 'Foundational definitions, benchmarks, trends, and authoritative rankings.', hubSlug: 'best-ai-agent', priority: 1.0, pages: [
     H('best-ai-agent', 'Best AI Agents in India 2026', 'Compare the best AI agents in India for coding, business automation, voice, builders, MCP, pricing, and alternatives.', 1.0, 'best ai agents', ['best ai agents india', 'top ai agents 2026']),
     P('best-ai-agents', 'Best AI Agents: Complete Rankings & Comparison', 'Comprehensive rankings of the best AI agents across all categories with India-specific pricing and DPDP compliance.', 0.98, 'best ai agents'),
+    P('ai-agents', 'AI Agents: Complete Guide, Categories & India Buyer Map', 'Complete AI agents landing page covering definitions, categories, use cases, pricing, directories, builders, autonomous agents, and India-specific buying guidance.', 0.97, 'ai agents', ['ai agents india', 'ai agent guide', 'ai agent platform']),
     P('what-is-an-ai-agent', 'What Is an AI Agent? Definition, Types & How They Work', 'An AI agent is software that can reason, use tools, follow goals, automate workflows, and complete tasks with limited human input.', 0.95, 'what is an ai agent', ['ai agent definition']),
+    P('autonomous-ai-agents', 'Autonomous AI Agents: Definition, Tools, Use Cases & Risks', 'Autonomous AI agents are goal-driven systems that can plan, use tools, take actions, and complete multi-step workflows with limited human input. Compare use cases, safeguards, and India deployment risks.', 0.94, 'autonomous ai agents', ['autonomous agents', 'agentic ai agents', 'ai agents automation']),
+    P('multi-agent-systems', 'Multi-Agent Systems: Frameworks, Architecture & Tooling Guide', 'Guide to multi-agent systems covering LangGraph, CrewAI, AutoGen, orchestration patterns, memory, MCP tools, human review, and Indian business use cases.', 0.91, 'multi agent systems', ['multi-agent ai', 'multi agent framework', 'agent orchestration']),
     G('ai-agent-examples', 'AI Agent Examples: 50+ Real-World Use Cases in 2026', 'Real-world AI agent examples across coding, business, voice, research, and automation with Indian use cases.', 0.90, 'ai agent examples'),
     G('ai-agent-use-cases', 'AI Agent Use Cases: Business, Coding, Voice & Automation', 'Comprehensive guide to AI agent use cases for Indian startups, SMEs, developers, and enterprises.', 0.88, 'ai agent use cases'),
     G('ai-agent-trends', "AI Agent Trends 2026: What's Changing", 'Latest AI agent trends: multi-agent systems, MCP, agentic RAG, voice AI shifts, and India-market developments.', 0.85, 'ai agent trends 2026'),
     G('ai-agent-news', 'AI Agent News: Latest Developments & Updates', 'Weekly AI agent news covering product launches, funding, MCP developments, and India-market updates.', 0.82, 'ai agent news'),
+    G('blog', 'AI Agent Blog: News, Guides, Comparisons & Market Updates', 'BestAIAgent.in blog hub for AI agent news, comparisons, market updates, tutorials, pricing changes, MCP ecosystem notes, and India-focused buyer insights.', 0.72, 'ai agent blog', ['ai agent news', 'ai agent guides']),
     P('ai-agent-market-map', 'AI Agent Market Map 2026: Top 500 AI Agents by Category', 'Citation-ready AI agent market map covering coding, research, voice, sales, marketing, MCP, open source, and enterprise categories.', 0.92, 'ai agent market map', ['top 500 ai agents', 'ai agent ecosystem map']),
     P('top-500-ai-agents-database', 'Top 500 AI Agents Database: Complete Directory', 'Database-style index of AI agents categorized by use case, category, pricing visibility, verification status, and India relevance.', 0.91, 'top 500 ai agents', ['ai agent database']),
     P('ai-agent-benchmarks', 'AI Agent Benchmarks: SWE-bench, GAIA & Metrics', 'Comprehensive AI agent benchmark analysis: SWE-bench, GAIA, MMLU, and custom India-focused metrics.', 0.87, 'ai agent benchmarks'),
@@ -125,6 +131,7 @@ const clusters: TopicalCluster[] = [
   ]},
   { id: 'business-ai-agents', name: 'Business AI Agents', description: 'Workflow automation, CRM, sales, support, finance, and enterprise AI agent platforms.', hubSlug: 'business-ai-hub', priority: 0.92, pages: [
     H('business-ai-hub', 'Business AI Agents Hub', 'AI agents for Indian SMEs, startups, and enterprises covering CRM, sales, support, WhatsApp, and workflow automation.', 0.92, 'business ai agents'),
+    P('business-ai-agents', 'Business AI Agents: Best Tools for Automation, Support & Sales', 'Compare business AI agents for Indian startups, SMEs, agencies, and enterprises across sales, support, CRM, WhatsApp, finance, marketing, and workflow automation.', 0.95, 'business ai agents', ['ai agents for business', 'business automation ai agents', 'enterprise ai agents']),
     P('ai-agents-for-business', 'AI Agents for Business: Complete Guide for 2026', 'Comprehensive guide to AI agents for business automation, CRM, sales, support, and workflow operations.', 0.93, 'ai agents for business'),
     P('ai-agents-for-enterprises', 'AI Agents for Enterprise: Procurement & Scale Guide', 'Enterprise AI agent evaluation covering procurement, security, DPDP compliance, and scale.', 0.90, 'ai agents for enterprises'),
     P('ai-agents-for-smes', 'AI Agents for Indian SMEs: Budget-Friendly Automation', 'Best AI agents for Indian SMEs with affordable pricing, WhatsApp integration, and Hindi support.', 0.91, 'ai agents for smes'),
@@ -138,6 +145,7 @@ const clusters: TopicalCluster[] = [
     P('ai-agents-for-healthcare', 'AI Agents for Healthcare: Appointment & Patient Support', 'AI agents for Indian healthcare: appointment booking, patient support, and health data compliance.', 0.78, 'ai agents for healthcare'),
     P('ai-agents-for-hr', 'AI Agents for HR: Recruitment, Onboarding & Employee Support', 'AI agents for HR: recruitment screening, onboarding automation, and employee support.', 0.77, 'ai agents for hr'),
     P('ai-agents-for-procurement', 'AI Agents for Procurement: Vendor Management & PO Automation', 'AI agents for procurement: vendor comparison, PO automation, and GST invoice processing.', 0.75, 'ai agents for procurement'),
+    P('ai-automation-agency', 'AI Automation Agency: Services, Tools, Pricing & India Guide', 'Guide for buyers comparing AI automation agencies, implementation partners, no-code agent builders, workflow automation, WhatsApp automation, and custom AI agent delivery in India.', 0.88, 'ai automation agency', ['ai automation services', 'ai automation agency india', 'ai agent agency']),
     P('yellow-ai-for-enterprise-support', 'Yellow.ai for Enterprise Support: WhatsApp, Voice & DPDP', 'Yellow.ai enterprise support workflows: WhatsApp automation, Hindi/Hinglish routing, UPI, and DPDP controls.', 0.77, 'yellow ai enterprise support'),
     P('intercom-for-ai-support', 'Intercom for AI Support: Fin, Helpdesk & Knowledge Base Automation', 'Intercom AI support workflows: Fin chatbot, helpdesk automation, knowledge base answers, and escalation.', 0.76, 'intercom ai support'),
     P('best-ai-agent-for-ecommerce', 'Best AI Agent for E-Commerce in India', 'AI agents for Indian e-commerce: product catalog, order management, WhatsApp support, and inventory.', 0.82, 'best ai agent for ecommerce'),
@@ -150,6 +158,7 @@ const clusters: TopicalCluster[] = [
     P('best-ai-agent-creator', 'Best AI Agent Creator: Visual & Code-First Platforms', 'AI agent creator platforms: visual builders, code-first frameworks, and hybrid approaches.', 0.85, 'best ai agent creator'),
     P('best-ai-agent-maker', 'Best AI Agent Maker: Drag-and-Drop Agent Building', 'Drag-and-drop AI agent makers: Flowise, Dify, and no-code platforms.', 0.84, 'best ai agent maker'),
     P('best-ai-agent-platform', 'Best AI Agent Platform: Enterprise & Startup Options', 'AI agent platforms: managed hosting, self-hosted, and hybrid deployment.', 0.86, 'best ai agent platform'),
+    P('custom-ai-agent-development', 'Custom AI Agent Development: India Services, Cost & Build Guide', 'Custom AI agent development guide for Indian businesses covering discovery, architecture, MCP integrations, RAG, workflow automation, deployment, DPDP review, and ROI.', 0.89, 'custom ai agent development', ['custom ai agent', 'ai agent development services', 'build custom ai agent']),
     P('best-ai-agent-app-builder', 'Best AI Agent App Builder: No-Code to Production', 'Build AI agent apps without code: platforms, templates, and India-specific integrations.', 0.83, 'best ai agent app builder'),
     P('best-ai-agent-workflow-builder', 'Best AI Agent Workflow Builder: Visual Automation', 'Visual AI workflow builders: n8n, Make, Flowise, and Dify.', 0.84, 'best ai agent workflow builder'),
     P('best-ai-agent-no-code-platform', 'Best No-Code AI Agent Platform in 2026', 'No-code AI agent platforms: Flowise, Dify, and managed platforms with India pricing.', 0.87, 'best no code ai agent platform'),
@@ -289,6 +298,7 @@ const clusters: TopicalCluster[] = [
   ]},
   { id: 'free-ai-agents', name: 'Free AI Agents', description: 'Free and open-source AI agents, builders, voice agents, coding agents, and business automation tools.', hubSlug: 'free-ai-agents-hub', priority: 0.84, pages: [
     H('free-ai-agents-hub', 'Free AI Agents Hub', 'Free and open-source AI agents, builders, voice agents, coding agents, and business automation tools.', 0.84, 'free ai agents'),
+    P('free-ai-agents', 'Free AI Agents: Best Free, Freemium & Open-Source Options', 'Compare free AI agents, freemium AI tools, open-source agent frameworks, free coding agents, free voice agents, and budget-friendly automation options for Indian teams.', 0.91, 'free ai agents', ['best free ai agents', 'free ai agent tools', 'free ai automation agents']),
     P('best-free-ai-agents', 'Best Free AI Agents in 2026: No-Cost Options', 'Best free AI agents: Flowise, Dify, CrewAI, and open-source options with deployment guides.', 0.85, 'best free ai agents'),
     P('best-free-ai-coding-agents', 'Best Free AI Coding Agents: Open-Source Copilots', 'Free AI coding agents: Codeium, Tabnine free tier, and open-source alternatives.', 0.82, 'best free ai coding agents'),
     P('best-free-ai-agent-builder', 'Best Free AI Agent Builder: No-Code Options', 'Free AI agent builders: Flowise, Dify, and n8n free tiers.', 0.83, 'best free ai agent builder'),
@@ -323,6 +333,8 @@ const clusters: TopicalCluster[] = [
   ]},
   { id: 'directories', name: 'Directories', description: 'Comprehensive directories of AI agents organized by category with filters, pricing, and ratings.', hubSlug: 'ai-agent-directory', priority: 0.80, pages: [
     DIR('ai-agent-directory', 'AI Agent Directory: Browse All Tools', 'Browse all AI agents: coding, business, voice, builders, and more with filters.', 0.82, 'ai agent directory'),
+    DIR('ai-agent-marketplace', 'AI Agent Marketplace: Compare Tools, Builders, Agents & Services', 'Marketplace-style directory for AI agents, agent builders, automation tools, voice agents, coding agents, MCP servers, services, and India-ready AI platforms.', 0.91, 'ai agent marketplace', ['ai agent tools marketplace', 'ai agents marketplace', 'agent marketplace']),
+    DIR('best-ai-tools', 'Best AI Tools: Agentic Software, Automation & Business AI Directory', 'Directory of the best AI tools across AI agents, coding copilots, voice AI, workflow automation, research agents, builders, and business automation platforms.', 0.90, 'best ai tools', ['ai tools directory', 'best ai software', 'ai automation tools']),
     H('directories-hub', 'AI Agent Directories: Browse by Category', 'Comprehensive directories of AI agents with filters, pricing, and ratings.', 0.79, 'ai agent directories'),
     DIR('coding-agents', 'Coding Agents Directory: AI Developer Tools', 'Directory of AI coding agents: Cursor, Copilot, Claude Code, Windsurf, Codex, and more.', 0.81, 'coding agents'),
     DIR('coding-agents-directory', 'Coding Agents Directory: AI Developer Tools', 'Directory of AI coding agents: Cursor, Copilot, Claude Code, Windsurf, and more.', 0.80, 'coding agents directory'),
@@ -388,6 +400,7 @@ const clusters: TopicalCluster[] = [
   { id: 'longtail-engine', name: 'Longtail Engine', description: 'Long-tail AI agent pages for specific stacks, industries, workflows, calculators, and ROI use cases.', hubSlug: 'longtail-hub', priority: 0.78, pages: [
     H('longtail-hub', 'AI Agent Longtail Hub: Niche Use Cases & Tools', 'Long-tail AI agent pages for specific stacks, industries, workflows, calculators, and ROI use cases.', 0.84, 'ai agent longtail'),
     H('longtail-ai-agent-hub', 'Longtail AI Agent Hub', 'Specific AI agent recommendations, cost calculators, and ROI tools for niche stacks and workflows.', 0.78, 'longtail ai agent'),
+    H('calculators', 'AI Agent Calculators: Cost, Pricing & ROI Tools', 'AI agent calculators for estimating monthly spend, Cursor costs, Vapi call pricing, Retell call-center costs, support automation ROI, GST impact, and India-focused procurement scenarios.', 0.86, 'ai agent calculators', ['ai agent cost calculator', 'ai agent roi calculator', 'ai agent pricing calculator']),
     C('ai-agent-cost-calculator', 'AI Agent Cost Calculator: Estimate Monthly Spend', 'Calculate AI agent costs: team size, usage, and features to estimate monthly INR spend.', 0.82, 'ai agent cost calculator'),
     C('cursor-cost-calculator', 'Cursor AI Cost Calculator: Team Pricing Estimator', 'Cursor AI cost calculator: monthly and annual costs based on team size and usage.', 0.80, 'cursor ai cost calculator'),
     C('vapi-cost-calculator', 'Vapi Cost Calculator: Voice Agent Pricing Estimator', 'Vapi cost calculator: voice agent costs based on call volume, duration, and features.', 0.78, 'vapi cost calculator'),
@@ -470,11 +483,38 @@ export function getAuthorityPageMetadata(slug: string) {
 }
 
 export function generateSiloBodyFromTopicalPage(page: TopicalPage): string {
-  const related = getRelatedPages(page.slug).map((item) => `- /${item.slug}`).join('\n');
+  const relatedPages = getRelatedPages(page.slug, 12);
+  const related = relatedPages.map((item) => `- [${item.title}](/${item.slug})`).join('\n') || '- [Best AI Agent](/best-ai-agent)\n- [AI Agent Directory](/ai-agent-directory)\n- [Methodology](/methodology)';
+  const topic = page.h1 || page.title;
+  const keyword = page.primaryKeyword || topic.toLowerCase();
+  const cluster = page.clusterName || 'BestAIAgent.in topical authority';
+  const secondary = (page.secondaryKeywords || []).slice(0, 8).join(', ') || `${keyword} India, ${keyword} pricing, ${keyword} alternatives`;
+  const faqItems = [
+    [`What is ${topic}?`, page.description],
+    [`Who is ${topic} best for?`, `${topic} is best for Indian founders, developers, agencies, SMEs, enterprise teams, and AI consultants who need a practical decision framework instead of generic AI tool commentary.`],
+    [`What is the primary keyword for this page?`, `The primary keyword is "${keyword}". Related search concepts include ${secondary}.`],
+    [`How should Indian businesses evaluate ${keyword}?`, `Indian businesses should evaluate INR cost, GST invoice availability, DPDP Act 2023 responsibilities, data residency, support channels, integrations, and whether the workflow fits local users.`],
+    [`Does ${topic} require DPDP Act review?`, `Yes, if the workflow processes personal data such as chats, calls, CRM records, support tickets, lead details, HR records, or customer documents.`],
+    [`What pricing factors matter for ${keyword}?`, `Pricing depends on subscription seats, usage limits, API tokens, call minutes, workflow runs, storage, support plans, implementation services, forex fees, and GST treatment.`],
+    [`Can teams pay by UPI or Razorpay?`, `Some India-first vendors may support UPI, Razorpay, cards, or invoice payments. Many global SaaS products rely on international cards or annual invoices, so payment support should be verified before purchase.`],
+    [`Is Hindi or Hinglish support important for this topic?`, `Hindi, Hinglish, and regional-language support matter when the workflow touches Indian customers, field sales, call centers, WhatsApp journeys, or support teams.`],
+    [`How does this topic connect to MCP?`, `MCP matters when an AI agent must connect safely to tools, files, databases, APIs, browsers, or internal systems through standardized server integrations.`],
+    [`What alternatives should be compared?`, `Compare adjacent tools, open-source frameworks, managed SaaS platforms, no-code builders, and manual workflow automation before committing to one solution.`],
+    [`What is the biggest implementation risk?`, `The biggest risk is usually over-automation without permissions, logging, human review, fallback paths, and clear ownership of failures.`],
+    [`How should a startup pilot this?`, `Start with one measurable workflow, use non-sensitive data, define success metrics, test with Indian examples, and expand only after quality and cost are predictable.`],
+    [`How should an enterprise evaluate this?`, `Enterprises should review SSO, RBAC, audit logs, DPA terms, data retention, vendor security documents, procurement fit, SLA support, and DPDP obligations.`],
+    [`What internal links should readers follow next?`, `Readers should follow the parent hub, related reviews, comparisons, pricing pages, alternatives, tutorials, glossary pages, MCP pages, and research reports linked from this guide.`],
+    [`Does BestAIAgent.in use affiliate links on pages like this?`, `Some commercial pages may include affiliate links. Rankings remain independent and are based on editorial methodology, not commissions.`],
+    [`How often should this page be reviewed?`, `Major AI agent pages should be reviewed monthly or quarterly because pricing, model quality, integrations, policies, and product limits can change quickly.`],
+    [`Can this page be cited by AI search engines?`, `Yes. The page is structured with direct answers, definitions, comparison sections, entity relationships, FAQs, and schema recommendations to support AI Overview and LLM extraction.`],
+    [`What sources should be checked before buying?`, `Check official vendor documentation, pricing pages, changelogs, security pages, status pages, support policies, and independent implementation notes before making a purchase.`],
+    [`What is the final decision rule?`, `Choose the option that solves a measurable workflow, fits the team's skills, keeps data risk controlled, has predictable cost, and can be monitored after deployment.`],
+    [`What should readers do after reading this guide?`, `Shortlist two or three options, compare them against the 42-point framework, run a small pilot, verify pricing and compliance, then document rollout controls.`],
+  ];
   return `
 ## Quick Answer
 
-${page.description}
+${page.description} For Indian teams, the decision should also consider INR pricing, GST invoices, DPDP Act 2023 obligations, data residency, Hindi/Hinglish needs, WhatsApp workflows, and practical implementation effort.
 
 ## Key Takeaways
 
@@ -482,18 +522,158 @@ ${page.description}
 - This page is designed for ${page.intent} search intent.
 - It connects to related reviews, comparisons, pricing guides, alternatives, tutorials, and glossary entries.
 - Indian buyers should evaluate INR pricing, GST invoices, DPDP Act readiness, WhatsApp workflows, and local implementation support.
+- The best choice is the one that solves a measurable workflow with clear ownership, logs, guardrails, and rollback paths.
+- Avoid buying or deploying AI agents only because they are popular; test them against real Indian data, payment, procurement, and language constraints.
+- Use the BestAIAgent.in 42-point scoring framework to compare capability, reliability, usability, security, India fit, and ROI.
+
+## Executive Summary
+
+${topic} should be evaluated as a practical operating decision, not just an SEO keyword or software category. The strongest page for this topic needs to define the entity clearly, explain who it helps, compare alternatives, discuss pricing and procurement, show implementation steps, and flag security or compliance risks. For India, the evaluation becomes more specific: finance teams need INR estimates and GST invoice clarity, customer-facing teams need Hindi, Hinglish, and WhatsApp compatibility, and security teams need DPDP-aware data handling.
+
+BestAIAgent.in treats ${keyword} as part of a broader AI agent decision graph. That means the topic connects to tools, categories, alternatives, pricing pages, tutorials, glossary definitions, MCP infrastructure, and research reports. A useful page should help a reader move from "what is this?" to "which option should we pilot?" without needing ten more generic searches.
+
+## What Is ${topic}?
+
+${topic} refers to ${page.description.charAt(0).toLowerCase()}${page.description.slice(1)} In the BestAIAgent.in taxonomy, it belongs to the ${cluster} cluster and is mapped to the primary keyword "${keyword}". Related entities include AI agents, agentic AI, AI automation, RAG, MCP, tool use, function calling, workflow automation, voice agents, coding agents, no-code builders, and multi-agent systems where relevant.
 
 ## Why This Topic Matters
 
-${page.description}
+${page.description} It matters because buyers increasingly need AI systems that can do more than generate text. They need systems that can retrieve context, call tools, update records, summarize evidence, trigger workflows, escalate to humans, and operate within cost and compliance boundaries.
+
+For Indian startups, the business case is usually speed and leverage. For SMEs, it is often lower support load, faster response time, better lead follow-up, or cleaner operations. For agencies, it is repeatable delivery. For enterprises, it is governance, procurement, integration depth, and risk control.
+
+## Features To Evaluate
+
+| Feature area | What to check | Why it matters |
+| --- | --- | --- |
+| Workflow fit | Does it solve a specific job rather than a vague automation idea? | Prevents tool sprawl and weak ROI. |
+| Integrations | CRM, helpdesk, WhatsApp, GitHub, Slack, databases, APIs, MCP servers | Determines whether the agent can act in real systems. |
+| Control layer | Permissions, approvals, logs, human review, rollback | Reduces operational and compliance risk. |
+| Language support | English, Hindi, Hinglish, and regional language handling | Critical for Indian support, sales, and voice workflows. |
+| Pricing model | Seats, usage, credits, tokens, minutes, storage, support | Prevents surprise bills after pilot success. |
+| Deployment model | SaaS, self-hosted, VPC, India cloud regions, hybrid | Affects data residency, latency, and governance. |
+| Documentation | API docs, examples, SDKs, tutorials, changelogs | Helps teams implement without vendor dependency. |
+
+## Benefits
+
+The main benefit of ${keyword} is better decision quality around a fast-changing AI category. A strong evaluation can reduce research time, prevent unsuitable purchases, and guide teams toward a smaller shortlist. Practical benefits often include faster implementation, clearer stakeholder alignment, more accurate cost planning, and better governance before production rollout.
+
+For customer-facing workflows, the benefit may be shorter response times, higher deflection, better lead qualification, and consistent follow-up. For developer workflows, it may be faster code navigation, test generation, refactoring, and documentation. For operations teams, it may be task routing, CRM hygiene, invoice processing, or internal knowledge retrieval.
+
+## Limitations
+
+The biggest limitation is that ${keyword} can look more mature in demos than it is in production. AI agents may fail on edge cases, misunderstand ambiguous prompts, expose data if permissions are too broad, or create hidden costs through usage-based pricing. Teams should also avoid assuming that a vendor supports India-specific procurement, GST invoices, UPI, Razorpay, WhatsApp, Hindi, or data residency unless those claims are verified directly.
+
+## Pricing And Procurement
+
+Pricing for this topic can vary from free or open-source options to paid SaaS subscriptions, usage-based API bills, and enterprise contracts. When a vendor lists USD pricing, Indian teams should estimate INR using current exchange rates and then consider GST or reverse-charge accounting where applicable. A simple USD 20 per user per month plan can become materially higher after forex markup, taxes, and payment fees.
+
+Procurement teams should verify whether the vendor supports GST-compliant invoices, purchase orders, annual contracts, card billing, UPI, Razorpay, bank transfer, or reseller billing. Global vendors may not support all India-specific payment needs, while India-first vendors may be easier for finance approval.
 
 ## India-Specific Considerations
 
 Indian startups, SMEs, agencies, and enterprise buyers should evaluate this topic through local pricing, payment, compliance, and procurement lenses. Important checks include INR pricing, GST invoice support, DPDP Act 2023 data handling, Indian cloud region availability, WhatsApp workflow compatibility, UPI/Razorpay relevance, and Hinglish or regional language support where applicable.
 
+## Security And Compliance
+
+Security review should cover data input, data storage, model-provider sharing, logging, secrets, access control, and output review. If the page topic involves customer records, support tickets, voice calls, CRM data, HR data, financial data, or healthcare data, teams should involve legal or security reviewers before production use.
+
+Compliance checks should include DPDP Act 2023 purpose limitation, consent where required, data minimization, retention, deletion workflows, grievance handling, and vendor processing terms. GDPR, SOC 2, ISO 27001, and DPA documents can be useful signals, but they do not automatically solve India-specific deployment obligations.
+
+## Benchmarks And Performance
+
+Use real benchmarks only when they are publicly available, reproducible, and relevant to the use case. For coding agents, this may include SWE-bench-style tasks, test pass rates, code review quality, and repository-context performance. For voice agents, check latency, interruption handling, transcription accuracy, call completion, and escalation success. For business agents, measure deflection, cycle time, CRM accuracy, and human review rate.
+
+If no reliable public benchmark exists, run a small internal benchmark with representative Indian examples. Include names, currencies, GST terms, local addresses, Hindi/Hinglish phrases, WhatsApp-style messages, and realistic failure cases.
+
+## Implementation Checklist
+
+1. Define the business workflow, owner, users, and measurable success metric.
+2. Identify data sources, permissions, APIs, and systems the agent can access.
+3. Decide whether SaaS, self-hosted, India-region cloud, or hybrid deployment is appropriate.
+4. Verify pricing, GST invoice availability, procurement terms, and expected monthly usage.
+5. Review DPDP, security, retention, logging, and deletion requirements.
+6. Build a test set with real workflow examples and safe synthetic edge cases.
+7. Pilot with a small group, compare against a manual baseline, and document failures.
+8. Add human approval for high-risk actions.
+9. Monitor accuracy, latency, cost, escalation rate, and user satisfaction.
+10. Review the setup monthly or quarterly as models, pricing, and integrations change.
+
+## Tutorial Workflow
+
+Start by choosing one narrow workflow. For example, a support team might test an agent on ten common questions, a development team might test codebase Q&A and refactoring, or a sales team might test lead qualification and CRM updates. Connect only the minimum required systems, keep sensitive data out of the first test, and record every output. After the first week, compare time saved, error rate, escalation rate, and cost against the old workflow. Expand only when the pilot proves both value and control.
+
+## Best-Fit User Profiles
+
+| User profile | Best fit when | Watch out for |
+| --- | --- | --- |
+| Indian startup | Speed, low setup effort, and low monthly cost matter most | Hidden usage fees and weak documentation |
+| SME | WhatsApp, CRM, support, and invoice workflows matter | Over-automation without staff training |
+| Agency | Repeatable client delivery and reusable workflows matter | Client data separation and vendor lock-in |
+| Developer team | APIs, SDKs, GitHub, MCP, and self-hosting matter | Poor evaluation of security boundaries |
+| Enterprise | Governance, procurement, SSO, audit logs, and SLAs matter | Slow rollout without clear owner |
+
+## Realistic Use-Case Scenarios
+
+### Startup Scenario
+
+A Bengaluru SaaS startup may use this guide to shortlist a coding agent, support automation tool, and workflow builder. The team should estimate monthly INR cost, verify GitHub or Slack integrations, and run a one-week pilot before buying annual seats.
+
+### SME Scenario
+
+A Delhi NCR service business may use the topic to evaluate WhatsApp lead qualification, appointment reminders, and support triage. The key checks are language support, escalation, GST invoicing, and whether staff can override the agent.
+
+### Enterprise Scenario
+
+A Mumbai enterprise may use this page as part of a procurement packet. The team should request security documentation, DPA terms, audit logs, retention controls, SSO, and clarity on data processing regions before production use.
+
+## Entity Optimization
+
+- Entity name: ${topic}
+- Primary keyword: ${keyword}
+- Secondary keywords: ${secondary}
+- Category: ${cluster}
+- Related technologies: RAG, MCP, tool use, function calling, vector databases, workflow automation, AI voice agents, AI coding agents, no-code builders, LangGraph, CrewAI, Flowise, Dify, Cursor, GitHub Copilot, Vapi, Retell
+- Related page types: hub, review, comparison, pricing, alternative, tutorial, glossary, research report
+
+## Community Insights
+
+Community discussion should be used as directional evidence, not as a replacement for testing. Reddit, GitHub issues, Product Hunt, Hacker News, G2, and Capterra can reveal recurring praise, complaints, missing features, and adoption friction. Do not rely on isolated comments or unverifiable quotes.
+
+### What Users Usually Like
+
+Users typically value fast setup, clear documentation, flexible integrations, predictable pricing, and workflows that save measurable time.
+
+### What Users Usually Dislike
+
+Common complaints tend to involve unclear pricing, hallucinated outputs, weak debugging tools, rate limits, missing integrations, and poor enterprise controls.
+
+### Most Requested Features
+
+Requested improvements often include better observability, stronger permissions, more connectors, Hindi/Hinglish support, lower latency, clearer invoices, and easier self-hosting.
+
+### Community Verdict
+
+Treat community sentiment as an early-warning signal. Validate it with a controlled pilot, official documentation, and the BestAIAgent.in scoring framework.
+
 ## Evaluation Framework
 
 BestAIAgent.in evaluates this topic using the 42-point AI Agent Scoring Framework, covering product maturity, pricing transparency, technical depth, India fit, security posture, compliance readiness, ease of deployment, documentation quality, and real-world use-case alignment.
+
+## Common Mistakes
+
+- Choosing the most popular tool without mapping it to a measurable workflow.
+- Ignoring GST, forex markup, overages, and annual renewal terms.
+- Uploading sensitive data before reviewing permissions and retention.
+- Assuming DPDP readiness without checking consent, purpose, deletion, and vendor terms.
+- Skipping Hindi, Hinglish, WhatsApp, or regional-language tests for Indian customer workflows.
+- Measuring demo quality instead of production reliability.
+- Letting agents take irreversible actions without human approval.
+- Failing to compare open-source, SaaS, no-code, and custom-build alternatives.
+
+## Final Verdict
+
+${topic} is worth evaluating when it connects to a real workflow, a measurable outcome, and a controlled implementation plan. For India, the best page, tool, or strategy is the one that balances capability with procurement, compliance, language, support, and cost realities. Use this guide as a decision map, then verify details against official sources before purchase or deployment.
 
 ## Related Topics
 
@@ -501,21 +681,11 @@ ${related}
 
 ## FAQ
 
-### What is ${page.title}?
-
-${page.description}
-
-### Who should read this guide?
-
-This guide is useful for Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools.
-
-### How does BestAIAgent.in evaluate this topic?
-
-We use an editorial scoring system that compares technical quality, pricing, compliance, support, integrations, India readiness, and practical business usefulness.
+${faqItems.map(([question, answer], index) => `### ${index + 1}. ${question}\n\n${answer}`).join('\n\n')}
 
 ## Structured Data Recommendations
 
-Use Article, FAQPage, BreadcrumbList, and relevant schema types such as ItemList, Review, SoftwareApplication, HowTo, DefinedTerm, or CollectionPage depending on page intent.
+Use WebPage, Article or TechArticle, FAQPage, BreadcrumbList, and relevant schema types such as ItemList, Review, SoftwareApplication, Product, HowTo, DefinedTerm, Person, or Organization depending on page intent. Do not add fake ratings, fake reviews, fake benchmark claims, or unsupported aggregateReview fields.
 `.trim();
 }
 
@@ -527,7 +697,7 @@ export function generateDynamicPillarContent(slug: string): SiloPage {
     return {
       title: slug, slug, metaTitle: slug, metaDescription: slug, h1: slug,
       directAnswer: '', primaryKeyword: slug, siloId: 'reviews',
-      author: 'BestAIAgent.in', publishedAt: '2026-06-01', updatedAt: '2026-06-11',
+      author: 'BestAIAgent.in', publishedAt: '2026-06-01', updatedAt: '2026-06-13',
       bodySections: [], faqs: [], relatedPagesSlugs: [],
     };
   }
@@ -537,7 +707,7 @@ export function generateDynamicPillarContent(slug: string): SiloPage {
     title: meta.title, slug: meta.slug, metaTitle: meta.metaTitle,
     metaDescription: meta.metaDescription, h1: meta.h1, directAnswer: meta.directAnswer,
     primaryKeyword: meta.primaryKeyword, siloId: meta.siloId as 'reviews' | 'builders' | 'coding-agents' | 'frameworks' | 'business' | 'research' | 'mcp' | 'editorial',
-    author: 'Arshdeep Singh, Technical SEO lead', publishedAt: '2026-06-01', updatedAt: '2026-06-11',
+    author: 'Arshdeep Singh, Technical SEO lead', publishedAt: '2026-06-01', updatedAt: '2026-06-13',
     bodySections: [
       { heading: `1. Technical Deep-Dive into ${kwU}`, text: `Understanding ${kw} in the Indian enterprise and developer context. This analysis covers architecture, pricing, and deployment considerations.` },
       { heading: `2. India Localization & DPDP Compliance`, text: `Deploying ${kw} in India requires DPDP Act 2023 compliance, Mumbai-region data hosting, and consent management.` },
@@ -562,7 +732,7 @@ export function generateLlmsTxt(): string {
   let txt = '# BestAIAgent.in - Topical Authority Index\n\n';
   clusters.forEach(c => {
     txt += `## ${c.name}\n${c.description}\n`;
-    c.pages.forEach(p => { txt += `- [${p.title}](https://bestaiagent.in/${p.slug}) - ${p.pageType}\n`; });
+    c.pages.forEach(p => { txt += `- [${p.title}](${publicUrl(`/${p.slug}`)}) - ${p.pageType}\n`; });
     txt += '\n';
   });
   return txt;
@@ -570,7 +740,7 @@ export function generateLlmsTxt(): string {
 
 // Backward compatibility: old generateSitemap
 export function generateSitemap(type: 'ai-agent' | 'tool' | 'comparison' | 'main'): string {
-  const ts = '2026-06-11T05:22:24Z';
+  const ts = '2026-06-13T05:22:24Z';
   let urls: string[] = [];
   if (type === 'ai-agent') urls = allTopicalPages.map(p => p.slug);
   else if (type === 'tool') urls = ['cursor-ai', 'vapi-ai', 'crewai', 'yellow-ai', 'flowise'];
@@ -578,7 +748,7 @@ export function generateSitemap(type: 'ai-agent' | 'tool' | 'comparison' | 'main
   else urls = ['', 'best-ai-agent', 'coding-agents-hub', 'business-ai-hub', 'pricing-hub'];
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   urls.forEach(u => {
-    const link = u ? `https://bestaiagent.in/${u}` : 'https://bestaiagent.in/';
+    const link = publicUrl(u ? `/${u}` : '/');
     xml += `  <url>\n    <loc>${link}</loc>\n    <lastmod>${ts.slice(0, 10)}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${type === 'main' ? '1.0' : '0.8'}</priority>\n  </url>\n`;
   });
   xml += '</urlset>';

@@ -6,14 +6,14 @@ Generated: 2026-06-13
 
 | Asset | Status | Size |
 | --- | --- | --- |
-| content-index.json | present | 555.9 KB |
-| contentIndex.json | present | 555.9 KB |
+| content-index.json | present | 467.6 KB |
+| contentIndex.json | present | 467.6 KB |
 | entity-graph.json | present | 11.8 KB |
 | ai-index.json | present | 44.3 KB |
 | benchmark-index.json | present | 7.2 KB |
 | ranking-index.json | present | 8.2 KB |
-| tool-relationships.json | present | 8.1 KB |
-| knowledge-graph.json | present | 208.9 KB |
+| tool-relationships.json | present | 8.0 KB |
+| knowledge-graph.json | present | 187.2 KB |
 | llms.txt | present |  |
 | sitemap.xml | present |  |
 

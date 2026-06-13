@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const FEED_URL = 'https://bestaiagent.in/feed.xml';
-const SITE_URL = 'https://bestaiagent.in';
+const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
+const FEED_URL = `${SITE_URL}/feed.xml`;
 const SITE_NAME = 'BestAIAgent.in';
 
 const DIRECTORIES = [

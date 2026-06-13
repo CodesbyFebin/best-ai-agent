@@ -11,6 +11,7 @@ import {
   DriveFile,
   setAccessTokenInMemory
 } from '../lib/googleDriveService';
+import { publicUrl } from '../lib/siteUrl';
 import {
   Database,
   FolderPlus,
@@ -229,7 +230,7 @@ export default function GoogleDriveDashboard({ onBack, currentWeights }: GoogleD
     }
     content += `\n----------------------------------------------------\n`;
     content += `This file serves as your authenticated reference. Import these weights into our live tuner anytime to run automated SME and DPDP compliance audits.\n`;
-    content += `Platform URL: https://bestaiagent.in\n`;
+    content += `Platform URL: ${publicUrl()}\n`;
 
     const confirmed = window.confirm(`Do you want to save your customized weight scorecard report (${filename}) directly to your Google Drive?`);
     if (!confirmed) return;

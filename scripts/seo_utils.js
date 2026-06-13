@@ -5,8 +5,9 @@ import { execFileSync } from "node:child_process";
 export const ROOT = process.cwd();
 export const CONTENT_DIR = path.join(ROOT, "content");
 export const PUBLIC_DIR = path.join(ROOT, "public");
-export const SITE_URL = "https://bestaiagent.in";
-export const TODAY = "2026-06-11";
+export const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
+export const SITE_URL_PATTERN = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export const TODAY = "2026-06-13";
 
 const CATEGORY_LABELS = {
   alternatives: "Alternatives",
@@ -149,6 +150,21 @@ export const EDITORIAL_ROUTES = [
     description: "Full BestAIAgent.in review methodology covering features, pricing, usability, reliability, integrations, security, support, India relevance, MCP support, and AI workflow capability.",
   },
   {
+    path: "/compare",
+    title: "AI Agent Comparison Board",
+    description: "Interactive AI agent comparison board for comparing coding agents, voice agents, builders, business automation tools, pricing, India fit, and implementation readiness.",
+  },
+  {
+    path: "/ai-agent-advisor",
+    title: "AI Agent Advisor",
+    description: "BestAIAgent.in AI agent advisor for selecting tools by use case, budget, India requirements, DPDP considerations, and implementation complexity.",
+  },
+  {
+    path: "/google-drive-ai-agent-workspace",
+    title: "Google Drive AI Agent Workspace",
+    description: "Workspace for organizing AI agent research, Google Drive workflows, exports, checklists, and editorial assets for BestAIAgent.in.",
+  },
+  {
     path: "/privacy-policy",
     title: "Privacy Policy",
     description: "Privacy policy covering DPDP Act awareness, GDPR-style rights, cookies, analytics, contact forms, and data deletion requests.",
@@ -199,6 +215,26 @@ export const EDITORIAL_ROUTES = [
     description: "Glossary of AI agent terms including agentic workflows, MCP, RAG, tool use, memory, orchestration, DPDP, and AI automation.",
   },
   {
+    path: "/ai-agent-statistics",
+    title: "AI Agent Statistics 2026",
+    description: "AI agent statistics, market data, adoption signals, India trends, enterprise usage patterns, and AI automation growth indicators.",
+  },
+  {
+    path: "/industry-report",
+    title: "AI Agent Industry Report 2026",
+    description: "BestAIAgent.in AI agent industry report covering market trends, adoption patterns, pricing, India readiness, and enterprise AI agent deployment.",
+  },
+  {
+    path: "/ai-agent-cost-report",
+    title: "AI Agent Cost Report 2026",
+    description: "AI agent cost report with pricing models, INR planning, GST invoice notes, usage-based cost risks, and procurement guidance for Indian teams.",
+  },
+  {
+    path: "/ai-agent-adoption-report",
+    title: "AI Agent Adoption Report 2026",
+    description: "AI agent adoption report covering startup, SME, enterprise, developer, agency, and India-specific adoption trends.",
+  },
+  {
     path: "/editorial-policy",
     title: "Editorial Policy, Independence, Corrections, and Affiliate Disclosure",
     description: "BestAIAgent.in editorial policy covering independence, affiliate disclosure, evidence standards, corrections, pricing disclaimers, and conflicts of interest.",
@@ -221,8 +257,8 @@ export const EDITORIAL_ROUTES = [
   {
     path: "/about-editorial-team",
     canonicalPath: "/about",
-    title: "About Editorial Team",
-    description: "Canonical redirect to the BestAIAgent.in About page with editorial team, ownership, and transparency details.",
+    title: "About BestAIAgent.in Editorial Team",
+    description: "About BestAIAgent.in with editorial team, ownership, methodology, independence, and transparency details.",
   },
   {
     path: "/contact",
@@ -258,18 +294,18 @@ export const AUTHORS = [
 ];
 
 export const HOME_FAQS = [
-  ["What is the best AI agent in India in 2026?", "The best AI agent depends on the job. Cursor is a strong coding choice, Vapi and Retell fit voice workflows, Yellow.ai and Intercom suit business support, while Flowise, Dify, CrewAI, and LangGraph fit agent building."],
-  ["How does BestAIAgent.in score AI agents?", "BestAIAgent.in uses a 42-point editorial framework covering capability, ease of use, documentation, integrations, reliability, India fit, DPDP considerations, pricing transparency, and implementation readiness."],
-  ["Are INR prices exact?", "No. INR prices are estimates because exchange rates, taxes, usage tiers, and vendor plans can change. Buyers should confirm official prices, GST invoices, and procurement terms before purchase."],
-  ["Which AI agents are best for Indian SMEs?", "Indian SMEs typically need low setup effort, clear pricing, WhatsApp or CRM integration, support workflows, and invoice-friendly billing."],
-  ["Which AI agents are best for developers?", "Developers should compare Cursor, GitHub Copilot, Claude Code-style tools, CrewAI, LangGraph, Flowise, and Dify depending on whether they need coding assistance, agent orchestration, or workflow builders."],
-  ["Do AI agents support Hindi or Hinglish?", "Some voice and chat platforms may support Hindi, Hinglish, or regional-language workflows depending on the model, telephony stack, and vendor plan."],
-  ["What is DPDP Act relevance for AI agents?", "AI agents can process personal data in chats, calls, CRM notes, and support tickets, so Indian businesses should review consent, retention, access control, vendor terms, and deletion workflows."],
-  ["Do these tools support UPI or Razorpay?", "Many global SaaS tools rely on cards or invoices, while India-first vendors may support UPI, Razorpay, or GST-ready invoicing."],
-  ["What is the difference between AI agent builders and AI agents?", "AI agents perform tasks or decisions, while AI agent builders are platforms that help teams create custom agents with workflows, tools, memory, and integrations."],
-  ["Which pages should I read first?", "Start with the best AI agents guide, then visit the relevant hub for coding, business, voice, builders, pricing, alternatives, tutorials, glossary, MCP, or free tools."],
-  ["Does BestAIAgent.in use affiliate links?", "Some pages may include affiliate links, but rankings remain independent and based on editorial methodology."],
-  ["How often are pages reviewed?", "Major pages show freshness signals such as last reviewed and pricing check dates, and pricing, features, integrations, and compliance notes should be rechecked periodically."],
+  ["What is the best AI agent in India?", "The best AI agent depends on the use case. Cursor AI is strong for coding, Vapi and Retell are strong for voice automation, Yellow.ai and Intercom fit customer support, while Flowise, Dify, CrewAI, and LangGraph fit custom agent building."],
+  ["Which AI agent is best for coding?", "Cursor AI is usually the strongest coding-agent starting point for Indian developer teams, while GitHub Copilot, Claude Code-style tools, and Windsurf are important alternatives to compare by IDE fit, pricing, and code-review workflow."],
+  ["What is the best free AI agent?", "The best free AI agent depends on whether you need coding, automation, voice, or builder workflows. Flowise, Dify, CrewAI, and open-source frameworks are useful starting points, but free tiers often require technical setup or have usage limits."],
+  ["Which AI agent is best for Indian businesses?", "Indian businesses should prioritize clear INR cost estimates, WhatsApp or CRM integration, GST invoice availability, support SLAs, DPDP-aware data handling, and team onboarding effort before choosing an AI agent."],
+  ["Which AI agent supports WhatsApp automation?", "Yellow.ai, Intercom-style support platforms, some voice AI stacks, and workflow tools may support WhatsApp workflows depending on vendor integrations, WhatsApp Business API setup, template approvals, and escalation requirements."],
+  ["What is the best AI agent builder?", "Flowise and Dify are useful visual builders, while CrewAI and LangGraph are stronger developer frameworks for custom multi-agent workflows. The best builder depends on engineering skill, hosting preference, and integration depth."],
+  ["Are AI agents DPDP compliant?", "AI agents are not automatically DPDP compliant. Indian businesses should review consent, purpose limitation, access control, data retention, deletion workflows, vendor processing terms, and whether personal data is handled safely."],
+  ["How much do AI agents cost in India?", "AI agent costs in India vary from free open-source tools to paid SaaS subscriptions and usage-based API bills. INR estimates depend on exchange rates, GST treatment, user seats, call minutes, messages, tokens, and vendor plan limits."],
+  ["Is Cursor better than GitHub Copilot?", "Cursor is often better for AI-native IDE workflows and repo-level coding assistance, while GitHub Copilot remains strong for developers already embedded in GitHub and supported IDEs. The better choice depends on workflow and budget."],
+  ["What is MCP in AI agents?", "MCP, or Model Context Protocol, is a protocol for connecting AI systems to tools, data, and external context in a more standardized way. It matters when teams need maintainable agent integrations."],
+  ["Which AI agent is best for startups?", "Startups should usually shortlist tools with fast setup, low monthly cost, good documentation, practical integrations, and clear ROI. Coding agents, no-code builders, and support automation agents are common first deployments."],
+  ["Which AI agent is best for customer support?", "Yellow.ai, Intercom, voice AI agents such as Vapi or Retell, and workflow builders can all support customer-service automation. The right choice depends on WhatsApp needs, ticket volume, language support, and escalation design."],
 ];
 
 export const HOME_TOP_TOOLS = [
@@ -359,7 +395,7 @@ export function categoryFromFile(filePath) {
 
 export function schemaTypesFor(category, slug) {
   const types = ["Article", "BreadcrumbList"];
-  if (category === "reviews" || category === "tools") types.push("Review", "SoftwareApplication", "FAQPage");
+  if (category === "reviews" || category === "tools") types.push("SoftwareApplication", "FAQPage");
   if (["pillars", "comparisons", "alternatives", "pricing", "free", "buyers-guides", "entity", "india-geo", "directories", "reddit"].includes(category)) types.push("ItemList", "FAQPage");
   if (category === "tutorials" || slug.startsWith("how-to-")) types.push("HowTo", "FAQPage");
   if (category === "glossary" || category === "mcp" || category === "research" || category === "guides" || category === "entity") types.push("FAQPage");
@@ -498,16 +534,6 @@ export function pageSchema(meta) {
       inLanguage: "en-IN",
     });
   }
-  if (meta.schemaTypes.includes("Review")) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "@id": `${SITE_URL}${meta.path}#review`,
-      itemReviewed: { "@type": "SoftwareApplication", name: meta.entityName, applicationCategory: "AI Agent Software" },
-      author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team" },
-      reviewBody: meta.description,
-    });
-  }
   if (meta.schemaTypes.includes("ItemList")) {
     schemas.push({
       "@context": "https://schema.org",
@@ -564,6 +590,8 @@ export function buildContentEntries() {
     const category = categoryFromFile(filePath);
     const rawSlug = cleanSlug(field(markdown, "URL Slug"), filePath);
     if (path.basename(filePath) === "index.md") return [];
+    const words = wordCount(markdown);
+    if (words < 1500) return [];
 
     const slug = rawSlug;
     const pathName = contentRoute(category, slug);
@@ -580,7 +608,7 @@ export function buildContentEntries() {
     const linkSource = markdown.split(/^## Structured Data Recommendations\s*$/m)[0];
     const related = [
       ...linkSource.matchAll(/\]\((\/[a-z0-9][a-z0-9/-]+)(?:[)#?][^)]*)?\)/g),
-      ...linkSource.matchAll(/https:\/\/bestaiagent\.in(\/[a-z0-9][a-z0-9/-]+)/g),
+      ...linkSource.matchAll(new RegExp(`${SITE_URL_PATTERN}(\\/[a-z0-9][a-z0-9/-]+)`, "g")),
     ]
       .map((match) => match[1].replace(/^\//, "").replace(/\/$/, ""))
       .filter(Boolean);
@@ -595,7 +623,7 @@ export function buildContentEntries() {
       description,
       h1: pageH1,
       entityName: pageH1.replace(/\s*[–-]\s*.*$/, "").replace(/\s+Review$/i, "").trim() || titleCase(slug),
-      words: wordCount(markdown),
+      words,
       lastmod: TODAY,
       changefreq: ["core", "pricing", "reviews", "tools"].includes(category) ? "weekly" : "monthly",
       priority: category === "core" ? "0.95" : category === "pillars" ? "0.90" : "0.80",
@@ -667,11 +695,108 @@ export function readTopicalPagesSnapshot() {
       "import { allTopicalPages } from './src/data/topicalAuthority.ts';",
       "process.stdout.write(JSON.stringify(allTopicalPages));",
     ].join("\n");
-    return JSON.parse(execFileSync(tsxBin, ["-e", code], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }));
+    return JSON.parse(execFileSync(tsxBin, ["-e", code], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], maxBuffer: 1024 * 1024 * 50 }));
   } catch (error) {
     console.warn(`Unable to load topicalAuthority.ts snapshot: ${error.message}`);
     return [];
   }
+}
+
+function readTsSnapshot(importLine, expression, label) {
+  const tsxBin = path.join(ROOT, "node_modules", ".bin", process.platform === "win32" ? "tsx.cmd" : "tsx");
+  if (!fs.existsSync(tsxBin)) return [];
+  try {
+    const code = [
+      importLine,
+      `process.stdout.write(JSON.stringify(${expression}));`,
+    ].join("\n");
+    return JSON.parse(execFileSync(tsxBin, ["-e", code], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }));
+  } catch (error) {
+    console.warn(`Unable to load ${label} snapshot: ${error.message}`);
+    return [];
+  }
+}
+
+export function readComparisonPagesSnapshot() {
+  return readTsSnapshot("import { comparisonPages } from './src/data/comparisons.ts';", "comparisonPages", "comparisonPages.ts");
+}
+
+export function readSiloPagesSnapshot() {
+  return readTsSnapshot(
+    "import { siloPages } from './src/data/db/pages.ts';",
+    "siloPages.map(({ title, slug, metaTitle, metaDescription, h1, directAnswer, primaryKeyword, siloId, category, updatedAt, lastReviewed, nextReview, priority, schemaTypes, faqs, relatedPagesSlugs }) => ({ title, slug, metaTitle, metaDescription, h1, directAnswer, primaryKeyword, siloId, category, updatedAt, lastReviewed, nextReview, priority, schemaTypes, faqs, relatedPagesSlugs }))",
+    "siloPages"
+  );
+}
+
+export function buildComparisonEntries(existingPaths = new Set()) {
+  return readComparisonPagesSnapshot()
+    .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`))
+    .map((page) => {
+      const meta = {
+        source: "generated-comparison-data",
+        category: "comparisons",
+        categoryLabel: "Comparisons",
+        slug: page.slug,
+        path: `/${page.slug}`,
+        aliases: [],
+        title: page.metaTitle || `${page.title} | BestAIAgent.in`,
+        description: page.metaDescription || page.directAnswer,
+        h1: page.h1 || page.title,
+        entityName: page.h1 || page.title,
+        words: 2500,
+        lastmod: page.updatedAt || TODAY,
+        changefreq: "weekly",
+        priority: "0.82",
+        ogImage: ogImageFor("comparisons", page.slug, `/${page.slug}`),
+        ogImageAlt: ogImageAltFor("comparisons", page.slug, page.title),
+        schemaTypes: ["WebPage", "Article", "BreadcrumbList", "ItemList", "FAQPage"],
+        faqs: [
+          { question: `Which is better: ${page.toolA?.name || "tool A"} or ${page.toolB?.name || "tool B"}?`, answer: page.directAnswer || page.verdict },
+          { question: `Who should read ${page.h1 || page.title}?`, answer: "Indian developers, founders, agencies, and enterprise buyers comparing AI agents by pricing, workflow fit, integrations, security, and implementation effort should read this comparison." },
+          { question: "How does BestAIAgent.in decide the winner?", answer: "We compare capabilities, pricing, India fit, implementation complexity, documentation, reliability, privacy, and practical ROI using our editorial scoring framework." },
+        ],
+        related: page.relatedSlugs || [],
+        ...trustSignalsFor("comparisons", "generated-comparison-data"),
+      };
+      meta.schemas = pageSchema(meta);
+      return meta;
+    });
+}
+
+export function buildSiloPageEntries(existingPaths = new Set()) {
+  return readSiloPagesSnapshot()
+    .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`))
+    .map((page) => {
+      const category = page.siloId || page.clusterId || "guides";
+      const meta = {
+        source: "generated-app-silo",
+        category,
+        categoryLabel: page.category || CATEGORY_LABELS[category] || titleCase(category),
+        slug: page.slug,
+        path: `/${page.slug}`,
+        aliases: [],
+        title: page.metaTitle || `${page.title} | BestAIAgent.in`,
+        description: page.metaDescription || page.directAnswer || `${page.title} with India-focused AI agent analysis, pricing, compliance, comparisons, and implementation guidance.`,
+        h1: page.h1 || page.title,
+        entityName: (page.h1 || page.title).replace(/\s*[–-]\s*.*$/, "").trim(),
+        words: 2500,
+        lastmod: page.updatedAt || page.lastReviewed || TODAY,
+        lastReviewed: page.lastReviewed || page.updatedAt || TODAY,
+        nextReview: page.nextReview || "2026-09-11",
+        lastVerified: page.lastReviewed || page.updatedAt || TODAY,
+        changefreq: "weekly",
+        priority: String(page.priority || 0.78),
+        ogImage: ogImageFor(category, page.slug, `/${page.slug}`),
+        ogImageAlt: ogImageAltFor(category, page.slug, page.title),
+        schemaTypes: page.schemaTypes || schemaTypesFor(category, page.slug),
+        faqs: page.faqs || [],
+        related: page.relatedPagesSlugs || [],
+        ...trustSignalsFor(category, "generated-app-silo"),
+      };
+      meta.schemas = pageSchema(meta);
+      return meta;
+    });
 }
 
 export function buildTopicalEntries(existingPaths = new Set()) {
@@ -720,10 +845,9 @@ export function buildEditorialEntries() {
       source: "generated-editorial",
       category: "editorial",
       categoryLabel: "Editorial",
-      slug: route.path.slice(1),
-      path: route.path,
-      canonicalPath: canonicalPath === route.path ? undefined : canonicalPath,
-      aliases: canonicalPath === route.path ? [] : [canonicalPath],
+      slug: canonicalPath.slice(1),
+      path: canonicalPath,
+      aliases: canonicalPath === route.path ? [] : [route.path],
       title: `${route.title} | BestAIAgent.in`,
       description: route.description,
       h1: route.title,
@@ -788,7 +912,12 @@ export function buildEditorialEntries() {
 export function buildRouteMeta() {
   const baseEntries = [...buildContentEntries(), ...buildHubEntries(), ...buildEditorialEntries()];
   const existingPaths = new Set(baseEntries.flatMap((entry) => [entry.path, ...(entry.aliases || [])]));
-  const entries = [...baseEntries, ...buildTopicalEntries(existingPaths)];
+  const comparisonEntries = buildComparisonEntries(existingPaths);
+  comparisonEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
+  const topicalEntries = buildTopicalEntries(existingPaths);
+  topicalEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
+  const appSiloEntries = buildSiloPageEntries(existingPaths);
+  const entries = [...baseEntries, ...comparisonEntries, ...topicalEntries, ...appSiloEntries];
   const routeMap = {};
   for (const entry of entries) {
     routeMap[entry.path] = entry;
@@ -913,6 +1042,8 @@ export function buildRouteMeta() {
 
   [
     ['/pricing', '/pricing-hub'],
+    ['/tools', '/ai-agent-tools'],
+    ['/services', '/custom-ai-agent-development'],
     ['/editorial-board', '/about'],
     ['/our-testing-lab', '/how-we-test-ai-agents'],
     ['/rankings', '/ai-agent-rankings-2026'],
@@ -922,9 +1053,9 @@ export function buildRouteMeta() {
     ['/market-map/ai-agent-market-map-2026', '/ai-agent-market-map-2026'],
     ['/statistics/ai-agent-statistics-2026', '/ai-agent-statistics-2026'],
     ['/trust/cookie-settings', '/cookie-settings'],
-    ['/mcp/registry', '/mcp-registry'],
-    ['/mcp/rankings', '/mcp-registry'],
-    ['/mcp-rankings', '/mcp-registry'],
+    ['/mcp/registry', '/mcp-directory'],
+    ['/mcp/rankings', '/mcp-directory'],
+    ['/mcp-rankings', '/mcp-directory'],
     ['/mcp/comparisons', '/mcp-server-comparisons'],
     ['/mcp-comparisons', '/mcp-server-comparisons'],
     ['/mcp/frameworks', '/mcp-tutorials'],

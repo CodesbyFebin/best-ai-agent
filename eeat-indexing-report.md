@@ -15,13 +15,13 @@ Generated: 2026-06-13
 | methodology | present |
 | corrections-policy | present |
 | data-deletion-request | present |
-| cookie-settings | present |
+| cookie-settings | missing |
 
 ## Author and Review Evidence
 
-- Author routes: 5
+- Author routes: 3
 - Review/tool routes: 28
-- Editorial routes: 19
+- Editorial routes: 17
 - Methodology route: present
 - Editorial policy route: present
 - Corrections policy route: present

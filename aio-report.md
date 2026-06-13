@@ -4,10 +4,10 @@ Generated: 2026-06-13
 
 ## AI Overview Readiness
 
-- FAQ sections in route metadata: 369
-- Routes with structured data recommendations in markdown: 185
-- Routes with Quick Answer sections: 199
-- Routes with Key Takeaways sections: 80
+- FAQ sections in route metadata: 381
+- Routes with structured data recommendations in markdown: 316
+- Routes with Quick Answer sections: 207
+- Routes with Key Takeaways sections: 88
 - LLM machine-readable files present: 10/10
 
 ## AEO/AIO Strengths
@@ -18,5 +18,4 @@ Generated: 2026-06-13
 
 ## AEO/AIO Risks
 
-- 220 content files are below the recommended answer-pattern completeness.
-- 5 referenced PDF assets are missing.
+- 215 content files are below the recommended answer-pattern completeness.
