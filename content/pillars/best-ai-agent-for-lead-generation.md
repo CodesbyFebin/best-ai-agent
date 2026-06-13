@@ -1,4 +1,4 @@
-# Best AI Agent for Lead Generation 2026 – India’s Independent Guide
+# Best AI Agent for Lead Generation 2026 – India’s Independent Guide [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Lead Generation 2026 – Top Lead Generation Tools for Indian Businesses

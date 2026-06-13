@@ -1,4 +1,4 @@
-# Dify Review – India’s Independent Assessment (June 2026)
+# Dify Review – India’s Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Dify Review 2026 – Open-Source AI Agent Platform for Indian Teams

@@ -1,4 +1,4 @@
-# GitHub Copilot Free vs Paid 2026 – Which Plan is Right for Indian Developers?
+# GitHub Copilot Free vs Paid 2026 – Which Plan is Right for Indian Developers? [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 GitHub Copilot Free vs Paid 2026 – Which Plan is Right for Indian Developers?

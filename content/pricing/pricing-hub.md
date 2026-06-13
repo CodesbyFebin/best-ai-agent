@@ -1,4 +1,4 @@
-# AI Agent Pricing Hub 2026 – Compare All Tools in INR
+# AI Agent Pricing Hub 2026 – Compare All Tools in INR [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 AI Agent Pricing Hub 2026 – Compare All AI Agent Costs in INR

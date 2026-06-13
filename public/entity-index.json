@@ -5,25 +5,25 @@
     "definition": "AI Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/",
+      "/about",
       "/agent-builders",
       "/agent-builders-directory",
       "/agentbench-guide",
       "/agentops-review",
+      "/agents",
+      "/ai-agent-awards",
+      "/ai-agent-awards-2026",
+      "/ai-agent-benchmark",
+      "/ai-agent-benchmark-report-q3-2026",
       "/ai-agent-benchmarks",
+      "/ai-agent-benchmarks-2026",
       "/ai-agent-builders-hub",
       "/ai-agent-comparison",
       "/ai-agent-cost-calculator",
       "/ai-agent-directory",
       "/ai-agent-examples",
       "/ai-agent-for-indian-smes",
-      "/ai-agent-for-indian-startups",
-      "/ai-agent-for-whatsapp-business",
-      "/ai-agent-github-projects",
-      "/ai-agent-learning-path",
-      "/ai-agent-news",
-      "/ai-agent-pricing-india",
-      "/ai-agent-project-ideas",
-      "/ai-agent-projects"
+      "/ai-agent-for-indian-startups"
     ],
     "relatedConcepts": [
       "AI Coding Agent",
@@ -92,6 +92,7 @@
       "/best-ai-agent-builder-reddit",
       "/best-free-ai-agent-builder",
       "/best-no-code-ai-agent-builder",
+      "/builders",
       "/flowise-review",
       "/flowise-vs-dify",
       "/flowise-vs-n8n"
@@ -110,25 +111,26 @@
     "slug": "mcp",
     "definition": "MCP is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/ai-agent-awards",
+      "/ai-agent-awards-2026",
+      "/ai-agent-benchmark",
+      "/ai-agent-glossary",
+      "/ai-agent-market-map",
+      "/ai-agent-rankings",
       "/ai-agent-trends",
+      "/azure-blob-server",
+      "/best-ai-agent-rankings",
       "/best-mcp-servers",
-      "/glossary-hub",
-      "/how-to-connect-claude-to-mcp",
-      "/how-to-create-mcp-server",
-      "/implementation-tutorials-hub",
-      "/mcp-directory",
-      "/mcp-for-ai-agents",
-      "/mcp-hosting",
-      "/mcp-hub",
-      "/mcp-marketplace",
-      "/mcp-security",
-      "/mcp-servers",
-      "/mcp-servers-directory",
-      "/mcp-use-cases",
-      "/mcp-vs-api",
-      "/mcp/what-is-mcp",
-      "/tutorials-hub",
-      "/what-is-mcp"
+      "/brave-search",
+      "/brave-vs-tavily-vs-serpapi",
+      "/browser-automation-server",
+      "/build-your-first-mcp-server",
+      "/debugging-mcp-servers",
+      "/filesystem-server",
+      "/filesystem-vs-database-mcp",
+      "/free-mcp-servers",
+      "/gcs-server",
+      "/getting-started-with-mcp"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -158,12 +160,12 @@
       "/crewai-alternatives",
       "/crewai-review",
       "/dify-review",
+      "/frameworks",
       "/how-to-build-multi-agent-system",
       "/how-to-create-an-ai-agent",
       "/how-to-setup-langgraph",
       "/langgraph-entity",
-      "/langgraph-review",
-      "/langgraph-vs-crewai"
+      "/langgraph-review"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -193,12 +195,12 @@
       "/crewai-entity",
       "/crewai-pricing",
       "/crewai-review",
+      "/frameworks",
       "/how-to-build-ai-agent-with-crewai",
       "/how-to-build-multi-agent-system",
       "/how-to-create-an-ai-agent",
       "/implementation-tutorials-hub",
-      "/langgraph-review",
-      "/langgraph-vs-crewai"
+      "/langgraph-review"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -265,10 +267,10 @@
       "/copilot-vs-claude-code",
       "/cursor-alternatives",
       "/cursor-vs-github-copilot",
+      "/cursor-windsurf-copilot",
       "/github-copilot",
       "/github-copilot-alternatives",
-      "/github-copilot-entity",
-      "/github-copilot-pricing"
+      "/github-copilot-entity"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -468,6 +470,7 @@
       "/best-open-source-ai-agents",
       "/crewai-alternatives",
       "/crewai-review",
+      "/frameworks",
       "/langgraph-review",
       "/open-source-agents",
       "/open-source-agents-directory"
@@ -675,6 +678,7 @@
       "/coding-agents",
       "/coding-agents-directory",
       "/cursor-alternatives",
+      "/cursor-windsurf-copilot",
       "/github-copilot-alternatives",
       "/windsurf",
       "/windsurf-alternatives",
@@ -776,6 +780,7 @@
     "slug": "langchain",
     "definition": "LangChain is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/langchain",
       "/llamaindex-review",
       "/llamaindex-vs-langchain"
     ],
@@ -794,6 +799,7 @@
     "definition": "LlamaIndex is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/best-free-open-source-ai-agents",
+      "/frameworks",
       "/llamaindex-review",
       "/llamaindex-vs-langchain"
     ],

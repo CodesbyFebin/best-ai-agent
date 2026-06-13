@@ -1,4 +1,4 @@
-# Cursor vs Claude Code Comparison (June 2026)
+# Cursor vs Claude Code Comparison (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Cursor vs Claude Code 2026 – Best AI Coding Assistant for Indian Developers

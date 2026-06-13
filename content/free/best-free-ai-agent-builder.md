@@ -1,4 +1,4 @@
-# Best Free AI Agent Builder 2026 – Complete Guide for Indian Developers
+# Best Free AI Agent Builder 2026 – Complete Guide for Indian Developers [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Best Free AI Agent Builder 2026 – Top Free Platforms for Indian Developers

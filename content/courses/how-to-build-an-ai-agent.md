@@ -1,4 +1,4 @@
-# How to Build an AI Agent – Complete Guide for Indian Developers (June 2026)
+# How to Build an AI Agent – Complete Guide for Indian Developers (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 How to Build an AI Agent – Complete Guide for Indian Developers 2026

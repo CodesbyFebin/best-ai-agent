@@ -2,7 +2,9 @@ import { useMemo } from 'react';
 import { ChevronRight, Calendar, Sliders, ArrowLeftRight } from 'lucide-react';
 import { comparisonPages, getComparisonBySlug, getRelatedComparisons } from '../data/comparisons';
 import { getToolAsset } from '../data/assetRegistry';
+import { getExternalLinks, type ExternalLinkType } from '../data/externalLinks';
 import BrandTile from './BrandTile';
+import ExternalResourceLink from './ExternalLink';
 
 interface ComparisonPageProps {
   slug: string;
@@ -26,6 +28,8 @@ export default function ComparisonPage({ slug, routeTo }: ComparisonPageProps) {
   const leftAsset = getToolAsset(comp.toolA.slug);
   const rightAsset = getToolAsset(comp.toolB.slug);
   const comparisonImage = `/assets/comparisons/${comp.slug}.png`;
+  const toolResourceTypes = (slug: string) =>
+    ['official', 'docs', 'github', 'pricing'].filter((type) => getExternalLinks(slug).some((link) => link.type === type)) as ExternalLinkType[];
 
   return (
     <div className="grid lg:grid-cols-4 gap-8">
@@ -85,9 +89,23 @@ export default function ComparisonPage({ slug, routeTo }: ComparisonPageProps) {
               <div key={idx} className="bg-white border border-slate-200 rounded-xl p-5 space-y-2 shadow-sm">
                 <div className="flex items-center gap-3">
                   <BrandTile name={tool.name} imageSrc={asset.logo} alt={asset.logoAlt} size="sm" />
-                  <h3 className="text-base font-bold text-slate-900">{tool.name}</h3>
+                  <h3 className="text-base font-bold text-slate-900">
+                    <ExternalResourceLink slug={tool.slug} label={tool.name} type="official" className="text-slate-900 hover:text-indigo-700" showIcon />
+                  </h3>
                 </div>
                 <p className="text-xs text-slate-500">{tool.tagline}</p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {toolResourceTypes(tool.slug).map((type) => (
+                    <ExternalResourceLink
+                      key={type}
+                      slug={tool.slug}
+                      label={type === 'official' ? 'Official' : type === 'docs' ? 'Docs' : type === 'github' ? 'GitHub' : 'Pricing'}
+                      type={type}
+                      showIcon
+                      className="text-[10px] font-black uppercase tracking-wider rounded border border-slate-200 px-2 py-1 text-slate-600 hover:text-indigo-700 hover:border-indigo-200"
+                    />
+                  ))}
+                </div>
                 <button onClick={() => routeTo('product', undefined, undefined, tool.slug)} className="text-xs font-bold text-emerald-700 hover:underline">Read full review →</button>
               </div>
             ))}

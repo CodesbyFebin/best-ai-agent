@@ -1,4 +1,4 @@
-# Best AI Agent Course 2026 – India's Independent Guide
+# Best AI Agent Course 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Best AI Agent Course 2026 – Top Courses for Indian Developers & Businesses

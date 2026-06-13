@@ -1,4 +1,4 @@
-# Best AI Agent Automation Platform 2026 – India's Independent Guide
+# Best AI Agent Automation Platform 2026 – India's Independent Guide [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent Automation Platform 2026 – Top Platforms for Indian Businesses

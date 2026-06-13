@@ -1,4 +1,4 @@
-# Replit vs Cursor AI Comparison (June 2026)
+# Replit vs Cursor AI Comparison (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Replit vs Cursor AI – Best AI Coding Assistant for Students & Developers 2026

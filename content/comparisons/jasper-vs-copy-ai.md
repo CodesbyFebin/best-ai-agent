@@ -1,4 +1,4 @@
-# Jasper vs Copy.ai Comparison (June 2026)
+# Jasper vs Copy.ai Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Jasper vs Copy.ai 2026 – Best AI Content Marketing Tool for Indian Marketers

@@ -1,4 +1,4 @@
-# Open Interpreter Review – India's Independent Assessment (June 2026)
+# Open Interpreter Review – India's Independent Assessment (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Open Interpreter Review 2026 – Best Open-Source Code Execution Agent for Indian Developers

@@ -1,4 +1,4 @@
-# What is Agentic AI – Complete Guide 2026
+# What is Agentic AI – Complete Guide 2026 [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 What is Agentic AI? Complete Guide for Indian Developers 2026

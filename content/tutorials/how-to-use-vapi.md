@@ -1,4 +1,4 @@
-# How to Use Vapi – Complete Tutorial for Indian Developers (June 2026)
+# How to Use Vapi – Complete Tutorial for Indian Developers (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 How to Use Vapi AI – Complete Tutorial for Indian Developers 2026

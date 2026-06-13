@@ -1,4 +1,4 @@
-# Top 500 AI Agents Database – Complete Directory
+# Top 500 AI Agents Database – Complete Directory [Cursor AI review](/tools/cursor-ai) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Top 500 AI Agents Database – Complete Directory 2026 | BestAIAgent.in
@@ -147,7 +147,7 @@ This database powers our 337+ review pages and comparison tools. Each agent entr
 ## Related Resources
 
 - [AI Agent Landscape Report](/ai-agent-landscape-2026-india)
-- [Benchmark Explorer](/benchmark-explorer)
+- [AI Agent Benchmarks](/ai-agent-benchmarks)
 - [MCP Directory](/mcp-directory)
 - [Free AI Agents](/best-free-ai-agents)
 

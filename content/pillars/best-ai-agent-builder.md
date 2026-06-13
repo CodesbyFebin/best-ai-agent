@@ -1,4 +1,4 @@
-# Best AI Agent Builder 2026 – India’s Independent Guide
+# Best AI Agent Builder 2026 – India’s Independent Guide [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Best AI Agent Builder 2026 – Top No-Code AI Agent Platforms for Indian Developers

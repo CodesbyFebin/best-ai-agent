@@ -1,4 +1,4 @@
-# Best AI Agent for Customer Support – 2026 Guide for Indian Support Teams
+# Best AI Agent for Customer Support – 2026 Guide for Indian Support Teams [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Customer Support – 2026 Guide for Indian Support Teams | BestAIAgent.in

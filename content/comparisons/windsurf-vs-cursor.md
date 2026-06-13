@@ -1,4 +1,4 @@
-# Windsurf vs Cursor AI Comparison (June 2026)
+# Windsurf vs Cursor AI Comparison (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Windsurf vs Cursor AI – Best AI Coding Assistant for Frontend Developers 2026

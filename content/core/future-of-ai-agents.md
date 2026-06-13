@@ -1,4 +1,4 @@
-# Future of AI Agents 2026–2030 – Predictions for India
+# Future of AI Agents 2026–2030 – Predictions for India [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Future of AI Agents 2026–2030 – Predictions for India

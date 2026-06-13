@@ -1,4 +1,4 @@
-# Retell AI Alternatives 2026 – Best Competitors for Indian Enterprises
+# Retell AI Alternatives 2026 – Best Competitors for Indian Enterprises [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Retell AI Alternatives 2026 – 8 Best Competitors for Indian Enterprises

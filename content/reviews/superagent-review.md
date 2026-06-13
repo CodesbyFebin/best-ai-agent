@@ -1,4 +1,4 @@
-# Superagent Review – India's Independent Assessment (June 2026)
+# Superagent Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Superagent Review 2026 – Best AI Agent Framework for Indian Developers

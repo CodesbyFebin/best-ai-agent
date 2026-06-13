@@ -13,6 +13,8 @@ const __dirname = path.dirname(__filename);
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = Number(process.env.PORT || 3000);
 const BASE_URL = 'https://bestaiagent.in';
+const PRODUCTION_HOSTS = new Set(['bestaiagent.in']);
+const PREVIEW_ROBOTS = 'noindex, nofollow, noarchive';
 
 type RouteMeta = {
   path: string;
@@ -45,6 +47,17 @@ type RecommendRequest = {
 const escapeHtml = (value: string) =>
   value.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char] || char));
 
+const hostName = (host = '') => host.split(':')[0].toLowerCase();
+
+function isPreviewHost(host = '') {
+  const hostname = hostName(host);
+  return hostname.endsWith('.vercel.app') && !PRODUCTION_HOSTS.has(hostname);
+}
+
+function isWwwProductionHost(host = '') {
+  return hostName(host) === 'www.bestaiagent.in';
+}
+
 const titleCase = (slug: string) =>
   slug
     .split(/[-/]+/)
@@ -62,10 +75,6 @@ function homePageSchemas() {
       url: BASE_URL,
       description:
         'India-focused AI agent comparison and review platform covering coding agents, business agents, voice agents, AI builders, MCP servers, pricing, alternatives, tutorials, and glossary definitions with INR and DPDP context.',
-      sameAs: [
-        'https://twitter.com/bestaiagentin',
-        'https://github.com/bestaiagentin',
-      ],
       areaServed: {
         '@type': 'Country',
         name: 'India',
@@ -301,18 +310,22 @@ function schemaScript(meta: RouteMeta) {
     .join('\n  ');
 }
 
-function injectMeta(html: string, meta: RouteMeta) {
+function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: boolean } = {}) {
   const canonicalPath = meta.canonicalPath || meta.path || '/';
-  const canonical = `${BASE_URL}${canonicalPath === '/' ? '' : canonicalPath}`;
+  const canonical = `${BASE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
   const title = escapeHtml(meta.title || defaultHomeMeta.title);
   const description = escapeHtml(meta.description || defaultHomeMeta.description);
-  const robots = meta.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const robots = options.noindexPreview ? PREVIEW_ROBOTS : meta.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
   const imageMeta = routeImageMeta(meta);
+  const googleVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.VITE_GOOGLE_SITE_VERIFICATION;
+  const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
   const tags = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
     `<meta name="robots" content="${robots}" />`,
     `<link rel="canonical" href="${canonical}" />`,
+    googleVerification ? `<meta name="google-site-verification" content="${escapeHtml(googleVerification)}" />` : '',
+    bingVerification ? `<meta name="msvalidate.01" content="${escapeHtml(bingVerification)}" />` : '',
     `<meta property="og:type" content="website" />`,
     `<meta property="og:site_name" content="BestAIAgent.in" />`,
     `<meta property="og:url" content="${canonical}" />`,
@@ -331,12 +344,14 @@ function injectMeta(html: string, meta: RouteMeta) {
     `<meta name="twitter:image" content="${imageMeta.image}" />`,
     `<meta name="twitter:image:alt" content="${imageMeta.alt}" />`,
     schemaScript(meta),
-  ].join('\n  ');
+  ].filter(Boolean).join('\n  ');
 
   let out = html
     .replace(/<title>[\s\S]*?<\/title>\s*/g, '')
     .replace(/<meta name="description"[^>]*>\s*/g, '')
     .replace(/<meta name="robots"[^>]*>\s*/g, '')
+    .replace(/<meta name="google-site-verification"[^>]*>\s*/g, '')
+    .replace(/<meta name="msvalidate\.01"[^>]*>\s*/g, '')
     .replace(/<link rel="canonical"[^>]*>\s*/g, '')
     .replace(/<meta property="og:(?:type|site_name|url|title|description|image|image:width|image:height|image:alt|locale)"[^>]*>\s*/g, '')
     .replace(/<meta name="twitter:(?:card|site|creator|title|description|image|image:alt)"[^>]*>\s*/g, '');
@@ -381,6 +396,15 @@ function simulatedRecommendation(prompt: string) {
 async function startServer() {
   const app = express();
   app.use(express.json({ limit: '2mb' }));
+  app.use((req, res, next) => {
+    if (isWwwProductionHost(req.headers.host)) {
+      return res.redirect(308, `${BASE_URL}${req.originalUrl}`);
+    }
+    if (isPreviewHost(req.headers.host)) {
+      res.setHeader('X-Robots-Tag', PREVIEW_ROBOTS);
+    }
+    return next();
+  });
 
   const apiKey = process.env.GEMINI_API_KEY;
   const ai = apiKey && apiKey !== 'MY_GEMINI_API_KEY' ? new GoogleGenAI({ apiKey }) : null;
@@ -425,6 +449,11 @@ async function startServer() {
     '/image-sitemap.xml',
     '/feed.xml',
     '/llms.txt',
+    '/contentIndex.json',
+    '/content-index.json',
+    '/entity-index.json',
+    '/knowledge-graph.json',
+    '/tool-relationships.json',
     '/route-meta.json',
   ], (req, res) => sendGeneratedFile(res, req.path.slice(1)));
 
@@ -487,7 +516,7 @@ async function startServer() {
     app.get('*', async (req, res, next) => {
       try {
         const template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf8');
-        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, getRouteMeta(req.path)));
+        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, getRouteMeta(req.path), { noindexPreview: isPreviewHost(req.headers.host) }));
         res.status(200).set({ 'Content-Type': 'text/html; charset=utf-8' }).send(html);
       } catch (error) {
         vite.ssrFixStacktrace(error as Error);
@@ -495,12 +524,12 @@ async function startServer() {
       }
     });
   } else {
-    const distPath = path.resolve(process.cwd(), 'dist');
-    app.use(express.static(distPath, { index: false }));
+    const distPath = path.resolve(process.cwd(), 'dist', 'client');
+    app.use('/client', express.static(distPath, { index: false }));
     app.get('*', (req, res) => {
       const htmlPath = path.join(distPath, 'index.html');
       if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
-      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), getRouteMeta(req.path));
+      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), getRouteMeta(req.path), { noindexPreview: isPreviewHost(req.headers.host) });
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.send(html);
     });

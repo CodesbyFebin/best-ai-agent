@@ -1,4 +1,4 @@
-# Intercom AI Review – India's Independent Assessment (June 2026)
+# Intercom AI Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Intercom AI Review 2026 – Best Conversational Support Platform for Indian SaaS

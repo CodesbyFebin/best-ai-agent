@@ -1,0 +1,1618 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "type": "company",
+    "slug": "openai",
+    "description": "",
+    "url": "https://bestaiagent.in/openai"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "type": "company",
+    "slug": "anthropic",
+    "description": "",
+    "url": "https://bestaiagent.in/anthropic"
+  },
+  {
+    "id": "google",
+    "name": "Google DeepMind",
+    "type": "company",
+    "slug": "google",
+    "description": "",
+    "url": "https://bestaiagent.in/google"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "type": "company",
+    "slug": "microsoft",
+    "description": "",
+    "url": "https://bestaiagent.in/microsoft"
+  },
+  {
+    "id": "meta",
+    "name": "Meta AI",
+    "type": "company",
+    "slug": "meta",
+    "description": "",
+    "url": "https://bestaiagent.in/meta"
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "type": "company",
+    "slug": "mistral",
+    "description": "",
+    "url": "https://bestaiagent.in/mistral"
+  },
+  {
+    "id": "cursor",
+    "name": "Anysphere (Cursor)",
+    "type": "company",
+    "slug": "cursor",
+    "description": "",
+    "url": "https://bestaiagent.in/cursor"
+  },
+  {
+    "id": "vapi",
+    "name": "Vapi AI",
+    "type": "company",
+    "slug": "vapi",
+    "description": "",
+    "url": "https://bestaiagent.in/vapi"
+  },
+  {
+    "id": "yellow-ai",
+    "name": "Yellow.ai",
+    "type": "company",
+    "slug": "yellow-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/yellow-ai"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n GmbH",
+    "type": "company",
+    "slug": "n8n",
+    "description": "",
+    "url": "https://bestaiagent.in/n8n"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "type": "company",
+    "slug": "perplexity",
+    "description": "",
+    "url": "https://bestaiagent.in/perplexity"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "type": "company",
+    "slug": "cohere",
+    "description": "",
+    "url": "https://bestaiagent.in/cohere"
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "type": "company",
+    "slug": "xai",
+    "description": "",
+    "url": "https://bestaiagent.in/xai"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "type": "company",
+    "slug": "elevenlabs",
+    "description": "",
+    "url": "https://bestaiagent.in/elevenlabs"
+  },
+  {
+    "id": "retell",
+    "name": "Retell AI",
+    "type": "company",
+    "slug": "retell-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/retell-ai"
+  },
+  {
+    "id": "bland",
+    "name": "Bland AI",
+    "type": "company",
+    "slug": "bland-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/bland-ai"
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "type": "company",
+    "slug": "dify",
+    "description": "",
+    "url": "https://bestaiagent.in/dify"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain (LangChain Labs)",
+    "type": "company",
+    "slug": "langchain",
+    "description": "",
+    "url": "https://bestaiagent.in/langchain"
+  },
+  {
+    "id": "pinecone",
+    "name": "Pinecone",
+    "type": "company",
+    "slug": "pinecone",
+    "description": "",
+    "url": "https://bestaiagent.in/pinecone"
+  },
+  {
+    "id": "weaviate",
+    "name": "Weaviate",
+    "type": "company",
+    "slug": "weaviate",
+    "description": "",
+    "url": "https://bestaiagent.in/weaviate"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "type": "company",
+    "slug": "replicate",
+    "description": "",
+    "url": "https://bestaiagent.in/replicate"
+  },
+  {
+    "id": "together",
+    "name": "Together AI",
+    "type": "company",
+    "slug": "together-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/together-ai"
+  },
+  {
+    "id": "fireworks",
+    "name": "Fireworks AI",
+    "type": "company",
+    "slug": "fireworks",
+    "description": "",
+    "url": "https://bestaiagent.in/fireworks"
+  },
+  {
+    "id": "anyscale",
+    "name": "Anyscale",
+    "type": "company",
+    "slug": "anyscale",
+    "description": "",
+    "url": "https://bestaiagent.in/anyscale"
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "type": "company",
+    "slug": "openrouter",
+    "description": "",
+    "url": "https://bestaiagent.in/openrouter"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "type": "company",
+    "slug": "huggingface",
+    "description": "",
+    "url": "https://bestaiagent.in/huggingface"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "type": "company",
+    "slug": "ollama",
+    "description": "",
+    "url": "https://bestaiagent.in/ollama"
+  },
+  {
+    "id": "lm-studio",
+    "name": "LM Studio",
+    "type": "company",
+    "slug": "lm-studio",
+    "description": "",
+    "url": "https://bestaiagent.in/lm-studio"
+  },
+  {
+    "id": "intercom",
+    "name": "Intercom",
+    "type": "company",
+    "slug": "intercom",
+    "description": "",
+    "url": "https://bestaiagent.in/intercom"
+  },
+  {
+    "id": "zendesk",
+    "name": "Zendesk",
+    "type": "company",
+    "slug": "zendesk",
+    "description": "",
+    "url": "https://bestaiagent.in/zendesk"
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "type": "company",
+    "slug": "replit-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/replit-ai"
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf (Codeium)",
+    "type": "company",
+    "slug": "windsurf",
+    "description": "",
+    "url": "https://bestaiagent.in/windsurf"
+  },
+  {
+    "id": "qodo",
+    "name": "Qodo (formerly Codium)",
+    "type": "company",
+    "slug": "qodo",
+    "description": "",
+    "url": "https://bestaiagent.in/qodo"
+  },
+  {
+    "id": "snyk",
+    "name": "Snyk",
+    "type": "company",
+    "slug": "snyk",
+    "description": "",
+    "url": "https://bestaiagent.in/snyk"
+  },
+  {
+    "id": "make",
+    "name": "Make (formerly Integromat)",
+    "type": "company",
+    "slug": "make",
+    "description": "",
+    "url": "https://bestaiagent.in/make"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "type": "company",
+    "slug": "zapier",
+    "description": "",
+    "url": "https://bestaiagent.in/zapier"
+  },
+  {
+    "id": "activepieces",
+    "name": "Activepieces",
+    "type": "company",
+    "slug": "activepieces",
+    "description": "",
+    "url": "https://bestaiagent.in/activepieces"
+  },
+  {
+    "id": "haptik",
+    "name": "Haptik",
+    "type": "company",
+    "slug": "haptik",
+    "description": "",
+    "url": "https://bestaiagent.in/haptik"
+  },
+  {
+    "id": "wati",
+    "name": "Wati",
+    "type": "company",
+    "slug": "wati",
+    "description": "",
+    "url": "https://bestaiagent.in/wati"
+  },
+  {
+    "id": "freshdesk",
+    "name": "Freshdesk (Freshworks)",
+    "type": "company",
+    "slug": "freshdesk",
+    "description": "",
+    "url": "https://bestaiagent.in/freshdesk"
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "type": "company",
+    "slug": "llamaindex",
+    "description": "",
+    "url": "https://bestaiagent.in/llamaindex"
+  },
+  {
+    "id": "agentops",
+    "name": "AgentOps",
+    "type": "company",
+    "slug": "agentops",
+    "description": "",
+    "url": "https://bestaiagent.in/agentops"
+  },
+  {
+    "id": "arize",
+    "name": "Arize AI",
+    "type": "company",
+    "slug": "arize",
+    "description": "",
+    "url": "https://bestaiagent.in/arize"
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "type": "company",
+    "slug": "helicone",
+    "description": "",
+    "url": "https://bestaiagent.in/helicone"
+  },
+  {
+    "id": "qdrant",
+    "name": "Qdrant",
+    "type": "company",
+    "slug": "qdrant",
+    "description": "",
+    "url": "https://bestaiagent.in/qdrant"
+  },
+  {
+    "id": "chroma",
+    "name": "Chroma",
+    "type": "company",
+    "slug": "chroma",
+    "description": "",
+    "url": "https://bestaiagent.in/chroma"
+  },
+  {
+    "id": "milvus",
+    "name": "Milvus (Zilliz)",
+    "type": "company",
+    "slug": "milvus",
+    "description": "",
+    "url": "https://bestaiagent.in/milvus"
+  },
+  {
+    "id": "flowise",
+    "name": "FlowiseAI",
+    "type": "company",
+    "slug": "flowise",
+    "description": "",
+    "url": "https://bestaiagent.in/flowise"
+  },
+  {
+    "id": "langflow",
+    "name": "Langflow (DataStax)",
+    "type": "company",
+    "slug": "langflow",
+    "description": "",
+    "url": "https://bestaiagent.in/langflow"
+  },
+  {
+    "id": "veracode",
+    "name": "Veracode",
+    "type": "company",
+    "slug": "veracode",
+    "description": "",
+    "url": "https://bestaiagent.in/veracode"
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "type": "company",
+    "slug": "vllm",
+    "description": "",
+    "url": "https://bestaiagent.in/vllm"
+  },
+  {
+    "id": "tgi",
+    "name": "Text Generation Inference (TGI)",
+    "type": "company",
+    "slug": "tgi",
+    "description": "",
+    "url": "https://bestaiagent.in/tgi"
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "type": "company",
+    "slug": "openai",
+    "description": "OpenAI builds frontier AI models, APIs, ChatGPT, and developer tooling used by agent builders and application teams worldwide.",
+    "url": "https://bestaiagent.in/openai"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "type": "company",
+    "slug": "anthropic",
+    "description": "Anthropic develops Claude and Claude Code, with a focus on AI assistant safety, developer tooling, and enterprise deployments.",
+    "url": "https://bestaiagent.in/anthropic"
+  },
+  {
+    "id": "google",
+    "name": "Google DeepMind",
+    "type": "company",
+    "slug": "google",
+    "description": "Google provides Gemini, AI Studio, cloud AI infrastructure, and search-integrated AI products relevant to agent workflows.",
+    "url": "https://bestaiagent.in/google"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "type": "company",
+    "slug": "microsoft",
+    "description": "Microsoft offers Copilot products, GitHub Copilot, AutoGen, Semantic Kernel, Azure AI, and enterprise AI tooling.",
+    "url": "https://bestaiagent.in/microsoft"
+  },
+  {
+    "id": "meta",
+    "name": "Meta AI",
+    "type": "company",
+    "slug": "meta",
+    "description": "Meta develops Llama open-source models, AI assistants integrated into social platforms, and AI infrastructure for agents.",
+    "url": "https://bestaiagent.in/meta"
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "type": "company",
+    "slug": "mistral",
+    "description": "Mistral AI builds efficient open-weight and proprietary models for enterprise and developer use cases.",
+    "url": "https://bestaiagent.in/mistral"
+  },
+  {
+    "id": "cursor",
+    "name": "Anysphere (Cursor)",
+    "type": "company",
+    "slug": "cursor",
+    "description": "Anysphere builds Cursor, an AI-powered code editor built on VS Code with deep repository-wide context indexing.",
+    "url": "https://bestaiagent.in/cursor"
+  },
+  {
+    "id": "vapi",
+    "name": "Vapi AI",
+    "type": "company",
+    "slug": "vapi",
+    "description": "Vapi AI builds backend infrastructure for real-time voice AI agents with sub-500ms latency.",
+    "url": "https://bestaiagent.in/vapi"
+  },
+  {
+    "id": "yellow-ai",
+    "name": "Yellow.ai",
+    "type": "company",
+    "slug": "yellow-ai",
+    "description": "Yellow.ai provides enterprise conversational AI platform with WhatsApp Business automation and omnichannel support.",
+    "url": "https://bestaiagent.in/yellow-ai"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n GmbH",
+    "type": "company",
+    "slug": "n8n",
+    "description": "n8n provides a fair-code licensed workflow automation tool with native AI agent capabilities and 400+ integrations.",
+    "url": "https://bestaiagent.in/n8n"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "type": "company",
+    "slug": "perplexity",
+    "description": "Perplexity AI builds an AI-powered answer engine with real-time web search and citation capabilities.",
+    "url": "https://bestaiagent.in/perplexity"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "type": "company",
+    "slug": "cohere",
+    "description": "Cohere provides enterprise-grade language models and embeddings for RAG, search, and agent applications.",
+    "url": "https://bestaiagent.in/cohere"
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "type": "company",
+    "slug": "xai",
+    "description": "xAI builds Grok models integrated with the X platform, focusing on real-time knowledge and reasoning.",
+    "url": "https://bestaiagent.in/xai"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "type": "company",
+    "slug": "elevenlabs",
+    "description": "ElevenLabs builds state-of-the-art text-to-speech and voice cloning models for AI voice agents.",
+    "url": "https://bestaiagent.in/elevenlabs"
+  },
+  {
+    "id": "retell",
+    "name": "Retell AI",
+    "type": "company",
+    "slug": "retell-ai",
+    "description": "Retell AI provides a conversational AI engine for building voice agents with telephony integration.",
+    "url": "https://bestaiagent.in/retell-ai"
+  },
+  {
+    "id": "bland",
+    "name": "Bland AI",
+    "type": "company",
+    "slug": "bland-ai",
+    "description": "Bland AI builds AI phone agents for enterprise with human-like conversation capabilities.",
+    "url": "https://bestaiagent.in/bland-ai"
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "type": "company",
+    "slug": "dify",
+    "description": "Dify provides an open-source LLM app development platform with visual workflow builder and RAG capabilities.",
+    "url": "https://bestaiagent.in/dify"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain (LangChain Labs)",
+    "type": "company",
+    "slug": "langchain",
+    "description": "LangChain Labs builds LangChain, LangGraph, and LangSmith for AI agent development, orchestration, and observability.",
+    "url": "https://bestaiagent.in/langchain"
+  },
+  {
+    "id": "pinecone",
+    "name": "Pinecone",
+    "type": "company",
+    "slug": "pinecone",
+    "description": "Pinecone provides a managed vector database for RAG, semantic search, and AI agent memory.",
+    "url": "https://bestaiagent.in/pinecone"
+  },
+  {
+    "id": "weaviate",
+    "name": "Weaviate",
+    "type": "company",
+    "slug": "weaviate",
+    "description": "Weaviate provides an open-source vector database with hybrid search and modular AI integrations.",
+    "url": "https://bestaiagent.in/weaviate"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "type": "company",
+    "slug": "replicate",
+    "description": "Replicate provides a cloud API for running open-source AI models with simple API calls.",
+    "url": "https://bestaiagent.in/replicate"
+  },
+  {
+    "id": "together",
+    "name": "Together AI",
+    "type": "company",
+    "slug": "together-ai",
+    "description": "Together AI provides fast inference infrastructure for open-source models and custom model training.",
+    "url": "https://bestaiagent.in/together-ai"
+  },
+  {
+    "id": "fireworks",
+    "name": "Fireworks AI",
+    "type": "company",
+    "slug": "fireworks",
+    "description": "Fireworks AI provides production-grade inference for open-source and custom models with low latency.",
+    "url": "https://bestaiagent.in/fireworks"
+  },
+  {
+    "id": "anyscale",
+    "name": "Anyscale",
+    "type": "company",
+    "slug": "anyscale",
+    "description": "Anyscale provides a Ray-based platform for building and scaling AI applications and agents.",
+    "url": "https://bestaiagent.in/anyscale"
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "type": "company",
+    "slug": "openrouter",
+    "description": "OpenRouter provides a unified API gateway to access hundreds of AI models from multiple providers.",
+    "url": "https://bestaiagent.in/openrouter"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "type": "company",
+    "slug": "huggingface",
+    "description": "Hugging Face provides the leading open-source AI platform with model hub, datasets, and inference infrastructure.",
+    "url": "https://bestaiagent.in/huggingface"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "type": "company",
+    "slug": "ollama",
+    "description": "Ollama provides a simple way to run open-source LLMs locally on personal hardware.",
+    "url": "https://bestaiagent.in/ollama"
+  },
+  {
+    "id": "lm-studio",
+    "name": "LM Studio",
+    "type": "company",
+    "slug": "lm-studio",
+    "description": "LM Studio provides a desktop application for discovering, downloading, and running local LLMs.",
+    "url": "https://bestaiagent.in/lm-studio"
+  },
+  {
+    "id": "intercom",
+    "name": "Intercom",
+    "type": "company",
+    "slug": "intercom",
+    "description": "Intercom provides customer messaging platform with AI-powered support automation and chatbots.",
+    "url": "https://bestaiagent.in/intercom"
+  },
+  {
+    "id": "zendesk",
+    "name": "Zendesk",
+    "type": "company",
+    "slug": "zendesk",
+    "description": "Zendesk provides customer service platform with AI-powered ticketing, chat, and support automation.",
+    "url": "https://bestaiagent.in/zendesk"
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "type": "company",
+    "slug": "replit-ai",
+    "description": "Replit provides a cloud development environment with AI-powered coding assistance and deployment.",
+    "url": "https://bestaiagent.in/replit-ai"
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf (Codeium)",
+    "type": "company",
+    "slug": "windsurf",
+    "description": "Codeium builds Windsurf, an AI-native IDE with deep codebase understanding and agentic workflows.",
+    "url": "https://bestaiagent.in/windsurf"
+  },
+  {
+    "id": "qodo",
+    "name": "Qodo (formerly Codium)",
+    "type": "company",
+    "slug": "qodo",
+    "description": "Qodo provides AI-powered code review, testing, and quality assurance tools for development teams.",
+    "url": "https://bestaiagent.in/qodo"
+  },
+  {
+    "id": "snyk",
+    "name": "Snyk",
+    "type": "company",
+    "slug": "snyk",
+    "description": "Snyk provides developer security tools with AI-powered vulnerability detection and remediation.",
+    "url": "https://bestaiagent.in/snyk"
+  },
+  {
+    "id": "make",
+    "name": "Make (formerly Integromat)",
+    "type": "company",
+    "slug": "make",
+    "description": "Make provides a visual automation platform for connecting apps and automating workflows without code.",
+    "url": "https://bestaiagent.in/make"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "type": "company",
+    "slug": "zapier",
+    "description": "Zapier provides workflow automation with AI-powered features connecting 6,000+ apps.",
+    "url": "https://bestaiagent.in/zapier"
+  },
+  {
+    "id": "activepieces",
+    "name": "Activepieces",
+    "type": "company",
+    "slug": "activepieces",
+    "description": "Activepieces provides an open-source alternative to Zapier and Make with AI agent capabilities.",
+    "url": "https://bestaiagent.in/activepieces"
+  },
+  {
+    "id": "haptik",
+    "name": "Haptik",
+    "type": "company",
+    "slug": "haptik",
+    "description": "Haptik provides conversational AI and chatbot solutions for Indian enterprises, acquired by Reliance Jio.",
+    "url": "https://bestaiagent.in/haptik"
+  },
+  {
+    "id": "wati",
+    "name": "Wati",
+    "type": "company",
+    "slug": "wati",
+    "description": "Wati provides a WhatsApp Business API platform for customer support and marketing automation.",
+    "url": "https://bestaiagent.in/wati"
+  },
+  {
+    "id": "freshdesk",
+    "name": "Freshdesk (Freshworks)",
+    "type": "company",
+    "slug": "freshdesk",
+    "description": "Freshdesk provides customer support software with AI-powered ticketing and automation.",
+    "url": "https://bestaiagent.in/freshdesk"
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "type": "company",
+    "slug": "llamaindex",
+    "description": "LlamaIndex provides a data framework for building LLM applications with RAG and agent capabilities.",
+    "url": "https://bestaiagent.in/llamaindex"
+  },
+  {
+    "id": "agentops",
+    "name": "AgentOps",
+    "type": "company",
+    "slug": "agentops",
+    "description": "AgentOps provides observability and debugging tools for AI agent deployments in production.",
+    "url": "https://bestaiagent.in/agentops"
+  },
+  {
+    "id": "arize",
+    "name": "Arize AI",
+    "type": "company",
+    "slug": "arize",
+    "description": "Arize AI provides ML observability and LLM evaluation platforms for production AI systems.",
+    "url": "https://bestaiagent.in/arize"
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "type": "company",
+    "slug": "helicone",
+    "description": "Helicone provides open-source LLM observability with logging, monitoring, and cost tracking.",
+    "url": "https://bestaiagent.in/helicone"
+  },
+  {
+    "id": "qdrant",
+    "name": "Qdrant",
+    "type": "company",
+    "slug": "qdrant",
+    "description": "Qdrant provides an open-source vector database with advanced filtering and cloud hosting.",
+    "url": "https://bestaiagent.in/qdrant"
+  },
+  {
+    "id": "chroma",
+    "name": "Chroma",
+    "type": "company",
+    "slug": "chroma",
+    "description": "Chroma provides an open-source embedding database for AI applications and RAG pipelines.",
+    "url": "https://bestaiagent.in/chroma"
+  },
+  {
+    "id": "milvus",
+    "name": "Milvus (Zilliz)",
+    "type": "company",
+    "slug": "milvus",
+    "description": "Milvus provides an open-source vector database for scalable similarity search and AI applications.",
+    "url": "https://bestaiagent.in/milvus"
+  },
+  {
+    "id": "flowise",
+    "name": "FlowiseAI",
+    "type": "company",
+    "slug": "flowise",
+    "description": "FlowiseAI provides an open-source visual tool for building AI agents and LLM orchestration flows.",
+    "url": "https://bestaiagent.in/flowise"
+  },
+  {
+    "id": "langflow",
+    "name": "Langflow (DataStax)",
+    "type": "company",
+    "slug": "langflow",
+    "description": "Langflow provides a visual framework for building AI agents and RAG applications, maintained by DataStax.",
+    "url": "https://bestaiagent.in/langflow"
+  },
+  {
+    "id": "veracode",
+    "name": "Veracode",
+    "type": "company",
+    "slug": "veracode",
+    "description": "Veracode provides application security testing and software composition analysis.",
+    "url": "https://bestaiagent.in/veracode"
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "type": "company",
+    "slug": "vllm",
+    "description": "vLLM provides a high-throughput and memory-efficient LLM inference engine.",
+    "url": "https://bestaiagent.in/vllm"
+  },
+  {
+    "id": "tgi",
+    "name": "Text Generation Inference (TGI)",
+    "type": "company",
+    "slug": "tgi",
+    "description": "TGI is Hugging Face production-ready LLM inference server.",
+    "url": "https://bestaiagent.in/tgi"
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "type": "framework",
+    "slug": "crewai",
+    "description": "",
+    "url": "https://bestaiagent.in/crewai"
+  },
+  {
+    "id": "langgraph",
+    "name": "LangGraph",
+    "type": "framework",
+    "slug": "langgraph",
+    "description": "",
+    "url": "https://bestaiagent.in/langgraph"
+  },
+  {
+    "id": "autogen",
+    "name": "AutoGen",
+    "type": "framework",
+    "slug": "autogen",
+    "description": "",
+    "url": "https://bestaiagent.in/autogen"
+  },
+  {
+    "id": "openai-agents-sdk",
+    "name": "OpenAI Agents SDK",
+    "type": "framework",
+    "slug": "openai-agents-sdk",
+    "description": "",
+    "url": "https://bestaiagent.in/openai-agents-sdk"
+  },
+  {
+    "id": "semantic-kernel",
+    "name": "Semantic Kernel",
+    "type": "framework",
+    "slug": "semantic-kernel",
+    "description": "",
+    "url": "https://bestaiagent.in/semantic-kernel"
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "type": "framework",
+    "slug": "llamaindex",
+    "description": "",
+    "url": "https://bestaiagent.in/llamaindex"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "type": "framework",
+    "slug": "langchain",
+    "description": "",
+    "url": "https://bestaiagent.in/langchain"
+  },
+  {
+    "id": "langsmith",
+    "name": "LangSmith",
+    "type": "framework",
+    "slug": "langsmith",
+    "description": "",
+    "url": "https://bestaiagent.in/langsmith"
+  },
+  {
+    "id": "agentops",
+    "name": "AgentOps",
+    "type": "framework",
+    "slug": "agentops",
+    "description": "",
+    "url": "https://bestaiagent.in/agentops"
+  },
+  {
+    "id": "dspy",
+    "name": "DSPy",
+    "type": "framework",
+    "slug": "dspy",
+    "description": "",
+    "url": "https://bestaiagent.in/dspy"
+  },
+  {
+    "id": "agno",
+    "name": "Agno (formerly Phidata)",
+    "type": "framework",
+    "slug": "agno",
+    "description": "",
+    "url": "https://bestaiagent.in/agno"
+  },
+  {
+    "id": "pydantic-ai",
+    "name": "Pydantic AI",
+    "type": "framework",
+    "slug": "pydantic-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/pydantic-ai"
+  },
+  {
+    "id": "swarm",
+    "name": "OpenAI Swarm",
+    "type": "framework",
+    "slug": "swarm",
+    "description": "",
+    "url": "https://bestaiagent.in/swarm"
+  },
+  {
+    "id": "livekit-agents",
+    "name": "LiveKit Agents",
+    "type": "framework",
+    "slug": "livekit-agents",
+    "description": "",
+    "url": "https://bestaiagent.in/livekit-agents"
+  },
+  {
+    "id": "haystack",
+    "name": "Haystack (deepset)",
+    "type": "framework",
+    "slug": "haystack",
+    "description": "",
+    "url": "https://bestaiagent.in/haystack"
+  },
+  {
+    "id": "guardrails-ai",
+    "name": "Guardrails AI",
+    "type": "framework",
+    "slug": "guardrails-ai",
+    "description": "",
+    "url": "https://bestaiagent.in/guardrails-ai"
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "type": "framework",
+    "slug": "helicone",
+    "description": "",
+    "url": "https://bestaiagent.in/helicone"
+  },
+  {
+    "id": "arize-phoenix",
+    "name": "Arize Phoenix",
+    "type": "framework",
+    "slug": "arize-phoenix",
+    "description": "",
+    "url": "https://bestaiagent.in/arize-phoenix"
+  },
+  {
+    "id": "instructor",
+    "name": "Instructor",
+    "type": "framework",
+    "slug": "instructor",
+    "description": "",
+    "url": "https://bestaiagent.in/instructor"
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "type": "framework",
+    "slug": "crewai",
+    "description": "A Python framework for orchestrating role-based, autonomous multi-agent teams that model collaborative workflows.",
+    "url": "https://bestaiagent.in/crewai"
+  },
+  {
+    "id": "langgraph",
+    "name": "LangGraph",
+    "type": "framework",
+    "slug": "langgraph",
+    "description": "An agent orchestration framework for stateful graph-based workflows built on top of LangChain.",
+    "url": "https://bestaiagent.in/langgraph"
+  },
+  {
+    "id": "autogen",
+    "name": "AutoGen",
+    "type": "framework",
+    "slug": "autogen",
+    "description": "A Microsoft-originated framework for multi-agent conversational workflows and orchestration.",
+    "url": "https://bestaiagent.in/autogen"
+  },
+  {
+    "id": "openai-agents-sdk",
+    "name": "OpenAI Agents SDK",
+    "type": "framework",
+    "slug": "openai-agents-sdk",
+    "description": "OpenAI\\",
+    "url": "https://bestaiagent.in/openai-agents-sdk"
+  },
+  {
+    "id": "semantic-kernel",
+    "name": "Semantic Kernel",
+    "type": "framework",
+    "slug": "semantic-kernel",
+    "description": "Microsoft\\",
+    "url": "https://bestaiagent.in/semantic-kernel"
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "type": "framework",
+    "slug": "llamaindex",
+    "description": "A data framework for building LLM applications with RAG, agents, and data connectors.",
+    "url": "https://bestaiagent.in/llamaindex"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "type": "framework",
+    "slug": "langchain",
+    "description": "A comprehensive framework for building LLM applications with chains, agents, and tools.",
+    "url": "https://bestaiagent.in/langchain"
+  },
+  {
+    "id": "langsmith",
+    "name": "LangSmith",
+    "type": "framework",
+    "slug": "langsmith",
+    "description": "LangChain\\",
+    "url": "https://bestaiagent.in/langsmith"
+  },
+  {
+    "id": "agentops",
+    "name": "AgentOps",
+    "type": "framework",
+    "slug": "agentops",
+    "description": "Observability and debugging platform for AI agent deployments with session replay and cost tracking.",
+    "url": "https://bestaiagent.in/agentops"
+  },
+  {
+    "id": "dspy",
+    "name": "DSPy",
+    "type": "framework",
+    "slug": "dspy",
+    "description": "A framework for algorithmically optimizing LM prompts and weights, from Stanford NLP.",
+    "url": "https://bestaiagent.in/dspy"
+  },
+  {
+    "id": "agno",
+    "name": "Agno (formerly Phidata)",
+    "type": "framework",
+    "slug": "agno",
+    "description": "A lightweight framework for building multi-modal agents with memory, knowledge, and tools.",
+    "url": "https://bestaiagent.in/agno"
+  },
+  {
+    "id": "pydantic-ai",
+    "name": "Pydantic AI",
+    "type": "framework",
+    "slug": "pydantic-ai",
+    "description": "A type-safe agent framework built by the Pydantic team for building production AI applications.",
+    "url": "https://bestaiagent.in/pydantic-ai"
+  },
+  {
+    "id": "swarm",
+    "name": "OpenAI Swarm",
+    "type": "framework",
+    "slug": "swarm",
+    "description": "OpenAI\\",
+    "url": "https://bestaiagent.in/swarm"
+  },
+  {
+    "id": "livekit-agents",
+    "name": "LiveKit Agents",
+    "type": "framework",
+    "slug": "livekit-agents",
+    "description": "A framework for building real-time voice and multimodal AI agents with WebRTC.",
+    "url": "https://bestaiagent.in/livekit-agents"
+  },
+  {
+    "id": "haystack",
+    "name": "Haystack (deepset)",
+    "type": "framework",
+    "slug": "haystack",
+    "description": "An end-to-end LLM framework for building RAG, search, and question-answering applications.",
+    "url": "https://bestaiagent.in/haystack"
+  },
+  {
+    "id": "guardrails-ai",
+    "name": "Guardrails AI",
+    "type": "framework",
+    "slug": "guardrails-ai",
+    "description": "A framework for adding validation and guardrails to LLM outputs in production.",
+    "url": "https://bestaiagent.in/guardrails-ai"
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "type": "framework",
+    "slug": "helicone",
+    "description": "Open-source LLM observability platform with logging, monitoring, and cost tracking.",
+    "url": "https://bestaiagent.in/helicone"
+  },
+  {
+    "id": "arize-phoenix",
+    "name": "Arize Phoenix",
+    "type": "framework",
+    "slug": "arize-phoenix",
+    "description": "Open-source ML observability and LLM evaluation platform for production AI systems.",
+    "url": "https://bestaiagent.in/arize-phoenix"
+  },
+  {
+    "id": "instructor",
+    "name": "Instructor",
+    "type": "framework",
+    "slug": "instructor",
+    "description": "A library for structured LLM outputs using Pydantic validation with multiple model providers.",
+    "url": "https://bestaiagent.in/instructor"
+  },
+  {
+    "id": "mcp-filesystem",
+    "name": "Filesystem MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-filesystem",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-filesystem"
+  },
+  {
+    "id": "mcp-github",
+    "name": "GitHub MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-github",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-github"
+  },
+  {
+    "id": "mcp-postgres",
+    "name": "PostgreSQL MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-postgres",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-postgres"
+  },
+  {
+    "id": "mcp-sqlite",
+    "name": "SQLite MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-sqlite",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-sqlite"
+  },
+  {
+    "id": "mcp-puppeteer",
+    "name": "Puppeteer MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-puppeteer",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-puppeteer"
+  },
+  {
+    "id": "mcp-playwright",
+    "name": "Playwright MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-playwright",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-playwright"
+  },
+  {
+    "id": "mcp-google-drive",
+    "name": "Google Drive MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-google-drive",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-google-drive"
+  },
+  {
+    "id": "mcp-slack",
+    "name": "Slack MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-slack",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-slack"
+  },
+  {
+    "id": "mcp-discord",
+    "name": "Discord MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-discord",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-discord"
+  },
+  {
+    "id": "mcp-brave-search",
+    "name": "Brave Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-brave-search",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-brave-search"
+  },
+  {
+    "id": "mcp-google-search",
+    "name": "Google Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-google-search",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-google-search"
+  },
+  {
+    "id": "mcp-tavily",
+    "name": "Tavily Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-tavily",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-tavily"
+  },
+  {
+    "id": "mcp-memory",
+    "name": "Memory MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-memory",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-memory"
+  },
+  {
+    "id": "mcp-redis",
+    "name": "Redis MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-redis",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-redis"
+  },
+  {
+    "id": "mcp-s3",
+    "name": "AWS S3 MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-s3",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-s3"
+  },
+  {
+    "id": "mcp-docker",
+    "name": "Docker MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-docker",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-docker"
+  },
+  {
+    "id": "mcp-kubernetes",
+    "name": "Kubernetes MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-kubernetes",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-kubernetes"
+  },
+  {
+    "id": "mcp-notion",
+    "name": "Notion MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-notion",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-notion"
+  },
+  {
+    "id": "mcp-confluence",
+    "name": "Confluence MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-confluence",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-confluence"
+  },
+  {
+    "id": "mcp-gitlab",
+    "name": "GitLab MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-gitlab",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-gitlab"
+  },
+  {
+    "id": "mcp-sequential-thinking",
+    "name": "Sequential Thinking MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-sequential-thinking",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-sequential-thinking"
+  },
+  {
+    "id": "mcp-fetch",
+    "name": "Fetch MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-fetch",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-fetch"
+  },
+  {
+    "id": "mcp-aws",
+    "name": "AWS MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-aws",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-aws"
+  },
+  {
+    "id": "mcp-stripe",
+    "name": "Stripe MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-stripe",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-stripe"
+  },
+  {
+    "id": "mcp-linear",
+    "name": "Linear MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-linear",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-linear"
+  },
+  {
+    "id": "mcp-jira",
+    "name": "Jira MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-jira",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-jira"
+  },
+  {
+    "id": "mcp-pinecone",
+    "name": "Pinecone MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-pinecone",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-pinecone"
+  },
+  {
+    "id": "mcp-weaviate",
+    "name": "Weaviate MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-weaviate",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-weaviate"
+  },
+  {
+    "id": "mcp-elevenlabs",
+    "name": "ElevenLabs MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-elevenlabs",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-elevenlabs"
+  },
+  {
+    "id": "mcp-openai",
+    "name": "OpenAI MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-openai",
+    "description": "",
+    "url": "https://bestaiagent.in/mcp-openai"
+  },
+  {
+    "id": "mcp-filesystem",
+    "name": "Filesystem MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-filesystem",
+    "description": "Official MCP server providing secure file system access with configurable allowed directories.",
+    "url": "https://bestaiagent.in/mcp-filesystem"
+  },
+  {
+    "id": "mcp-github",
+    "name": "GitHub MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-github",
+    "description": "Official MCP server for GitHub operations including issues, PRs, code review, and repository management.",
+    "url": "https://bestaiagent.in/mcp-github"
+  },
+  {
+    "id": "mcp-postgres",
+    "name": "PostgreSQL MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-postgres",
+    "description": "Official MCP server for PostgreSQL database operations with read-only query support.",
+    "url": "https://bestaiagent.in/mcp-postgres"
+  },
+  {
+    "id": "mcp-sqlite",
+    "name": "SQLite MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-sqlite",
+    "description": "Official MCP server for SQLite database operations with local file-based database access.",
+    "url": "https://bestaiagent.in/mcp-sqlite"
+  },
+  {
+    "id": "mcp-puppeteer",
+    "name": "Puppeteer MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-puppeteer",
+    "description": "Official MCP server for browser automation using Puppeteer for web scraping and interaction.",
+    "url": "https://bestaiagent.in/mcp-puppeteer"
+  },
+  {
+    "id": "mcp-playwright",
+    "name": "Playwright MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-playwright",
+    "description": "MCP server for browser automation using Playwright with cross-browser support.",
+    "url": "https://bestaiagent.in/mcp-playwright"
+  },
+  {
+    "id": "mcp-google-drive",
+    "name": "Google Drive MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-google-drive",
+    "description": "MCP server for Google Drive operations including file listing, reading, and searching.",
+    "url": "https://bestaiagent.in/mcp-google-drive"
+  },
+  {
+    "id": "mcp-slack",
+    "name": "Slack MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-slack",
+    "description": "MCP server for Slack operations including messaging, channel management, and user queries.",
+    "url": "https://bestaiagent.in/mcp-slack"
+  },
+  {
+    "id": "mcp-discord",
+    "name": "Discord MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-discord",
+    "description": "MCP server for Discord operations including messaging, channel management, and server queries.",
+    "url": "https://bestaiagent.in/mcp-discord"
+  },
+  {
+    "id": "mcp-brave-search",
+    "name": "Brave Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-brave-search",
+    "description": "Official MCP server for Brave Search API providing web search capabilities.",
+    "url": "https://bestaiagent.in/mcp-brave-search"
+  },
+  {
+    "id": "mcp-google-search",
+    "name": "Google Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-google-search",
+    "description": "MCP server for Google Custom Search API providing web search capabilities.",
+    "url": "https://bestaiagent.in/mcp-google-search"
+  },
+  {
+    "id": "mcp-tavily",
+    "name": "Tavily Search MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-tavily",
+    "description": "MCP server for Tavily Search API optimized for AI agents with deep search capabilities.",
+    "url": "https://bestaiagent.in/mcp-tavily"
+  },
+  {
+    "id": "mcp-memory",
+    "name": "Memory MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-memory",
+    "description": "MCP server providing persistent memory storage for AI agents using knowledge graphs.",
+    "url": "https://bestaiagent.in/mcp-memory"
+  },
+  {
+    "id": "mcp-redis",
+    "name": "Redis MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-redis",
+    "description": "MCP server for Redis operations including key-value storage, caching, and pub/sub.",
+    "url": "https://bestaiagent.in/mcp-redis"
+  },
+  {
+    "id": "mcp-s3",
+    "name": "AWS S3 MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-s3",
+    "description": "MCP server for AWS S3 operations including bucket listing, file upload/download, and object management.",
+    "url": "https://bestaiagent.in/mcp-s3"
+  },
+  {
+    "id": "mcp-docker",
+    "name": "Docker MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-docker",
+    "description": "MCP server for Docker operations including container management, image building, and compose.",
+    "url": "https://bestaiagent.in/mcp-docker"
+  },
+  {
+    "id": "mcp-kubernetes",
+    "name": "Kubernetes MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-kubernetes",
+    "description": "MCP server for Kubernetes operations including pod management, deployment, and cluster queries.",
+    "url": "https://bestaiagent.in/mcp-kubernetes"
+  },
+  {
+    "id": "mcp-notion",
+    "name": "Notion MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-notion",
+    "description": "MCP server for Notion operations including page creation, database queries, and content management.",
+    "url": "https://bestaiagent.in/mcp-notion"
+  },
+  {
+    "id": "mcp-confluence",
+    "name": "Confluence MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-confluence",
+    "description": "MCP server for Atlassian Confluence operations including page management and content search.",
+    "url": "https://bestaiagent.in/mcp-confluence"
+  },
+  {
+    "id": "mcp-gitlab",
+    "name": "GitLab MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-gitlab",
+    "description": "MCP server for GitLab operations including issues, MRs, CI/CD, and repository management.",
+    "url": "https://bestaiagent.in/mcp-gitlab"
+  },
+  {
+    "id": "mcp-sequential-thinking",
+    "name": "Sequential Thinking MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-sequential-thinking",
+    "description": "MCP server providing structured sequential thinking tools for complex problem-solving.",
+    "url": "https://bestaiagent.in/mcp-sequential-thinking"
+  },
+  {
+    "id": "mcp-fetch",
+    "name": "Fetch MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-fetch",
+    "description": "Official MCP server for fetching and converting web content to markdown.",
+    "url": "https://bestaiagent.in/mcp-fetch"
+  },
+  {
+    "id": "mcp-aws",
+    "name": "AWS MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-aws",
+    "description": "Comprehensive MCP server for AWS operations including EC2, S3, Lambda, and CloudWatch.",
+    "url": "https://bestaiagent.in/mcp-aws"
+  },
+  {
+    "id": "mcp-stripe",
+    "name": "Stripe MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-stripe",
+    "description": "MCP server for Stripe operations including payments, subscriptions, and customer management.",
+    "url": "https://bestaiagent.in/mcp-stripe"
+  },
+  {
+    "id": "mcp-linear",
+    "name": "Linear MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-linear",
+    "description": "MCP server for Linear operations including issue tracking, project management, and team coordination.",
+    "url": "https://bestaiagent.in/mcp-linear"
+  },
+  {
+    "id": "mcp-jira",
+    "name": "Jira MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-jira",
+    "description": "MCP server for Atlassian Jira operations including issue management, sprint tracking, and project queries.",
+    "url": "https://bestaiagent.in/mcp-jira"
+  },
+  {
+    "id": "mcp-pinecone",
+    "name": "Pinecone MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-pinecone",
+    "description": "MCP server for Pinecone vector database operations including indexing, querying, and management.",
+    "url": "https://bestaiagent.in/mcp-pinecone"
+  },
+  {
+    "id": "mcp-weaviate",
+    "name": "Weaviate MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-weaviate",
+    "description": "MCP server for Weaviate vector database operations with hybrid search and modular AI integrations.",
+    "url": "https://bestaiagent.in/mcp-weaviate"
+  },
+  {
+    "id": "mcp-elevenlabs",
+    "name": "ElevenLabs MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-elevenlabs",
+    "description": "MCP server for ElevenLabs text-to-speech and voice cloning operations.",
+    "url": "https://bestaiagent.in/mcp-elevenlabs"
+  },
+  {
+    "id": "mcp-openai",
+    "name": "OpenAI MCP Server",
+    "type": "mcp-server",
+    "slug": "mcp-openai",
+    "description": "MCP server wrapping OpenAI API for chat completions, embeddings, and image generation.",
+    "url": "https://bestaiagent.in/mcp-openai"
+  }
+]

@@ -1,4 +1,4 @@
-# Vapi Pricing Calculator 2026 – Estimate Your Voice Agent Costs in INR
+# Vapi Pricing Calculator 2026 – Estimate Your Voice Agent Costs in INR [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Vapi Pricing Calculator 2026 – Estimate Voice Agent Costs in INR

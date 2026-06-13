@@ -1,11 +1,12 @@
 import React from 'react';
 import { ExternalLink as ExternalLinkIcon } from 'lucide-react';
-import { getExternalLinks, type ExternalLink } from '../data/externalLinks';
+import { getExternalLinks, type ExternalLinkType } from '../data/externalLinks';
 
 interface ExternalLinkProps {
+  key?: React.Key;
   slug: string;
   label: string;
-  type: string;
+  type: ExternalLinkType;
   className?: string;
   showIcon?: boolean;
 }
@@ -28,7 +29,8 @@ export default function ExternalLinkComponent({
     ? 'noopener noreferrer sponsored' 
     : 'noopener noreferrer';
 
-  const ariaLabel = `Visit ${link.type} page for ${label}`;
+  const typeLabel = link.type === 'official' ? 'official website' : `${link.type} page`;
+  const ariaLabel = `Visit ${typeLabel} for ${label}`;
 
   return (
     <a

@@ -1,4 +1,4 @@
-# Best AI Agent for Marketing – 2026 Guide for Indian Marketers
+# Best AI Agent for Marketing – 2026 Guide for Indian Marketers [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Marketing – 2026 Guide for Indian Marketers | BestAIAgent.in

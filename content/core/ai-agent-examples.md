@@ -1,4 +1,4 @@
-# AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses
+# AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses

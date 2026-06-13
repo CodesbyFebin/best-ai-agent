@@ -1,4 +1,4 @@
-# SWE-Bench Guide 2026 – Complete Explanation for Indian Developers
+# SWE-Bench Guide 2026 – Complete Explanation for Indian Developers [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 SWE-Bench Guide 2026 – Understanding the Software Engineering Benchmark

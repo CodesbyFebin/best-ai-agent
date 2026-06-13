@@ -1,4 +1,4 @@
-# GitHub Copilot Pricing 2026 – Complete Guide for Indian Users
+# GitHub Copilot Pricing 2026 – Complete Guide for Indian Users [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 GitHub Copilot Pricing 2026 – Plans, Costs in INR & India Payment Guide

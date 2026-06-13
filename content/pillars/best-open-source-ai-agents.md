@@ -1,4 +1,4 @@
-# Best Open-Source AI Agents 2026 – India's Independent Guide
+# Best Open-Source AI Agents 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Best Open-Source AI Agents 2026 – Top Free Frameworks for Indian Developers

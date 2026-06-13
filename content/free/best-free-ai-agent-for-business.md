@@ -1,4 +1,4 @@
-# Best Free AI Agent for Business 2026 – Complete Guide for Indian SMBs
+# Best Free AI Agent for Business 2026 – Complete Guide for Indian SMBs [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Best Free AI Agent for Business 2026 – Top Free Tools for Indian SMBs

@@ -1,4 +1,4 @@
-# Best AI Agent for Healthcare Calls 2026 – India's Independent Guide
+# Best AI Agent for Healthcare Calls 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Best AI Agent for Healthcare Calls 2026 – Top AI for Indian Hospitals & Clinics

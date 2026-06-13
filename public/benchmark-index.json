@@ -1,0 +1,155 @@
+{
+  "version": "2026.6.12",
+  "lastUpdated": "2026-06-12T19:08:27-07:00",
+  "suites": [
+    {
+      "id": "swe-bench",
+      "name": "SWE-bench Verified",
+      "category": "coding",
+      "url": "https://www.swebench.com",
+      "description": "Evaluates AI agents on real-world GitHub issues with verified test cases",
+      "sampleSize": "500 issues",
+      "lastUpdated": "2025-06-01",
+      "results": [
+        { "rank": 1, "entityId": "claude-code", "entityName": "Claude Code", "score": 72.5, "unit": "%", "model": "Opus 4" },
+        { "rank": 2, "entityId": "cursor-ai", "entityName": "Cursor AI", "score": 68.3, "unit": "%", "model": "Sonnet 4" },
+        { "rank": 3, "entityId": "github-copilot", "entityName": "GitHub Copilot", "score": 62.1, "unit": "%", "model": "Agent mode" },
+        { "rank": 4, "entityId": "windsurf", "entityName": "Windsurf", "score": 59.8, "unit": "%", "model": "Cascade" },
+        { "rank": 5, "entityId": "replit-ai", "entityName": "Replit Agent", "score": 52.4, "unit": "%", "model": "Agent v3" },
+        { "rank": 6, "entityId": "qodo", "entityName": "Qodo", "score": 48.7, "unit": "%", "model": "Review mode" }
+      ]
+    },
+    {
+      "id": "gaia",
+      "name": "GAIA",
+      "category": "reasoning",
+      "url": "https://huggingface.co/gaia-benchmark",
+      "description": "Evaluates general AI assistants on real-world tasks requiring reasoning, tool use, and multi-modality",
+      "sampleSize": "466 questions",
+      "lastUpdated": "2025-05-15",
+      "results": [
+        { "rank": 1, "entityId": "claude-sonnet-4", "entityName": "Claude Sonnet 4", "score": 82.0, "unit": "%" },
+        { "rank": 2, "entityId": "gpt-4o", "entityName": "GPT-4o", "score": 78.5, "unit": "%" },
+        { "rank": 3, "entityId": "gemini-2.5-pro", "entityName": "Gemini 2.5 Pro", "score": 76.2, "unit": "%" }
+      ]
+    },
+    {
+      "id": "mmlu-pro",
+      "name": "MMLU-Pro",
+      "category": "knowledge",
+      "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+      "description": "Multi-task language understanding benchmark with 10 answer choices",
+      "sampleSize": "12,000 questions",
+      "lastUpdated": "2025-04-20",
+      "results": [
+        { "rank": 1, "entityId": "claude-opus-4", "entityName": "Claude Opus 4", "score": 91.5, "unit": "%" },
+        { "rank": 2, "entityId": "gemini-2.5-pro", "entityName": "Gemini 2.5 Pro", "score": 91.0, "unit": "%" },
+        { "rank": 3, "entityId": "gpt-4o", "entityName": "GPT-4o", "score": 88.7, "unit": "%" }
+      ]
+    },
+    {
+      "id": "gpqa",
+      "name": "GPQA Diamond",
+      "category": "knowledge",
+      "url": "https://github.com/idavidrein/gpqa",
+      "description": "Graduate-level google-proof Q&A benchmark",
+      "sampleSize": "448 questions",
+      "lastUpdated": "2025-05-01",
+      "results": [
+        { "rank": 1, "entityId": "o3", "entityName": "OpenAI o3", "score": 78.0, "unit": "%" },
+        { "rank": 2, "entityId": "claude-opus-4", "entityName": "Claude Opus 4", "score": 70.0, "unit": "%" },
+        { "rank": 3, "entityId": "gemini-2.5-pro", "entityName": "Gemini 2.5 Pro", "score": 68.0, "unit": "%" },
+        { "rank": 4, "entityId": "gpt-4o", "entityName": "GPT-4o", "score": 53.6, "unit": "%" }
+      ]
+    },
+    {
+      "id": "humaneval",
+      "name": "HumanEval",
+      "category": "coding",
+      "url": "https://github.com/openai/human-eval",
+      "description": "Code generation benchmark evaluating functional correctness",
+      "sampleSize": "164 problems",
+      "lastUpdated": "2025-03-01",
+      "results": [
+        { "rank": 1, "entityId": "o3", "entityName": "OpenAI o3", "score": 95.0, "unit": "%" },
+        { "rank": 2, "entityId": "claude-opus-4", "entityName": "Claude Opus 4", "score": 93.5, "unit": "%" },
+        { "rank": 3, "entityId": "claude-sonnet-4", "entityName": "Claude Sonnet 4", "score": 92.1, "unit": "%" },
+        { "rank": 4, "entityId": "gpt-4o", "entityName": "GPT-4o", "score": 90.2, "unit": "%" }
+      ]
+    },
+    {
+      "id": "voice-latency",
+      "name": "Voice AI Latency Benchmark",
+      "category": "voice",
+      "url": "https://voiceaibench.org",
+      "description": "Measures end-to-end latency of voice AI platforms",
+      "sampleSize": "10,000 calls",
+      "lastUpdated": "2025-06-01",
+      "results": [
+        { "rank": 1, "entityId": "vapi-ai", "entityName": "Vapi AI", "score": 380, "unit": "ms", "note": "P50 latency" },
+        { "rank": 2, "entityId": "retell-ai", "entityName": "Retell AI", "score": 420, "unit": "ms", "note": "P50 latency" },
+        { "rank": 3, "entityId": "bland-ai", "entityName": "Bland AI", "score": 450, "unit": "ms", "note": "P50 latency" }
+      ]
+    },
+    {
+      "id": "voice-naturalness",
+      "name": "Voice Naturalness MOS",
+      "category": "voice",
+      "url": "https://voiceaibench.org",
+      "description": "Mean Opinion Score evaluation of voice AI naturalness",
+      "sampleSize": "5,000 samples",
+      "lastUpdated": "2025-06-01",
+      "results": [
+        { "rank": 1, "entityId": "elevenlabs-voice-agents", "entityName": "ElevenLabs", "score": 4.6, "unit": "/5" },
+        { "rank": 2, "entityId": "vapi-ai", "entityName": "Vapi AI", "score": 4.2, "unit": "/5" },
+        { "rank": 3, "entityId": "retell-ai", "entityName": "Retell AI", "score": 4.1, "unit": "/5" }
+      ]
+    },
+    {
+      "id": "multi-agent-collab",
+      "name": "Multi-Agent Collaboration",
+      "category": "multi-agent",
+      "url": "https://multiagentbench.github.io",
+      "description": "Evaluates multi-agent frameworks on collaboration and task completion",
+      "sampleSize": "200 tasks",
+      "lastUpdated": "2025-05-01",
+      "results": [
+        { "rank": 1, "entityId": "crewai", "entityName": "CrewAI", "score": 85.0, "unit": "%" },
+        { "rank": 2, "entityId": "langgraph", "entityName": "LangGraph", "score": 82.0, "unit": "%" },
+        { "rank": 3, "entityId": "autogen", "entityName": "AutoGen", "score": 78.0, "unit": "%" }
+      ]
+    },
+    {
+      "id": "ragas",
+      "name": "RAG Evaluation (RAGAS)",
+      "category": "rag",
+      "url": "https://docs.ragas.io",
+      "description": "Evaluates RAG system quality across faithfulness, relevance, and precision",
+      "sampleSize": "5,000+ queries",
+      "lastUpdated": "2025-05-20",
+      "results": [
+        { "rank": 1, "entityId": "llamaindex", "entityName": "LlamaIndex", "score": 87.5, "unit": "%" },
+        { "rank": 2, "entityId": "langchain", "entityName": "LangChain", "score": 84.2, "unit": "%" }
+      ]
+    },
+    {
+      "id": "agentbench",
+      "name": "AgentBench",
+      "category": "general",
+      "url": "https://github.com/THUDM/AgentBench",
+      "description": "Evaluates LLMs as agents across 8 real-world environments",
+      "sampleSize": "800+ tasks",
+      "lastUpdated": "2025-05-10",
+      "results": [
+        { "rank": 1, "entityId": "claude-sonnet-4", "entityName": "Claude Sonnet 4", "score": 78.0, "unit": "%" },
+        { "rank": 2, "entityId": "gpt-4o", "entityName": "GPT-4o", "score": 75.5, "unit": "%" },
+        { "rank": 3, "entityId": "gemini-2.5-pro", "entityName": "Gemini 2.5 Pro", "score": 74.0, "unit": "%" }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalSuites": 10,
+    "totalResults": 34,
+    "categories": ["coding", "reasoning", "knowledge", "voice", "multi-agent", "rag", "general"]
+  }
+}

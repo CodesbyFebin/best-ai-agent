@@ -1,4 +1,4 @@
-# Best AI Agent for Lead Generation in Real Estate 2026 – India Guide
+# Best AI Agent for Lead Generation in Real Estate 2026 – India Guide [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Lead Generation in Real Estate 2026 – India Guide

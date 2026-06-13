@@ -1,4 +1,4 @@
-# GAIA Benchmark Guide 2026 – Complete Explanation for Indian Developers
+# GAIA Benchmark Guide 2026 – Complete Explanation for Indian Developers [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 GAIA Benchmark Guide 2026 – Understanding the General AI Assistants Benchmark

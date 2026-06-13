@@ -1,4 +1,4 @@
-# Windsurf Alternatives 2026 – Best Competitors for Indian Frontend Developers
+# Windsurf Alternatives 2026 – Best Competitors for Indian Frontend Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Windsurf Alternatives 2026 – 10 Best Competitors for Indian Developers

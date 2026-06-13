@@ -1,4 +1,4 @@
-# N8n Alternatives 2026 – Best Competitors for Indian Agencies
+# N8n Alternatives 2026 – Best Competitors for Indian Agencies [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 n8n Alternatives 2026 – 8 Best Competitors for Indian Agencies

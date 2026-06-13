@@ -1,4 +1,4 @@
-# Best AI Agent for Business – 2026 Guide for Indian Enterprises
+# Best AI Agent for Business – 2026 Guide for Indian Enterprises [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Business – 2026 Guide for Indian Enterprises | BestAIAgent.in

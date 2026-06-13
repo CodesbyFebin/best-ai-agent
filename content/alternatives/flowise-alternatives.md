@@ -1,4 +1,4 @@
-# Flowise Alternatives 2026 – Best Competitors for Indian Developers
+# Flowise Alternatives 2026 – Best Competitors for Indian Developers [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Flowise Alternatives 2026 – 8 Best Competitors for Indian Developers

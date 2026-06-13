@@ -1,4 +1,4 @@
-# CrewAI Review – India's Independent Assessment (June 2026)
+# CrewAI Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 CrewAI Review 2026 – Best Multi-Agent Orchestration Framework for Indian Teams

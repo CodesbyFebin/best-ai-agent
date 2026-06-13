@@ -1,4 +1,4 @@
-# Flowise Pricing 2026 – Complete Guide for Indian Developers
+# Flowise Pricing 2026 – Complete Guide for Indian Developers [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Flowise Pricing 2026 – Free vs Pro Plans & India Payment Guide

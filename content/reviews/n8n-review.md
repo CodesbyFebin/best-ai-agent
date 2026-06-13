@@ -1,4 +1,4 @@
-# n8n Review – India’s Independent Assessment (June 2026)
+# n8n Review – India’s Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 n8n Review 2026 – Automation Platform for AI Agents in India

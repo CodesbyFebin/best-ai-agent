@@ -1,4 +1,4 @@
-# What is SWE-Bench – Complete Guide 2026
+# What is SWE-Bench – Complete Guide 2026 [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 What is SWE-Bench? Complete Guide for Indian Developers 2026

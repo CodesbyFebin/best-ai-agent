@@ -1,4 +1,4 @@
-# Clay vs Apollo AI Comparison (June 2026)
+# Clay vs Apollo AI Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Clay AI vs Apollo AI – Best Lead Generation Tools for Indian Businesses 2026

@@ -1,4 +1,4 @@
-# LangGraph Review – India's Independent Assessment (June 2026)
+# LangGraph Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 LangGraph Review 2026 – Best Graph-Based Multi-Agent Framework for Indian Developers

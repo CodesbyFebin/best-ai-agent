@@ -1,4 +1,4 @@
-# AI Agent Trends 2026 – What's Shaping AI Agents in India
+# AI Agent Trends 2026 – What's Shaping AI Agents in India [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 AI Agent Trends 2026 – What's Shaping AI Agents in India

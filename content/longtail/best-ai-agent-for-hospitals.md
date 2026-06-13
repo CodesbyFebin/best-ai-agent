@@ -7,7 +7,7 @@ Best AI Agent for Hospitals 2026 – Top Healthcare AI Tools for Indian Hospital
 Compare the best AI agents for hospitals in 2026. Find AI tools for appointment booking, patient support, medical record analysis, and insurance verification for Indian healthcare facilities.
 
 ## URL Slug
-best-ai-agent-for-hospitals
+best-ai-agent-for-hospitals-india
 
 ## H1
 Best AI Agent for Hospitals 2026 – India's Independent Guide

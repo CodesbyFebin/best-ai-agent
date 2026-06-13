@@ -1,4 +1,4 @@
-# Best Free AI Voice Agents 2026 – Complete Guide for Indian Startups
+# Best Free AI Voice Agents 2026 – Complete Guide for Indian Startups [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Best Free AI Voice Agents 2026 – Top Free Voice AI Tools for Indian Startups

@@ -7,6 +7,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/brave-vs-tavily-vs-serpapi</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/claude-vs-cursor</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -32,6 +38,12 @@
   </url>
   <url>
     <loc>https://bestaiagent.in/cursor-vs-github-copilot</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cursor-windsurf-copilot</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>

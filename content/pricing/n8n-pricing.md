@@ -1,4 +1,4 @@
-# n8n Pricing 2026 – Complete Guide for Indian Agencies
+# n8n Pricing 2026 – Complete Guide for Indian Agencies [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 n8n Pricing 2026 – Plans, Costs in INR & India Payment Guide

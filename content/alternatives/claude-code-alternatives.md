@@ -1,4 +1,4 @@
-# Claude Code Alternatives 2026 – Best Competitors for Indian Developers
+# Claude Code Alternatives 2026 – Best Competitors for Indian Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Claude Code Alternatives 2026 – 10 Best Competitors for Indian Developers

@@ -1,4 +1,4 @@
-# ElevenLabs Conversational AI Review – India's Independent Assessment (June 2026)
+# ElevenLabs Conversational AI Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 ElevenLabs Conversational AI Review 2026 – Best Voice Synthesis for Indian AI Agents

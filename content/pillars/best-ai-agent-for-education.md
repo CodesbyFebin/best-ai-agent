@@ -1,4 +1,4 @@
-# Best AI Agent for Education 2026 – India's Independent Guide
+# Best AI Agent for Education 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Best AI Agent for Education 2026 – Top AI Tools for Indian Schools & EdTech

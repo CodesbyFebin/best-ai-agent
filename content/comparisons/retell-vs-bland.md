@@ -1,4 +1,4 @@
-# Retell AI vs Bland AI Comparison (June 2026)
+# Retell AI vs Bland AI Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Retell AI vs Bland AI 2026 – Best Voice Agent Platform for Indian Sales Teams

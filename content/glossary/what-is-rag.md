@@ -1,4 +1,4 @@
-# What is RAG (Retrieval-Augmented Generation) – Complete Guide 2026
+# What is RAG (Retrieval-Augmented Generation) – Complete Guide 2026 [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 What is RAG (Retrieval-Augmented Generation)? Complete Guide 2026

@@ -1,4 +1,4 @@
-# LlamaIndex Review – India's Independent Assessment (June 2026)
+# LlamaIndex Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 LlamaIndex Review 2026 – Best RAG Framework for Indian Developers

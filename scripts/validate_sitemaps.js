@@ -19,6 +19,7 @@ const required = [
   "llms.txt",
   "indexnow-key.txt",
   "contentIndex.json",
+  "content-index.json",
   "entity-index.json",
   "knowledge-graph.json",
   "tool-relationships.json",

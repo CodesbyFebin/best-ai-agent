@@ -1,4 +1,4 @@
-# MCP Security 2026 – Complete Guide for Indian Developers
+# MCP Security 2026 – Complete Guide for Indian Developers [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 MCP Security 2026 – Risks, Best Practices & Secure MCP Servers for Indian Data

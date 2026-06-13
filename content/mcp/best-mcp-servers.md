@@ -1,4 +1,4 @@
-# Best MCP Servers 2026 – Complete Directory for Indian Developers
+# Best MCP Servers 2026 – Complete Directory for Indian Developers [Cursor AI review](/tools/cursor-ai) [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best MCP Servers 2026 – Top Model Context Protocol Servers for Indian Developers

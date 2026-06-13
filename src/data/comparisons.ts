@@ -198,7 +198,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Reasoning Depth', toolA: 'Excellent', toolB: 'Good', winner: 'A' }
     ],
     verdict: 'Choose Claude Code for terminal-first development. Choose Codex for programmatic code generation at scale.',
-    relatedSlugs: ['best-ai-agent-for-coding', 'cursor-vs-claude', 'best-ai-agent-for-developers']
+    relatedSlugs: ['best-ai-agent-for-coding', 'claude-code-vs-cursor', 'best-ai-agent-for-developers']
   },
   {
     slug: 'flowise-vs-langflow',
@@ -223,7 +223,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Community', toolA: 'Large', toolB: 'Growing', winner: 'A' }
     ],
     verdict: 'Choose Flowise for LangChain-first workflows. Choose LangFlow for multi-model flexibility and Databricks integration.',
-    relatedSlugs: ['best-ai-agent-builder', 'flowise-vs-dify', 'best-ai-agent-no-code-platform']
+    relatedSlugs: ['best-ai-agent-builder', 'dify-vs-flowise', 'best-ai-agent-no-code-platform']
   },
   {
     slug: 'flowise-vs-crewai',
@@ -348,7 +348,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Production Ready', toolA: 'Yes', toolB: 'Requires setup', winner: 'A' }
     ],
     verdict: 'Choose Dify for managed production deployments. Choose LangFlow for flexible multi-model pipelines and self-hosting.',
-    relatedSlugs: ['best-ai-agent-builder', 'flowise-vs-dify', 'best-ai-agent-platform']
+    relatedSlugs: ['best-ai-agent-builder', 'dify-vs-flowise', 'best-ai-agent-platform']
   },
   {
     slug: 'langgraph-vs-autogen',
@@ -373,7 +373,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Production Readiness', toolA: 'High', toolB: 'Medium', winner: 'A' }
     ],
     verdict: 'Choose LangGraph for LangChain-native graph orchestration. Choose AutoGen for conversational agent patterns and .NET integration.',
-    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'langgraph-vs-crewai']
+    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'crewai-vs-langgraph']
   },
   {
     slug: 'yellow-ai-vs-intercom',
@@ -548,7 +548,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Learning Curve', toolA: 'Low', toolB: 'High', winner: 'A' }
     ],
     verdict: 'Choose Dify for quick no-code deployments. Choose LangGraph for complex code-first agent orchestration.',
-    relatedSlugs: ['best-ai-agent-builder', 'flowise-vs-dify', 'best-ai-agent-frameworks']
+    relatedSlugs: ['best-ai-agent-builder', 'dify-vs-flowise', 'best-ai-agent-frameworks']
   },
   {
     slug: 'retell-vs-bland-ai',
@@ -698,7 +698,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Production Readiness', toolA: 'Good', toolB: 'Excellent', winner: 'B' }
     ],
     verdict: 'Choose CrewAI for quick multi-agent prototypes. Choose LangGraph for complex production agent systems.',
-    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'langgraph-vs-crewai']
+    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'crewai-vs-langgraph']
   },
   {
     slug: 'vapi-vs-retell',
@@ -823,7 +823,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'UI Polish', toolA: 'Premium', toolB: 'Functional', winner: 'A' }
     ],
     verdict: 'Choose Dify for managed production deployments. Choose Flowise for LangChain-first self-hosted workflows.',
-    relatedSlugs: ['best-ai-agent-builder', 'flowise-vs-dify', 'best-ai-agent-no-code-platform']
+    relatedSlugs: ['best-ai-agent-builder', 'dify-vs-flowise', 'best-ai-agent-no-code-platform']
   },
   {
     slug: 'autogen-vs-langgraph',
@@ -848,7 +848,7 @@ export const comparisonPages: ComparisonPage[] = [
       { label: 'Debugging', toolA: 'Basic', toolB: 'LangSmith', winner: 'B' }
     ],
     verdict: 'Choose AutoGen for conversational agent patterns. Choose LangGraph for complex graph-based orchestration.',
-    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'langgraph-vs-crewai']
+    relatedSlugs: ['best-ai-agent-frameworks', 'crewai-vs-autogen', 'crewai-vs-langgraph']
   },
   {
     slug: 'yellow-ai-vs-haptik',

@@ -1,4 +1,4 @@
-# Best Free Open-Source AI Agents 2026 – Complete Guide for Indian Developers
+# Best Free Open-Source AI Agents 2026 – Complete Guide for Indian Developers [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Best Free Open-Source AI Agents 2026 – Top OSS Tools for Indian Developers

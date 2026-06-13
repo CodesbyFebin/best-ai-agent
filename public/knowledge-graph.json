@@ -8,6 +8,18 @@
       "url": "https://bestaiagent.in"
     },
     {
+      "id": "/about",
+      "type": "trust",
+      "label": "About Best AI Agent",
+      "url": "https://bestaiagent.in/about"
+    },
+    {
+      "id": "/about-editorial-team",
+      "type": "editorial",
+      "label": "About Editorial Team",
+      "url": "https://bestaiagent.in/about-editorial-team"
+    },
+    {
       "id": "/affiliate-disclosure",
       "type": "editorial",
       "label": "Affiliate Disclosure",
@@ -38,10 +50,46 @@
       "url": "https://bestaiagent.in/agentops-review"
     },
     {
+      "id": "/agents",
+      "type": "entity-pages",
+      "label": "AI Agents Entity Directory",
+      "url": "https://bestaiagent.in/agents"
+    },
+    {
+      "id": "/ai-agent-awards",
+      "type": "editorial",
+      "label": "AI Agent Awards",
+      "url": "https://bestaiagent.in/ai-agent-awards"
+    },
+    {
+      "id": "/ai-agent-awards-2026",
+      "type": "reports",
+      "label": "AI Agent Awards 2026",
+      "url": "https://bestaiagent.in/ai-agent-awards-2026"
+    },
+    {
+      "id": "/ai-agent-benchmark",
+      "type": "editorial",
+      "label": "AI Agent Benchmark",
+      "url": "https://bestaiagent.in/ai-agent-benchmark"
+    },
+    {
+      "id": "/ai-agent-benchmark-report-q3-2026",
+      "type": "reports",
+      "label": "AI Agent Benchmark Report Q3 2026",
+      "url": "https://bestaiagent.in/ai-agent-benchmark-report-q3-2026"
+    },
+    {
       "id": "/ai-agent-benchmarks",
       "type": "research",
       "label": "AI Agent Benchmarks 2026 – Complete Guide",
       "url": "https://bestaiagent.in/ai-agent-benchmarks"
+    },
+    {
+      "id": "/ai-agent-benchmarks-2026",
+      "type": "benchmarks",
+      "label": "AI Agent Benchmarks 2026: Complete Performance Analysis",
+      "url": "https://bestaiagent.in/ai-agent-benchmarks-2026"
     },
     {
       "id": "/ai-agent-builders-hub",
@@ -98,10 +146,40 @@
       "url": "https://bestaiagent.in/ai-agent-github-projects"
     },
     {
+      "id": "/ai-agent-glossary",
+      "type": "editorial",
+      "label": "AI Agent Glossary",
+      "url": "https://bestaiagent.in/ai-agent-glossary"
+    },
+    {
+      "id": "/ai-agent-industry-report-2026",
+      "type": "reports",
+      "label": "AI Agent Industry Report 2026",
+      "url": "https://bestaiagent.in/ai-agent-industry-report-2026"
+    },
+    {
+      "id": "/ai-agent-landscape-2026-india",
+      "type": "reports",
+      "label": "AI Agent Landscape 2026 – India Market Report",
+      "url": "https://bestaiagent.in/ai-agent-landscape-2026-india"
+    },
+    {
       "id": "/ai-agent-learning-path",
       "type": "courses-certifications",
       "label": "AI Agent Learning Path: Beginner to Expert Roadmap",
       "url": "https://bestaiagent.in/ai-agent-learning-path"
+    },
+    {
+      "id": "/ai-agent-market-map",
+      "type": "editorial",
+      "label": "AI Agent Market Map",
+      "url": "https://bestaiagent.in/ai-agent-market-map"
+    },
+    {
+      "id": "/ai-agent-market-map-2026",
+      "type": "market-map",
+      "label": "AI Agent Market Map 2026",
+      "url": "https://bestaiagent.in/ai-agent-market-map-2026"
     },
     {
       "id": "/ai-agent-news",
@@ -134,6 +212,18 @@
       "url": "https://bestaiagent.in/ai-agent-ranking"
     },
     {
+      "id": "/ai-agent-rankings",
+      "type": "editorial",
+      "label": "AI Agent Rankings",
+      "url": "https://bestaiagent.in/ai-agent-rankings"
+    },
+    {
+      "id": "/ai-agent-rankings-2026",
+      "type": "rankings",
+      "label": "AI Agent Rankings 2026: Best AI Agents by Category",
+      "url": "https://bestaiagent.in/ai-agent-rankings-2026"
+    },
+    {
       "id": "/ai-agent-research",
       "type": "research-benchmarks",
       "label": "AI Agent Research: Latest Papers & Findings",
@@ -150,6 +240,12 @@
       "type": "guides",
       "label": "AI Agent Security 2026 – Complete Guide for Indian Enterprises",
       "url": "https://bestaiagent.in/ai-agent-security"
+    },
+    {
+      "id": "/ai-agent-statistics-2026",
+      "type": "statistics",
+      "label": "AI Agent Statistics 2026",
+      "url": "https://bestaiagent.in/ai-agent-statistics-2026"
     },
     {
       "id": "/ai-agent-tools",
@@ -266,16 +362,34 @@
       "url": "https://bestaiagent.in/alternatives-hub"
     },
     {
+      "id": "/anthropic",
+      "type": "entities",
+      "label": "Anthropic",
+      "url": "https://bestaiagent.in/anthropic"
+    },
+    {
       "id": "/apollo-review",
       "type": "reviews",
       "label": "Apollo Review – India's Independent Assessment (June 2026)",
       "url": "https://bestaiagent.in/apollo-review"
     },
     {
+      "id": "/arshdeep-singh",
+      "type": "authors",
+      "label": "Arshdeep Singh",
+      "url": "https://bestaiagent.in/arshdeep-singh"
+    },
+    {
       "id": "/artisan-review",
       "type": "reviews",
       "label": "Artisan Review – India's Independent Assessment (June 2026)",
       "url": "https://bestaiagent.in/artisan-review"
+    },
+    {
+      "id": "/arxiv-server",
+      "type": "mcp",
+      "label": "arXiv Server",
+      "url": "https://bestaiagent.in/arxiv-server"
     },
     {
       "id": "/authors/arshdeep-singh",
@@ -312,6 +426,30 @@
       "type": "comparisons",
       "label": "AutoGen vs CrewAI – Which Multi-Agent Framework Wins in 2026?",
       "url": "https://bestaiagent.in/autogen-vs-crewai"
+    },
+    {
+      "id": "/aws-server",
+      "type": "mcp",
+      "label": "AWS Server",
+      "url": "https://bestaiagent.in/aws-server"
+    },
+    {
+      "id": "/azure-blob-server",
+      "type": "mcp",
+      "label": "Azure Blob Storage MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/azure-blob-server"
+    },
+    {
+      "id": "/azure-server",
+      "type": "mcp",
+      "label": "Azure Server",
+      "url": "https://bestaiagent.in/azure-server"
+    },
+    {
+      "id": "/benchmark-methodology",
+      "type": "editorial",
+      "label": "AI Agent Benchmark Methodology – Transparent Scoring",
+      "url": "https://bestaiagent.in/benchmark-methodology"
     },
     {
       "id": "/best-ai-agent",
@@ -470,6 +608,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-customer-support-in-saas"
     },
     {
+      "id": "/best-ai-agent-for-customer-support-teams",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for Customer Support Teams",
+      "url": "https://bestaiagent.in/best-ai-agent-for-customer-support-teams"
+    },
+    {
       "id": "/best-ai-agent-for-data-analysis",
       "type": "research-benchmarks",
       "label": "Best AI Agent for Data Analysis & Visualization",
@@ -536,6 +680,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-hospitals"
     },
     {
+      "id": "/best-ai-agent-for-hospitals-india",
+      "type": "longtail",
+      "label": "Best AI Agent for Hospitals 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-hospitals-india"
+    },
+    {
       "id": "/best-ai-agent-for-ides",
       "type": "coding-agents",
       "label": "Best AI Agent for IDEs: Multi-Editor Comparison",
@@ -578,6 +728,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-law-firms"
     },
     {
+      "id": "/best-ai-agent-for-lawyers",
+      "type": "longtail",
+      "label": "Best AI Agent for Lawyers 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-lawyers"
+    },
+    {
       "id": "/best-ai-agent-for-lead-generation",
       "type": "pillars",
       "label": "Best AI Agent for Lead Generation 2026 – India’s Independent Guide",
@@ -618,6 +774,12 @@
       "type": "pillars",
       "label": "Best AI Agent for Manufacturing 2026 – India's Independent Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-manufacturing"
+    },
+    {
+      "id": "/best-ai-agent-for-manufacturing-india",
+      "type": "longtail",
+      "label": "Best AI Agent for Manufacturing 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-manufacturing-india"
     },
     {
       "id": "/best-ai-agent-for-marketing",
@@ -686,10 +848,28 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-real-estate"
     },
     {
+      "id": "/best-ai-agent-for-real-estate-agencies",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for Real Estate Agencies",
+      "url": "https://bestaiagent.in/best-ai-agent-for-real-estate-agencies"
+    },
+    {
       "id": "/best-ai-agent-for-real-estate-calls",
       "type": "pillars",
       "label": "Best AI Agent for Real Estate Calls 2026 – India's Independent Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-real-estate-calls"
+    },
+    {
+      "id": "/best-ai-agent-for-real-estate-india",
+      "type": "longtail",
+      "label": "Best AI Agent for Real Estate 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-real-estate-india"
+    },
+    {
+      "id": "/best-ai-agent-for-recruiters",
+      "type": "longtail",
+      "label": "Best AI Agent for Recruiters 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-recruiters"
     },
     {
       "id": "/best-ai-agent-for-recruiting",
@@ -716,6 +896,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-sales"
     },
     {
+      "id": "/best-ai-agent-for-schools",
+      "type": "longtail",
+      "label": "Best AI Agent for Schools 2026 – India's Independent Guide",
+      "url": "https://bestaiagent.in/best-ai-agent-for-schools"
+    },
+    {
       "id": "/best-ai-agent-for-seo",
       "type": "longtail",
       "label": "Best AI Agent for SEO 2026 – India's Independent Guide",
@@ -726,6 +912,12 @@
       "type": "longtail",
       "label": "Best AI Agent for Shopify 2026 – India's Independent Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-shopify"
+    },
+    {
+      "id": "/best-ai-agent-for-shopify-stores",
+      "type": "industry-ai-agents",
+      "label": "Best AI Agent for Shopify Stores",
+      "url": "https://bestaiagent.in/best-ai-agent-for-shopify-stores"
     },
     {
       "id": "/best-ai-agent-for-small-business",
@@ -782,6 +974,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-youtube"
     },
     {
+      "id": "/best-ai-agent-index",
+      "type": "ai-agent-core",
+      "label": "Best AI Agent Index: Rankings, Awards & Benchmark Hubs",
+      "url": "https://bestaiagent.in/best-ai-agent-index"
+    },
+    {
       "id": "/best-ai-agent-india",
       "type": "industry-ai-agents",
       "label": "Best AI Agent in India 2026: INR Pricing & DPDP Guide",
@@ -822,6 +1020,12 @@
       "type": "pillars",
       "label": "Best AI Agent Platform 2026 – India’s Independent Guide",
       "url": "https://bestaiagent.in/best-ai-agent-platform"
+    },
+    {
+      "id": "/best-ai-agent-rankings",
+      "type": "ai-agent-core",
+      "label": "Best AI Agent Rankings 2026: Category Leaderboards",
+      "url": "https://bestaiagent.in/best-ai-agent-rankings"
     },
     {
       "id": "/best-ai-agent-reddit",
@@ -950,10 +1154,46 @@
       "url": "https://bestaiagent.in/best-open-source-ai-agents"
     },
     {
+      "id": "/bigquery-server",
+      "type": "mcp",
+      "label": "BigQuery Server",
+      "url": "https://bestaiagent.in/bigquery-server"
+    },
+    {
       "id": "/bland-review",
       "type": "reviews",
       "label": "Bland AI Review – India's Independent Assessment (June 2026)",
       "url": "https://bestaiagent.in/bland-review"
+    },
+    {
+      "id": "/brave-search",
+      "type": "mcp",
+      "label": "Brave Search MCP Server: Complete 2026 Guide for Indian Developers",
+      "url": "https://bestaiagent.in/brave-search"
+    },
+    {
+      "id": "/brave-vs-tavily-vs-serpapi",
+      "type": "comparisons",
+      "label": "Brave Search vs Tavily vs SerpAPI – MCP Search Comparison 2026",
+      "url": "https://bestaiagent.in/brave-vs-tavily-vs-serpapi"
+    },
+    {
+      "id": "/browser-automation-server",
+      "type": "mcp",
+      "label": "Browser Automation MCP Server - Complete Web Interaction Guide",
+      "url": "https://bestaiagent.in/browser-automation-server"
+    },
+    {
+      "id": "/build-your-first-mcp-server",
+      "type": "mcp",
+      "label": "Build Your First MCP Server - Complete Development Guide",
+      "url": "https://bestaiagent.in/build-your-first-mcp-server"
+    },
+    {
+      "id": "/builders",
+      "type": "entity-pages",
+      "label": "AI Agent Builders Entity Directory",
+      "url": "https://bestaiagent.in/builders"
     },
     {
       "id": "/business-agents",
@@ -990,6 +1230,12 @@
       "type": "hubs",
       "label": "AI Agent Calculators Hub",
       "url": "https://bestaiagent.in/calculators-hub"
+    },
+    {
+      "id": "/calendar-server",
+      "type": "mcp",
+      "label": "Calendar Server",
+      "url": "https://bestaiagent.in/calendar-server"
     },
     {
       "id": "/claude-code",
@@ -1058,10 +1304,22 @@
       "url": "https://bestaiagent.in/coding-agents-hub"
     },
     {
+      "id": "/companies",
+      "type": "entity-pages",
+      "label": "AI Agent Companies Directory",
+      "url": "https://bestaiagent.in/companies"
+    },
+    {
       "id": "/contact",
       "type": "editorial",
       "label": "Contact BestAIAgent.in",
       "url": "https://bestaiagent.in/contact"
+    },
+    {
+      "id": "/cookie-settings",
+      "type": "trust",
+      "label": "Cookie Settings",
+      "url": "https://bestaiagent.in/cookie-settings"
     },
     {
       "id": "/copilot-free-vs-paid",
@@ -1074,6 +1332,12 @@
       "type": "comparisons",
       "label": "GitHub Copilot vs Claude Code – Which AI Coding Assistant Wins in 2026?",
       "url": "https://bestaiagent.in/copilot-vs-claude-code"
+    },
+    {
+      "id": "/corrections-policy",
+      "type": "editorial",
+      "label": "Corrections Policy",
+      "url": "https://bestaiagent.in/corrections-policy"
     },
     {
       "id": "/crewai-alternatives",
@@ -1098,6 +1362,18 @@
       "type": "reviews",
       "label": "CrewAI Review – India's Independent Assessment (June 2026)",
       "url": "https://bestaiagent.in/crewai-review"
+    },
+    {
+      "id": "/csv-server",
+      "type": "mcp",
+      "label": "CSV Server",
+      "url": "https://bestaiagent.in/csv-server"
+    },
+    {
+      "id": "/currency-server",
+      "type": "mcp",
+      "label": "Currency Server",
+      "url": "https://bestaiagent.in/currency-server"
     },
     {
       "id": "/cursor-ai",
@@ -1166,6 +1442,24 @@
       "url": "https://bestaiagent.in/cursor-vs-github-copilot"
     },
     {
+      "id": "/cursor-windsurf-copilot",
+      "type": "comparisons",
+      "label": "Cursor vs Windsurf vs GitHub Copilot 2026 – AI Coding Assistants",
+      "url": "https://bestaiagent.in/cursor-windsurf-copilot"
+    },
+    {
+      "id": "/data-deletion-request",
+      "type": "editorial",
+      "label": "Data Deletion Request",
+      "url": "https://bestaiagent.in/data-deletion-request"
+    },
+    {
+      "id": "/debugging-mcp-servers",
+      "type": "mcp",
+      "label": "Debugging MCP Servers - Complete Troubleshooting Guide",
+      "url": "https://bestaiagent.in/debugging-mcp-servers"
+    },
+    {
       "id": "/dify-alternatives",
       "type": "alternatives",
       "label": "Dify Alternatives 2026 – Best Competitors for Indian Developers",
@@ -1202,6 +1496,24 @@
       "url": "https://bestaiagent.in/directories-hub"
     },
     {
+      "id": "/discord-server",
+      "type": "mcp",
+      "label": "Discord Server",
+      "url": "https://bestaiagent.in/discord-server"
+    },
+    {
+      "id": "/docker-server",
+      "type": "mcp",
+      "label": "Docker Server",
+      "url": "https://bestaiagent.in/docker-server"
+    },
+    {
+      "id": "/docx-server",
+      "type": "mcp",
+      "label": "DOCX Server",
+      "url": "https://bestaiagent.in/docx-server"
+    },
+    {
       "id": "/dpdp-act-ai-compliance",
       "type": "security-compliance",
       "label": "DPDP Act 2023 Compliance for AI Agents: Complete Checklist",
@@ -1220,6 +1532,12 @@
       "url": "https://bestaiagent.in/elevenlabs-conversational-ai-review"
     },
     {
+      "id": "/email-server",
+      "type": "mcp",
+      "label": "Email Server",
+      "url": "https://bestaiagent.in/email-server"
+    },
+    {
       "id": "/entity",
       "type": "entity-pages",
       "label": "AI Agent Entity Pages: Structured Definitions",
@@ -1230,6 +1548,30 @@
       "type": "hubs",
       "label": "AI Agent Entity Pages Hub",
       "url": "https://bestaiagent.in/entity-hub"
+    },
+    {
+      "id": "/excel-server",
+      "type": "mcp",
+      "label": "Excel Server",
+      "url": "https://bestaiagent.in/excel-server"
+    },
+    {
+      "id": "/filesystem-server",
+      "type": "mcp",
+      "label": "Filesystem Server - Complete Guide to MCP File Operations",
+      "url": "https://bestaiagent.in/filesystem-server"
+    },
+    {
+      "id": "/filesystem-vs-database-mcp",
+      "type": "mcp",
+      "label": "Filesystem MCP vs Database MCP Servers - Detailed Comparison",
+      "url": "https://bestaiagent.in/filesystem-vs-database-mcp"
+    },
+    {
+      "id": "/firecrawl-server",
+      "type": "mcp",
+      "label": "Firecrawl Server",
+      "url": "https://bestaiagent.in/firecrawl-server"
     },
     {
       "id": "/flowise-alternatives",
@@ -1274,6 +1616,12 @@
       "url": "https://bestaiagent.in/flowise-vs-n8n"
     },
     {
+      "id": "/frameworks",
+      "type": "entity-pages",
+      "label": "AI Agent Frameworks Directory",
+      "url": "https://bestaiagent.in/frameworks"
+    },
+    {
       "id": "/free-agents",
       "type": "directories",
       "label": "Free AI Agents Directory: No-Cost Options",
@@ -1292,6 +1640,12 @@
       "url": "https://bestaiagent.in/free-ai-agents-hub"
     },
     {
+      "id": "/free-mcp-servers",
+      "type": "mcp",
+      "label": "Free MCP Servers - Complete Marketplace Guide",
+      "url": "https://bestaiagent.in/free-mcp-servers"
+    },
+    {
       "id": "/future-of-ai-agents",
       "type": "core",
       "label": "Future of AI Agents 2026–2030 – Predictions for India",
@@ -1302,6 +1656,30 @@
       "type": "research",
       "label": "GAIA Benchmark Guide 2026 – Complete Explanation",
       "url": "https://bestaiagent.in/gaia-benchmark-guide"
+    },
+    {
+      "id": "/gcp-server",
+      "type": "mcp",
+      "label": "GCP Server",
+      "url": "https://bestaiagent.in/gcp-server"
+    },
+    {
+      "id": "/gcs-server",
+      "type": "mcp",
+      "label": "Google Cloud Storage MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/gcs-server"
+    },
+    {
+      "id": "/getting-started-with-mcp",
+      "type": "mcp",
+      "label": "Getting Started with MCP - Complete Beginner's Guide",
+      "url": "https://bestaiagent.in/getting-started-with-mcp"
+    },
+    {
+      "id": "/github-actions-server",
+      "type": "mcp",
+      "label": "GitHub Actions Server",
+      "url": "https://bestaiagent.in/github-actions-server"
     },
     {
       "id": "/github-copilot",
@@ -1334,10 +1712,40 @@
       "url": "https://bestaiagent.in/github-copilot-reddit-review"
     },
     {
+      "id": "/github-server",
+      "type": "mcp",
+      "label": "GitHub MCP Server - Complete Repository Integration Guide",
+      "url": "https://bestaiagent.in/github-server"
+    },
+    {
+      "id": "/gitlab-server",
+      "type": "mcp",
+      "label": "GitLab MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/gitlab-server"
+    },
+    {
       "id": "/glossary-hub",
       "type": "hubs",
       "label": "AI Agent Glossary Hub",
       "url": "https://bestaiagent.in/glossary-hub"
+    },
+    {
+      "id": "/google-sheets-server",
+      "type": "mcp",
+      "label": "Google Sheets Server",
+      "url": "https://bestaiagent.in/google-sheets-server"
+    },
+    {
+      "id": "/gpt-4",
+      "type": "entities",
+      "label": "GPT-4",
+      "url": "https://bestaiagent.in/gpt-4"
+    },
+    {
+      "id": "/hosting-platforms",
+      "type": "entity-pages",
+      "label": "AI Agent Hosting Platforms Directory",
+      "url": "https://bestaiagent.in/hosting-platforms"
     },
     {
       "id": "/how-to-build-ai-agent-with-crewai",
@@ -1430,10 +1838,22 @@
       "url": "https://bestaiagent.in/how-to-use-vapi"
     },
     {
+      "id": "/how-we-test-ai-agents",
+      "type": "testing-lab",
+      "label": "How We Test AI Agents",
+      "url": "https://bestaiagent.in/how-we-test-ai-agents"
+    },
+    {
       "id": "/hubspot-ai-vs-salesforce-ai",
       "type": "comparisons",
       "label": "HubSpot AI vs Salesforce AI – Which CRM AI Wins in 2026?",
       "url": "https://bestaiagent.in/hubspot-ai-vs-salesforce-ai"
+    },
+    {
+      "id": "/hubspot-server",
+      "type": "mcp",
+      "label": "HubSpot Server",
+      "url": "https://bestaiagent.in/hubspot-server"
     },
     {
       "id": "/humaneval-guide",
@@ -1446,6 +1866,12 @@
       "type": "tutorials",
       "label": "Implementation Tutorials Hub",
       "url": "https://bestaiagent.in/implementation-tutorials-hub"
+    },
+    {
+      "id": "/index",
+      "type": "tutorials",
+      "label": "AI Agent Tutorials",
+      "url": "https://bestaiagent.in/index"
     },
     {
       "id": "/india",
@@ -1502,6 +1928,30 @@
       "url": "https://bestaiagent.in/jasper-vs-copy-ai"
     },
     {
+      "id": "/jina-reader",
+      "type": "mcp",
+      "label": "Jina Reader",
+      "url": "https://bestaiagent.in/jina-reader"
+    },
+    {
+      "id": "/jira-server",
+      "type": "mcp",
+      "label": "Jira Server",
+      "url": "https://bestaiagent.in/jira-server"
+    },
+    {
+      "id": "/kubernetes-server",
+      "type": "mcp",
+      "label": "Kubernetes Server",
+      "url": "https://bestaiagent.in/kubernetes-server"
+    },
+    {
+      "id": "/langchain",
+      "type": "entities",
+      "label": "LangChain",
+      "url": "https://bestaiagent.in/langchain"
+    },
+    {
       "id": "/langflow-review",
       "type": "reviews",
       "label": "LangFlow Review – India’s Independent Assessment (June 2026)",
@@ -1524,6 +1974,18 @@
       "type": "comparisons",
       "label": "LangGraph vs CrewAI – Which Multi-Agent Framework Wins in 2026?",
       "url": "https://bestaiagent.in/langgraph-vs-crewai"
+    },
+    {
+      "id": "/linear-server",
+      "type": "mcp",
+      "label": "Linear Server",
+      "url": "https://bestaiagent.in/linear-server"
+    },
+    {
+      "id": "/linkedin-server",
+      "type": "mcp",
+      "label": "LinkedIn Server",
+      "url": "https://bestaiagent.in/linkedin-server"
     },
     {
       "id": "/llamaindex-review",
@@ -1550,10 +2012,22 @@
       "url": "https://bestaiagent.in/longtail-hub"
     },
     {
-      "id": "/mcp-directory",
+      "id": "/looker-server",
       "type": "mcp",
-      "label": "MCP Directory 2026 – Complete List of Model Context Protocol Servers",
+      "label": "Looker Server",
+      "url": "https://bestaiagent.in/looker-server"
+    },
+    {
+      "id": "/mcp-directory",
+      "type": "editorial",
+      "label": "MCP Directory",
       "url": "https://bestaiagent.in/mcp-directory"
+    },
+    {
+      "id": "/mcp-ecosystem-report-2026",
+      "type": "reports",
+      "label": "MCP Ecosystem Report 2026 – Model Context Protocol Directory",
+      "url": "https://bestaiagent.in/mcp-ecosystem-report-2026"
     },
     {
       "id": "/mcp-for-ai-agents",
@@ -1575,15 +2049,39 @@
     },
     {
       "id": "/mcp-marketplace",
-      "type": "mcp-servers",
-      "label": "MCP Marketplace: Find & Deploy Servers",
+      "type": "mcp",
+      "label": "MCP Marketplace: Find & Deploy MCP Servers",
       "url": "https://bestaiagent.in/mcp-marketplace"
+    },
+    {
+      "id": "/mcp-registry",
+      "type": "mcp",
+      "label": "MCP Registry: Official Model Context Protocol Server Registry",
+      "url": "https://bestaiagent.in/mcp-registry"
     },
     {
       "id": "/mcp-security",
       "type": "mcp",
       "label": "MCP Security 2026 – Complete Guide for Indian Developers",
       "url": "https://bestaiagent.in/mcp-security"
+    },
+    {
+      "id": "/mcp-server-comparisons",
+      "type": "mcp",
+      "label": "MCP Server Comparisons: Side-by-Side",
+      "url": "https://bestaiagent.in/mcp-server-comparisons"
+    },
+    {
+      "id": "/mcp-server-directory",
+      "type": "mcp",
+      "label": "MCP Server Directory 2026: Browse & Compare Servers",
+      "url": "https://bestaiagent.in/mcp-server-directory"
+    },
+    {
+      "id": "/mcp-server-entities",
+      "type": "entity-pages",
+      "label": "MCP Server Entity Directory",
+      "url": "https://bestaiagent.in/mcp-server-entities"
     },
     {
       "id": "/mcp-servers",
@@ -1598,6 +2096,12 @@
       "url": "https://bestaiagent.in/mcp-servers-directory"
     },
     {
+      "id": "/mcp-tutorials",
+      "type": "mcp",
+      "label": "MCP Tutorials: How to Create, Deploy & Use MCP Servers",
+      "url": "https://bestaiagent.in/mcp-tutorials"
+    },
+    {
       "id": "/mcp-use-cases",
       "type": "mcp-servers",
       "label": "MCP Use Cases: Real-World AI Agent Integrations",
@@ -1610,16 +2114,46 @@
       "url": "https://bestaiagent.in/mcp-vs-api"
     },
     {
+      "id": "/mcp-with-claude-desktop",
+      "type": "mcp",
+      "label": "MCP with Claude Desktop - Complete Integration Guide",
+      "url": "https://bestaiagent.in/mcp-with-claude-desktop"
+    },
+    {
+      "id": "/mcp-with-cursor-ai",
+      "type": "mcp",
+      "label": "MCP with Cursor AI - Developer Workflow Integration",
+      "url": "https://bestaiagent.in/mcp-with-cursor-ai"
+    },
+    {
       "id": "/mcp/what-is-mcp",
       "type": "mcp",
       "label": "What is MCP (Model Context Protocol)? Complete Guide 2026",
       "url": "https://bestaiagent.in/mcp/what-is-mcp"
     },
     {
+      "id": "/medium-server",
+      "type": "mcp",
+      "label": "Medium Server",
+      "url": "https://bestaiagent.in/medium-server"
+    },
+    {
       "id": "/methodology",
       "type": "editorial",
-      "label": "Editorial Methodology and 42-Point AI Agent Scoring Framework",
+      "label": "Review Methodology and 100-Point AI Agent Scoring Framework",
       "url": "https://bestaiagent.in/methodology"
+    },
+    {
+      "id": "/models",
+      "type": "entity-pages",
+      "label": "AI Models Directory for Agents",
+      "url": "https://bestaiagent.in/models"
+    },
+    {
+      "id": "/mongodb-server",
+      "type": "mcp",
+      "label": "MongoDB MCP Server [Cursor AI review](/tools/cursor-ai) [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/mongodb-server"
     },
     {
       "id": "/n8n-alternatives",
@@ -1640,6 +2174,24 @@
       "url": "https://bestaiagent.in/n8n-review"
     },
     {
+      "id": "/news-api-server",
+      "type": "mcp",
+      "label": "News API Server",
+      "url": "https://bestaiagent.in/news-api-server"
+    },
+    {
+      "id": "/notion-server",
+      "type": "mcp",
+      "label": "Notion MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/notion-server"
+    },
+    {
+      "id": "/official-mcp-vs-community-mcp",
+      "type": "mcp",
+      "label": "Official MCP Servers vs Community MCP Servers - Ecosystem Comparison",
+      "url": "https://bestaiagent.in/official-mcp-vs-community-mcp"
+    },
+    {
       "id": "/open-interpreter-review",
       "type": "reviews",
       "label": "Open Interpreter Review – India's Independent Assessment (June 2026)",
@@ -1658,6 +2210,12 @@
       "url": "https://bestaiagent.in/open-source-agents-directory"
     },
     {
+      "id": "/openai",
+      "type": "entities",
+      "label": "OpenAI Company Profile",
+      "url": "https://bestaiagent.in/openai"
+    },
+    {
       "id": "/openai-agents-sdk-review",
       "type": "reviews",
       "label": "OpenAI Agents SDK Review – India's Independent Assessment (June 2026)",
@@ -1670,10 +2228,58 @@
       "url": "https://bestaiagent.in/openai-agents-sdk-vs-langgraph"
     },
     {
+      "id": "/paid-mcp-servers",
+      "type": "mcp",
+      "label": "Paid MCP Servers - Enterprise Solutions Guide",
+      "url": "https://bestaiagent.in/paid-mcp-servers"
+    },
+    {
+      "id": "/pdf-server",
+      "type": "mcp",
+      "label": "PDF Server",
+      "url": "https://bestaiagent.in/pdf-server"
+    },
+    {
+      "id": "/pinecone",
+      "type": "entities",
+      "label": "Pinecone Vector Database: The Complete Guide for Indian Developers (2026)",
+      "url": "https://bestaiagent.in/pinecone"
+    },
+    {
+      "id": "/playwright-server",
+      "type": "mcp",
+      "label": "Playwright Server",
+      "url": "https://bestaiagent.in/playwright-server"
+    },
+    {
+      "id": "/postgres-server",
+      "type": "mcp",
+      "label": "PostgreSQL MCP Server: Complete 2026 Guide",
+      "url": "https://bestaiagent.in/postgres-server"
+    },
+    {
       "id": "/pricing-hub",
       "type": "hubs",
       "label": "AI Agent Pricing Hub",
       "url": "https://bestaiagent.in/pricing-hub"
+    },
+    {
+      "id": "/privacy-policy",
+      "type": "editorial",
+      "label": "Privacy Policy",
+      "url": "https://bestaiagent.in/privacy-policy"
+    },
+    {
+      "id": "/priya-iyer",
+      "type": "authors",
+      "label": "Priya Iyer",
+      "url": "https://bestaiagent.in/priya-iyer"
+    },
+    {
+      "id": "/puppeteer-server",
+      "type": "mcp",
+      "label": "Puppeteer Server",
+      "url": "https://bestaiagent.in/puppeteer-server"
     },
     {
       "id": "/reddit",
@@ -1686,6 +2292,18 @@
       "type": "hubs",
       "label": "AI Agent Reddit Reviews Hub",
       "url": "https://bestaiagent.in/reddit-hub"
+    },
+    {
+      "id": "/reddit-server",
+      "type": "mcp",
+      "label": "Reddit Server",
+      "url": "https://bestaiagent.in/reddit-server"
+    },
+    {
+      "id": "/redis-server",
+      "type": "mcp",
+      "label": "Redis MCP Server: Complete 2026 Guide",
+      "url": "https://bestaiagent.in/redis-server"
     },
     {
       "id": "/replit-agent",
@@ -1742,10 +2360,64 @@
       "url": "https://bestaiagent.in/retell-vs-bland"
     },
     {
+      "id": "/review-policy",
+      "type": "editorial",
+      "label": "Review Policy: How We Score AI Agents",
+      "url": "https://bestaiagent.in/review-policy"
+    },
+    {
+      "id": "/salesforce-server",
+      "type": "mcp",
+      "label": "Salesforce MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/salesforce-server"
+    },
+    {
       "id": "/semantic-kernel-review",
       "type": "reviews",
       "label": "Semantic Kernel Review – India's Independent Assessment (June 2026)",
       "url": "https://bestaiagent.in/semantic-kernel-review"
+    },
+    {
+      "id": "/sendgrid-server",
+      "type": "mcp",
+      "label": "SendGrid Server",
+      "url": "https://bestaiagent.in/sendgrid-server"
+    },
+    {
+      "id": "/serpapi-server",
+      "type": "mcp",
+      "label": "SerpAPI Server",
+      "url": "https://bestaiagent.in/serpapi-server"
+    },
+    {
+      "id": "/shopify-server",
+      "type": "mcp",
+      "label": "Shopify Server",
+      "url": "https://bestaiagent.in/shopify-server"
+    },
+    {
+      "id": "/slack-mcp-server",
+      "type": "mcp",
+      "label": "Slack MCP Server",
+      "url": "https://bestaiagent.in/slack-mcp-server"
+    },
+    {
+      "id": "/slack-server",
+      "type": "mcp",
+      "label": "Slack MCP Server - Complete Workspace Integration Guide",
+      "url": "https://bestaiagent.in/slack-server"
+    },
+    {
+      "id": "/snowflake-server",
+      "type": "mcp",
+      "label": "Snowflake MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/snowflake-server"
+    },
+    {
+      "id": "/stripe-server",
+      "type": "mcp",
+      "label": "Stripe MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/stripe-server"
     },
     {
       "id": "/superagent-review",
@@ -1760,16 +2432,70 @@
       "url": "https://bestaiagent.in/swe-bench-guide"
     },
     {
+      "id": "/tavily-search",
+      "type": "mcp",
+      "label": "Tavily Search",
+      "url": "https://bestaiagent.in/tavily-search"
+    },
+    {
+      "id": "/team",
+      "type": "editorial",
+      "label": "Team",
+      "url": "https://bestaiagent.in/team"
+    },
+    {
+      "id": "/telegram-server",
+      "type": "mcp",
+      "label": "Telegram Server",
+      "url": "https://bestaiagent.in/telegram-server"
+    },
+    {
+      "id": "/terms",
+      "type": "editorial",
+      "label": "Terms of Use",
+      "url": "https://bestaiagent.in/terms"
+    },
+    {
       "id": "/tools/cursor-ai",
       "type": "tools",
       "label": "Cursor AI: AI Coding Agent Tool Profile",
       "url": "https://bestaiagent.in/tools/cursor-ai"
     },
     {
+      "id": "/tools/index",
+      "type": "tools",
+      "label": "AI Agent Tools",
+      "url": "https://bestaiagent.in/tools/index"
+    },
+    {
+      "id": "/top-500-ai-agents-database",
+      "type": "reports",
+      "label": "Top 500 AI Agents Database – Complete Directory 2026",
+      "url": "https://bestaiagent.in/top-500-ai-agents-database"
+    },
+    {
+      "id": "/top-ai-agents-2026",
+      "type": "rankings",
+      "label": "Top AI Agents 2026",
+      "url": "https://bestaiagent.in/top-ai-agents-2026"
+    },
+    {
       "id": "/tutorials-hub",
       "type": "hubs",
       "label": "AI Agent Tutorials Hub",
       "url": "https://bestaiagent.in/tutorials-hub"
+    },
+    {
+      "id": "/twilio-server",
+      "type": "mcp",
+      "label": "Twilio MCP Server [MCP server registry](/mcp/registry)",
+      "url": "https://bestaiagent.in/twilio-server"
+    },
+    {
+      "id": "/twitter-server",
+      "type": "mcp",
+      "label": "Twitter Server",
+      "url": "https://bestaiagent.in/twitter-server"
     },
     {
       "id": "/vapi-alternatives",
@@ -1832,6 +2558,12 @@
       "url": "https://bestaiagent.in/vapi-vs-retell"
     },
     {
+      "id": "/vector-dbs",
+      "type": "entity-pages",
+      "label": "Vector Databases for AI Agents",
+      "url": "https://bestaiagent.in/vector-dbs"
+    },
+    {
       "id": "/voice-agents",
       "type": "directories",
       "label": "Voice Agents Directory: Telephony & TTS",
@@ -1848,6 +2580,18 @@
       "type": "hubs",
       "label": "Voice AI Agents Hub",
       "url": "https://bestaiagent.in/voice-ai-hub"
+    },
+    {
+      "id": "/weather-server",
+      "type": "mcp",
+      "label": "Weather Server",
+      "url": "https://bestaiagent.in/weather-server"
+    },
+    {
+      "id": "/web-browser-server",
+      "type": "mcp",
+      "label": "Web Browser Server",
+      "url": "https://bestaiagent.in/web-browser-server"
     },
     {
       "id": "/what-is-agentic-ai",
@@ -1958,6 +2702,12 @@
       "url": "https://bestaiagent.in/windsurf-vs-cursor"
     },
     {
+      "id": "/wordpress-server",
+      "type": "mcp",
+      "label": "WordPress Server",
+      "url": "https://bestaiagent.in/wordpress-server"
+    },
+    {
       "id": "/yellow-ai-alternatives",
       "type": "alternatives",
       "label": "Yellow.ai Alternatives: Haptik, Wati & Intercom",
@@ -1986,6 +2736,12 @@
       "type": "comparisons",
       "label": "Yellow.ai vs Intercom AI – Which AI Agent Wins for Indian Customer Support?",
       "url": "https://bestaiagent.in/yellow-ai-vs-intercom"
+    },
+    {
+      "id": "/youtube-server",
+      "type": "mcp",
+      "label": "YouTube Server",
+      "url": "https://bestaiagent.in/youtube-server"
     },
     {
       "id": "entity:AI Agent",
@@ -2170,6 +2926,16 @@
       "relation": "parentHub"
     },
     {
+      "from": "/about",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/about-editorial-team",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/affiliate-disclosure",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2195,7 +2961,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-awards",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-awards-2026",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-benchmark",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-benchmark-report-q3-2026",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/ai-agent-benchmarks",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-benchmarks-2026",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2245,7 +3041,32 @@
       "relation": "parentHub"
     },
     {
+      "from": "/ai-agent-glossary",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-industry-report-2026",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-landscape-2026-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/ai-agent-learning-path",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-market-map",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-market-map-2026",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2275,6 +3096,16 @@
       "relation": "parentHub"
     },
     {
+      "from": "/ai-agent-rankings",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-rankings-2026",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/ai-agent-research",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2286,6 +3117,11 @@
     },
     {
       "from": "/ai-agent-security",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-statistics-2026",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2385,13 +3221,28 @@
       "relation": "parentHub"
     },
     {
+      "from": "/anthropic",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/apollo-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/arshdeep-singh",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
       "from": "/artisan-review",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/arxiv-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -2421,6 +3272,26 @@
     },
     {
       "from": "/autogen-vs-crewai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/aws-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/azure-blob-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/azure-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/benchmark-methodology",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2550,6 +3421,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-customer-support-teams",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-data-analysis",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2605,6 +3481,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-hospitals-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-ides",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2640,6 +3521,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-lawyers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-lead-generation",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2671,6 +3557,11 @@
     },
     {
       "from": "/best-ai-agent-for-manufacturing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-manufacturing-india",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2730,7 +3621,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-real-estate-agencies",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-real-estate-calls",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-real-estate-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-recruiters",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2755,12 +3661,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-schools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-seo",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
       "from": "/best-ai-agent-for-shopify",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-shopify-stores",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2810,6 +3726,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-index",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-india",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2841,6 +3762,11 @@
     },
     {
       "from": "/best-ai-agent-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-rankings",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2950,7 +3876,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/bigquery-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/bland-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/brave-search",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/brave-vs-tavily-vs-serpapi",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/browser-automation-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/build-your-first-mcp-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/builders",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -2982,6 +3938,11 @@
     {
       "from": "/calculators-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/calendar-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3040,7 +4001,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/companies",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/contact",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cookie-settings",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3051,6 +4022,11 @@
     },
     {
       "from": "/copilot-vs-claude-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/corrections-policy",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3072,6 +4048,16 @@
     {
       "from": "/crewai-review",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/csv-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/currency-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3130,6 +4116,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/cursor-windsurf-copilot",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/data-deletion-request",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/debugging-mcp-servers",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/dify-alternatives",
       "to": "/alternatives-hub",
       "relation": "parentHub"
@@ -3160,6 +4161,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/discord-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/docker-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/docx-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/dpdp-act-ai-compliance",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3175,6 +4191,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/email-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/entity",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3182,6 +4203,26 @@
     {
       "from": "/entity-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/excel-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/filesystem-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/filesystem-vs-database-mcp",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/firecrawl-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3220,6 +4261,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/frameworks",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/free-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3235,6 +4281,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/free-mcp-servers",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/future-of-ai-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3242,6 +4293,26 @@
     {
       "from": "/gaia-benchmark-guide",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gcp-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gcs-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/getting-started-with-mcp",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-actions-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3270,8 +4341,33 @@
       "relation": "parentHub"
     },
     {
+      "from": "/github-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gitlab-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/glossary-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/google-sheets-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gpt-4",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hosting-platforms",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -3350,8 +4446,18 @@
       "relation": "parentHub"
     },
     {
+      "from": "/how-we-test-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/hubspot-ai-vs-salesforce-ai",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hubspot-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3361,6 +4467,11 @@
     },
     {
       "from": "/implementation-tutorials-hub",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/index",
       "to": "/tutorials-hub",
       "relation": "parentHub"
     },
@@ -3410,6 +4521,26 @@
       "relation": "parentHub"
     },
     {
+      "from": "/jina-reader",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/jira-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/kubernetes-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/langchain",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/langflow-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3427,6 +4558,16 @@
     {
       "from": "/langgraph-vs-crewai",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/linear-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/linkedin-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3450,8 +4591,18 @@
       "relation": "parentHub"
     },
     {
-      "from": "/mcp-directory",
+      "from": "/looker-server",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-directory",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-ecosystem-report-2026",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -3471,12 +4622,32 @@
     },
     {
       "from": "/mcp-marketplace",
-      "to": "/best-ai-agent",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-registry",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
       "from": "/mcp-security",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-server-comparisons",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-server-directory",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-server-entities",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -3490,6 +4661,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-tutorials",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-use-cases",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3500,13 +4676,38 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-with-claude-desktop",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-with-cursor-ai",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp/what-is-mcp",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/medium-server",
       "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
       "from": "/methodology",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/models",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mongodb-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3525,6 +4726,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/news-api-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/notion-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/official-mcp-vs-community-mcp",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/open-interpreter-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3540,6 +4756,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/openai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/openai-agents-sdk-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3550,8 +4771,48 @@
       "relation": "parentHub"
     },
     {
+      "from": "/paid-mcp-servers",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/pdf-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/pinecone",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/playwright-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/postgres-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/pricing-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/privacy-policy",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/priya-iyer",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/puppeteer-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3562,6 +4823,16 @@
     {
       "from": "/reddit-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/reddit-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/redis-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3610,8 +4881,53 @@
       "relation": "parentHub"
     },
     {
+      "from": "/review-policy",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/salesforce-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/semantic-kernel-review",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sendgrid-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/serpapi-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/shopify-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/slack-mcp-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/slack-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/snowflake-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/stripe-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3625,13 +4941,58 @@
       "relation": "parentHub"
     },
     {
+      "from": "/tavily-search",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/team",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/telegram-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/terms",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/tools/cursor-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/index",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/top-500-ai-agents-database",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/top-ai-agents-2026",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
       "from": "/tutorials-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/twilio-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/twitter-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3685,6 +5046,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/vector-dbs",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/voice-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3697,6 +5063,16 @@
     {
       "from": "/voice-ai-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/weather-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/web-browser-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3790,6 +5166,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/wordpress-server",
+      "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/yellow-ai-alternatives",
       "to": "/alternatives-hub",
       "relation": "parentHub"
@@ -3812,6 +5193,11 @@
     {
       "from": "/yellow-ai-vs-intercom",
       "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/youtube-server",
+      "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
@@ -3957,6 +5343,11 @@
     {
       "from": "/cursor-ai",
       "to": "/cursor-vs-github-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/cursor-ai",
+      "to": "/cursor-windsurf-copilot",
       "relation": "competitor"
     },
     {
@@ -4246,6 +5637,11 @@
     },
     {
       "from": "/tools/cursor-ai",
+      "to": "/cursor-windsurf-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/cursor-ai",
       "to": "/replit-vs-cursor",
       "relation": "competitor"
     },
@@ -4267,6 +5663,21 @@
     {
       "from": "/tools/cursor-ai",
       "to": "/how-to-use-cursor-ai",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/index",
+      "to": "Tool Profiles",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/index",
+      "to": "/llamaindex-vs-langchain",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/index",
+      "to": "/index",
       "relation": "tutorial"
     },
     {
@@ -4316,6 +5727,11 @@
     },
     {
       "from": "/windsurf",
+      "to": "/cursor-windsurf-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/windsurf",
       "to": "/windsurf-vs-cursor",
       "relation": "competitor"
     },
@@ -4351,6 +5767,11 @@
     },
     {
       "from": "entity:AI Agent",
+      "to": "/about",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
       "to": "/agent-builders",
       "relation": "mentionedOn"
     },
@@ -4371,7 +5792,37 @@
     },
     {
       "from": "entity:AI Agent",
+      "to": "/agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-awards",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-awards-2026",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-benchmark",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-benchmark-report-q3-2026",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
       "to": "/ai-agent-benchmarks",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-benchmarks-2026",
       "relation": "mentionedOn"
     },
     {
@@ -4407,41 +5858,6 @@
     {
       "from": "entity:AI Agent",
       "to": "/ai-agent-for-indian-startups",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-for-whatsapp-business",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-github-projects",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-learning-path",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-news",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-pricing-india",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-project-ideas",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/ai-agent-projects",
       "relation": "mentionedOn"
     },
     {
@@ -4561,6 +5977,11 @@
     },
     {
       "from": "entity:AI Agent Builder",
+      "to": "/builders",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
       "to": "/flowise-review",
       "relation": "mentionedOn"
     },
@@ -4576,7 +5997,47 @@
     },
     {
       "from": "entity:MCP",
+      "to": "/ai-agent-awards",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-awards-2026",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-benchmark",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-glossary",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-market-map",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/ai-agent-rankings",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
       "to": "/ai-agent-trends",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/azure-blob-server",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/best-ai-agent-rankings",
       "relation": "mentionedOn"
     },
     {
@@ -4586,87 +6047,52 @@
     },
     {
       "from": "entity:MCP",
-      "to": "/glossary-hub",
+      "to": "/brave-search",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/how-to-connect-claude-to-mcp",
+      "to": "/brave-vs-tavily-vs-serpapi",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/how-to-create-mcp-server",
+      "to": "/browser-automation-server",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/implementation-tutorials-hub",
+      "to": "/build-your-first-mcp-server",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-directory",
+      "to": "/debugging-mcp-servers",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-for-ai-agents",
+      "to": "/filesystem-server",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-hosting",
+      "to": "/filesystem-vs-database-mcp",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-hub",
+      "to": "/free-mcp-servers",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-marketplace",
+      "to": "/gcs-server",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:MCP",
-      "to": "/mcp-security",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/mcp-servers",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/mcp-servers-directory",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/mcp-use-cases",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/mcp-vs-api",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/mcp/what-is-mcp",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/tutorials-hub",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/what-is-mcp",
+      "to": "/getting-started-with-mcp",
       "relation": "mentionedOn"
     },
     {
@@ -4741,6 +6167,11 @@
     },
     {
       "from": "entity:LangGraph",
+      "to": "/frameworks",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
       "to": "/how-to-build-multi-agent-system",
       "relation": "mentionedOn"
     },
@@ -4762,11 +6193,6 @@
     {
       "from": "entity:LangGraph",
       "to": "/langgraph-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:LangGraph",
-      "to": "/langgraph-vs-crewai",
       "relation": "mentionedOn"
     },
     {
@@ -4841,6 +6267,11 @@
     },
     {
       "from": "entity:CrewAI",
+      "to": "/frameworks",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
       "to": "/how-to-build-ai-agent-with-crewai",
       "relation": "mentionedOn"
     },
@@ -4862,11 +6293,6 @@
     {
       "from": "entity:CrewAI",
       "to": "/langgraph-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:CrewAI",
-      "to": "/langgraph-vs-crewai",
       "relation": "mentionedOn"
     },
     {
@@ -5051,6 +6477,11 @@
     },
     {
       "from": "entity:GitHub Copilot",
+      "to": "/cursor-windsurf-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
       "to": "/github-copilot",
       "relation": "mentionedOn"
     },
@@ -5062,11 +6493,6 @@
     {
       "from": "entity:GitHub Copilot",
       "to": "/github-copilot-entity",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/github-copilot-pricing",
       "relation": "mentionedOn"
     },
     {
@@ -5616,6 +7042,11 @@
     },
     {
       "from": "entity:AutoGen",
+      "to": "/frameworks",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
       "to": "/langgraph-review",
       "relation": "mentionedOn"
     },
@@ -6051,6 +7482,11 @@
     },
     {
       "from": "entity:Windsurf",
+      "to": "/cursor-windsurf-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
       "to": "/github-copilot-alternatives",
       "relation": "mentionedOn"
     },
@@ -6116,6 +7552,11 @@
     },
     {
       "from": "entity:LangChain",
+      "to": "/langchain",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangChain",
       "to": "/llamaindex-review",
       "relation": "mentionedOn"
     },
@@ -6127,6 +7568,11 @@
     {
       "from": "entity:LlamaIndex",
       "to": "/best-free-open-source-ai-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LlamaIndex",
+      "to": "/frameworks",
       "relation": "mentionedOn"
     },
     {

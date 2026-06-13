@@ -1,4 +1,4 @@
-# What is MCP (Model Context Protocol) – Complete Guide 2026
+# What is MCP (Model Context Protocol) – Complete Guide 2026 [Cursor AI review](/tools/cursor-ai) [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 What is MCP (Model Context Protocol)? Complete Guide for Indian Developers 2026

@@ -151,6 +151,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/tools/index</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/vapi-review</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>

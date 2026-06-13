@@ -1,4 +1,4 @@
-# Dify vs LangFlow Comparison (June 2026)
+# Dify vs LangFlow Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Dify vs LangFlow 2026 – Best AI App Builder for Indian Developers

@@ -1,4 +1,4 @@
-# Best AI Agent Platform 2026 – India’s Independent Guide
+# Best AI Agent Platform 2026 – India’s Independent Guide [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent Platform 2026 – Top AI Agent Platforms for Indian Developers & Enterprises

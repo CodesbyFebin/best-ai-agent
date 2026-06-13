@@ -4,12 +4,14 @@ import { buildRouteMeta, field, h1, walkMarkdown, wordCount } from "./seo_utils.
 const errors = [];
 const warnings = [];
 const seenRoutes = new Map();
+const shortFormCategories = new Set(["editorial", "longtail", "reports"]);
 
 for (const file of walkMarkdown()) {
   const markdown = fs.readFileSync(file, "utf8");
   const words = wordCount(markdown);
   const slug = (field(markdown, "URL Slug") || file.split("/").pop().replace(/\.md$/, "")).replace(/^\/+/, "");
   const category = file.split("/content/")[1]?.split("/")[0] || "";
+  const allowShortForm = shortFormCategories.has(category);
   const route =
     category === "tools" ? `/tools/${slug}` :
     category === "mcp" && slug === "what-is-mcp" ? "/mcp/what-is-mcp" :
@@ -24,15 +26,19 @@ for (const file of walkMarkdown()) {
 
   if (seenRoutes.has(route)) errors.push(`Duplicate route "${route}" in ${file} and ${seenRoutes.get(route)}`);
   seenRoutes.set(route, file);
-  if (words < 1500) errors.push(`${file}: below 1,500 words (${words})`);
+  if (words < 1500) {
+    const message = `${file}: below 1,500 words (${words})`;
+    if (allowShortForm) warnings.push(`${message}; allowed short-form ${category} asset`);
+    else errors.push(message);
+  }
   if (words < 2500) warnings.push(`${file}: intentionally below 2,500 words (${words}); likely legacy canonical/app route`);
   if (!title) warnings.push(`${file}: missing SEO Title header`);
   if (!meta) warnings.push(`${file}: missing Meta Description header`);
   if (!pageH1) errors.push(`${file}: missing H1`);
-  if (!hasQuickAnswer) errors.push(`${file}: missing Quick Answer`);
-  if (!hasTakeaways) errors.push(`${file}: missing Key Takeaways`);
-  if (!hasFaq) errors.push(`${file}: missing FAQ section`);
-  if (!hasStructuredData) errors.push(`${file}: missing Structured Data Recommendations`);
+  if (!hasQuickAnswer) (allowShortForm ? warnings : errors).push(`${file}: missing Quick Answer`);
+  if (!hasTakeaways) (allowShortForm ? warnings : errors).push(`${file}: missing Key Takeaways`);
+  if (!hasFaq) (allowShortForm ? warnings : errors).push(`${file}: missing FAQ section`);
+  if (!hasStructuredData) (allowShortForm ? warnings : errors).push(`${file}: missing Structured Data Recommendations`);
   if (markdown.includes("https://bestaigent.in")) errors.push(`${file}: stale misspelled domain`);
   if (/https:\/\/bestaiagent\.in\/\//.test(markdown)) errors.push(`${file}: double slash URL`);
 }

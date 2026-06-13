@@ -1,5 +1,3 @@
-import type { ExternalLinkType } from './externalLinks';
-
 export type ExternalLinkType =
   | "official"
   | "docs"
@@ -51,6 +49,29 @@ export const externalLinks: Record<string, ExternalLink[]> = {
     { label: "OpenAI", url: "https://openai.com", type: "company", verified: true, lastChecked: "2026-06-12" },
     { label: "ChatGPT", url: "https://chat.openai.com", type: "official", verified: true, lastChecked: "2026-06-12" },
   ],
+  "chatgpt": [
+    { label: "ChatGPT", url: "https://chatgpt.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "OpenAI", url: "https://openai.com", type: "company", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "anthropic": [
+    { label: "Anthropic", url: "https://www.anthropic.com", type: "company", verified: true, lastChecked: "2026-06-12" },
+    { label: "Anthropic Documentation", url: "https://docs.anthropic.com", type: "docs", verified: true, lastChecked: "2026-06-12" },
+    { label: "Claude", url: "https://claude.ai", type: "official", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "google": [
+    { label: "Google AI", url: "https://ai.google", type: "company", verified: true, lastChecked: "2026-06-12" },
+    { label: "Google Gemini", url: "https://gemini.google.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Google AI Studio", url: "https://aistudio.google.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "microsoft": [
+    { label: "Microsoft AI", url: "https://www.microsoft.com/ai", type: "company", verified: true, lastChecked: "2026-06-12" },
+    { label: "GitHub Copilot", url: "https://github.com/features/copilot", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Microsoft AutoGen", url: "https://microsoft.github.io/autogen", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "microsoft-copilot-studio": [
+    { label: "Microsoft Copilot Studio", url: "https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio", type: "official", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+    { label: "Copilot Studio Documentation", url: "https://learn.microsoft.com/microsoft-copilot-studio", type: "docs", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
   "openai-agents-sdk": [
     { label: "OpenAI Agents SDK", url: "https://github.com/openai/openai-agents-python", type: "github", verified: true, lastChecked: "2026-06-12" },
     { label: "OpenAI Agents Documentation", url: "https://platform.openai.com/docs/guides/agents", type: "docs", verified: true, lastChecked: "2026-06-12" },
@@ -93,6 +114,19 @@ export const externalLinks: Record<string, ExternalLink[]> = {
   ],
   "intercom-fin": [
     { label: "Intercom Fin", url: "https://intercom.com/fin", type: "official", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "voiceflow": [
+    { label: "Voiceflow", url: "https://voiceflow.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Voiceflow Documentation", url: "https://docs.voiceflow.com", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "botpress": [
+    { label: "Botpress", url: "https://botpress.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Botpress Documentation", url: "https://botpress.com/docs", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "rasa": [
+    { label: "Rasa", url: "https://rasa.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Rasa GitHub", url: "https://github.com/RasaHQ/rasa", type: "github", verified: true, lastChecked: "2026-06-12" },
+    { label: "Rasa Documentation", url: "https://rasa.com/docs", type: "docs", verified: true, lastChecked: "2026-06-12" },
   ],
   "zendesk-ai": [
     { label: "Zendesk AI", url: "https://zendesk.com", type: "official", verified: true, lastChecked: "2026-06-12" },
@@ -177,6 +211,10 @@ export const externalLinks: Record<string, ExternalLink[]> = {
     { label: "Redis", url: "https://redis.io", type: "official", verified: true, lastChecked: "2026-06-12" },
     { label: "Redis GitHub", url: "https://github.com/redis/redis", type: "github", verified: true, lastChecked: "2026-06-12" },
   ],
+  "postgres": [
+    { label: "PostgreSQL", url: "https://www.postgresql.org", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "PostgreSQL Documentation", url: "https://www.postgresql.org/docs", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
   "docker": [
     { label: "Docker", url: "https://docker.com", type: "official", verified: true, lastChecked: "2026-06-12" },
     { label: "Docker Documentation", url: "https://docs.docker.com", type: "docs", verified: true, lastChecked: "2026-06-12" },
@@ -188,6 +226,22 @@ export const externalLinks: Record<string, ExternalLink[]> = {
   "vscode": [
     { label: "Visual Studio Code", url: "https://code.visualstudio.com", type: "official", verified: true, lastChecked: "2026-06-12" },
     { label: "VS Code GitHub", url: "https://github.com/microsoft/vscode", type: "github", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "jetbrains": [
+    { label: "JetBrains", url: "https://www.jetbrains.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "JetBrains AI", url: "https://www.jetbrains.com/ai", type: "official", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
+  "xcode": [
+    { label: "Xcode", url: "https://developer.apple.com/xcode", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Xcode Documentation", url: "https://developer.apple.com/documentation/xcode", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "zed": [
+    { label: "Zed", url: "https://zed.dev", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Zed GitHub", url: "https://github.com/zed-industries/zed", type: "github", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "neovim": [
+    { label: "Neovim", url: "https://neovim.io", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Neovim GitHub", url: "https://github.com/neovim/neovim", type: "github", verified: true, lastChecked: "2026-06-12" },
   ],
   "github": [
     { label: "GitHub", url: "https://github.com", type: "official", verified: true, lastChecked: "2026-06-12" },
@@ -205,11 +259,29 @@ export const externalLinks: Record<string, ExternalLink[]> = {
     { label: "Replit", url: "https://replit.com", type: "official", verified: true, lastChecked: "2026-06-12" },
     { label: "Replit Agent", url: "https://replit.com/agent", type: "official", verified: true, lastChecked: "2026-06-12" },
   ],
+  "replit-agent": [
+    { label: "Replit Agent", url: "https://replit.com/agent", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Replit", url: "https://replit.com", type: "company", verified: true, lastChecked: "2026-06-12" },
+  ],
   "manus": [
     { label: "Manus", url: "https://manus.ai", type: "official", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
   ],
   "devin": [
     { label: "Devin AI", url: "https://cognition-labs.com", type: "company", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
+  "openclaw": [
+    { label: "OpenClaw", url: "https://github.com/biax-ai/openclaw", type: "github", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
+  "zapier-agents": [
+    { label: "Zapier Agents", url: "https://zapier.com/agents", type: "official", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+    { label: "Zapier", url: "https://zapier.com", type: "company", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "lindy": [
+    { label: "Lindy", url: "https://lindy.ai", type: "official", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
+  "openrouter": [
+    { label: "OpenRouter", url: "https://openrouter.ai", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "OpenRouter Documentation", url: "https://openrouter.ai/docs", type: "docs", verified: true, lastChecked: "2026-06-12" },
   ],
   "open-interpreter": [
     { label: "Open Interpreter", url: "https://openinterpreter.com", type: "official", verified: true, lastChecked: "2026-06-12" },
@@ -222,6 +294,31 @@ export const externalLinks: Record<string, ExternalLink[]> = {
   "together-ai": [
     { label: "Together AI", url: "https://together.ai", type: "official", verified: true, lastChecked: "2026-06-12" },
     { label: "Together AI Documentation", url: "https://docs.together.ai", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "firecrawl": [
+    { label: "Firecrawl", url: "https://firecrawl.dev", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Firecrawl GitHub", url: "https://github.com/mendableai/firecrawl", type: "github", verified: false, lastChecked: "2026-06-12", note: "verify before publishing" },
+  ],
+  "exa": [
+    { label: "Exa", url: "https://exa.ai", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Exa Documentation", url: "https://docs.exa.ai", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "tavily": [
+    { label: "Tavily", url: "https://tavily.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Tavily Documentation", url: "https://docs.tavily.com", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "composio": [
+    { label: "Composio", url: "https://composio.dev", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Composio Documentation", url: "https://docs.composio.dev", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "browserbase": [
+    { label: "Browserbase", url: "https://browserbase.com", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Browserbase Documentation", url: "https://docs.browserbase.com", type: "docs", verified: true, lastChecked: "2026-06-12" },
+  ],
+  "playwright": [
+    { label: "Playwright", url: "https://playwright.dev", type: "official", verified: true, lastChecked: "2026-06-12" },
+    { label: "Playwright GitHub", url: "https://github.com/microsoft/playwright", type: "github", verified: true, lastChecked: "2026-06-12" },
+    { label: "Playwright Documentation", url: "https://playwright.dev/docs/intro", type: "docs", verified: true, lastChecked: "2026-06-12" },
   ],
   "ollama": [
     { label: "Ollama", url: "https://ollama.com", type: "official", verified: true, lastChecked: "2026-06-12" },

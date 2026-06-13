@@ -1,0 +1,99 @@
+{
+  "version": "2026.6.12",
+  "lastUpdated": "2026-06-12T19:08:27-07:00",
+  "rankings": [
+    {
+      "id": "overall-agents-2026",
+      "category": "overall",
+      "title": "Best AI Agents Overall 2026",
+      "url": "/rankings",
+      "lastUpdated": "2026-06-12",
+      "nextUpdate": "2026-09-12",
+      "entries": [
+        { "rank": 1, "entityId": "cursor-ai", "entityName": "Cursor AI", "entityType": "agent", "score": 9.6, "maxScore": 10, "change": "up", "highlights": ["Best coding agent", "Repository indexing", "Multi-file editing"] },
+        { "rank": 2, "entityId": "claude-code", "entityName": "Claude Code", "entityType": "agent", "score": 9.5, "maxScore": 10, "change": "down", "highlights": ["Extended thinking", "Computer use", "Terminal-native"] },
+        { "rank": 3, "entityId": "vapi-ai", "entityName": "Vapi AI", "entityType": "agent", "score": 9.5, "maxScore": 10, "change": "same", "highlights": ["Best voice agent", "Sub-500ms latency", "Indian language support"] },
+        { "rank": 4, "entityId": "claude", "entityName": "Claude", "entityType": "agent", "score": 9.4, "maxScore": 10, "change": "same", "highlights": ["Best general AI", "Document analysis", "Artifacts"] },
+        { "rank": 5, "entityId": "crewai", "entityName": "CrewAI", "entityType": "agent", "score": 9.4, "maxScore": 10, "change": "same", "highlights": ["Best multi-agent", "Role-based teams", "Open-source"] },
+        { "rank": 6, "entityId": "yellow-ai", "entityName": "Yellow.ai", "entityType": "agent", "score": 9.3, "maxScore": 10, "change": "up", "highlights": ["Best for India", "WhatsApp automation", "Enterprise-grade"] },
+        { "rank": 7, "entityId": "github-copilot", "entityName": "GitHub Copilot", "entityType": "agent", "score": 9.3, "maxScore": 10, "change": "down", "highlights": ["Best IDE integration", "Agent mode", "Multi-model"] },
+        { "rank": 8, "entityId": "perplexity-ai", "entityName": "Perplexity AI", "entityType": "agent", "score": 9.1, "maxScore": 10, "change": "up", "highlights": ["Best research agent", "Real-time web", "Citations"] },
+        { "rank": 9, "entityId": "retell-ai", "entityName": "Retell AI", "entityType": "agent", "score": 9.1, "maxScore": 10, "change": "down", "highlights": ["Voice AI", "Telephony", "Enterprise"] },
+        { "rank": 10, "entityId": "flowise-agent", "entityName": "Flowise", "entityType": "agent", "score": 9.1, "maxScore": 10, "change": "up", "highlights": ["Best open-source builder", "Visual builder", "Self-hosted"] }
+      ]
+    },
+    {
+      "id": "coding-agents-2026",
+      "category": "coding-agents",
+      "title": "Best AI Coding Agents 2026",
+      "url": "/rankings/coding-agents",
+      "lastUpdated": "2026-06-12",
+      "entries": [
+        { "rank": 1, "entityId": "cursor-ai", "entityName": "Cursor AI", "score": 9.8, "highlights": ["68.3% SWE-bench", "Repository indexing", "Composer mode"] },
+        { "rank": 2, "entityId": "claude-code", "entityName": "Claude Code", "score": 9.7, "highlights": ["72.5% SWE-bench", "Extended thinking", "Computer use"] },
+        { "rank": 3, "entityId": "github-copilot", "entityName": "GitHub Copilot", "score": 9.3, "highlights": ["62.1% SWE-bench", "IDE integration", "Agent mode"] },
+        { "rank": 4, "entityId": "windsurf", "entityName": "Windsurf", "score": 9.0, "highlights": ["59.8% SWE-bench", "AI-native IDE", "Cascade mode"] },
+        { "rank": 5, "entityId": "qodo", "entityName": "Qodo", "score": 8.8, "highlights": ["Code review specialist", "Test generation", "CI/CD integration"] },
+        { "rank": 6, "entityId": "replit-ai", "entityName": "Replit Agent", "score": 8.5, "highlights": ["Full app generation", "Cloud IDE", "Beginner friendly"] }
+      ]
+    },
+    {
+      "id": "voice-agents-2026",
+      "category": "voice-agents",
+      "title": "Best AI Voice Agents 2026",
+      "url": "/rankings/voice-agents",
+      "lastUpdated": "2026-06-12",
+      "entries": [
+        { "rank": 1, "entityId": "vapi-ai", "entityName": "Vapi AI", "score": 9.5, "highlights": ["380ms latency", "Indian languages", "Developer-first"] },
+        { "rank": 2, "entityId": "elevenlabs-voice-agents", "entityName": "ElevenLabs Voice Agents", "score": 9.3, "highlights": ["4.6 MOS naturalness", "Voice cloning", "Emotional TTS"] },
+        { "rank": 3, "entityId": "retell-ai", "entityName": "Retell AI", "score": 9.1, "highlights": ["420ms latency", "Enterprise features", "CRM integration"] },
+        { "rank": 4, "entityId": "bland-ai", "entityName": "Bland AI", "score": 8.9, "highlights": ["HIPAA compliant", "Human-like", "High-volume"] }
+      ]
+    },
+    {
+      "id": "mcp-servers-2026",
+      "category": "mcp-servers",
+      "title": "Top MCP Servers 2026",
+      "url": "/mcp-rankings",
+      "lastUpdated": "2026-06-12",
+      "entries": [
+        { "rank": 1, "entityId": "mcp-github", "entityName": "GitHub MCP Server", "score": 9.5, "type": "mcp-server", "highlights": ["12K stars", "Official", "Full GitHub API"] },
+        { "rank": 2, "entityId": "mcp-filesystem", "entityName": "Filesystem MCP Server", "score": 9.4, "type": "mcp-server", "highlights": ["8K stars", "Official", "Core server"] },
+        { "rank": 3, "entityId": "mcp-brave-search", "entityName": "Brave Search MCP", "score": 9.2, "type": "mcp-server", "highlights": ["5.5K stars", "Web search", "Real-time info"] },
+        { "rank": 4, "entityId": "mcp-memory", "entityName": "Memory MCP Server", "score": 9.0, "type": "mcp-server", "highlights": ["4.5K stars", "Knowledge graphs", "Persistent memory"] },
+        { "rank": 5, "entityId": "mcp-postgres", "entityName": "PostgreSQL MCP Server", "score": 8.9, "type": "mcp-server", "highlights": ["6K stars", "Database access", "Read-only safety"] }
+      ]
+    },
+    {
+      "id": "india-fit-2026",
+      "category": "india-fit",
+      "title": "Best AI Agents for India 2026",
+      "url": "/rankings/india-fit",
+      "lastUpdated": "2026-06-12",
+      "entries": [
+        { "rank": 1, "entityId": "yellow-ai", "entityName": "Yellow.ai", "score": 9.7, "highlights": ["India-native", "Hindi/Hinglish", "DPDP compliant"] },
+        { "rank": 2, "entityId": "vapi-ai", "entityName": "Vapi AI", "score": 9.6, "highlights": ["Indian languages", "Affordable pricing", "India support"] },
+        { "rank": 3, "entityId": "cursor-ai", "entityName": "Cursor AI", "score": 9.2, "highlights": ["INR pricing", "Strong India user base", "Good support"] },
+        { "rank": 4, "entityId": "github-copilot", "entityName": "GitHub Copilot", "score": 9.0, "highlights": ["INR pricing", "Azure India region", "Student pricing"] },
+        { "rank": 5, "entityId": "n8n-agent", "entityName": "n8n", "score": 8.8, "highlights": ["Self-hosted option", "India hosting", "Open-source"] }
+      ]
+    }
+  ],
+  "awards": [
+    { "year": 2026, "category": "Best AI Coding Agent", "winner": "Cursor AI", "winnerEntityId": "cursor-ai", "url": "/awards/coding" },
+    { "year": 2026, "category": "Best AI Voice Agent", "winner": "Vapi AI", "winnerEntityId": "vapi-ai", "url": "/awards/voice" },
+    { "year": 2026, "category": "Best Multi-Agent Framework", "winner": "CrewAI", "winnerEntityId": "crewai", "url": "/awards/multi-agent" },
+    { "year": 2026, "category": "Best MCP Server", "winner": "GitHub MCP Server", "winnerEntityId": "mcp-github", "url": "/awards/mcp" },
+    { "year": 2026, "category": "Best AI Agent for India", "winner": "Yellow.ai", "winnerEntityId": "yellow-ai", "url": "/awards/india" },
+    { "year": 2026, "category": "Best Open-Source AI Agent", "winner": "Flowise", "winnerEntityId": "flowise-agent", "url": "/awards/open-source" },
+    { "year": 2026, "category": "Best Reasoning Model", "winner": "GPT-4o", "winnerEntityId": "gpt-4o", "url": "/awards/reasoning" },
+    { "year": 2026, "category": "Best Business AI Agent", "winner": "Claude", "winnerEntityId": "claude", "url": "/awards/business" },
+    { "year": 2026, "category": "Best Agent Observability", "winner": "LangSmith", "winnerEntityId": "langsmith", "url": "/awards/observability" },
+    { "year": 2026, "category": "Innovation Award", "winner": "Claude Code", "winnerEntityId": "claude-code", "url": "/awards/innovation" }
+  ],
+  "metadata": {
+    "totalRankings": 5,
+    "totalAwards": 10,
+    "categories": ["overall", "coding-agents", "voice-agents", "mcp-servers", "india-fit"]
+  }
+}

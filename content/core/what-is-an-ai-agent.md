@@ -1,4 +1,4 @@
-# What is an AI Agent – Complete Guide for Indian Developers (June 2026)
+# What is an AI Agent – Complete Guide for Indian Developers (June 2026) [Cursor AI review](/tools/cursor-ai) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 What is an AI Agent? Complete Guide for Indian Developers 2026

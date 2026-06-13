@@ -1,4 +1,4 @@
-# Best AI Agent for JavaScript 2026 – India’s Independent Guide
+# Best AI Agent for JavaScript 2026 – India’s Independent Guide [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for JavaScript 2026 – Top JavaScript AI Coding Assistants for Indian Developers

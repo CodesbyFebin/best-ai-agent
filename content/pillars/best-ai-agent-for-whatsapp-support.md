@@ -1,4 +1,4 @@
-# Best AI Agent for WhatsApp Support 2026 – India’s Independent Guide
+# Best AI Agent for WhatsApp Support 2026 – India’s Independent Guide [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for WhatsApp Support 2026 – Top WhatsApp Automation Tools for Indian Businesses

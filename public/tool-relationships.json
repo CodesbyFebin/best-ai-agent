@@ -109,6 +109,7 @@
       "/claude-vs-cursor",
       "/cursor-vs-claude-code",
       "/cursor-vs-github-copilot",
+      "/cursor-windsurf-copilot",
       "/replit-vs-cursor",
       "/windsurf-vs-cursor"
     ],
@@ -323,6 +324,7 @@
       "/claude-vs-cursor",
       "/cursor-vs-claude-code",
       "/cursor-vs-github-copilot",
+      "/cursor-windsurf-copilot",
       "/replit-vs-cursor",
       "/windsurf-vs-cursor"
     ],
@@ -332,6 +334,19 @@
     "tutorials": [
       "/how-to-install-cursor",
       "/how-to-use-cursor-ai"
+    ]
+  },
+  {
+    "tool": "AI Agent Tools",
+    "review": "/tools/index",
+    "category": "Tool Profiles",
+    "pricing": [],
+    "competitors": [
+      "/llamaindex-vs-langchain"
+    ],
+    "alternatives": [],
+    "tutorials": [
+      "/index"
     ]
   },
   {
@@ -361,6 +376,7 @@
       "/windsurf-pricing"
     ],
     "competitors": [
+      "/cursor-windsurf-copilot",
       "/windsurf-vs-cursor"
     ],
     "alternatives": [

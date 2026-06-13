@@ -1,4 +1,4 @@
-# How to Create an MCP Server – Complete Tutorial (June 2026)
+# How to Create an MCP Server – Complete Tutorial (June 2026) [Cursor AI review](/tools/cursor-ai) [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 How to Create an MCP Server – Step-by-Step Tutorial for Indian Developers 2026

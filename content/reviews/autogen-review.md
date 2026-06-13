@@ -1,4 +1,4 @@
-# AutoGen Review – India's Independent Assessment (June 2026)
+# AutoGen Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 AutoGen Review 2026 – Microsoft's Multi-Agent Framework for Indian Developers

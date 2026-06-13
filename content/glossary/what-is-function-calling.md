@@ -1,4 +1,4 @@
-# What is Function Calling in AI – Complete Guide 2026
+# What is Function Calling in AI – Complete Guide 2026 [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 What is Function Calling in AI? Complete Guide for Indian Developers 2026

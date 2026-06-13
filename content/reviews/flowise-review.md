@@ -1,4 +1,4 @@
-# Flowise Review – India’s Independent Assessment (June 2026)
+# Flowise Review – India’s Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Flowise Review 2026 – Best Open-Source AI Agent Builder for India

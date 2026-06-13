@@ -1,4 +1,4 @@
-# GitHub Copilot Review – India's Independent Assessment (June 2026)
+# GitHub Copilot Review – India's Independent Assessment (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 GitHub Copilot Review – India's Independent Assessment (June 2026) | BestAIAgent.in

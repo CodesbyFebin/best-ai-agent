@@ -1,4 +1,4 @@
-# LlamaIndex vs LangChain Comparison (June 2026)
+# LlamaIndex vs LangChain Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 LlamaIndex vs LangChain 2026 – Best RAG Framework for Indian Developers

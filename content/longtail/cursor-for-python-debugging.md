@@ -1,4 +1,4 @@
-# Cursor for Python Debugging 2026 – Complete Guide for Indian Developers
+# Cursor for Python Debugging 2026 – Complete Guide for Indian Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Cursor for Python Debugging 2026 – How to Use Cursor to Debug Python Code

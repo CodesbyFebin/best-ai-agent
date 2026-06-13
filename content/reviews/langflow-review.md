@@ -1,4 +1,4 @@
-# LangFlow Review – India’s Independent Assessment (June 2026)
+# LangFlow Review – India’s Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 LangFlow Review 2026 – Build Multi-Agent Systems Easily with Indian Language Support

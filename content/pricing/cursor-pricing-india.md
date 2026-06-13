@@ -1,4 +1,4 @@
-# Cursor Pricing India 2026 – Costs in INR, Payment Methods & Best Deals
+# Cursor Pricing India 2026 – Costs in INR, Payment Methods & Best Deals [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Cursor Pricing India 2026 – Plans in INR, Payment Methods & Best Deals for Indian Users

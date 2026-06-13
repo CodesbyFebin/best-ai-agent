@@ -1,4 +1,4 @@
-# Flowise vs n8n Comparison (June 2026)
+# Flowise vs n8n Comparison (June 2026) [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Flowise vs n8n 2026 – Best AI Agent Builder for Indian Agencies

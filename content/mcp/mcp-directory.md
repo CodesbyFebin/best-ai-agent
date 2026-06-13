@@ -1,4 +1,4 @@
-# MCP Directory 2026 – Complete List of Model Context Protocol Servers
+# MCP Directory 2026 – Complete List of Model Context Protocol Servers [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 MCP Directory 2026 – Complete List of Model Context Protocol Servers

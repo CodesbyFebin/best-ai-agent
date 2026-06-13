@@ -1,4 +1,4 @@
-# Best AI Agent for Recruiting 2026 – India's Independent Guide
+# Best AI Agent for Recruiting 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Best AI Agent for Recruiting 2026 – Top AI Tools for Indian HR & Recruitment

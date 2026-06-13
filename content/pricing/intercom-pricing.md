@@ -1,4 +1,4 @@
-# Intercom Pricing 2026 – Complete Guide for Indian SaaS Companies
+# Intercom Pricing 2026 – Complete Guide for Indian SaaS Companies [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Intercom Pricing 2026 – Plans, Costs in INR & India Payment Guide

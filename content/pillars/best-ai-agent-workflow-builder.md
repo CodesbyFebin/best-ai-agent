@@ -1,4 +1,4 @@
-# Best AI Agent Workflow Builder 2026 – India's Independent Guide
+# Best AI Agent Workflow Builder 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 Best AI Agent Workflow Builder 2026 – Top Workflow Automation Tools for Indian Teams

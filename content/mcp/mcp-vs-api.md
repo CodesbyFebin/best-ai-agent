@@ -1,4 +1,4 @@
-# MCP vs API – Complete Comparison for Indian Developers (June 2026)
+# MCP vs API – Complete Comparison for Indian Developers (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 MCP vs API – Complete Comparison for Indian Developers 2026

@@ -1,4 +1,4 @@
-# Cursor Free vs Pro 2026 – Which Plan is Right for Indian Developers?
+# Cursor Free vs Pro 2026 – Which Plan is Right for Indian Developers? [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Cursor Free vs Pro 2026 – Which Plan is Right for Indian Developers?

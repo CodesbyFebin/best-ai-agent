@@ -1,4 +1,4 @@
-# Claude Code Review – India's Independent Assessment (June 2026)
+# Claude Code Review – India's Independent Assessment (June 2026) [Cursor AI review](/tools/cursor-ai) [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Claude Code Review – India's Independent Assessment (June 2026) | BestAIAgent.in

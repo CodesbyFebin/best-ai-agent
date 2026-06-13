@@ -1,4 +1,4 @@
-# OpenAI Agents SDK vs LangGraph Comparison (June 2026)
+# OpenAI Agents SDK vs LangGraph Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 OpenAI Agents SDK vs LangGraph 2026 – Best Agent Framework for Indian Developers

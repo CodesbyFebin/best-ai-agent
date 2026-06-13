@@ -1,4 +1,4 @@
-# How to Set Up Claude Code – Complete Guide for Indian Developers (June 2026)
+# How to Set Up Claude Code – Complete Guide for Indian Developers (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 How to Set Up Claude Code – Complete Guide for Indian Developers 2026

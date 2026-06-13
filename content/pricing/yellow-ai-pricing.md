@@ -1,4 +1,4 @@
-# Yellow.ai Pricing 2026 – Complete Guide for Indian Enterprises
+# Yellow.ai Pricing 2026 – Complete Guide for Indian Enterprises [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Yellow.ai Pricing 2026 – Plans, Costs in INR & Enterprise Guide for Indian Businesses

@@ -1,4 +1,4 @@
-# AI Agent News 2026 – Latest Developments for Indian Developers
+# AI Agent News 2026 – Latest Developments for Indian Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 AI Agent News 2026 – Latest Developments for Indian Developers

@@ -1,4 +1,4 @@
-# Vapi Pricing 2026 – Complete Guide for Indian Startups
+# Vapi Pricing 2026 – Complete Guide for Indian Startups [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Vapi AI Pricing 2026 – Plans, Per-Minute Costs & India Payment Guide

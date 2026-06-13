@@ -1,4 +1,4 @@
-# Best AI Agent for Debugging 2026 – India’s Independent Guide
+# Best AI Agent for Debugging 2026 – India’s Independent Guide [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Debugging 2026 – Top Debugging AI Tools for Indian Developers

@@ -1,4 +1,4 @@
-# Retell AI Review – India's Independent Assessment (June 2026)
+# Retell AI Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Retell AI Review 2026 – Best Enterprise Voice Agent Platform for Indian Companies

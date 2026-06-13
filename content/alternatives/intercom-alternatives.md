@@ -1,4 +1,4 @@
-# Intercom Alternatives 2026 – Best Competitors for Indian SaaS Companies
+# Intercom Alternatives 2026 – Best Competitors for Indian SaaS Companies [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Intercom Alternatives 2026 – 8 Best Competitors for Indian SaaS

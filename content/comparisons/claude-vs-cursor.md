@@ -1,4 +1,4 @@
-# Claude VS Code vs Cursor AI Comparison (June 2026)
+# Claude VS Code vs Cursor AI Comparison (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Claude VS Code vs Cursor AI – Best AI Coding Assistant for Developers 2026

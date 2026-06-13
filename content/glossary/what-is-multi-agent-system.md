@@ -1,4 +1,4 @@
-# What is a Multi-Agent System – Complete Guide 2026
+# What is a Multi-Agent System – Complete Guide 2026 [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 What is a Multi-Agent System? Complete Guide for Indian Developers 2026

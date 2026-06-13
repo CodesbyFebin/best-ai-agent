@@ -1,4 +1,4 @@
-# Best AI Agent for Patient Scheduling in Hospitals 2026 – India Guide
+# Best AI Agent for Patient Scheduling in Hospitals 2026 – India Guide [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Best AI Agent for Patient Scheduling in Hospitals 2026 – India Guide

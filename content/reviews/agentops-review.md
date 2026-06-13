@@ -1,4 +1,4 @@
-# AgentOps Review – India's Independent Assessment (June 2026)
+# AgentOps Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 AgentOps Review 2026 – Best AI Agent Monitoring Platform for Indian Developers

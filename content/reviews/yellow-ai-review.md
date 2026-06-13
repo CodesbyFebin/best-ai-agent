@@ -1,4 +1,4 @@
-# Yellow.ai Review – India’s Independent Assessment (June 2026)
+# Yellow.ai Review – India’s Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Yellow.ai Review 2026 – AI Voice & WhatsApp Support for Indian Businesses

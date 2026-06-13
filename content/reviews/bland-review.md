@@ -1,4 +1,4 @@
-# Bland AI Review – India's Independent Assessment (June 2026)
+# Bland AI Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Bland AI Review 2026 – Best Outbound Sales Voice Agent for Indian Companies

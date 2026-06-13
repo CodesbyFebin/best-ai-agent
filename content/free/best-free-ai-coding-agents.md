@@ -1,4 +1,4 @@
-# Best Free AI Coding Agents 2026 – Complete Guide for Indian Developers
+# Best Free AI Coding Agents 2026 – Complete Guide for Indian Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best Free AI Coding Agents 2026 – Top Free Tools for Indian Developers

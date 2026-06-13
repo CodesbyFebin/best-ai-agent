@@ -1,4 +1,4 @@
-# Clay Review – India's Independent Assessment (June 2026)
+# Clay Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Clay Review 2026 – Best Account-Based Sales Platform for Indian Enterprises

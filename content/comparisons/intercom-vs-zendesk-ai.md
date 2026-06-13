@@ -1,4 +1,4 @@
-# Intercom vs Zendesk AI Comparison (June 2026)
+# Intercom vs Zendesk AI Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Intercom vs Zendesk AI 2026 – Best Customer Support Platform for Indian Companies

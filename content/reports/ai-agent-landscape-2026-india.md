@@ -1,4 +1,4 @@
-# AI Agent Landscape 2026 – India Report
+# AI Agent Landscape 2026 – India Report [Cursor AI review](/tools/cursor-ai) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai) [Flowise no-code builder](/tools/flowise)
 
 ## SEO Title
 AI Agent Landscape 2026 – India Market Report | BestAIAgent.in

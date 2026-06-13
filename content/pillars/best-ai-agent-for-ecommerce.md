@@ -1,4 +1,4 @@
-# Best AI Agent for Ecommerce 2026 – India’s Independent Guide
+# Best AI Agent for Ecommerce 2026 – India’s Independent Guide [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Ecommerce 2026 – Top AI Tools for Indian Online Stores

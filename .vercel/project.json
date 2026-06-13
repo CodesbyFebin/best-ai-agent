@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_qjoxMQRX3pkgiSqzXCut4T5UwNLb",
+  "orgId": "team_f2yaJJSzp3wc0EsG3PvcZ24D",
+  "projectName": "best-ai-agent",
+  "settings": {
+    "createdAt": 1781275471117,
+    "framework": "vite",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}

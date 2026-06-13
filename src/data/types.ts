@@ -63,10 +63,11 @@ export interface SiloPage {
   h1: string;
   directAnswer: string;
   primaryKeyword: string;
-  siloId: string;
+  siloId: 'reviews' | 'builders' | 'coding-agents' | 'frameworks' | 'business' | 'research' | 'mcp' | 'editorial';
   author: string;
   publishedAt: string;
   updatedAt: string;
+  description?: string;
   bodySections: { heading: string; text: string }[];
   faqs: FAQItem[];
   relatedPagesSlugs: string[];
@@ -74,6 +75,10 @@ export interface SiloPage {
   evaluationVerdict?: string;
   clusterId?: string;
   authors?: { name: string; role: string; profileSlug?: string }[];
+  verificationStatus?: string;
+  confidenceLevel?: number;
+  sourcesUsed?: string[];
+  editorialReviewDate?: string;
 }
 
 export type { PageType, SearchIntent, TopicalPage, TopicalCluster } from './topicalAuthority';

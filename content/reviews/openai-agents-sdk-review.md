@@ -1,4 +1,4 @@
-# OpenAI Agents SDK Review – India's Independent Assessment (June 2026)
+# OpenAI Agents SDK Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 OpenAI Agents SDK Review 2026 – Best Agent Framework for OpenAI Ecosystem in India

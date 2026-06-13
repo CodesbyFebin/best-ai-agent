@@ -1,4 +1,4 @@
-# How to Install Cursor AI – Complete Guide for Indian Developers (June 2026)
+# How to Install Cursor AI – Complete Guide for Indian Developers (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 How to Install Cursor AI – Complete Guide for Windows, Mac & Linux (2026)

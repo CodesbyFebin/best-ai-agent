@@ -1,4 +1,4 @@
-# Artisan Review – India's Independent Assessment (June 2026)
+# Artisan Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Artisan Review 2026 – Best LinkedIn Prospecting Platform for Indian B2B Sales

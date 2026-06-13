@@ -1,4 +1,4 @@
-# Cursor Pricing 2026 – Complete Guide for Indian Users
+# Cursor Pricing 2026 – Complete Guide for Indian Users [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Cursor Pricing 2026 Plans, Costs & India-Specific Pricing Breakdown

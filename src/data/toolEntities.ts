@@ -36,7 +36,7 @@ export const toolEntityPages: ToolEntityPage[] = [
     entityDefinition: '"Cursor is an AI-powered code editor built on VS Code that specializes in repository-aware coding assistance and multi-file edits."',
     categories: ['Developer Tools', 'AI Coding', 'IDE', 'VS Code Extension'],
     relatedProductSlugs: ['github-copilot', 'claude-code', 'replit-ai'],
-    relatedComparisonSlugs: ['cursor-vs-copilot', 'cursor-vs-claude'],
+    relatedComparisonSlugs: ['cursor-vs-copilot', 'cursor-vs-codex'],
     faqSlugs: ['faq-code-flag-1'],
     schemaType: 'SoftwareApplication'
   },
@@ -56,7 +56,7 @@ export const toolEntityPages: ToolEntityPage[] = [
     entityDefinition: '"Vapi AI is a backend pipeline for real-time voice conversations that solves audio latency, voice activity detection, and speech synthesis orchestration in milliseconds."',
     categories: ['Voice AI', 'Telephony', 'Automation', 'Customer Support'],
     relatedProductSlugs: ['bland-ai', 'retell-ai', 'yellow-ai'],
-    relatedComparisonSlugs: ['vapi-vs-retell', 'yellow-ai-vs-vapi'],
+    relatedComparisonSlugs: ['vapi-vs-retell', 'vapi-vs-elevenlabs'],
     faqSlugs: [],
     schemaType: 'SoftwareApplication'
   },
@@ -76,7 +76,7 @@ export const toolEntityPages: ToolEntityPage[] = [
     entityDefinition: '"CrewAI is a Python framework for orchestrating role-based, autonomous multi-agent teams that model collaborative workflows mimicking real-world corporate teams."',
     categories: ['AI Framework', 'Multi-Agent', 'Python SDK', 'Open Source'],
     relatedProductSlugs: ['langgraph', 'autogen', 'dify'],
-    relatedComparisonSlugs: ['crewai-vs-autogen', 'langgraph-vs-crewai'],
+    relatedComparisonSlugs: ['crewai-vs-autogen', 'crewai-vs-langgraph'],
     faqSlugs: [],
     schemaType: 'SoftwareSourceCode'
   }

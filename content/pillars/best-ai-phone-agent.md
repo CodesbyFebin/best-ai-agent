@@ -1,4 +1,4 @@
-# Best AI Phone Agent 2026 – India's Independent Guide
+# Best AI Phone Agent 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Best AI Phone Agent 2026 – Top Voice AI for Indian Business Calls

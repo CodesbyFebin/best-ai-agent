@@ -1,4 +1,4 @@
-# HubSpot AI vs Salesforce AI Comparison (June 2026)
+# HubSpot AI vs Salesforce AI Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 HubSpot AI vs Salesforce AI 2026 – Best CRM AI for Indian Businesses

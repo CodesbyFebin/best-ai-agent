@@ -1,4 +1,4 @@
-# Yellow.ai vs Intercom AI Comparison (June 2026)
+# Yellow.ai vs Intercom AI Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Yellow.ai vs Intercom AI – Best WhatsApp & Chat Support for Indian Businesses 2026

@@ -1,4 +1,4 @@
-# Vapi AI vs Retell AI Comparison (June 2026)
+# Vapi AI vs Retell AI Comparison (June 2026) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Vapi AI vs Retell AI 2026 – Best Voice Agent Platform for Indian Companies

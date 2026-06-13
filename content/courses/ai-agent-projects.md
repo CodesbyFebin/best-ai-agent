@@ -1,4 +1,4 @@
-# AI Agent Projects 2026 – 20 Project Ideas for Indian Developers
+# AI Agent Projects 2026 – 20 Project Ideas for Indian Developers [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 AI Agent Projects 2026 – 20 Project Ideas for Indian Developers

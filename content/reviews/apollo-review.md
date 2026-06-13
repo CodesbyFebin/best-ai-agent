@@ -1,4 +1,4 @@
-# Apollo Review – India's Independent Assessment (June 2026)
+# Apollo Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Apollo Review 2026 – Best Lead Generation Platform for Indian Startups

@@ -1,4 +1,4 @@
-# Best AI Agent for Small Business 2026 – India’s Independent Guide
+# Best AI Agent for Small Business 2026 – India’s Independent Guide [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 Best AI Agent for Small Business 2026 – Top Automation Tools for Indian SMBs

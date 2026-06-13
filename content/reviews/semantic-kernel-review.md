@@ -1,4 +1,4 @@
-# Semantic Kernel Review – India's Independent Assessment (June 2026)
+# Semantic Kernel Review – India's Independent Assessment (June 2026) [AI agent pricing in INR](/pricing) [CrewAI multi-agent review](/tools/crewai)
 
 ## SEO Title
 Semantic Kernel Review 2026 – Microsoft's Enterprise AI Framework for Indian Developers

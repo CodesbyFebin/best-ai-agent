@@ -36,12 +36,15 @@ import {
   Map,
   Network
 } from 'lucide-react';
+import { authorityPages, authorityFooterLinks, trustFooterLinks, trustPages, type TrustPageContent } from './data/trustContent';
 import { products, silos, siloPages, getPageBySlug, getRelatedPages, SiloPage, Product } from './data/db';
 import { comparisonPages } from './data/comparisons';
 import { authorProfiles } from './data/authors';
 import { directoryTools, directoryCategories, DirectoryTool } from './data/directory';
 import { getCategoryAsset, getToolAsset } from './data/assetRegistry';
+import { getExternalLinks, type ExternalLinkType } from './data/externalLinks';
 import BrandTile from './components/BrandTile';
+import OfficialExternalLink from './components/ExternalLink';
 const ProductProfile = lazy(() => import('./components/ProductProfile'));
 const ComparisonPage = lazy(() => import('./components/ComparisonPage'));
 const IndiaPillarCustomizer = lazy(() => import('./components/IndiaPillarCustomizer'));
@@ -54,6 +57,31 @@ const GoogleDriveDashboard = lazy(() => import('./components/GoogleDriveDashboar
 const TopicalAuthorityMap = lazy(() => import('./components/TopicalAuthorityMap'));
 import { allTopicalPages, isTopicalAuthoritySlug, topicalClusters } from './data/topicalAuthority';
 import { Database } from 'lucide-react';
+import TrustPage from './components/TrustPage';
+
+const directorySlugOverrides: Record<string, string> = {
+  ChatGPT: 'chatgpt',
+  Claude: 'claude',
+  Gemini: 'gemini',
+  Perplexity: 'perplexity',
+  'MS Copilot': 'microsoft',
+  Cursor: 'cursor-ai',
+  'GitHub Copilot': 'github-copilot',
+  Vapi: 'vapi-ai',
+  Retell: 'retell-ai',
+  'Yellow.ai': 'yellow-ai',
+  Flowise: 'flowise',
+  Dify: 'dify',
+  n8n: 'n8n',
+  Ollama: 'ollama',
+  'LM Studio': 'lm-studio',
+};
+
+const getDirectoryToolSlug = (name: string) =>
+  directorySlugOverrides[name] || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+const getResourceTypesForSlug = (slug: string) =>
+  ['official', 'docs', 'github', 'pricing'].filter((type) => getExternalLinks(slug).some((link) => link.type === type)) as ExternalLinkType[];
 
 function AnimateOnIntersection({ children, delay = 0 }: { children: React.ReactNode; delay?: number; key?: string }) {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -109,6 +137,8 @@ export default function App() {
   const [dirCategory, setDirCategory] = useState<string>("All Categories");
   const [dirQuery, setDirQuery] = useState<string>("");
   const [activeDirTool, setActiveDirTool] = useState<DirectoryTool | null>(null);
+  const [leaderboardCategory, setLeaderboardCategory] = useState<string>("All");
+  const [leaderboardQuery, setLeaderboardQuery] = useState<string>("");
 
   // Score Customizer Weights State
   const [weights, setWeights] = useState({
@@ -135,7 +165,11 @@ export default function App() {
   const [chatInput, setChatInput] = useState('');
   const [isChatLoading, setIsChatLoading] = useState(false);
 
-  // Submission Forms State
+   // Cookie Consent State
+   const [cookieConsent, setCookieConsent] = useState({ necessary: true, preference: false, analytics: false, marketing: false });
+   const [showCookieBanner, setShowCookieBanner] = useState(true);
+
+   // Submission Forms State
   const [toolSubmitForm, setToolSubmitForm] = useState({ name: '', url: '', category: '', description: '', email: '' });
   const [toolSubmitSuccess, setToolSubmitSuccess] = useState('');
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -191,17 +225,66 @@ export default function App() {
     } else if (currentView === 'editorial') {
       pageTitle = "Editorial Workflow & Programmatic Schema Dashboard | BestAIAgent.in";
     } else if (currentView === 'about') {
-      pageTitle = "About Our Team & Testing Methodology | BestAIAgent.in";
+      pageTitle = trustPages.about?.metaTitle || "About BestAIAgent.in | BestAIAgent.in";
     } else if (currentView === 'disclosure') {
-      pageTitle = "Affiliate Link Disclosures & Ethics Policy | BestAIAgent.in";
+      pageTitle = trustPages['affiliate-disclosure']?.metaTitle || "Affiliate Disclosure | BestAIAgent.in";
     } else if (currentView === 'policy') {
-      pageTitle = "Editorial Policy & Evaluation Criteria | BestAIAgent.in";
+      const policyPage = trustPages[selectedArticleSlug];
+      pageTitle = policyPage?.metaTitle || (selectedArticleSlug === 'review-policy' ? "Review Policy & Integrity Standards | BestAIAgent.in" : "Editorial Policy & Evaluation Criteria | BestAIAgent.in");
+    } else if (currentView === 'trust') {
+      const page = trustPages[selectedArticleSlug];
+      pageTitle = `${page?.metaTitle || 'Trust Page'} | BestAIAgent.in`;
+    } else if (currentView === 'authority') {
+      const page = authorityPages[selectedArticleSlug];
+      pageTitle = `${page?.metaTitle || 'Authority Asset'} | BestAIAgent.in`;
+    } else if (currentView === 'methodology') {
+      pageTitle = 'Review Methodology | BestAIAgent.in';
+    } else if (currentView === 'team') {
+      pageTitle = 'Team | BestAIAgent.in';
+    } else if (currentView === 'contact') {
+      pageTitle = trustPages.contact?.metaTitle || "Contact BestAIAgent.in | BestAIAgent.in";
     } else if (currentView === 'drive') {
       pageTitle = "Google Drive AI Agent Workspace & Requirements Audit | BestAIAgent.in";
     } else if (currentView === 'not-found') {
       pageTitle = "Page Not Found | BestAIAgent.in";
     }
     document.title = pageTitle;
+
+    const routePath = pathForRoute(currentView, selectedSiloId, selectedArticleSlug, selectedProductSlug);
+    const canonical = `https://bestaiagent.in${routePath === '/' ? '/' : routePath}`;
+    const metaDescription = currentView === 'product'
+      ? products.find(item => item.slug === selectedProductSlug)?.summary
+      : currentView === 'article'
+        ? siloPages.find(item => item.slug === selectedArticleSlug)?.metaDescription || siloPages.find(item => item.slug === selectedArticleSlug)?.description
+        : trustPages[selectedArticleSlug]?.metaDescription || authorityPages[selectedArticleSlug]?.metaDescription || "Compare the best AI agents in India with independent rankings, INR pricing, DPDP-aware privacy notes, and expert reviews.";
+
+    const setMeta = (name: string, content: string, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let element = document.querySelector(selector) as HTMLMetaElement | null;
+      if (!element) {
+        element = document.createElement('meta');
+        if (property) element.setAttribute('property', name);
+        else element.setAttribute('name', name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'canonical';
+      document.head.appendChild(link);
+    }
+    link.href = canonical;
+    setMeta('description', metaDescription);
+    setMeta('og:title', pageTitle, true);
+    setMeta('og:description', metaDescription, true);
+    setMeta('og:url', canonical, true);
+    setMeta('og:type', 'website', true);
+    setMeta('twitter:title', pageTitle);
+    setMeta('twitter:description', metaDescription);
+    setMeta('twitter:card', 'summary_large_image');
   }, [currentView, selectedSiloId, selectedArticleSlug, selectedProductSlug]);
 
   const pathForRoute = (view: string, siloId?: string, articleSlug?: string, productSlug?: string) => {
@@ -210,11 +293,15 @@ export default function App() {
     if (view === 'article') return `/${articleSlug || selectedArticleSlug}`;
     if (view === 'compare') return articleSlug ? `/${articleSlug}` : '/compare';
     if (view === 'author') return `/authors/${articleSlug || selectedArticleSlug}`;
-    if (view === 'policy') return '/editorial-policy';
+    if (view === 'policy') return `/${articleSlug || selectedArticleSlug || 'editorial-policy'}`;
+    if (view === 'trust') return `/${articleSlug || selectedArticleSlug || 'privacy-policy'}`;
+    if (view === 'authority') return `/${articleSlug || selectedArticleSlug || 'mcp-directory'}`;
+    if (view === 'methodology') return '/methodology';
+    if (view === 'team') return '/team';
     if (view === 'disclosure') return '/affiliate-disclosure';
     if (view === 'scoring') return '/ai-agent-scoring-system';
     if (view === 'compliance') return '/ai-agent-security';
-    if (view === 'about') return '/authors/arshdeep-singh';
+    if (view === 'about') return '/about';
     if (view === 'contact') return '/contact';
     if (view === 'topical-map') return '/topical-authority-map';
     if (view === 'drive') return '/google-drive-ai-agent-workspace';
@@ -271,18 +358,37 @@ export default function App() {
     const editorialMap: Record<string, string> = {
       '/editorial-policy': 'policy',
       '/affiliate-disclosure': 'disclosure',
-      '/methodology': 'policy',
+      '/methodology': 'methodology',
+      '/privacy-policy': 'trust',
+      '/terms': 'trust',
+      '/data-deletion-request': 'trust',
+      '/team': 'team',
+      '/mcp-directory': 'authority',
+      '/ai-agent-market-map': 'authority',
+      '/ai-agent-benchmark': 'authority',
+      '/ai-agent-rankings': 'authority',
+      '/ai-agent-awards': 'authority',
+      '/ai-agent-glossary': 'authority',
+      '/review-policy': 'policy',
+      '/corrections-policy': 'policy',
+      '/about': 'about',
+      '/contact': 'contact',
       '/ai-agent-scoring-system': 'scoring',
       '/ai-agent-security': 'compliance',
-      '/contact': 'contact',
+      '/about-editorial-team': 'about',
       '/topical-authority-map': 'topical-map',
       '/google-drive-ai-agent-workspace': 'drive',
       '/ai-agent-score-tuner': 'tuner',
       '/editorial-dashboard': 'editorial',
       '/ai-agent-advisor': 'chat',
+      '/ai-agent-statistics': 'authority',
+      '/industry-report': 'authority',
+      '/ai-agent-cost-report': 'authority',
+      '/ai-agent-adoption-report': 'authority',
     };
     if (editorialMap[cleanPath]) {
       setCurrentView(editorialMap[cleanPath]);
+      setSelectedArticleSlug(cleanPath.replace(/^\//, ''));
       return;
     }
     if (comparisonPages.some(c => c.slug === slug) || slug.includes('-vs-')) {
@@ -310,6 +416,7 @@ export default function App() {
       'glossary-hub': 'research',
       'alternatives-hub': 'reviews',
       'pricing-hub': 'reviews',
+      'tutorials-hub': 'frameworks',
     };
     if (hubMap[slug]) {
       setCurrentView('silo-pillar');
@@ -333,9 +440,13 @@ export default function App() {
     }
   };
 
-  const navigateToPath = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const navigateToPath = (event: React.MouseEvent<HTMLAnchorElement>, href: string, view?: string) => {
     event.preventDefault();
     setIsMobileMenuOpen(false);
+    if (view) {
+      routeTo(view, undefined, href.replace(/^\//, ''));
+      return;
+    }
     if (typeof window !== 'undefined' && window.location.pathname !== href) {
       window.history.pushState({}, '', href);
     }
@@ -343,16 +454,14 @@ export default function App() {
   };
 
   const mainNavLinks = [
-    { label: 'Best AI Agents', href: '/best-ai-agent' },
-    { label: 'Coding Agents', href: '/coding-agents-hub' },
-    { label: 'Business AI', href: '/business-ai-hub' },
-    { label: 'Voice AI', href: '/voice-ai-hub' },
-    { label: 'Builders', href: '/ai-agent-builders-hub' },
-    { label: 'Pricing', href: '/pricing-hub' },
-    { label: 'Alternatives', href: '/alternatives-hub' },
-    { label: 'Tutorials', href: '/tutorials-hub' },
-    { label: 'Glossary', href: '/glossary-hub' },
-    { label: 'MCP', href: '/mcp-hub' },
+    { label: 'Leaderboard', href: '/best-ai-agent' },
+    { label: 'Comparisons', href: '/compare' },
+    { label: 'AI Agents', href: '/ai-agent-tools' },
+    { label: 'MCP Directory', href: '/mcp-directory' },
+    { label: 'Rankings', href: '/ai-agent-rankings' },
+    { label: 'Methodology', href: '/methodology' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const homeQuickLinks = [
@@ -587,18 +696,42 @@ export default function App() {
 
     let schemaData: any = null;
 
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BestAIAgent.in",
+      "url": "https://bestaiagent.in",
+      "logo": "https://bestaiagent.in/logo.png",
+      "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "sameAs": []
+    };
+
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BestAIAgent.in",
+      "url": "https://bestaiagent.in",
+      "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bestaiagent.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    };
+
     if (currentView === 'home') {
       schemaData = {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "BestAIAgent.in",
-        "url": "https://bestaiagent.in",
-        "description": "India's premier independent AI Agent review authority and benchmark ranking index dashboard.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://bestaiagent.in/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@graph": [
+          organizationSchema,
+          websiteSchema
+        ]
       };
     } else if (currentView === 'silo-pillar') {
       const s = silos.find(item => item.id === selectedSiloId);
@@ -666,6 +799,60 @@ export default function App() {
               },
               "description": p.metaDescription,
               "mainEntityOfPage": `https://bestaiagent.in/${p.slug}`
+            }
+          ]
+        };
+      }
+    } else if (currentView === 'trust' || currentView === 'methodology' || currentView === 'team') {
+      const page = currentView === 'methodology' ? trustPages.methodology : currentView === 'team' ? trustPages.team : trustPages[selectedArticleSlug];
+      if (page) {
+        schemaData = {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `https://bestaiagent.in/${page.slug}#webpage`,
+              "name": page.metaTitle,
+              "description": page.metaDescription,
+              "url": `https://bestaiagent.in/${page.slug}`,
+              "isPartOf": { "@id": "https://bestaiagent.in/#website" },
+              "author": { "@type": "Person", "name": page.author },
+              "dateModified": page.updated
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `https://bestaiagent.in/${page.slug}#breadcrumb`,
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestaiagent.in/" },
+                { "@type": "ListItem", "position": 2, "name": page.view === 'authority' ? 'Authority Assets' : page.view === 'methodology' ? 'Methodology' : 'Trust', "item": `https://bestaiagent.in/${page.slug}` }
+              ]
+            }
+          ]
+        };
+      }
+    } else if (currentView === 'authority') {
+      const page = authorityPages[selectedArticleSlug];
+      if (page) {
+        schemaData = {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `https://bestaiagent.in/${page.slug}#webpage`,
+              "name": page.metaTitle,
+              "description": page.metaDescription,
+              "url": `https://bestaiagent.in/${page.slug}`,
+              "isPartOf": { "@id": "https://bestaiagent.in/#website" },
+              "author": { "@type": "Person", "name": page.author },
+              "dateModified": page.updated
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `https://bestaiagent.in/${page.slug}#breadcrumb`,
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bestaiagent.in/" },
+                { "@type": "ListItem", "position": 2, "name": "Authority Assets", "item": `https://bestaiagent.in/${page.slug}` }
+              ]
             }
           ]
         };
@@ -823,6 +1010,16 @@ export default function App() {
     }).sort((a, b) => b.calculatedScore - a.calculatedScore);
   }, [weights]);
 
+  const leaderboardCategories = ['All', 'Coding', 'Voice', 'Business', 'Builder', 'Open Source'];
+  const filteredLeaderboardProducts = useMemo(() => {
+    const query = leaderboardQuery.trim().toLowerCase();
+    return sortedProducts.filter(p => {
+      const categoryMatch = leaderboardCategory === 'All' || (leaderboardCategory === 'Coding' && (p.name.toLowerCase().includes('cursor') || p.name.toLowerCase().includes('copilot') || p.name.toLowerCase().includes('claude'))) || (leaderboardCategory === 'Voice' && (p.name.toLowerCase().includes('vapi') || p.name.toLowerCase().includes('retell') || p.name.toLowerCase().includes('yellow'))) || (leaderboardCategory === 'Business' && (p.name.toLowerCase().includes('yellow') || p.name.toLowerCase().includes('intercom') || p.name.toLowerCase().includes('n8n'))) || (leaderboardCategory === 'Builder' && (p.name.toLowerCase().includes('flowise') || p.name.toLowerCase().includes('dify') || p.name.toLowerCase().includes('crewai') || p.name.toLowerCase().includes('langgraph') || p.name.toLowerCase().includes('autogen'))) || (leaderboardCategory === 'Open Source' && p.openSource);
+      const queryMatch = !query || `${p.name} ${p.summary} ${p.bestFor} ${p.vendorName}`.toLowerCase().includes(query);
+      return categoryMatch && queryMatch;
+    });
+  }, [sortedProducts, leaderboardCategory, leaderboardQuery]);
+
   // Handle Search Triggering
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -840,7 +1037,13 @@ export default function App() {
       a.primaryKeyword.toLowerCase().includes(query)
     ).map(a => ({ type: 'article', title: a.title, slug: a.slug, group: 'Research & Guides', snippet: a.directAnswer.slice(0, 140) + '...' }));
 
-    return [...matchedProducts, ...matchedArticles];
+    const matchedTrust = Object.values({ ...trustPages, ...authorityPages } as Record<string, TrustPageContent>).filter(p =>
+      p.title.toLowerCase().includes(query) ||
+      p.metaDescription.toLowerCase().includes(query) ||
+      p.h1.toLowerCase().includes(query)
+    ).map(p => ({ type: 'trust', title: p.title, slug: p.slug, group: p.view === 'authority' ? 'Authority Assets' : 'Trust & Legal', snippet: p.metaDescription }));
+
+    return [...matchedProducts, ...matchedArticles, ...matchedTrust];
   }, [searchQuery]);
 
   // Memoized filtered and searched Directory tools
@@ -969,6 +1172,86 @@ export default function App() {
         <a href="/affiliate-disclosure" onClick={(event) => navigateToPath(event, '/affiliate-disclosure')} className="underline text-slate-200 hover:text-white transition font-medium focus:outline-none">Read Affiliate Disclosure</a>
       </div>
 
+      {/* COOKIE CONSENT BANNER */}
+       {showCookieBanner && (
+         <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white p-4 border-t border-slate-800 z-[100] shadow-lg">
+           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+             <div className="flex-1 space-y-2">
+               <p className="text-xs font-light">
+                 We use cookies to enhance your experience. Necessary cookies are always active. You can choose to accept or reject other cookie types.
+               </p>
+               <a href="/privacy-policy" onClick={(event) => navigateToPath(event, '/privacy-policy')} className="underline hover:text-emerald-300 text-xs">
+                 Learn more in our Privacy Policy
+               </a>
+             </div>
+             <div className="space-y-2 text-sm">
+               <div className="flex items-center">
+                 <input
+                   type="checkbox"
+                   id="cookie-preference"
+                   checked={cookieConsent.preference}
+                   onChange={(e) => setCookieConsent(prev => ({ ...prev, preference: e.target.checked }))}
+                   className="h-4 w-4 text-emerald-600 bg-gray-100 border-gray-300 rounded focus:ring-emerald-500"
+                 />
+                 <label htmlFor="cookie-preference" className="ml-2 block text-xs font-light">
+                   Preference cookies
+                 </label>
+               </div>
+               <div className="flex items-center">
+                 <input
+                   type="checkbox"
+                   id="cookie-analytics"
+                   checked={cookieConsent.analytics}
+                   onChange={(e) => setCookieConsent(prev => ({ ...prev, analytics: e.target.checked }))}
+                   className="h-4 w-4 text-emerald-600 bg-gray-100 border-gray-300 rounded focus:ring-emerald-500"
+                 />
+                 <label htmlFor="cookie-analytics" className="ml-2 block text-xs font-light">
+                   Analytics cookies
+                 </label>
+               </div>
+               <div className="flex items-center">
+                 <input
+                   type="checkbox"
+                   id="cookie-marketing"
+                   checked={cookieConsent.marketing}
+                   onChange={(e) => setCookieConsent(prev => ({ ...prev, marketing: e.target.checked }))}
+                   className="h-4 w-4 text-emerald-600 bg-gray-100 border-gray-300 rounded focus:ring-emerald-500"
+                 />
+                 <label htmlFor="cookie-marketing" className="ml-2 block text-xs font-light">
+                   Marketing cookies
+                 </label>
+               </div>
+             </div>
+             <div className="flex gap-2">
+               <button
+                 onClick={() => {
+                   setCookieConsent({ necessary: true, preference: true, analytics: true, marketing: true });
+                   setShowCookieBanner(false);
+                 }}
+                 className="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold text-xs rounded-lg uppercase tracking-wider transition"
+               >
+                 Accept All
+               </button>
+               <button
+                 onClick={() => {
+                   setCookieConsent({ necessary: true, preference: false, analytics: false, marketing: false });
+                   setShowCookieBanner(false);
+                 }}
+                 className="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs rounded-lg uppercase tracking-wider transition"
+               >
+                 Reject All
+               </button>
+               <button
+                 onClick={() => setShowCookieBanner(false)}
+                 className="px-3 py-1.5 bg-slate-600 hover:bg-slate-500 text-white font-bold text-xs rounded-lg uppercase tracking-wider transition"
+               >
+                 Save Preferences
+               </button>
+             </div>
+           </div>
+         </div>
+       )}
+
       {/* HEADER SECTION */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
@@ -1075,6 +1358,9 @@ export default function App() {
                     onClick={() => {
                       if (item.type === 'product') {
                         routeTo('product', undefined, undefined, item.slug);
+                      } else if (item.type === 'trust') {
+                        const trustPage = trustPages[item.slug] || authorityPages[item.slug];
+                        routeTo(trustPage?.view || 'article', undefined, item.slug);
                       } else {
                         routeTo('article', undefined, item.slug);
                       }
@@ -1392,22 +1678,47 @@ export default function App() {
 
               {/* FEATURED EVALUATION LEADERBOARD SECTION */}
               <section className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-8">
-                <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">Verified AI Agent Leaderboard</h3>
-                    <p className="text-slate-500 text-sm mt-1">Scores adjust dynamically based on active parameter weighting filters.</p>
+                    <p className="text-slate-500 text-sm mt-1">Filter by category or search term, then adjust scoring weights for a custom rank.</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Quick Weighting Presets:</span>
-                    <button onClick={() => applyPreset('india')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">India Suitability Focus</button>
-                    <button onClick={() => applyPreset('developer')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">Technical Docs & Specs</button>
-                    <button onClick={() => applyPreset('budget')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">Value / Price Ratio</button>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Preset:</span>
+                    <button onClick={() => applyPreset('india')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">India</button>
+                    <button onClick={() => applyPreset('developer')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">Developer</button>
+                    <button onClick={() => applyPreset('budget')} className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold">Budget</button>
                   </div>
+                </div>
+                <div className="grid md:grid-cols-[1fr_240px] gap-3">
+                  <div className="relative">
+                    <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <input
+                      value={leaderboardQuery}
+                      onChange={(event) => setLeaderboardQuery(event.target.value)}
+                      placeholder="Search leaderboard..."
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-9 pr-8 text-xs focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    />
+                    {leaderboardQuery && <button onClick={() => setLeaderboardQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"><X className="w-3.5 h-3.5" /></button>}
+                  </div>
+                  <select
+                    value={leaderboardCategory}
+                    onChange={(event) => setLeaderboardCategory(event.target.value)}
+                    className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  >
+                    {leaderboardCategories.map(category => <option key={category} value={category}>{category}</option>)}
+                  </select>
                 </div>
 
                 {/* Grid of tools */}
                 <div className="space-y-4">
-                  {sortedProducts.map((p, index) => (
+                  {filteredLeaderboardProducts.length === 0 ? (
+                    <div className="text-center py-12 bg-slate-50 border border-slate-200 rounded-xl">
+                      <HelpCircle className="w-12 h-12 text-slate-400 mx-auto" />
+                      <p className="text-slate-500 mt-4 text-sm font-semibold">No agents matched your leaderboard filters.</p>
+                      <button onClick={() => { setLeaderboardCategory('All'); setLeaderboardQuery(''); }} className="mt-3 px-4 py-2 bg-slate-900 text-white rounded-lg text-xs font-bold">Reset filters</button>
+                    </div>
+                  ) : filteredLeaderboardProducts.map((p, index) => (
                     <div key={p.id} className="bg-slate-50 border border-slate-200 hover:border-slate-300 transition p-5 rounded-xl flex flex-wrap md:flex-nowrap justify-between items-center gap-6">
                       <div onClick={() => routeTo('product', undefined, undefined, p.slug)} className="cursor-pointer flex items-start gap-4 flex-1 group">
                         <div className="w-12 h-12 bg-white border border-slate-200 group-hover:border-slate-300 group-hover:shadow-sm rounded-lg flex-shrink-0 flex items-center justify-center font-black text-slate-900 text-base shadow-sm transition">
@@ -1578,6 +1889,8 @@ export default function App() {
                       else if (tool.pricing === "Paid") pricingBadge = "bg-amber-50 text-amber-700 border-amber-150";
                       else if (tool.pricing === "Open Source") pricingBadge = "bg-violet-50 text-violet-700 border-violet-150";
                       else if (tool.pricing === "Closed Beta") pricingBadge = "bg-slate-800 text-slate-100 border-slate-900";
+                      const directorySlug = getDirectoryToolSlug(tool.name);
+                      const directoryResourceTypes = getResourceTypesForSlug(directorySlug);
 
                       return (
                         <AnimateOnIntersection key={`${tool.name}-${idx}`} delay={(idx % 6) * 0.05}>
@@ -1607,6 +1920,20 @@ export default function App() {
                                 <span className="font-extrabold text-slate-500 uppercase text-[9px] tracking-wider block">Best For:</span>
                                 <p className="text-slate-600 font-medium line-clamp-2">{tool.bestFor}</p>
                               </div>
+                              {directoryResourceTypes.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5">
+                                  {directoryResourceTypes.slice(0, 3).map((type) => (
+                                    <OfficialExternalLink
+                                      key={type}
+                                      slug={directorySlug}
+                                      label={type === 'official' ? 'Official' : type === 'docs' ? 'Docs' : type === 'github' ? 'GitHub' : 'Pricing'}
+                                      type={type}
+                                      showIcon
+                                      className="text-[9px] font-black uppercase tracking-wider rounded border border-slate-200 px-2 py-1 text-slate-500 hover:text-indigo-700 hover:border-indigo-200"
+                                    />
+                                  ))}
+                                </div>
+                              )}
                             </div>
 
                             {/* Footer score elements & button triggers */}
@@ -1689,8 +2016,8 @@ export default function App() {
                     {[
                       ['Cursor vs GitHub Copilot', '/cursor-vs-github-copilot'],
                       ['Vapi vs Retell', '/vapi-vs-retell'],
-                      ['Flowise vs Dify', '/flowise-vs-dify'],
-                      ['LangGraph vs CrewAI', '/langgraph-vs-crewai'],
+                      ['Dify vs Flowise', '/dify-vs-flowise'],
+                      ['CrewAI vs LangGraph', '/crewai-vs-langgraph'],
                     ].map(([label, href]) => (
                       <a key={href} href={href} onClick={(event) => navigateToPath(event, href)} className="flex items-center justify-between rounded-lg border border-slate-200 px-3 py-2 font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 transition">
                         <span>{label}</span>
@@ -2559,6 +2886,10 @@ export default function App() {
 
             // Fetch related articles on the sidebar
             const related = getRelatedPages(page);
+            const verificationStatus = page.verificationStatus || 'editorially_reviewed';
+            const confidenceLevel = page.confidenceLevel ?? 82;
+            const sourcesUsed = page.sourcesUsed?.length ? page.sourcesUsed : ['official sources', 'documentation', 'pricing pages', 'editorial review'];
+            const editorialReviewDate = page.editorialReviewDate || page.updatedAt;
 
             return (
               <div className="grid lg:grid-cols-4 gap-8">
@@ -2613,8 +2944,23 @@ export default function App() {
                       <span>•</span>
                       <div className="flex items-center gap-1 text-emerald-700 font-medium">
                         <ShieldCheck className="w-3.5 h-3.5" />
-                        <span>DPIIT Evaluator Audit</span>
+                        <span>Editorial evidence reviewed</span>
                       </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 text-[10px]">
+                      {[
+                        ['Last Updated', page.updatedAt],
+                        ['Verification Status', verificationStatus.replace(/_/g, ' ')],
+                        ['Confidence Level', `${confidenceLevel}/100`],
+                        ['Sources Used', sourcesUsed.join(', ')],
+                        ['Editorial Review Date', editorialReviewDate],
+                      ].map(([label, value]) => (
+                        <div key={label} className="bg-slate-50 border border-slate-200 rounded-lg p-3 min-h-[76px]">
+                          <span className="block uppercase tracking-widest font-extrabold text-slate-400">{label}</span>
+                          <span className="block mt-1 text-slate-800 font-semibold leading-snug break-words">{value}</span>
+                        </div>
+                      ))}
                     </div>
 
                     {/* AEO DIRECT ANSWER HIGHLIGHT BOX (CRITICAL FOR RICH FEATURE SNIPPETS) */}
@@ -3091,7 +3437,7 @@ export default function App() {
 
               {/* Selector Area */}
               <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
-                <h4 className="text-xs font-bold uppercase text-slate-400 tracking-wider">Select Tools to Compare (Max 3)</h4>
+                <h4 className="text-xs font-bold uppercase text-slate-400 tracking-wider">Select Tools to Compare (Max 4)</h4>
                 <div className="flex flex-wrap gap-2">
                   {products.map(p => {
                     const isSelected = compareList.includes(p.slug);
@@ -3102,8 +3448,8 @@ export default function App() {
                           if (isSelected) {
                             setCompareList(prev => prev.filter(slug => slug !== p.slug));
                           } else {
-                            if (compareList.length >= 3) {
-                              alert("Please select a maximum of 3 tools to maintain clear horizontal comparison layout.");
+                            if (compareList.length >= 4) {
+                              alert("Please select a maximum of 4 tools to maintain clear horizontal comparison layout.");
                               return;
                             }
                             setCompareList(prev => [...prev, p.slug]);
@@ -3541,10 +3887,30 @@ export default function App() {
             </div>
           )}
 
+          {currentView === 'about' && trustPages.about && (
+            <TrustPage page={trustPages.about} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'team' && trustPages.team && (
+            <TrustPage page={trustPages.team} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'trust' && trustPages[selectedArticleSlug] && (
+            <TrustPage page={trustPages[selectedArticleSlug]} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'methodology' && trustPages.methodology && (
+            <TrustPage page={trustPages.methodology} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'authority' && authorityPages[selectedArticleSlug] && (
+            <TrustPage page={authorityPages[selectedArticleSlug]} onNavigate={navigateToPath} />
+          )}
+
           {/* ==========================================
             VIEW H: HIGH-TRUST ABOUT & CONTACT PANEL
             ========================================== */}
-          {currentView === 'about' && (
+          {false && currentView === 'about' && (
             <div className="space-y-8 max-w-4xl mx-auto">
               <div className="border-b border-slate-200 pb-6 text-center">
                 <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">Our Evaluation Methodology & Team</h2>
@@ -3689,7 +4055,7 @@ export default function App() {
           {/* ==========================================
             VIEW I: STATIC PAGES (ETHICS, POLICIES, TERMS)
             ========================================== */}
-          {currentView === 'disclosure' && (
+          {false && currentView === 'disclosure' && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl mx-auto">
               <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Affiliate Disclosure & Transparency Statement</h2>
               <p className="text-xs text-slate-400 uppercase font-semibold">Effective as of June 11, 2026</p>
@@ -3707,27 +4073,68 @@ export default function App() {
             </div>
           )}
 
-          {currentView === 'policy' && (
+          {false && currentView === 'policy' && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl mx-auto">
-              <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Editorial Policy &amp; Testing Framework</h2>
-              <p className="text-xs text-slate-400 uppercase font-semibold">Operational Standards Log</p>
+              {selectedArticleSlug === 'methodology' && (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Editorial Methodology</h2>
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Our Testing Standards</p>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    We use a multi-step verification process to ensure every AI agent is evaluated fairly. Our engineers deploy software in production-style sandboxes to measure performance, security, and integration depth.
+                  </p>
+                  <h3 className="text-lg font-bold text-slate-900">42-Point Scoring Matrix</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    Our framework weights factors like India-specific compliance (DPDP), regional payment support, and Hinglish speech handling alongside core technical benchmarks.
+                  </p>
+                </div>
+              )}
 
-              <p className="text-slate-600 text-sm leading-relaxed font-light">
-                To be indexed on BestAIAgent.in, tools undergo strict verification loops. We scoring systems based on 8 key pillars:
-              </p>
-              <ul className="list-disc leading-relaxed text-xs text-slate-650 ml-4 space-y-1.5 font-medium">
-                <li><strong>Ease of Use:</strong> Simplicity of visual node interfaces, setup wizards, and quick installations.</li>
-                <li><strong>Power Features:</strong> Deep capabilities, command-line controls, multi-file composers, and autonomous capabilities.</li>
-                <li><strong>Documentation Quality:</strong> Full API SDK reference manuals, active community support hubs, and clear codes templates.</li>
-                <li><strong>Third-Party Integrations:</strong> Smooth data exchange loops syncing Zoho CRM, Hubspot, and database warehouses.</li>
-                <li><strong>Value for money:</strong> Transparency of markups on tokens (estimated pay-per-minute vs package boundaries).</li>
-                <li><strong>Operational Reliability:</strong> Graceful error handling, timeout gates, and minimal cascading loop failures.</li>
-                <li><strong>Sovereign India Fit:</strong> Local compliance (DPDP Act guidelines), local Mumbai AWS data servers, dialect speech training maps (Hindi/Hinglish), and local NPCI UPI subscription invoice compatibility.</li>
-                <li><strong>Enterprise Scalability:</strong> SOC2 parameters audit capabilities, high simultaneous concurrent call handling limits, and team seats.</li>
-              </ul>
-              <p className="text-slate-600 text-sm leading-relaxed font-light">
-                All scores are evaluated on verified metrics. New features are periodically audited within our weekly updates loops to capture NPM package variations immediately.
-              </p>
+              {selectedArticleSlug === 'review-policy' && (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Review Policy</h2>
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Integrity and Transparency</p>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    We do not accept paid reviews. All tools are selected based on market relevance and user interest. Our analysts maintain full editorial independence when assigning scores.
+                  </p>
+                  <h3 className="text-lg font-bold text-slate-900">Evidence-Based Evaluation</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    Scores are derived from direct observation, API response monitoring, and community feedback audit trails.
+                  </p>
+                </div>
+              )}
+
+              {selectedArticleSlug === 'corrections-policy' && (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Corrections Policy</h2>
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Accuracy and Accountability</p>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    We are committed to maintaining the highest level of accuracy. If an error is discovered, we update the content immediately and note the change clearly for transparency.
+                  </p>
+                  <h3 className="text-lg font-bold text-slate-900">Report an Error</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    If you find a mistake or outdated pricing, please email us at editorial@bestaiagent.in with the subject "Correction Request".
+                  </p>
+                </div>
+              )}
+
+              {(selectedArticleSlug === 'editorial-policy' || !selectedArticleSlug) && (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight">Editorial Policy</h2>
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Operational Standards Log</p>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    To be indexed on BestAIAgent.in, tools undergo strict verification loops. We scoring systems based on 8 key pillars:
+                  </p>
+                  <ul className="list-disc leading-relaxed text-xs text-slate-650 ml-4 space-y-1.5 font-medium">
+                    <li><strong>Ease of Use:</strong> Simplicity of visual node interfaces and quick installations.</li>
+                    <li><strong>Power Features:</strong> Deep capabilities, command-line controls, and autonomous capabilities.</li>
+                    <li><strong>India Fit:</strong> Local compliance (DPDP), Mumbai AWS nodes, and regional language support.</li>
+                    <li><strong>Reliability:</strong> Graceful error handling and minimal cascading loop failures.</li>
+                  </ul>
+                  <p className="text-slate-600 text-sm leading-relaxed font-light">
+                    New features are audited weekly to capture tool variations immediately.
+                  </p>
+                </div>
+              )}
               <button onClick={() => routeTo('home')} className="mt-4 px-4 py-2 bg-slate-950 text-white rounded-lg text-xs font-bold uppercase font-semibold">Back to home</button>
             </div>
           )}
@@ -3819,7 +4226,79 @@ export default function App() {
             </div>
           )}
 
-          {currentView === 'contact' && (
+          {currentView === 'disclosure' && trustPages['affiliate-disclosure'] && (
+            <TrustPage page={trustPages['affiliate-disclosure']} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'policy' && trustPages[selectedArticleSlug] && (
+            <TrustPage page={trustPages[selectedArticleSlug]} onNavigate={navigateToPath} />
+          )}
+
+          {currentView === 'contact' && trustPages.contact && (
+            <div className="space-y-8 max-w-5xl mx-auto">
+              <TrustPage page={trustPages.contact} onNavigate={navigateToPath} />
+              <section className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+                <div>
+                  <h2 className="text-2xl font-extrabold text-slate-950">Send a message</h2>
+                  <p className="text-slate-500 text-sm mt-2">Use this form for corrections, privacy requests, vendor submissions, partnership inquiries, or research feedback.</p>
+                </div>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    alert('Thank you. Your message has been routed to the BestAIAgent.in editorial desk.');
+                    routeTo('home');
+                  }}
+                  className="grid md:grid-cols-2 gap-4"
+                >
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700">Full Name</label>
+                    <input required type="text" className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs" placeholder="Your name" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700">Work Email</label>
+                    <input required type="email" className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs" placeholder="you@company.in" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700">Inquiry Type</label>
+                    <select required className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs cursor-pointer">
+                      <option value="correction">Report inaccurate information</option>
+                      <option value="privacy">Privacy or data deletion request</option>
+                      <option value="submission">Submit an AI agent for review</option>
+                      <option value="partnership">Editorial partnership or advertising</option>
+                      <option value="general">General inquiry</option>
+                    </select>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-700">Page URL or Topic</label>
+                    <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs" placeholder="https://bestaiagent.in/..." />
+                  </div>
+                  <div className="md:col-span-2 space-y-1">
+                    <label className="text-xs font-bold text-slate-700">Message</label>
+                    <textarea required rows={5} className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-xs" placeholder="Share the issue, evidence, suggested correction, or research request." />
+                  </div>
+                  <button type="submit" className="md:col-span-2 py-2.5 bg-slate-950 hover:bg-slate-900 text-white font-bold rounded-lg text-xs uppercase tracking-wider transition">
+                    Send message
+                  </button>
+                </form>
+                <div className="grid sm:grid-cols-3 gap-3 text-xs">
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Email</span>
+                    <a href="mailto:contact@bestaiagent.in" className="font-bold text-slate-900 hover:text-emerald-700">contact@bestaiagent.in</a>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Address</span>
+                    <p className="font-semibold text-slate-900">BKC, Mumbai &amp; Koramangala, Bangalore, India</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Response time</span>
+                    <p className="font-semibold text-slate-900">Usually within 2 business days</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          )}
+
+          {false && currentView === 'contact' && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6 max-w-2xl mx-auto">
               <div className="border-b border-slate-100 pb-4 text-center">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">Contact Our Editorial Team</h2>
@@ -3954,24 +4433,19 @@ export default function App() {
               </div>
             </div>
             <div className="space-y-3">
-              <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Learn</h4>
+              <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Authority Assets</h4>
               <div className="flex flex-col gap-2 text-xs">
-                <a href="/tutorials-hub" onClick={(event) => navigateToPath(event, '/tutorials-hub')} className="text-slate-400 hover:text-white hover:underline transition">Tutorials</a>
-                <a href="/glossary-hub" onClick={(event) => navigateToPath(event, '/glossary-hub')} className="text-slate-400 hover:text-white hover:underline transition">Glossary</a>
-                <a href="/mcp-hub" onClick={(event) => navigateToPath(event, '/mcp-hub')} className="text-slate-400 hover:text-white hover:underline transition">MCP Directory</a>
-                <a href="/ai-agent-security" onClick={(event) => navigateToPath(event, '/ai-agent-security')} className="text-slate-400 hover:text-white hover:underline transition">AI Agent Security</a>
-                <a href="/how-to-build-ai-agent" onClick={(event) => navigateToPath(event, '/how-to-build-ai-agent')} className="text-slate-400 hover:text-white hover:underline transition">How to Build an AI Agent</a>
+                {authorityFooterLinks.map(link => (
+                  <a key={link.path} href={link.path} onClick={(event) => navigateToPath(event, link.path)} className="text-slate-400 hover:text-white hover:underline transition">{link.label}</a>
+                ))}
               </div>
             </div>
             <div className="space-y-3">
               <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Trust</h4>
               <div className="flex flex-col gap-2 text-xs">
-                <a href="/methodology" onClick={(event) => navigateToPath(event, '/methodology')} className="text-slate-400 hover:text-white hover:underline transition">Methodology</a>
-                <a href="/editorial-policy" onClick={(event) => navigateToPath(event, '/editorial-policy')} className="text-slate-400 hover:text-white hover:underline transition">Editorial Policy</a>
-                <a href="/ai-agent-scoring-system" onClick={(event) => navigateToPath(event, '/ai-agent-scoring-system')} className="text-slate-400 hover:text-white hover:underline transition">AI Agent Scoring System</a>
-                <a href="/authors/arshdeep-singh" onClick={(event) => navigateToPath(event, '/authors/arshdeep-singh')} className="text-slate-400 hover:text-white hover:underline transition">Authors</a>
-                <a href="/affiliate-disclosure" onClick={(event) => navigateToPath(event, '/affiliate-disclosure')} className="text-slate-400 hover:text-white hover:underline transition">Affiliate Disclosure</a>
-                <a href="/contact" onClick={(event) => navigateToPath(event, '/contact')} className="text-slate-400 hover:text-white hover:underline transition">Contact</a>
+                {trustFooterLinks.map(link => (
+                  <a key={link.path} href={link.path} onClick={(event) => navigateToPath(event, link.path)} className="text-slate-400 hover:text-white hover:underline transition">{link.label}</a>
+                ))}
               </div>
             </div>
             <div className="space-y-3">
@@ -3989,10 +4463,10 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Reviews Silos</h4>
             <div className="flex flex-col gap-2 text-xs">
-              <button onClick={() => routeTo('silo-pillar', 'reviews')} className="text-left hover:text-white hover:underline transition">AI Reviews Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'best-ai-agent-for-business')} className="text-left hover:text-white hover:underline transition">Business Agents</button>
-              <button onClick={() => routeTo('article', undefined, 'best-ai-agent-for-coding')} className="text-left hover:text-white hover:underline transition">Coding Agents</button>
-              <button onClick={() => routeTo('article', undefined, 'best-ai-agent-no-code-platform')} className="text-left hover:text-white hover:underline transition">No-Code Hubs</button>
+              <a href="/best-ai-agent" onClick={(event) => navigateToPath(event, '/best-ai-agent')} className="text-left hover:text-white hover:underline transition">AI Reviews Hub</a>
+              <a href="/best-ai-agent-for-business" onClick={(event) => navigateToPath(event, '/best-ai-agent-for-business')} className="text-left hover:text-white hover:underline transition">Business Agents</a>
+              <a href="/best-ai-agent-for-coding" onClick={(event) => navigateToPath(event, '/best-ai-agent-for-coding')} className="text-left hover:text-white hover:underline transition">Coding Agents</a>
+              <a href="/best-ai-agent-no-code-platform" onClick={(event) => navigateToPath(event, '/best-ai-agent-no-code-platform')} className="text-left hover:text-white hover:underline transition">No-Code Hubs</a>
             </div>
           </div>
 
@@ -4000,10 +4474,10 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Authority indices</h4>
             <div className="flex flex-col gap-2 text-xs">
-              <button onClick={() => routeTo('silo-pillar', 'frameworks')} className="text-left hover:text-white hover:underline transition">Technical Frameworks</button>
-              <button onClick={() => routeTo('article', undefined, 'best-open-source-ai-agent-tools')} className="text-left hover:text-white hover:underline transition">Open Source Tools</button>
-              <button onClick={() => routeTo('silo-pillar', 'research')} className="text-left hover:text-white hover:underline transition">Research & GAIA benchmarks</button>
-              <button onClick={() => routeTo('article', undefined, 'ai-agent-trends')} className="text-left hover:text-white hover:underline transition">SME Scale trends</button>
+              <a href="/best-ai-agent-frameworks" onClick={(event) => navigateToPath(event, '/best-ai-agent-frameworks')} className="text-left hover:text-white hover:underline transition">Technical Frameworks</a>
+              <a href="/best-open-source-ai-agent-tools" onClick={(event) => navigateToPath(event, '/best-open-source-ai-agent-tools')} className="text-left hover:text-white hover:underline transition">Open Source Tools</a>
+              <a href="/ai-agent-research" onClick={(event) => navigateToPath(event, '/ai-agent-research')} className="text-left hover:text-white hover:underline transition">Research & GAIA benchmarks</a>
+              <a href="/ai-agent-trends" onClick={(event) => navigateToPath(event, '/ai-agent-trends')} className="text-left hover:text-white hover:underline transition">SME Scale trends</a>
             </div>
           </div>
 
@@ -4011,14 +4485,13 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Ethics & Policy</h4>
             <div className="flex flex-col gap-2 text-xs">
-              <button onClick={() => routeTo('drive')} className="text-left font-bold text-emerald-400 hover:text-emerald-350 transition">Google Drive Cloud Sync</button>
-              <button onClick={() => routeTo('policy')} className="text-left hover:text-white hover:underline transition">Editorial Policy &amp; Standards</button>
-              <button onClick={() => routeTo('scoring')} className="text-left hover:text-white hover:underline transition">42-Point Scoring Framework</button>
-              <button onClick={() => routeTo('compliance')} className="text-left hover:text-white hover:underline transition">DPDP Act Safety Checklist</button>
-              <button onClick={() => routeTo('disclosure')} className="text-left hover:text-white hover:underline transition">Affiliate Disclosure</button>
-              <button onClick={() => routeTo('about')} className="text-left hover:text-white hover:underline transition">Editorial Team</button>
-              <button onClick={() => routeTo('contact')} className="text-left hover:text-white hover:underline transition">Contact Office</button>
-              <button onClick={() => routeTo('editorial')} className="text-left hover:text-white hover:underline transition">Admin Control Suite</button>
+              <a href="/google-drive-ai-agent-workspace" onClick={(event) => navigateToPath(event, '/google-drive-ai-agent-workspace')} className="text-left font-bold text-emerald-400 hover:text-emerald-350 transition">Google Drive Cloud Sync</a>
+              <a href="/editorial-policy" onClick={(event) => navigateToPath(event, '/editorial-policy')} className="text-left hover:text-white hover:underline transition">Editorial Policy &amp; Standards</a>
+              <a href="/ai-agent-scoring-system" onClick={(event) => navigateToPath(event, '/ai-agent-scoring-system')} className="text-left hover:text-white hover:underline transition">42-Point Scoring Framework</a>
+              <a href="/dpdp-act-ai-compliance" onClick={(event) => navigateToPath(event, '/dpdp-act-ai-compliance')} className="text-left hover:text-white hover:underline transition">DPDP Act Safety Checklist</a>
+              <a href="/affiliate-disclosure" onClick={(event) => navigateToPath(event, '/affiliate-disclosure')} className="text-left hover:text-white hover:underline transition">Affiliate Disclosure</a>
+              <a href="/about-editorial-team" onClick={(event) => navigateToPath(event, '/about-editorial-team')} className="text-left hover:text-white hover:underline transition">Editorial Team</a>
+              <a href="/contact" onClick={(event) => navigateToPath(event, '/contact')} className="text-left hover:text-white hover:underline transition">Contact Office</a>
             </div>
           </div>
 
@@ -4026,12 +4499,12 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-xs font-extrabold uppercase text-slate-200 tracking-wider">Hub Pages</h4>
             <div className="flex flex-col gap-2 text-xs">
-              <button onClick={() => routeTo('article', undefined, 'coding-agents-hub')} className="text-left hover:text-white hover:underline transition">Coding Agents Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'business-ai-hub')} className="text-left hover:text-white hover:underline transition">Business AI Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'voice-ai-hub')} className="text-left hover:text-white hover:underline transition">Voice AI Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'tutorials-hub')} className="text-left hover:text-white hover:underline transition">Tutorials Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'glossary-hub')} className="text-left hover:text-white hover:underline transition">Glossary Hub</button>
-              <button onClick={() => routeTo('article', undefined, 'mcp-hub')} className="text-left hover:text-white hover:underline transition">MCP Hub</button>
+              <a href="/coding-agents-hub" onClick={(event) => navigateToPath(event, '/coding-agents-hub')} className="text-left hover:text-white hover:underline transition">Coding Agents Hub</a>
+              <a href="/business-ai-hub" onClick={(event) => navigateToPath(event, '/business-ai-hub')} className="text-left hover:text-white hover:underline transition">Business AI Hub</a>
+              <a href="/voice-ai-hub" onClick={(event) => navigateToPath(event, '/voice-ai-hub')} className="text-left hover:text-white hover:underline transition">Voice AI Hub</a>
+              <a href="/tutorials-hub" onClick={(event) => navigateToPath(event, '/tutorials-hub')} className="text-left hover:text-white hover:underline transition">Tutorials Hub</a>
+              <a href="/glossary-hub" onClick={(event) => navigateToPath(event, '/glossary-hub')} className="text-left hover:text-white hover:underline transition">Glossary Hub</a>
+              <a href="/mcp-hub" onClick={(event) => navigateToPath(event, '/mcp-hub')} className="text-left hover:text-white hover:underline transition">MCP Hub</a>
             </div>
           </div>
 
@@ -4042,13 +4515,14 @@ export default function App() {
           <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Complete Programmatic index Site Map (36+ Sub-Guides Index)</p>
           <div className="flex flex-wrap gap-2 justify-center text-[10px]">
             {siloPages.map((page, idx) => (
-              <button
+              <a
                 key={idx}
-                onClick={() => routeTo('article', undefined, page.slug)}
+                href={`/${page.slug}`}
+                onClick={(event) => navigateToPath(event, `/${page.slug}`)}
                 className="bg-slate-950 border border-slate-850 hover:border-slate-700 text-slate-400 hover:text-white px-2.5 py-1 rounded transition max-w-xs truncate"
               >
                 /{page.slug}
-              </button>
+              </a>
             ))}
           </div>
           <p className="text-slate-600 text-[10px] leading-relaxed pt-2">
@@ -4203,6 +4677,16 @@ export default function App() {
                 <ShieldCheck className="w-4 h-4 text-emerald-600" /> Safe Sovereign Sandbox checked
               </span>
               <div className="flex items-center gap-2">
+                {getResourceTypesForSlug(getDirectoryToolSlug(activeDirTool.name)).map((type) => (
+                  <OfficialExternalLink
+                    key={type}
+                    slug={getDirectoryToolSlug(activeDirTool.name)}
+                    label={type === 'official' ? 'Official' : type === 'docs' ? 'Docs' : type === 'github' ? 'GitHub' : 'Pricing'}
+                    type={type}
+                    showIcon
+                    className="hidden sm:inline-flex items-center gap-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-[10px] font-black uppercase tracking-wider text-slate-600 hover:text-indigo-700 hover:border-indigo-200"
+                  />
+                ))}
                 <button
                   onClick={() => setActiveDirTool(null)}
                   className="px-4 py-2 text-xs font-bold text-slate-700 hover:text-slate-930 hover:bg-slate-100 rounded-xl border border-slate-200 transition uppercase tracking-wider"

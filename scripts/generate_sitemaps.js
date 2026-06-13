@@ -206,11 +206,16 @@ write("llms.txt", [
   `- Sitemap index: ${SITE_URL}/sitemap.xml`,
   `- RSS feed: ${SITE_URL}/feed.xml`,
   `- Robots: ${SITE_URL}/robots.txt`,
+  `- LLM crawler file: ${SITE_URL}/llms.txt`,
+  `- Content index: ${SITE_URL}/content-index.json`,
+  `- Legacy content index: ${SITE_URL}/contentIndex.json`,
+  `- Entity index: ${SITE_URL}/entity-index.json`,
+  `- Knowledge graph: ${SITE_URL}/knowledge-graph.json`,
 ].join("\n"));
 
 const contentIndex = routes.map((route) => ({
   path: route.path,
-  canonical: `${SITE_URL}${route.path === "/" ? "" : route.path}`,
+  canonical: `${SITE_URL}${route.path === "/" ? "/" : route.path}`,
   slug: route.slug,
   title: route.title,
   description: route.description,
@@ -229,9 +234,14 @@ const contentIndex = routes.map((route) => ({
     route.category === "hubs" ? "/" :
     "/best-ai-agent",
   lastmod: route.lastmod || TODAY,
+  lastUpdated: route.lastUpdated || route.lastmod || TODAY,
   lastReviewed: route.lastReviewed || TODAY,
   nextReview: route.nextReview || "2026-09-11",
   lastVerified: route.lastVerified || TODAY,
+  verificationStatus: route.verificationStatus || "mapped",
+  confidenceLevel: route.confidenceLevel || 75,
+  sourcesUsed: route.sourcesUsed || ["editorial_review"],
+  editorialReviewDate: route.editorialReviewDate || TODAY,
   changefreq: route.changefreq,
   priority: route.priority,
   schemaTypes: route.schemaTypes || [],
@@ -337,6 +347,7 @@ const graphEdges = [
 ];
 
 write("contentIndex.json", JSON.stringify(contentIndex, null, 2));
+write("content-index.json", JSON.stringify(contentIndex, null, 2));
 write("entity-index.json", JSON.stringify(entityIndex, null, 2));
 write("tool-relationships.json", JSON.stringify(relationships, null, 2));
 write("knowledge-graph.json", JSON.stringify({ generatedAt: TODAY, nodes: graphNodes, edges: graphEdges }, null, 2));

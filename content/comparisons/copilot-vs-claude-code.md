@@ -1,4 +1,4 @@
-# Copilot vs Claude Code Comparison (June 2026)
+# Copilot vs Claude Code Comparison (June 2026) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 GitHub Copilot vs Claude Code 2026 – Best AI Coding Assistant for Indian Developers

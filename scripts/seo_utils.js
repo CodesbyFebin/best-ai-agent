@@ -135,8 +135,58 @@ export const HUBS = [
 export const EDITORIAL_ROUTES = [
   {
     path: "/methodology",
-    title: "Editorial Methodology and 42-Point AI Agent Scoring Framework",
-    description: "How BestAIAgent.in evaluates AI agents across capability, documentation, integrations, India fit, DPDP privacy, INR pricing, and commercial readiness.",
+    title: "Review Methodology and 100-Point AI Agent Scoring Framework",
+    description: "Full BestAIAgent.in review methodology covering features, pricing, usability, reliability, integrations, security, support, India relevance, MCP support, and AI workflow capability.",
+  },
+  {
+    path: "/privacy-policy",
+    title: "Privacy Policy",
+    description: "Privacy policy covering DPDP Act awareness, GDPR-style rights, cookies, analytics, contact forms, and data deletion requests.",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Use",
+    description: "Terms of use covering informational content, affiliate links, user submissions, intellectual property, and limitations of liability.",
+  },
+  {
+    path: "/data-deletion-request",
+    title: "Data Deletion Request",
+    description: "How to request deletion of personal data from BestAIAgent.in under DPDP and GDPR-style privacy rights.",
+  },
+  {
+    path: "/team",
+    title: "Team",
+    description: "Meet the BestAIAgent.in editorial team, analysts, fact checkers, and India-focused AI agent researchers.",
+  },
+  {
+    path: "/mcp-directory",
+    title: "MCP Directory",
+    description: "Model Context Protocol directory for AI agent tools, servers, connectors, clients, security notes, and implementation guidance.",
+  },
+  {
+    path: "/ai-agent-market-map",
+    title: "AI Agent Market Map",
+    description: "Market map of AI agents, builders, coding agents, voice agents, MCP infrastructure, enterprise platforms, and India-focused vendors.",
+  },
+  {
+    path: "/ai-agent-benchmark",
+    title: "AI Agent Benchmark",
+    description: "Benchmark framework for AI agent capability, latency, reliability, security, MCP support, India localization, and workflow execution.",
+  },
+  {
+    path: "/ai-agent-rankings",
+    title: "AI Agent Rankings",
+    description: "Transparent AI agent rankings by category, use case, India fit, pricing, reliability, MCP support, and workflow capability.",
+  },
+  {
+    path: "/ai-agent-awards",
+    title: "AI Agent Awards",
+    description: "BestAIAgent.in awards for coding agents, voice agents, business automation, MCP tooling, open-source builders, and India-ready AI platforms.",
+  },
+  {
+    path: "/ai-agent-glossary",
+    title: "AI Agent Glossary",
+    description: "Glossary of AI agent terms including agentic workflows, MCP, RAG, tool use, memory, orchestration, DPDP, and AI automation.",
   },
   {
     path: "/editorial-policy",
@@ -317,6 +367,24 @@ export function ogImageAltFor(category, slug, title) {
   return `${title.replace(/\s*\|\s*BestAIAgent\.in$/, "")} preview image on BestAIAgent.in`;
 }
 
+export function trustSignalsFor(category, source = "generated") {
+  const isCommercial = ["reviews", "tools", "pricing", "comparisons", "alternatives", "pillars", "buyers-guides"].includes(category);
+  const isResearch = ["research", "reports", "mcp", "directories", "entity", "guides"].includes(category);
+  const isEditorial = ["editorial", "authors"].includes(category);
+  return {
+    lastUpdated: TODAY,
+    verificationStatus: isEditorial ? "editorial_policy_verified" : isCommercial ? "editorially_verified" : isResearch ? "partially_verified" : "mapped",
+    confidenceLevel: isEditorial ? 96 : isCommercial ? 88 : isResearch ? 82 : 76,
+    sourcesUsed: isCommercial
+      ? ["official_vendor_sources", "pricing_pages", "documentation", "editorial_review"]
+      : isResearch
+        ? ["official_sources", "documentation", "github_repositories", "editorial_review"]
+        : ["internal_taxonomy", "editorial_review"],
+    editorialReviewDate: TODAY,
+    sourceEvidence: source,
+  };
+}
+
 export function articleSchema(meta) {
   return {
     "@context": "https://schema.org",
@@ -327,6 +395,7 @@ export function articleSchema(meta) {
     url: `${SITE_URL}${meta.path}`,
     inLanguage: "en-IN",
     dateModified: TODAY,
+    datePublished: meta.publishedAt || meta.lastReviewed || TODAY,
     author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team" },
     publisher: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },
   };
@@ -509,6 +578,7 @@ export function buildContentEntries() {
       schemaTypes: schemaTypesFor(category, slug),
       faqs: extractFaqs(markdown),
       related,
+      ...trustSignalsFor(category, path.relative(ROOT, filePath)),
     };
     entry.schemas = pageSchema(entry);
     return entry;
@@ -541,6 +611,7 @@ export function buildHubEntries() {
         { question: `How often is ${hub.title} updated?`, answer: "BestAIAgent.in refreshes hub links and freshness notes as tool pricing, features, and India-specific requirements change." },
       ],
       related: hub.children,
+      ...trustSignalsFor("hubs", "generated-hub"),
     };
     if (["buyers-guides", "india-geo", "directories", "entity", "reddit", "calculators"].includes(hub.slug.replace("-hub", ""))) {
       meta.schemaTypes.push("CollectionPage");
@@ -609,6 +680,7 @@ export function buildTopicalEntries(existingPaths = new Set()) {
           { question: `Who should read ${page.title}?`, answer: "Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools should read this guide." },
         ],
         related: page.related || [],
+        ...trustSignalsFor(page.clusterId || "topical-authority", "generated-topical-authority"),
       };
       meta.schemas = pageSchema(meta);
       return meta;
@@ -637,6 +709,7 @@ export function buildEditorialEntries() {
       schemaTypes: ["WebPage", "BreadcrumbList", "Article"],
       faqs: [],
       related: ["methodology", "editorial-policy", "ai-agent-scoring-system"],
+      ...trustSignalsFor("editorial", "generated-editorial"),
     };
     meta.schemas = pageSchema(meta);
     return meta;
@@ -663,6 +736,7 @@ export function buildEditorialEntries() {
       schemaTypes: ["Person", "BreadcrumbList", "WebPage"],
       faqs: [],
       related: ["methodology", "editorial-policy"],
+      ...trustSignalsFor("authors", "generated-author"),
     };
     meta.schemas = [
       {

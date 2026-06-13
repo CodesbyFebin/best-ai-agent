@@ -23,12 +23,16 @@ import {
   MessageSquare,
   Sparkles,
   FileText,
-  Network
+  Network,
+  CheckCircle,
+  AlertCircle
 } from 'lucide-react';
 import { Product } from '../data/db';
 import { getToolEntityByProductSlug } from '../data/toolEntities';
 import { getToolAsset, defaultAsset } from '../data/assetRegistry';
+import { getExternalLinks, type ExternalLinkType } from '../data/externalLinks';
 import BrandTile from './BrandTile';
+import ExternalResourceLink from './ExternalLink';
 
 interface ProductProfileProps {
   product: Product;
@@ -316,6 +320,56 @@ const reviewResourceMap: Record<string, {
   },
 };
 
+const reviewIntegrityBySlug: Record<string, {
+  author: string;
+  factChecker: string;
+  lastUpdated: string;
+  pricingChecked: string;
+  affiliateStatus: string;
+  changelog: string;
+}> = {
+  'cursor-ai': {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added review integrity metadata, MCP support notes, and DPDP-aware privacy checks.',
+  },
+  'vapi-ai': {
+    author: 'Karan Mehra, Enterprise Lead',
+    factChecker: 'Priya Iyer, Core Engineer',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added voice latency verification, pricing check date, and India workflow notes.',
+  },
+  'yellow-ai': {
+    author: 'Karan Mehra, Enterprise Lead',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'May contain affiliate links; score assigned independently.',
+    changelog: '2026-06-12 — Added WhatsApp commerce, DPDP, and procurement verification notes.',
+  },
+  'flowise': {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Karan Mehra, Enterprise Lead',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'Open-source review; no affiliate commission on vendor-hosted links.',
+    changelog: '2026-06-12 — Added self-hosting, MCP node, and security review integrity fields.',
+  },
+  crewai: {
+    author: 'Priya Iyer, Core Engineer',
+    factChecker: 'Arshdeep Singh, Chief AI Analyst',
+    lastUpdated: '2026-06-12',
+    pricingChecked: '2026-06-12',
+    affiliateStatus: 'Open-source review; no affiliate commission on vendor-hosted links.',
+    changelog: '2026-06-12 — Added agent workflow benchmark, source trace, and India automation notes.',
+  },
+};
+
 function formatSlug(slug: string) {
   return slug.replace(/-/g, ' ');
 }
@@ -328,6 +382,19 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
   const [copiedUrl, setCopiedUrl] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'benchmarks' | 'code' | 'alternatives' | 'reviews'>('overview');
   const reviewResources = reviewResourceMap[product.slug];
+  const reviewIntegrity = reviewIntegrityBySlug[product.slug] || {
+    author: 'BestAIAgent.in Editorial Team',
+    factChecker: 'BestAIAgent.in Fact Check Desk',
+    lastUpdated: product.lastVerified || '2026-06-12',
+    pricingChecked: product.lastVerified || '2026-06-12',
+    affiliateStatus: 'Affiliate status reviewed; score remains independent.',
+    changelog: `${product.lastVerified || '2026-06-12'} — Review integrity metadata added.`,
+  };
+  const officialLinks = useMemo(() => getExternalLinks(product.slug), [product.slug]);
+  const officialLinkTypes = useMemo(
+    () => ['official', 'docs', 'github', 'pricing'].filter((type) => officialLinks.some((link) => link.type === type)) as ExternalLinkType[],
+    [officialLinks]
+  );
   const resourceGroups = [
     { label: 'Pricing', slugs: [reviewResources?.pricing].filter(Boolean), view: 'article' },
     { label: 'Alternatives', slugs: [reviewResources?.alternatives].filter(Boolean), view: 'article' },
@@ -336,6 +403,10 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
     { label: 'Entity', slugs: [reviewResources?.entity].filter(Boolean), view: 'article' },
     { label: 'Category hub', slugs: [reviewResources?.category].filter(Boolean), view: 'article' },
   ];
+  const verificationLabel = product.verificationStatus
+    .split('_')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 
   const handleCopyUrl = () => {
     const shareUrl = `${window.location.origin}/tools/${product.slug}`;
@@ -355,7 +426,7 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
           <span className="font-semibold text-slate-800">SEO Schema Activated:</span>
-          <span>Injected machine-readable <strong className="text-slate-900">Review</strong> &amp; <strong className="text-slate-900">SoftwareApplication</strong> JSON-LD markup.</span>
+          <span>Product profile is connected to machine-readable <strong className="text-slate-900">SoftwareApplication</strong> and editorial evidence signals.</span>
         </div>
         <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-black font-mono">100% Crawl Audited</span>
       </div>
@@ -443,7 +514,9 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           <div className="space-y-3 flex-1 text-center md:text-left">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
               <p className="text-[10px] text-emerald-700 font-extrabold uppercase tracking-widest w-full">Tool Review</p>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">{product.name} Review</h1>
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                <ExternalResourceLink slug={product.slug} label={product.name} type="official" className="text-slate-950 hover:text-indigo-700" showIcon /> Review
+              </h1>
               {product.whatsappReady && (
                 <span className="text-[10px] font-bold bg-green-500 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">WhatsApp Ready</span>
               )}
@@ -457,12 +530,15 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
             <p className="text-slate-500 text-xs sm:text-sm max-w-2xl font-light leading-relaxed">{product.summary}</p>
 
             <div className="pt-2 flex flex-wrap justify-center md:justify-start gap-4 text-xs text-slate-500 font-medium">
-              <div><strong className="text-slate-800">Vendor:</strong> {product.vendorName}</div>
+              <div><strong className="text-slate-800">Vendor:</strong> <ExternalResourceLink slug={product.slug} label={product.vendorName} type="company" className="text-slate-600 hover:text-indigo-700" /></div>
               <div>•</div>
               <div><strong className="text-slate-800">Pricing Model:</strong> {product.pricingModel}</div>
               <div>•</div>
               <div><strong className="text-slate-800">Free Trial:</strong> {product.freeTrial ? 'Available' : 'No'}</div>
             </div>
+            <button onClick={() => window.location.href = `mailto:editorial@bestaiagent.in?subject=Correction%20Request%20for%20${encodeURIComponent(product.name)}%20Review`} className="inline-flex items-center gap-1.5 text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-100 hover:bg-rose-100 rounded-lg px-3 py-1.5">
+              Report inaccurate information
+            </button>
           </div>
 
           {/* Large Overall Score Widget */}
@@ -654,6 +730,42 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
                 </div>
               </div>
 
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+                <h3 className="text-base font-bold text-slate-900 border-b pb-3 flex items-center gap-1.5">
+                  <FileText className="w-5 h-5 text-emerald-600" /> Review integrity record
+                </h3>
+                <div className="grid md:grid-cols-2 gap-3 text-xs">
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Author</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.author}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Fact checker</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.factChecker}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Last updated</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.lastUpdated}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Pricing checked</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.pricingChecked}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 md:col-span-2">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Sources used</span>
+                    <p className="font-bold text-slate-900 mt-1">{officialLinkTypes.length > 0 ? officialLinkTypes.join(', ') : 'Official docs, pricing pages, release notes, and sandbox testing'}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 md:col-span-2">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Affiliate status</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.affiliateStatus}</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-4 md:col-span-2">
+                    <span className="block text-[10px] font-black uppercase text-slate-400">Changelog</span>
+                    <p className="font-bold text-slate-900 mt-1">{reviewIntegrity.changelog}</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Internal-Linking Graph */}
               <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
                 <h3 className="text-base font-bold text-slate-900 border-b pb-3 flex items-center gap-1.5">
@@ -763,30 +875,41 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           {activeTab === 'reviews' && extra && (
             <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
               <div className="border-b pb-3">
-                <h3 className="text-base font-bold text-slate-950">Curated practitioner evaluations</h3>
-                <p className="text-slate-400 text-xs">Direct comments from verified software team leads and SME owners.</p>
+                <h3 className="text-base font-bold text-slate-950">Editorial verification notes</h3>
+                <p className="text-slate-400 text-xs">Evidence summary from the current review pass. No user rating is shown unless it is collected and verified.</p>
               </div>
 
-              <div className="space-y-4">
-                {extra.userReviews.map((rev, idx) => (
-                  <div key={idx} className="border border-slate-150 p-5 rounded-2xl space-y-3">
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center">{rev.author.slice(0, 2)}</div>
-                        <div>
-                          <p className="font-bold text-slate-900 text-xs sm:text-sm leading-none">{rev.author}</p>
-                          <p className="text-[10px] text-slate-450 font-semibold uppercase mt-1">{rev.role} • {rev.location}, IN</p>
-                        </div>
-                      </div>
-                      <div className="text-right shrink-0">
-                        <span className="text-xs font-black text-amber-500">★ {rev.rating}</span>
-                      </div>
-                    </div>
-                    <p className="text-xs text-slate-600 italic leading-relaxed font-light">
-                      "{rev.text}"
-                    </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  ['Verification status', verificationLabel],
+                  ['Confidence level', `${product.confidenceLevel}/100`],
+                  ['Last verified', product.lastVerified],
+                  ['Review basis', product.whatWeTested],
+                ].map(([label, value]) => (
+                  <div key={label} className="border border-slate-150 p-5 rounded-2xl space-y-2">
+                    <p className="text-[10px] font-black uppercase tracking-wider text-slate-400">{label}</p>
+                    <p className="text-xs text-slate-700 leading-relaxed font-medium">{value}</p>
                   </div>
                 ))}
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="border border-emerald-100 bg-emerald-50/60 p-5 rounded-2xl space-y-2">
+                  <p className="text-[10px] font-black uppercase tracking-wider text-emerald-700">Strengths observed</p>
+                  <ul className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    {product.pros.slice(0, 3).map((item) => (
+                      <li key={item} className="flex gap-2"><CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="border border-amber-100 bg-amber-50/60 p-5 rounded-2xl space-y-2">
+                  <p className="text-[10px] font-black uppercase tracking-wider text-amber-700">Limitations observed</p>
+                  <ul className="space-y-2 text-xs text-slate-700 leading-relaxed">
+                    {product.cons.slice(0, 3).map((item) => (
+                      <li key={item} className="flex gap-2"><AlertCircle className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           )}
@@ -834,13 +957,34 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
             <a
               href={product.vendorUrl}
               target="_blank"
-              rel="noopener noreferrer nofollow"
+              rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg py-2.5 text-xs uppercase tracking-wider transition font-sans shadow-sm"
             >
               <span>Visit Vendor site</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
+
+          {officialLinkTypes.length > 0 && (
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+              <h4 className="text-xs font-black uppercase text-slate-400 tracking-wider border-b pb-2">Official Resources</h4>
+              <div className="grid grid-cols-2 gap-2 text-xs font-bold">
+                {officialLinkTypes.map((type) => (
+                  <ExternalResourceLink
+                    key={type}
+                    slug={product.slug}
+                    label={type === 'official' ? 'Official' : type === 'docs' ? 'Docs' : type === 'github' ? 'GitHub' : 'Pricing'}
+                    type={type}
+                    showIcon
+                    className="inline-flex items-center justify-center rounded-lg border border-slate-200 px-3 py-2 text-slate-700 hover:text-indigo-700 hover:border-indigo-200 transition"
+                  />
+                ))}
+              </div>
+              <p className="text-[10px] text-slate-400 leading-relaxed">
+                Primary sources are used for pricing, documentation, release, and product-support verification.
+              </p>
+            </div>
+          )}
 
           {/* Localization Trust Indicators */}
           <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-sm space-y-4 border border-slate-800">

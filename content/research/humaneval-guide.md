@@ -1,4 +1,4 @@
-# HumanEval Guide 2026 – Complete Explanation for Indian Developers
+# HumanEval Guide 2026 – Complete Explanation for Indian Developers [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 HumanEval Guide 2026 – Understanding the Code Generation Benchmark

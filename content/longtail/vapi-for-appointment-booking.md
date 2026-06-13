@@ -1,4 +1,4 @@
-# Vapi for Appointment Booking 2026 – Complete Guide for Indian Businesses
+# Vapi for Appointment Booking 2026 – Complete Guide for Indian Businesses [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Vapi for Appointment Booking 2026 – How to Build AI Appointment Booking for Indian Businesses

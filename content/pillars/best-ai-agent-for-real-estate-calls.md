@@ -1,4 +1,4 @@
-# Best AI Agent for Real Estate Calls 2026 – India's Independent Guide
+# Best AI Agent for Real Estate Calls 2026 – India's Independent Guide [AI agent pricing in INR](/pricing) [Vapi voice agent review](/tools/vapi-ai)
 
 ## SEO Title
 Best AI Agent for Real Estate Calls 2026 – Top AI for Indian Real Estate

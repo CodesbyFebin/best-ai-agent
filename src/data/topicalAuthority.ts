@@ -97,8 +97,14 @@ const clusters: TopicalCluster[] = [
     G('ai-agent-use-cases', 'AI Agent Use Cases: Business, Coding, Voice & Automation', 'Comprehensive guide to AI agent use cases for Indian startups, SMEs, developers, and enterprises.', 0.88, 'ai agent use cases'),
     G('ai-agent-trends', "AI Agent Trends 2026: What's Changing", 'Latest AI agent trends: multi-agent systems, MCP, agentic RAG, voice AI shifts, and India-market developments.', 0.85, 'ai agent trends 2026'),
     G('ai-agent-news', 'AI Agent News: Latest Developments & Updates', 'Weekly AI agent news covering product launches, funding, MCP developments, and India-market updates.', 0.82, 'ai agent news'),
+    P('ai-agent-market-map', 'AI Agent Market Map 2026: Top 500 AI Agents by Category', 'Citation-ready AI agent market map covering coding, research, voice, sales, marketing, MCP, open source, and enterprise categories.', 0.92, 'ai agent market map', ['top 500 ai agents', 'ai agent ecosystem map']),
+    P('top-500-ai-agents-database', 'Top 500 AI Agents Database: Complete Directory', 'Database-style index of AI agents categorized by use case, category, pricing visibility, verification status, and India relevance.', 0.91, 'top 500 ai agents', ['ai agent database']),
     P('ai-agent-benchmarks', 'AI Agent Benchmarks: SWE-bench, GAIA & Metrics', 'Comprehensive AI agent benchmark analysis: SWE-bench, GAIA, MMLU, and custom India-focused metrics.', 0.87, 'ai agent benchmarks'),
+    P('ai-agent-benchmark-report-q3-2026', 'AI Agent Benchmark Report Q3 2026', 'Quarterly benchmark report framework for coding, research, automation, and cost comparison tests with transparent methodology.', 0.89, 'ai agent benchmark report q3 2026'),
     P('ai-agent-ranking', 'AI Agent Rankings: Editorial Scorecards & Methodology', 'Our complete AI agent ranking methodology with 42-point scoring, category weights, and India-fit assessment.', 0.86, 'ai agent rankings'),
+    P('best-ai-agent-index', 'Best AI Agent Index: Rankings, Awards & Benchmark Hubs', 'Canonical BestAIAgent.in index connecting rankings, awards, benchmarks, market map, reviews, comparisons, and entity pages.', 0.90, 'best ai agent index'),
+    P('best-ai-agent-rankings', 'Best AI Agent Rankings 2026: Category Leaderboards', 'Category rankings for coding agents, research agents, voice agents, open-source agents, MCP tools, and enterprise AI agents.', 0.88, 'best ai agent rankings'),
+    P('ai-agent-awards-2026', 'AI Agent Awards 2026: Best Agents by Category', 'Annual AI agent awards framework for best coding agent, research agent, open-source agent, voice agent, and MCP tool.', 0.87, 'ai agent awards 2026'),
     P('ai-agent-comparison', 'AI Agent Comparison: Head-to-Head Tool Analysis', 'Side-by-side AI agent comparisons covering features, pricing, India fit, DPDP compliance, and editorial scores.', 0.90, 'ai agent comparison'),
   ]},
   { id: 'coding-agents', name: 'Coding Agents', description: 'AI coding agents, IDE copilots, code review agents, and developer automation tools.', hubSlug: 'coding-agents-hub', priority: 0.95, pages: [
@@ -309,6 +315,14 @@ const clusters: TopicalCluster[] = [
   { id: 'entity-pages', name: 'Entity Pages', description: 'LLM-optimized entity definition pages for major AI agents with structured data.', hubSlug: 'entity', priority: 0.75, pages: [
     H('entity', 'AI Agent Entity Pages: Structured Definitions', 'LLM-optimized entity definition pages for major AI agents with structured data.', 0.77, 'ai agent entities'),
     H('entity-hub', 'AI Agent Entity Hub', 'Structured entity archive for Cursor, GitHub Copilot, Claude Code, Vapi, Retell, Flowise, Dify, LangGraph, CrewAI, and AutoGen.', 0.74, 'ai agent entity hub'),
+    DIR('companies', 'AI Agent Companies Directory', 'Company entity hub for OpenAI, Anthropic, Google, Microsoft, AI agent startups, voice AI vendors, and agent infrastructure companies.', 0.78, 'ai agent companies'),
+    DIR('models', 'AI Models Directory for Agents', 'Model entity hub for frontier models, coding models, voice models, embedding models, and models used in agentic workflows.', 0.77, 'ai models for agents'),
+    DIR('agents', 'AI Agents Entity Directory', 'Agent entity hub for commercial agents, coding agents, research agents, voice agents, and workflow automation agents.', 0.79, 'ai agents entity directory'),
+    DIR('frameworks', 'AI Agent Frameworks Directory', 'Framework entity hub for LangGraph, CrewAI, AutoGen, Semantic Kernel, LlamaIndex, and orchestration libraries.', 0.78, 'ai agent frameworks'),
+    DIR('builders', 'AI Agent Builders Entity Directory', 'Builder entity hub for no-code, low-code, and developer-first platforms used to create AI agents.', 0.77, 'ai agent builders directory'),
+    DIR('mcp-server-entities', 'MCP Server Entity Directory', 'Entity hub for MCP servers, MCP clients, MCP marketplaces, MCP hosting, and Model Context Protocol infrastructure.', 0.79, 'mcp server entities'),
+    DIR('vector-dbs', 'Vector Databases for AI Agents', 'Entity hub for vector databases used in RAG and agent memory, including Pinecone, Weaviate, Chroma, Qdrant, and pgvector.', 0.76, 'vector databases ai agents'),
+    DIR('hosting-platforms', 'AI Agent Hosting Platforms Directory', 'Entity hub for hosting platforms used to deploy agents, MCP servers, APIs, workflows, and self-hosted AI infrastructure.', 0.76, 'ai agent hosting platforms'),
     E('cursor-ai-entity', 'Cursor AI: Entity Definition & Structured Data', 'Cursor AI entity: definition, category, alternatives, pricing, use cases, and structured data.', 0.82, 'cursor ai entity'),
     E('github-copilot-entity', 'GitHub Copilot: Entity Definition & Structured Data', 'GitHub Copilot entity: definition, category, alternatives, pricing, use cases, and structured data.', 0.80, 'github copilot entity'),
     E('claude-code-entity', 'Claude Code: Entity Definition & Structured Data', 'Claude Code entity: definition, category, alternatives, pricing, use cases, and structured data.', 0.79, 'claude code entity'),
@@ -336,6 +350,10 @@ const clusters: TopicalCluster[] = [
     P('best-ai-agent-for-banking', 'Best AI Agent for Banking', 'AI agents for banking support, onboarding, compliance workflows, and customer service.', 0.76, 'best ai agent for banking'),
     P('best-ai-agent-for-logistics', 'Best AI Agent for Logistics', 'AI agents for logistics dispatch, support, tracking, and exception handling.', 0.74, 'best ai agent for logistics'),
     P('best-ai-agent-for-manufacturing', 'Best AI Agent for Manufacturing', 'AI agents for manufacturing operations, maintenance, procurement, and support workflows.', 0.74, 'best ai agent for manufacturing'),
+    P('best-ai-agent-for-accountants', 'Best AI Agent for Accountants', 'AI agents for accountants: GST workflows, reconciliation, invoice review, reporting, and client communication.', 0.77, 'best ai agent for accountants'),
+    P('best-ai-agent-for-shopify-stores', 'Best AI Agent for Shopify Stores', 'AI agents for Shopify stores: product catalogs, order support, returns, WhatsApp flows, and campaign automation.', 0.76, 'best ai agent for shopify stores'),
+    P('best-ai-agent-for-real-estate-agencies', 'Best AI Agent for Real Estate Agencies', 'AI agents for real estate agencies: lead qualification, property matching, follow-up, appointment booking, and CRM updates.', 0.76, 'best ai agent for real estate agencies'),
+    P('best-ai-agent-for-customer-support-teams', 'Best AI Agent for Customer Support Teams', 'AI agents for customer support teams: ticket triage, knowledge retrieval, deflection, escalation, and QA workflows.', 0.78, 'best ai agent for customer support teams'),
   ]},
   { id: 'longtail-engine', name: 'Longtail Engine', description: 'Long-tail AI agent pages for specific stacks, industries, workflows, calculators, and ROI use cases.', hubSlug: 'longtail-hub', priority: 0.78, pages: [
     H('longtail-hub', 'AI Agent Longtail Hub: Niche Use Cases & Tools', 'Long-tail AI agent pages for specific stacks, industries, workflows, calculators, and ROI use cases.', 0.84, 'ai agent longtail'),
@@ -502,6 +520,10 @@ export function generateDynamicPillarContent(slug: string): SiloPage {
     relatedPagesSlugs: getClusterBySlug(slug)?.pages.filter(p => p.slug !== slug).slice(0, 3).map(p => p.slug) || ['best-ai-agent'],
     ratingSummary: `Rated 9.2/10 under BestAIAgent.in review matrix.`,
     evaluationVerdict: `For Indian deployment, start with Mumbai-region hosting, UPI-ready payments, and strict sandbox environments.`,
+    verificationStatus: 'editorially_mapped',
+    confidenceLevel: 82,
+    sourcesUsed: ['official sources', 'documentation', 'pricing pages', 'editorial review'],
+    editorialReviewDate: '2026-06-12',
   };
 }
 

@@ -68,6 +68,7 @@ export interface SiloPage {
   author: string;
   publishedAt: string;
   updatedAt: string;
+  description?: string;
   bodySections: { heading: string; text: string }[];
   faqs: FAQItem[];
   relatedPagesSlugs: string[];
@@ -75,6 +76,10 @@ export interface SiloPage {
   evaluationVerdict?: string;
   clusterId?: string;
   authors?: { name: string; role: string; profileSlug?: string }[];
+  verificationStatus?: string;
+  confidenceLevel?: number;
+  sourcesUsed?: string[];
+  editorialReviewDate?: string;
 }
 
 export interface Silo {
@@ -220,8 +225,17 @@ export const products: Product[] = [
     whatWeTested: 'Repository indexing speed, multi-file composer accuracy, inline suggestion latency <500ms, terminal integration depth, Privacy Mode compliance, VS Code extension parity, and React/TypeScript project handling.',
     lastVerified: '2026-06-11',
     alternativeSlugs: ['github-copilot', 'claude-code', 'replit-ai'],
-    comparisonSlugs: ['cursor-vs-copilot', 'cursor-vs-claude'],
-    frameworkSlugs: ['best-ai-agent-frameworks', 'best-open-source-ai-agent-tools']
+    comparisonSlugs: ['cursor-vs-github-copilot', 'claude-code-vs-cursor'],
+    frameworkSlugs: ['best-ai-agent-frameworks', 'best-open-source-ai-agent-tools'],
+    selfHosted: false,
+    apiAvailable: false,
+    mcpSupport: true,
+    memorySupport: true,
+    browserSupport: false,
+    multiAgentSupport: true,
+    documentationUrl: 'https://docs.cursor.com',
+    confidenceLevel: 0.98,
+    verificationStatus: 'verified'
   },
   {
     id: 'crewai',
@@ -277,8 +291,18 @@ export const products: Product[] = [
     whatWeTested: 'Multi-agent coordination accuracy, memory persistence under 10k token loads, custom tool integration latency, Python 3.10/3.11 compatibility, and LangChain interop edge cases.',
     lastVerified: '2026-06-11',
     alternativeSlugs: ['langgraph', 'autogen', 'dify'],
-    comparisonSlugs: ['crewai-vs-autogen', 'langgraph-vs-crewai'],
-    frameworkSlugs: ['best-ai-agent-frameworks', 'best-ai-agent-sdks']
+    comparisonSlugs: ['crewai-vs-autogen'],
+    frameworkSlugs: ['best-ai-agent-frameworks', 'best-ai-agent-sdks'],
+    selfHosted: true,
+    apiAvailable: true,
+    mcpSupport: true,
+    memorySupport: true,
+    browserSupport: true,
+    multiAgentSupport: true,
+    documentationUrl: 'https://docs.crewai.com',
+    githubUrl: 'https://github.com/joaomdmoura/crewAI',
+    confidenceLevel: 0.95,
+    verificationStatus: 'verified'
   },
   {
     id: 'vapi',
@@ -334,8 +358,17 @@ export const products: Product[] = [
     whatWeTested: 'End-to-end voice latency (target avg 420ms), Hinglish/NLP emotion detection, concurrent call stability at 100 simultaneous sessions, Twilio provisioning speed, and CRM webhook reliability.',
     lastVerified: '2026-06-11',
     alternativeSlugs: ['bland-ai', 'retell-ai', 'yellow-ai'],
-    comparisonSlugs: ['vapi-vs-retell', 'yellow-ai-vs-vapi'],
-    frameworkSlugs: ['best-ai-voice-agent', 'best-ai-agent-for-customer-support']
+    comparisonSlugs: ['vapi-vs-retell', 'vapi-vs-bland-ai'],
+    frameworkSlugs: ['best-ai-voice-agent', 'best-ai-agent-for-customer-support'],
+    selfHosted: false,
+    apiAvailable: true,
+    mcpSupport: false,
+    memorySupport: true,
+    browserSupport: false,
+    multiAgentSupport: false,
+    documentationUrl: 'https://docs.vapi.ai',
+    confidenceLevel: 0.96,
+    verificationStatus: 'verified'
   },
   {
     id: 'yellow-ai',
@@ -391,8 +424,17 @@ export const products: Product[] = [
     whatWeTested: 'WhatsApp Business API webhook reliability, UPI checkout latency (avg 580ms), NLP accuracy across 12+ Indian sub-languages, DPDP data residency audit, and concurrent session handling under load.',
     lastVerified: '2026-06-11',
     alternativeSlugs: ['haptik', 'gupshup', 'vapi-ai'],
-    comparisonSlugs: ['yellow-ai-vs-vapi'],
-    frameworkSlugs: ['best-ai-agent-platform', 'ai-agents-for-business']
+    comparisonSlugs: ['yellow-ai-vs-intercom', 'yellow-ai-vs-wati'],
+    frameworkSlugs: ['best-ai-agent-platform', 'ai-agents-for-business'],
+    selfHosted: false,
+    apiAvailable: true,
+    mcpSupport: true,
+    memorySupport: true,
+    browserSupport: true,
+    multiAgentSupport: true,
+    documentationUrl: 'https://docs.yellow.ai',
+    confidenceLevel: 0.94,
+    verificationStatus: 'verified'
   },
   {
     id: 'flowise',
@@ -448,8 +490,18 @@ export const products: Product[] = [
     whatWeTested: 'RAG retrieval accuracy (93.4% on internal docs), Docker startup time <45s, API roundtrip latency (avg 180ms), template library breadth, MCP node connectivity, and memory handler persistence.',
     lastVerified: '2026-06-11',
     alternativeSlugs: ['langflow', 'dify', 'make-com'],
-    comparisonSlugs: ['flowise-vs-dify'],
-    frameworkSlugs: ['best-ai-agent-builder', 'best-ai-agent-no-code-platform']
+    comparisonSlugs: ['dify-vs-flowise'],
+    frameworkSlugs: ['best-ai-agent-builder', 'best-ai-agent-no-code-platform'],
+    selfHosted: true,
+    apiAvailable: true,
+    mcpSupport: true,
+    memorySupport: true,
+    browserSupport: true,
+    multiAgentSupport: true,
+    documentationUrl: 'https://docs.flowiseai.com',
+    githubUrl: 'https://github.com/FlowiseAI/Flowise',
+    confidenceLevel: 0.92,
+    verificationStatus: 'verified'
   }
 ];
 

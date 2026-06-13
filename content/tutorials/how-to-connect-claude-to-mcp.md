@@ -1,4 +1,4 @@
-# How to Connect Claude to MCP – Complete Tutorial (June 2026)
+# How to Connect Claude to MCP – Complete Tutorial (June 2026) [MCP server registry](/mcp/registry) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
 How to Connect Claude to MCP – Step-by-Step Tutorial for Indian Developers 2026
