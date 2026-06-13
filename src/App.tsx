@@ -201,7 +201,13 @@ export default function App() {
   const [newUgcUseCase, setNewUgcUseCase] = useState('');
   const [newUgcContent, setNewUgcContent] = useState('');
 
-  // Breadcrumbs title update dynamically based on view
+  // SEO top-level helpers
+  const SITE_URL =
+    typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SITE_URL
+      ? import.meta.env.VITE_SITE_URL.replace(/\/$/, '')
+      : 'https://bestaiagent.in';
+
+  const publicUrl = (pathName: string) => `${SITE_URL}${pathName === '/' ? '/' : pathName}`;
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     let pageTitle = "BestAIAgent.in | India's AI Agent Authority Review Hub";
@@ -251,7 +257,10 @@ export default function App() {
     document.title = pageTitle;
 
     const routePath = pathForRoute(currentView, selectedSiloId, selectedArticleSlug, selectedProductSlug);
-    const canonical = `https://bestaiagent.in${routePath === '/' ? '/' : routePath}`;
+    const canonical = publicUrl(routePath === '/' ? '/' : routePath);
+    const canonicalHash = typeof window !== 'undefined' && window.location.hash
+      ? `${canonical}${window.location.hash.startsWith('#') ? '' : '#'}${window.location.hash.replace(/^#/, '')}`
+      : canonical;
     const metaDescription = currentView === 'product'
       ? products.find(item => item.slug === selectedProductSlug)?.summary
       : currentView === 'article'
@@ -1083,7 +1092,7 @@ export default function App() {
     setChatInput('');
     setIsChatLoading(true);
 
-    try {
+try {
       const response = await fetch('/api/recommend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -1094,6 +1103,10 @@ export default function App() {
           languagePreference: 'Hinglish / Multilingual'
         })
       });
+      if (!response.ok) {
+        setChatMessages(prev => [...prev, { sender: 'assistant', text: "Request failed. Please try again later." }]);
+        return;
+      }
       const data = await response.json();
       setChatMessages(prev => [...prev, { sender: 'assistant', text: data.text || "I was unable to consult the model right now. Please test another workflow query." }]);
     } catch (err) {
@@ -1104,7 +1117,7 @@ export default function App() {
     }
   };
 
-  // Forms submit API mimics
+// Forms submit API mimics
   const submitNewsletter = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newsletterEmail) return;
@@ -1114,11 +1127,15 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: newsletterEmail })
       });
+      if (!response.ok) {
+        setNewsletterSuccess("Request failed. Please try again later.");
+        return;
+      }
       const data = await response.json();
       setNewsletterSuccess(data.message);
       setNewsletterEmail('');
     } catch (e) {
-      setNewsletterSuccess("Thank you! You have been successfully newsletter indexed on BestAIAgent.in");
+      setNewsletterSuccess("Request failed. Please try again later.");
     }
   };
 
@@ -1130,11 +1147,15 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(toolSubmitForm)
       });
+      if (!response.ok) {
+        setToolSubmitSuccess("Request failed. Please try again later.");
+        return;
+      }
       const data = await response.json();
       setToolSubmitSuccess(data.message);
       setToolSubmitForm({ name: '', url: '', category: '', description: '', email: '' });
     } catch (e) {
-      setToolSubmitSuccess("Thanks for suggesting the tool developer! Our editorial team will run benchmarks.");
+      setToolSubmitSuccess("Request failed. Please try again later.");
     }
   };
 
@@ -1146,11 +1167,15 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(leadForm)
       });
+      if (!response.ok) {
+        setLeadSuccess("Request failed. Please try again later.");
+        return;
+      }
       const data = await response.json();
       setLeadSuccess(data.message);
       setLeadForm({ name: '', company: '', phone: '', desc: '' });
     } catch (e) {
-      setLeadSuccess("Your automation advisory request registered successfully. We'll be in touch!");
+      setLeadSuccess("Request failed. Please try again later.");
     }
   };
 
@@ -2207,6 +2232,8 @@ export default function App() {
                       navigator.clipboard.writeText(shareUrl).then(() => {
                         setCopiedArticleSlug(`silo-${activeSilo.id}`);
                         setTimeout(() => setCopiedArticleSlug(null), 2000);
+                      }).catch(() => {
+                        setCopiedArticleSlug(null);
                       });
                     }}
                     className={`cursor-pointer inline-flex items-center gap-1.5 bg-white hover:bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold transition uppercase tracking-wider ${copiedArticleSlug === `silo-${activeSilo.id}` ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'text-slate-700'}`}

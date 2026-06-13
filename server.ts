@@ -409,6 +409,57 @@ async function startServer() {
   const apiKey = process.env.GEMINI_API_KEY;
   const ai = apiKey && apiKey !== 'MY_GEMINI_API_KEY' ? new GoogleGenAI({ apiKey }) : null;
 
+  const writeRateLimits = new Map<string, { count: number; firstSeen: number }>();
+  const RATE_LIMIT_WINDOW_MS = 60_000;
+  const RATE_LIMIT_MAX = 10;
+
+  function rateLimit(req: express.Request, res: express.Response, next: express.NextFunction) {
+    const ip = req.ip || req.socket.remoteAddress || 'unknown';
+    const now = Date.now();
+    const entry = writeRateLimits.get(ip);
+    if (!entry || now - entry.firstSeen > RATE_LIMIT_WINDOW_MS) {
+      writeRateLimits.set(ip, { count: 1, firstSeen: now });
+      return next();
+    }
+    entry.count += 1;
+    if (entry.count > RATE_LIMIT_MAX) {
+      return res.status(429).json({ error: 'Too many requests. Please try again later.' });
+    }
+    next();
+  }
+
+  function validateEmail(email?: string) {
+    if (!email) return false;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function hasConsent(req: express.Request) {
+    return Boolean(req.body && typeof req.body.consent === 'boolean' && req.body.consent === true);
+  }
+
+  function isHoneypotTriggered(req: express.Request) {
+    const honeypotKeys = ['website', 'hp', 'honeypot', 'url_hp'];
+    const body = (req.body || {}) as Record<string, unknown>;
+    return honeypotKeys.some((key) => typeof body[key] === 'string' && (body[key] as string).trim().length > 0);
+  }
+
+  function safeWriteHandler<T extends Record<string, unknown>>(
+    req: express.Request,
+    res: express.Response,
+    validate: (body: T) => { ok: boolean; status?: number; error?: string }
+  ) {
+    try {
+      const body = req.body as T;
+      const result = validate(body);
+      if (!result.ok) {
+        return res.status(result.status || 400).json({ error: result.error || 'Invalid request.' });
+      }
+      return res.json({ success: true });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
+    }
+  }
+
   app.get('/', (req, res, next) => {
     const view = typeof req.query.view === 'string' ? req.query.view : '';
     const article = typeof req.query.article === 'string' ? req.query.article : '';
@@ -471,8 +522,8 @@ async function startServer() {
       return res.json({
         text: `### AI Agent Capability Review\n\n**Document analyzed:** \`${filename}\`\n\nThis document appears suitable for an AI workflow audit. Start by classifying the workflow, identifying personal data, and mapping repetitive tasks to a bounded agent.\n\n**Recommended stack:** Flowise or n8n for workflow automation, Cursor for engineering documents, and Vapi or Yellow.ai for voice/WhatsApp support workflows.\n\n**India readiness checklist:** estimate INR cost, review GST invoice handling, document DPDP Act 2023 purpose limitation, and test Hindi/Hinglish examples before production.`,
       });
-    } catch (error: any) {
-      return res.status(500).json({ error: error.message || 'Error processing document analysis' });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
     }
   });
 
@@ -488,25 +539,78 @@ async function startServer() {
         return res.json({ text: response.text });
       }
       return res.json({ text: simulatedRecommendation(prompt) });
-    } catch (error: any) {
-      return res.status(500).json({ error: error.message || 'Error processing recommendation' });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
     }
   });
 
-  app.post('/api/submit-lead', (req, res) => {
-    console.log('Lead captured:', req.body);
-    res.json({ success: true, message: 'Lead captured. Our automation advisor will reach out within 24 business hours.' });
+  app.post('/api/submit-lead', rateLimit, (req, res) => {
+    try {
+      const { name, company, phone, desc } = req.body as Record<string, unknown>;
+      if (typeof name !== 'string' || name.trim().length > 500) {
+        return res.status(400).json({ error: 'Name is required and must be under 500 characters.' });
+      }
+      if (typeof company !== 'string' || company.trim().length > 500) {
+        return res.status(400).json({ error: 'Company is required and must be under 500 characters.' });
+      }
+      if (!hasConsent(req)) {
+        return res.status(400).json({ error: 'Consent is required before submitting.' });
+      }
+      if (isHoneypotTriggered(req)) {
+        return res.status(400).json({ error: 'Invalid submission.' });
+      }
+      console.log('Lead captured:', { name, company, phone: phone ? '<redacted>' : '', desc: typeof desc === 'string' ? desc.slice(0, 200) : '', consent: hasConsent(req) });
+      return res.json({ success: true, message: 'Lead captured. Our automation advisor will reach out within 24 business hours.' });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
+    }
   });
 
-  app.post('/api/submit-tool', (req, res) => {
-    console.log('Tool submission received:', req.body);
-    res.json({ success: true, message: 'Tool submitted for editorial review.' });
+  app.post('/api/submit-tool', rateLimit, (req, res) => {
+    try {
+      const { name, url, category, description, email } = req.body as Record<string, unknown>;
+      if (typeof name !== 'string' || name.trim().length < 2 || name.trim().length > 500) {
+        return res.status(400).json({ error: 'Tool name is required.' });
+      }
+      if (typeof url !== 'string' || url.trim().length === 0) {
+        return res.status(400).json({ error: 'Tool URL is required.' });
+      }
+      if (typeof category !== 'string' || category.trim().length === 0) {
+        return res.status(400).json({ error: 'Category is required.' });
+      }
+      if (typeof description !== 'string' || description.trim().length < 10 || description.trim().length > 2000) {
+        return res.status(400).json({ error: 'Description must be between 10 and 2000 characters.' });
+      }
+      if (typeof email === 'string' && !validateEmail(email)) {
+        return res.status(400).json({ error: 'A valid email is required.' });
+      }
+      if (isHoneypotTriggered(req)) {
+        return res.status(400).json({ error: 'Invalid submission.' });
+      }
+      console.log('Tool submission received:', { name, url, category, description: typeof description === 'string' ? description.slice(0, 200) : '', email: email ? '<redacted>' : '', consent: hasConsent(req) });
+      return res.json({ success: true, message: 'Tool submitted for editorial review.' });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
+    }
   });
 
-  app.post('/api/subscribe', (req, res) => {
-    const { email } = req.body as { email?: string };
-    if (!email) return res.status(400).json({ error: 'Email address is required.' });
-    res.json({ success: true, message: 'Subscribed to BestAIAgent.in updates.' });
+  app.post('/api/subscribe', rateLimit, (req, res) => {
+    try {
+      const { email } = req.body as { email?: string };
+      if (!validateEmail(email)) {
+        return res.status(400).json({ error: 'A valid email address is required.' });
+      }
+      if (!hasConsent(req)) {
+        return res.status(400).json({ error: 'Consent is required before subscribing.' });
+      }
+      if (isHoneypotTriggered(req)) {
+        return res.status(400).json({ error: 'Invalid request.' });
+      }
+      console.log('New subscription:', { email: email ? '<redacted>' : '', consent: hasConsent(req) });
+      return res.json({ success: true, message: 'Subscribed to BestAIAgent.in updates.' });
+    } catch {
+      return res.status(500).json({ error: 'Request failed. Please try again later.' });
+    }
   });
 
   if (!isProd) {

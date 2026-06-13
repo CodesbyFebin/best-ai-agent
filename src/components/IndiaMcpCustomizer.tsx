@@ -182,7 +182,7 @@ export default function IndiaMcpCustomizer({
 
   // Copy Hub URL
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.origin + '/mcp-hub');
+    navigator.clipboard.writeText(window.location.origin + '/mcp-hub').catch(() => {});
     setCopiedShare(true);
     setTimeout(() => setCopiedShare(false), 2000);
   };
@@ -312,9 +312,12 @@ export default function IndiaMcpCustomizer({
 
   // Copy Config Block to clipboard
   const handleCopyConfigBlock = () => {
-    navigator.clipboard.writeText(renderedConfigBlock);
-    setCopiedConfigBlock(true);
-    setTimeout(() => setCopiedConfigBlock(false), 2000);
+    navigator.clipboard.writeText(renderedConfigBlock).then(() => {
+      setCopiedConfigBlock(true);
+      setTimeout(() => setCopiedConfigBlock(false), 2000);
+    }).catch(() => {
+      setCopiedConfigBlock(false);
+    });
   };
 
   // Schema Validation engine simulation
@@ -442,11 +445,6 @@ export default function IndiaMcpCustomizer({
   return (
     <div className="space-y-12">
       
-      {/* Search Engine and LLM index JSON-LD Injector */}
-      <script type="application/ld+json">
-        {JSON.stringify(seoJsonLd)}
-      </script>
-
       {/* 1. Header Authority Block */}
       <div className="bg-gradient-to-br from-slate-950 via-teal-950 to-slate-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden border border-teal-500/20">
         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
