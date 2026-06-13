@@ -1,9 +1,11 @@
 ---
 title: MCP Servers
 description: Directory of Model Context Protocol servers for AI agents.
---- [MCP server registry](/mcp/registry)
+---
 
 # MCP Servers
+
+[MCP server registry](/mcp-registry)
 
 This section provides a comprehensive directory of Model Context Protocol (MCP) servers that enable AI agents to interact with external tools, data sources, and services.
 

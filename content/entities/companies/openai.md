@@ -96,4 +96,4 @@ OpenAI is an American artificial intelligence research and deployment company fo
 
 ---
 
-**Related:** [Anthropic Profile](/anthropic) | [Google DeepMind](/google) | [Microsoft](/microsoft)
+**Related:** [Anthropic Profile](/anthropic) | [Google DeepMind](https://deepmind.google/) | [Microsoft](https://www.microsoft.com/)

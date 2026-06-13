@@ -17,6 +17,10 @@ User-agent: ClaudeBot
 Allow: /
 User-agent: PerplexityBot
 Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: Applebot
 Allow: /
 User-agent: DuckDuckBot
@@ -33,6 +37,9 @@ Sitemap: https://bestaiagent.in/alternatives-sitemap.xml
 Sitemap: https://bestaiagent.in/tutorials-sitemap.xml
 Sitemap: https://bestaiagent.in/glossary-sitemap.xml
 Sitemap: https://bestaiagent.in/mcp-sitemap.xml
+Sitemap: https://bestaiagent.in/author-sitemap.xml
+Sitemap: https://bestaiagent.in/hub-sitemap.xml
+Sitemap: https://bestaiagent.in/calculators-sitemap.xml
 Sitemap: https://bestaiagent.in/image-sitemap.xml
 Sitemap: https://bestaiagent.in/feed.xml
 Sitemap: https://bestaiagent.in/llms.txt

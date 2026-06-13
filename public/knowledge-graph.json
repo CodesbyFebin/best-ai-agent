@@ -8,18 +8,6 @@
       "url": "https://bestaiagent.in"
     },
     {
-      "id": "/about",
-      "type": "trust",
-      "label": "About Best AI Agent",
-      "url": "https://bestaiagent.in/about"
-    },
-    {
-      "id": "/about-editorial-team",
-      "type": "editorial",
-      "label": "About Editorial Team",
-      "url": "https://bestaiagent.in/about-editorial-team"
-    },
-    {
       "id": "/affiliate-disclosure",
       "type": "editorial",
       "label": "Affiliate Disclosure",
@@ -42,12 +30,6 @@
       "type": "research",
       "label": "AgentBench Guide 2026 – Complete Explanation",
       "url": "https://bestaiagent.in/agentbench-guide"
-    },
-    {
-      "id": "/agentops-review",
-      "type": "reviews",
-      "label": "AgentOps Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/agentops-review"
     },
     {
       "id": "/agents",
@@ -368,22 +350,10 @@
       "url": "https://bestaiagent.in/anthropic"
     },
     {
-      "id": "/apollo-review",
-      "type": "reviews",
-      "label": "Apollo Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/apollo-review"
-    },
-    {
       "id": "/arshdeep-singh",
       "type": "authors",
       "label": "Arshdeep Singh",
       "url": "https://bestaiagent.in/arshdeep-singh"
-    },
-    {
-      "id": "/artisan-review",
-      "type": "reviews",
-      "label": "Artisan Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/artisan-review"
     },
     {
       "id": "/arxiv-server",
@@ -410,16 +380,22 @@
       "url": "https://bestaiagent.in/authors/priya-iyer"
     },
     {
+      "id": "/autogen-alternatives",
+      "type": "alternatives",
+      "label": "AutoGen Alternatives: CrewAI, LangGraph & Dify",
+      "url": "https://bestaiagent.in/autogen-alternatives"
+    },
+    {
       "id": "/autogen-entity",
       "type": "entity-pages",
       "label": "AutoGen: Entity Definition & Structured Data",
       "url": "https://bestaiagent.in/autogen-entity"
     },
     {
-      "id": "/autogen-review",
-      "type": "reviews",
-      "label": "AutoGen Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/autogen-review"
+      "id": "/autogen-pricing",
+      "type": "pricing-intelligence",
+      "label": "AutoGen Pricing: Open-Source, Azure AI & Cloud Costs",
+      "url": "https://bestaiagent.in/autogen-pricing"
     },
     {
       "id": "/autogen-vs-crewai",
@@ -542,6 +518,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-appointment-booking"
     },
     {
+      "id": "/best-ai-agent-for-autogen",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent for AutoGen Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-autogen"
+    },
+    {
       "id": "/best-ai-agent-for-backend-development",
       "type": "coding-agents",
       "label": "Best AI Agent for Backend Development",
@@ -570,6 +552,12 @@
       "type": "coding-agents",
       "label": "Best AI Agent for Code Review in 2026",
       "url": "https://bestaiagent.in/best-ai-agent-for-code-review"
+    },
+    {
+      "id": "/best-ai-agent-for-codex",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Codex Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-codex"
     },
     {
       "id": "/best-ai-agent-for-coding",
@@ -722,6 +710,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-job-search"
     },
     {
+      "id": "/best-ai-agent-for-langgraph",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent for LangGraph Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-langgraph"
+    },
+    {
       "id": "/best-ai-agent-for-law-firms",
       "type": "pillars",
       "label": "Best AI Agent for Law Firms 2026 – India’s Independent Guide",
@@ -786,6 +780,12 @@
       "type": "pillars",
       "label": "Best AI Agent for Marketing – 2026 Guide for Indian Marketers",
       "url": "https://bestaiagent.in/best-ai-agent-for-marketing"
+    },
+    {
+      "id": "/best-ai-agent-for-n8n-workflows",
+      "type": "ai-agent-builders",
+      "label": "Best AI Agent for n8n Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-n8n-workflows"
     },
     {
       "id": "/best-ai-agent-for-nextjs",
@@ -878,6 +878,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-recruiting"
     },
     {
+      "id": "/best-ai-agent-for-replit",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Replit Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-replit"
+    },
+    {
       "id": "/best-ai-agent-for-research",
       "type": "research-benchmarks",
       "label": "Best AI Agent for Research: Academic & Professional",
@@ -960,6 +966,12 @@
       "type": "pillars",
       "label": "Best AI Agent for WhatsApp Support 2026 – India’s Independent Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-whatsapp-support"
+    },
+    {
+      "id": "/best-ai-agent-for-windsurf",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Windsurf Workflows",
+      "url": "https://bestaiagent.in/best-ai-agent-for-windsurf"
     },
     {
       "id": "/best-ai-agent-for-wordpress",
@@ -1160,12 +1172,6 @@
       "url": "https://bestaiagent.in/bigquery-server"
     },
     {
-      "id": "/bland-review",
-      "type": "reviews",
-      "label": "Bland AI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/bland-review"
-    },
-    {
       "id": "/brave-search",
       "type": "mcp",
       "label": "Brave Search MCP Server: Complete 2026 Guide for Indian Developers",
@@ -1274,16 +1280,28 @@
       "url": "https://bestaiagent.in/claude-vs-cursor"
     },
     {
-      "id": "/clay-review",
-      "type": "reviews",
-      "label": "Clay Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/clay-review"
-    },
-    {
       "id": "/clay-vs-apollo",
       "type": "comparisons",
       "label": "Clay AI vs Apollo AI – Which Lead Generation Platform Wins in 2026?",
       "url": "https://bestaiagent.in/clay-vs-apollo"
+    },
+    {
+      "id": "/codex-alternatives",
+      "type": "alternatives",
+      "label": "OpenAI Codex Alternatives: Cursor, Copilot & Claude Code",
+      "url": "https://bestaiagent.in/codex-alternatives"
+    },
+    {
+      "id": "/codex-entity",
+      "type": "entity-pages",
+      "label": "OpenAI Codex: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/codex-entity"
+    },
+    {
+      "id": "/codex-pricing",
+      "type": "pricing-intelligence",
+      "label": "OpenAI Codex Pricing in INR: API Costs & Usage Tiers",
+      "url": "https://bestaiagent.in/codex-pricing"
     },
     {
       "id": "/coding-agents",
@@ -1346,22 +1364,10 @@
       "url": "https://bestaiagent.in/crewai-alternatives"
     },
     {
-      "id": "/crewai-entity",
-      "type": "entity-pages",
-      "label": "CrewAI: Entity Definition & Structured Data",
-      "url": "https://bestaiagent.in/crewai-entity"
-    },
-    {
       "id": "/crewai-pricing",
       "type": "pricing-intelligence",
       "label": "CrewAI Pricing: Open-Source, Cloud & Team Costs",
       "url": "https://bestaiagent.in/crewai-pricing"
-    },
-    {
-      "id": "/crewai-review",
-      "type": "reviews",
-      "label": "CrewAI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/crewai-review"
     },
     {
       "id": "/csv-server",
@@ -1478,12 +1484,6 @@
       "url": "https://bestaiagent.in/dify-pricing"
     },
     {
-      "id": "/dify-review",
-      "type": "reviews",
-      "label": "Dify Review – India’s Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/dify-review"
-    },
-    {
       "id": "/dify-vs-langflow",
       "type": "comparisons",
       "label": "Dify vs LangFlow – Which AI App Builder Wins in 2026?",
@@ -1524,12 +1524,6 @@
       "type": "editorial",
       "label": "Editorial Policy, Independence, Corrections, and Affiliate Disclosure",
       "url": "https://bestaiagent.in/editorial-policy"
-    },
-    {
-      "id": "/elevenlabs-conversational-ai-review",
-      "type": "reviews",
-      "label": "ElevenLabs Conversational AI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/elevenlabs-conversational-ai-review"
     },
     {
       "id": "/email-server",
@@ -1596,12 +1590,6 @@
       "type": "reddit-community-intent",
       "label": "Flowise Reddit Review: No-Code AI Builder Feedback",
       "url": "https://bestaiagent.in/flowise-reddit-review"
-    },
-    {
-      "id": "/flowise-review",
-      "type": "reviews",
-      "label": "Flowise Review – India’s Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/flowise-review"
     },
     {
       "id": "/flowise-vs-dify",
@@ -1748,10 +1736,22 @@
       "url": "https://bestaiagent.in/hosting-platforms"
     },
     {
+      "id": "/how-to-build-ai-agent-with-autogen",
+      "type": "tutorials",
+      "label": "How to Build Multi-Agent Systems with AutoGen",
+      "url": "https://bestaiagent.in/how-to-build-ai-agent-with-autogen"
+    },
+    {
       "id": "/how-to-build-ai-agent-with-crewai",
       "type": "tutorials",
       "label": "How to Build an AI Agent with CrewAI – Complete Tutorial",
       "url": "https://bestaiagent.in/how-to-build-ai-agent-with-crewai"
+    },
+    {
+      "id": "/how-to-build-ai-agent-with-dify",
+      "type": "tutorials",
+      "label": "How to Build an AI Agent with Dify: App Builder Guide",
+      "url": "https://bestaiagent.in/how-to-build-ai-agent-with-dify"
     },
     {
       "id": "/how-to-build-ai-agent-with-flowise",
@@ -1814,6 +1814,12 @@
       "url": "https://bestaiagent.in/how-to-setup-langgraph"
     },
     {
+      "id": "/how-to-use-codex",
+      "type": "tutorials",
+      "label": "How to Use OpenAI Codex: API Coding Agent Setup",
+      "url": "https://bestaiagent.in/how-to-use-codex"
+    },
+    {
       "id": "/how-to-use-cursor-ai",
       "type": "tutorials",
       "label": "How to Use Cursor AI – Complete Tutorial for Indian Developers",
@@ -1826,6 +1832,24 @@
       "url": "https://bestaiagent.in/how-to-use-github-copilot"
     },
     {
+      "id": "/how-to-use-intercom",
+      "type": "tutorials",
+      "label": "How to Use Intercom AI: Fin Chatbot & Helpdesk Automation",
+      "url": "https://bestaiagent.in/how-to-use-intercom"
+    },
+    {
+      "id": "/how-to-use-n8n",
+      "type": "tutorials",
+      "label": "How to Use n8n for AI Agent Workflows",
+      "url": "https://bestaiagent.in/how-to-use-n8n"
+    },
+    {
+      "id": "/how-to-use-replit-agent",
+      "type": "tutorials",
+      "label": "How to Use Replit Agent: Browser-Based App Building",
+      "url": "https://bestaiagent.in/how-to-use-replit-agent"
+    },
+    {
       "id": "/how-to-use-retell",
       "type": "tutorials",
       "label": "How to Use Retell AI – Complete Tutorial for Indian Developers",
@@ -1836,6 +1860,18 @@
       "type": "tutorials",
       "label": "How to Use Vapi AI – Complete Tutorial for Indian Developers",
       "url": "https://bestaiagent.in/how-to-use-vapi"
+    },
+    {
+      "id": "/how-to-use-windsurf",
+      "type": "tutorials",
+      "label": "How to Use Windsurf: AI IDE Setup & Cascade Workflows",
+      "url": "https://bestaiagent.in/how-to-use-windsurf"
+    },
+    {
+      "id": "/how-to-use-yellow-ai",
+      "type": "tutorials",
+      "label": "How to Use Yellow.ai: WhatsApp & Voice Automation Setup",
+      "url": "https://bestaiagent.in/how-to-use-yellow-ai"
     },
     {
       "id": "/how-we-test-ai-agents",
@@ -1868,12 +1904,6 @@
       "url": "https://bestaiagent.in/implementation-tutorials-hub"
     },
     {
-      "id": "/index",
-      "type": "tutorials",
-      "label": "AI Agent Tutorials",
-      "url": "https://bestaiagent.in/index"
-    },
-    {
       "id": "/india",
       "type": "industry-ai-agents",
       "label": "AI Agents in India: Pricing, DPDP & Buyer Guides",
@@ -1904,16 +1934,16 @@
       "url": "https://bestaiagent.in/intercom-entity"
     },
     {
+      "id": "/intercom-for-ai-support",
+      "type": "business-ai-agents",
+      "label": "Intercom for AI Support: Fin, Helpdesk & Knowledge Base Automation",
+      "url": "https://bestaiagent.in/intercom-for-ai-support"
+    },
+    {
       "id": "/intercom-pricing",
       "type": "pricing",
       "label": "Intercom Pricing 2026 – Complete Guide for Indian SaaS Companies",
       "url": "https://bestaiagent.in/intercom-pricing"
-    },
-    {
-      "id": "/intercom-review",
-      "type": "reviews",
-      "label": "Intercom AI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/intercom-review"
     },
     {
       "id": "/intercom-vs-zendesk-ai",
@@ -1952,10 +1982,10 @@
       "url": "https://bestaiagent.in/langchain"
     },
     {
-      "id": "/langflow-review",
-      "type": "reviews",
-      "label": "LangFlow Review – India’s Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/langflow-review"
+      "id": "/langgraph-alternatives",
+      "type": "alternatives",
+      "label": "LangGraph Alternatives: CrewAI, AutoGen & Dify",
+      "url": "https://bestaiagent.in/langgraph-alternatives"
     },
     {
       "id": "/langgraph-entity",
@@ -1964,10 +1994,10 @@
       "url": "https://bestaiagent.in/langgraph-entity"
     },
     {
-      "id": "/langgraph-review",
-      "type": "reviews",
-      "label": "LangGraph Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/langgraph-review"
+      "id": "/langgraph-pricing",
+      "type": "pricing-intelligence",
+      "label": "LangGraph Pricing in INR: LangSmith, Cloud & Self-Hosted Costs",
+      "url": "https://bestaiagent.in/langgraph-pricing"
     },
     {
       "id": "/langgraph-vs-crewai",
@@ -1986,12 +2016,6 @@
       "type": "mcp",
       "label": "LinkedIn Server",
       "url": "https://bestaiagent.in/linkedin-server"
-    },
-    {
-      "id": "/llamaindex-review",
-      "type": "reviews",
-      "label": "LlamaIndex Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/llamaindex-review"
     },
     {
       "id": "/llamaindex-vs-langchain",
@@ -2162,16 +2186,16 @@
       "url": "https://bestaiagent.in/n8n-alternatives"
     },
     {
+      "id": "/n8n-entity",
+      "type": "entity-pages",
+      "label": "n8n: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/n8n-entity"
+    },
+    {
       "id": "/n8n-pricing",
       "type": "pricing",
       "label": "n8n Pricing 2026 – Complete Guide for Indian Agencies",
       "url": "https://bestaiagent.in/n8n-pricing"
-    },
-    {
-      "id": "/n8n-review",
-      "type": "reviews",
-      "label": "n8n Review – India’s Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/n8n-review"
     },
     {
       "id": "/news-api-server",
@@ -2192,12 +2216,6 @@
       "url": "https://bestaiagent.in/official-mcp-vs-community-mcp"
     },
     {
-      "id": "/open-interpreter-review",
-      "type": "reviews",
-      "label": "Open Interpreter Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/open-interpreter-review"
-    },
-    {
       "id": "/open-source-agents",
       "type": "directories",
       "label": "Open-Source Agents Directory",
@@ -2214,12 +2232,6 @@
       "type": "entities",
       "label": "OpenAI Company Profile",
       "url": "https://bestaiagent.in/openai"
-    },
-    {
-      "id": "/openai-agents-sdk-review",
-      "type": "reviews",
-      "label": "OpenAI Agents SDK Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/openai-agents-sdk-review"
     },
     {
       "id": "/openai-agents-sdk-vs-langgraph",
@@ -2312,6 +2324,24 @@
       "url": "https://bestaiagent.in/replit-agent"
     },
     {
+      "id": "/replit-alternatives",
+      "type": "alternatives",
+      "label": "Replit Agent Alternatives: Cursor, Copilot & Windsurf",
+      "url": "https://bestaiagent.in/replit-alternatives"
+    },
+    {
+      "id": "/replit-entity",
+      "type": "entity-pages",
+      "label": "Replit Agent: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/replit-entity"
+    },
+    {
+      "id": "/replit-pricing",
+      "type": "pricing-intelligence",
+      "label": "Replit Agent Pricing in INR: Free, Pro & Team Plans",
+      "url": "https://bestaiagent.in/replit-pricing"
+    },
+    {
       "id": "/replit-vs-cursor",
       "type": "comparisons",
       "label": "Replit vs Cursor AI – Which AI Coding Assistant Wins for Students and Developers in 2026?",
@@ -2348,12 +2378,6 @@
       "url": "https://bestaiagent.in/retell-reddit-review"
     },
     {
-      "id": "/retell-review",
-      "type": "reviews",
-      "label": "Retell AI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/retell-review"
-    },
-    {
       "id": "/retell-vs-bland",
       "type": "comparisons",
       "label": "Retell AI vs Bland AI – Which Voice Agent Platform Wins in 2026?",
@@ -2370,12 +2394,6 @@
       "type": "mcp",
       "label": "Salesforce MCP Server [MCP server registry](/mcp/registry)",
       "url": "https://bestaiagent.in/salesforce-server"
-    },
-    {
-      "id": "/semantic-kernel-review",
-      "type": "reviews",
-      "label": "Semantic Kernel Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/semantic-kernel-review"
     },
     {
       "id": "/sendgrid-server",
@@ -2420,12 +2438,6 @@
       "url": "https://bestaiagent.in/stripe-server"
     },
     {
-      "id": "/superagent-review",
-      "type": "reviews",
-      "label": "Superagent Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/superagent-review"
-    },
-    {
       "id": "/swe-bench-guide",
       "type": "research",
       "label": "SWE-Bench Guide 2026 – Complete Explanation",
@@ -2456,16 +2468,142 @@
       "url": "https://bestaiagent.in/terms"
     },
     {
+      "id": "/tools/agentops",
+      "type": "reviews",
+      "label": "AgentOps Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/agentops"
+    },
+    {
+      "id": "/tools/apollo",
+      "type": "reviews",
+      "label": "Apollo Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/apollo"
+    },
+    {
+      "id": "/tools/artisan",
+      "type": "reviews",
+      "label": "Artisan Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/artisan"
+    },
+    {
+      "id": "/tools/autogen",
+      "type": "reviews",
+      "label": "AutoGen Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/autogen"
+    },
+    {
+      "id": "/tools/bland-ai",
+      "type": "reviews",
+      "label": "Bland AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/bland-ai"
+    },
+    {
+      "id": "/tools/clay",
+      "type": "reviews",
+      "label": "Clay Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/clay"
+    },
+    {
+      "id": "/tools/crewai",
+      "type": "reviews",
+      "label": "CrewAI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/crewai"
+    },
+    {
       "id": "/tools/cursor-ai",
       "type": "tools",
       "label": "Cursor AI: AI Coding Agent Tool Profile",
       "url": "https://bestaiagent.in/tools/cursor-ai"
     },
     {
-      "id": "/tools/index",
-      "type": "tools",
-      "label": "AI Agent Tools",
-      "url": "https://bestaiagent.in/tools/index"
+      "id": "/tools/dify",
+      "type": "reviews",
+      "label": "Dify Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/dify"
+    },
+    {
+      "id": "/tools/elevenlabs",
+      "type": "reviews",
+      "label": "ElevenLabs Conversational AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/elevenlabs"
+    },
+    {
+      "id": "/tools/flowise",
+      "type": "reviews",
+      "label": "Flowise Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/flowise"
+    },
+    {
+      "id": "/tools/intercom-ai",
+      "type": "reviews",
+      "label": "Intercom AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/intercom-ai"
+    },
+    {
+      "id": "/tools/langflow",
+      "type": "reviews",
+      "label": "LangFlow Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/langflow"
+    },
+    {
+      "id": "/tools/langgraph",
+      "type": "reviews",
+      "label": "LangGraph Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/langgraph"
+    },
+    {
+      "id": "/tools/llamaindex",
+      "type": "reviews",
+      "label": "LlamaIndex Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/llamaindex"
+    },
+    {
+      "id": "/tools/n8n",
+      "type": "reviews",
+      "label": "n8n Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/n8n"
+    },
+    {
+      "id": "/tools/open-interpreter",
+      "type": "reviews",
+      "label": "Open Interpreter Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/open-interpreter"
+    },
+    {
+      "id": "/tools/openai-agents-sdk",
+      "type": "reviews",
+      "label": "OpenAI Agents SDK Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/openai-agents-sdk"
+    },
+    {
+      "id": "/tools/retell-ai",
+      "type": "reviews",
+      "label": "Retell AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/retell-ai"
+    },
+    {
+      "id": "/tools/semantic-kernel",
+      "type": "reviews",
+      "label": "Semantic Kernel Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/semantic-kernel"
+    },
+    {
+      "id": "/tools/superagent",
+      "type": "reviews",
+      "label": "Superagent Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/superagent"
+    },
+    {
+      "id": "/tools/vapi-ai",
+      "type": "reviews",
+      "label": "Vapi AI Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/vapi-ai"
+    },
+    {
+      "id": "/tools/yellow-ai",
+      "type": "reviews",
+      "label": "Yellow.ai Review – India’s Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/yellow-ai"
     },
     {
       "id": "/top-500-ai-agents-database",
@@ -2538,12 +2676,6 @@
       "type": "reddit-community-intent",
       "label": "Vapi Reddit Review: Voice AI Developer Feedback",
       "url": "https://bestaiagent.in/vapi-reddit-review"
-    },
-    {
-      "id": "/vapi-review",
-      "type": "reviews",
-      "label": "Vapi AI Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/vapi-review"
     },
     {
       "id": "/vapi-vs-bland",
@@ -2690,6 +2822,12 @@
       "url": "https://bestaiagent.in/windsurf-alternatives"
     },
     {
+      "id": "/windsurf-entity",
+      "type": "entity-pages",
+      "label": "Windsurf: Entity Definition & Structured Data",
+      "url": "https://bestaiagent.in/windsurf-entity"
+    },
+    {
       "id": "/windsurf-pricing",
       "type": "pricing",
       "label": "Windsurf Pricing 2026 – Complete Guide for Indian Developers",
@@ -2720,16 +2858,16 @@
       "url": "https://bestaiagent.in/yellow-ai-entity"
     },
     {
+      "id": "/yellow-ai-for-enterprise-support",
+      "type": "business-ai-agents",
+      "label": "Yellow.ai for Enterprise Support: WhatsApp, Voice & DPDP",
+      "url": "https://bestaiagent.in/yellow-ai-for-enterprise-support"
+    },
+    {
       "id": "/yellow-ai-pricing",
       "type": "pricing",
       "label": "Yellow.ai Pricing 2026 – Complete Guide for Indian Enterprises",
       "url": "https://bestaiagent.in/yellow-ai-pricing"
-    },
-    {
-      "id": "/yellow-ai-review",
-      "type": "reviews",
-      "label": "Yellow.ai Review – India’s Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/yellow-ai-review"
     },
     {
       "id": "/yellow-ai-vs-intercom",
@@ -2926,16 +3064,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/about",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/about-editorial-team",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/affiliate-disclosure",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -2952,11 +3080,6 @@
     },
     {
       "from": "/agentbench-guide",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/agentops-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3226,17 +3349,7 @@
       "relation": "parentHub"
     },
     {
-      "from": "/apollo-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/arshdeep-singh",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/artisan-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3261,12 +3374,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/autogen-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/autogen-entity",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/autogen-review",
+      "from": "/autogen-pricing",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3366,6 +3484,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-autogen",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-backend-development",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3387,6 +3510,11 @@
     },
     {
       "from": "/best-ai-agent-for-code-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-codex",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3516,6 +3644,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-langgraph",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-law-firms",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3567,6 +3700,11 @@
     },
     {
       "from": "/best-ai-agent-for-marketing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-n8n-workflows",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3646,6 +3784,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-replit",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-research",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3712,6 +3855,11 @@
     },
     {
       "from": "/best-ai-agent-for-whatsapp-support",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-windsurf",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3881,11 +4029,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/bland-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/brave-search",
       "to": "/mcp-hub",
       "relation": "parentHub"
@@ -3976,12 +4119,22 @@
       "relation": "parentHub"
     },
     {
-      "from": "/clay-review",
+      "from": "/clay-vs-apollo",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/clay-vs-apollo",
+      "from": "/codex-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/codex-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/codex-pricing",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4036,17 +4189,7 @@
       "relation": "parentHub"
     },
     {
-      "from": "/crewai-entity",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/crewai-pricing",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/crewai-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4146,11 +4289,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/dify-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/dify-vs-langflow",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4182,11 +4320,6 @@
     },
     {
       "from": "/editorial-policy",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/elevenlabs-conversational-ai-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4242,11 +4375,6 @@
     },
     {
       "from": "/flowise-reddit-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/flowise-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4371,7 +4499,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/how-to-build-ai-agent-with-autogen",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/how-to-build-ai-agent-with-crewai",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-build-ai-agent-with-dify",
       "to": "/tutorials-hub",
       "relation": "parentHub"
     },
@@ -4426,6 +4564,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/how-to-use-codex",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/how-to-use-cursor-ai",
       "to": "/tutorials-hub",
       "relation": "parentHub"
@@ -4436,12 +4579,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/how-to-use-intercom",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-n8n",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-replit-agent",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
       "from": "/how-to-use-retell",
       "to": "/tutorials-hub",
       "relation": "parentHub"
     },
     {
       "from": "/how-to-use-vapi",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-windsurf",
+      "to": "/tutorials-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/how-to-use-yellow-ai",
       "to": "/tutorials-hub",
       "relation": "parentHub"
     },
@@ -4471,11 +4639,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/index",
-      "to": "/tutorials-hub",
-      "relation": "parentHub"
-    },
-    {
       "from": "/india",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4501,13 +4664,13 @@
       "relation": "parentHub"
     },
     {
-      "from": "/intercom-pricing",
-      "to": "/pricing-hub",
+      "from": "/intercom-for-ai-support",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/intercom-review",
-      "to": "/best-ai-agent",
+      "from": "/intercom-pricing",
+      "to": "/pricing-hub",
       "relation": "parentHub"
     },
     {
@@ -4541,8 +4704,8 @@
       "relation": "parentHub"
     },
     {
-      "from": "/langflow-review",
-      "to": "/best-ai-agent",
+      "from": "/langgraph-alternatives",
+      "to": "/alternatives-hub",
       "relation": "parentHub"
     },
     {
@@ -4551,7 +4714,7 @@
       "relation": "parentHub"
     },
     {
-      "from": "/langgraph-review",
+      "from": "/langgraph-pricing",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4568,11 +4731,6 @@
     {
       "from": "/linkedin-server",
       "to": "/mcp-hub",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/llamaindex-review",
-      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4716,13 +4874,13 @@
       "relation": "parentHub"
     },
     {
-      "from": "/n8n-pricing",
-      "to": "/pricing-hub",
+      "from": "/n8n-entity",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/n8n-review",
-      "to": "/best-ai-agent",
+      "from": "/n8n-pricing",
+      "to": "/pricing-hub",
       "relation": "parentHub"
     },
     {
@@ -4741,11 +4899,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/open-interpreter-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/open-source-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4757,11 +4910,6 @@
     },
     {
       "from": "/openai",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/openai-agents-sdk-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4841,6 +4989,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/replit-alternatives",
+      "to": "/alternatives-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/replit-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/replit-pricing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/replit-vs-cursor",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4871,11 +5034,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/retell-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/retell-vs-bland",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4888,11 +5046,6 @@
     {
       "from": "/salesforce-server",
       "to": "/mcp-hub",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/semantic-kernel-review",
-      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4931,11 +5084,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/superagent-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/swe-bench-guide",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4961,12 +5109,117 @@
       "relation": "parentHub"
     },
     {
+      "from": "/tools/agentops",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/apollo",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/artisan",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/bland-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/clay",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/tools/cursor-ai",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/tools/index",
+      "from": "/tools/dify",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/elevenlabs",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/langflow",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/llamaindex",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/open-interpreter",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/openai-agents-sdk",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/retell-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/semantic-kernel",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/superagent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tools/yellow-ai",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5027,11 +5280,6 @@
     },
     {
       "from": "/vapi-reddit-review",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/vapi-review",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5156,6 +5404,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/windsurf-entity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/windsurf-pricing",
       "to": "/pricing-hub",
       "relation": "parentHub"
@@ -5181,13 +5434,13 @@
       "relation": "parentHub"
     },
     {
-      "from": "/yellow-ai-pricing",
-      "to": "/pricing-hub",
+      "from": "/yellow-ai-for-enterprise-support",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
-      "from": "/yellow-ai-review",
-      "to": "/best-ai-agent",
+      "from": "/yellow-ai-pricing",
+      "to": "/pricing-hub",
       "relation": "parentHub"
     },
     {
@@ -5199,51 +5452,6 @@
       "from": "/youtube-server",
       "to": "/mcp-hub",
       "relation": "parentHub"
-    },
-    {
-      "from": "/agentops-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/apollo-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/apollo-review",
-      "to": "/clay-vs-apollo",
-      "relation": "competitor"
-    },
-    {
-      "from": "/artisan-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/autogen-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/autogen-review",
-      "to": "/autogen-vs-crewai",
-      "relation": "competitor"
-    },
-    {
-      "from": "/bland-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/bland-review",
-      "to": "/retell-vs-bland",
-      "relation": "competitor"
-    },
-    {
-      "from": "/bland-review",
-      "to": "/vapi-vs-bland",
-      "relation": "competitor"
     },
     {
       "from": "/claude-code",
@@ -5276,41 +5484,6 @@
       "relation": "tutorial"
     },
     {
-      "from": "/clay-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/clay-review",
-      "to": "/clay-vs-apollo",
-      "relation": "competitor"
-    },
-    {
-      "from": "/crewai-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/crewai-review",
-      "to": "/autogen-vs-crewai",
-      "relation": "competitor"
-    },
-    {
-      "from": "/crewai-review",
-      "to": "/langgraph-vs-crewai",
-      "relation": "competitor"
-    },
-    {
-      "from": "/crewai-review",
-      "to": "/crewai-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/crewai-review",
-      "to": "/how-to-build-ai-agent-with-crewai",
-      "relation": "tutorial"
-    },
-    {
       "from": "/cursor-ai",
       "to": "Tool Reviews",
       "relation": "category"
@@ -5373,66 +5546,6 @@
     {
       "from": "/cursor-ai",
       "to": "/how-to-use-cursor-ai",
-      "relation": "tutorial"
-    },
-    {
-      "from": "/dify-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/dify-review",
-      "to": "/dify-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/dify-review",
-      "to": "/dify-vs-langflow",
-      "relation": "competitor"
-    },
-    {
-      "from": "/dify-review",
-      "to": "/flowise-vs-dify",
-      "relation": "competitor"
-    },
-    {
-      "from": "/dify-review",
-      "to": "/dify-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/elevenlabs-conversational-ai-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "/flowise-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "/flowise-vs-dify",
-      "relation": "competitor"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "/flowise-vs-n8n",
-      "relation": "competitor"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "/flowise-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/flowise-review",
-      "to": "/how-to-build-ai-agent-with-flowise",
       "relation": "tutorial"
     },
     {
@@ -5461,144 +5574,104 @@
       "relation": "tutorial"
     },
     {
-      "from": "/intercom-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/intercom-review",
-      "to": "/intercom-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/intercom-review",
-      "to": "/intercom-vs-zendesk-ai",
-      "relation": "competitor"
-    },
-    {
-      "from": "/intercom-review",
-      "to": "/yellow-ai-vs-intercom",
-      "relation": "competitor"
-    },
-    {
-      "from": "/intercom-review",
-      "to": "/intercom-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/langflow-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/langflow-review",
-      "to": "/dify-vs-langflow",
-      "relation": "competitor"
-    },
-    {
-      "from": "/langgraph-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/langgraph-review",
-      "to": "/langgraph-vs-crewai",
-      "relation": "competitor"
-    },
-    {
-      "from": "/langgraph-review",
-      "to": "/openai-agents-sdk-vs-langgraph",
-      "relation": "competitor"
-    },
-    {
-      "from": "/langgraph-review",
-      "to": "/how-to-setup-langgraph",
-      "relation": "tutorial"
-    },
-    {
-      "from": "/llamaindex-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/llamaindex-review",
-      "to": "/llamaindex-vs-langchain",
-      "relation": "competitor"
-    },
-    {
-      "from": "/n8n-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/n8n-review",
-      "to": "/n8n-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/n8n-review",
-      "to": "/flowise-vs-n8n",
-      "relation": "competitor"
-    },
-    {
-      "from": "/n8n-review",
-      "to": "/n8n-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/open-interpreter-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/openai-agents-sdk-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/openai-agents-sdk-review",
-      "to": "/openai-agents-sdk-vs-langgraph",
-      "relation": "competitor"
-    },
-    {
       "from": "/replit-agent",
       "to": "Tool Reviews",
       "relation": "category"
     },
     {
-      "from": "/retell-review",
+      "from": "/replit-agent",
+      "to": "/how-to-use-replit-agent",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/agentops",
       "to": "Tool Reviews",
       "relation": "category"
     },
     {
-      "from": "/retell-review",
+      "from": "/tools/apollo",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/apollo",
+      "to": "/clay-vs-apollo",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/artisan",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "/autogen-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "/autogen-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "/how-to-build-ai-agent-with-autogen",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/bland-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/bland-ai",
       "to": "/retell-vs-bland",
       "relation": "competitor"
     },
     {
-      "from": "/retell-review",
-      "to": "/vapi-vs-retell",
+      "from": "/tools/bland-ai",
+      "to": "/vapi-vs-bland",
       "relation": "competitor"
     },
     {
-      "from": "/retell-review",
-      "to": "/retell-alternatives",
+      "from": "/tools/clay",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/clay",
+      "to": "/clay-vs-apollo",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "/autogen-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "/langgraph-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "/crewai-alternatives",
       "relation": "alternative"
     },
     {
-      "from": "/retell-review",
-      "to": "/how-to-use-retell",
+      "from": "/tools/crewai",
+      "to": "/how-to-build-ai-agent-with-crewai",
       "relation": "tutorial"
-    },
-    {
-      "from": "/semantic-kernel-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/superagent-review",
-      "to": "Tool Reviews",
-      "relation": "category"
     },
     {
       "from": "/tools/cursor-ai",
@@ -5666,53 +5739,278 @@
       "relation": "tutorial"
     },
     {
-      "from": "/tools/index",
-      "to": "Tool Profiles",
-      "relation": "category"
-    },
-    {
-      "from": "/tools/index",
-      "to": "/llamaindex-vs-langchain",
-      "relation": "competitor"
-    },
-    {
-      "from": "/tools/index",
-      "to": "/index",
-      "relation": "tutorial"
-    },
-    {
-      "from": "/vapi-review",
+      "from": "/tools/dify",
       "to": "Tool Reviews",
       "relation": "category"
     },
     {
-      "from": "/vapi-review",
-      "to": "/vapi-pricing",
+      "from": "/tools/dify",
+      "to": "/dify-pricing",
       "relation": "pricing"
     },
     {
-      "from": "/vapi-review",
-      "to": "/vapi-pricing-calculator",
-      "relation": "pricing"
-    },
-    {
-      "from": "/vapi-review",
-      "to": "/vapi-vs-bland",
+      "from": "/tools/dify",
+      "to": "/dify-vs-langflow",
       "relation": "competitor"
     },
     {
-      "from": "/vapi-review",
+      "from": "/tools/dify",
+      "to": "/flowise-vs-dify",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/dify",
+      "to": "/dify-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/dify",
+      "to": "/how-to-build-ai-agent-with-dify",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/elevenlabs",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/flowise-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/flowise-vs-dify",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/flowise-vs-n8n",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/flowise-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/how-to-build-ai-agent-with-flowise",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/intercom-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/intercom-vs-zendesk-ai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/yellow-ai-vs-intercom",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/intercom-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/intercom-ai",
+      "to": "/how-to-use-intercom",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/langflow",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/langflow",
+      "to": "/dify-vs-langflow",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/langgraph-vs-crewai",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/openai-agents-sdk-vs-langgraph",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/langgraph-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/how-to-setup-langgraph",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/llamaindex",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/llamaindex",
+      "to": "/llamaindex-vs-langchain",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/n8n-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/flowise-vs-n8n",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/n8n-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/how-to-use-n8n",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/open-interpreter",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/openai-agents-sdk",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/openai-agents-sdk",
+      "to": "/openai-agents-sdk-vs-langgraph",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/retell-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/retell-ai",
+      "to": "/retell-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/retell-ai",
       "to": "/vapi-vs-retell",
       "relation": "competitor"
     },
     {
-      "from": "/vapi-review",
+      "from": "/tools/retell-ai",
+      "to": "/retell-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/retell-ai",
+      "to": "/how-to-use-retell",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/semantic-kernel",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/superagent",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/vapi-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/vapi-pricing-calculator",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/vapi-vs-bland",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/vapi-vs-retell",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/vapi-ai",
       "to": "/vapi-alternatives",
       "relation": "alternative"
     },
     {
-      "from": "/vapi-review",
+      "from": "/tools/vapi-ai",
       "to": "/how-to-use-vapi",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "/yellow-ai-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "/yellow-ai-vs-intercom",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "/yellow-ai-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "/how-to-use-yellow-ai",
       "relation": "tutorial"
     },
     {
@@ -5741,33 +6039,13 @@
       "relation": "alternative"
     },
     {
-      "from": "/yellow-ai-review",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/yellow-ai-review",
-      "to": "/yellow-ai-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/yellow-ai-review",
-      "to": "/yellow-ai-vs-intercom",
-      "relation": "competitor"
-    },
-    {
-      "from": "/yellow-ai-review",
-      "to": "/yellow-ai-alternatives",
-      "relation": "alternative"
+      "from": "/windsurf",
+      "to": "/how-to-use-windsurf",
+      "relation": "tutorial"
     },
     {
       "from": "entity:AI Agent",
       "to": "/",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/about",
       "relation": "mentionedOn"
     },
     {
@@ -5783,11 +6061,6 @@
     {
       "from": "entity:AI Agent",
       "to": "/agentbench-guide",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent",
-      "to": "/agentops-review",
       "relation": "mentionedOn"
     },
     {
@@ -5861,8 +6134,23 @@
       "relation": "mentionedOn"
     },
     {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-for-whatsapp-business",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent",
+      "to": "/ai-agent-github-projects",
+      "relation": "mentionedOn"
+    },
+    {
       "from": "entity:AI Coding Agent",
       "to": "/ai-coding-agents",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-agent-for-codex",
       "relation": "mentionedOn"
     },
     {
@@ -5873,6 +6161,16 @@
     {
       "from": "entity:AI Coding Agent",
       "to": "/best-ai-agent-for-ides",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-agent-for-replit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/best-ai-agent-for-windsurf",
       "relation": "mentionedOn"
     },
     {
@@ -5982,17 +6280,17 @@
     },
     {
       "from": "entity:AI Agent Builder",
-      "to": "/flowise-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AI Agent Builder",
       "to": "/flowise-vs-dify",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:AI Agent Builder",
       "to": "/flowise-vs-n8n",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Agent Builder",
+      "to": "/tools/flowise",
       "relation": "mentionedOn"
     },
     {
@@ -6112,7 +6410,7 @@
     },
     {
       "from": "entity:LangGraph",
-      "to": "/autogen-review",
+      "to": "/autogen-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -6123,6 +6421,11 @@
     {
       "from": "entity:LangGraph",
       "to": "/best-ai-agent-builder-reddit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
+      "to": "/best-ai-agent-for-langgraph",
       "relation": "mentionedOn"
     },
     {
@@ -6157,16 +6460,6 @@
     },
     {
       "from": "entity:LangGraph",
-      "to": "/crewai-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:LangGraph",
-      "to": "/dify-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:LangGraph",
       "to": "/frameworks",
       "relation": "mentionedOn"
     },
@@ -6187,12 +6480,17 @@
     },
     {
       "from": "entity:LangGraph",
+      "to": "/langgraph-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:LangGraph",
       "to": "/langgraph-entity",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:LangGraph",
-      "to": "/langgraph-review",
+      "to": "/langgraph-pricing",
       "relation": "mentionedOn"
     },
     {
@@ -6207,7 +6505,7 @@
     },
     {
       "from": "entity:CrewAI",
-      "to": "/autogen-review",
+      "to": "/autogen-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -6252,17 +6550,7 @@
     },
     {
       "from": "entity:CrewAI",
-      "to": "/crewai-entity",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:CrewAI",
       "to": "/crewai-pricing",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:CrewAI",
-      "to": "/crewai-review",
       "relation": "mentionedOn"
     },
     {
@@ -6292,7 +6580,17 @@
     },
     {
       "from": "entity:CrewAI",
-      "to": "/langgraph-review",
+      "to": "/langgraph-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/langgraph-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:CrewAI",
+      "to": "/open-source-agents",
       "relation": "mentionedOn"
     },
     {
@@ -6317,6 +6615,11 @@
     },
     {
       "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-codex",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
       "to": "/best-ai-agent-for-coding",
       "relation": "mentionedOn"
     },
@@ -6352,7 +6655,17 @@
     },
     {
       "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-replit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
       "to": "/best-ai-agent-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-windsurf",
       "relation": "mentionedOn"
     },
     {
@@ -6377,22 +6690,7 @@
     },
     {
       "from": "entity:Cursor",
-      "to": "/coding-agents",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/coding-agents-directory",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/cursor-ai",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/cursor-ai-entity",
+      "to": "/codex-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -6403,6 +6701,11 @@
     {
       "from": "entity:GitHub Copilot",
       "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-codex",
       "relation": "mentionedOn"
     },
     {
@@ -6442,7 +6745,17 @@
     },
     {
       "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-replit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
       "to": "/best-ai-agent-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-windsurf",
       "relation": "mentionedOn"
     },
     {
@@ -6453,6 +6766,11 @@
     {
       "from": "entity:GitHub Copilot",
       "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/codex-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -6473,26 +6791,6 @@
     {
       "from": "entity:GitHub Copilot",
       "to": "/cursor-vs-github-copilot",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/cursor-windsurf-copilot",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/github-copilot",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/github-copilot-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/github-copilot-entity",
       "relation": "mentionedOn"
     },
     {
@@ -6562,6 +6860,11 @@
     },
     {
       "from": "entity:Claude Code",
+      "to": "/codex-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
       "to": "/coding-agents",
       "relation": "mentionedOn"
     },
@@ -6588,11 +6891,6 @@
     {
       "from": "entity:Claude Code",
       "to": "/github-copilot-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude Code",
-      "to": "/how-to-set-up-claude-code",
       "relation": "mentionedOn"
     },
     {
@@ -6637,16 +6935,6 @@
     },
     {
       "from": "entity:Vapi",
-      "to": "/bland-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Vapi",
-      "to": "/elevenlabs-conversational-ai-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Vapi",
       "to": "/how-to-use-vapi",
       "relation": "mentionedOn"
     },
@@ -6662,7 +6950,22 @@
     },
     {
       "from": "entity:Vapi",
-      "to": "/retell-review",
+      "to": "/tools/bland-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/tools/elevenlabs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/tools/retell-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Vapi",
+      "to": "/tools/vapi-ai",
       "relation": "mentionedOn"
     },
     {
@@ -6688,11 +6991,6 @@
     {
       "from": "entity:Vapi",
       "to": "/vapi-for-appointment-booking",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Vapi",
-      "to": "/vapi-pricing",
       "relation": "mentionedOn"
     },
     {
@@ -6723,16 +7021,6 @@
     {
       "from": "entity:Retell",
       "to": "/best-ai-voice-agent-platform",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Retell",
-      "to": "/bland-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Retell",
-      "to": "/elevenlabs-conversational-ai-review",
       "relation": "mentionedOn"
     },
     {
@@ -6772,12 +7060,27 @@
     },
     {
       "from": "entity:Retell",
-      "to": "/retell-review",
+      "to": "/retell-vs-bland",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Retell",
-      "to": "/retell-vs-bland",
+      "to": "/tools/bland-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/tools/elevenlabs",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/tools/retell-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Retell",
+      "to": "/tools/vapi-ai",
       "relation": "mentionedOn"
     },
     {
@@ -6788,11 +7091,6 @@
     {
       "from": "entity:Retell",
       "to": "/vapi-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Retell",
-      "to": "/vapi-review",
       "relation": "mentionedOn"
     },
     {
@@ -6872,11 +7170,6 @@
     },
     {
       "from": "entity:Flowise",
-      "to": "/dify-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Flowise",
       "to": "/flowise-alternatives",
       "relation": "mentionedOn"
     },
@@ -6896,6 +7189,11 @@
       "relation": "mentionedOn"
     },
     {
+      "from": "entity:Flowise",
+      "to": "/flowise-vs-dify",
+      "relation": "mentionedOn"
+    },
+    {
       "from": "entity:Dify",
       "to": "/agent-builders",
       "relation": "mentionedOn"
@@ -6908,6 +7206,11 @@
     {
       "from": "entity:Dify",
       "to": "/alternatives-hub",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Dify",
+      "to": "/autogen-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -6972,11 +7275,6 @@
     },
     {
       "from": "entity:Dify",
-      "to": "/dify-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Dify",
       "to": "/dify-vs-langflow",
       "relation": "mentionedOn"
     },
@@ -6992,7 +7290,7 @@
     },
     {
       "from": "entity:Dify",
-      "to": "/flowise-review",
+      "to": "/flowise-vs-dify",
       "relation": "mentionedOn"
     },
     {
@@ -7002,17 +7300,27 @@
     },
     {
       "from": "entity:AutoGen",
+      "to": "/autogen-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
       "to": "/autogen-entity",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:AutoGen",
-      "to": "/autogen-review",
+      "to": "/autogen-pricing",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:AutoGen",
       "to": "/autogen-vs-crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/best-ai-agent-for-autogen",
       "relation": "mentionedOn"
     },
     {
@@ -7037,17 +7345,17 @@
     },
     {
       "from": "entity:AutoGen",
-      "to": "/crewai-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:AutoGen",
       "to": "/frameworks",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:AutoGen",
-      "to": "/langgraph-review",
+      "to": "/how-to-build-ai-agent-with-autogen",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/langgraph-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -7058,6 +7366,21 @@
     {
       "from": "entity:AutoGen",
       "to": "/open-source-agents-directory",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/tools/autogen",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/tools/crewai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AutoGen",
+      "to": "/tools/langgraph",
       "relation": "mentionedOn"
     },
     {
@@ -7132,6 +7455,11 @@
     },
     {
       "from": "entity:Yellow.ai",
+      "to": "/how-to-use-yellow-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
       "to": "/intercom-alternatives",
       "relation": "mentionedOn"
     },
@@ -7142,22 +7470,17 @@
     },
     {
       "from": "entity:Yellow.ai",
+      "to": "/tools/yellow-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Yellow.ai",
       "to": "/vapi-alternatives",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Yellow.ai",
       "to": "/yellow-ai-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Yellow.ai",
-      "to": "/yellow-ai-entity",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Yellow.ai",
-      "to": "/yellow-ai-pricing",
       "relation": "mentionedOn"
     },
     {
@@ -7197,6 +7520,11 @@
     },
     {
       "from": "entity:Intercom",
+      "to": "/how-to-use-intercom",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
       "to": "/intercom-alternatives",
       "relation": "mentionedOn"
     },
@@ -7207,17 +7535,22 @@
     },
     {
       "from": "entity:Intercom",
+      "to": "/intercom-for-ai-support",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
       "to": "/intercom-pricing",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Intercom",
-      "to": "/intercom-review",
+      "to": "/intercom-vs-zendesk-ai",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Intercom",
-      "to": "/intercom-vs-zendesk-ai",
+      "to": "/tools/intercom-ai",
       "relation": "mentionedOn"
     },
     {
@@ -7272,6 +7605,11 @@
     },
     {
       "from": "entity:n8n",
+      "to": "/best-ai-agent-for-n8n-workflows",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:n8n",
       "to": "/best-ai-agent-workflow-builder",
       "relation": "mentionedOn"
     },
@@ -7297,11 +7635,6 @@
     },
     {
       "from": "entity:n8n",
-      "to": "/dify-review",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:n8n",
       "to": "/flowise-alternatives",
       "relation": "mentionedOn"
     },
@@ -7312,12 +7645,12 @@
     },
     {
       "from": "entity:n8n",
-      "to": "/flowise-review",
+      "to": "/flowise-vs-n8n",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:n8n",
-      "to": "/flowise-vs-n8n",
+      "to": "/how-to-use-n8n",
       "relation": "mentionedOn"
     },
     {
@@ -7327,12 +7660,12 @@
     },
     {
       "from": "entity:n8n",
-      "to": "/n8n-pricing",
+      "to": "/n8n-entity",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:n8n",
-      "to": "/n8n-review",
+      "to": "/n8n-pricing",
       "relation": "mentionedOn"
     },
     {
@@ -7412,7 +7745,7 @@
     },
     {
       "from": "entity:ElevenLabs",
-      "to": "/elevenlabs-conversational-ai-review",
+      "to": "/tools/elevenlabs",
       "relation": "mentionedOn"
     },
     {
@@ -7457,12 +7790,27 @@
     },
     {
       "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-replit",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-windsurf",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
       "to": "/best-ai-coding-agent-reddit",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Windsurf",
       "to": "/claude-code-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/codex-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -7492,6 +7840,16 @@
     },
     {
       "from": "entity:Windsurf",
+      "to": "/how-to-use-windsurf",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/replit-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
       "to": "/windsurf",
       "relation": "mentionedOn"
     },
@@ -7502,12 +7860,7 @@
     },
     {
       "from": "entity:Windsurf",
-      "to": "/windsurf-pricing",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Windsurf",
-      "to": "/windsurf-vs-cursor",
+      "to": "/windsurf-entity",
       "relation": "mentionedOn"
     },
     {
@@ -7546,6 +7899,31 @@
       "relation": "mentionedOn"
     },
     {
+      "from": "entity:OpenAI Codex",
+      "to": "/best-ai-agent-for-codex",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:OpenAI Codex",
+      "to": "/codex-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:OpenAI Codex",
+      "to": "/codex-entity",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:OpenAI Codex",
+      "to": "/codex-pricing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:OpenAI Codex",
+      "to": "/how-to-use-codex",
+      "relation": "mentionedOn"
+    },
+    {
       "from": "entity:Qodo",
       "to": "/best-ai-agent-for-code-review",
       "relation": "mentionedOn"
@@ -7557,12 +7935,12 @@
     },
     {
       "from": "entity:LangChain",
-      "to": "/llamaindex-review",
+      "to": "/llamaindex-vs-langchain",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:LangChain",
-      "to": "/llamaindex-vs-langchain",
+      "to": "/tools/llamaindex",
       "relation": "mentionedOn"
     },
     {
@@ -7577,12 +7955,12 @@
     },
     {
       "from": "entity:LlamaIndex",
-      "to": "/llamaindex-review",
+      "to": "/llamaindex-vs-langchain",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:LlamaIndex",
-      "to": "/llamaindex-vs-langchain",
+      "to": "/tools/llamaindex",
       "relation": "mentionedOn"
     },
     {
@@ -7657,6 +8035,11 @@
     },
     {
       "from": "entity:Claude",
+      "to": "/codex-alternatives",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
       "to": "/coding-agents",
       "relation": "mentionedOn"
     },
@@ -7678,11 +8061,6 @@
     {
       "from": "entity:Claude",
       "to": "/cursor-vs-claude-code",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude",
-      "to": "/github-copilot-alternatives",
       "relation": "mentionedOn"
     }
   ]

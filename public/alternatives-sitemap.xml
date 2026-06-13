@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bestaiagent.in/autogen-alternatives</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.71</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/claude-code-alternatives</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/codex-alternatives</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/crewai-alternatives</loc>
@@ -43,10 +55,22 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/langgraph-alternatives</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.73</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/n8n-alternatives</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/replit-alternatives</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/retell-alternatives</loc>

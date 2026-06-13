@@ -1,57 +1,5 @@
 [
   {
-    "tool": "AgentOps",
-    "review": "/agentops-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "Apollo",
-    "review": "/apollo-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/clay-vs-apollo"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "Artisan",
-    "review": "/artisan-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "AutoGen",
-    "review": "/autogen-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/autogen-vs-crewai"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "Bland AI",
-    "review": "/bland-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/retell-vs-bland",
-      "/vapi-vs-bland"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
     "tool": "Claude Code",
     "review": "/claude-code",
     "category": "Tool Reviews",
@@ -67,33 +15,6 @@
     ],
     "tutorials": [
       "/how-to-set-up-claude-code"
-    ]
-  },
-  {
-    "tool": "Clay",
-    "review": "/clay-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/clay-vs-apollo"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "CrewAI",
-    "review": "/crewai-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/autogen-vs-crewai",
-      "/langgraph-vs-crewai"
-    ],
-    "alternatives": [
-      "/crewai-alternatives"
-    ],
-    "tutorials": [
-      "/how-to-build-ai-agent-with-crewai"
     ]
   },
   {
@@ -122,49 +43,6 @@
     ]
   },
   {
-    "tool": "Dify",
-    "review": "/dify-review",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/dify-pricing"
-    ],
-    "competitors": [
-      "/dify-vs-langflow",
-      "/flowise-vs-dify"
-    ],
-    "alternatives": [
-      "/dify-alternatives"
-    ],
-    "tutorials": []
-  },
-  {
-    "tool": "ElevenLabs Conversational AI",
-    "review": "/elevenlabs-conversational-ai-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "Flowise",
-    "review": "/flowise-review",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/flowise-pricing"
-    ],
-    "competitors": [
-      "/flowise-vs-dify",
-      "/flowise-vs-n8n"
-    ],
-    "alternatives": [
-      "/flowise-alternatives"
-    ],
-    "tutorials": [
-      "/how-to-build-ai-agent-with-flowise"
-    ]
-  },
-  {
     "tool": "GitHub Copilot",
     "review": "/github-copilot",
     "category": "Tool Reviews",
@@ -182,134 +60,98 @@
     ]
   },
   {
-    "tool": "Intercom AI",
-    "review": "/intercom-review",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/intercom-pricing"
-    ],
-    "competitors": [
-      "/intercom-vs-zendesk-ai",
-      "/yellow-ai-vs-intercom"
-    ],
-    "alternatives": [
-      "/intercom-alternatives"
-    ],
-    "tutorials": []
-  },
-  {
-    "tool": "LangFlow",
-    "review": "/langflow-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/dify-vs-langflow"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "LangGraph",
-    "review": "/langgraph-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/langgraph-vs-crewai",
-      "/openai-agents-sdk-vs-langgraph"
-    ],
-    "alternatives": [],
-    "tutorials": [
-      "/how-to-setup-langgraph"
-    ]
-  },
-  {
-    "tool": "LlamaIndex",
-    "review": "/llamaindex-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/llamaindex-vs-langchain"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "n8n",
-    "review": "/n8n-review",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/n8n-pricing"
-    ],
-    "competitors": [
-      "/flowise-vs-n8n"
-    ],
-    "alternatives": [
-      "/n8n-alternatives"
-    ],
-    "tutorials": []
-  },
-  {
-    "tool": "Open Interpreter",
-    "review": "/open-interpreter-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "OpenAI Agents SDK",
-    "review": "/openai-agents-sdk-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [
-      "/openai-agents-sdk-vs-langgraph"
-    ],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
     "tool": "Replit Agent",
     "review": "/replit-agent",
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [],
     "alternatives": [],
+    "tutorials": [
+      "/how-to-use-replit-agent"
+    ]
+  },
+  {
+    "tool": "AgentOps",
+    "review": "/tools/agentops",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
     "tutorials": []
   },
   {
-    "tool": "Retell AI",
-    "review": "/retell-review",
+    "tool": "Apollo",
+    "review": "/tools/apollo",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/clay-vs-apollo"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Artisan",
+    "review": "/tools/artisan",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "AutoGen",
+    "review": "/tools/autogen",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/autogen-vs-crewai"
+    ],
+    "alternatives": [
+      "/autogen-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-build-ai-agent-with-autogen"
+    ]
+  },
+  {
+    "tool": "Bland AI",
+    "review": "/tools/bland-ai",
     "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
       "/retell-vs-bland",
-      "/vapi-vs-retell"
+      "/vapi-vs-bland"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Clay",
+    "review": "/tools/clay",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/clay-vs-apollo"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "CrewAI",
+    "review": "/tools/crewai",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/autogen-vs-crewai",
+      "/langgraph-vs-crewai"
     ],
     "alternatives": [
-      "/retell-alternatives"
+      "/crewai-alternatives"
     ],
     "tutorials": [
-      "/how-to-use-retell"
+      "/how-to-build-ai-agent-with-crewai"
     ]
-  },
-  {
-    "tool": "Semantic Kernel",
-    "review": "/semantic-kernel-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
-  },
-  {
-    "tool": "Superagent",
-    "review": "/superagent-review",
-    "category": "Tool Reviews",
-    "pricing": [],
-    "competitors": [],
-    "alternatives": [],
-    "tutorials": []
   },
   {
     "tool": "Cursor AI: AI Coding Agent Tool Profile",
@@ -337,21 +179,180 @@
     ]
   },
   {
-    "tool": "AI Agent Tools",
-    "review": "/tools/index",
-    "category": "Tool Profiles",
+    "tool": "Dify",
+    "review": "/tools/dify",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/dify-pricing"
+    ],
+    "competitors": [
+      "/dify-vs-langflow",
+      "/flowise-vs-dify"
+    ],
+    "alternatives": [
+      "/dify-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-build-ai-agent-with-dify"
+    ]
+  },
+  {
+    "tool": "ElevenLabs Conversational AI",
+    "review": "/tools/elevenlabs",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Flowise",
+    "review": "/tools/flowise",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/flowise-pricing"
+    ],
+    "competitors": [
+      "/flowise-vs-dify",
+      "/flowise-vs-n8n"
+    ],
+    "alternatives": [
+      "/flowise-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-build-ai-agent-with-flowise"
+    ]
+  },
+  {
+    "tool": "Intercom AI",
+    "review": "/tools/intercom-ai",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/intercom-pricing"
+    ],
+    "competitors": [
+      "/intercom-vs-zendesk-ai",
+      "/yellow-ai-vs-intercom"
+    ],
+    "alternatives": [
+      "/intercom-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-intercom"
+    ]
+  },
+  {
+    "tool": "LangFlow",
+    "review": "/tools/langflow",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/dify-vs-langflow"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "LangGraph",
+    "review": "/tools/langgraph",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/langgraph-vs-crewai",
+      "/openai-agents-sdk-vs-langgraph"
+    ],
+    "alternatives": [
+      "/langgraph-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-setup-langgraph"
+    ]
+  },
+  {
+    "tool": "LlamaIndex",
+    "review": "/tools/llamaindex",
+    "category": "Tool Reviews",
     "pricing": [],
     "competitors": [
       "/llamaindex-vs-langchain"
     ],
     "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "n8n",
+    "review": "/tools/n8n",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/n8n-pricing"
+    ],
+    "competitors": [
+      "/flowise-vs-n8n"
+    ],
+    "alternatives": [
+      "/n8n-alternatives"
+    ],
     "tutorials": [
-      "/index"
+      "/how-to-use-n8n"
     ]
   },
   {
+    "tool": "Open Interpreter",
+    "review": "/tools/open-interpreter",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "OpenAI Agents SDK",
+    "review": "/tools/openai-agents-sdk",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/openai-agents-sdk-vs-langgraph"
+    ],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Retell AI",
+    "review": "/tools/retell-ai",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [
+      "/retell-vs-bland",
+      "/vapi-vs-retell"
+    ],
+    "alternatives": [
+      "/retell-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-retell"
+    ]
+  },
+  {
+    "tool": "Semantic Kernel",
+    "review": "/tools/semantic-kernel",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
+    "tool": "Superagent",
+    "review": "/tools/superagent",
+    "category": "Tool Reviews",
+    "pricing": [],
+    "competitors": [],
+    "alternatives": [],
+    "tutorials": []
+  },
+  {
     "tool": "Vapi AI",
-    "review": "/vapi-review",
+    "review": "/tools/vapi-ai",
     "category": "Tool Reviews",
     "pricing": [
       "/vapi-pricing",
@@ -369,6 +370,23 @@
     ]
   },
   {
+    "tool": "Yellow.ai",
+    "review": "/tools/yellow-ai",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/yellow-ai-pricing"
+    ],
+    "competitors": [
+      "/yellow-ai-vs-intercom"
+    ],
+    "alternatives": [
+      "/yellow-ai-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-yellow-ai"
+    ]
+  },
+  {
     "tool": "Windsurf",
     "review": "/windsurf",
     "category": "Tool Reviews",
@@ -382,21 +400,8 @@
     "alternatives": [
       "/windsurf-alternatives"
     ],
-    "tutorials": []
-  },
-  {
-    "tool": "Yellow.ai",
-    "review": "/yellow-ai-review",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/yellow-ai-pricing"
-    ],
-    "competitors": [
-      "/yellow-ai-vs-intercom"
-    ],
-    "alternatives": [
-      "/yellow-ai-alternatives"
-    ],
-    "tutorials": []
+    "tutorials": [
+      "/how-to-use-windsurf"
+    ]
   }
 ]

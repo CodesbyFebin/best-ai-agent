@@ -19,10 +19,22 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/how-to-build-ai-agent-with-autogen</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/how-to-build-ai-agent-with-crewai</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/how-to-build-ai-agent-with-dify</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/how-to-build-ai-agent-with-flowise</loc>
@@ -79,6 +91,12 @@
     <priority>0.81</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/how-to-use-codex</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/how-to-use-cursor-ai</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -89,6 +107,24 @@
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/how-to-use-intercom</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/how-to-use-n8n</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/how-to-use-replit-agent</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/how-to-use-retell</loc>
@@ -103,15 +139,21 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/how-to-use-windsurf</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.71</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/how-to-use-yellow-ai</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/implementation-tutorials-hub</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://bestaiagent.in/index</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
 </urlset>

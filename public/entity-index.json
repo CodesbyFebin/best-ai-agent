@@ -5,11 +5,9 @@
     "definition": "AI Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/",
-      "/about",
       "/agent-builders",
       "/agent-builders-directory",
       "/agentbench-guide",
-      "/agentops-review",
       "/agents",
       "/ai-agent-awards",
       "/ai-agent-awards-2026",
@@ -23,7 +21,9 @@
       "/ai-agent-directory",
       "/ai-agent-examples",
       "/ai-agent-for-indian-smes",
-      "/ai-agent-for-indian-startups"
+      "/ai-agent-for-indian-startups",
+      "/ai-agent-for-whatsapp-business",
+      "/ai-agent-github-projects"
     ],
     "relatedConcepts": [
       "AI Coding Agent",
@@ -40,8 +40,11 @@
     "definition": "AI Coding Agent is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/ai-coding-agents",
+      "/best-ai-agent-for-codex",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-ides",
+      "/best-ai-agent-for-replit",
+      "/best-ai-agent-for-windsurf",
       "/best-ai-coding-agent-reddit",
       "/best-free-ai-coding-agents",
       "/coding-agents",
@@ -93,9 +96,9 @@
       "/best-free-ai-agent-builder",
       "/best-no-code-ai-agent-builder",
       "/builders",
-      "/flowise-review",
       "/flowise-vs-dify",
-      "/flowise-vs-n8n"
+      "/flowise-vs-n8n",
+      "/tools/flowise"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -149,23 +152,23 @@
       "/agent-builders",
       "/agent-builders-directory",
       "/ai-agent-github-projects",
-      "/autogen-review",
+      "/autogen-alternatives",
       "/best-ai-agent-builder",
       "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-for-langgraph",
       "/best-ai-agent-orchestration-platform",
       "/best-free-ai-agent-builder",
       "/best-free-open-source-ai-agents",
       "/best-open-source-ai-agent-tools",
       "/best-open-source-ai-agents",
       "/crewai-alternatives",
-      "/crewai-review",
-      "/dify-review",
       "/frameworks",
       "/how-to-build-multi-agent-system",
       "/how-to-create-an-ai-agent",
       "/how-to-setup-langgraph",
+      "/langgraph-alternatives",
       "/langgraph-entity",
-      "/langgraph-review"
+      "/langgraph-pricing"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -183,7 +186,7 @@
     "pages": [
       "/agent-builders",
       "/ai-agent-github-projects",
-      "/autogen-review",
+      "/autogen-alternatives",
       "/autogen-vs-crewai",
       "/best-ai-agent-builder",
       "/best-ai-agent-orchestration-platform",
@@ -192,15 +195,15 @@
       "/best-open-source-ai-agent-tools",
       "/best-open-source-ai-agents",
       "/crewai-alternatives",
-      "/crewai-entity",
       "/crewai-pricing",
-      "/crewai-review",
       "/frameworks",
       "/how-to-build-ai-agent-with-crewai",
       "/how-to-build-multi-agent-system",
       "/how-to-create-an-ai-agent",
       "/implementation-tutorials-hub",
-      "/langgraph-review"
+      "/langgraph-alternatives",
+      "/langgraph-vs-crewai",
+      "/open-source-agents"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -220,6 +223,7 @@
       "/alternatives-hub",
       "/best-ai-agent-extension-for-vs-code",
       "/best-ai-agent-for-code-review",
+      "/best-ai-agent-for-codex",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-debugging",
       "/best-ai-agent-for-ecommerce",
@@ -227,15 +231,14 @@
       "/best-ai-agent-for-nextjs",
       "/best-ai-agent-for-python",
       "/best-ai-agent-for-react",
+      "/best-ai-agent-for-replit",
       "/best-ai-agent-for-vs-code",
+      "/best-ai-agent-for-windsurf",
       "/best-ai-coding-agent-reddit",
       "/best-free-ai-coding-agents",
       "/claude-code-alternatives",
       "/claude-vs-cursor",
-      "/coding-agents",
-      "/coding-agents-directory",
-      "/cursor-ai",
-      "/cursor-ai-entity"
+      "/codex-alternatives"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -253,6 +256,7 @@
     "pages": [
       "/alternatives-hub",
       "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-codex",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-debugging",
       "/best-ai-agent-for-ecommerce",
@@ -260,17 +264,16 @@
       "/best-ai-agent-for-nextjs",
       "/best-ai-agent-for-python",
       "/best-ai-agent-for-react",
+      "/best-ai-agent-for-replit",
       "/best-ai-agent-for-vs-code",
+      "/best-ai-agent-for-windsurf",
       "/best-free-ai-coding-agents",
       "/claude-code-alternatives",
+      "/codex-alternatives",
       "/copilot-free-vs-paid",
       "/copilot-vs-claude-code",
       "/cursor-alternatives",
-      "/cursor-vs-github-copilot",
-      "/cursor-windsurf-copilot",
-      "/github-copilot",
-      "/github-copilot-alternatives",
-      "/github-copilot-entity"
+      "/cursor-vs-github-copilot"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -299,13 +302,13 @@
       "/claude-code-entity",
       "/claude-code-pricing",
       "/claude-code-reddit-review",
+      "/codex-alternatives",
       "/coding-agents",
       "/coding-agents-directory",
       "/copilot-vs-claude-code",
       "/cursor-alternatives",
       "/cursor-vs-claude-code",
-      "/github-copilot-alternatives",
-      "/how-to-set-up-claude-code"
+      "/github-copilot-alternatives"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -329,18 +332,18 @@
       "/best-ai-voice-agent",
       "/best-ai-voice-agent-platform",
       "/best-free-ai-voice-agent",
-      "/bland-review",
-      "/elevenlabs-conversational-ai-review",
       "/how-to-use-vapi",
       "/implementation-tutorials-hub",
       "/retell-alternatives",
-      "/retell-review",
+      "/tools/bland-ai",
+      "/tools/elevenlabs",
+      "/tools/retell-ai",
+      "/tools/vapi-ai",
       "/tutorials-hub",
       "/vapi-alternatives",
       "/vapi-cost-calculator",
       "/vapi-entity",
-      "/vapi-for-appointment-booking",
-      "/vapi-pricing"
+      "/vapi-for-appointment-booking"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -362,8 +365,6 @@
       "/best-ai-phone-agent",
       "/best-ai-voice-agent",
       "/best-ai-voice-agent-platform",
-      "/bland-review",
-      "/elevenlabs-conversational-ai-review",
       "/how-to-use-retell",
       "/implementation-tutorials-hub",
       "/retell-alternatives",
@@ -371,11 +372,13 @@
       "/retell-entity",
       "/retell-pricing",
       "/retell-reddit-review",
-      "/retell-review",
       "/retell-vs-bland",
+      "/tools/bland-ai",
+      "/tools/elevenlabs",
+      "/tools/retell-ai",
+      "/tools/vapi-ai",
       "/tutorials-hub",
-      "/vapi-alternatives",
-      "/vapi-review"
+      "/vapi-alternatives"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -406,11 +409,11 @@
       "/crewai-alternatives",
       "/dify-alternatives",
       "/dify-pricing",
-      "/dify-review",
       "/flowise-alternatives",
       "/flowise-entity",
       "/flowise-pricing",
-      "/flowise-reddit-review"
+      "/flowise-reddit-review",
+      "/flowise-vs-dify"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -429,6 +432,7 @@
       "/agent-builders",
       "/agent-builders-directory",
       "/alternatives-hub",
+      "/autogen-alternatives",
       "/best-ai-agent-builder",
       "/best-ai-agent-builder-reddit",
       "/best-ai-agent-maker",
@@ -441,11 +445,10 @@
       "/dify-alternatives",
       "/dify-entity",
       "/dify-pricing",
-      "/dify-review",
       "/dify-vs-langflow",
       "/flowise-alternatives",
       "/flowise-pricing",
-      "/flowise-review"
+      "/flowise-vs-dify"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -462,18 +465,23 @@
     "definition": "AutoGen is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/ai-agent-github-projects",
+      "/autogen-alternatives",
       "/autogen-entity",
-      "/autogen-review",
+      "/autogen-pricing",
       "/autogen-vs-crewai",
+      "/best-ai-agent-for-autogen",
       "/best-free-open-source-ai-agents",
       "/best-open-source-ai-agent-tools",
       "/best-open-source-ai-agents",
       "/crewai-alternatives",
-      "/crewai-review",
       "/frameworks",
-      "/langgraph-review",
+      "/how-to-build-ai-agent-with-autogen",
+      "/langgraph-alternatives",
       "/open-source-agents",
-      "/open-source-agents-directory"
+      "/open-source-agents-directory",
+      "/tools/autogen",
+      "/tools/crewai",
+      "/tools/langgraph"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -503,12 +511,12 @@
       "/best-ai-agent-for-whatsapp-support",
       "/best-ai-call-center-agent",
       "/best-ai-voice-agent",
+      "/how-to-use-yellow-ai",
       "/intercom-alternatives",
       "/retell-alternatives",
+      "/tools/yellow-ai",
       "/vapi-alternatives",
-      "/yellow-ai-alternatives",
-      "/yellow-ai-entity",
-      "/yellow-ai-pricing"
+      "/yellow-ai-alternatives"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -531,11 +539,13 @@
       "/best-ai-agent-for-real-estate",
       "/best-ai-agent-for-whatsapp",
       "/best-ai-agent-for-whatsapp-support",
+      "/how-to-use-intercom",
       "/intercom-alternatives",
       "/intercom-entity",
+      "/intercom-for-ai-support",
       "/intercom-pricing",
-      "/intercom-review",
       "/intercom-vs-zendesk-ai",
+      "/tools/intercom-ai",
       "/yellow-ai-alternatives",
       "/yellow-ai-pricing",
       "/yellow-ai-vs-intercom"
@@ -561,19 +571,19 @@
       "/best-ai-agent-automation-platform",
       "/best-ai-agent-builder",
       "/best-ai-agent-builder-reddit",
+      "/best-ai-agent-for-n8n-workflows",
       "/best-ai-agent-workflow-builder",
       "/best-free-ai-agent-builder",
       "/best-no-code-ai-agent-builder",
       "/dify-alternatives",
       "/dify-pricing",
-      "/dify-review",
       "/flowise-alternatives",
       "/flowise-pricing",
-      "/flowise-review",
       "/flowise-vs-n8n",
+      "/how-to-use-n8n",
       "/n8n-alternatives",
-      "/n8n-pricing",
-      "/n8n-review"
+      "/n8n-entity",
+      "/n8n-pricing"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -634,7 +644,7 @@
     "definition": "ElevenLabs is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/best-free-ai-voice-agent",
-      "/elevenlabs-conversational-ai-review",
+      "/tools/elevenlabs",
       "/voice-agents-directory"
     ],
     "relatedConcepts": [
@@ -673,17 +683,21 @@
       "/best-ai-agent-for-ecommerce",
       "/best-ai-agent-for-nextjs",
       "/best-ai-agent-for-react",
+      "/best-ai-agent-for-replit",
+      "/best-ai-agent-for-windsurf",
       "/best-ai-coding-agent-reddit",
       "/claude-code-alternatives",
+      "/codex-alternatives",
       "/coding-agents",
       "/coding-agents-directory",
       "/cursor-alternatives",
       "/cursor-windsurf-copilot",
       "/github-copilot-alternatives",
+      "/how-to-use-windsurf",
+      "/replit-alternatives",
       "/windsurf",
       "/windsurf-alternatives",
-      "/windsurf-pricing",
-      "/windsurf-vs-cursor"
+      "/windsurf-entity"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -749,7 +763,13 @@
     "entity": "OpenAI Codex",
     "slug": "openai-codex",
     "definition": "OpenAI Codex is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
-    "pages": [],
+    "pages": [
+      "/best-ai-agent-for-codex",
+      "/codex-alternatives",
+      "/codex-entity",
+      "/codex-pricing",
+      "/how-to-use-codex"
+    ],
     "relatedConcepts": [
       "AI Agent",
       "AI Coding Agent",
@@ -781,8 +801,8 @@
     "definition": "LangChain is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/langchain",
-      "/llamaindex-review",
-      "/llamaindex-vs-langchain"
+      "/llamaindex-vs-langchain",
+      "/tools/llamaindex"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -800,8 +820,8 @@
     "pages": [
       "/best-free-open-source-ai-agents",
       "/frameworks",
-      "/llamaindex-review",
-      "/llamaindex-vs-langchain"
+      "/llamaindex-vs-langchain",
+      "/tools/llamaindex"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -859,12 +879,12 @@
       "/claude-code-pricing",
       "/claude-code-reddit-review",
       "/claude-vs-cursor",
+      "/codex-alternatives",
       "/coding-agents",
       "/coding-agents-directory",
       "/copilot-vs-claude-code",
       "/cursor-alternatives",
-      "/cursor-vs-claude-code",
-      "/github-copilot-alternatives"
+      "/cursor-vs-claude-code"
     ],
     "relatedConcepts": [
       "AI Agent",
