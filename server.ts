@@ -1,18 +1,35 @@
 import express from 'express';
-import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import path from 'node:path';
 import fs from 'node:fs';
 import dotenv from 'dotenv';
-import { publicUrl, SITE_URL, normalizePath } from './src/lib/siteUrl';
 import { fileURLToPath } from 'node:url';
 
-dotenv.config();
+process.noDeprecation = true;
+dotenv.config({ quiet: true });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const isProd = process.env.NODE_ENV === 'production';
+const isVercel = Boolean(process.env.VERCEL);
 const PORT = Number(process.env.PORT || 3000);
+const DEFAULT_SITE_URL = 'https://bestaiagent.in';
+function normalizeSiteUrl(value?: string) {
+  if (!value) return undefined;
+  const trimmed = value.trim();
+  if (!trimmed) return undefined;
+  return trimmed.replace(/\/$/, '');
+}
+const SITE_URL = normalizeSiteUrl(process.env.VITE_SITE_URL) || normalizeSiteUrl(process.env.SITE_URL) || DEFAULT_SITE_URL;
+function publicUrl(pathName = '/') {
+  if (/^https?:\/\//i.test(pathName)) return pathName;
+  const normalizedPath = pathName.startsWith('/') ? pathName : `/${pathName}`;
+  return `${SITE_URL}${normalizedPath === '/' ? '/' : normalizedPath}`;
+}
+function normalizePath(inputPath: string) {
+  const clean = inputPath.split('?')[0].replace(/\/+$/, '');
+  return clean || '/';
+}
 const BASE_URL = SITE_URL;
 const PRODUCTION_HOSTS = new Set(['bestaiagent.in']);
 const PREVIEW_ROBOTS = 'noindex, nofollow, noarchive';
@@ -404,7 +421,7 @@ function simulatedRecommendation(prompt: string) {
   return `### Recommended AI Agent Stack\n\n1. **Flowise** - Best for visual RAG and workflow prototypes that can be self-hosted.\n2. **n8n** - Best for automation-heavy workflows across CRM, sheets, email, and webhooks.\n3. **CrewAI** - Best for Python teams building role-based multi-agent workflows.\n\n**India checklist:** estimate INR usage, GST treatment, hosting region, DPDP exposure, and support ownership before scaling.`;
 }
 
-async function startServer() {
+async function createApp() {
   const app = express();
   app.use(express.json({ limit: '2mb' }));
   app.use((req, res, next) => {
@@ -647,6 +664,7 @@ async function startServer() {
 
   if (!isProd) {
     app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({ server: { middlewareMode: true }, appType: 'custom' });
     app.use(vite.middlewares);
     app.get('*', async (req, res, next) => {
@@ -684,9 +702,23 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://0.0.0.0:${PORT} (isProd: ${isProd})`);
+  return app;
+}
+
+const appPromise = createApp();
+
+if (!isVercel) {
+  appPromise.then((app) => {
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server running on http://0.0.0.0:${PORT} (isProd: ${isProd})`);
+    });
+  }).catch((error) => {
+    console.error('Failed to start server:', error);
+    process.exit(1);
   });
 }
 
-startServer();
+export default async function handler(req: express.Request, res: express.Response) {
+  const app = await appPromise;
+  return app(req, res);
+}

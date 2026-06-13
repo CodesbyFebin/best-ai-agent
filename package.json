@@ -2,6 +2,32 @@
   "name": "react-example",
   "private": true,
   "version": "0.0.0",
+  "description": "Best AI Agent Directory, MCP Directory, AI Agent Rankings, Reviews, Comparisons, Pricing, Benchmarks, and Tutorials.",
+  "homepage": "https://bestaiagent.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodesbyFebin/best-ai-agent.git"
+  },
+  "keywords": [
+    "ai-agents",
+    "ai-agent",
+    "agentic-ai",
+    "mcp",
+    "model-context-protocol",
+    "ai-tools",
+    "ai-directory",
+    "ai-agent-framework",
+    "langgraph",
+    "crewai",
+    "autogen",
+    "cursor-ai",
+    "github-copilot",
+    "vapi",
+    "flowise",
+    "dify",
+    "llm",
+    "generative-ai"
+  ],
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",

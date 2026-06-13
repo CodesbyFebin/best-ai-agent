@@ -13,3 +13,4 @@ public/assets/India*.js
 *.log
 .env*
 !.env.example
+.vercel/
