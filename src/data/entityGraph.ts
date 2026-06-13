@@ -1,15 +1,7 @@
 import { getExternalLinks } from './externalLinks';
 import type { AuthorityEntity, EntityType, RelationshipType, EntityRelationship } from './entities/entityTypes';
 
-// Re-export canonical types from entities/entityTypes.ts
 export type { AuthorityEntity, EntityType, RelationshipType, EntityRelationship };
-
-export interface EntityRelationship {
-  from: string;
-  to: string;
-  type: RelationshipType;
-  evidence: 'official_link' | 'editorial_mapping' | 'community_mapping';
-}
 
 const D = '2026-06-12';
 
@@ -136,15 +128,15 @@ export const authorityEntities: AuthorityEntity[] = [
 ];
 
 export const entityRelationships: EntityRelationship[] = [
-  { from: 'openai-agents-sdk', to: 'openai', type: 'BUILT_BY', evidence: 'official_link' },
-  { from: 'claude-code', to: 'anthropic', type: 'BUILT_BY', evidence: 'official_link' },
-  { from: 'github-copilot', to: 'microsoft', type: 'BUILT_BY', evidence: 'official_link' },
-  { from: 'microsoft', to: 'autogen', type: 'MAINTAINS', evidence: 'official_link' },
-  { from: 'crewai', to: 'langgraph', type: 'COMPETES_WITH', evidence: 'editorial_mapping' },
-  { from: 'crewai', to: 'autogen', type: 'COMPETES_WITH', evidence: 'editorial_mapping' },
-  { from: 'langgraph', to: 'autogen', type: 'COMPETES_WITH', evidence: 'editorial_mapping' },
-  { from: 'cursor-ai', to: 'github-copilot', type: 'ALTERNATIVE_TO', evidence: 'editorial_mapping' },
-  { from: 'vapi-ai', to: 'retell-ai', type: 'ALTERNATIVE_TO', evidence: 'editorial_mapping' },
+  { from: 'openai-agents-sdk', to: 'openai', type: 'BUILT_BY', evidence: 'official_link', strength: 'strong', bidirectional: false },
+  { from: 'claude-code', to: 'anthropic', type: 'BUILT_BY', evidence: 'official_link', strength: 'strong', bidirectional: false },
+  { from: 'github-copilot', to: 'microsoft', type: 'BUILT_BY', evidence: 'official_link', strength: 'strong', bidirectional: false },
+  { from: 'microsoft', to: 'autogen', type: 'MAINTAINS', evidence: 'official_link', strength: 'strong', bidirectional: false },
+  { from: 'crewai', to: 'langgraph', type: 'COMPETES_WITH', evidence: 'editorial_mapping', strength: 'medium', bidirectional: true },
+  { from: 'crewai', to: 'autogen', type: 'COMPETES_WITH', evidence: 'editorial_mapping', strength: 'medium', bidirectional: true },
+  { from: 'langgraph', to: 'autogen', type: 'COMPETES_WITH', evidence: 'editorial_mapping', strength: 'medium', bidirectional: true },
+  { from: 'cursor-ai', to: 'github-copilot', type: 'ALTERNATIVE_TO', evidence: 'editorial_mapping', strength: 'medium', bidirectional: true },
+  { from: 'vapi-ai', to: 'retell-ai', type: 'ALTERNATIVE_TO', evidence: 'editorial_mapping', strength: 'medium', bidirectional: true },
 ];
 
 export function getAuthorityEntity(idOrSlug: string) {

@@ -795,7 +795,7 @@ export const companyEntities: CompanyEntity[] = [
   },
   {
     id: 'tgi', name: 'Text Generation Inference (TGI)', slug: 'tgi', type: 'company',
-    founded: '2023', headquarters: 'Remote', fundingStage: 'open_source',
+    founded: '2023', headquarters: 'Remote', fundingStage: 'unknown',
     totalFunding: 'Hugging Face project', employees: '5+', website: 'https://huggingface.co/docs/text-generation-inference',
     description: 'TGI is Hugging Face production-ready LLM inference server.',
     aiFocus: ['LLM Inference', 'Production Serving', 'Open Source', 'Hugging Face'],

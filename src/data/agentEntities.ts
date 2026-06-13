@@ -584,7 +584,7 @@ export const agentEntities: AuthorityEntity[] = [
   {
     id: 'pinecone-db',
     name: 'Pinecone DB',
-    type: 'Vector DB',
+    type: 'VectorDb',
     slug: 'pinecone-db',
     overview: 'Managed vector database for RAG, semantic search, and AI agent memory.',
     products: ['pinecone'],
@@ -601,7 +601,7 @@ export const agentEntities: AuthorityEntity[] = [
   {
     id: 'weaviate-db',
     name: 'Weaviate DB',
-    type: 'Vector DB',
+    type: 'VectorDb',
     slug: 'weaviate-db',
     overview: 'Open-source vector database with hybrid search and modular AI integrations.',
     products: ['weaviate'],
