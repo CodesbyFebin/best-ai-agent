@@ -33,6 +33,7 @@ import { getToolAsset, defaultAsset } from '../data/assetRegistry';
 import { getExternalLinks, type ExternalLinkType } from '../data/externalLinks';
 import BrandTile from './BrandTile';
 import ExternalResourceLink from './ExternalLink';
+import { ReferenceProductHero } from './ReferenceUiSections';
 
 interface ProductProfileProps {
   product: Product;
@@ -516,6 +517,8 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
 
   return (
     <div className="space-y-8" id={`product-profile-${product.id}`}>
+      <ReferenceProductHero product={product} onCompare={onCompare} isInCompareList={isInCompareList} />
+
       {/* Custom visual indicator highlighting active AEO optimized schemas */}
       <div className="bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-blue-500/5 border border-emerald-150 rounded-xl p-3 flex items-center justify-between text-xs text-slate-700">
         <div className="flex items-center gap-2">
@@ -612,9 +615,9 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
           <div className="space-y-3 flex-1 text-center md:text-left">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
               <p className="text-[10px] text-emerald-700 font-extrabold uppercase tracking-widest w-full">Tool Review</p>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
                 <ExternalResourceLink slug={product.slug} label={product.name} type="official" className="text-slate-950 hover:text-indigo-700" showIcon /> Review
-              </h1>
+              </h2>
               {product.whatsappReady && (
                 <span className="text-[10px] font-bold bg-green-500 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">WhatsApp Ready</span>
               )}

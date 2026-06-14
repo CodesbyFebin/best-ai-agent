@@ -52,6 +52,7 @@ import { Database } from 'lucide-react';
 import { publicUrl, SITE_URL } from './lib/siteUrl';
 import TrustPage from './components/TrustPage';
 import AuthorityExpansionBlock from './components/AuthorityExpansionBlock';
+import { ReferenceHomeHero, ReferenceHomeShowcase, ReferenceMcpShowcase, ReferencePillarHero } from './components/ReferenceUiSections';
 
 const ProductProfile = lazy(() => import('./components/ProductProfile'));
 const ComparisonPage = lazy(() => import('./components/ComparisonPage'));
@@ -394,6 +395,11 @@ export default function App() {
       setSelectedArticleSlug(cleanPath.replace(/^\//, ''));
       return;
     }
+    if (authorityPages[slug]) {
+      setCurrentView('authority');
+      setSelectedArticleSlug(slug);
+      return;
+    }
     if (comparisonPages.some(c => c.slug === slug) || slug.includes('-vs-')) {
       setCurrentView('compare');
       setSelectedArticleSlug(slug);
@@ -457,16 +463,13 @@ export default function App() {
   };
 
   const mainNavLinks = [
-    { label: 'Best AI Agents', href: '/best-ai-agent' },
-    { label: 'Coding Agents', href: '/coding-agents-hub' },
-    { label: 'Business AI', href: '/business-ai-hub' },
-    { label: 'Voice AI', href: '/voice-ai-hub' },
-    { label: 'Builders', href: '/ai-agent-builders-hub' },
-    { label: 'Pricing', href: '/pricing-hub' },
-    { label: 'Alternatives', href: '/alternatives-hub' },
-    { label: 'Tutorials', href: '/tutorials-hub' },
-    { label: 'Glossary', href: '/glossary-hub' },
-    { label: 'MCP', href: '/mcp-hub' },
+    { label: 'AI Agents', href: '/best-ai-agent' },
+    { label: 'MCP Directory', href: '/mcp-directory' },
+    { label: 'Compare', href: '/compare' },
+    { label: 'Rankings', href: '/ai-agent-rankings' },
+    { label: 'Tools', href: '/best-ai-tools' },
+    { label: 'Resources', href: '/tutorials-hub' },
+    { label: 'Pricing', href: '/pricing' },
   ];
 
   const homeQuickLinks = [
@@ -1244,7 +1247,7 @@ try {
   })();
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-emerald-100 development-frame">
+    <div className="min-h-screen bg-[#020617] text-slate-100 flex flex-col font-sans selection:bg-violet-500/30 development-frame">
 
       {/* DIRECT TRUST DISCLOSURE RIBBON */}
       <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 text-center flex flex-wrap items-center justify-center gap-2">
@@ -1334,7 +1337,7 @@ try {
        )}
 
       {/* HEADER SECTION */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+      <header className="sticky top-0 z-50 bg-slate-950/86 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
 
           {/* Brand Logo */}
@@ -1353,7 +1356,7 @@ try {
                   key={link.href}
                   href={link.href}
                   onClick={(event) => navigateToPath(event, link.href)}
-                  className={`px-2.5 py-2 rounded-lg text-xs font-semibold transition ${isActive ? 'bg-emerald-50 text-emerald-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+                  className={`px-2.5 py-2 rounded-lg text-xs font-semibold transition ${isActive ? 'bg-violet-500/15 text-violet-200' : 'text-slate-300 hover:bg-white/10 hover:text-white'}`}
                 >
                   {link.label}
                 </a>
@@ -1363,10 +1366,10 @@ try {
 
           {/* Action Tools Buttons */}
           <div className="flex items-center gap-2">
-            <a href="/best-ai-agent" onClick={(event) => navigateToPath(event, '/best-ai-agent')} className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 border border-slate-200 text-slate-700 hover:bg-slate-50 rounded-lg text-xs font-semibold uppercase tracking-wide transition">
-              <ArrowLeftRight className="w-3.5 h-3.5 text-emerald-600" /> Compare AI Agents
+            <a href="/best-ai-agent" onClick={(event) => navigateToPath(event, '/best-ai-agent')} className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 border border-white/10 text-slate-200 hover:bg-white/10 rounded-lg text-xs font-semibold uppercase tracking-wide transition">
+              <ArrowLeftRight className="w-3.5 h-3.5 text-violet-300" /> Compare AI Agents
             </a>
-            <a href="/ai-agent-advisor" onClick={(event) => navigateToPath(event, '/ai-agent-advisor')} className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-semibold shadow-sm transition">
+            <a href="/ai-agent-advisor" onClick={(event) => navigateToPath(event, '/ai-agent-advisor')} className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white rounded-lg text-sm font-semibold shadow-sm shadow-violet-900/30 transition">
               <Sparkles className="w-4 h-4" /> <span className="hidden sm:inline">Find My AI Agent</span><span className="sm:hidden">Find AI</span>
             </a>
             <button
@@ -1374,7 +1377,7 @@ try {
               aria-label="Toggle main navigation"
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-main-navigation"
-              className="xl:hidden p-2 text-slate-600 hover:bg-slate-50 rounded-lg"
+              className="xl:hidden p-2 text-slate-300 hover:bg-white/10 rounded-lg"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -1384,19 +1387,19 @@ try {
 
       {/* MOBILE NAV DRAWER */}
       {isMobileMenuOpen && (
-        <nav id="mobile-main-navigation" aria-label="Mobile navigation" className="xl:hidden bg-white border-b border-slate-200 py-3 px-4 flex flex-col gap-2">
-          <p className="text-[10px] text-slate-400 font-bold tracking-wider uppercase px-2">Main navigation</p>
+        <nav id="mobile-main-navigation" aria-label="Mobile navigation" className="xl:hidden bg-slate-950/96 border-b border-white/10 py-3 px-4 flex flex-col gap-2">
+          <p className="text-[10px] text-slate-500 font-bold tracking-wider uppercase px-2">Main navigation</p>
           {mainNavLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={(event) => navigateToPath(event, link.href)} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+            <a key={link.href} href={link.href} onClick={(event) => navigateToPath(event, link.href)} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
               <span>{link.label}</span>
               <ChevronRight className="w-4 h-4 text-slate-400" />
             </a>
           ))}
-          <div className="border-t border-slate-100 my-2 pt-2 flex flex-col gap-2">
-            <a href="/best-ai-agent" onClick={(event) => navigateToPath(event, '/best-ai-agent')} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-700 hover:bg-slate-50 flex items-center gap-2">
+          <div className="border-t border-white/10 my-2 pt-2 flex flex-col gap-2">
+            <a href="/best-ai-agent" onClick={(event) => navigateToPath(event, '/best-ai-agent')} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-violet-200 hover:bg-white/10 flex items-center gap-2">
               <ArrowLeftRight className="w-4 h-4" /> Compare AI Agents
             </a>
-            <a href="/ai-agent-advisor" onClick={(event) => navigateToPath(event, '/ai-agent-advisor')} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-emerald-600 hover:bg-slate-50 flex items-center gap-2">
+            <a href="/ai-agent-advisor" onClick={(event) => navigateToPath(event, '/ai-agent-advisor')} className="w-full text-left px-3 py-2 rounded-lg text-sm font-bold text-violet-300 hover:bg-white/10 flex items-center gap-2">
               <Sparkles className="w-4 h-4" /> Find My AI Agent
             </a>
           </div>
@@ -1404,12 +1407,12 @@ try {
       )}
 
       {/* COMPREHENSIVE SEARCH ENGINE DRAWER */}
-      <div className="bg-slate-100 border-b border-slate-200">
+      <div className="bg-slate-950/70 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-2 relative">
           <Search className="w-5 h-5 text-slate-400 absolute left-7 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            className="w-full bg-white text-slate-800 placeholder-slate-400 pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full bg-slate-900/80 text-slate-100 placeholder-slate-500 pl-10 pr-4 py-2 border border-white/10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500"
             placeholder="Search all 36+ verified Indian-focussed pSEO pages (e.g. 'whatsapp', 'hindi', 'coding', 'frameworks')..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -1463,13 +1466,25 @@ try {
 
       {/* MAIN VIEWPORT BODY CONTAINER */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Suspense fallback={<div className="bg-white border border-slate-200 rounded-2xl p-8 text-sm font-semibold text-slate-600">Loading BestAIAgent.in workspace...</div>}>
+        <Suspense fallback={<div className="bg-slate-900 border border-white/10 rounded-2xl p-8 text-sm font-semibold text-slate-300">Loading BestAIAgent.in workspace...</div>}>
 
           {/* ==========================================
             VIEW A: HOMEPAGE (MEDIA HUB)
             ========================================== */}
           {currentView === 'home' && (
             <div className="space-y-12">
+              <ReferenceHomeHero
+                onNavigate={navigateToPath}
+                agentCount={products.length}
+                categoryCount={topicalClusters.length}
+                mcpCount={directoryTools.length}
+              />
+
+              <ReferenceHomeShowcase
+                onNavigate={navigateToPath}
+                topProducts={sortedProducts.slice(0, 5)}
+                categoryCount={topicalClusters.length}
+              />
 
               {/* HERO SECTION */}
               <section className="bg-slate-950 text-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-800 overflow-hidden">
@@ -1479,9 +1494,9 @@ try {
                       <img src="/assets/brand/logo-mark.png" alt="BestAIAgent.in brand mark" width={20} height={20} className="w-5 h-5 rounded" loading="eager" decoding="async" />
                       <Star className="w-3.5 h-3.5 fill-emerald-300 text-emerald-300" /> Independent India-first AI agent rankings
                     </div>
-                    <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight select-none">
+                    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight select-none">
                       Best AI Agents in India 2026
-                    </h1>
+                    </h2>
                     <p className="text-slate-300 text-base sm:text-lg max-w-3xl font-light leading-relaxed">
                       Compare AI coding agents, business automation agents, voice AI agents, no-code builders, MCP servers, pricing, alternatives, and tutorials — with INR estimates, DPDP compliance notes, India-specific use cases, and independent editorial scoring.
                     </p>
@@ -2273,14 +2288,20 @@ try {
             ========================================== */}
           {currentView === 'silo-pillar' && (
             <div id="scroll-pillar-pivot" className="space-y-8">
+              <ReferencePillarHero
+                silo={activeSilo}
+                pageCount={activeSiloPages.length}
+                onNavigate={navigateToPath}
+                variant={selectedSiloId === 'mcp' ? 'mcp' : 'default'}
+              />
 
               {/* Silo Header Area */}
-              <div className="border-b border-slate-200 pb-6">
+              <div className="border-b border-white/10 pb-6">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-2">
                   <div className="flex items-center gap-1 text-xs text-slate-400">
                     <button onClick={() => routeTo('home')} className="hover:underline">Home</button>
                     <ChevronRight className="w-3.5 h-3.5" />
-                    <span className="text-slate-600 font-semibold">{activeSilo.name}</span>
+                    <span className="text-slate-200 font-semibold">{activeSilo.name}</span>
                   </div>
 
                   <button
@@ -2293,14 +2314,18 @@ try {
                         setCopiedArticleSlug(null);
                       });
                     }}
-                    className={`cursor-pointer inline-flex items-center gap-1.5 bg-white hover:bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold transition uppercase tracking-wider ${copiedArticleSlug === `silo-${activeSilo.id}` ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'text-slate-700'}`}
+                    className={`cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-bold transition uppercase tracking-wider ${copiedArticleSlug === `silo-${activeSilo.id}` ? 'bg-emerald-500/15 text-emerald-200 border-emerald-400/30' : 'bg-slate-900/80 hover:bg-white/10 border-white/10 text-slate-200'}`}
                   >
                     <span>{copiedArticleSlug === `silo-${activeSilo.id}` ? 'Copied URL!' : 'Copy Hub URL'}</span>
                   </button>
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">{activeSilo.pillarTitle}</h2>
-                <p className="text-slate-500 text-sm sm:text-base mt-2 leading-relaxed max-w-3xl">{activeSilo.description}</p>
+                <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">{activeSilo.pillarTitle}</h2>
+                <p className="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed max-w-3xl">{activeSilo.description}</p>
               </div>
+
+              {selectedSiloId === 'mcp' && (
+                <ReferenceMcpShowcase onNavigate={navigateToPath} />
+              )}
 
               {/* Pillar Landing content layout */}
               <div className="grid lg:grid-cols-4 gap-8">
@@ -3488,6 +3513,7 @@ try {
                 onBack={() => routeTo('home')}
                 onCompare={toggleCompare}
                 isInCompareList={compareList.includes(productObj.slug)}
+                routeTo={routeTo}
               />
             );
           })()}

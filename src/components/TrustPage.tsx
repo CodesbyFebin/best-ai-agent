@@ -12,6 +12,7 @@ import {
   UserCheck,
 } from 'lucide-react';
 import type { TrustPageContent } from '../data/trustContent';
+import { ReferenceAuthorityShowcase, ReferenceMcpShowcase, ReferencePillarHero } from './ReferenceUiSections';
 
 type TrustPageProps = {
   page: TrustPageContent;
@@ -19,6 +20,8 @@ type TrustPageProps = {
 };
 
 export default function TrustPage({ page, onNavigate }: TrustPageProps) {
+  const isMcpDirectory = page.slug === 'mcp-directory';
+  const showAuthorityShowcase = page.view === 'authority' && !isMcpDirectory;
   const [criteriaQuery, setCriteriaQuery] = useState('');
   const filteredCriteria = useMemo(() => {
     if (!page.criteria) return [];
@@ -38,21 +41,56 @@ export default function TrustPage({ page, onNavigate }: TrustPageProps) {
 
   return (
     <div className="space-y-8">
-      <div className="border-b border-slate-200 pb-6">
+      {isMcpDirectory && (
+        <>
+          <ReferencePillarHero
+            silo={{
+              id: 'mcp',
+              name: 'MCP Directory',
+              purpose: 'Model Context Protocol servers, tools, connectors, and implementation guidance.',
+              pillarTitle: 'MCP Directory',
+              pillarSlug: 'mcp-directory',
+              description: page.metaDescription,
+              color: 'violet',
+              icon: 'Network',
+            }}
+            pageCount={1}
+            onNavigate={onNavigate}
+            variant="mcp"
+          />
+          <ReferenceMcpShowcase onNavigate={onNavigate} />
+        </>
+      )}
+
+      {showAuthorityShowcase && (
+        <ReferenceAuthorityShowcase
+          slug={page.slug}
+          title={page.h1}
+          description={page.metaDescription}
+          eyebrow={page.eyebrow}
+          onNavigate={onNavigate}
+        />
+      )}
+
+      <div className="border-b border-white/10 pb-6">
         <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-400 mb-4">
           <a href="/" onClick={(event) => onNavigate(event, '/', 'home')} className="hover:underline">Home</a>
           <ChevronRight className="w-3 h-3" />
           <span>{page.view === 'authority' ? 'Authority Assets' : page.view === 'methodology' ? 'Methodology' : 'Trust'}</span>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-slate-600 font-semibold">{page.title}</span>
+          <span className="text-slate-200 font-semibold">{page.title}</span>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-100 text-[10px] font-black uppercase tracking-wider">{page.eyebrow}</span>
           <span className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 text-[10px] font-bold uppercase tracking-wider">{page.verificationStatus}</span>
           <span className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 text-[10px] font-bold uppercase tracking-wider">Confidence {page.confidenceLevel}</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">{page.h1}</h1>
-        <p className="text-slate-500 text-sm sm:text-base mt-4 max-w-3xl leading-relaxed">{page.metaDescription}</p>
+        {isMcpDirectory ? (
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">{page.h1}</h2>
+        ) : (
+          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">{page.h1}</h1>
+        )}
+        <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-3xl leading-relaxed">{page.metaDescription}</p>
         <div className="grid sm:grid-cols-4 gap-3 mt-6">
           <div className="bg-white border border-slate-200 rounded-xl p-3 text-xs">
             <span className="block text-[10px] font-black uppercase text-slate-400 tracking-wider">Author</span>

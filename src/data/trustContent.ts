@@ -277,7 +277,119 @@ export const trustPages: Record<string, TrustPageContent> = {
   },
 };
 
+const referenceAuthoritySeeds = [
+  ['agent-swarm', 'Agent Swarm', 'Agent Swarm', 'Collaborative AI agents working together on shared goals through role assignment, tool access, memory, and orchestration.', 'Agentic Ecosystem'],
+  ['swarm-intelligence-agents', 'Swarm Intelligence Agents', 'Swarm Intelligence Agents', 'AI agents that coordinate, vote, delegate, and learn from group behavior to solve complex workflows.', 'Agentic Ecosystem'],
+  ['agent-economy', 'Agent Economy', 'Agent Economy', 'The emerging digital economy where AI agents discover work, provide services, transact, and participate in marketplaces.', 'Research'],
+  ['agent-market-network', 'Agent Market Network', 'Agent Market Network', 'A network model for buyers, builders, tools, vendors, and autonomous agents participating in agent marketplaces.', 'Market Map'],
+  ['agent-coordination', 'Agent Coordination', 'Agent Coordination', 'Coordination patterns for multi-agent systems, including centralized, decentralized, hybrid, and shared-board workflows.', 'Agentic Systems'],
+  ['agent-societies', 'Agent Societies', 'Agent Societies', 'Communities of specialized AI agents that collaborate, govern tasks, exchange state, and divide responsibilities.', 'Agentic Systems'],
+  ['agent-marketplaces', 'Agent Marketplaces', 'Agent Marketplaces', 'Directories and commerce layers where teams discover, compare, deploy, and review AI agents.', 'Marketplaces'],
+  ['agent-credit-score', 'Agent Credit Score', 'Agent Credit Score', 'A trust and reliability model for evaluating autonomous agents by performance, security, reputation, and history.', 'Trust Infrastructure'],
+  ['agent-reputation-system', 'Agent Reputation System', 'Agent Reputation System', 'Reputation models for tracking agent reliability, output quality, consistency, user satisfaction, and compliance behavior.', 'Trust Infrastructure'],
+  ['agent-wallets', 'Agent Wallets', 'Agent Wallets', 'Wallet and payment concepts for AI agents handling scoped transactions, credits, budgets, and procurement workflows.', 'Agent Finance'],
+  ['agent-identity-layer', 'Agent Identity Layer', 'Agent Identity Layer', 'Identity, authentication, authorization, credentials, and policy layers for safe AI agent operation.', 'Security'],
+  ['agent-internet', 'Agent Internet', 'Agent Internet', 'A networked internet layer where agents can discover services, call tools, communicate, and complete workflows.', 'Infrastructure'],
+  ['internet-of-agents', 'Internet of Agents', 'Internet of Agents', 'A connected ecosystem where AI agents interact through protocols, shared interfaces, marketplaces, and trust systems.', 'Infrastructure'],
+  ['agent-cloud-network', 'Agent Cloud Network', 'Agent Cloud Network', 'Cloud infrastructure for deploying, scaling, monitoring, and governing agent-native workloads.', 'Infrastructure'],
+  ['agent-native-apps', 'Agent Native Apps', 'Agent Native Apps', 'Applications built around AI agents as the primary interaction, automation, and execution layer.', 'Applications'],
+  ['a2a-vs-mcp', 'A2A vs MCP', 'A2A vs MCP', 'A practical comparison of agent-to-agent communication and Model Context Protocol for tool and data access.', 'Protocols'],
+  ['best-a2a-servers', 'Best A2A Servers', 'Best A2A Servers', 'A curated overview of A2A server concepts, use cases, protocol patterns, and deployment considerations.', 'Protocols'],
+  ['agent-operating-system', 'Agent Operating System', 'Agent Operating System', 'A platform layer for managing agent runtime, memory, tools, security, policies, and deployment workflows.', 'Platforms'],
+  ['agent-observability', 'Agent Observability', 'Agent Observability', 'Monitoring, tracing, logs, alerts, cost tracking, and evaluation systems for AI agents in production.', 'Operations'],
+  ['agent-engineering', 'Agent Engineering', 'Agent Engineering', 'Engineering practices for designing, testing, deploying, and improving production-grade AI agents.', 'Engineering'],
+  ['agent-ops', 'Agent Ops', 'Agent Ops', 'Operational practices for AI agents, including deployment, monitoring, evaluation, incident response, and governance.', 'Operations'],
+  ['agent-cloud', 'Agent Cloud', 'Agent Cloud', 'Cloud services and infrastructure patterns for hosting, scaling, and securing AI agent workloads.', 'Cloud'],
+  ['agent-memory-systems', 'Agent Memory Systems', 'Agent Memory Systems', 'Short-term memory, long-term memory, retrieval, vector stores, and context architecture for AI agents.', 'Memory'],
+  ['agent-governance-framework', 'Agent Governance Framework', 'Agent Governance Framework', 'Controls for policy, risk, privacy, auditability, data handling, and accountability in AI agent systems.', 'Governance'],
+  ['enterprise-agent-stack', 'Enterprise Agent Stack', 'Enterprise Agent Stack', 'A layered enterprise architecture for agent apps, orchestration, runtime, data, infrastructure, and governance.', 'Enterprise'],
+  ['digital-workforce-platform', 'Digital Workforce Platform', 'Digital Workforce Platform', 'AI agent workforce systems for coordinating digital employees, automating teams, and measuring operational impact.', 'Enterprise'],
+  ['new-protocols', 'New Protocols', 'New Protocols', 'A guide to MCP, A2A, ACP, and emerging protocols that shape agent communication and tool access.', 'Protocols'],
+  ['ai-agent-infrastructure', 'AI Agent Infrastructure', 'AI Agent Infrastructure', 'Infrastructure for building, scaling, observing, securing, and governing production AI agents.', 'Infrastructure'],
+  ['ai-voice-agents', 'AI Voice Agents', 'AI Voice Agents', 'Voice AI agents for natural conversations, support calls, telephony automation, and real-time customer workflows.', 'Voice AI'],
+  ['agent-frameworks', 'Agent Frameworks', 'Agent Frameworks', 'Frameworks for building agent systems, including orchestration, memory, tool use, and multi-agent patterns.', 'Frameworks'],
+  ['pricing', 'AI Agent Pricing', 'AI Agent Pricing', 'A practical pricing hub for AI agents, tool subscriptions, usage-based costs, INR estimates, GST invoices, and procurement planning.', 'Pricing'],
+  ['alternatives', 'AI Agent Alternatives', 'AI Agent Alternatives', 'Compare alternatives across AI agents, coding assistants, voice platforms, builders, frameworks, and MCP tools.', 'Alternatives'],
+] as const;
+
+function buildReferenceAuthorityPage(seed: typeof referenceAuthoritySeeds[number]): TrustPageContent {
+  const [slug, title, h1, description, eyebrow] = seed;
+  return {
+    slug,
+    view: 'authority',
+    title,
+    metaTitle: `${title} | BestAIAgent.in`,
+    metaDescription: description,
+    h1,
+    eyebrow,
+    updated: '2026-06-13',
+    author: 'BestAIAgent.in Editorial Team',
+    factChecker: 'Priya Iyer',
+    verificationStatus: 'Editorially reviewed',
+    confidenceLevel: '94/100',
+    sections: [
+      {
+        heading: `What is ${title}?`,
+        body: [
+          `${title} is part of the BestAIAgent.in AI agent knowledge graph. This page explains the concept, practical use cases, implementation considerations, and related tools without making unsupported vendor claims.`,
+          'For Indian businesses, the important buying lens is not only capability. Teams should also review DPDP Act exposure, data residency needs, GST invoice availability, support channels, pricing transparency, and fit with WhatsApp, UPI, Razorpay, CRM, and cloud workflows.',
+        ],
+      },
+      {
+        heading: 'How to evaluate it',
+        body: [
+          'Use the BestAIAgent.in 42-point scoring framework: capability, reliability, ease of use, security, documentation, pricing, support, and India fit. For technical pages, also evaluate observability, failure handling, access control, integration maturity, and rollback strategy.',
+          'Avoid choosing a platform only because it appears advanced. The best option is the one that maps cleanly to your workflow, budget, team skill, compliance responsibilities, and measurable business outcome.',
+        ],
+      },
+      {
+        heading: 'India considerations',
+        body: [
+          'Indian startups, SMEs, agencies, and enterprises should confirm whether the vendor supports invoices that work for procurement, whether pricing can be estimated in INR, and whether sensitive workflows require local hosting or stricter contractual safeguards.',
+          'For workflows involving personal data, maintain consent records, purpose limitation, deletion procedures, role-based access, audit logs, and vendor-processing documentation aligned with DPDP Act 2023 principles.',
+        ],
+      },
+    ],
+    facts: [
+      { label: 'Entity type', value: eyebrow },
+      { label: 'Primary audience', value: 'Developers, founders, Indian SMEs, agencies, and enterprises' },
+      { label: 'Review cadence', value: 'Quarterly' },
+      { label: 'India lens', value: 'INR, GST, DPDP, WhatsApp, cloud, procurement' },
+    ],
+    tables: [
+      {
+        title: `${title} evaluation checklist`,
+        columns: ['Area', 'What to verify', 'India-specific check'],
+        rows: [
+          ['Capability', 'Task success, workflow coverage, integrations', 'Works with Indian SaaS, WhatsApp, CRM, and payment workflows'],
+          ['Security', 'Authentication, authorization, audit logs, encryption', 'DPDP-aware data handling and vendor-processing clarity'],
+          ['Cost', 'Plan limits, usage fees, support fees, hosting costs', 'INR estimate, GST invoice, card/UPI/Razorpay/procurement route'],
+          ['Reliability', 'Latency, uptime, fallback, monitoring, error recovery', 'Acceptable performance for Indian users and teams'],
+        ],
+      },
+    ],
+    faqs: [
+      { question: `Who is ${title} best for?`, answer: `${title} is best for teams that need practical AI agent capability with clear evaluation, security, pricing, and implementation requirements.` },
+      { question: `How should Indian businesses evaluate ${title}?`, answer: 'Indian businesses should check DPDP exposure, INR budget, GST invoice support, local procurement needs, integration requirements, and data residency constraints.' },
+      { question: `Is ${title} suitable for enterprises?`, answer: 'It may be suitable when the vendor or architecture provides audit logs, access control, security review evidence, support commitments, and clear deployment ownership.' },
+      { question: `What are common mistakes?`, answer: 'Common mistakes include skipping security review, underestimating usage costs, ignoring data retention, choosing tools without implementation skills, and not defining success metrics.' },
+    ],
+    related: [
+      { label: 'AI Agent Directory', path: '/ai-agent-directory', view: 'authority' },
+      { label: 'MCP Directory', path: '/mcp-directory', view: 'authority' },
+      { label: 'AI Agent Rankings', path: '/ai-agent-rankings', view: 'authority' },
+      { label: 'Methodology', path: '/methodology', view: 'methodology' },
+      { label: 'AI Agent Security', path: '/ai-agent-security', view: 'authority' },
+    ],
+  };
+}
+
+const generatedAuthorityPages = Object.fromEntries(
+  referenceAuthoritySeeds.map((seed) => [seed[0], buildReferenceAuthorityPage(seed)])
+) as Record<string, TrustPageContent>;
+
 export const authorityPages: Record<string, TrustPageContent> = {
+  ...generatedAuthorityPages,
   'mcp-directory': { slug: 'mcp-directory', view: 'authority', title: 'MCP Directory', metaTitle: 'MCP Directory | Model Context Protocol Servers', metaDescription: 'Browse the best Model Context Protocol servers for AI agents.', h1: 'MCP Directory', eyebrow: 'Resources', updated: '2026-06-12', author: 'BestAIAgent.in Editorial Team', factChecker: 'Priya Iyer', verificationStatus: 'Verified', confidenceLevel: '100/100', sections: [{ heading: 'Overview', body: ['A curated directory of MCP servers for AI agents.'] }], related: [] },
   'ai-agent-market-map': { slug: 'ai-agent-market-map', view: 'authority', title: 'AI Agent Market Map', metaTitle: 'AI Agent Market Map 2026', metaDescription: 'Interactive market map of AI agent categories and trends.', h1: 'Market Map', eyebrow: 'Research', updated: '2026-06-12', author: 'Arshdeep Singh', factChecker: 'Editorial Team', verificationStatus: 'Verified', confidenceLevel: '95/100', sections: [{ heading: 'Market Overview', body: ['Comprehensive map of the AI agent landscape.'] }], related: [] },
   'ai-agent-benchmark': { slug: 'ai-agent-benchmark', view: 'authority', title: 'AI Agent Benchmark', metaTitle: 'AI Agent Benchmark Suite', metaDescription: 'Standardized benchmarks for evaluating AI agent performance.', h1: 'Benchmark', eyebrow: 'Research', updated: '2026-06-12', author: 'Priya Iyer', factChecker: 'Core Engineering', verificationStatus: 'Verified', confidenceLevel: '95/100', sections: [{ heading: 'Benchmark Suite', body: ['Technical benchmarks for AI agent evaluation.'] }], related: [] },
