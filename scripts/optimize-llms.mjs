@@ -34,6 +34,7 @@ const hubs = [
   { path: "/ai-agent-builders-hub", purpose: "No-code, low-code, and developer platforms for building AI agents, RAG workflows, automations, and multi-agent systems." },
   { path: "/voice-ai-hub", purpose: "AI voice agents for Indian call centers, appointment booking, outbound calling, support workflows, Hinglish calls, and DPDP-aware deployments." },
   { path: "/mcp-hub", purpose: "Model Context Protocol explainers, MCP server directories, security guidance, API comparisons, and implementation tutorials." },
+  { path: "/ai-agents-india", purpose: "Complete India AI agent guide covering WhatsApp AI, Hindi/Hinglish voice, DPDP compliance, UPI/GSTN integration, and Indian language AI. Spokes: /whatsapp-ai-agent-india, /voice-ai-india, /dpdp-compliance-ai, /hindi-ai-agent." },
 ];
 
 const content = [

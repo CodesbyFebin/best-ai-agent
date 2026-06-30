@@ -201,6 +201,8 @@ write("llms.txt", [
   "Path: /voice-ai-hub - AI voice agents for Indian call centers, appointment booking, outbound calling, support workflows, Hinglish calls, and DPDP-aware deployments.",
   "### MCP Hub",
   "Path: /mcp-hub - Model Context Protocol explainers, MCP server directories, security guidance, API comparisons, and implementation tutorials.",
+  "### AI Agents India Hub",
+  "Path: /ai-agents-india - Complete India AI agent guide covering WhatsApp AI, Hindi/Hinglish voice, DPDP compliance, UPI/GSTN integration, and Indian language AI. Spokes: /whatsapp-ai-agent-india, /voice-ai-india, /dpdp-compliance-ai, /hindi-ai-agent.",
   "",
   "## Tool Reviews (Scored)",
   "",
