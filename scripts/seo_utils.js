@@ -267,6 +267,7 @@ export const EDITORIAL_ROUTES = [
   },
   {
     path: "/ai-agent-tools",
+    canonicalPath: "/",
     title: "AI Agent Tools Directory",
     description: "Browse the BestAIAgent.in AI agent tools directory for coding agents, business AI, voice agents, builders, workflow automation, pricing, and India-focused use cases.",
   },
@@ -1082,7 +1083,8 @@ export function buildRouteMeta() {
 
   [
     ['/pricing', '/pricing-hub'],
-    ['/tools', '/ai-agent-tools'],
+    ['/ai-agent-tools', '/'],
+    ['/tools', '/best-ai-agent'],
     ['/services', '/custom-ai-agent-development'],
     ['/editorial-board', '/about'],
     ['/our-testing-lab', '/how-we-test-ai-agents'],
