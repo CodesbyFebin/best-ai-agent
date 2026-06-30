@@ -53,6 +53,7 @@ import { publicUrl, SITE_URL } from './lib/siteUrl';
 import TrustPage from './components/TrustPage';
 import AuthorityExpansionBlock from './components/AuthorityExpansionBlock';
 import { ReferenceHomeHero, ReferenceHomeShowcase, ReferenceMcpShowcase, ReferencePillarHero } from './components/ReferenceUiSections';
+import HomepageContentExtension from './components/HomepageContentExtension';
 
 const ProductProfile = lazy(() => import('./components/ProductProfile'));
 const ComparisonPage = lazy(() => import('./components/ComparisonPage'));
@@ -2280,6 +2281,9 @@ try {
                   )}
                 </form>
               </section>
+
+              {/* HOMEPAGE EXTENSION — INDIA #1 PLATFORM SECTIONS */}
+              <HomepageContentExtension onNavigate={navigateToPath} />
             </div>
           )}
 

@@ -43,12 +43,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/ai-agent-builders-hub</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
     <loc>https://bestaiagent.in/ai-agent-cost-report</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -85,13 +79,13 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/alternatives-hub</loc>
+    <loc>https://bestaiagent.in/ai-agents-india</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/business-ai-hub</loc>
+    <loc>https://bestaiagent.in/alternatives-hub</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -173,12 +167,6 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://bestaiagent.in/india-hub</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/industry-report</loc>

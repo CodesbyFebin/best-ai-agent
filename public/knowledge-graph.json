@@ -8,10 +8,28 @@
       "url": "https://bestaiagent.in"
     },
     {
+      "id": "/aadhaar-ekyc-regulatory-sandbox-mcp",
+      "type": "mcp-servers",
+      "label": "Aadhaar eKYC Regulatory Sandbox MCP",
+      "url": "https://bestaiagent.in/aadhaar-ekyc-regulatory-sandbox-mcp"
+    },
+    {
+      "id": "/abdm-unified-health-interface-mcp",
+      "type": "mcp-servers",
+      "label": "ABDM Unified Health Interface (UHI) MCP",
+      "url": "https://bestaiagent.in/abdm-unified-health-interface-mcp"
+    },
+    {
       "id": "/about",
       "type": "editorial",
       "label": "About BestAIAgent.in Editorial Team",
       "url": "https://bestaiagent.in/about"
+    },
+    {
+      "id": "/account-aggregator-sahamati-finance-mcp",
+      "type": "mcp-servers",
+      "label": "Account Aggregator (Sahamati) Finance MCP",
+      "url": "https://bestaiagent.in/account-aggregator-sahamati-finance-mcp"
     },
     {
       "id": "/affiliate-disclosure",
@@ -87,7 +105,7 @@
     },
     {
       "id": "/ai-agent-builders-hub",
-      "type": "hubs",
+      "type": "ai-agent-builders",
       "label": "AI Agent Builders Hub",
       "url": "https://bestaiagent.in/ai-agent-builders-hub"
     },
@@ -344,16 +362,46 @@
       "url": "https://bestaiagent.in/ai-agents-for-workflow-automation"
     },
     {
+      "id": "/ai-agents-india",
+      "type": "hubs",
+      "label": "AI Agents India Hub",
+      "url": "https://bestaiagent.in/ai-agents-india"
+    },
+    {
+      "id": "/ai-appointment-reminder-calls",
+      "type": "voice-ai-agents",
+      "label": "AI Appointment Reminder Calls: Automated Scheduling",
+      "url": "https://bestaiagent.in/ai-appointment-reminder-calls"
+    },
+    {
       "id": "/ai-automation-agency",
       "type": "business-ai-agents",
       "label": "AI Automation Agency: Services, Tools, Pricing & India Guide",
       "url": "https://bestaiagent.in/ai-automation-agency"
     },
     {
+      "id": "/ai-code-completion-tools",
+      "type": "coding-agents",
+      "label": "AI Code Completion Tools: Autocomplete Showdown",
+      "url": "https://bestaiagent.in/ai-code-completion-tools"
+    },
+    {
+      "id": "/ai-code-review-tools",
+      "type": "coding-agents",
+      "label": "AI Code Review Tools: Automated PR Reviews",
+      "url": "https://bestaiagent.in/ai-code-review-tools"
+    },
+    {
       "id": "/ai-coding-agents",
       "type": "coding-agents",
       "label": "AI Coding Agents: Complete Guide for Developers",
       "url": "https://bestaiagent.in/ai-coding-agents"
+    },
+    {
+      "id": "/ai-programming-assistant",
+      "type": "coding-agents",
+      "label": "AI Programming Assistant: Best Tools for Developers 2026",
+      "url": "https://bestaiagent.in/ai-programming-assistant"
     },
     {
       "id": "/ai-support-agent-roi-calculator",
@@ -366,6 +414,30 @@
       "type": "hubs",
       "label": "AI Agent Alternatives Hub",
       "url": "https://bestaiagent.in/alternatives-hub"
+    },
+    {
+      "id": "/amadeus-sabre-gds-travel-reservation-mcp",
+      "type": "mcp-servers",
+      "label": "Amadeus / Sabre GDS Travel Reservation MCP",
+      "url": "https://bestaiagent.in/amadeus-sabre-gds-travel-reservation-mcp"
+    },
+    {
+      "id": "/amazon-dynamodb-nosql-partition-mcp",
+      "type": "mcp-servers",
+      "label": "Amazon DynamoDB NoSQL Partition MCP",
+      "url": "https://bestaiagent.in/amazon-dynamodb-nosql-partition-mcp"
+    },
+    {
+      "id": "/argocd-gitops-synchronization-tracker-mcp",
+      "type": "mcp-servers",
+      "label": "ArgoCD GitOps Synchronization Tracker MCP",
+      "url": "https://bestaiagent.in/argocd-gitops-synchronization-tracker-mcp"
+    },
+    {
+      "id": "/auth0-okta-user-session-lifecycle-mcp",
+      "type": "mcp-servers",
+      "label": "Auth0 / Okta User Session Lifecycle MCP",
+      "url": "https://bestaiagent.in/auth0-okta-user-session-lifecycle-mcp"
     },
     {
       "id": "/authors/arshdeep-singh",
@@ -420,6 +492,12 @@
       "type": "ai-agent-core",
       "label": "Autonomous AI Agents: Definition, Tools, Use Cases & Risks",
       "url": "https://bestaiagent.in/autonomous-ai-agents"
+    },
+    {
+      "id": "/aws-cloudformation-cdk-planner-mcp",
+      "type": "mcp-servers",
+      "label": "AWS CloudFormation / CDK Planner MCP",
+      "url": "https://bestaiagent.in/aws-cloudformation-cdk-planner-mcp"
     },
     {
       "id": "/best-ai-agent",
@@ -518,6 +596,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-agencies"
     },
     {
+      "id": "/best-ai-agent-for-angular",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Angular Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-angular"
+    },
+    {
       "id": "/best-ai-agent-for-appointment-booking",
       "type": "pillars",
       "label": "Best AI Agent for Appointment Booking 2026 – India's Independent Guide",
@@ -552,6 +636,24 @@
       "type": "voice-ai-agents",
       "label": "Best AI Agent for Call Centers: India Setup Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-call-centers"
+    },
+    {
+      "id": "/best-ai-agent-for-code-completion",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Code Completion: Autocomplete Tools",
+      "url": "https://bestaiagent.in/best-ai-agent-for-code-completion"
+    },
+    {
+      "id": "/best-ai-agent-for-code-generation",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Code Generation: Full Files & Functions",
+      "url": "https://bestaiagent.in/best-ai-agent-for-code-generation"
+    },
+    {
+      "id": "/best-ai-agent-for-code-refactoring",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Code Refactoring: Automated Improvements",
+      "url": "https://bestaiagent.in/best-ai-agent-for-code-refactoring"
     },
     {
       "id": "/best-ai-agent-for-code-review",
@@ -626,6 +728,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-developers"
     },
     {
+      "id": "/best-ai-agent-for-documentation",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Documentation: Code Docs & README",
+      "url": "https://bestaiagent.in/best-ai-agent-for-documentation"
+    },
+    {
       "id": "/best-ai-agent-for-ecommerce",
       "type": "pillars",
       "label": "Best AI Agent for Ecommerce 2026 – Top AI Tools for Indian Online Stores",
@@ -662,6 +770,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-frontend-development"
     },
     {
+      "id": "/best-ai-agent-for-go",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Go Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-go"
+    },
+    {
       "id": "/best-ai-agent-for-healthcare-calls",
       "type": "pillars",
       "label": "Best AI Agent for Healthcare Calls 2026 – India's Independent Guide",
@@ -686,6 +800,12 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-ides"
     },
     {
+      "id": "/best-ai-agent-for-inbound-calls",
+      "type": "voice-ai-agents",
+      "label": "Best AI Agent for Inbound Calls: Support & Routing",
+      "url": "https://bestaiagent.in/best-ai-agent-for-inbound-calls"
+    },
+    {
       "id": "/best-ai-agent-for-inbound-support",
       "type": "pillars",
       "label": "Best AI Agent for Inbound Support 2026 – India's Independent Guide",
@@ -696,6 +816,12 @@
       "type": "buyers-guides",
       "label": "Best AI Agent for Indian Businesses: Complete Guide",
       "url": "https://bestaiagent.in/best-ai-agent-for-indian-businesses"
+    },
+    {
+      "id": "/best-ai-agent-for-java",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Java Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-java"
     },
     {
       "id": "/best-ai-agent-for-javascript",
@@ -944,10 +1070,28 @@
       "url": "https://bestaiagent.in/best-ai-agent-for-students"
     },
     {
+      "id": "/best-ai-agent-for-testing",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Testing: QA & Automation",
+      "url": "https://bestaiagent.in/best-ai-agent-for-testing"
+    },
+    {
+      "id": "/best-ai-agent-for-unit-testing",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Unit Testing: Automated Test Generation",
+      "url": "https://bestaiagent.in/best-ai-agent-for-unit-testing"
+    },
+    {
       "id": "/best-ai-agent-for-vs-code",
       "type": "coding-agents",
       "label": "Best AI Agent for VS Code: Cursor, Copilot & Extensions",
       "url": "https://bestaiagent.in/best-ai-agent-for-vs-code"
+    },
+    {
+      "id": "/best-ai-agent-for-vue",
+      "type": "coding-agents",
+      "label": "Best AI Agent for Vue.js Development",
+      "url": "https://bestaiagent.in/best-ai-agent-for-vue"
     },
     {
       "id": "/best-ai-agent-for-whatsapp",
@@ -1112,16 +1256,40 @@
       "url": "https://bestaiagent.in/best-ai-call-center-agent"
     },
     {
+      "id": "/best-ai-code-editor",
+      "type": "coding-agents",
+      "label": "Best AI Code Editor: Cursor, VS Code & Alternatives",
+      "url": "https://bestaiagent.in/best-ai-code-editor"
+    },
+    {
       "id": "/best-ai-coding-agent-reddit",
       "type": "reddit-community-intent",
       "label": "Best AI Coding Agent on Reddit: Developer Picks",
       "url": "https://bestaiagent.in/best-ai-coding-agent-reddit"
     },
     {
+      "id": "/best-ai-coding-assistant",
+      "type": "coding-agents",
+      "label": "Best AI Coding Assistant: Free & Paid Options",
+      "url": "https://bestaiagent.in/best-ai-coding-assistant"
+    },
+    {
+      "id": "/best-ai-coding-tools",
+      "type": "coding-agents",
+      "label": "Best AI Coding Tools in 2026: Complete List",
+      "url": "https://bestaiagent.in/best-ai-coding-tools"
+    },
+    {
       "id": "/best-ai-phone-agent",
       "type": "pillars",
       "label": "Best AI Phone Agent 2026 – India's Independent Guide",
       "url": "https://bestaiagent.in/best-ai-phone-agent"
+    },
+    {
+      "id": "/best-ai-programming-assistant",
+      "type": "coding-agents",
+      "label": "Best AI Programming Assistant: Cursor, Copilot & More",
+      "url": "https://bestaiagent.in/best-ai-programming-assistant"
     },
     {
       "id": "/best-ai-tools",
@@ -1140,6 +1308,18 @@
       "type": "voice-ai-agents",
       "label": "Best AI Voice Agent Platform: Vapi, Retell & Bland.ai",
       "url": "https://bestaiagent.in/best-ai-voice-agent-platform"
+    },
+    {
+      "id": "/best-ai-voice-cloning",
+      "type": "voice-ai-agents",
+      "label": "Best AI Voice Cloning: Synthetic Voice Creation",
+      "url": "https://bestaiagent.in/best-ai-voice-cloning"
+    },
+    {
+      "id": "/best-ai-voice-generator",
+      "type": "voice-ai-agents",
+      "label": "Best AI Voice Generator: TTS & Synthetic Voices",
+      "url": "https://bestaiagent.in/best-ai-voice-generator"
     },
     {
       "id": "/best-free-ai-agent-builder",
@@ -1178,6 +1358,12 @@
       "url": "https://bestaiagent.in/best-free-open-source-ai-agents"
     },
     {
+      "id": "/best-hindi-voice-agent",
+      "type": "voice-ai-agents",
+      "label": "Best Hindi Voice Agent: Hinglish AI Calls 2026",
+      "url": "https://bestaiagent.in/best-hindi-voice-agent"
+    },
+    {
       "id": "/best-mcp-servers",
       "type": "mcp",
       "label": "Best MCP Servers 2026 – Complete Directory for Indian Developers",
@@ -1202,10 +1388,22 @@
       "url": "https://bestaiagent.in/best-open-source-ai-agents"
     },
     {
+      "id": "/best-text-to-speech-ai",
+      "type": "voice-ai-agents",
+      "label": "Best Text-to-Speech AI: TTS for Indian Languages",
+      "url": "https://bestaiagent.in/best-text-to-speech-ai"
+    },
+    {
       "id": "/blog",
       "type": "ai-agent-core",
       "label": "AI Agent Blog: News, Guides, Comparisons & Market Updates",
       "url": "https://bestaiagent.in/blog"
+    },
+    {
+      "id": "/bloomberg-terminal-data-stream-mcp",
+      "type": "mcp-servers",
+      "label": "Bloomberg Terminal Data Stream MCP",
+      "url": "https://bestaiagent.in/bloomberg-terminal-data-stream-mcp"
     },
     {
       "id": "/browser-automation-server",
@@ -1224,6 +1422,12 @@
       "type": "entity-pages",
       "label": "AI Agent Builders Entity Directory",
       "url": "https://bestaiagent.in/builders"
+    },
+    {
+      "id": "/building-custom-mcp-server",
+      "type": "mcp-servers",
+      "label": "Building Custom MCP Server: Step-by-Step",
+      "url": "https://bestaiagent.in/building-custom-mcp-server"
     },
     {
       "id": "/business-agents",
@@ -1245,7 +1449,7 @@
     },
     {
       "id": "/business-ai-hub",
-      "type": "hubs",
+      "type": "business-ai-agents",
       "label": "Business AI Agents Hub",
       "url": "https://bestaiagent.in/business-ai-hub"
     },
@@ -1274,6 +1478,24 @@
       "url": "https://bestaiagent.in/calculators-hub"
     },
     {
+      "id": "/canvas-moodle-lms-academic-progress-mcp",
+      "type": "mcp-servers",
+      "label": "Canvas / Moodle LMS Academic Progress MCP",
+      "url": "https://bestaiagent.in/canvas-moodle-lms-academic-progress-mcp"
+    },
+    {
+      "id": "/cassandra-scylladb-wide-column-mcp",
+      "type": "mcp-servers",
+      "label": "Cassandra / ScyllaDB Wide-Column MCP",
+      "url": "https://bestaiagent.in/cassandra-scylladb-wide-column-mcp"
+    },
+    {
+      "id": "/cersai-collateral-asset-risk-tracker-mcp",
+      "type": "mcp-servers",
+      "label": "CERSAI Collateral Asset Risk Tracker MCP",
+      "url": "https://bestaiagent.in/cersai-collateral-asset-risk-tracker-mcp"
+    },
+    {
       "id": "/chatgpt-vs-claude",
       "type": "comparisons",
       "label": "ChatGPT vs Claude",
@@ -1290,6 +1512,24 @@
       "type": "comparisons",
       "label": "ChatGPT vs Perplexity",
       "url": "https://bestaiagent.in/chatgpt-vs-perplexity"
+    },
+    {
+      "id": "/checkmarx-veracode-sast-vulnerability-mcp",
+      "type": "mcp-servers",
+      "label": "Checkmarx / Veracode SAST Vulnerability MCP",
+      "url": "https://bestaiagent.in/checkmarx-veracode-sast-vulnerability-mcp"
+    },
+    {
+      "id": "/chromadb-local-vector-storage-mcp",
+      "type": "mcp-servers",
+      "label": "ChromaDB Local Vector Storage MCP",
+      "url": "https://bestaiagent.in/chromadb-local-vector-storage-mcp"
+    },
+    {
+      "id": "/cisco-meraki-network-infrastructure-mcp",
+      "type": "mcp-servers",
+      "label": "Cisco Meraki Network Infrastructure MCP",
+      "url": "https://bestaiagent.in/cisco-meraki-network-infrastructure-mcp"
     },
     {
       "id": "/claude-code",
@@ -1322,10 +1562,22 @@
       "url": "https://bestaiagent.in/claude-code-reddit-review"
     },
     {
+      "id": "/claude-code-review",
+      "type": "coding-agents",
+      "label": "Claude Code Review: Terminal AI Agent for Developers",
+      "url": "https://bestaiagent.in/claude-code-review"
+    },
+    {
       "id": "/claude-code-vs-codex",
       "type": "comparisons",
       "label": "Claude Code vs OpenAI Codex",
       "url": "https://bestaiagent.in/claude-code-vs-codex"
+    },
+    {
+      "id": "/claude-code-vs-copilot",
+      "type": "coding-agents",
+      "label": "Claude Code vs GitHub Copilot: Coding Agent Comparison",
+      "url": "https://bestaiagent.in/claude-code-vs-copilot"
     },
     {
       "id": "/claude-code-vs-cursor",
@@ -1350,6 +1602,30 @@
       "type": "comparisons",
       "label": "Clay AI vs Apollo AI – Which Lead Generation Platform Wins in 2026?",
       "url": "https://bestaiagent.in/clay-vs-apollo"
+    },
+    {
+      "id": "/clickhouse-realtime-analytics-pipeline-mcp",
+      "type": "mcp-servers",
+      "label": "ClickHouse Real-Time Analytics Pipeline MCP",
+      "url": "https://bestaiagent.in/clickhouse-realtime-analytics-pipeline-mcp"
+    },
+    {
+      "id": "/clio-legal-practice-management-mcp",
+      "type": "mcp-servers",
+      "label": "Clio Legal Practice Management MCP",
+      "url": "https://bestaiagent.in/clio-legal-practice-management-mcp"
+    },
+    {
+      "id": "/cloudflare-workers-deployment-mcp",
+      "type": "mcp-servers",
+      "label": "Cloudflare Workers & Pages Deployment Handler MCP",
+      "url": "https://bestaiagent.in/cloudflare-workers-deployment-mcp"
+    },
+    {
+      "id": "/cloudtrail-activity-log-integrity-auditor-mcp",
+      "type": "mcp-servers",
+      "label": "CloudTrail / Activity Log Integrity Auditor MCP",
+      "url": "https://bestaiagent.in/cloudtrail-activity-log-integrity-auditor-mcp"
     },
     {
       "id": "/codex-alternatives",
@@ -1422,6 +1698,12 @@
       "type": "comparisons",
       "label": "GitHub Copilot vs OpenAI Codex",
       "url": "https://bestaiagent.in/copilot-vs-codex"
+    },
+    {
+      "id": "/corelogic-property-data-aggregator-mcp",
+      "type": "mcp-servers",
+      "label": "CoreLogic Property Data Aggregator MCP",
+      "url": "https://bestaiagent.in/corelogic-property-data-aggregator-mcp"
     },
     {
       "id": "/corrections-policy",
@@ -1562,10 +1844,28 @@
       "url": "https://bestaiagent.in/custom-ai-agent-development"
     },
     {
+      "id": "/cwc-cold-storage-environment-monitor-mcp",
+      "type": "mcp-servers",
+      "label": "CWC Cold Storage Environment Monitor MCP",
+      "url": "https://bestaiagent.in/cwc-cold-storage-environment-monitor-mcp"
+    },
+    {
       "id": "/data-deletion-request",
       "type": "editorial",
       "label": "Data Deletion Request",
       "url": "https://bestaiagent.in/data-deletion-request"
+    },
+    {
+      "id": "/databricks-delta-lake-pipeline-mcp",
+      "type": "mcp-servers",
+      "label": "Databricks Delta Lake Pipeline MCP",
+      "url": "https://bestaiagent.in/databricks-delta-lake-pipeline-mcp"
+    },
+    {
+      "id": "/datadog-newrelic-apm-log-weaver-mcp",
+      "type": "mcp-servers",
+      "label": "Datadog / New Relic APM Log Weaver MCP",
+      "url": "https://bestaiagent.in/datadog-newrelic-apm-log-weaver-mcp"
     },
     {
       "id": "/debugging-mcp-servers",
@@ -1610,10 +1910,22 @@
       "url": "https://bestaiagent.in/dify-vs-langgraph"
     },
     {
+      "id": "/digilocker-user-consented-vault-mcp",
+      "type": "mcp-servers",
+      "label": "DigiLocker User-Consented Vault MCP",
+      "url": "https://bestaiagent.in/digilocker-user-consented-vault-mcp"
+    },
+    {
       "id": "/directories-hub",
       "type": "hubs",
       "label": "AI Agent Directories Hub",
       "url": "https://bestaiagent.in/directories-hub"
+    },
+    {
+      "id": "/docker-swarm-compose-runtime-mcp",
+      "type": "mcp-servers",
+      "label": "Docker Swarm / Compose Runtime Control MCP",
+      "url": "https://bestaiagent.in/docker-swarm-compose-runtime-mcp"
     },
     {
       "id": "/dpdp-act-ai-compliance",
@@ -1622,10 +1934,28 @@
       "url": "https://bestaiagent.in/dpdp-act-ai-compliance"
     },
     {
+      "id": "/dpdp-compliance-ai",
+      "type": "industry-ai-agents",
+      "label": "DPDP Act 2023 Compliance for AI Agents: Complete Checklist",
+      "url": "https://bestaiagent.in/dpdp-compliance-ai"
+    },
+    {
+      "id": "/ecourts-india-njdg-document-scraper-mcp",
+      "type": "mcp-servers",
+      "label": "E-Courts India NJDG Document Scraper MCP",
+      "url": "https://bestaiagent.in/ecourts-india-njdg-document-scraper-mcp"
+    },
+    {
       "id": "/editorial-policy",
       "type": "editorial",
       "label": "Editorial Policy, Independence, Corrections, and Affiliate Disclosure",
       "url": "https://bestaiagent.in/editorial-policy"
+    },
+    {
+      "id": "/elasticsearch-cluster-shard-tuner-mcp",
+      "type": "mcp-servers",
+      "label": "Elasticsearch Cluster Shard Tuner MCP",
+      "url": "https://bestaiagent.in/elasticsearch-cluster-shard-tuner-mcp"
     },
     {
       "id": "/entity",
@@ -1640,6 +1970,36 @@
       "url": "https://bestaiagent.in/entity-hub"
     },
     {
+      "id": "/epfo-corporate-compliance-auditor-mcp",
+      "type": "mcp-servers",
+      "label": "EPFO Corporate Compliance Auditor MCP",
+      "url": "https://bestaiagent.in/epfo-corporate-compliance-auditor-mcp"
+    },
+    {
+      "id": "/epic-cerner-ehr-interactivity-mcp",
+      "type": "mcp-servers",
+      "label": "Epic / Cerner EHR Interactivity MCP",
+      "url": "https://bestaiagent.in/epic-cerner-ehr-interactivity-mcp"
+    },
+    {
+      "id": "/fastag-national-toll-telemetry-mcp",
+      "type": "mcp-servers",
+      "label": "FASTag National Toll Telemetry MCP",
+      "url": "https://bestaiagent.in/fastag-national-toll-telemetry-mcp"
+    },
+    {
+      "id": "/fedex-ups-dhl-global-logistics-mcp",
+      "type": "mcp-servers",
+      "label": "FedEx / UPS / DHL Global Logistics MCP",
+      "url": "https://bestaiagent.in/fedex-ups-dhl-global-logistics-mcp"
+    },
+    {
+      "id": "/fhir-healthcare-interoperability-mcp",
+      "type": "mcp-servers",
+      "label": "FHIR Healthcare Interoperability MCP",
+      "url": "https://bestaiagent.in/fhir-healthcare-interoperability-mcp"
+    },
+    {
       "id": "/filesystem-server",
       "type": "mcp",
       "label": "Filesystem Server - Complete Guide to MCP File Operations",
@@ -1650,6 +2010,24 @@
       "type": "mcp",
       "label": "Filesystem MCP vs Database MCP Servers - Detailed Comparison",
       "url": "https://bestaiagent.in/filesystem-vs-database-mcp"
+    },
+    {
+      "id": "/finops-token-burn-budget-firewall-mcp",
+      "type": "mcp-servers",
+      "label": "FinOps Token Burn Budget Firewall MCP",
+      "url": "https://bestaiagent.in/finops-token-burn-budget-firewall-mcp"
+    },
+    {
+      "id": "/fleetio-telematics-fleet-maintenance-mcp",
+      "type": "mcp-servers",
+      "label": "Fleetio Telematics Fleet Maintenance MCP",
+      "url": "https://bestaiagent.in/fleetio-telematics-fleet-maintenance-mcp"
+    },
+    {
+      "id": "/flexport-global-freight-forwarding-mcp",
+      "type": "mcp-servers",
+      "label": "Flexport Global Freight Forwarding MCP",
+      "url": "https://bestaiagent.in/flexport-global-freight-forwarding-mcp"
     },
     {
       "id": "/flowise-alternatives",
@@ -1718,6 +2096,12 @@
       "url": "https://bestaiagent.in/free-agents-directory"
     },
     {
+      "id": "/free-ai-agent-for-coding",
+      "type": "coding-agents",
+      "label": "Free AI Coding Agents: Best Open-Source Options 2026",
+      "url": "https://bestaiagent.in/free-ai-agent-for-coding"
+    },
+    {
       "id": "/free-ai-agents",
       "type": "free-ai-agents",
       "label": "Free AI Agents: Best Free, Freemium & Open-Source Options",
@@ -1736,6 +2120,12 @@
       "url": "https://bestaiagent.in/free-mcp-servers"
     },
     {
+      "id": "/freshdesk-zendesk-ticket-semantic-sync-mcp",
+      "type": "mcp-servers",
+      "label": "Freshdesk / Zendesk Ticket Semantic Sync MCP",
+      "url": "https://bestaiagent.in/freshdesk-zendesk-ticket-semantic-sync-mcp"
+    },
+    {
       "id": "/future-of-ai-agents",
       "type": "core",
       "label": "Future of AI Agents 2026–2030 – Predictions for India",
@@ -1748,10 +2138,22 @@
       "url": "https://bestaiagent.in/gaia-benchmark-guide"
     },
     {
+      "id": "/gem-procurement-mcp",
+      "type": "mcp-servers",
+      "label": "GeM Government e-Marketplace Procurement MCP",
+      "url": "https://bestaiagent.in/gem-procurement-mcp"
+    },
+    {
       "id": "/getting-started-with-mcp",
       "type": "mcp",
       "label": "Getting Started with MCP - Complete Beginner's Guide",
       "url": "https://bestaiagent.in/getting-started-with-mcp"
+    },
+    {
+      "id": "/github-actions-pipeline-debugger-mcp",
+      "type": "mcp-servers",
+      "label": "GitHub Actions Advanced Pipeline Debugger MCP",
+      "url": "https://bestaiagent.in/github-actions-pipeline-debugger-mcp"
     },
     {
       "id": "/github-copilot",
@@ -1790,6 +2192,12 @@
       "url": "https://bestaiagent.in/github-copilot-vs-amazon-codewhisperer"
     },
     {
+      "id": "/github-copilot-vs-cursor",
+      "type": "coding-agents",
+      "label": "GitHub Copilot vs Cursor: Which AI Coding Agent Is Better?",
+      "url": "https://bestaiagent.in/github-copilot-vs-cursor"
+    },
+    {
       "id": "/github-copilot-vs-tabnine",
       "type": "comparisons",
       "label": "GitHub Copilot vs Tabnine",
@@ -1814,10 +2222,46 @@
       "url": "https://bestaiagent.in/glossary-hub"
     },
     {
+      "id": "/google-bigquery-federated-storage-mcp",
+      "type": "mcp-servers",
+      "label": "Google BigQuery Federated Storage MCP",
+      "url": "https://bestaiagent.in/google-bigquery-federated-storage-mcp"
+    },
+    {
       "id": "/google-drive-ai-agent-workspace",
       "type": "editorial",
       "label": "Google Drive AI Agent Workspace",
       "url": "https://bestaiagent.in/google-drive-ai-agent-workspace"
+    },
+    {
+      "id": "/grafana-dashboard-schema-builder-mcp",
+      "type": "mcp-servers",
+      "label": "Grafana Dashboard Schema Builder MCP",
+      "url": "https://bestaiagent.in/grafana-dashboard-schema-builder-mcp"
+    },
+    {
+      "id": "/gstn-e-invoice-reconciliation-mcp",
+      "type": "mcp-servers",
+      "label": "GSTN E-Invoice Reconciliation MCP",
+      "url": "https://bestaiagent.in/gstn-e-invoice-reconciliation-mcp"
+    },
+    {
+      "id": "/hackerone-bug-bounty-triage-mcp",
+      "type": "mcp-servers",
+      "label": "HackerOne Bug Bounty Triage MCP",
+      "url": "https://bestaiagent.in/hackerone-bug-bounty-triage-mcp"
+    },
+    {
+      "id": "/hashicorp-vault-secret-rotator-mcp",
+      "type": "mcp-servers",
+      "label": "HashiCorp Vault Secret Rotator MCP",
+      "url": "https://bestaiagent.in/hashicorp-vault-secret-rotator-mcp"
+    },
+    {
+      "id": "/hindi-ai-agent",
+      "type": "industry-ai-agents",
+      "label": "Hindi AI Agent: Best AI for Hindi, Hinglish & Indian Languages 2026",
+      "url": "https://bestaiagent.in/hindi-ai-agent"
     },
     {
       "id": "/hosting-platforms",
@@ -1970,6 +2414,12 @@
       "url": "https://bestaiagent.in/hubspot-ai-vs-salesforce-ai"
     },
     {
+      "id": "/hubspot-multi-hub-operations-mcp",
+      "type": "mcp-servers",
+      "label": "HubSpot Multi-Hub Operations MCP",
+      "url": "https://bestaiagent.in/hubspot-multi-hub-operations-mcp"
+    },
+    {
       "id": "/humaneval-guide",
       "type": "research",
       "label": "HumanEval Guide 2026 – Complete Explanation",
@@ -1988,10 +2438,10 @@
       "url": "https://bestaiagent.in/india"
     },
     {
-      "id": "/india-hub",
-      "type": "hubs",
-      "label": "AI Agents India Hub",
-      "url": "https://bestaiagent.in/india-hub"
+      "id": "/india-post-tracking-logistics-mcp",
+      "type": "mcp-servers",
+      "label": "India Post Tracking & Logistics Core MCP",
+      "url": "https://bestaiagent.in/india-post-tracking-logistics-mcp"
     },
     {
       "id": "/industry-ai-agents-hub",
@@ -2004,6 +2454,12 @@
       "type": "editorial",
       "label": "AI Agent Industry Report 2026",
       "url": "https://bestaiagent.in/industry-report"
+    },
+    {
+      "id": "/infor-cloudsuite-supply-chain-mcp",
+      "type": "mcp-servers",
+      "label": "Infor CloudSuite Supply Chain MCP",
+      "url": "https://bestaiagent.in/infor-cloudsuite-supply-chain-mcp"
     },
     {
       "id": "/intercom-alternatives",
@@ -2054,6 +2510,24 @@
       "url": "https://bestaiagent.in/jasper-vs-copy-ai"
     },
     {
+      "id": "/jira-github-continuous-sync-mcp",
+      "type": "mcp-servers",
+      "label": "Jira-GitHub Continuous Sync MCP",
+      "url": "https://bestaiagent.in/jira-github-continuous-sync-mcp"
+    },
+    {
+      "id": "/kafka-cluster-topology-inspector-mcp",
+      "type": "mcp-servers",
+      "label": "Kafka Cluster Topology Inspector MCP",
+      "url": "https://bestaiagent.in/kafka-cluster-topology-inspector-mcp"
+    },
+    {
+      "id": "/kubernetes-multi-cluster-orchestrator-mcp",
+      "type": "mcp-servers",
+      "label": "Kubernetes Multi-Cluster Orchestrator MCP",
+      "url": "https://bestaiagent.in/kubernetes-multi-cluster-orchestrator-mcp"
+    },
+    {
       "id": "/langchain-vs-llamaindex",
       "type": "comparisons",
       "label": "LangChain vs LlamaIndex",
@@ -2090,6 +2564,12 @@
       "url": "https://bestaiagent.in/langgraph-vs-crewai"
     },
     {
+      "id": "/lexisnexis-corporate-kyb-mcp",
+      "type": "mcp-servers",
+      "label": "LexisNexis Corporate KYB MCP",
+      "url": "https://bestaiagent.in/lexisnexis-corporate-kyb-mcp"
+    },
+    {
       "id": "/llamaindex-vs-langchain",
       "type": "comparisons",
       "label": "LlamaIndex vs LangChain – Which Framework Wins in 2026?",
@@ -2108,16 +2588,178 @@
       "url": "https://bestaiagent.in/longtail-hub"
     },
     {
+      "id": "/lorawan-smart-city-sensor-network-mcp",
+      "type": "mcp-servers",
+      "label": "LoRaWAN Smart City Sensor Network MCP",
+      "url": "https://bestaiagent.in/lorawan-smart-city-sensor-network-mcp"
+    },
+    {
+      "id": "/maharera-state-rera-compliance-mcp",
+      "type": "mcp-servers",
+      "label": "MahaRERA / State RERA Compliance MCP",
+      "url": "https://bestaiagent.in/maharera-state-rera-compliance-mcp"
+    },
+    {
+      "id": "/manhattan-associates-wms-bridge-mcp",
+      "type": "mcp-servers",
+      "label": "Manhattan Associates WMS Bridge MCP",
+      "url": "https://bestaiagent.in/manhattan-associates-wms-bridge-mcp"
+    },
+    {
+      "id": "/mca-corporate-affairs-portal-mcp",
+      "type": "mcp-servers",
+      "label": "MCA Corporate Affairs Portal MCP",
+      "url": "https://bestaiagent.in/mca-corporate-affairs-portal-mcp"
+    },
+    {
+      "id": "/mcp-api-integration",
+      "type": "mcp-servers",
+      "label": "MCP API Integration: REST & GraphQL Patterns",
+      "url": "https://bestaiagent.in/mcp-api-integration"
+    },
+    {
+      "id": "/mcp-authentication",
+      "type": "mcp-servers",
+      "label": "MCP Authentication: API Keys & OAuth",
+      "url": "https://bestaiagent.in/mcp-authentication"
+    },
+    {
+      "id": "/mcp-backup-restore",
+      "type": "mcp-servers",
+      "label": "MCP Backup & Restore: Data Protection",
+      "url": "https://bestaiagent.in/mcp-backup-restore"
+    },
+    {
+      "id": "/mcp-best-practices",
+      "type": "mcp-servers",
+      "label": "MCP Best Practices: Production Checklist",
+      "url": "https://bestaiagent.in/mcp-best-practices"
+    },
+    {
+      "id": "/mcp-brave-search",
+      "type": "mcp-servers",
+      "label": "MCP Brave Search: Web Search Integration",
+      "url": "https://bestaiagent.in/mcp-brave-search"
+    },
+    {
+      "id": "/mcp-case-studies",
+      "type": "mcp-servers",
+      "label": "MCP Case Studies: Real Implementation Stories",
+      "url": "https://bestaiagent.in/mcp-case-studies"
+    },
+    {
+      "id": "/mcp-ci-cd",
+      "type": "mcp-servers",
+      "label": "MCP CI/CD: Automated Testing & Deployment",
+      "url": "https://bestaiagent.in/mcp-ci-cd"
+    },
+    {
+      "id": "/mcp-client-integration",
+      "type": "mcp-servers",
+      "label": "MCP Client Integration: Connect Agents to Servers",
+      "url": "https://bestaiagent.in/mcp-client-integration"
+    },
+    {
+      "id": "/mcp-community-resources",
+      "type": "mcp-servers",
+      "label": "MCP Community Resources: Forums & GitHub",
+      "url": "https://bestaiagent.in/mcp-community-resources"
+    },
+    {
+      "id": "/mcp-community-tips",
+      "type": "mcp-servers",
+      "label": "MCP Community Tips: Expert Advice",
+      "url": "https://bestaiagent.in/mcp-community-tips"
+    },
+    {
+      "id": "/mcp-cost-calculator",
+      "type": "mcp-servers",
+      "label": "MCP Cost Calculator: Hosting & API Pricing",
+      "url": "https://bestaiagent.in/mcp-cost-calculator"
+    },
+    {
+      "id": "/mcp-data-sources",
+      "type": "mcp-servers",
+      "label": "MCP Data Sources: File, Database, API Connectors",
+      "url": "https://bestaiagent.in/mcp-data-sources"
+    },
+    {
+      "id": "/mcp-database-server",
+      "type": "mcp-servers",
+      "label": "MCP Database Server: PostgreSQL & MySQL Integration",
+      "url": "https://bestaiagent.in/mcp-database-server"
+    },
+    {
+      "id": "/mcp-deployment-patterns",
+      "type": "mcp-servers",
+      "label": "MCP Deployment Patterns: Production Strategies",
+      "url": "https://bestaiagent.in/mcp-deployment-patterns"
+    },
+    {
       "id": "/mcp-directory",
       "type": "editorial",
       "label": "MCP Directory",
       "url": "https://bestaiagent.in/mcp-directory"
     },
     {
+      "id": "/mcp-docker-deployment",
+      "type": "mcp-servers",
+      "label": "MCP Docker Deployment: Container Setup",
+      "url": "https://bestaiagent.in/mcp-docker-deployment"
+    },
+    {
+      "id": "/mcp-faq",
+      "type": "mcp-servers",
+      "label": "MCP FAQ: Common Questions Answered",
+      "url": "https://bestaiagent.in/mcp-faq"
+    },
+    {
+      "id": "/mcp-file-system-server",
+      "type": "mcp-servers",
+      "label": "MCP File System Server: Setup & Usage",
+      "url": "https://bestaiagent.in/mcp-file-system-server"
+    },
+    {
       "id": "/mcp-for-ai-agents",
       "type": "mcp-servers",
       "label": "MCP for AI Agents: Integration Guide",
       "url": "https://bestaiagent.in/mcp-for-ai-agents"
+    },
+    {
+      "id": "/mcp-git-server",
+      "type": "mcp-servers",
+      "label": "MCP Git Server: Version Control Integration",
+      "url": "https://bestaiagent.in/mcp-git-server"
+    },
+    {
+      "id": "/mcp-github-integration",
+      "type": "mcp-servers",
+      "label": "MCP GitHub Integration: Repository Automation",
+      "url": "https://bestaiagent.in/mcp-github-integration"
+    },
+    {
+      "id": "/mcp-google-drive",
+      "type": "mcp-servers",
+      "label": "MCP Google Drive: File Access & Management",
+      "url": "https://bestaiagent.in/mcp-google-drive"
+    },
+    {
+      "id": "/mcp-gst-compliance",
+      "type": "mcp-servers",
+      "label": "MCP GST Compliance: Invoice & Tax Notes",
+      "url": "https://bestaiagent.in/mcp-gst-compliance"
+    },
+    {
+      "id": "/mcp-health-checks",
+      "type": "mcp-servers",
+      "label": "MCP Health Checks: Server Status Monitoring",
+      "url": "https://bestaiagent.in/mcp-health-checks"
+    },
+    {
+      "id": "/mcp-hindi-support",
+      "type": "mcp-servers",
+      "label": "MCP Hindi Support: Multilingual Agents",
+      "url": "https://bestaiagent.in/mcp-hindi-support"
     },
     {
       "id": "/mcp-hosting",
@@ -2132,10 +2774,76 @@
       "url": "https://bestaiagent.in/mcp-hub"
     },
     {
+      "id": "/mcp-india-deployment",
+      "type": "mcp-servers",
+      "label": "MCP India Deployment: Mumbai Region Setup",
+      "url": "https://bestaiagent.in/mcp-india-deployment"
+    },
+    {
+      "id": "/mcp-kubernetes-deploy",
+      "type": "mcp-servers",
+      "label": "MCP Kubernetes Deployment: K8s Orchestration",
+      "url": "https://bestaiagent.in/mcp-kubernetes-deploy"
+    },
+    {
+      "id": "/mcp-logging",
+      "type": "mcp-servers",
+      "label": "MCP Logging: Structured Logs & Debugging",
+      "url": "https://bestaiagent.in/mcp-logging"
+    },
+    {
       "id": "/mcp-marketplace",
       "type": "mcp-servers",
       "label": "MCP Marketplace: Find & Deploy Servers",
       "url": "https://bestaiagent.in/mcp-marketplace"
+    },
+    {
+      "id": "/mcp-mocking",
+      "type": "mcp-servers",
+      "label": "MCP Mocking: Test Server Setup",
+      "url": "https://bestaiagent.in/mcp-mocking"
+    },
+    {
+      "id": "/mcp-monitoring",
+      "type": "mcp-servers",
+      "label": "MCP Monitoring: Logs, Metrics & Alerts",
+      "url": "https://bestaiagent.in/mcp-monitoring"
+    },
+    {
+      "id": "/mcp-nodejs-sdk",
+      "type": "mcp-servers",
+      "label": "MCP Node.js SDK: JavaScript Implementation",
+      "url": "https://bestaiagent.in/mcp-nodejs-sdk"
+    },
+    {
+      "id": "/mcp-notion-integration",
+      "type": "mcp-servers",
+      "label": "MCP Notion Integration: Workspace Connection",
+      "url": "https://bestaiagent.in/mcp-notion-integration"
+    },
+    {
+      "id": "/mcp-open-source-projects",
+      "type": "mcp-servers",
+      "label": "MCP Open Source Projects: Top Repositories",
+      "url": "https://bestaiagent.in/mcp-open-source-projects"
+    },
+    {
+      "id": "/mcp-performance-optimization",
+      "type": "mcp-servers",
+      "label": "MCP Performance Optimization: Speed & Scaling",
+      "url": "https://bestaiagent.in/mcp-performance-optimization"
+    },
+    {
+      "id": "/mcp-python-sdk",
+      "type": "mcp-servers",
+      "label": "MCP Python SDK: Developer Guide",
+      "url": "https://bestaiagent.in/mcp-python-sdk"
+    },
+    {
+      "id": "/mcp-scaling",
+      "type": "mcp-servers",
+      "label": "MCP Scaling: Multiple Agents & Concurrent Access",
+      "url": "https://bestaiagent.in/mcp-scaling"
     },
     {
       "id": "/mcp-security",
@@ -2144,10 +2852,22 @@
       "url": "https://bestaiagent.in/mcp-security"
     },
     {
+      "id": "/mcp-security-best-practices",
+      "type": "mcp-servers",
+      "label": "MCP Security Best Practices: Production Guide",
+      "url": "https://bestaiagent.in/mcp-security-best-practices"
+    },
+    {
       "id": "/mcp-server-entities",
       "type": "entity-pages",
       "label": "MCP Server Entity Directory",
       "url": "https://bestaiagent.in/mcp-server-entities"
+    },
+    {
+      "id": "/mcp-server-setup-guide",
+      "type": "mcp-servers",
+      "label": "MCP Server Setup Guide: Installation & Configuration",
+      "url": "https://bestaiagent.in/mcp-server-setup-guide"
     },
     {
       "id": "/mcp-servers",
@@ -2162,10 +2882,112 @@
       "url": "https://bestaiagent.in/mcp-servers-directory"
     },
     {
+      "id": "/mcp-slack-integration",
+      "type": "mcp-servers",
+      "label": "MCP Slack Integration: Bot Setup Guide",
+      "url": "https://bestaiagent.in/mcp-slack-integration"
+    },
+    {
+      "id": "/mcp-sqlite-server",
+      "type": "mcp-servers",
+      "label": "MCP SQLite Server: Lightweight Database Integration",
+      "url": "https://bestaiagent.in/mcp-sqlite-server"
+    },
+    {
+      "id": "/mcp-success-stories",
+      "type": "mcp-servers",
+      "label": "MCP Success Stories: Customer Results",
+      "url": "https://bestaiagent.in/mcp-success-stories"
+    },
+    {
+      "id": "/mcp-testing",
+      "type": "mcp-servers",
+      "label": "MCP Testing: Unit Tests & Integration",
+      "url": "https://bestaiagent.in/mcp-testing"
+    },
+    {
+      "id": "/mcp-testing-frameworks",
+      "type": "mcp-servers",
+      "label": "MCP Testing Frameworks: Tools & Libraries",
+      "url": "https://bestaiagent.in/mcp-testing-frameworks"
+    },
+    {
+      "id": "/mcp-tool-definition",
+      "type": "mcp-servers",
+      "label": "MCP Tool Definition: Schema & Examples",
+      "url": "https://bestaiagent.in/mcp-tool-definition"
+    },
+    {
+      "id": "/mcp-troubleshooting",
+      "type": "mcp-servers",
+      "label": "MCP Troubleshooting: Common Issues & Fixes",
+      "url": "https://bestaiagent.in/mcp-troubleshooting"
+    },
+    {
+      "id": "/mcp-typescript-sdk",
+      "type": "mcp-servers",
+      "label": "MCP TypeScript SDK: Type-Safe Development",
+      "url": "https://bestaiagent.in/mcp-typescript-sdk"
+    },
+    {
+      "id": "/mcp-update-june-2026",
+      "type": "mcp-servers",
+      "label": "MCP Update June 2026: New Features",
+      "url": "https://bestaiagent.in/mcp-update-june-2026"
+    },
+    {
+      "id": "/mcp-uptime",
+      "type": "mcp-servers",
+      "label": "MCP Server Uptime: Reliability Guide",
+      "url": "https://bestaiagent.in/mcp-uptime"
+    },
+    {
+      "id": "/mcp-use-case-analytics",
+      "type": "mcp-servers",
+      "label": "MCP for Analytics: Data Dashboards & BI",
+      "url": "https://bestaiagent.in/mcp-use-case-analytics"
+    },
+    {
+      "id": "/mcp-use-case-crm",
+      "type": "mcp-servers",
+      "label": "MCP for CRM: Salesforce & HubSpot",
+      "url": "https://bestaiagent.in/mcp-use-case-crm"
+    },
+    {
+      "id": "/mcp-use-case-ecommerce",
+      "type": "mcp-servers",
+      "label": "MCP for E-Commerce: Product Catalog & Orders",
+      "url": "https://bestaiagent.in/mcp-use-case-ecommerce"
+    },
+    {
+      "id": "/mcp-use-case-education",
+      "type": "mcp-servers",
+      "label": "MCP for Education: LMS & Student Data",
+      "url": "https://bestaiagent.in/mcp-use-case-education"
+    },
+    {
+      "id": "/mcp-use-case-finance",
+      "type": "mcp-servers",
+      "label": "MCP for Finance: Accounting & Invoicing",
+      "url": "https://bestaiagent.in/mcp-use-case-finance"
+    },
+    {
+      "id": "/mcp-use-case-healthcare",
+      "type": "mcp-servers",
+      "label": "MCP for Healthcare: HIPAA & DPDP",
+      "url": "https://bestaiagent.in/mcp-use-case-healthcare"
+    },
+    {
       "id": "/mcp-use-cases",
       "type": "mcp-servers",
       "label": "MCP Use Cases: Real-World AI Agent Integrations",
       "url": "https://bestaiagent.in/mcp-use-cases"
+    },
+    {
+      "id": "/mcp-version-control",
+      "type": "mcp-servers",
+      "label": "MCP Version Control: Git Workflows",
+      "url": "https://bestaiagent.in/mcp-version-control"
     },
     {
       "id": "/mcp-vs-api",
@@ -2174,10 +2996,28 @@
       "url": "https://bestaiagent.in/mcp-vs-api"
     },
     {
+      "id": "/mcp-vscode-extension",
+      "type": "mcp-servers",
+      "label": "MCP VS Code Extension: Developer Guide",
+      "url": "https://bestaiagent.in/mcp-vscode-extension"
+    },
+    {
+      "id": "/mcp-whatsapp-integration",
+      "type": "mcp-servers",
+      "label": "MCP WhatsApp Integration: Business API",
+      "url": "https://bestaiagent.in/mcp-whatsapp-integration"
+    },
+    {
       "id": "/mcp-with-claude-desktop",
       "type": "mcp",
       "label": "MCP with Claude Desktop - Complete Integration Guide",
       "url": "https://bestaiagent.in/mcp-with-claude-desktop"
+    },
+    {
+      "id": "/mcp-with-cursor",
+      "type": "mcp-servers",
+      "label": "MCP with Cursor AI: Integration Tutorial",
+      "url": "https://bestaiagent.in/mcp-with-cursor"
     },
     {
       "id": "/mcp-with-cursor-ai",
@@ -2198,10 +3038,28 @@
       "url": "https://bestaiagent.in/methodology"
     },
     {
+      "id": "/microsoft-dynamics-365-finance-mcp",
+      "type": "mcp-servers",
+      "label": "Microsoft Dynamics 365 Finance MCP",
+      "url": "https://bestaiagent.in/microsoft-dynamics-365-finance-mcp"
+    },
+    {
+      "id": "/microsoft-sql-server-legacy-integration-mcp",
+      "type": "mcp-servers",
+      "label": "Microsoft SQL Server Legacy Integration MCP",
+      "url": "https://bestaiagent.in/microsoft-sql-server-legacy-integration-mcp"
+    },
+    {
       "id": "/models",
       "type": "entity-pages",
       "label": "AI Models Directory for Agents",
       "url": "https://bestaiagent.in/models"
+    },
+    {
+      "id": "/mongodb-aggregation-pipeline-mcp",
+      "type": "mcp-servers",
+      "label": "MongoDB Aggregation Pipeline MCP",
+      "url": "https://bestaiagent.in/mongodb-aggregation-pipeline-mcp"
     },
     {
       "id": "/multi-agent-systems",
@@ -2246,10 +3104,46 @@
       "url": "https://bestaiagent.in/n8n-vs-zapier"
     },
     {
+      "id": "/national-judicial-data-grid-litigant-mcp",
+      "type": "mcp-servers",
+      "label": "National Judicial Data Grid Litigant MCP",
+      "url": "https://bestaiagent.in/national-judicial-data-grid-litigant-mcp"
+    },
+    {
+      "id": "/nemo-guardrails-realtime-policy-mcp",
+      "type": "mcp-servers",
+      "label": "NeMo Guardrails Real-Time Policy MCP",
+      "url": "https://bestaiagent.in/nemo-guardrails-realtime-policy-mcp"
+    },
+    {
+      "id": "/neo4j-memgraph-cypher-execution-mcp",
+      "type": "mcp-servers",
+      "label": "Neo4j / Memgraph Cypher Execution MCP",
+      "url": "https://bestaiagent.in/neo4j-memgraph-cypher-execution-mcp"
+    },
+    {
+      "id": "/nginx-haproxy-traffic-controller-mcp",
+      "type": "mcp-servers",
+      "label": "Nginx / HAProxy Traffic Controller MCP",
+      "url": "https://bestaiagent.in/nginx-haproxy-traffic-controller-mcp"
+    },
+    {
       "id": "/official-mcp-vs-community-mcp",
       "type": "mcp",
       "label": "Official MCP Servers vs Community MCP Servers - Ecosystem Comparison",
       "url": "https://bestaiagent.in/official-mcp-vs-community-mcp"
+    },
+    {
+      "id": "/ondc-protocol-translation-mcp",
+      "type": "mcp-servers",
+      "label": "ONDC Protocol Translation MCP",
+      "url": "https://bestaiagent.in/ondc-protocol-translation-mcp"
+    },
+    {
+      "id": "/onetrust-privacy-compliance-auditor-mcp",
+      "type": "mcp-servers",
+      "label": "OneTrust Privacy Compliance Auditor MCP",
+      "url": "https://bestaiagent.in/onetrust-privacy-compliance-auditor-mcp"
     },
     {
       "id": "/open-source-agents",
@@ -2276,6 +3170,12 @@
       "url": "https://bestaiagent.in/openai-api-vs-anthropic-api"
     },
     {
+      "id": "/oracle-netsuite-suitalk-ledger-mcp",
+      "type": "mcp-servers",
+      "label": "Oracle NetSuite SuiteTalk Ledger MCP",
+      "url": "https://bestaiagent.in/oracle-netsuite-suitalk-ledger-mcp"
+    },
+    {
       "id": "/paid-mcp-servers",
       "type": "mcp",
       "label": "Paid MCP Servers - Enterprise Solutions Guide",
@@ -2286,6 +3186,30 @@
       "type": "entities",
       "label": "Pinecone Vector Database: The Complete Guide for Indian Developers (2026)",
       "url": "https://bestaiagent.in/pinecone"
+    },
+    {
+      "id": "/pinecone-milvus-vector-search-mcp",
+      "type": "mcp-servers",
+      "label": "Pinecone / Milvus Vector Search MCP",
+      "url": "https://bestaiagent.in/pinecone-milvus-vector-search-mcp"
+    },
+    {
+      "id": "/pipedrive-sales-pipeline-accelerator-mcp",
+      "type": "mcp-servers",
+      "label": "Pipedrive Sales Pipeline Accelerator MCP",
+      "url": "https://bestaiagent.in/pipedrive-sales-pipeline-accelerator-mcp"
+    },
+    {
+      "id": "/postgresql-performance-tuner-mcp",
+      "type": "mcp-servers",
+      "label": "PostgreSQL Performance Tuner MCP",
+      "url": "https://bestaiagent.in/postgresql-performance-tuner-mcp"
+    },
+    {
+      "id": "/postman-collection-api-spec-runner-mcp",
+      "type": "mcp-servers",
+      "label": "Postman Collection & API Spec Runner MCP",
+      "url": "https://bestaiagent.in/postman-collection-api-spec-runner-mcp"
     },
     {
       "id": "/pricing-hub",
@@ -2300,6 +3224,42 @@
       "url": "https://bestaiagent.in/privacy-policy"
     },
     {
+      "id": "/project44-supply-chain-visibility-mcp",
+      "type": "mcp-servers",
+      "label": "Project44 Supply Chain Visibility MCP",
+      "url": "https://bestaiagent.in/project44-supply-chain-visibility-mcp"
+    },
+    {
+      "id": "/prometheus-alert-manager-middleware-mcp",
+      "type": "mcp-servers",
+      "label": "Prometheus Alert Manager Middleware MCP",
+      "url": "https://bestaiagent.in/prometheus-alert-manager-middleware-mcp"
+    },
+    {
+      "id": "/prompt-injection-shield-mcp",
+      "type": "mcp-servers",
+      "label": "Prompt Injection Shield MCP",
+      "url": "https://bestaiagent.in/prompt-injection-shield-mcp"
+    },
+    {
+      "id": "/qdrant-vector-lifecycle-management-mcp",
+      "type": "mcp-servers",
+      "label": "Qdrant Vector Lifecycle Management MCP",
+      "url": "https://bestaiagent.in/qdrant-vector-lifecycle-management-mcp"
+    },
+    {
+      "id": "/quickbooks-online-api-sync-mcp",
+      "type": "mcp-servers",
+      "label": "QuickBooks Online API Sync MCP",
+      "url": "https://bestaiagent.in/quickbooks-online-api-sync-mcp"
+    },
+    {
+      "id": "/razorpay-payu-corporate-transaction-mcp",
+      "type": "mcp-servers",
+      "label": "Razorpay / PayU Corporate Transaction MCP",
+      "url": "https://bestaiagent.in/razorpay-payu-corporate-transaction-mcp"
+    },
+    {
       "id": "/reddit",
       "type": "reddit-community-intent",
       "label": "AI Agent Reddit Reviews Hub",
@@ -2310,6 +3270,12 @@
       "type": "hubs",
       "label": "AI Agent Reddit Reviews Hub",
       "url": "https://bestaiagent.in/reddit-hub"
+    },
+    {
+      "id": "/redis-enterprise-distributed-cache-mcp",
+      "type": "mcp-servers",
+      "label": "Redis Enterprise Distributed Cache MCP",
+      "url": "https://bestaiagent.in/redis-enterprise-distributed-cache-mcp"
     },
     {
       "id": "/replit-agent",
@@ -2396,10 +3362,94 @@
       "url": "https://bestaiagent.in/retell-vs-elevenlabs"
     },
     {
+      "id": "/salesforce-lightning-object-orchestrator-mcp",
+      "type": "mcp-servers",
+      "label": "Salesforce Lightning Object Orchestrator MCP",
+      "url": "https://bestaiagent.in/salesforce-lightning-object-orchestrator-mcp"
+    },
+    {
+      "id": "/sap-s4hana-odata-core-bridge-mcp",
+      "type": "mcp-servers",
+      "label": "SAP S/4HANA OData Core Bridge MCP",
+      "url": "https://bestaiagent.in/sap-s4hana-odata-core-bridge-mcp"
+    },
+    {
+      "id": "/sarathi-vahan-vehicle-registry-mcp",
+      "type": "mcp-servers",
+      "label": "Sarathi & Vahan Vehicle Registry MCP",
+      "url": "https://bestaiagent.in/sarathi-vahan-vehicle-registry-mcp"
+    },
+    {
+      "id": "/scada-industrial-iot-telemetry-mcp",
+      "type": "mcp-servers",
+      "label": "SCADA Industrial IoT Telemetry MCP",
+      "url": "https://bestaiagent.in/scada-industrial-iot-telemetry-mcp"
+    },
+    {
+      "id": "/sentry-error-trace-optimizer-mcp",
+      "type": "mcp-servers",
+      "label": "Sentry Error Trace Optimizer MCP",
+      "url": "https://bestaiagent.in/sentry-error-trace-optimizer-mcp"
+    },
+    {
+      "id": "/servicenow-itil-incident-pipeline-mcp",
+      "type": "mcp-servers",
+      "label": "ServiceNow ITIL Incident Pipeline MCP",
+      "url": "https://bestaiagent.in/servicenow-itil-incident-pipeline-mcp"
+    },
+    {
+      "id": "/shopify-core-inventory-synchronizer-mcp",
+      "type": "mcp-servers",
+      "label": "Shopify Core Inventory Synchronizer MCP",
+      "url": "https://bestaiagent.in/shopify-core-inventory-synchronizer-mcp"
+    },
+    {
       "id": "/slack-server",
       "type": "mcp",
       "label": "Slack MCP Server - Complete Workspace Integration Guide",
       "url": "https://bestaiagent.in/slack-server"
+    },
+    {
+      "id": "/snowflake-enterprise-data-warehouse-mcp",
+      "type": "mcp-servers",
+      "label": "Snowflake Enterprise Data Warehouse MCP",
+      "url": "https://bestaiagent.in/snowflake-enterprise-data-warehouse-mcp"
+    },
+    {
+      "id": "/snyk-open-source-dependency-shield-mcp",
+      "type": "mcp-servers",
+      "label": "Snyk Open-Source Dependency Shield MCP",
+      "url": "https://bestaiagent.in/snyk-open-source-dependency-shield-mcp"
+    },
+    {
+      "id": "/sonarqube-static-analysis-bridge-mcp",
+      "type": "mcp-servers",
+      "label": "SonarQube Static Analysis Bridge MCP",
+      "url": "https://bestaiagent.in/sonarqube-static-analysis-bridge-mcp"
+    },
+    {
+      "id": "/splunk-elastic-siem-security-incident-mcp",
+      "type": "mcp-servers",
+      "label": "Splunk / Elastic SIEM Security Incident MCP",
+      "url": "https://bestaiagent.in/splunk-elastic-siem-security-incident-mcp"
+    },
+    {
+      "id": "/sqlite-scoped-local-file-mcp",
+      "type": "mcp-servers",
+      "label": "SQLite Scoped Local File MCP",
+      "url": "https://bestaiagent.in/sqlite-scoped-local-file-mcp"
+    },
+    {
+      "id": "/stripe-billing-subscription-lifecycle-mcp",
+      "type": "mcp-servers",
+      "label": "Stripe Billing & Subscription Lifecycle MCP",
+      "url": "https://bestaiagent.in/stripe-billing-subscription-lifecycle-mcp"
+    },
+    {
+      "id": "/supabase-firebase-schema-sync-mcp",
+      "type": "mcp-servers",
+      "label": "Supabase / Firebase Production Schema Sync MCP",
+      "url": "https://bestaiagent.in/supabase-firebase-schema-sync-mcp"
     },
     {
       "id": "/swe-bench-guide",
@@ -2408,16 +3458,34 @@
       "url": "https://bestaiagent.in/swe-bench-guide"
     },
     {
+      "id": "/tally-prime-desktop-local-stdio-mcp",
+      "type": "mcp-servers",
+      "label": "Tally Prime Desktop Local Stdio MCP",
+      "url": "https://bestaiagent.in/tally-prime-desktop-local-stdio-mcp"
+    },
+    {
       "id": "/team",
       "type": "editorial",
       "label": "Team",
       "url": "https://bestaiagent.in/team"
     },
     {
+      "id": "/tenable-qualys-vulnerability-surface-mcp",
+      "type": "mcp-servers",
+      "label": "Tenable / Qualys Vulnerability Surface MCP",
+      "url": "https://bestaiagent.in/tenable-qualys-vulnerability-surface-mcp"
+    },
+    {
       "id": "/terms",
       "type": "editorial",
       "label": "Terms of Use",
       "url": "https://bestaiagent.in/terms"
+    },
+    {
+      "id": "/terraform-drift-detector-mcp",
+      "type": "mcp-servers",
+      "label": "Terraform Drift Detector MCP",
+      "url": "https://bestaiagent.in/terraform-drift-detector-mcp"
     },
     {
       "id": "/tools/agentops",
@@ -2570,6 +3638,18 @@
       "url": "https://bestaiagent.in/tutorials-hub"
     },
     {
+      "id": "/uidai-facerd-biometric-lifecycle-mcp",
+      "type": "mcp-servers",
+      "label": "UIDAI FaceRD Biometric Lifecycle MCP",
+      "url": "https://bestaiagent.in/uidai-facerd-biometric-lifecycle-mcp"
+    },
+    {
+      "id": "/upi-autopay-settlement-gateway-mcp",
+      "type": "mcp-servers",
+      "label": "UPI Autopay & Settlement Gateway MCP",
+      "url": "https://bestaiagent.in/upi-autopay-settlement-gateway-mcp"
+    },
+    {
       "id": "/vapi-alternatives",
       "type": "alternatives",
       "label": "Vapi Alternatives 2026 – Best Competitors for Indian Startups",
@@ -2648,10 +3728,22 @@
       "url": "https://bestaiagent.in/vector-dbs"
     },
     {
+      "id": "/veeva-life-sciences-compliance-mcp",
+      "type": "mcp-servers",
+      "label": "Veeva Life Sciences Compliance MCP",
+      "url": "https://bestaiagent.in/veeva-life-sciences-compliance-mcp"
+    },
+    {
       "id": "/vercel-ai-sdk-vs-langchain",
       "type": "comparisons",
       "label": "Vercel AI SDK vs LangChain",
       "url": "https://bestaiagent.in/vercel-ai-sdk-vs-langchain"
+    },
+    {
+      "id": "/vercel-deployment-webhook-lifecycle-mcp",
+      "type": "mcp-servers",
+      "label": "Vercel Deployment & Webhook Lifecycle MCP",
+      "url": "https://bestaiagent.in/vercel-deployment-webhook-lifecycle-mcp"
     },
     {
       "id": "/voice-agents",
@@ -2666,10 +3758,94 @@
       "url": "https://bestaiagent.in/voice-agents-directory"
     },
     {
+      "id": "/voice-ai-case-studies",
+      "type": "voice-ai-agents",
+      "label": "Voice AI Case Studies: Indian Business Results",
+      "url": "https://bestaiagent.in/voice-ai-case-studies"
+    },
+    {
+      "id": "/voice-ai-community-tips",
+      "type": "voice-ai-agents",
+      "label": "Voice AI Community Tips: Expert Advice",
+      "url": "https://bestaiagent.in/voice-ai-community-tips"
+    },
+    {
+      "id": "/voice-ai-compliance",
+      "type": "voice-ai-agents",
+      "label": "Voice AI Compliance: DPDP, TCPA & Guidelines",
+      "url": "https://bestaiagent.in/voice-ai-compliance"
+    },
+    {
+      "id": "/voice-ai-cost-calculator",
+      "type": "voice-ai-agents",
+      "label": "Voice AI Cost Calculator: Per-Minute Pricing",
+      "url": "https://bestaiagent.in/voice-ai-cost-calculator"
+    },
+    {
+      "id": "/voice-ai-faq",
+      "type": "voice-ai-agents",
+      "label": "Voice AI FAQ: Common Questions Answered",
+      "url": "https://bestaiagent.in/voice-ai-faq"
+    },
+    {
+      "id": "/voice-ai-for-appointment-booking",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Appointment Booking: Automated Scheduling",
+      "url": "https://bestaiagent.in/voice-ai-for-appointment-booking"
+    },
+    {
+      "id": "/voice-ai-for-banking",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Banking: Customer Support & KYC",
+      "url": "https://bestaiagent.in/voice-ai-for-banking"
+    },
+    {
+      "id": "/voice-ai-for-call-centers",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Call Centers: India Implementation Guide",
+      "url": "https://bestaiagent.in/voice-ai-for-call-centers"
+    },
+    {
+      "id": "/voice-ai-for-ecommerce",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for E-Commerce: Order & Support Calls",
+      "url": "https://bestaiagent.in/voice-ai-for-ecommerce"
+    },
+    {
+      "id": "/voice-ai-for-education",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Education: Student Support & Tutoring",
+      "url": "https://bestaiagent.in/voice-ai-for-education"
+    },
+    {
+      "id": "/voice-ai-for-healthcare",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Healthcare: Patient Calling & Support",
+      "url": "https://bestaiagent.in/voice-ai-for-healthcare"
+    },
+    {
+      "id": "/voice-ai-for-logistics",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Logistics: Dispatch & Tracking Calls",
+      "url": "https://bestaiagent.in/voice-ai-for-logistics"
+    },
+    {
+      "id": "/voice-ai-for-real-estate",
+      "type": "voice-ai-agents",
+      "label": "Voice AI for Real Estate: Lead Calling & Follow-Up",
+      "url": "https://bestaiagent.in/voice-ai-for-real-estate"
+    },
+    {
       "id": "/voice-ai-hub",
       "type": "hubs",
       "label": "Voice AI Agents Hub",
       "url": "https://bestaiagent.in/voice-ai-hub"
+    },
+    {
+      "id": "/voice-ai-india",
+      "type": "industry-ai-agents",
+      "label": "Voice AI in India: Market, Tools & Implementation",
+      "url": "https://bestaiagent.in/voice-ai-india"
     },
     {
       "id": "/what-is-agentic-ai",
@@ -2756,6 +3932,12 @@
       "url": "https://bestaiagent.in/what-is-tool-use"
     },
     {
+      "id": "/whatsapp-ai-agent-india",
+      "type": "industry-ai-agents",
+      "label": "WhatsApp AI Agents India: Complete Guide for 2026",
+      "url": "https://bestaiagent.in/whatsapp-ai-agent-india"
+    },
+    {
       "id": "/windsurf",
       "type": "reviews",
       "label": "Windsurf Review – India's Independent Assessment (June 2026)",
@@ -2784,6 +3966,18 @@
       "type": "comparisons",
       "label": "Windsurf vs Cursor AI – Which AI Coding Assistant Wins for Frontend Developers in 2026?",
       "url": "https://bestaiagent.in/windsurf-vs-cursor"
+    },
+    {
+      "id": "/workday-core-hr-talent-inventory-mcp",
+      "type": "mcp-servers",
+      "label": "Workday Core HR & Talent Inventory MCP",
+      "url": "https://bestaiagent.in/workday-core-hr-talent-inventory-mcp"
+    },
+    {
+      "id": "/xero-accounting-ledger-integrator-mcp",
+      "type": "mcp-servers",
+      "label": "Xero Accounting Ledger Integrator MCP",
+      "url": "https://bestaiagent.in/xero-accounting-ledger-integrator-mcp"
     },
     {
       "id": "/yellow-ai-alternatives",
@@ -2832,6 +4026,18 @@
       "type": "comparisons",
       "label": "Yellow.ai vs Wati",
       "url": "https://bestaiagent.in/yellow-ai-vs-wati"
+    },
+    {
+      "id": "/zebra-barcode-rfid-scanner-interface-mcp",
+      "type": "mcp-servers",
+      "label": "Zebra Barcode & RFID Scanner Interface MCP",
+      "url": "https://bestaiagent.in/zebra-barcode-rfid-scanner-interface-mcp"
+    },
+    {
+      "id": "/zoho-books-enterprise-compliance-mcp",
+      "type": "mcp-servers",
+      "label": "Zoho Books Enterprise Compliance MCP",
+      "url": "https://bestaiagent.in/zoho-books-enterprise-compliance-mcp"
     },
     {
       "id": "entity:AI Agent",
@@ -3016,7 +4222,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/aadhaar-ekyc-regulatory-sandbox-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/abdm-unified-health-interface-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/about",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/account-aggregator-sahamati-finance-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3082,7 +4303,7 @@
     },
     {
       "from": "/ai-agent-builders-hub",
-      "to": "/",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -3296,12 +4517,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/ai-agents-india",
+      "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-appointment-reminder-calls",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/ai-automation-agency",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
+      "from": "/ai-code-completion-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-code-review-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/ai-coding-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-programming-assistant",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3313,6 +4559,26 @@
     {
       "from": "/alternatives-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/amadeus-sabre-gds-travel-reservation-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/amazon-dynamodb-nosql-partition-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/argocd-gitops-synchronization-tracker-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/auth0-okta-user-session-lifecycle-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -3357,6 +4623,11 @@
     },
     {
       "from": "/autonomous-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/aws-cloudformation-cdk-planner-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3436,6 +4707,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-angular",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-appointment-booking",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3462,6 +4738,21 @@
     },
     {
       "from": "/best-ai-agent-for-call-centers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-code-completion",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-code-generation",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-code-refactoring",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3526,6 +4817,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-documentation",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-ecommerce",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3556,6 +4852,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-go",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-healthcare-calls",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -3576,12 +4877,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-inbound-calls",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-inbound-support",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
       "from": "/best-ai-agent-for-indian-businesses",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-java",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3791,7 +5102,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-agent-for-testing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-unit-testing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-agent-for-vs-code",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-agent-for-vue",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3931,12 +5257,32 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-code-editor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-coding-agent-reddit",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
+      "from": "/best-ai-coding-assistant",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-coding-tools",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-ai-phone-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-programming-assistant",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3952,6 +5298,16 @@
     },
     {
       "from": "/best-ai-voice-agent-platform",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-voice-cloning",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/best-ai-voice-generator",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -3986,6 +5342,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-hindi-voice-agent",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/best-mcp-servers",
       "to": "/mcp-hub",
       "relation": "parentHub"
@@ -4006,7 +5367,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/best-text-to-speech-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/blog",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/bloomberg-terminal-data-stream-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4022,6 +5393,11 @@
     },
     {
       "from": "/builders",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/building-custom-mcp-server",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4042,7 +5418,7 @@
     },
     {
       "from": "/business-ai-hub",
-      "to": "/",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4066,6 +5442,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/canvas-moodle-lms-academic-progress-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cassandra-scylladb-wide-column-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cersai-collateral-asset-risk-tracker-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/chatgpt-vs-claude",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4077,6 +5468,21 @@
     },
     {
       "from": "/chatgpt-vs-perplexity",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/checkmarx-veracode-sast-vulnerability-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/chromadb-local-vector-storage-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cisco-meraki-network-infrastructure-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4106,7 +5512,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/claude-code-review",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/claude-code-vs-codex",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/claude-code-vs-copilot",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4127,6 +5543,26 @@
     },
     {
       "from": "/clay-vs-apollo",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/clickhouse-realtime-analytics-pipeline-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/clio-legal-practice-management-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cloudflare-workers-deployment-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/cloudtrail-activity-log-integrity-auditor-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4187,6 +5623,11 @@
     },
     {
       "from": "/copilot-vs-codex",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/corelogic-property-data-aggregator-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4306,7 +5747,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/cwc-cold-storage-environment-monitor-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/data-deletion-request",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/databricks-delta-lake-pipeline-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/datadog-newrelic-apm-log-weaver-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4346,8 +5802,18 @@
       "relation": "parentHub"
     },
     {
+      "from": "/digilocker-user-consented-vault-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/directories-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/docker-swarm-compose-runtime-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4356,7 +5822,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/dpdp-compliance-ai",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ecourts-india-njdg-document-scraper-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/editorial-policy",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/elasticsearch-cluster-shard-tuner-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4371,6 +5852,31 @@
       "relation": "parentHub"
     },
     {
+      "from": "/epfo-corporate-compliance-auditor-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/epic-cerner-ehr-interactivity-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/fastag-national-toll-telemetry-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/fedex-ups-dhl-global-logistics-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/fhir-healthcare-interoperability-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/filesystem-server",
       "to": "/mcp-hub",
       "relation": "parentHub"
@@ -4378,6 +5884,21 @@
     {
       "from": "/filesystem-vs-database-mcp",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/finops-token-burn-budget-firewall-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/fleetio-telematics-fleet-maintenance-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/flexport-global-freight-forwarding-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4436,6 +5957,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/free-ai-agent-for-coding",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/free-ai-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4451,6 +5977,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/freshdesk-zendesk-ticket-semantic-sync-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/future-of-ai-agents",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4461,8 +5992,18 @@
       "relation": "parentHub"
     },
     {
+      "from": "/gem-procurement-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/getting-started-with-mcp",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/github-actions-pipeline-debugger-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4496,6 +6037,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/github-copilot-vs-cursor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/github-copilot-vs-tabnine",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4516,7 +6062,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/google-bigquery-federated-storage-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/google-drive-ai-agent-workspace",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/grafana-dashboard-schema-builder-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/gstn-e-invoice-reconciliation-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hackerone-bug-bounty-triage-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hashicorp-vault-secret-rotator-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/hindi-ai-agent",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4646,6 +6222,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/hubspot-multi-hub-operations-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/humaneval-guide",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4661,8 +6242,8 @@
       "relation": "parentHub"
     },
     {
-      "from": "/india-hub",
-      "to": "/",
+      "from": "/india-post-tracking-logistics-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4672,6 +6253,11 @@
     },
     {
       "from": "/industry-report",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/infor-cloudsuite-supply-chain-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4716,6 +6302,21 @@
       "relation": "parentHub"
     },
     {
+      "from": "/jira-github-continuous-sync-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/kafka-cluster-topology-inspector-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/kubernetes-multi-cluster-orchestrator-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/langchain-vs-llamaindex",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4746,6 +6347,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/lexisnexis-corporate-kyb-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/llamaindex-vs-langchain",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4761,12 +6367,147 @@
       "relation": "parentHub"
     },
     {
+      "from": "/lorawan-smart-city-sensor-network-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/maharera-state-rera-compliance-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/manhattan-associates-wms-bridge-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mca-corporate-affairs-portal-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-api-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-authentication",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-backup-restore",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-best-practices",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-brave-search",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-case-studies",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-ci-cd",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-client-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-community-resources",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-community-tips",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-data-sources",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-database-server",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-deployment-patterns",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-directory",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-docker-deployment",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-faq",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-file-system-server",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-for-ai-agents",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-git-server",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-github-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-google-drive",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-gst-compliance",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-health-checks",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-hindi-support",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4781,7 +6522,62 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-india-deployment",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-kubernetes-deploy",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-logging",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-marketplace",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-mocking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-monitoring",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-nodejs-sdk",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-notion-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-open-source-projects",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-performance-optimization",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-python-sdk",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-scaling",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4791,7 +6587,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-security-best-practices",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-server-entities",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-server-setup-guide",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4806,7 +6612,92 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-slack-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-sqlite-server",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-success-stories",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-testing",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-testing-frameworks",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-tool-definition",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-troubleshooting",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-typescript-sdk",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-update-june-2026",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-uptime",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-analytics",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-crm",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-ecommerce",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-education",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-finance",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-use-case-healthcare",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-use-cases",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-version-control",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4816,8 +6707,23 @@
       "relation": "parentHub"
     },
     {
+      "from": "/mcp-vscode-extension",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-whatsapp-integration",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/mcp-with-claude-desktop",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mcp-with-cursor",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4836,7 +6742,22 @@
       "relation": "parentHub"
     },
     {
+      "from": "/microsoft-dynamics-365-finance-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/microsoft-sql-server-legacy-integration-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/models",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/mongodb-aggregation-pipeline-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4876,8 +6797,38 @@
       "relation": "parentHub"
     },
     {
+      "from": "/national-judicial-data-grid-litigant-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/nemo-guardrails-realtime-policy-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/neo4j-memgraph-cypher-execution-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/nginx-haproxy-traffic-controller-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/official-mcp-vs-community-mcp",
       "to": "/mcp-hub",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ondc-protocol-translation-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/onetrust-privacy-compliance-auditor-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -4901,12 +6852,37 @@
       "relation": "parentHub"
     },
     {
+      "from": "/oracle-netsuite-suitalk-ledger-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/paid-mcp-servers",
       "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
       "from": "/pinecone",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/pinecone-milvus-vector-search-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/pipedrive-sales-pipeline-accelerator-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/postgresql-performance-tuner-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/postman-collection-api-spec-runner-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -4921,6 +6897,36 @@
       "relation": "parentHub"
     },
     {
+      "from": "/project44-supply-chain-visibility-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/prometheus-alert-manager-middleware-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/prompt-injection-shield-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/qdrant-vector-lifecycle-management-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/quickbooks-online-api-sync-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/razorpay-payu-corporate-transaction-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/reddit",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -4928,6 +6934,11 @@
     {
       "from": "/reddit-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/redis-enterprise-distributed-cache-mcp",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -5001,12 +7012,87 @@
       "relation": "parentHub"
     },
     {
+      "from": "/salesforce-lightning-object-orchestrator-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sap-s4hana-odata-core-bridge-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sarathi-vahan-vehicle-registry-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/scada-industrial-iot-telemetry-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sentry-error-trace-optimizer-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/servicenow-itil-incident-pipeline-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/shopify-core-inventory-synchronizer-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/slack-server",
       "to": "/mcp-hub",
       "relation": "parentHub"
     },
     {
+      "from": "/snowflake-enterprise-data-warehouse-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/snyk-open-source-dependency-shield-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sonarqube-static-analysis-bridge-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/splunk-elastic-siem-security-incident-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/sqlite-scoped-local-file-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/stripe-billing-subscription-lifecycle-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/supabase-firebase-schema-sync-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/swe-bench-guide",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/tally-prime-desktop-local-stdio-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5016,7 +7102,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/tenable-qualys-vulnerability-surface-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/terms",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/terraform-drift-detector-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5146,6 +7242,16 @@
       "relation": "parentHub"
     },
     {
+      "from": "/uidai-facerd-biometric-lifecycle-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/upi-autopay-settlement-gateway-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/vapi-alternatives",
       "to": "/alternatives-hub",
       "relation": "parentHub"
@@ -5211,7 +7317,17 @@
       "relation": "parentHub"
     },
     {
+      "from": "/veeva-life-sciences-compliance-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/vercel-ai-sdk-vs-langchain",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/vercel-deployment-webhook-lifecycle-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5226,8 +7342,78 @@
       "relation": "parentHub"
     },
     {
+      "from": "/voice-ai-case-studies",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-community-tips",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-compliance",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-cost-calculator",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-faq",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-appointment-booking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-banking",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-call-centers",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-ecommerce",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-education",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-healthcare",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-logistics",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-for-real-estate",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/voice-ai-hub",
       "to": "/",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/voice-ai-india",
+      "to": "/best-ai-agent",
       "relation": "parentHub"
     },
     {
@@ -5301,6 +7487,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/whatsapp-ai-agent-india",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/windsurf",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -5322,6 +7513,16 @@
     },
     {
       "from": "/windsurf-vs-cursor",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/workday-core-hr-talent-inventory-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/xero-accounting-ledger-integrator-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -5362,6 +7563,16 @@
     },
     {
       "from": "/yellow-ai-vs-wati",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/zebra-barcode-rfid-scanner-interface-mcp",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/zoho-books-enterprise-compliance-mcp",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -6382,6 +8593,16 @@
     },
     {
       "from": "entity:AI Coding Agent",
+      "to": "/free-ai-agent-for-coding",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
+      "to": "/github-copilot-vs-cursor",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:AI Coding Agent",
       "to": "/tools/cursor-ai",
       "relation": "mentionedOn"
     },
@@ -6477,6 +8698,21 @@
     },
     {
       "from": "entity:MCP",
+      "to": "/aadhaar-ekyc-regulatory-sandbox-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/abdm-unified-health-interface-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/account-aggregator-sahamati-finance-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
       "to": "/ai-agent-awards",
       "relation": "mentionedOn"
     },
@@ -6517,6 +8753,31 @@
     },
     {
       "from": "entity:MCP",
+      "to": "/amadeus-sabre-gds-travel-reservation-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/amazon-dynamodb-nosql-partition-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/argocd-gitops-synchronization-tracker-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/auth0-okta-user-session-lifecycle-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
+      "to": "/aws-cloudformation-cdk-planner-mcp",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
       "to": "/best-ai-agent-rankings",
       "relation": "mentionedOn"
     },
@@ -6532,47 +8793,7 @@
     },
     {
       "from": "entity:MCP",
-      "to": "/browser-automation-server",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/build-your-first-mcp-server",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/custom-ai-agent-development",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/debugging-mcp-servers",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/filesystem-server",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/filesystem-vs-database-mcp",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/free-mcp-servers",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/getting-started-with-mcp",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/github-server",
+      "to": "/bloomberg-terminal-data-stream-mcp",
       "relation": "mentionedOn"
     },
     {
@@ -6777,6 +8998,16 @@
     },
     {
       "from": "entity:Cursor",
+      "to": "/ai-code-completion-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/ai-code-review-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
       "to": "/ai-coding-agents",
       "relation": "mentionedOn"
     },
@@ -6788,6 +9019,21 @@
     {
       "from": "entity:Cursor",
       "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-code-completion",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-code-generation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-code-refactoring",
       "relation": "mentionedOn"
     },
     {
@@ -6842,37 +9088,17 @@
     },
     {
       "from": "entity:Cursor",
+      "to": "/best-ai-agent-for-unit-testing",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Cursor",
       "to": "/best-ai-agent-for-vs-code",
       "relation": "mentionedOn"
     },
     {
-      "from": "entity:Cursor",
-      "to": "/best-ai-agent-for-windsurf",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/best-ai-coding-agent-reddit",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/best-free-ai-coding-agents",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/calculators",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/claude-code-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Cursor",
-      "to": "/claude-code-vs-cursor",
+      "from": "entity:GitHub Copilot",
+      "to": "/ai-code-completion-tools",
       "relation": "mentionedOn"
     },
     {
@@ -6883,6 +9109,11 @@
     {
       "from": "entity:GitHub Copilot",
       "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
+      "to": "/best-ai-agent-for-code-completion",
       "relation": "mentionedOn"
     },
     {
@@ -6952,6 +9183,11 @@
     },
     {
       "from": "entity:GitHub Copilot",
+      "to": "/claude-code-vs-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:GitHub Copilot",
       "to": "/codex-alternatives",
       "relation": "mentionedOn"
     },
@@ -6961,23 +9197,13 @@
       "relation": "mentionedOn"
     },
     {
-      "from": "entity:GitHub Copilot",
-      "to": "/copilot-vs-claude-code",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/copilot-vs-codex",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:GitHub Copilot",
-      "to": "/cursor-alternatives",
+      "from": "entity:Claude Code",
+      "to": "/ai-coding-agents",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Claude Code",
-      "to": "/ai-coding-agents",
+      "to": "/best-ai-agent-for-code-generation",
       "relation": "mentionedOn"
     },
     {
@@ -7042,7 +9268,17 @@
     },
     {
       "from": "entity:Claude Code",
+      "to": "/claude-code-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
       "to": "/claude-code-vs-codex",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude Code",
+      "to": "/claude-code-vs-copilot",
       "relation": "mentionedOn"
     },
     {
@@ -7058,21 +9294,6 @@
     {
       "from": "entity:Claude Code",
       "to": "/coding-agents",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude Code",
-      "to": "/coding-agents-directory",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude Code",
-      "to": "/copilot-vs-claude-code",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude Code",
-      "to": "/cursor-alternatives",
       "relation": "mentionedOn"
     },
     {
@@ -7672,7 +9893,7 @@
     },
     {
       "from": "entity:Yellow.ai",
-      "to": "/yellow-ai-alternatives",
+      "to": "/whatsapp-ai-agent-india",
       "relation": "mentionedOn"
     },
     {
@@ -7753,6 +9974,11 @@
     {
       "from": "entity:Intercom",
       "to": "/tools/intercom-ai",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Intercom",
+      "to": "/whatsapp-ai-agent-india",
       "relation": "mentionedOn"
     },
     {
@@ -7962,6 +10188,16 @@
     },
     {
       "from": "entity:ElevenLabs",
+      "to": "/best-ai-voice-cloning",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:ElevenLabs",
+      "to": "/best-ai-voice-generator",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:ElevenLabs",
       "to": "/best-free-ai-voice-agent",
       "relation": "mentionedOn"
     },
@@ -8012,6 +10248,11 @@
     },
     {
       "from": "entity:Windsurf",
+      "to": "/best-ai-agent-for-code-generation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
       "to": "/best-ai-agent-for-coding",
       "relation": "mentionedOn"
     },
@@ -8038,6 +10279,11 @@
     {
       "from": "entity:Windsurf",
       "to": "/best-ai-agent-for-windsurf",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Windsurf",
+      "to": "/best-ai-code-editor",
       "relation": "mentionedOn"
     },
     {
@@ -8092,17 +10338,7 @@
     },
     {
       "from": "entity:Windsurf",
-      "to": "/replit-ai-vs-windsurf",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Windsurf",
-      "to": "/replit-alternatives",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Windsurf",
-      "to": "/windsurf",
+      "to": "/mcp-client-integration",
       "relation": "mentionedOn"
     },
     {
@@ -8122,7 +10358,17 @@
     },
     {
       "from": "entity:Tabnine",
+      "to": "/ai-code-completion-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
       "to": "/best-ai-agent-extension-for-vs-code",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/best-ai-agent-for-code-completion",
       "relation": "mentionedOn"
     },
     {
@@ -8153,6 +10399,11 @@
     {
       "from": "entity:Tabnine",
       "to": "/cursor-vs-tabnine",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Tabnine",
+      "to": "/free-ai-agent-for-coding",
       "relation": "mentionedOn"
     },
     {
@@ -8207,7 +10458,22 @@
     },
     {
       "from": "entity:Qodo",
+      "to": "/ai-code-review-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Qodo",
+      "to": "/best-ai-agent-for-code-refactoring",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Qodo",
       "to": "/best-ai-agent-for-code-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Qodo",
+      "to": "/best-ai-agent-for-unit-testing",
       "relation": "mentionedOn"
     },
     {
@@ -8297,6 +10563,11 @@
     },
     {
       "from": "entity:Claude",
+      "to": "/best-ai-agent-for-code-generation",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
       "to": "/best-ai-agent-for-coding",
       "relation": "mentionedOn"
     },
@@ -8367,27 +10638,22 @@
     },
     {
       "from": "entity:Claude",
+      "to": "/claude-code-review",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
       "to": "/claude-code-vs-codex",
       "relation": "mentionedOn"
     },
     {
       "from": "entity:Claude",
+      "to": "/claude-code-vs-copilot",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:Claude",
       "to": "/claude-code-vs-cursor",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude",
-      "to": "/claude-vs-cursor",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude",
-      "to": "/claude-vs-gemini",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:Claude",
-      "to": "/codex-alternatives",
       "relation": "mentionedOn"
     },
     {

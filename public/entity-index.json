@@ -50,6 +50,8 @@
       "/coding-agents",
       "/coding-agents-directory",
       "/coding-agents-hub",
+      "/free-ai-agent-for-coding",
+      "/github-copilot-vs-cursor",
       "/tools/cursor-ai",
       "/what-is-swe-bench"
     ],
@@ -114,6 +116,9 @@
     "slug": "mcp",
     "definition": "MCP is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/aadhaar-ekyc-regulatory-sandbox-mcp",
+      "/abdm-unified-health-interface-mcp",
+      "/account-aggregator-sahamati-finance-mcp",
       "/ai-agent-awards",
       "/ai-agent-awards-2026",
       "/ai-agent-benchmark",
@@ -122,18 +127,15 @@
       "/ai-agent-marketplace",
       "/ai-agent-rankings",
       "/ai-agent-trends",
+      "/amadeus-sabre-gds-travel-reservation-mcp",
+      "/amazon-dynamodb-nosql-partition-mcp",
+      "/argocd-gitops-synchronization-tracker-mcp",
+      "/auth0-okta-user-session-lifecycle-mcp",
+      "/aws-cloudformation-cdk-planner-mcp",
       "/best-ai-agent-rankings",
       "/best-mcp-servers",
       "/blog",
-      "/browser-automation-server",
-      "/build-your-first-mcp-server",
-      "/custom-ai-agent-development",
-      "/debugging-mcp-servers",
-      "/filesystem-server",
-      "/filesystem-vs-database-mcp",
-      "/free-mcp-servers",
-      "/getting-started-with-mcp",
-      "/github-server"
+      "/bloomberg-terminal-data-stream-mcp"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -219,9 +221,14 @@
     "slug": "cursor",
     "definition": "Cursor is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/ai-code-completion-tools",
+      "/ai-code-review-tools",
       "/ai-coding-agents",
       "/alternatives-hub",
       "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-code-completion",
+      "/best-ai-agent-for-code-generation",
+      "/best-ai-agent-for-code-refactoring",
       "/best-ai-agent-for-code-review",
       "/best-ai-agent-for-codex",
       "/best-ai-agent-for-coding",
@@ -232,13 +239,8 @@
       "/best-ai-agent-for-python",
       "/best-ai-agent-for-react",
       "/best-ai-agent-for-replit",
-      "/best-ai-agent-for-vs-code",
-      "/best-ai-agent-for-windsurf",
-      "/best-ai-coding-agent-reddit",
-      "/best-free-ai-coding-agents",
-      "/calculators",
-      "/claude-code-alternatives",
-      "/claude-code-vs-cursor"
+      "/best-ai-agent-for-unit-testing",
+      "/best-ai-agent-for-vs-code"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -254,8 +256,10 @@
     "slug": "github-copilot",
     "definition": "GitHub Copilot is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/ai-code-completion-tools",
       "/alternatives-hub",
       "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-code-completion",
       "/best-ai-agent-for-codex",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-debugging",
@@ -269,11 +273,9 @@
       "/best-ai-agent-for-windsurf",
       "/best-free-ai-coding-agents",
       "/claude-code-alternatives",
+      "/claude-code-vs-copilot",
       "/codex-alternatives",
-      "/copilot-free-vs-paid",
-      "/copilot-vs-claude-code",
-      "/copilot-vs-codex",
-      "/cursor-alternatives"
+      "/copilot-free-vs-paid"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -290,6 +292,7 @@
     "definition": "Claude Code is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/ai-coding-agents",
+      "/best-ai-agent-for-code-generation",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-debugging",
       "/best-ai-agent-for-javascript",
@@ -302,13 +305,12 @@
       "/claude-code-entity",
       "/claude-code-pricing",
       "/claude-code-reddit-review",
+      "/claude-code-review",
       "/claude-code-vs-codex",
+      "/claude-code-vs-copilot",
       "/claude-code-vs-cursor",
       "/codex-alternatives",
-      "/coding-agents",
-      "/coding-agents-directory",
-      "/copilot-vs-claude-code",
-      "/cursor-alternatives"
+      "/coding-agents"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -518,7 +520,7 @@
       "/retell-alternatives",
       "/tools/yellow-ai",
       "/vapi-alternatives",
-      "/yellow-ai-alternatives"
+      "/whatsapp-ai-agent-india"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -550,6 +552,7 @@
       "/intercom-vs-zendesk",
       "/intercom-vs-zendesk-ai",
       "/tools/intercom-ai",
+      "/whatsapp-ai-agent-india",
       "/yellow-ai-alternatives",
       "/yellow-ai-pricing",
       "/yellow-ai-vs-intercom"
@@ -651,6 +654,8 @@
     "slug": "elevenlabs",
     "definition": "ElevenLabs is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/best-ai-voice-cloning",
+      "/best-ai-voice-generator",
       "/best-free-ai-voice-agent",
       "/retell-vs-elevenlabs",
       "/tools/elevenlabs",
@@ -691,12 +696,14 @@
     "definition": "Windsurf is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/ai-coding-agents",
+      "/best-ai-agent-for-code-generation",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-ecommerce",
       "/best-ai-agent-for-nextjs",
       "/best-ai-agent-for-react",
       "/best-ai-agent-for-replit",
       "/best-ai-agent-for-windsurf",
+      "/best-ai-code-editor",
       "/best-ai-coding-agent-reddit",
       "/claude-code-alternatives",
       "/codex-alternatives",
@@ -707,9 +714,7 @@
       "/github-copilot-alternatives",
       "/github-copilot-vs-windsurf",
       "/how-to-use-windsurf",
-      "/replit-ai-vs-windsurf",
-      "/replit-alternatives",
-      "/windsurf"
+      "/mcp-client-integration"
     ],
     "relatedConcepts": [
       "AI Agent",
@@ -743,13 +748,16 @@
     "slug": "tabnine",
     "definition": "Tabnine is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/ai-code-completion-tools",
       "/best-ai-agent-extension-for-vs-code",
+      "/best-ai-agent-for-code-completion",
       "/best-ai-agent-for-debugging",
       "/best-ai-agent-for-javascript",
       "/best-ai-agent-for-python",
       "/best-ai-agent-for-vs-code",
       "/best-free-ai-coding-agents",
       "/cursor-vs-tabnine",
+      "/free-ai-agent-for-coding",
       "/github-copilot-vs-tabnine"
     ],
     "relatedConcepts": [
@@ -805,7 +813,10 @@
     "slug": "qodo",
     "definition": "Qodo is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
+      "/ai-code-review-tools",
+      "/best-ai-agent-for-code-refactoring",
       "/best-ai-agent-for-code-review",
+      "/best-ai-agent-for-unit-testing",
       "/cursor-vs-qodo"
     ],
     "relatedConcepts": [
@@ -898,6 +909,7 @@
     "definition": "Claude is tracked as a BestAIAgent.in authority entity with related definitions, reviews, pricing pages, comparisons, alternatives, tutorials, and implementation context where available.",
     "pages": [
       "/ai-coding-agents",
+      "/best-ai-agent-for-code-generation",
       "/best-ai-agent-for-coding",
       "/best-ai-agent-for-debugging",
       "/best-ai-agent-for-javascript",
@@ -912,11 +924,10 @@
       "/claude-code-entity",
       "/claude-code-pricing",
       "/claude-code-reddit-review",
+      "/claude-code-review",
       "/claude-code-vs-codex",
-      "/claude-code-vs-cursor",
-      "/claude-vs-cursor",
-      "/claude-vs-gemini",
-      "/codex-alternatives"
+      "/claude-code-vs-copilot",
+      "/claude-code-vs-cursor"
     ],
     "relatedConcepts": [
       "AI Agent",

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bestaiagent.in/aadhaar-ekyc-regulatory-sandbox-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/abdm-unified-health-interface-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/account-aggregator-sahamati-finance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/agent-builders</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -35,6 +53,12 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/ai-agent-builders-hub</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/ai-agent-cases-and-examples</loc>
@@ -247,10 +271,28 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/ai-appointment-reminder-calls</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/ai-automation-agency</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/ai-code-completion-tools</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/ai-code-review-tools</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/ai-coding-agents</loc>
@@ -259,10 +301,40 @@
     <priority>0.94</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/ai-programming-assistant</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/ai-support-agent-roi-calculator</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/amadeus-sabre-gds-travel-reservation-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/amazon-dynamodb-nosql-partition-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/argocd-gitops-synchronization-tracker-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/auth0-okta-user-session-lifecycle-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/autogen-alternatives</loc>
@@ -287,6 +359,12 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/aws-cloudformation-cdk-planner-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-ai-agent</loc>
@@ -373,6 +451,12 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-angular</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-appointment-booking</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -407,6 +491,24 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-code-completion</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-code-generation</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-code-refactoring</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-code-review</loc>
@@ -481,6 +583,12 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-documentation</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-ecommerce</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -517,6 +625,12 @@
     <priority>0.82</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-go</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-healthcare-calls</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -535,6 +649,12 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-inbound-calls</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-inbound-support</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -545,6 +665,12 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-java</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-javascript</loc>
@@ -793,10 +919,28 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-testing</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-unit-testing</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-vs-code</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-agent-for-vue</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-ai-agent-for-whatsapp</loc>
@@ -955,16 +1099,40 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-code-editor</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-coding-agent-reddit</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-ai-coding-assistant</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-coding-tools</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-ai-phone-agent</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-programming-assistant</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-ai-tools</loc>
@@ -983,6 +1151,18 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-voice-cloning</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/best-ai-voice-generator</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/best-free-ai-agent-builder</loc>
@@ -1021,6 +1201,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-hindi-voice-agent</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/best-no-code-ai-agent-builder</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1039,16 +1225,34 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/best-text-to-speech-ai</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/blog</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/bloomberg-terminal-data-stream-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/builders</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/building-custom-mcp-server</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/business-agents</loc>
@@ -1069,6 +1273,12 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/business-ai-hub</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/buyers-guides</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1079,6 +1289,42 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/canvas-moodle-lms-academic-progress-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cassandra-scylladb-wide-column-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cersai-collateral-asset-risk-tracker-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/checkmarx-veracode-sast-vulnerability-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/chromadb-local-vector-storage-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cisco-meraki-network-infrastructure-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.73</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/claude-code-alternatives</loc>
@@ -1097,6 +1343,42 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/claude-code-review</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/claude-code-vs-copilot</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/clickhouse-realtime-analytics-pipeline-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/clio-legal-practice-management-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cloudflare-workers-deployment-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/cloudtrail-activity-log-integrity-auditor-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/codex-alternatives</loc>
@@ -1133,6 +1415,12 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/corelogic-property-data-aggregator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.73</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/crewai-alternatives</loc>
@@ -1183,6 +1471,24 @@
     <priority>0.89</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/cwc-cold-storage-environment-monitor-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.71</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/databricks-delta-lake-pipeline-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/datadog-newrelic-apm-log-weaver-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/dify-alternatives</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1195,16 +1501,94 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/digilocker-user-consented-vault-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/docker-swarm-compose-runtime-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/dpdp-act-ai-compliance</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/dpdp-compliance-ai</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/ecourts-india-njdg-document-scraper-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/elasticsearch-cluster-shard-tuner-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/entity</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/epfo-corporate-compliance-auditor-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/epic-cerner-ehr-interactivity-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/fastag-national-toll-telemetry-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/fedex-ups-dhl-global-logistics-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/fhir-healthcare-interoperability-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/finops-token-burn-budget-firewall-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/fleetio-telematics-fleet-maintenance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/flexport-global-freight-forwarding-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/flowise-alternatives</loc>
@@ -1243,10 +1627,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/free-ai-agent-for-coding</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/free-ai-agents</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.91</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/freshdesk-zendesk-ticket-semantic-sync-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/future-of-ai-agents</loc>
@@ -1259,6 +1655,18 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/gem-procurement-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/github-actions-pipeline-debugger-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/github-copilot-alternatives</loc>
@@ -1277,6 +1685,48 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/github-copilot-vs-cursor</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/google-bigquery-federated-storage-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/grafana-dashboard-schema-builder-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/gstn-e-invoice-reconciliation-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/hackerone-bug-bounty-triage-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/hashicorp-vault-secret-rotator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/hindi-ai-agent</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.91</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/hosting-platforms</loc>
@@ -1417,6 +1867,12 @@
     <priority>0.79</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/hubspot-multi-hub-operations-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/humaneval-guide</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1435,10 +1891,22 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/india-post-tracking-logistics-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.73</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/industry-ai-agents-hub</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/infor-cloudsuite-supply-chain-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/intercom-alternatives</loc>
@@ -1459,6 +1927,24 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/jira-github-continuous-sync-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/kafka-cluster-topology-inspector-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/kubernetes-multi-cluster-orchestrator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/langgraph-alternatives</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1477,6 +1963,12 @@
     <priority>0.73</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/lexisnexis-corporate-kyb-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/longtail-ai-agent-hub</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1489,10 +1981,172 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/lorawan-smart-city-sensor-network-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/maharera-state-rera-compliance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/manhattan-associates-wms-bridge-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.73</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mca-corporate-affairs-portal-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-api-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-authentication</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-backup-restore</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-best-practices</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-brave-search</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-case-studies</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-ci-cd</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-client-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-community-resources</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-community-tips</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-cost-calculator</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-data-sources</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-database-server</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-deployment-patterns</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-docker-deployment</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-faq</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-file-system-server</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/mcp-for-ai-agents</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-git-server</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-github-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-google-drive</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-gst-compliance</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-health-checks</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-hindi-support</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/mcp-hosting</loc>
@@ -1501,16 +2155,94 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/mcp-india-deployment</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-kubernetes-deploy</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-logging</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/mcp-marketplace</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/mcp-mocking</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-monitoring</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-nodejs-sdk</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-notion-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-open-source-projects</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-performance-optimization</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-python-sdk</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-scaling</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-security-best-practices</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/mcp-server-entities</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-server-setup-guide</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/mcp-servers</loc>
@@ -1525,16 +2257,154 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/mcp-slack-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-sqlite-server</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-success-stories</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-testing</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-testing-frameworks</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-tool-definition</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-troubleshooting</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-typescript-sdk</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-update-june-2026</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-uptime</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-analytics</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-crm</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-ecommerce</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-education</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-finance</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-use-case-healthcare</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/mcp-use-cases</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.81</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/mcp-version-control</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-vscode-extension</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-whatsapp-integration</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mcp-with-cursor</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/microsoft-dynamics-365-finance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/microsoft-sql-server-legacy-integration-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/models</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/mongodb-aggregation-pipeline-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/multi-agent-systems</loc>
@@ -1555,6 +2425,42 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/national-judicial-data-grid-litigant-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/nemo-guardrails-realtime-policy-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/neo4j-memgraph-cypher-execution-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/nginx-haproxy-traffic-controller-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/ondc-protocol-translation-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/onetrust-privacy-compliance-auditor-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/open-source-agents</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1567,10 +2473,82 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/oracle-netsuite-suitalk-ledger-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/pinecone-milvus-vector-search-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/pipedrive-sales-pipeline-accelerator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/postgresql-performance-tuner-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/postman-collection-api-spec-runner-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/project44-supply-chain-visibility-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/prometheus-alert-manager-middleware-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/prompt-injection-shield-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/qdrant-vector-lifecycle-management-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/quickbooks-online-api-sync-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/razorpay-payu-corporate-transaction-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/reddit</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/redis-enterprise-distributed-cache-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/replit-alternatives</loc>
@@ -1621,16 +2599,130 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/salesforce-lightning-object-orchestrator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/sap-s4hana-odata-core-bridge-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/sarathi-vahan-vehicle-registry-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/scada-industrial-iot-telemetry-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/sentry-error-trace-optimizer-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/servicenow-itil-incident-pipeline-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/shopify-core-inventory-synchronizer-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/snowflake-enterprise-data-warehouse-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/snyk-open-source-dependency-shield-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/sonarqube-static-analysis-bridge-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/splunk-elastic-siem-security-incident-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/sqlite-scoped-local-file-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/stripe-billing-subscription-lifecycle-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/supabase-firebase-schema-sync-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/swe-bench-guide</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/tally-prime-desktop-local-stdio-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/tenable-qualys-vulnerability-surface-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/terraform-drift-detector-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/top-500-ai-agents-database</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.91</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/uidai-facerd-biometric-lifecycle-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/upi-autopay-settlement-gateway-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/vapi-alternatives</loc>
@@ -1669,6 +2761,18 @@
     <priority>0.76</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/veeva-life-sciences-compliance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/vercel-deployment-webhook-lifecycle-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/voice-agents</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1679,6 +2783,90 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-case-studies</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-community-tips</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-compliance</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-cost-calculator</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-faq</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-appointment-booking</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-banking</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-call-centers</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-ecommerce</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-education</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-healthcare</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-logistics</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-for-real-estate</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.81</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/voice-ai-india</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/what-is-agentic-ai</loc>
@@ -1765,6 +2953,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://bestaiagent.in/whatsapp-ai-agent-india</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+  <url>
     <loc>https://bestaiagent.in/windsurf-alternatives</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1775,6 +2969,18 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.71</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/workday-core-hr-talent-inventory-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/xero-accounting-ledger-integrator-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.79</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/yellow-ai-alternatives</loc>
@@ -1793,5 +2999,17 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.77</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/zebra-barcode-rfid-scanner-interface-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/zoho-books-enterprise-compliance-mcp</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
