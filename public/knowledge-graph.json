@@ -242,12 +242,6 @@
       "url": "https://bestaiagent.in/ai-agent-statistics"
     },
     {
-      "id": "/ai-agent-tools",
-      "type": "editorial",
-      "label": "AI Agent Tools Directory",
-      "url": "https://bestaiagent.in/ai-agent-tools"
-    },
-    {
       "id": "/ai-agent-trends",
       "type": "core",
       "label": "AI Agent Trends 2026 – What's Shaping AI Agents in India",
@@ -3213,11 +3207,6 @@
     },
     {
       "from": "/ai-agent-statistics",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/ai-agent-tools",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
