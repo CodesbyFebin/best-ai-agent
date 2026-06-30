@@ -1,0 +1,102 @@
+import fs from "node:fs";
+import { SITE_URL, TODAY } from "./seo_utils.js";
+
+const routeMeta = JSON.parse(fs.readFileSync("public/route-meta.json", "utf8"));
+
+const entityTools = {
+  "AI Agent": ["Cursor AI", "GitHub Copilot", "Vapi", "Yellow.ai", "Flowise"],
+  "MCP": ["Claude", "Cursor", "Flowise"],
+  "RAG": ["LlamaIndex", "LangChain"],
+  "CrewAI": ["CrewAI"],
+  "LangGraph": ["LangGraph"],
+  "Cursor AI": ["Cursor"],
+  "Vapi AI": ["Vapi"],
+  "Flowise": ["Flowise"],
+  "Yellow.ai": ["Yellow.ai"],
+};
+
+const toolScores = {
+  "cursor-ai": { score: 9.6, price: "₹1,680/month" },
+  "crewai": { score: 9.4, price: "Free OSS" },
+  "vapi-ai": { score: 9.5, price: "$0.15/min" },
+  "yellow-ai": { score: 9.3, price: "Enterprise" },
+  "flowise": { score: 9.1, price: "Free OSS" },
+  "github-copilot": { score: 9.2, price: "₹1,300/month" },
+  "retell-ai": { score: 9.0, price: "$0.20/min" },
+  "langgraph": { score: 8.9, price: "Free OSS" },
+  "autogen": { score: 8.8, price: "Free OSS" },
+  "n8n": { score: 8.7, price: "Free OSS" },
+};
+
+const hubs = [
+  { path: "/coding-agents-hub", purpose: "Developer-focused AI coding agents, IDE copilots, pricing guides, comparisons, and setup tutorials for Indian engineering teams." },
+  { path: "/business-ai-hub", purpose: "AI agents for Indian SMEs, startups, agencies, CRM teams, sales teams, customer support, WhatsApp workflows, and enterprise automation." },
+  { path: "/ai-agent-builders-hub", purpose: "No-code, low-code, and developer platforms for building AI agents, RAG workflows, automations, and multi-agent systems." },
+  { path: "/voice-ai-hub", purpose: "AI voice agents for Indian call centers, appointment booking, outbound calling, support workflows, Hinglish calls, and DPDP-aware deployments." },
+  { path: "/mcp-hub", purpose: "Model Context Protocol explainers, MCP server directories, security guidance, API comparisons, and implementation tutorials." },
+];
+
+const content = [
+  "# BestAIAgent.in - AI Agent Authority for India",
+  `Updated: ${TODAY}`,
+  `Site: ${SITE_URL}`,
+  "",
+  "## Site Overview",
+  "India-focused AI agent authority. Reviews, comparisons, pricing, tutorials, and glossary definitions for AI agents, coding agents, voice agents, builders, and MCP servers. Written for Indian startups, SMEs, developers, procurement teams, and enterprises.",
+  "",
+  "## Entity Definitions",
+  "",
+  "### AI Agent",
+  "Definition: Software system that perceives, reasons, and acts autonomously to accomplish goals. Category: Core. Primary tools: Cursor AI, GitHub Copilot, Vapi, Yellow.ai, Flowise. Pages: /best-ai-agent, /tools/cursor-ai, /tools/github-copilot, /tools/vapi-ai",
+  "",
+  "### MCP (Model Context Protocol)",
+  "Definition: Open protocol for connecting AI systems to tools, data, and external context. Standardized way for agents to access files, APIs, databases safely. Category: Infrastructure. Key tools: Claude, Cursor, Flowise. Pages: /what-is-mcp, /mcp-hub, /best-mcp-servers",
+  "",
+  "### RAG (Retrieval-Augmented Generation)",
+  "Definition: Technique combining retrieval of information with generative AI to produce accurate, sourced answers. Category: Architecture. Key tools: LlamaIndex, LangChain. Pages: /what-is-rag, /tools/llamaindex, /tools/langchain",
+  "",
+  "### CrewAI",
+  "Definition: Open-source multi-agent framework for Python. Role-based agent orchestration with memory and tool integration. Category: Framework. Key tools: CrewAI. Pages: /tools/crewai, /what-is-crewai, /crewai-vs-langgraph",
+  "",
+  "### LangGraph",
+  "Definition: Graph-based agent orchestration framework. State machines for complex multi-agent workflows. Category: Framework. Key tools: LangGraph. Pages: /tools/langgraph, /what-is-langgraph, /langgraph-vs-crewai",
+  "",
+  "### Cursor AI",
+  "Definition: AI-powered code editor forked from VS Code. Repository context indexing, Composer multi-file editing, Privacy Mode. Category: Coding Agent. Score: 9.6/10. Price: ₹1,680/month. Pages: /tools/cursor-ai, /cursor-pricing, /how-to-use-cursor-ai",
+  "",
+  "### Vapi AI",
+  "Definition: Voice AI backend pipeline. Real-time voice conversations with sub-500ms latency, Hinglish support, Twilio integration. Category: Voice Agent. Score: 9.5/10. Price: $0.15/min. Pages: /tools/vapi-ai, /vapi-pricing, /how-to-use-vapi",
+  "",
+  "### Flowise",
+  "Definition: Open-source visual AI agent builder. Drag-and-drop nodes for LLM workflows, RAG, and API integrations. Category: Builder. Score: 9.1/10. Price: Free self-hosted. Pages: /tools/flowise, /flowise-pricing, /how-to-build-ai-agent-with-flowise",
+  "",
+  "### Yellow.ai",
+  "Definition: Enterprise conversational AI platform. WhatsApp Business API, UPI checkout, 135+ language support, DPDP compliant. Category: Business Agent. Score: 9.3/10. Price: Custom enterprise. Pages: /tools/yellow-ai, /yellow-ai-pricing, /how-to-use-yellow-ai",
+  "",
+  "## Hub Index",
+  "",
+  ...hubs.map((h) => `### ${h.path.replace(/^\//, "").replace(/-/g, " ")} Hub\nPath: ${h.path}\nPurpose: ${h.purpose}`),
+  "",
+  "## Tool Reviews (Scored)",
+  "",
+  ...Object.entries(toolScores).map(([slug, info]) => `- ${slug.replace(/-/g, " ")}: ${info.score}/10 - ${info.price} - ${SITE_URL}/tools/${slug}`),
+  "",
+  "## India-Specific Considerations",
+  "Pricing Model: All tools reviewed with INR estimates + GST invoice notes",
+  "Compliance: DPDP Act 2023 privacy checks on all reviews",
+  "Language: Hindi, Hinglish, Tamil, Telugu, Bengali support documented",
+  "Payment: UPI, Razorpay, Indian payment method support",
+  "Hosting: AWS Mumbai, DigitalOcean Bangalore, local data residency options",
+  "",
+  "## Machine-Readable Files",
+  `Sitemap: ${SITE_URL}/sitemap.xml`,
+  `Content Index: ${SITE_URL}/content-index.json`,
+  `Entity Index: ${SITE_URL}/entity-index.json`,
+  `Knowledge Graph: ${SITE_URL}/knowledge-graph.json`,
+  `Tool Relationships: ${SITE_URL}/tool-relationships.json`,
+  "",
+  `Last verified: ${TODAY}`,
+].join("\n");
+
+fs.writeFileSync("public/llms.txt", content + "\n");
+console.log("Optimized llms.txt generated");
