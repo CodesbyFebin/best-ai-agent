@@ -458,7 +458,7 @@ export function ReferenceHomeHero({ onNavigate, agentCount, categoryCount, mcpCo
 
         <div className="reference-india-art-panel">
           <img
-            src="/assets/hero/ai-in-india.png"
+            src="/assets/hero/ai-in-india.webp"
             alt="BestAIAgent.in AI in India hero showing a neon India map, Indian landmarks, and AI infrastructure"
             className="reference-india-art"
             loading="eager"

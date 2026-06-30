@@ -286,7 +286,8 @@ export default function App() {
     setMeta('og:title', pageTitle, true);
     setMeta('og:description', metaDescription, true);
     setMeta('og:url', canonical, true);
-    setMeta('og:type', 'website', true);
+    const isArticle = ['article', 'silo-pillar', 'compare', 'authority'].includes(currentView);
+    setMeta('og:type', isArticle ? 'article' : 'website', true);
     setMeta('twitter:title', pageTitle);
     setMeta('twitter:description', metaDescription);
     setMeta('twitter:card', 'summary_large_image');

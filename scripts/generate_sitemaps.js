@@ -139,8 +139,10 @@ write("robots.txt", [
   `Sitemap: ${SITE_URL}/hub-sitemap.xml`,
   `Sitemap: ${SITE_URL}/calculators-sitemap.xml`,
   `Sitemap: ${SITE_URL}/image-sitemap.xml`,
-  `Sitemap: ${SITE_URL}/feed.xml`,
-  `Sitemap: ${SITE_URL}/llms.txt`,
+  "",
+  `# NOTE: feed.xml and llms.txt are NOT XML sitemaps — listed for completeness`,
+  `# feed.xml: https://bestaiagent.in/feed.xml (RSS feed)`,
+  `# llms.txt: https://bestaiagent.in/llms.txt (LLM-readable site index)`,
 ].join("\n"));
 
 write("indexnow-key.txt", INDEXNOW_KEY);
@@ -378,6 +380,8 @@ write("entity-index.json", JSON.stringify(entityIndex, null, 2));
 write("tool-relationships.json", JSON.stringify(relationships, null, 2));
 write("knowledge-graph.json", JSON.stringify({ generatedAt: TODAY, nodes: graphNodes, edges: graphEdges }, null, 2));
 write("route-meta.json", JSON.stringify(routeMap, null, 2));
+
+try { await import("./generate_llms.js"); } catch (e) { console.error("llms generation failed:", e.message); }
 
 console.log(JSON.stringify({
   routeCount: routes.length,

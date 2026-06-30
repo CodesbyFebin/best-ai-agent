@@ -41,5 +41,7 @@ Sitemap: https://bestaiagent.in/author-sitemap.xml
 Sitemap: https://bestaiagent.in/hub-sitemap.xml
 Sitemap: https://bestaiagent.in/calculators-sitemap.xml
 Sitemap: https://bestaiagent.in/image-sitemap.xml
-Sitemap: https://bestaiagent.in/feed.xml
-Sitemap: https://bestaiagent.in/llms.txt
+
+# NOTE: feed.xml and llms.txt are NOT XML sitemaps — listed for completeness
+# feed.xml: https://bestaiagent.in/feed.xml (RSS feed)
+# llms.txt: https://bestaiagent.in/llms.txt (LLM-readable site index)

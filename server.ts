@@ -47,6 +47,8 @@ type RouteMeta = {
   ogImageAlt?: string;
   schemas?: unknown[];
   robots?: string;
+  source?: string;
+  schemaTypes?: string[];
 };
 
 type AnalyzeRequest = {
@@ -346,15 +348,18 @@ function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: b
   const robots = options.noindexPreview ? PREVIEW_ROBOTS : meta.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
   const imageMeta = routeImageMeta(meta);
   const googleVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.VITE_GOOGLE_SITE_VERIFICATION;
-  const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
-  const tags = [
+   const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
+   const isArticle = ["generated-topical-authority", "generated-editorial", "generated-content"].includes(meta.source) ||
+     (meta.schemaTypes && meta.schemaTypes.some((t) => ["Article", "FAQPage", "HowTo", "DefinedTerm"].includes(t)));
+   const ogType = isArticle ? "article" : "website";
+   const tags = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
     `<meta name="robots" content="${robots}" />`,
     `<link rel="canonical" href="${canonical}" />`,
     googleVerification ? `<meta name="google-site-verification" content="${escapeHtml(googleVerification)}" />` : '',
     bingVerification ? `<meta name="msvalidate.01" content="${escapeHtml(bingVerification)}" />` : '',
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${ogType}" />`,
     `<meta property="og:site_name" content="BestAIAgent.in" />`,
     `<meta property="og:url" content="${canonical}" />`,
     `<meta property="og:title" content="${title}" />`,

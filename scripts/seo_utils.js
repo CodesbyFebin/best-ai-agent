@@ -769,6 +769,14 @@ export function pageSchema(meta) {
       url: `${SITE_URL}${meta.path}`,
     });
   }
+  if (meta.schemaTypes.includes("Article") || meta.schemaTypes.includes("FAQPage")) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "SpeakableSpecification",
+      "@id": `${SITE_URL}${meta.path}#speakable`,
+      cssSelector: ["h1", ".direct-answer", ".qa p", ".hero .lede"],
+    });
+  }
   return schemas.filter((schema) => !schema.mainEntity || schema.mainEntity.length > 0);
 }
 
