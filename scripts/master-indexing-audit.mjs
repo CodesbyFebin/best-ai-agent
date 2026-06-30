@@ -193,7 +193,8 @@ function table(rows, headers) {
 }
 
 const routeMeta = readJson(path.join(PUBLIC, "route-meta.json"));
-const contentIndex = readJson(path.join(PUBLIC, "content-index.json"));
+const contentIndexRaw = readJson(path.join(PUBLIC, "content-index.json"));
+const contentIndex = Array.isArray(contentIndexRaw) ? contentIndexRaw : (contentIndexRaw.pages || []);
 const routeEntries = Object.values(routeMeta);
 const canonicalRoutes = routeEntries.filter((meta) => !meta.canonicalPath || meta.canonicalPath === meta.path);
 const redirectRoutes = routeEntries.filter((meta) => meta.canonicalPath && meta.canonicalPath !== meta.path);

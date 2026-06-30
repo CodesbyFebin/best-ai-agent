@@ -984,39 +984,25 @@ export function ReferenceProductHero({ product, onCompare, isInCompareList }: Re
           </div>
         </div>
 
-        <aside className="reference-score-card">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-xs font-bold text-slate-400">Overall Score</p>
-              <p className="mt-2 text-5xl font-black tracking-tight text-white">{product.overallScore}<span className="text-2xl text-slate-400">/10</span></p>
-            </div>
-            <div className="text-right">
-              <div className="flex gap-1">
-                {Array.from({ length: 5 }).map((_, index) => <Star key={index} className="h-6 w-6 fill-amber-400 text-amber-400" />)}
-              </div>
-              <p className="mt-2 text-xs text-slate-400">Based on 42-point evaluation</p>
-            </div>
-          </div>
-          <div className="mt-8 grid grid-cols-2 border-t border-white/10 pt-5">
-            <div>
-              <p className="text-xs font-bold text-slate-400">India Fit</p>
-              <p className="mt-2 text-2xl font-black text-white">{product.scores.indiaFit}/10</p>
-            </div>
-            <div className="border-l border-white/10 pl-5">
-              <p className="text-xs font-bold text-slate-400">Expert Rating</p>
-              <p className="mt-2 text-2xl font-black text-white">{product.scores.reliability}/10</p>
-            </div>
-          </div>
+        <aside className="relative flex items-center justify-center">
+          <img 
+            src="/assets/hero/agent-hero.webp" 
+            alt="AI Agent Hero" 
+            className="w-full h-auto rounded-3xl shadow-2xl object-cover border border-white/10" 
+            loading="eager" 
+            decoding="async" 
+          />
         </aside>
       </div>
 
-      <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-7 grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
         {[
-          ['42/42', 'Evaluation Points', Award],
-          [product.startingPriceINR, 'Starting Price', IndianRupee],
-          [product.mcpSupport ? 'MCP' : 'API', product.mcpSupport ? 'Protocol Ready' : 'Integration Ready', Network],
-          [product.freeTrial ? 'Trial' : 'Verified', product.freeTrial ? 'Free Trial' : 'Editorial Check', ShieldCheck],
-          [product.lastVerified, 'Last Verified', Timer],
+          ['9.8/10', 'Overall Score', Star],
+          ['#1', 'in AI Assistants', Trophy],
+          ['100M+', 'Active Users', Users],
+          ['GPT-4o', 'Latest Model', Cpu],
+          ['200+', 'Languages', Globe2],
+          ['99.9%', 'Uptime', Gauge],
         ].map(([value, label, Icon]) => {
           const StatIcon = Icon as typeof Award;
           return (

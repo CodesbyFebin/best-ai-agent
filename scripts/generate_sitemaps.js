@@ -374,8 +374,19 @@ const graphEdges = [
   ...entityIndex.flatMap((entity) => entity.pages.map((to) => ({ from: `entity:${entity.entity}`, to, relation: "mentionedOn" }))),
 ];
 
-write("contentIndex.json", JSON.stringify(contentIndex, null, 2));
-write("content-index.json", JSON.stringify(contentIndex, null, 2));
+const contentIndexPayload = {
+  _meta: {
+    description: "BestAIAgent.in content index — machine-readable page catalogue for AI crawlers and search engines.",
+    generatedAt: TODAY,
+    totalPages: contentIndex.length,
+    schemaVersion: "1.0",
+    siteUrl: SITE_URL,
+  },
+  pages: contentIndex,
+};
+
+write("contentIndex.json", JSON.stringify(contentIndexPayload, null, 2));
+write("content-index.json", JSON.stringify(contentIndexPayload, null, 2));
 write("entity-index.json", JSON.stringify(entityIndex, null, 2));
 write("tool-relationships.json", JSON.stringify(relationships, null, 2));
 write("knowledge-graph.json", JSON.stringify({ generatedAt: TODAY, nodes: graphNodes, edges: graphEdges }, null, 2));

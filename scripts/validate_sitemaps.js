@@ -80,7 +80,8 @@ for (const name of required.filter((n) => n.endsWith(".json"))) {
 
 const contentIndexPath = path.join(PUBLIC_DIR, "contentIndex.json");
 if (fs.existsSync(contentIndexPath)) {
-  const contentIndex = JSON.parse(fs.readFileSync(contentIndexPath, "utf8"));
+  const raw = JSON.parse(fs.readFileSync(contentIndexPath, "utf8"));
+  const contentIndex = Array.isArray(raw) ? raw : (raw.pages || []);
   if (!Array.isArray(contentIndex) || contentIndex.length === 0) errors.push("contentIndex.json is empty");
   for (const entry of contentIndex) {
     for (const key of ["path", "canonical", "title", "description", "category", "lastmod", "schemaTypes", "parentHub"]) {

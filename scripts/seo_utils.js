@@ -600,15 +600,17 @@ export function trustSignalsFor(category, source = "generated") {
 }
 
 export function articleSchema(meta) {
+  const imageUrl = `${SITE_URL}${meta.ogImage || '/assets/brand/og-default.png'}`;
   return {
     "@context": "https://schema.org",
     "@type": meta.schemaTypes?.includes("TechArticle") || meta.category === "comparisons" || meta.category === "tutorials" || meta.category === "mcp" ? "TechArticle" : "Article",
     "@id": `${SITE_URL}${meta.path}#article`,
     headline: meta.title,
     description: meta.description,
+    image: { "@type": "ImageObject", url: imageUrl, width: 1200, height: 630 },
     url: `${SITE_URL}${meta.path}`,
     inLanguage: "en-IN",
-    dateModified: TODAY,
+    dateModified: meta.lastReviewed || meta.lastmod || TODAY,
     datePublished: meta.publishedAt || meta.lastReviewed || TODAY,
     author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team" },
     publisher: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },

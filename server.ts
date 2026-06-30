@@ -182,6 +182,12 @@ function homepageBreadcrumbSchema() {
         name: 'Home',
         item: BASE_URL,
       },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'AI Agent Directory',
+        item: `${BASE_URL}/ai-agent-directory`,
+      },
     ],
   };
 }
@@ -369,6 +375,8 @@ function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: b
     `<meta property="og:image:height" content="630" />`,
     `<meta property="og:image:alt" content="${imageMeta.alt}" />`,
     `<meta property="og:locale" content="en_IN" />`,
+    `<link rel="alternate" hreflang="en-IN" href="${canonical}" />`,
+    `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:site" content="@bestaiagentin" />`,
     `<meta name="twitter:creator" content="@arshdeepsingh_" />`,
