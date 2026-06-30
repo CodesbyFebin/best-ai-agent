@@ -115,3 +115,38 @@ lines.push(`Last verified: ${TODAY}`);
 
 fs.writeFileSync("public/llms.txt", lines.join("\n") + "\n");
 console.log(`llms.txt generated: ${lines.length} lines, ${Buffer.byteLength(lines.join("\n"))} bytes`);
+
+// Generate llms-full.txt with extended context
+const fullLines = [];
+fullLines.push("# BestAIAgent.in — Complete LLM Context (Extended)");
+fullLines.push(`Updated: ${TODAY}`);
+fullLines.push(`Site: ${SITE_URL}`);
+fullLines.push("");
+fullLines.push("## Machine-Readable File References");
+fullLines.push(`Content Index: ${SITE_URL}/content-index.json`);
+fullLines.push(`Entity Index: ${SITE_URL}/entity-index.json`);
+fullLines.push(`Knowledge Graph: ${SITE_URL}/knowledge-graph.json`);
+fullLines.push(`Tool Relationships: ${SITE_URL}/tool-relationships.json`);
+fullLines.push(`AI Agents Index: ${SITE_URL}/ai-index.json`);
+fullLines.push(`Benchmark Index: ${SITE_URL}/benchmark-index.json`);
+fullLines.push(`Ranking Index: ${SITE_URL}/ranking-index.json`);
+fullLines.push("");
+fullLines.push("## Page Excerpts (Priority ≥ 0.90)");
+fullLines.push("High-priority pages with full descriptions for LLM consumption:");
+fullLines.push("");
+
+const highPriorityFull = entries
+  .filter(([, m]) => parseFloat(m.priority || "0") >= 0.90)
+  .sort((a, b) => parseFloat(b[1].priority || "0") - parseFloat(a[1].priority || "0"));
+
+highPriorityFull.forEach(([slug, m]) => {
+  const cleanDesc = (m.description || "").replace(/\[[^\]]+\]\(([^)]+)\)/g, "$1").slice(0, 500);
+  fullLines.push(`### ${m.title}`);
+  fullLines.push(`Path: /${slug}`);
+  fullLines.push(`Category: ${m.category || "page"}`);
+  fullLines.push(`Description: ${cleanDesc}`);
+  fullLines.push("");
+});
+
+fs.writeFileSync("public/llms-full.txt", fullLines.join("\n") + "\n");
+console.log(`llms-full.txt generated: ${fullLines.length} lines, ${Buffer.byteLength(fullLines.join("\n"))} bytes`);
