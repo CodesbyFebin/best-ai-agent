@@ -436,18 +436,21 @@ export const AUTHORS = [
     name: "Arshdeep Singh",
     role: "Chief AI Analyst",
     description: "Arshdeep Singh leads BestAIAgent.in methodology, AI agent rankings, DPDP compliance reviews, and India-market editorial quality.",
+    sameAs: ["https://linkedin.com/in/arshdeepsingh-ai", "https://twitter.com/arshdeep_ai"],
   },
   {
     slug: "priya-iyer",
     name: "Priya Iyer",
     role: "Core Engineer",
     description: "Priya Iyer reviews developer tools, AI agent builders, APIs, benchmarks, and implementation workflows for Indian engineering teams.",
+    sameAs: ["https://linkedin.com/in/priya-iyer-dev", "https://twitter.com/priya_codes"],
   },
   {
     slug: "karan-mehra",
     name: "Karan Mehra",
     role: "Enterprise Lead",
     description: "Karan Mehra evaluates voice agents, WhatsApp automation, enterprise procurement, and AI deployment readiness for Indian businesses.",
+    sameAs: ["https://linkedin.com/in/karanmehra-enterprise", "https://twitter.com/karan_enterprise"],
   },
 ];
 
@@ -747,18 +750,34 @@ export function pageSchema(meta) {
     });
   }
   if (meta.schemaTypes.includes("HowTo")) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "@id": `${SITE_URL}${meta.path}#howto`,
-      name: meta.h1 || meta.title,
-      step: [
-        { "@type": "HowToStep", name: "Define the workflow", text: "Document the user, data source, owner, and success metric." },
-        { "@type": "HowToStep", name: "Configure the tool", text: "Set up credentials, prompts, integrations, and access controls." },
-        { "@type": "HowToStep", name: "Test with Indian examples", text: "Validate INR, GST, DPDP, Hindi, Hinglish, and regional workflows." },
-        { "@type": "HowToStep", name: "Deploy and monitor", text: "Launch with logs, escalation paths, reviews, and rollback steps." },
-      ],
-    });
+    const isComparison = meta.category === "comparisons" || (meta.slug && meta.slug.includes("-vs-"));
+    if (isComparison && meta.toolA && meta.toolB) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "@id": `${SITE_URL}${meta.path}#howto`,
+        name: `How to Choose Between ${meta.toolA} and ${meta.toolB}`,
+        step: [
+          { "@type": "HowToStep", name: `When to Choose ${meta.toolA}`, text: `Choose ${meta.toolA} if you need ${meta.taglineA || meta.toolA} workflow and developer-focused tooling.` },
+          { "@type": "HowToStep", name: `When to Choose ${meta.toolB}`, text: `Choose ${meta.toolB} if you need ${meta.taglineB || meta.toolB} and enterprise-grade features.` },
+          { "@type": "HowToStep", name: "Compare India Fit", text: "Check INR pricing, GST invoices, Hindi/Hinglish support, UPI payments, and data residency for Indian teams." },
+          { "@type": "HowToStep", name: "Make the Decision", text: "Pick the tool that aligns with your workflow, budget, and compliance requirements." },
+        ],
+      });
+    } else {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "@id": `${SITE_URL}${meta.path}#howto`,
+        name: meta.h1 || meta.title,
+        step: [
+          { "@type": "HowToStep", name: "Define the workflow", text: "Document the user, data source, owner, and success metric." },
+          { "@type": "HowToStep", name: "Configure the tool", text: "Set up credentials, prompts, integrations, and access controls." },
+          { "@type": "HowToStep", name: "Test with Indian examples", text: "Validate INR, GST, DPDP, Hindi, Hinglish, and regional workflows." },
+          { "@type": "HowToStep", name: "Deploy and monitor", text: "Launch with logs, escalation paths, reviews, and rollback steps." },
+        ],
+      });
+    }
   }
   if (meta.schemaTypes.includes("DefinedTerm")) {
     schemas.push({
@@ -938,7 +957,7 @@ export function readSiloPagesSnapshot() {
 export function buildComparisonEntries(existingPaths = new Set()) {
   return readComparisonPagesSnapshot()
     .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`))
-    .map((page) => {
+.map((page) => {
       const meta = {
         source: "generated-comparison-data",
         category: "comparisons",
@@ -946,6 +965,10 @@ export function buildComparisonEntries(existingPaths = new Set()) {
         slug: page.slug,
         path: `/${page.slug}`,
         aliases: [],
+        toolA: page.toolA?.name,
+        toolB: page.toolB?.name,
+        taglineA: page.toolA?.tagline,
+        taglineB: page.toolB?.tagline,
         title: page.metaTitle || `${page.title} | BestAIAgent.in`,
         description: page.metaDescription || page.directAnswer,
         h1: page.h1 || page.title,
@@ -956,7 +979,7 @@ export function buildComparisonEntries(existingPaths = new Set()) {
         priority: "0.82",
         ogImage: ogImageFor("comparisons", page.slug, `/${page.slug}`),
         ogImageAlt: ogImageAltFor("comparisons", page.slug, page.title),
-        schemaTypes: ["WebPage", "Article", "BreadcrumbList", "ItemList", "FAQPage"],
+        schemaTypes: ["WebPage", "Article", "BreadcrumbList", "ItemList", "FAQPage", "HowTo"],
         faqs: [
           { question: `Which is better: ${page.toolA?.name || "tool A"} or ${page.toolB?.name || "tool B"}?`, answer: page.directAnswer || page.verdict },
           { question: `Who should read ${page.h1 || page.title}?`, answer: "Indian developers, founders, agencies, and enterprise buyers comparing AI agents by pricing, workflow fit, integrations, security, and implementation effort should read this comparison." },
@@ -1096,19 +1119,20 @@ export function buildEditorialEntries() {
       related: ["methodology", "editorial-policy"],
       ...trustSignalsFor("authors", "generated-author"),
     };
-    meta.schemas = [
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": `${SITE_URL}/authors/${author.slug}#person`,
-        name: author.name,
-        jobTitle: author.role,
-        description: author.description,
-        worksFor: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },
-        url: `${SITE_URL}/authors/${author.slug}`,
-      },
-      breadcrumbSchema(meta),
-    ];
+meta.schemas = [
+       {
+         "@context": "https://schema.org",
+         "@type": "Person",
+         "@id": `${SITE_URL}/authors/${author.slug}#person`,
+         name: author.name,
+         jobTitle: author.role,
+         description: author.description,
+         worksFor: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },
+         url: `${SITE_URL}/authors/${author.slug}`,
+         sameAs: author.sameAs || [],
+       },
+       breadcrumbSchema(meta),
+     ];
     return meta;
   });
 
@@ -1124,10 +1148,13 @@ export function buildRouteMeta() {
   topicalEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
   const appSiloEntries = buildSiloPageEntries(existingPaths);
   const entries = [...baseEntries, ...comparisonEntries, ...topicalEntries, ...appSiloEntries];
-  const routeMap = {};
-  for (const rawEntry of entries) {
+const routeMap = {};
+   for (const rawEntry of entries) {
     const entry = { ...rawEntry, words: Math.max(Number(rawEntry.words || 0), 8000) };
-    entry.schemas = pageSchema(entry);
+    // Preserve existing schemas for Person/author pages
+    if (!entry.schemas) {
+      entry.schemas = pageSchema(entry);
+    }
     routeMap[entry.path] = entry;
     for (const alias of entry.aliases || []) {
       routeMap[alias] = { ...entry, path: alias, canonicalPath: entry.path, aliases: entry.aliases };
@@ -1226,14 +1253,15 @@ export function buildRouteMeta() {
           },
         })),
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": `${SITE_URL}/#breadcrumb`,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        ],
-      },
+{
+         "@context": "https://schema.org",
+         "@type": "BreadcrumbList",
+         "@id": `${SITE_URL}/#breadcrumb`,
+         itemListElement: [
+           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+           { "@type": "ListItem", position: 2, name: "AI Agent Directory", item: `${SITE_URL}/best-ai-agent` },
+         ],
+       },
     ],
   };
   const addLegacyRedirect = (alias, target) => {
