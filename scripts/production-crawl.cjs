@@ -2,7 +2,6 @@ const http = require('node:http');
 const https = require('node:https');
 
 const DEFAULT_BASE = 'https://bestaiagent.in';
-const SAMPLE_SIZE = 80;
 const CRAWLED = {};
 
 function request(url) {
@@ -80,14 +79,13 @@ async function fetchAllSitemapUrls(baseUrl) {
 
 async function crawlUrls(baseUrl, locs) {
   const trimmedBase = baseUrl.replace(/\/$/, '');
-  console.log(`\n=== Crawling ${Math.min(SAMPLE_SIZE, locs.length)} sampled URLs ===`);
+  console.log(`\n=== Crawling all ${locs.length} sitemap URLs ===`);
 
-  const sample = locs.slice(0, SAMPLE_SIZE);
   let passCount = 0;
   let failCount = 0;
   const failures = [];
 
-  for (const loc of sample) {
+  for (const loc of locs) {
     const url = loc.startsWith('http') ? loc : `${trimmedBase}${loc.startsWith('/') ? '' : '/'}${loc}`;
     const route = new URL(url).pathname;
     CRAWLED[route] = (CRAWLED[route] || 0) + 1;
@@ -96,7 +94,7 @@ async function crawlUrls(baseUrl, locs) {
       const { status, location } = await request(url);
       if (status >= 200 && status < 400) {
         passCount++;
-        console.log(`  ✓ ${route} (${status}${location ? ` -> ${location}` : ''})`);
+        if (passCount % 50 === 0) console.log(`  ... ${passCount} passed so far`);
       } else {
         failCount++;
         failures.push({ url: route, status, route });
@@ -109,7 +107,7 @@ async function crawlUrls(baseUrl, locs) {
     }
   }
 
-  console.log(`\nSample summary: ${passCount} passed, ${failCount} failed out of ${sample.length} sampled`);
+  console.log(`\nFull crawl summary: ${passCount} passed, ${failCount} failed out of ${locs.length} total`);
 
   if (failures.length > 0) {
     console.log('\nFailed routes:');
@@ -156,12 +154,41 @@ async function testCriticalRoutes(baseUrl) {
   if (!allPass) process.exitCode = 1;
 }
 
+async function testExcludedPaths(baseUrl) {
+  const trimmedBase = baseUrl.replace(/\/$/, '');
+  console.log(`\n=== Verifying excluded paths are NOT indexed ===`);
+
+  const excluded = [
+    '/search',
+    '/filter',
+    '/admin',
+    '/debug',
+    '/preview',
+  ];
+
+  let allCorrect = true;
+  for (const route of excluded) {
+    const url = `${trimmedBase}${route}`;
+    try {
+      const { status } = await request(url);
+      const is404 = status === 404;
+      console.log(`  ${is404 ? '✓' : '✗'} ${route} (${status}) ${is404 ? '— correctly excluded' : '— should be 404'}`);
+      if (!is404) allCorrect = false;
+    } catch (err) {
+      console.log(`  ✗ ${route} (ERROR)`);
+      allCorrect = false;
+    }
+  }
+
+  if (!allCorrect) process.exitCode = 1;
+}
+
 async function main() {
   const baseUrl = process.argv[2] || DEFAULT_BASE;
   console.log(`Base URL: ${baseUrl}`);
-  console.log(`Sample size: ${SAMPLE_SIZE}`);
 
   await testCriticalRoutes(baseUrl);
+  await testExcludedPaths(baseUrl);
   const locs = await fetchAllSitemapUrls(baseUrl);
   if (locs.length > 0) {
     await crawlUrls(baseUrl, locs);
