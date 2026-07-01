@@ -7,7 +7,7 @@ export const CONTENT_DIR = path.join(ROOT, "content");
 export const PUBLIC_DIR = path.join(ROOT, "public");
 export const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 export const SITE_URL_PATTERN = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-export const TODAY = "2026-06-13";
+export const TODAY = process.env.CONTENT_DATE || process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 
 const CATEGORY_LABELS = {
   alternatives: "Alternatives",
@@ -343,8 +343,26 @@ export const EDITORIAL_ROUTES = [
   },
   {
     path: "/mcp-directory",
-    title: "MCP Directory",
-    description: "Model Context Protocol directory for AI agent tools, servers, connectors, clients, security notes, and implementation guidance.",
+    title: "MCP Server Directory: Browse & Compare MCP Servers for AI Agents in India 2026",
+    description: "Browse MCP servers by category: file system, database, API, search, and custom integrations for Indian development teams. Includes security notes, setup guides, and India-specific deployment options.",
+  },
+  {
+    path: "/mcp-servers",
+    canonicalPath: "/mcp-directory",
+    title: "MCP Servers Directory: Browse & Compare Model Context Protocol Servers for AI Agents in India",
+    description: "Complete directory of MCP servers for AI agents: file system, database, API, search, and custom integrations with India-specific deployment notes.",
+  },
+  {
+    path: "/mcp-servers-for-ai-agents",
+    canonicalPath: "/mcp-directory",
+    title: "MCP Servers for AI Agents: Integration Guide for Indian Teams 2026",
+    description: "Guide to MCP servers for AI agents in India: setup, security, regional language support, and DPDP compliance. Helps teams choose the right MCP servers for their workflows.",
+  },
+  {
+    path: "/india-mcp-server-directory",
+    canonicalPath: "/mcp-directory",
+    title: "India MCP Server Directory: Region-Specific Integrations for Developers 2026",
+    description: "India-focused MCP servers: local integrations, AWS Mumbai region support, GST compliance, and Hindi language connectors for Indian development teams.",
   },
   {
     path: "/ai-agent-market-map",
@@ -998,6 +1016,7 @@ export function buildSiloPageEntries(existingPaths = new Set()) {
     .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`))
     .map((page) => {
       const category = page.siloId || page.clusterId || "guides";
+      const safeTitle = page.metaTitle || page.title || titleCase(page.slug) || "AI Agent";
       const meta = {
         source: "generated-app-silo",
         category,
@@ -1005,9 +1024,9 @@ export function buildSiloPageEntries(existingPaths = new Set()) {
         slug: page.slug,
         path: `/${page.slug}`,
         aliases: [],
-        title: page.metaTitle || `${page.title} | BestAIAgent.in`,
-        description: page.metaDescription || page.directAnswer || `${page.title} with India-focused AI agent analysis, pricing, compliance, comparisons, and implementation guidance.`,
-        h1: page.h1 || page.title,
+        title: safeTitle.includes("BestAIAgent.in") ? safeTitle : `${safeTitle} | BestAIAgent.in`,
+        description: page.metaDescription || page.directAnswer || `${safeTitle} with India-focused AI agent analysis, pricing, compliance, comparisons, and implementation guidance.`,
+        h1: page.h1 || page.title || safeTitle,
         entityName: (page.h1 || page.title).replace(/\s*[–-]\s*.*$/, "").trim(),
         words: 2500,
         lastmod: page.updatedAt || page.lastReviewed || TODAY,
@@ -1032,6 +1051,8 @@ export function buildTopicalEntries(existingPaths = new Set()) {
   return readTopicalPagesSnapshot()
     .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`) && !existingPaths.has(`/tools/${page.slug}`))
     .map((page) => {
+      const safeTitle = page.title || titleCase(page.slug) || "AI Agent";
+      const safeDescription = page.description || `${safeTitle} with India-focused AI agent analysis, pricing, compliance, and implementation guidance.`;
       const meta = {
         source: "generated-topical-authority",
         category: page.clusterId || "topical-authority",
@@ -1041,8 +1062,8 @@ export function buildTopicalEntries(existingPaths = new Set()) {
         aliases: page.pageType === "entity" && page.slug.endsWith("-entity")
           ? [`/entity/${page.slug.replace(/-entity$/, "")}`]
           : [],
-        title: `${page.title} | BestAIAgent.in`,
-        description: page.description,
+        title: `${safeTitle} | BestAIAgent.in`,
+        description: safeDescription,
         h1: page.h1 || page.title,
         entityName: (page.h1 || page.title).replace(/\s*[–-]\s*.*$/, "").trim(),
         words: 2500,

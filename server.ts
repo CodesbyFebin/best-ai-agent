@@ -27,8 +27,9 @@ function publicUrl(pathName = '/') {
   return `${SITE_URL}${normalizedPath === '/' ? '/' : normalizedPath}`;
 }
 function normalizePath(inputPath: string) {
-  const clean = inputPath.split('?')[0].replace(/\/+$/, '');
-  return clean || '/';
+  const p = inputPath.split('?')[0].replace(/\/index\.html$/, '');
+  const clean = p.length > 1 ? p.replace(/\/+$/, '') : p;
+  return clean;
 }
 const BASE_URL = SITE_URL;
 const PRODUCTION_HOSTS = new Set(['bestaiagent.in']);
@@ -264,7 +265,8 @@ function fallbackMeta(reqPath: string): RouteMeta {
   const isTool = reqPath.startsWith('/tools/');
   const isComparison = reqPath.includes('-vs-');
   const isPricing = reqPath.includes('-pricing');
-  const label = titleCase(reqPath);
+  const slug = reqPath.replace(/^\//, '').replace(/\/+$/, '') || 'home';
+  const label = titleCase(slug) || 'AI Agent';
   const title = isAuthor
     ? `${label} - AI Agent Author | BestAIAgent.in`
     : isTool
@@ -310,11 +312,11 @@ function routeImageMeta(meta: RouteMeta) {
   let alt = meta.ogImageAlt;
 
   if (!image) {
-    if (pathName === '/') image = '/assets/og/home.png';
-    else if (pathName.startsWith('/tools/')) image = `/assets/og/${pathName.replace('/tools/', '')}.png`;
+    if (pathName.startsWith('/tools/')) image = `/assets/og/${pathName.replace('/tools/', '')}.png`;
     else if (slug.includes('-vs-')) image = `/assets/comparisons/${slug}.png`;
     else if (slug.endsWith('-hub')) image = `/assets/og/${slug}.png`;
-    else image = '/assets/brand/og-default.png';
+    else if (pathName.startsWith('/authors/')) image = `/assets/og/authors/${slug}.png`;
+    else image = '/assets/og/home.png';
   }
 
   if (!alt) {
@@ -335,7 +337,7 @@ function getRouteMeta(reqPath: string): RouteMeta | null {
   if (noindexPaths.has(pathName)) {
     return { ...fallbackMeta(pathName), robots: 'noindex,follow' };
   }
-  return routeMeta[pathName] || null;
+  return routeMeta[pathName] || fallbackMeta(pathName);
 }
 
 function getRouteMetaForRequest(req: express.Request): RouteMeta | null {
@@ -357,22 +359,26 @@ function schemaScript(meta: RouteMeta) {
 function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: boolean } = {}) {
   const canonicalPath = meta.canonicalPath || meta.path || '/';
   const canonical = `${BASE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
-  const title = escapeHtml(meta.title || defaultHomeMeta.title);
-  const description = escapeHtml(meta.description || defaultHomeMeta.description);
+  const rawTitle = meta.title || defaultHomeMeta.title;
+  const title = rawTitle && !rawTitle.includes('undefined') ? escapeHtml(rawTitle) : defaultHomeMeta.title;
+  const rawDescription = meta.description || defaultHomeMeta.description;
+  const description = rawDescription && !rawDescription.includes('undefined') ? escapeHtml(rawDescription) : defaultHomeMeta.description;
   const robots = options.noindexPreview ? PREVIEW_ROBOTS : meta.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
   const imageMeta = routeImageMeta(meta);
   const googleVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.VITE_GOOGLE_SITE_VERIFICATION;
-   const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
-   const isArticle = ["generated-topical-authority", "generated-editorial", "generated-content"].includes(meta.source) ||
-     (meta.schemaTypes && meta.schemaTypes.some((t) => ["Article", "FAQPage", "HowTo", "DefinedTerm"].includes(t)));
-   const ogType = isArticle ? "article" : "website";
-   const tags = [
+  const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
+  const isArticle = ["generated-topical-authority", "generated-editorial", "generated-content"].includes(meta.source) ||
+    (meta.schemaTypes && meta.schemaTypes.some((t) => ["Article", "FAQPage", "HowTo", "DefinedTerm"].includes(t)));
+  const ogType = isArticle ? "article" : "website";
+  const isHomepage = canonicalPath === '/';
+  const tags = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
     `<meta name="robots" content="${robots}" />`,
     `<link rel="canonical" href="${canonical}" />`,
     googleVerification ? `<meta name="google-site-verification" content="${escapeHtml(googleVerification)}" />` : '',
     bingVerification ? `<meta name="msvalidate.01" content="${escapeHtml(bingVerification)}" />` : '',
+    isHomepage ? `<link rel="preload" fetchpriority="high" as="image" href="${imageMeta.image}" type="image/png" />` : '',
     `<meta property="og:type" content="${ogType}" />`,
     `<meta property="og:site_name" content="BestAIAgent.in" />`,
     `<meta property="og:url" content="${canonical}" />`,

@@ -1,7 +1,7 @@
 # Cursor AI Review: India's Independent Assessment (June 2026) [Cursor AI review](/tools/cursor-ai) [AI agent pricing in INR](/pricing)
 
 ## SEO Title
-Cursor AI Review: India's Independent Assessment (June 2026) | BestAIAgent.in
+Cursor AI Review 2026: Pricing, Features, Alternatives & Coding Use Cases | BestAIAgent.in
 
 ## Meta Description
 Cursor AI Review: India's Independent Assessment (June 2026) with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
