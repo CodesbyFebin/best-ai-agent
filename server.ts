@@ -227,16 +227,24 @@ const defaultHomeMeta: RouteMeta = {
 };
 
 function readRouteMeta(): Record<string, RouteMeta> {
-  const candidates = [
-    path.resolve(process.cwd(), 'public/route-meta.json'),
+  const orderedCandidates = [
     path.resolve(process.cwd(), 'dist/route-meta.json'),
     path.resolve(__dirname, 'route-meta.json'),
+    path.resolve(process.cwd(), 'public/route-meta.json'),
   ];
-  for (const file of candidates) {
-    if (fs.existsSync(file)) {
-      return JSON.parse(fs.readFileSync(file, 'utf8')) as Record<string, RouteMeta>;
+  for (const file of orderedCandidates) {
+    if (!fs.existsSync(file)) continue;
+    try {
+      const data = JSON.parse(fs.readFileSync(file, 'utf8')) as Record<string, RouteMeta>;
+      if (data && Object.keys(data).length > 0) {
+        console.warn(`[route-meta] loaded ${Object.keys(data).length} routes from ${file}`);
+        return data;
+      }
+    } catch (error) {
+      console.warn(`[route-meta] failed to parse ${file}: ${error instanceof Error ? error.message : error}`);
     }
   }
+  console.warn('[route-meta] falling back to defaultHomeMeta only — all non-root routes may return 404 until route-meta.json is available');
   return { '/': defaultHomeMeta };
 }
 
@@ -704,11 +712,10 @@ async function createApp() {
     app.use(express.static(distPath, { index: false }));
     app.get('*', (req, res) => {
       const pathName = normalizePath(req.path);
-      if (!routeMeta[pathName] && !noindexPaths.has(pathName)) return res.status(404).send('Not found');
+      if (noindexPaths.has(pathName)) return res.status(404).send('Not found');
       const htmlPath = path.join(distPath, 'index.html');
       if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
-      const meta = getRouteMetaForRequest(req);
-      if (!meta) return res.status(404).send('Not found');
+      const meta = getRouteMetaForRequest(req) || fallbackMeta(pathName);
       const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       return res.send(html);

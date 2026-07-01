@@ -7,17 +7,52 @@
       "src": "server.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/client/**", "public/**", "dist/route-meta.json", "dist/contentIndex.json", "dist/content-index.json", "dist/llms.txt", "dist/llms-full.txt"]
+        "includeFiles": [
+          "dist/server.js",
+          "dist/server.js.map",
+          "dist/route-meta.json",
+          "dist/contentIndex.json",
+          "dist/content-index.json",
+          "dist/llms.txt",
+          "dist/llms-full.txt",
+          "dist/client/**",
+          "public/assets/**",
+          "public/sitemap.xml",
+          "public/ai-agent-sitemap.xml",
+          "public/tool-sitemap.xml",
+          "public/comparison-sitemap.xml",
+          "public/pricing-sitemap.xml",
+          "public/alternatives-sitemap.xml",
+          "public/tutorials-sitemap.xml",
+          "public/glossary-sitemap.xml",
+          "public/mcp-sitemap.xml",
+          "public/author-sitemap.xml",
+          "public/hub-sitemap.xml",
+          "public/calculators-sitemap.xml",
+          "public/image-sitemap.xml",
+          "public/feed.xml",
+          "public/llms.txt",
+          "public/robots.txt",
+          "public/favicon.ico",
+          "public/site.webmanifest",
+          "public/contentIndex.json",
+          "public/content-index.json",
+          "public/entity-index.json",
+          "public/knowledge-graph.json",
+          "public/tool-relationships.json",
+          "public/route-meta.json",
+          "public/indexnow-key.txt",
+          "public/7f4f2d728f93411eb9a03bestaiagentin.txt"
+        ]
       }
     },
     {
-      "src": "public/**",
+      "src": "public/assets/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/(favicon\\.ico|site\\.webmanifest|llms\\.txt|llms-full\\.txt|feed\\.xml|sitemap\\.xml|ai-agent-sitemap\\.xml|tool-sitemap\\.xml|comparison-sitemap\\.xml|pricing-sitemap\\.xml|alternatives-sitemap\\.xml|tutorials-sitemap\\.xml|glossary-sitemap\\.xml|mcp-sitemap\\.xml|author-sitemap\\.xml|hub-sitemap\\.xml|calculators-sitemap\\.xml|image-sitemap\\.xml|contentIndex\\.json|content-index\\.json|entity-index\\.json|knowledge-graph\\.json|tool-relationships\\.json|robots\\.txt|7f4f2d728f93411eb9a03bestaiagentin\\.txt)/(.*)", "dest": "/public/$1/$2" },
-    { "src": "/(favicon\\.ico|site\\.webmanifest|llms\\.txt|llms-full\\.txt|feed\\.xml|sitemap\\.xml|ai-agent-sitemap\\.xml|tool-sitemap\\.xml|comparison-sitemap\\.xml|pricing-sitemap\\.xml|alternatives-sitemap\\.xml|tutorials-sitemap\\.xml|glossary-sitemap\\.xml|mcp-sitemap\\.xml|author-sitemap\\.xml|hub-sitemap\\.xml|calculators-sitemap\\.xml|image-sitemap\\.xml|contentIndex\\.json|content-index\\.json|entity-index\\.json|knowledge-graph\\.json|tool-relationships\\.json|robots\\.txt|7f4f2d728f93411eb9a03bestaiagentin\\.txt)", "dest": "/public/$1" },
+    { "src": "/api/(.*)", "dest": "server.ts" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "server.ts" }
   ]
