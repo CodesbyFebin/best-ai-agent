@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-07-02",
   "nodes": [
     {
       "id": "/",
@@ -2698,7 +2698,7 @@
     {
       "id": "/mcp-directory",
       "type": "editorial",
-      "label": "MCP Directory",
+      "label": "India MCP Server Directory: Region-Specific Integrations for Developers 2026",
       "url": "https://bestaiagent.in/mcp-directory"
     },
     {
@@ -2868,12 +2868,6 @@
       "type": "mcp-servers",
       "label": "MCP Server Setup Guide: Installation & Configuration",
       "url": "https://bestaiagent.in/mcp-server-setup-guide"
-    },
-    {
-      "id": "/mcp-servers",
-      "type": "directories",
-      "label": "MCP Servers Directory: Model Context Protocol",
-      "url": "https://bestaiagent.in/mcp-servers"
     },
     {
       "id": "/mcp-servers-directory",
@@ -6598,11 +6592,6 @@
     },
     {
       "from": "/mcp-server-setup-guide",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
-      "from": "/mcp-servers",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },

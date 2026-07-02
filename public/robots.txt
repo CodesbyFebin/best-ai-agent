@@ -1,5 +1,5 @@
 # BestAIAgent.in robots.txt
-# Updated: 2026-06-13
+# Updated: 2026-07-02
 
 User-agent: *
 Allow: /

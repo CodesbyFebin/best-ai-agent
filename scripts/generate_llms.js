@@ -52,6 +52,10 @@ coreEntities.forEach((e) => {
   lines.push("");
 });
 
+lines.push("## Editorial Policy");
+lines.push("Independent editorial rankings. No vendor can buy organic placement. Sponsored placements, if present, are labelled separately. Rankings are reviewed through capability, reliability, India Fit, and implementation value criteria.");
+lines.push("");
+
 lines.push("## Comparisons Index");
 lines.push("Head-to-head AI agent comparisons on BestAIAgent.in:");
 lines.push("");
@@ -84,6 +88,17 @@ hubs.forEach(([slug, m]) => {
   lines.push("");
 });
 
+lines.push("## Key Hubs");
+lines.push("");
+
+seen.forEach((slug) => {
+  const m = Object.entries(routeMeta).find(([s]) => s === slug)?.[1];
+  if (m) {
+    lines.push(`- [${m.h1 || m.title}](/${slug}) - ${m.description || m.title}`);
+  }
+});
+lines.push("");
+
 lines.push("## Topical Authorities (Priority ≥ 0.90)");
 lines.push("");
 entries
@@ -95,6 +110,42 @@ entries
   });
 
 lines.push("");
+lines.push("## Tool Reviews");
+lines.push("Scored tool review pages are available in the tool sitemap and content index, with review, pricing, alternatives, and tutorial relationships also exposed in JSON.");
+lines.push("");
+
+lines.push("## Comparisons");
+lines.push("Head-to-head comparisons cover coding agents, voice agents, support platforms, agent builders, frameworks, and MCP implementation choices.");
+lines.push("");
+
+lines.push("## Pricing Pages");
+lines.push("Pricing pages track INR context, GST invoice notes, free tiers, enterprise plans, and volatile vendor pricing caveats.");
+lines.push("");
+
+lines.push("## Alternatives");
+lines.push("Alternative pages map substitute tools by category, budget, implementation complexity, India Fit, and deployment model.");
+lines.push("");
+
+lines.push("## Tutorials");
+lines.push("Tutorial pages cover AI agent setup, coding agents, voice agents, WhatsApp agents, RAG, CrewAI, and MCP server implementation.");
+lines.push("");
+
+lines.push("## Glossary");
+lines.push("Glossary pages define MCP, RAG, tool use, function calling, context windows, multi-agent systems, AgentOps, SWE-bench, GAIA, CrewAI, and LangGraph.");
+lines.push("");
+
+lines.push("## MCP Pages");
+lines.push("MCP coverage includes the protocol guide, server directory, marketplace, MCP vs API, security, enterprise usage, and India DPI server opportunities.");
+lines.push("");
+
+lines.push("## Security and Compliance");
+lines.push("Security coverage includes DPDP Act 2023, prompt injection, tool permission scoping, audit logging, data residency, and enterprise governance.");
+lines.push("");
+
+lines.push("## Freshness");
+lines.push("Daily rebuilds update generated indexes and feeds. Rankings are re-verified quarterly; pricing is updated when changes are confirmed; MCP availability is reviewed monthly.");
+lines.push("");
+
 lines.push("## India-Specific Considerations");
 lines.push("Pricing: INR estimates + GST invoice notes on all tools");
 lines.push("Compliance: DPDP Act 2023 privacy checks on all reviews");
