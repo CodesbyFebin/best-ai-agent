@@ -1,12 +1,19 @@
 import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
+import {createRoot, hydrateRoot} from 'react-dom/client';
 import App from './App.tsx';
 import {AnalyticsSuite} from './components/AnalyticsSuite.tsx';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root')!;
+const app = (
   <StrictMode>
     <App />
     <AnalyticsSuite />
-  </StrictMode>,
+  </StrictMode>
 );
+
+if (root.hasChildNodes() && root.dataset.renderMode !== 'static-snapshot') {
+  hydrateRoot(root, app);
+} else {
+  createRoot(root).render(app);
+}

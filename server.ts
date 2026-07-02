@@ -418,6 +418,74 @@ function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: b
   return out;
 }
 
+function homepageStaticSnapshot() {
+  const primaryLinks = [
+    ['Best AI Agents', '/best-ai-agent'],
+    ['AI Agent Directory', '/ai-agent-tools'],
+    ['MCP Directory', '/mcp-directory'],
+    ['AI Agent Rankings', '/ai-agent-rankings'],
+    ['Pricing Hub', '/pricing-hub'],
+    ['Alternatives Hub', '/alternatives-hub'],
+    ['Tutorials Hub', '/tutorials-hub'],
+    ['Glossary Hub', '/glossary-hub'],
+    ['Coding Agents Hub', '/coding-agents-hub'],
+    ['Business AI Hub', '/business-ai-hub'],
+    ['Voice AI Hub', '/voice-ai-hub'],
+    ['Agent Builders Hub', '/ai-agent-builders-hub'],
+    ['AI Agent Security', '/ai-agent-security'],
+    ['Editorial Methodology', '/methodology'],
+    ['AI Agent Scoring System', '/ai-agent-scoring-system'],
+    ['Affiliate Disclosure', '/affiliate-disclosure'],
+    ['Cursor AI Review', '/tools/cursor-ai'],
+    ['GitHub Copilot Review', '/tools/github-copilot'],
+    ['Vapi AI Review', '/tools/vapi-ai'],
+    ['Yellow.ai Review', '/tools/yellow-ai'],
+    ['Flowise Review', '/tools/flowise'],
+    ['CrewAI Review', '/tools/crewai'],
+    ['Cursor vs GitHub Copilot', '/cursor-vs-github-copilot'],
+    ['CrewAI vs LangGraph', '/crewai-vs-langgraph'],
+    ['What Is an AI Agent?', '/what-is-an-ai-agent'],
+    ['What Is MCP?', '/what-is-mcp'],
+    ['DPDP AI Compliance', '/dpdp-act-ai-compliance'],
+    ['AI Agent Market Map', '/ai-agent-market-map'],
+    ['AI Agent Cost Report', '/ai-agent-cost-report'],
+    ['AI Agent Adoption Report', '/ai-agent-adoption-report'],
+  ];
+  const linkHtml = primaryLinks
+    .map(([label, href]) => `<a href="${href}">${escapeHtml(label)}</a>`)
+    .join('\n          ');
+
+  return `
+      <main class="server-homepage-snapshot" aria-label="BestAIAgent.in homepage">
+        <section>
+          <p>India-first independent AI agent rankings</p>
+          <h1>Best AI Agents in India 2026</h1>
+          <p>Compare AI coding agents, business automation agents, voice AI agents, no-code builders, MCP servers, pricing, alternatives, and tutorials with INR estimates, DPDP compliance notes, India-specific use cases, and independent editorial scoring.</p>
+          <p>The best AI agent depends on your use case. Cursor AI leads for coding, Vapi and Retell are strong for voice automation, Yellow.ai and Intercom fit customer support, while Flowise, Dify, CrewAI, and LangGraph are better for building custom agents.</p>
+        </section>
+        <nav aria-label="Crawler-friendly homepage authority links">
+          ${linkHtml}
+        </nav>
+        <section>
+          <h2>Best AI Agent Categories</h2>
+          <p>BestAIAgent.in covers coding agents, voice agents, business AI agents, agent builders, MCP servers, pricing guides, alternatives, tutorials, glossary definitions, and India compliance resources for startups, SMEs, developers, agencies, and enterprises.</p>
+        </section>
+      </main>
+    `;
+}
+
+function injectAppHtml(html: string, appHtml: string) {
+  return html.replace('<div id="root"></div>', `<div id="root" data-render-mode="static-snapshot">${appHtml}</div>`);
+}
+
+async function renderHtml(req: express.Request, template: string, meta: RouteMeta, options: { noindexPreview?: boolean } = {}) {
+  let html = injectMeta(template, meta, options);
+  if (normalizePath(req.path) === '/') {
+    html = injectAppHtml(html, homepageStaticSnapshot());
+  }
+  return html;
+}
+
 function contentTypeFor(fileName: string) {
   if (fileName.endsWith('.xml')) return fileName === 'feed.xml' ? 'application/rss+xml; charset=utf-8' : 'application/xml; charset=utf-8';
   if (fileName.endsWith('.txt')) return 'text/plain; charset=utf-8';
@@ -705,7 +773,8 @@ async function createApp() {
         if (!meta) {
           return res.status(404).send('Not found');
         }
-        const html = await vite.transformIndexHtml(req.originalUrl, injectMeta(template, meta, { noindexPreview: isPreviewHost(req.headers.host) }));
+        const rendered = await renderHtml(req, template, meta, { noindexPreview: isPreviewHost(req.headers.host) });
+        const html = await vite.transformIndexHtml(req.originalUrl, rendered);
         res.status(200).set({ 'Content-Type': 'text/html; charset=utf-8' }).send(html);
       } catch (error) {
         vite.ssrFixStacktrace(error as Error);
@@ -716,15 +785,19 @@ async function createApp() {
     const distPath = path.resolve(process.cwd(), 'dist', 'client');
     app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
     app.use(express.static(distPath, { index: false }));
-    app.get('*', (req, res) => {
+    app.get('*', async (req, res, next) => {
       const pathName = normalizePath(req.path);
       if (noindexPaths.has(pathName)) return res.status(404).send('Not found');
       const htmlPath = path.join(distPath, 'index.html');
       if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
-      const meta = getRouteMetaForRequest(req) || fallbackMeta(pathName);
-      const html = injectMeta(fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
-      res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(html);
+      try {
+        const meta = getRouteMetaForRequest(req) || fallbackMeta(pathName);
+        const html = await renderHtml(req, fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        return res.send(html);
+      } catch (error) {
+        return next(error);
+      }
     });
   }
 
