@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "site": "BestAIAgent.in",
+    "url": "https://bestaiagent.in",
+    "description": "India's independent AI agent directory, ranking platform, and MCP server catalogue",
+    "generated": "2026-06-30",
+    "version": "3.1.0",
+    "total_pages": 498,
+    "total_clusters": 22,
+    "build": "daily-rebuild",
+    "canonical_language": "en-IN",
+    "geo_focus": "IN",
+    "content_types": ["ranking","comparison","review","guide","glossary","entity","pricing","alternative","tutorial","benchmark","pillar","longtail","india-cluster","mcp-server"],
+    "update_policy": {
+      "rankings": "quarterly",
+      "pricing": "on-change",
+      "news": "daily",
+      "mcp_availability": "monthly",
+      "benchmarks": "quarterly"
+    }
+  },
+
+  "clusters": [
+    {
+      "id": "core",
+      "name": "Core AI Agent Knowledge",
+      "hub": "/what-is-an-ai-agent",
+      "description": "Foundational explainers on AI agent concepts, architecture, use cases, and trends",
+      "page_count": 8,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "mcp",
+      "name": "MCP — Model Context Protocol",
+      "hub": "/what-is-mcp",
+      "description": "Protocol explainers, server directory, client implementations, and India-specific MCP coverage",
+      "page_count": 60,
+      "priority": "high",
+      "india_specific": false,
+      "india_overlap": true
+    },
+    {
+      "id": "coding-agents",
+      "name": "AI Coding Agents",
+      "hub": "/best-ai-agent-for-coding",
+      "description": "Coding agents, IDE extensions, and AI pair-programming tools",
+      "page_count": 17,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "voice-agents",
+      "name": "AI Voice Agents",
+      "hub": "/best-ai-voice-agent",
+      "description": "Voice AI platforms with emphasis on Indian language support and call centre patterns",
+      "page_count": 12,
+      "priority": "high",
+      "india_specific": false,
+      "india_overlap": true
+    },
+    {
+      "id": "builders",
+      "name": "AI Agent Builders",
+      "hub": "/best-free-ai-agent-builder",
+      "description": "No-code and low-code platforms for building AI agents",
+      "page_count": 9,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "frameworks",
+      "name": "AI Agent Frameworks",
+      "hub": "/best-ai-agent-framework",
+      "description": "Orchestration frameworks and open-source infrastructure",
+      "page_count": 14,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "support-agents",
+      "name": "AI Customer Support Agents",
+      "hub": "/best-ai-agent-for-customer-support",
+      "description": "Support agent platforms with India-specific WhatsApp and language context",
+      "page_count": 7,
+      "priority": "medium",
+      "india_specific": false,
+      "india_overlap": true
+    },
+    {
+      "id": "india",
+      "name": "India Cluster — Bharat AI",
+      "hub": "/ai-agents-india",
+      "description": "India-specific AI agent content: WhatsApp, voice, DPDP, Hindi, GST, UPI",
+      "page_count": 8,
+      "priority": "high",
+      "india_specific": true
+    },
+    {
+      "id": "sales-marketing",
+      "name": "AI Sales and Marketing Agents",
+      "hub": "/best-ai-agent-for-sales",
+      "description": "Sales automation, lead generation, outbound prospecting, and marketing AI",
+      "page_count": 7,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "industry",
+      "name": "AI Agents by Industry",
+      "hub": "/pillars",
+      "description": "48+ industry and role hub pages covering vertical AI agent adoption",
+      "page_count": 48,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "pricing",
+      "name": "AI Agent Pricing",
+      "hub": "/pricing",
+      "description": "Verified pricing pages for all major AI agent platforms",
+      "page_count": 15,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "free",
+      "name": "Free AI Agents",
+      "hub": "/best-free-ai-agents",
+      "description": "Free-tier, freemium, and open-source AI agent options",
+      "page_count": 6,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "learning",
+      "name": "AI Agent Courses and Learning",
+      "hub": "/best-ai-agent-course",
+      "description": "Courses, tutorials, and practical project guides",
+      "page_count": 11,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "benchmarks",
+      "name": "AI Agent Benchmarks",
+      "hub": "/benchmarks/ai-agent-benchmarks-2026",
+      "description": "Benchmark data, testing methodology, and evaluation frameworks",
+      "page_count": 5,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "security",
+      "name": "AI Agent Security and Trust",
+      "hub": "/guides/ai-agent-security",
+      "description": "Security, compliance, governance, and trust for AI agent deployments",
+      "page_count": 5,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "entities",
+      "name": "Entity Reference Pages",
+      "hub": "/entities",
+      "description": "Structured reference pages for companies, frameworks, models, and tools",
+      "page_count": 80,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "comparisons",
+      "name": "AI Agent Comparisons",
+      "hub": "/comparisons",
+      "description": "Head-to-head independently tested product comparisons",
+      "page_count": 26,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "alternatives",
+      "name": "AI Agent Alternatives",
+      "hub": "/alternatives",
+      "description": "Alternatives to every major AI agent product",
+      "page_count": 11,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "reviews",
+      "name": "AI Agent Reviews",
+      "hub": "/reviews",
+      "description": "In-depth independently tested product reviews",
+      "page_count": 27,
+      "priority": "high",
+      "india_specific": false
+    },
+    {
+      "id": "glossary",
+      "name": "Glossary",
+      "hub": "/glossary",
+      "description": "Definitions of technical AI agent terms",
+      "page_count": 12,
+      "priority": "medium",
+      "india_specific": false
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics and Research",
+      "hub": "/statistics",
+      "description": "Market data, research reports, and industry statistics",
+      "page_count": 8,
+      "priority": "low",
+      "india_specific": false
+    },
+    {
+      "id": "longtail",
+      "name": "Longtail and Role-Specific",
+      "hub": "/longtail",
+      "description": "Long-tail pages targeting specific roles, workflows, and use cases",
+      "page_count": 18,
+      "priority": "medium",
+      "india_specific": false
+    }
+  ],
+
+  "pages": [
+
+    { "slug": "/", "title": "Best AI Agents in India 2026 | BestAIAgent.in", "type": "home", "cluster": "core", "description": "India's largest AI agent directory and ranking platform. 200+ agents, 78+ MCP servers, independent expert rankings with INR pricing and DPDP compliance checks.", "india_specific": true, "priority": 1.0, "word_count": 8332, "last_verified": "2026-06-30" },
+
+    { "slug": "/what-is-an-ai-agent", "title": "What Is an AI Agent? Definition, Architecture, and Examples (2026)", "type": "guide", "cluster": "core", "description": "Complete definition of AI agents: three-layer architecture (reasoning, tool, control), difference from chatbots, real-world examples across industries.", "priority": 0.95, "word_count": 3200 },
+    { "slug": "/ai-agent-examples", "title": "25 AI Agent Examples in Production (2026)", "type": "guide", "cluster": "core", "description": "25 concrete real-world AI agent deployments with architecture notes and measurable outcomes.", "priority": 0.85, "word_count": 2800 },
+    { "slug": "/ai-agent-use-cases", "title": "50 AI Agent Use Cases by Industry and Function (2026)", "type": "guide", "cluster": "core", "description": "Categorised use case library covering coding, support, sales, marketing, research, and operations.", "priority": 0.85, "word_count": 3100 },
+    { "slug": "/ai-agent-trends", "title": "AI Agent Trends 2026: What's Actually Changing", "type": "guide", "cluster": "core", "description": "Monthly-updated analysis of meaningful trends in AI agent adoption, technology, and market structure.", "priority": 0.80, "word_count": 2600 },
+    { "slug": "/best-ai-agent", "title": "Best AI Agent 2026: Top Pick Across All Categories", "type": "ranking", "cluster": "core", "description": "Single top-pick ranking across all AI agent categories with India fit scoring.", "priority": 0.90, "word_count": 2400 },
+    { "slug": "/best-ai-agents", "title": "Best AI Agents 2026: Complete Directory and Rankings", "type": "ranking", "cluster": "core", "description": "Filterable directory of 200+ AI agents with scores, pricing, and India fit ratings.", "priority": 0.92, "word_count": 4200 },
+    { "slug": "/future-of-ai-agents", "title": "Future of AI Agents: What Comes After 2026", "type": "guide", "cluster": "core", "description": "Long-horizon analysis of agentic AI trajectory including agent-to-agent commerce, regulatory evolution, and voice primacy in India.", "priority": 0.75, "word_count": 2200 },
+    { "slug": "/ai-agent-news", "title": "AI Agent News: Latest Updates and Announcements", "type": "news", "cluster": "core", "description": "Aggregated and editorially filtered news from the AI agent ecosystem, updated daily.", "priority": 0.80, "word_count": 1800 },
+
+    { "slug": "/what-is-mcp", "title": "What Is MCP? Complete Guide to Model Context Protocol (2026)", "type": "guide", "cluster": "mcp", "description": "MCP full form, meaning, architecture (servers, clients, hosts), MCP vs API comparison, how to start using MCP, and the India DPI opportunity.", "priority": 0.95, "india_specific": false, "word_count": 3800, "targets": ["what is mcp","mcp meaning","mcp full form","model context protocol","what is model context protocol"] },
+    { "slug": "/mcp-directory", "title": "MCP Server Directory 2026: 100 Best MCP Servers Ranked", "type": "ranking", "cluster": "mcp", "description": "The most comprehensive MCP server catalogue: 100 servers across 7 domains — DevOps, Indian DPI, ERP, databases, supply chain, security, and healthcare.", "priority": 0.95, "india_specific": false, "word_count": 4451, "targets": ["mcp server directories","mcp server list","best mcp servers","mcp servers 2026"] },
+    { "slug": "/mcp-servers", "title": "MCP Servers: Browse All Available MCP Server Implementations", "type": "directory", "cluster": "mcp", "description": "Browsable list of all available MCP server implementations by category, with availability status and setup links.", "priority": 0.88 },
+    { "slug": "/mcp-clients", "title": "MCP Clients: Every MCP-Compatible Application (2026)", "type": "guide", "cluster": "mcp", "description": "Comprehensive list of AI applications that support the MCP protocol as clients, with connection notes and feature comparison.", "priority": 0.82 },
+    { "slug": "/mcp-vs-api", "title": "MCP vs API: What's the Difference? (2026)", "type": "comparison", "cluster": "mcp", "description": "How MCP differs from traditional API integration, N×M vs N+M integration architecture, and when to use each approach.", "priority": 0.85, "targets": ["mcp vs api","model context protocol vs api"] },
+    { "slug": "/best-mcp-tools", "title": "Best MCP Tools 2026: Top MCP Servers Ranked by Quality", "type": "ranking", "cluster": "mcp", "description": "Editorial ranking of the best-maintained, most capable MCP server implementations with scores.", "priority": 0.88 },
+    { "slug": "/mcp-for-enterprise", "title": "MCP for Enterprise: Security, Governance, and Scale Guide", "type": "guide", "cluster": "mcp", "description": "Enterprise adoption guide for MCP: permission scoping, audit logging, prompt injection defense, vendor selection, and data residency.", "priority": 0.82 },
+    { "slug": "/mcp/servers/filesystem", "title": "Filesystem MCP Server: Setup, Docs, and Use Cases", "type": "entity", "cluster": "mcp", "description": "Reference page for the Filesystem MCP server: capabilities, permissions model, security considerations.", "priority": 0.78 },
+    { "slug": "/mcp/servers/github", "title": "GitHub MCP Server: Setup, Docs, and Use Cases", "type": "entity", "cluster": "mcp", "description": "Reference page for the GitHub MCP server: repos, issues, PRs, code search.", "priority": 0.80 },
+    { "slug": "/mcp/servers/postgres", "title": "PostgreSQL MCP Server: Setup, Docs, and Use Cases", "type": "entity", "cluster": "mcp", "description": "Reference page for the PostgreSQL MCP server: query execution, schema inspection, performance tuning.", "priority": 0.80 },
+    { "slug": "/mcp/servers/slack", "title": "Slack MCP Server: Setup, Docs, and Use Cases", "type": "entity", "cluster": "mcp", "description": "Reference page for the Slack MCP server: message reading, posting, channel management.", "priority": 0.78 },
+    { "slug": "/mcp/servers/google-drive", "title": "Google Drive MCP Server: Setup, Docs, and Use Cases", "type": "entity", "cluster": "mcp", "description": "Reference page for the Google Drive MCP server: document reading, summarisation, file operations.", "priority": 0.78 },
+    { "slug": "/mcp/servers/gstn", "title": "GSTN MCP Server: GST e-Invoice Reconciliation for AI Agents", "type": "entity", "cluster": "mcp", "description": "India-specific MCP server for GSTN integration: e-invoice reconciliation, GSTIN validation, ITC ledger verification. Currently unbuilt — high demand.", "india_specific": true, "priority": 0.85, "status": "unbuilt", "targets": ["gstn mcp","gst ai agent","gstn api integration"] },
+    { "slug": "/mcp/servers/upi", "title": "UPI MCP Server: Payment Autopay and Settlement for AI Agents", "type": "entity", "cluster": "mcp", "description": "India-specific MCP server for UPI integration: dynamic QR generation, settlement reconciliation, webhook management. Currently unbuilt.", "india_specific": true, "priority": 0.85, "status": "unbuilt" },
+    { "slug": "/mcp/servers/digilocker", "title": "DigiLocker MCP Server: Consented Document Verification for AI Agents", "type": "entity", "cluster": "mcp", "description": "India-specific MCP server for DigiLocker: PAN, vehicle records, academic transcripts. Currently unbuilt.", "india_specific": true, "priority": 0.82, "status": "unbuilt" },
+    { "slug": "/mcp/servers/ondc", "title": "ONDC MCP Server: Protocol Translation for AI Commerce Agents", "type": "entity", "cluster": "mcp", "description": "India-specific MCP server for ONDC: catalog broadcast, order tracking across the network. Currently unbuilt.", "india_specific": true, "priority": 0.82, "status": "unbuilt" },
+    { "slug": "/mcp/comparisons/brave-vs-tavily-vs-serpapi", "title": "Brave vs Tavily vs SerpAPI: Best Web Search MCP Server (2026)", "type": "comparison", "cluster": "mcp", "description": "Three-way comparison of web search MCP servers: latency, coverage, India results quality, pricing.", "priority": 0.80 },
+    { "slug": "/mcp/tutorials/build-your-first-mcp-server", "title": "Build Your First MCP Server: Step-by-Step Tutorial", "type": "tutorial", "cluster": "mcp", "description": "Practical tutorial for building a minimal MCP server from scratch, with a working GSTN wrapper as the example.", "priority": 0.78 },
+    { "slug": "/mcp/marketplace", "title": "MCP Marketplace: Browse Community MCP Servers", "type": "directory", "cluster": "mcp", "description": "Browsable marketplace of community-built MCP servers with quality ratings and maintenance status.", "priority": 0.82 },
+
+    { "slug": "/best-ai-agent-for-coding", "title": "Best AI Agent for Coding 2026: 15 Tools Tested on Real Codebases", "type": "ranking", "cluster": "coding-agents", "description": "Independent ranking of 15 coding agents tested on real, messy codebases — not demo scenarios. Scores for completion rate, error handling, and India developer context.", "priority": 0.95, "targets": ["best ai agent for coding","free ai agent for coding","best coding agent 2026"] },
+    { "slug": "/free-ai-agent-for-coding", "title": "Free AI Agent for Coding 2026: Best No-Cost Options", "type": "ranking", "cluster": "coding-agents", "description": "Ranked list of free coding agents with meaningful free tiers, including open-source options.", "priority": 0.90, "targets": ["free ai agent for coding","free coding agent"] },
+    { "slug": "/cursor-vs-windsurf", "title": "Cursor vs Windsurf 2026: Which Coding Agent Wins?", "type": "comparison", "cluster": "coding-agents", "description": "Head-to-head comparison of Cursor AI and Windsurf IDE: completion quality, agent mode, pricing, and codebase navigation.", "priority": 0.90 },
+    { "slug": "/cursor-vs-github-copilot", "title": "Cursor vs GitHub Copilot 2026: Full Comparison", "type": "comparison", "cluster": "coding-agents", "description": "In-depth comparison of Cursor AI and GitHub Copilot across completion, chat, agent mode, and enterprise features.", "priority": 0.90 },
+    { "slug": "/cursor-vs-claude-code", "title": "Cursor vs Claude Code 2026: Which Should You Use?", "type": "comparison", "cluster": "coding-agents", "description": "Comparison of Cursor (IDE-native) and Claude Code (terminal-native) for different developer workflows.", "priority": 0.88 },
+    { "slug": "/windsurf-vs-cursor", "title": "Windsurf vs Cursor 2026: IDE Battle", "type": "comparison", "cluster": "coding-agents", "description": "Alternate-angle comparison focusing on IDE workflow integration, Cascade agent, and team features.", "priority": 0.85 },
+    { "slug": "/copilot-vs-claude-code", "title": "GitHub Copilot vs Claude Code 2026", "type": "comparison", "cluster": "coding-agents", "description": "Microsoft's AI coding tool vs Anthropic's terminal agent: different approaches compared.", "priority": 0.85 },
+    { "slug": "/replit-vs-cursor", "title": "Replit vs Cursor 2026: Cloud IDE vs Desktop Agent", "type": "comparison", "cluster": "coding-agents", "description": "Browser-based Replit AI vs desktop Cursor: different trade-offs for different developer types.", "priority": 0.82 },
+    { "slug": "/cursor-alternatives", "title": "12 Best Cursor Alternatives in 2026", "type": "alternative", "cluster": "coding-agents", "description": "12 alternatives to Cursor AI with scores, pricing, and key differentiators.", "priority": 0.88 },
+    { "slug": "/github-copilot-alternatives", "title": "10 Best GitHub Copilot Alternatives in 2026", "type": "alternative", "cluster": "coding-agents", "description": "10 alternatives to GitHub Copilot across free, mid-market, and enterprise tiers.", "priority": 0.88 },
+    { "slug": "/claude-code-alternatives", "title": "8 Best Claude Code Alternatives in 2026", "type": "alternative", "cluster": "coding-agents", "description": "Alternatives to Claude Code for teams that need a different workflow or pricing model.", "priority": 0.85 },
+    { "slug": "/windsurf-alternatives", "title": "8 Best Windsurf Alternatives in 2026", "type": "alternative", "cluster": "coding-agents", "description": "Alternatives to Windsurf IDE with similar AI coding features.", "priority": 0.85 },
+    { "slug": "/best-free-ai-coding-agents", "title": "Best Free AI Coding Agents 2026", "type": "ranking", "cluster": "coding-agents", "description": "Free and open-source coding agents that are actually usable in production workflows.", "priority": 0.87 },
+    { "slug": "/comparisons/coding/cursor-windsurf-copilot", "title": "Cursor vs Windsurf vs GitHub Copilot: Three-Way Comparison", "type": "comparison", "cluster": "coding-agents", "description": "Three-way head-to-head of the three leading AI coding tools across all major dimensions.", "priority": 0.88 },
+
+    { "slug": "/best-ai-voice-agent", "title": "Best AI Voice Agent 2026: Top Platforms Ranked", "type": "ranking", "cluster": "voice-agents", "description": "Independent ranking of voice AI platforms with explicit India language scoring for Hindi, Tamil, Telugu, and regional languages.", "priority": 0.95, "targets": ["best ai voice agent","best voice ai agent","ai voice agent india"] },
+    { "slug": "/best-free-ai-voice-agent", "title": "Best Free AI Voice Agent 2026", "type": "ranking", "cluster": "voice-agents", "description": "Free and open-source voice AI options with honest assessment of their real-world limitations.", "priority": 0.85, "targets": ["free ai voice agent"] },
+    { "slug": "/voice-ai-india", "title": "Voice AI for India 2026: Hindi, Tamil, Telugu and Beyond", "type": "guide", "cluster": "voice-agents", "india_specific": true, "description": "Complete guide to voice AI deployment in India: language coverage, platform comparison, IVR vs conversational AI, call centre patterns, and compliance.", "priority": 0.92, "word_count": 2540 },
+    { "slug": "/best-hindi-voice-agent", "title": "Best Hindi Voice Agent 2026: Ranked for Hindi Language Quality", "type": "ranking", "cluster": "voice-agents", "india_specific": true, "description": "Ranking specifically for Hindi voice AI quality: acoustic accuracy, code-mixed Hinglish handling, TTS naturalness.", "priority": 0.88 },
+    { "slug": "/voice-ai-for-call-centers", "title": "Voice AI for Call Centers India 2026: Deployment Guide", "type": "guide", "cluster": "voice-agents", "india_specific": true, "description": "How to deploy voice AI in Indian call centre environments: BPO patterns, human handoff design, collections compliance, language coverage.", "priority": 0.85 },
+    { "slug": "/vapi-vs-retell", "title": "Vapi vs Retell 2026: Voice AI Platform Comparison", "type": "comparison", "cluster": "voice-agents", "description": "Head-to-head: Vapi AI vs Retell AI on latency, language support, India telephony, pricing, and developer experience.", "priority": 0.88 },
+    { "slug": "/vapi-vs-bland", "title": "Vapi vs Bland AI 2026: Comparison", "type": "comparison", "cluster": "voice-agents", "description": "Vapi vs Bland AI: different strengths for different voice AI deployment contexts.", "priority": 0.85 },
+    { "slug": "/retell-vs-bland", "title": "Retell vs Bland AI 2026: Comparison", "type": "comparison", "cluster": "voice-agents", "description": "Retell vs Bland on call quality, India support, pricing, and feature completeness.", "priority": 0.85 },
+    { "slug": "/vapi-alternatives", "title": "10 Best Vapi Alternatives in 2026", "type": "alternative", "cluster": "voice-agents", "description": "10 alternatives to Vapi AI for different voice agent use cases and budget profiles.", "priority": 0.85 },
+    { "slug": "/retell-alternatives", "title": "8 Best Retell Alternatives in 2026", "type": "alternative", "cluster": "voice-agents", "description": "8 alternatives to Retell AI across capability tiers.", "priority": 0.82 },
+    { "slug": "/voice-agent-development", "title": "Voice Agent Development Guide 2026", "type": "guide", "cluster": "voice-agents", "description": "Technical guide to building production voice agents: latency requirements, ASR, TTS, turn-taking, and India-specific considerations.", "priority": 0.82 },
+    { "slug": "/voice-ai-compliance", "title": "Voice AI Compliance India 2026: RBI, TRAI, and DPDP", "type": "guide", "cluster": "voice-agents", "india_specific": true, "description": "Regulatory compliance guide for AI voice agents in India covering RBI fair-practice guidelines, TRAI regulations, and DPDP Act requirements.", "priority": 0.82 },
+
+    { "slug": "/ai-agents-india", "title": "AI Agents in India 2026: Complete Guide for Indian Businesses", "type": "pillar", "cluster": "india", "india_specific": true, "description": "Hub page for India cluster. Covers WhatsApp primacy, language reality, DPI infrastructure advantage, DPDP compliance, industry adoption map, Indian vs global platforms, and startup ecosystem.", "priority": 0.95, "word_count": 2892, "targets": ["ai agents india","ai agents for indian businesses","best ai agents india 2026"] },
+    { "slug": "/whatsapp-ai-agent-india", "title": "WhatsApp AI Agent India 2026: Best Tools, Setup & Use Cases", "type": "guide", "cluster": "india", "india_specific": true, "description": "Complete guide to WhatsApp AI agents for Indian businesses: platforms, pricing in INR, setup steps, Hinglish handling, DPDP compliance, common mistakes.", "priority": 0.93, "word_count": 3200, "targets": ["whatsapp ai agent india","whatsapp chatbot india","whatsapp ai india"] },
+    { "slug": "/voice-ai-india", "title": "Voice AI for India 2026: Hindi, Tamil, Telugu and Beyond", "type": "guide", "cluster": "india", "india_specific": true, "description": "Voice AI deployment guide for India: language coverage by platform, call centre patterns, compliance with RBI and DPDP, Hinglish and regional language testing methodology.", "priority": 0.92, "word_count": 2540 },
+    { "slug": "/dpdp-compliance-ai", "title": "DPDP Act & AI Agents: Complete Compliance Guide India 2026", "type": "guide", "cluster": "india", "india_specific": true, "description": "How India's DPDP Act 2023 applies to AI agent deployments: consent design, data retention, deletion mechanisms, cross-border processing, and vendor compliance checklist.", "priority": 0.92, "word_count": 2757, "targets": ["dpdp act ai","dpdp compliance ai agents","digital personal data protection act ai"] },
+    { "slug": "/hindi-ai-agent", "title": "Hindi AI Agent 2026: Best AI for Hindi, Hinglish & Indian Languages", "type": "guide", "cluster": "india", "india_specific": true, "description": "Language coverage guide: how AI agents handle Hindi, Hinglish, Tamil, Telugu, Bengali, and regional Indian languages. Testing methodology and platform comparison.", "priority": 0.90, "word_count": 2686, "targets": ["hindi ai agent","hindi language ai","hinglish ai","ai agent hindi"] },
+    { "slug": "/gstn-ai-agent", "title": "GST AI Agent India: GSTN Automation, e-Invoice and ITC Reconciliation", "type": "guide", "cluster": "india", "india_specific": true, "description": "How AI agents can automate Indian GST compliance: GSTN API integration, e-invoice reconciliation, ITC ledger verification, GSTR filing status checks.", "priority": 0.88, "targets": ["gst ai agent","gstn automation","ai for gst india"] },
+    { "slug": "/upi-ai-integration", "title": "UPI AI Integration India: Payment Agents and Settlement Automation", "type": "guide", "cluster": "india", "india_specific": true, "description": "AI agents for UPI-based payments: dynamic QR generation, autopay workflows, settlement reconciliation, and webhook management via MCP.", "priority": 0.85, "targets": ["upi ai","upi integration ai agent","ai for upi payments"] },
+    { "slug": "/ai-agents-for-procurement", "title": "AI Agents for Procurement: Vendor Comparison, PO Automation & GST Invoicing", "type": "guide", "cluster": "india", "india_specific": true, "description": "Procurement AI for Indian businesses: vendor quote comparison, purchase order automation, GST invoice reconciliation, and GSTN integration patterns.", "priority": 0.85, "targets": ["ai agents for procurement","procurement ai india"] },
+
+    { "slug": "/best-ai-agent-for-customer-support", "title": "Best AI Agent for Customer Support 2026", "type": "ranking", "cluster": "support-agents", "description": "Customer support agents ranked on ticket deflection rate, escalation design, Hinglish handling, and WhatsApp integration quality.", "priority": 0.90 },
+    { "slug": "/best-ai-agent-for-customer-support-in-saas", "title": "Best AI Agent for Customer Support in SaaS 2026", "type": "longtail", "cluster": "support-agents", "description": "Support agents specific to SaaS companies: technical query handling, documentation search, and self-serve resolution patterns.", "priority": 0.82 },
+    { "slug": "/intercom-vs-zendesk-ai", "title": "Intercom AI vs Zendesk AI 2026: Support Platform Comparison", "type": "comparison", "cluster": "support-agents", "description": "Head-to-head of the two largest AI-powered support platforms on capability, AI features, India pricing, and WhatsApp support.", "priority": 0.85 },
+    { "slug": "/yellow-ai-vs-intercom", "title": "Yellow.ai vs Intercom 2026: India vs Global Support Platform", "type": "comparison", "cluster": "support-agents", "description": "India-founded Yellow.ai vs globally dominant Intercom: different strengths for different market contexts.", "priority": 0.85 },
+    { "slug": "/intercom-alternatives", "title": "12 Best Intercom Alternatives 2026", "type": "alternative", "cluster": "support-agents", "description": "12 alternatives to Intercom covering every tier from SMB to enterprise, with India fit scores.", "priority": 0.85 },
+
+    { "slug": "/best-free-ai-agent-builder", "title": "Best Free AI Agent Builder 2026", "type": "ranking", "cluster": "builders", "description": "No-code and low-code agent builders with meaningful free tiers, ranked on capability and integration breadth.", "priority": 0.90, "targets": ["free ai agent builder","no code ai agent builder"] },
+    { "slug": "/how-to-build-an-ai-agent", "title": "How to Build an AI Agent: Complete Guide 2026", "type": "guide", "cluster": "builders", "description": "Step-by-step guide to building an AI agent from scratch for both developers and non-developers, with platform recommendations at each skill level.", "priority": 0.88 },
+    { "slug": "/dify-vs-langflow", "title": "Dify vs Langflow 2026: No-Code AI Agent Builder Comparison", "type": "comparison", "cluster": "builders", "description": "Head-to-head of Dify and Langflow on workflow design, LLM support, self-hosting, and deployment patterns.", "priority": 0.85 },
+    { "slug": "/flowise-vs-dify", "title": "Flowise vs Dify 2026: AI Builder Comparison", "type": "comparison", "cluster": "builders", "description": "Flowise vs Dify on ease of use, integration library, and community support.", "priority": 0.85 },
+    { "slug": "/flowise-vs-n8n", "title": "Flowise vs n8n 2026: AI Builder vs Workflow Automation", "type": "comparison", "cluster": "builders", "description": "AI-first Flowise vs general-purpose n8n: different tools for different automation needs.", "priority": 0.82 },
+    { "slug": "/dify-alternatives", "title": "10 Best Dify Alternatives 2026", "type": "alternative", "cluster": "builders", "description": "10 alternatives to Dify for different workflow building contexts.", "priority": 0.82 },
+    { "slug": "/flowise-alternatives", "title": "8 Best Flowise Alternatives 2026", "type": "alternative", "cluster": "builders", "description": "8 alternatives to Flowise across open-source and cloud-hosted options.", "priority": 0.82 },
+    { "slug": "/n8n-alternatives", "title": "10 Best n8n Alternatives 2026", "type": "alternative", "cluster": "builders", "description": "10 alternatives to n8n for workflow automation with AI capabilities.", "priority": 0.82 },
+
+    { "slug": "/what-is-crewai", "title": "What Is CrewAI? Multi-Agent Framework Explained", "type": "glossary", "cluster": "frameworks", "description": "CrewAI definition, role-based agent architecture, tasks and crews, and comparison with other multi-agent frameworks.", "priority": 0.85 },
+    { "slug": "/what-is-langgraph", "title": "What Is LangGraph? Stateful Agent Framework Explained", "type": "glossary", "cluster": "frameworks", "description": "LangGraph definition, graph-based state management, cycles and branches, and when to use it over simpler orchestration.", "priority": 0.85 },
+    { "slug": "/what-is-multi-agent-system", "title": "What Is a Multi-Agent System? Definition and Patterns", "type": "glossary", "cluster": "frameworks", "description": "Multi-agent systems: definition, orchestrator-worker pattern, parallel execution, human-in-the-loop patterns.", "priority": 0.82 },
+    { "slug": "/what-is-agentic-ai", "title": "What Is Agentic AI? Definition and Distinction from Standard LLMs", "type": "glossary", "cluster": "frameworks", "description": "Agentic AI vs standard LLM usage: planning, tool use, memory, and the autonomy spectrum.", "priority": 0.82 },
+    { "slug": "/what-is-function-calling", "title": "What Is Function Calling in LLMs? Complete Guide", "type": "glossary", "cluster": "frameworks", "description": "LLM function calling (tool use): how models invoke external functions, structured output, and implementation patterns.", "priority": 0.80 },
+    { "slug": "/what-is-rag", "title": "What Is RAG? Retrieval-Augmented Generation Explained", "type": "glossary", "cluster": "frameworks", "description": "RAG definition, chunking, embedding, retrieval, and generation — with production implementation notes.", "priority": 0.85 },
+    { "slug": "/what-is-context-window", "title": "What Is a Context Window? Size, Limits, and Management", "type": "glossary", "cluster": "frameworks", "description": "Context windows in LLMs: token counting, effective use, long-context strategies, and retrieval as an alternative.", "priority": 0.80 },
+    { "slug": "/what-is-agentops", "title": "What Is AgentOps? Monitoring and Observability for AI Agents", "type": "glossary", "cluster": "frameworks", "description": "AgentOps definition: logging tool calls, tracing reasoning chains, performance monitoring, and cost tracking for production agents.", "priority": 0.78 },
+    { "slug": "/autogen-vs-crewai", "title": "AutoGen vs CrewAI 2026: Multi-Agent Framework Comparison", "type": "comparison", "cluster": "frameworks", "description": "Microsoft AutoGen vs CrewAI on conversation patterns, role assignment, debugging, and production readiness.", "priority": 0.85 },
+    { "slug": "/langgraph-vs-crewai", "title": "LangGraph vs CrewAI 2026: Orchestration Framework Comparison", "type": "comparison", "cluster": "frameworks", "description": "Graph-based LangGraph vs role-based CrewAI: when each approach produces better results.", "priority": 0.85 },
+    { "slug": "/llamaindex-vs-langchain", "title": "LlamaIndex vs LangChain 2026: RAG Framework Comparison", "type": "comparison", "cluster": "frameworks", "description": "LlamaIndex (retrieval-focused) vs LangChain (orchestration-focused): honest assessment of capabilities and trade-offs.", "priority": 0.85 },
+    { "slug": "/openai-agents-sdk-vs-langgraph", "title": "OpenAI Agents SDK vs LangGraph 2026", "type": "comparison", "cluster": "frameworks", "description": "OpenAI's official agents framework vs community-built LangGraph: different design philosophies compared.", "priority": 0.82 },
+    { "slug": "/entities/frameworks/langchain", "title": "LangChain: Complete Reference", "type": "entity", "cluster": "frameworks", "description": "LangChain: overview, ecosystem, chains vs agents, LCEL, community, and enterprise options.", "priority": 0.80 },
+
+    { "slug": "/entities/companies/anthropic", "title": "Anthropic: Company Reference | BestAIAgent.in", "type": "entity", "cluster": "entities", "description": "Anthropic overview: Claude model family, Constitutional AI, MCP protocol origin, safety research focus, and API.", "priority": 0.80 },
+    { "slug": "/entities/companies/openai", "title": "OpenAI: Company Reference | BestAIAgent.in", "type": "entity", "cluster": "entities", "description": "OpenAI overview: GPT model family, Agents SDK, Operator framework, API, and enterprise offerings.", "priority": 0.80 },
+    { "slug": "/entities/models/gpt-4", "title": "GPT-4: Model Reference | BestAIAgent.in", "type": "entity", "cluster": "entities", "description": "GPT-4 and GPT-4o capabilities, context window, API pricing, and use in AI agent systems.", "priority": 0.78 },
+    { "slug": "/entities/vector-dbs/pinecone", "title": "Pinecone: Vector Database Reference | BestAIAgent.in", "type": "entity", "cluster": "entities", "description": "Pinecone vector database: index management, embedding storage, metadata filtering, and pricing.", "priority": 0.75 },
+
+    { "slug": "/pricing/cursor", "title": "Cursor AI Pricing 2026: All Plans Compared", "type": "pricing", "cluster": "pricing", "description": "Current Cursor AI pricing: Hobby, Pro, and Business tiers with token limits, fast request quotas, and team features.", "priority": 0.88 },
+    { "slug": "/pricing/vapi", "title": "Vapi AI Pricing 2026: Per-Minute Rates and Plans", "type": "pricing", "cluster": "pricing", "description": "Current Vapi AI pricing: per-minute voice rates, concurrency limits, enterprise tiers.", "priority": 0.85 },
+    { "slug": "/pricing/claude-code", "title": "Claude Code Pricing 2026: API Costs and Subscription Options", "type": "pricing", "cluster": "pricing", "description": "Claude Code pricing: API token costs, Max plan inclusion, and cost comparison at different usage volumes.", "priority": 0.85 },
+    { "slug": "/pricing/yellow-ai", "title": "Yellow.ai Pricing India 2026: Enterprise Plans in INR", "type": "pricing", "cluster": "pricing", "india_specific": true, "description": "Yellow.ai pricing for Indian enterprises: conversation-based billing, enterprise tier details, India support.", "priority": 0.82 },
+    { "slug": "/pricing/retell", "title": "Retell AI Pricing 2026: Plans and Per-Minute Rates", "type": "pricing", "cluster": "pricing", "description": "Current Retell AI pricing: per-minute rates by plan tier, concurrency, and enterprise options.", "priority": 0.82 },
+    { "slug": "/pricing/github-copilot", "title": "GitHub Copilot Pricing 2026: Individual and Business Plans", "type": "pricing", "cluster": "pricing", "description": "Current GitHub Copilot pricing: Individual, Business, and Enterprise tiers with feature comparison.", "priority": 0.85 },
+    { "slug": "/pricing/intercom", "title": "Intercom Pricing 2026: All Plans and AI Features", "type": "pricing", "cluster": "pricing", "description": "Current Intercom pricing: Starter, Pro, Premium tiers with Fin AI resolution credits.", "priority": 0.82 },
+    { "slug": "/pricing/dify", "title": "Dify Pricing 2026: Self-Hosted vs Cloud", "type": "pricing", "cluster": "pricing", "description": "Dify pricing: open-source self-hosted vs Dify Cloud with execution limits and team features.", "priority": 0.80 },
+    { "slug": "/pricing/flowise", "title": "Flowise Pricing 2026: Open Source vs Cloud Plans", "type": "pricing", "cluster": "pricing", "description": "Flowise pricing: free open-source, Flowise Cloud tiers, and enterprise options.", "priority": 0.80 },
+    { "slug": "/pricing/n8n", "title": "n8n Pricing 2026: Self-Hosted and Cloud Plans", "type": "pricing", "cluster": "pricing", "description": "n8n pricing: free self-hosted, n8n Cloud with execution-based billing, and enterprise licensing.", "priority": 0.80 },
+
+    { "slug": "/benchmarks/ai-agent-benchmarks-2026", "title": "AI Agent Benchmarks 2026: Current State and Key Results", "type": "benchmark", "cluster": "benchmarks", "description": "Overview of AI agent benchmark frameworks (GAIA, SWE-bench, AgentBench), current leader results, and what benchmarks actually predict about production performance.", "priority": 0.85 },
+    { "slug": "/what-is-gaia", "title": "What Is GAIA? AI Agent Benchmark Explained", "type": "glossary", "cluster": "benchmarks", "description": "GAIA benchmark definition, task types, difficulty levels, and how to interpret GAIA scores when evaluating agents.", "priority": 0.80 },
+    { "slug": "/what-is-swe-bench", "title": "What Is SWE-bench? Software Engineering Benchmark Explained", "type": "glossary", "cluster": "benchmarks", "description": "SWE-bench definition, GitHub issue tasks, evaluation methodology, and what SWE-bench scores predict about real coding agent quality.", "priority": 0.80 },
+    { "slug": "/editorial/benchmark-methodology", "title": "BestAIAgent.in Benchmark Methodology", "type": "editorial", "cluster": "benchmarks", "description": "Detailed description of how BestAIAgent.in conducts its own independent benchmark tests, distinct from academic benchmarks.", "priority": 0.75 },
+
+    { "slug": "/best-ai-agents", "title": "Best AI Agents 2026: Full Directory", "type": "ranking", "cluster": "core", "description": "Complete filterable ranking of 200+ AI agents across all categories with scores, pricing, India fit ratings.", "priority": 0.95 },
+    { "slug": "/best-free-ai-agents", "title": "Best Free AI Agents 2026", "type": "ranking", "cluster": "free", "description": "Master list of free AI agents by category — genuinely useful free tiers only.", "priority": 0.88 },
+    { "slug": "/best-free-ai-agent-for-business", "title": "Best Free AI Agent for Business 2026", "type": "ranking", "cluster": "free", "description": "Free AI agents suitable for actual business deployment across support, sales, and operations.", "priority": 0.85 },
+    { "slug": "/best-free-open-source-ai-agents", "title": "Best Free Open Source AI Agents 2026", "type": "ranking", "cluster": "free", "description": "Self-hostable, auditable open-source AI agents ranked on capability, maintenance health, and deployment ease.", "priority": 0.85 },
+
+    { "slug": "/guides/ai-agent-security", "title": "AI Agent Security Guide 2026: Prompt Injection, Tool Scope, and Audit", "type": "guide", "cluster": "security", "description": "Complete security guide for AI agent deployments: prompt injection attack vectors, tool permission scoping, audit logging, incident response, and DPDP compliance intersection.", "priority": 0.85 },
+    { "slug": "/editorial/review-policy", "title": "Review Policy | BestAIAgent.in", "type": "editorial", "cluster": "security", "description": "How reviews are conducted, what criteria are applied, conflict of interest policy, and update commitments.", "priority": 0.75 },
+    { "slug": "/editorial/about-editorial-team", "title": "Editorial Team | BestAIAgent.in", "type": "editorial", "cluster": "security", "description": "Team backgrounds, expertise areas, and the editorial independence policy.", "priority": 0.72 },
+
+    { "slug": "/best-ai-agent-for-linkedin", "title": "Best AI Agent for LinkedIn 2026", "type": "longtail", "cluster": "longtail", "description": "AI agents for LinkedIn outreach, prospecting, and content — with honest limits on what automation is permitted.", "priority": 0.80 },
+    { "slug": "/best-ai-agent-for-seo", "title": "Best AI Agent for SEO 2026", "type": "longtail", "cluster": "longtail", "description": "SEO AI agents for content generation, technical audit, and link intelligence.", "priority": 0.82 },
+    { "slug": "/best-ai-agent-for-email", "title": "Best AI Agent for Email 2026", "type": "longtail", "cluster": "longtail", "description": "Email AI agents for writing, outreach, triage, and reply drafting.", "priority": 0.80 },
+    { "slug": "/best-ai-agent-for-real-estate", "title": "Best AI Agent for Real Estate 2026", "type": "longtail", "cluster": "longtail", "description": "Real estate AI agents for lead qualification, site visit booking, RERA compliance checks, and document processing.", "priority": 0.82 },
+    { "slug": "/best-ai-agent-for-hospitals", "title": "Best AI Agent for Hospitals 2026", "type": "longtail", "cluster": "longtail", "description": "Healthcare AI agents for appointment scheduling, patient triage intake, prescription reminders, and ABDM integration.", "priority": 0.82 },
+    { "slug": "/best-ai-agent-for-lawyers", "title": "Best AI Agent for Lawyers 2026", "type": "longtail", "cluster": "longtail", "description": "LegalTech AI agents for contract review, deadline tracking, NJDG case status, and matter management.", "priority": 0.80 },
+    { "slug": "/best-ai-agent-for-schools", "title": "Best AI Agent for Schools 2026", "type": "longtail", "cluster": "longtail", "description": "EdTech AI agents for student support, doubt resolution, grading assistance, and parent communication.", "priority": 0.78 },
+    { "slug": "/best-ai-agent-for-recruiters", "title": "Best AI Agent for Recruiters 2026", "type": "longtail", "cluster": "longtail", "description": "Recruitment AI agents for resume screening, interview scheduling, candidate qualification, and offer management.", "priority": 0.80 },
+    { "slug": "/best-ai-agent-for-manufacturing", "title": "Best AI Agent for Manufacturing 2026", "type": "longtail", "cluster": "longtail", "description": "Manufacturing AI agents for procurement, quality control, IoT telemetry, and ERP integration.", "priority": 0.80 },
+    { "slug": "/best-ai-agent-for-shopify", "title": "Best AI Agent for Shopify 2026", "type": "longtail", "cluster": "longtail", "description": "Shopify-native AI agents for customer support, returns, and product recommendations.", "priority": 0.82 },
+    { "slug": "/best-ai-agent-for-lead-generation-in-real-estate", "title": "Best AI Agent for Lead Generation in Real Estate 2026", "type": "longtail", "cluster": "longtail", "description": "Lead generation AI agents specific to Indian real estate: portal integration, WhatsApp follow-up, RERA validation.", "priority": 0.82, "india_specific": true },
+    { "slug": "/best-ai-agent-for-patient-scheduling-in-hospitals", "title": "Best AI Agent for Patient Scheduling in Hospitals 2026", "type": "longtail", "cluster": "longtail", "description": "AI agents for hospital appointment booking: ABDM integration, multilingual reminders, no-show management.", "priority": 0.80 },
+
+    { "slug": "/best-ai-agent-course", "title": "Best AI Agent Course 2026: Top Learning Resources", "type": "ranking", "cluster": "learning", "description": "Ranked courses for learning AI agent development, from no-code to advanced framework engineering.", "priority": 0.85 },
+    { "slug": "/how-to-build-an-ai-agent", "title": "How to Build an AI Agent: Step-by-Step Guide 2026", "type": "guide", "cluster": "learning", "description": "Complete guide from idea to production: planning, platform selection, integration, testing, and launch.", "priority": 0.88 },
+    { "slug": "/ai-agent-projects", "title": "20 AI Agent Project Ideas with Implementation Outlines", "type": "guide", "cluster": "learning", "description": "20 practical AI agent project ideas from beginner to advanced, each with tech stack and implementation notes.", "priority": 0.82 },
+    { "slug": "/tutorials/build-mcp-server", "title": "Build Your First MCP Server: Tutorial", "type": "tutorial", "cluster": "learning", "description": "Step-by-step tutorial for building a minimal MCP server in TypeScript/Python.", "priority": 0.80 },
+    { "slug": "/tutorials/whatsapp-ai-agent", "title": "Build a WhatsApp AI Agent for an Indian Business: Tutorial", "type": "tutorial", "cluster": "learning", "india_specific": true, "description": "End-to-end tutorial: WhatsApp Business API setup, LLM integration, OMS connection, and Hinglish testing.", "priority": 0.82 },
+    { "slug": "/tutorials/voice-agent-hindi", "title": "Build a Hindi Voice Agent: Step-by-Step Tutorial", "type": "tutorial", "cluster": "learning", "india_specific": true, "description": "Tutorial for building a Hindi-language voice agent: ASR model selection, TTS, latency optimisation, and deployment.", "priority": 0.80 },
+    { "slug": "/tutorials/crewai-quickstart", "title": "CrewAI Multi-Agent Quickstart Tutorial", "type": "tutorial", "cluster": "learning", "description": "Get a working CrewAI multi-agent system live in under 30 minutes.", "priority": 0.78 },
+    { "slug": "/tutorials/rag-pipeline", "title": "Build a Production RAG Pipeline: Tutorial", "type": "tutorial", "cluster": "learning", "description": "Production-grade RAG pipeline: chunking, embedding, retrieval, generation, and evaluation.", "priority": 0.80 },
+    { "slug": "/tutorials/agent-security", "title": "Securing AI Agent Deployments: Tutorial", "type": "tutorial", "cluster": "learning", "description": "Practical security tutorial: prompt injection defence, tool permission scoping, and audit logging implementation.", "priority": 0.78 },
+
+    { "slug": "/clay-vs-apollo", "title": "Clay vs Apollo 2026: Sales Intelligence Comparison", "type": "comparison", "cluster": "sales-marketing", "description": "Clay vs Apollo.io on data enrichment, sequencing, AI features, and India B2B data coverage.", "priority": 0.82 },
+    { "slug": "/jasper-vs-copy-ai", "title": "Jasper vs Copy.ai 2026: Marketing AI Comparison", "type": "comparison", "cluster": "sales-marketing", "description": "Jasper vs Copy.ai on content quality, template library, pricing, and team collaboration features.", "priority": 0.80 },
+    { "slug": "/hubspot-ai-vs-salesforce-ai", "title": "HubSpot AI vs Salesforce AI 2026: CRM Intelligence Comparison", "type": "comparison", "cluster": "sales-marketing", "description": "AI features in HubSpot vs Salesforce: lead scoring, email generation, sales forecasting, and India enterprise context.", "priority": 0.82 },
+
+    { "slug": "/awards/ai-agent-awards-2026", "title": "AI Agent Awards 2026: The Best in Each Category", "type": "editorial", "cluster": "statistics", "description": "Annual editorial awards recognising the best AI agent in each major category, with judging criteria and runner-ups.", "priority": 0.78 },
+    { "slug": "/market-map", "title": "AI Agent Market Map 2026", "type": "editorial", "cluster": "statistics", "description": "Visual map of the AI agent ecosystem organised by layer: models, frameworks, builders, domain agents, and infrastructure.", "priority": 0.80 }
+
+  ],
+
+  "india_dpi_coverage": {
+    "description": "BestAIAgent.in tracks MCP server availability for all major Indian DPI systems. Status as of June 2026.",
+    "systems": [
+      { "name": "GSTN", "full_name": "Goods and Services Tax Network", "mcp_status": "unbuilt", "demand": "critical", "slug": "/mcp/servers/gstn" },
+      { "name": "UPI", "full_name": "Unified Payments Interface", "mcp_status": "unbuilt", "demand": "critical", "slug": "/mcp/servers/upi" },
+      { "name": "DigiLocker", "full_name": "Ministry of Electronics and IT Document Vault", "mcp_status": "unbuilt", "demand": "high", "slug": "/mcp/servers/digilocker" },
+      { "name": "ONDC", "full_name": "Open Network for Digital Commerce", "mcp_status": "unbuilt", "demand": "high", "slug": "/mcp/servers/ondc" },
+      { "name": "Account Aggregator", "full_name": "Sahamati / RBI Account Aggregator Framework", "mcp_status": "unbuilt", "demand": "high", "slug": "/mcp/servers/account-aggregator" },
+      { "name": "ABDM", "full_name": "Ayushman Bharat Digital Mission", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/abdm" },
+      { "name": "Aadhaar eKYC", "full_name": "UIDAI eKYC Regulatory Sandbox", "mcp_status": "unbuilt", "demand": "high", "slug": "/mcp/servers/aadhaar-ekyc" },
+      { "name": "GeM", "full_name": "Government e-Marketplace", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/gem" },
+      { "name": "MCA21", "full_name": "Ministry of Corporate Affairs Portal", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/mca" },
+      { "name": "EPFO", "full_name": "Employees Provident Fund Organisation", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/epfo" },
+      { "name": "FASTag", "full_name": "National Electronic Toll Collection", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/fastag" },
+      { "name": "NJDG", "full_name": "National Judicial Data Grid", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/njdg" },
+      { "name": "Razorpay / PayU", "full_name": "Indian Payment Gateway APIs", "mcp_status": "unbuilt", "demand": "critical", "slug": "/mcp/servers/razorpay" },
+      { "name": "CERSAI", "full_name": "Central Registry of Securitisation Asset Reconstruction", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/cersai" },
+      { "name": "India Post", "full_name": "India Post Tracking and Logistics", "mcp_status": "unbuilt", "demand": "medium", "slug": "/mcp/servers/india-post" }
+    ]
+  },
+
+  "ranking_methodology": {
+    "version": "2.1",
+    "dimensions": [
+      { "name": "Capability", "weight": 0.35, "description": "Task completion rate across realistic, messy inputs — not vendor demo scenarios" },
+      { "name": "Reliability and Failure Handling", "weight": 0.25, "description": "Graceful failure modes: escalation, uncertainty acknowledgement, error recovery" },
+      { "name": "India Fit", "weight": 0.25, "description": "WhatsApp API depth, Hinglish handling, INR pricing, DPDP posture, India DPI integration, India-hours support" },
+      { "name": "Implementation Value", "weight": 0.15, "description": "Time to first working deployment, documentation quality, total cost of ownership" }
+    ],
+    "re_verification_cadence": "quarterly",
+    "testing_environment": "working_accounts_or_sandboxes",
+    "india_fit_criteria": ["whatsapp_api_depth","hinglish_handling","regional_language_support","inr_pricing_transparency","dpdp_compliance_posture","india_hours_support","indian_dpi_integration"]
+  },
+
+  "sitemaps": {
+    "primary": "https://bestaiagent.in/sitemap.xml",
+    "mcp": "https://bestaiagent.in/sitemap-mcp.xml",
+    "india": "https://bestaiagent.in/sitemap-india.xml",
+    "comparisons": "https://bestaiagent.in/sitemap-comparisons.xml",
+    "reviews": "https://bestaiagent.in/sitemap-reviews.xml"
+  },
+
+  "authors": [
+    { "slug": "/authors/arshdeep-singh", "name": "Arshdeep Singh", "focus": "AI infrastructure, developer tools, coding agents, MCP" },
+    { "slug": "/authors/priya-iyer", "name": "Priya Iyer", "focus": "India market AI adoption, DPDP compliance, customer-facing AI, WhatsApp agents" }
+  ]
+}
