@@ -15,8 +15,12 @@
           "dist/content-index.json",
           "dist/llms.txt",
           "dist/llms-full.txt",
+          "dist/index.html",
+          "dist/client/index.html",
           "dist/client/**",
+          "dist/client/assets/*.css",
           "public/assets/**",
+          "public/assets/*.css",
           "public/sitemap.xml",
           "public/ai-agent-sitemap.xml",
           "public/tool-sitemap.xml",
@@ -53,6 +57,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.ts" },
+    { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "server.ts" }
   ]

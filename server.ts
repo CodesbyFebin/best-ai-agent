@@ -50,6 +50,7 @@ type RouteMeta = {
   robots?: string;
   source?: string;
   schemaTypes?: string[];
+  related?: string[];
 };
 
 type AnalyzeRequest = {
@@ -474,14 +475,131 @@ function homepageStaticSnapshot() {
     `;
 }
 
+function mcpDirectoryStaticSnapshot(meta: RouteMeta) {
+  const mcpLinks = [
+    ['MCP Hub', '/mcp-hub'],
+    ['Best MCP Servers', '/best-mcp-servers'],
+    ['MCP Security', '/mcp-security'],
+    ['What Is MCP?', '/what-is-mcp'],
+    ['How to Create an MCP Server', '/how-to-create-mcp-server'],
+    ['Filesystem MCP Server', '/mcp/servers/filesystem-server'],
+    ['GitHub MCP Server', '/mcp/servers/github-server'],
+    ['PostgreSQL MCP Server', '/mcp/servers/postgres-server'],
+    ['Slack MCP Server', '/mcp/servers/slack-server'],
+    ['Google Drive MCP Server', '/mcp/servers/google-drive-server'],
+    ['Brave Search MCP Server', '/mcp/servers/brave-search-server'],
+    ['Stripe MCP Server', '/mcp/servers/stripe-server'],
+    ['AI Agent Security', '/ai-agent-security'],
+    ['Editorial Methodology', '/methodology'],
+    ['AI Agent Scoring System', '/ai-agent-scoring-system'],
+  ];
+  const linkHtml = mcpLinks
+    .map(([label, href]) => `<a href="${href}">${escapeHtml(label)}</a>`)
+    .join('\n          ');
+  const title = escapeHtml(meta.h1 || meta.title || 'MCP Directory');
+  const description = escapeHtml(meta.description || 'Browse Model Context Protocol servers for AI agents.');
+
+  return `
+      <main class="server-route-snapshot server-mcp-directory-snapshot" aria-label="MCP Directory">
+        <section>
+          <p>Model Context Protocol server directory</p>
+          <h1>${title}</h1>
+          <p>${description}</p>
+          <p>Browse MCP servers for file access, GitHub workflows, databases, Slack, Google Drive, browser automation, payments, search, memory, and developer operations. Compare integrations by use case, security posture, self-hosting fit, and India deployment needs.</p>
+        </section>
+        <nav aria-label="Crawler-friendly MCP directory links">
+          ${linkHtml}
+        </nav>
+      </main>
+    `;
+}
+
+function genericRouteStaticSnapshot(meta: RouteMeta) {
+  const title = escapeHtml(meta.h1 || meta.title || 'BestAIAgent.in');
+  const description = escapeHtml(meta.description || defaultHomeMeta.description);
+  const supportLinks = [
+    ['Home', '/'],
+    ['Best AI Agents', '/best-ai-agent'],
+    ['AI Agent Directory', '/ai-agent-tools'],
+    ['MCP Directory', '/mcp-directory'],
+    ['Pricing Hub', '/pricing-hub'],
+    ['Alternatives Hub', '/alternatives-hub'],
+    ['Tutorials Hub', '/tutorials-hub'],
+    ['Glossary Hub', '/glossary-hub'],
+    ['Methodology', '/methodology'],
+    ['Editorial Policy', '/editorial-policy'],
+  ];
+  const relatedLinks = (meta.related || [])
+    .slice(0, 8)
+    .map((slug) => [titleCase(slug), `/${slug}`]);
+  const links = [...relatedLinks, ...supportLinks];
+  const linkHtml = links
+    .map(([label, href]) => `<a href="${href}">${escapeHtml(label)}</a>`)
+    .join('\n          ');
+
+  return `
+      <main class="server-route-snapshot" aria-label="${title}">
+        <article>
+          <h1>${title}</h1>
+          <p>${description}</p>
+          <p>BestAIAgent.in provides India-focused AI agent research with INR pricing context, DPDP compliance notes, comparisons, alternatives, tutorials, and editorial review signals for buyers, developers, startups, SMEs, and enterprises.</p>
+        </article>
+        <nav aria-label="Crawler-friendly route links">
+          ${linkHtml}
+        </nav>
+      </main>
+    `;
+}
+
+function staticSnapshotForRoute(reqPath: string, meta: RouteMeta) {
+  const pathName = normalizePath(reqPath);
+  if (pathName === '/') return homepageStaticSnapshot();
+  if (pathName === '/mcp-directory') return mcpDirectoryStaticSnapshot(meta);
+  return genericRouteStaticSnapshot(meta);
+}
+
+function findAssetFile(pattern: RegExp) {
+  const directories = [
+    path.resolve(process.cwd(), 'dist', 'client', 'assets'),
+    path.resolve(process.cwd(), 'public', 'assets'),
+    path.resolve(__dirname, 'dist', 'client', 'assets'),
+    path.resolve(__dirname, 'public', 'assets'),
+  ];
+  const candidates = directories.flatMap((directory) => {
+    if (!fs.existsSync(directory)) return [];
+    return fs.readdirSync(directory)
+      .filter((fileName) => pattern.test(fileName))
+      .map((fileName) => {
+        const filePath = path.join(directory, fileName);
+        const stats = fs.statSync(filePath);
+        return { fileName, size: stats.size, mtimeMs: stats.mtimeMs };
+      });
+  });
+
+  return candidates.sort((a, b) => b.size - a.size || b.mtimeMs - a.mtimeMs || b.fileName.localeCompare(a.fileName))[0]?.fileName;
+}
+
+function ensureProductionAssetShell(html: string) {
+  if (!html.includes('/src/main.tsx') || html.includes('/assets/index-')) return html;
+  const scriptFile = findAssetFile(/^index-[\w-]+\.js$/);
+  if (!scriptFile) return html;
+  const cssFile = findAssetFile(/^index-[\w-]+\.css$/);
+  const tags = [
+    `<script type="module" crossorigin src="/assets/${scriptFile}"></script>`,
+    cssFile ? `<link rel="stylesheet" crossorigin href="/assets/${cssFile}">` : '',
+  ].filter(Boolean).join('\n    ');
+
+  return html.replace(/\s*<script type="module" src="\/src\/main\.tsx"><\/script>/, `\n    ${tags}`);
+}
+
 function injectAppHtml(html: string, appHtml: string) {
   return html.replace('<div id="root"></div>', `<div id="root" data-render-mode="static-snapshot">${appHtml}</div>`);
 }
 
 async function renderHtml(req: express.Request, template: string, meta: RouteMeta, options: { noindexPreview?: boolean } = {}) {
-  let html = injectMeta(template, meta, options);
-  if (normalizePath(req.path) === '/') {
-    html = injectAppHtml(html, homepageStaticSnapshot());
+  let html = injectMeta(isProd ? ensureProductionAssetShell(template) : template, meta, options);
+  if (html.includes('<div id="root"></div>')) {
+    html = injectAppHtml(html, staticSnapshotForRoute(req.path, meta));
   }
   return html;
 }
@@ -503,6 +621,16 @@ function sendGeneratedFile(res: express.Response, fileName: string) {
   if (!file) return res.status(404).send('Not found');
   res.setHeader('Content-Type', contentTypeFor(fileName));
   return res.send(fs.readFileSync(file, 'utf8'));
+}
+
+function findClientIndexHtml(distPath: string) {
+  const candidates = [
+    path.resolve(process.cwd(), 'dist', 'index.html'),
+    path.join(distPath, 'index.html'),
+    path.resolve(__dirname, 'index.html'),
+    path.resolve(process.cwd(), 'index.html'),
+  ];
+  return candidates.find((candidate) => fs.existsSync(candidate));
 }
 
 function simulatedRecommendation(prompt: string) {
@@ -788,8 +916,8 @@ async function createApp() {
     app.get('*', async (req, res, next) => {
       const pathName = normalizePath(req.path);
       if (noindexPaths.has(pathName)) return res.status(404).send('Not found');
-      const htmlPath = path.join(distPath, 'index.html');
-      if (!fs.existsSync(htmlPath)) return res.status(404).send('Not found');
+      const htmlPath = findClientIndexHtml(distPath);
+      if (!htmlPath) return res.status(404).send('Not found');
       try {
         const meta = getRouteMetaForRequest(req) || fallbackMeta(pathName);
         const html = await renderHtml(req, fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
