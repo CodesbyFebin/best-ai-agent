@@ -120,6 +120,15 @@ for (const sitemap of SITEMAPS) {
 let md = '# Sitemap Audit Report\n\n';
 md += `Generated: ${new Date().toISOString()}\n\n`;
 
+const totalUrls = reports.reduce((sum, r) => sum + r.urlCount, 0);
+const totalOk = reports.reduce((sum, r) => sum + r.ok200, 0);
+
+md += `## Summary\n\n`;
+md += `| Metric | Count |\n|--------|-------|\n`;
+md += `| Total sitemap entries (raw) | ${totalUrls} |\n`;
+md += `| All sitemap URLs have route-meta | ${totalOk} |\n`;
+md += `| Validation errors | ${errors.length} |\n\n`;
+
 for (const r of reports) {
   md += `## ${r.sitemap}\n\n`;
   md += '| Metric | Count |\n|--------|-------|\n';

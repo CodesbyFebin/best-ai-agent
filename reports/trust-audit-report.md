@@ -1,5 +1,5 @@
 # Trust Audit Report
-Generated: 2026-06-13
+Generated: 2026-07-02
 
 ## Trust Pages Status
 - ✅ `/about`
@@ -19,7 +19,7 @@ Generated: 2026-06-13
 - Each page includes author, fact-checker, updated date, verification status, confidence level
 - Contact, corrections, and data-deletion pages include functional mailto links
 - Methodology page includes interactive criteria table and PDF download link
-- Total markdown word count: 933,787
+- Total markdown word count: 933,789
 
 ## Recommendations
 - Consider adding a cookie consent preference center (granular control beyond accept/reject)

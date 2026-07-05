@@ -1,6 +1,14 @@
 # Sitemap Audit Report
 
-Generated: 2026-07-02T11:46:47.036Z
+Generated: 2026-07-02T22:47:19.464Z
+
+## Summary
+
+| Metric | Count |
+|--------|-------|
+| Total sitemap entries (raw) | 906 |
+| All sitemap URLs have route-meta | 906 |
+| Validation errors | 0 |
 
 ## ai-agent-sitemap.xml
 

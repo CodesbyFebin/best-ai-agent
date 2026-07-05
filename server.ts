@@ -579,14 +579,35 @@ function findAssetFile(pattern: RegExp) {
   return candidates.sort((a, b) => b.size - a.size || b.mtimeMs - a.mtimeMs || b.fileName.localeCompare(a.fileName))[0]?.fileName;
 }
 
+function readClientAssetManifest() {
+  const candidates = [
+    path.resolve(process.cwd(), 'dist', 'client-assets.json'),
+    path.resolve(process.cwd(), 'public', 'client-assets.json'),
+    path.resolve(__dirname, 'client-assets.json'),
+    path.resolve(__dirname, 'dist', 'client-assets.json'),
+    path.resolve(__dirname, 'public', 'client-assets.json'),
+  ];
+  for (const filePath of candidates) {
+    if (!fs.existsSync(filePath)) continue;
+    try {
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf8')) as { script?: string; style?: string | null };
+      if (data.script && data.script.startsWith('/assets/')) return data;
+    } catch (error) {
+      console.warn(`[client-assets] failed to parse ${filePath}: ${error instanceof Error ? error.message : error}`);
+    }
+  }
+  return null;
+}
+
 function ensureProductionAssetShell(html: string) {
   if (!html.includes('/src/main.tsx') || html.includes('/assets/index-')) return html;
-  const scriptFile = findAssetFile(/^index-[\w-]+\.js$/);
-  if (!scriptFile) return html;
-  const cssFile = findAssetFile(/^index-[\w-]+\.css$/);
+  const manifest = readClientAssetManifest();
+  const script = manifest?.script || (findAssetFile(/^index-[\w-]+\.js$/) ? `/assets/${findAssetFile(/^index-[\w-]+\.js$/)}` : '');
+  if (!script) return html;
+  const style = manifest?.style || (findAssetFile(/^index-[\w-]+\.css$/) ? `/assets/${findAssetFile(/^index-[\w-]+\.css$/)}` : '');
   const tags = [
-    `<script type="module" crossorigin src="/assets/${scriptFile}"></script>`,
-    cssFile ? `<link rel="stylesheet" crossorigin href="/assets/${cssFile}">` : '',
+    `<script type="module" crossorigin src="${script}"></script>`,
+    style ? `<link rel="stylesheet" crossorigin href="${style}">` : '',
   ].filter(Boolean).join('\n    ');
 
   return html.replace(/\s*<script type="module" src="\/src\/main\.tsx"><\/script>/, `\n    ${tags}`);

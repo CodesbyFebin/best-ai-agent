@@ -1,5 +1,5 @@
 # Content Quality Report
-Generated: 2026-06-13
+Generated: 2026-07-02
 
 - **Total markdown files:** 336
 - **Average word count:** 2769
@@ -15,7 +15,7 @@ Generated: 2026-06-13
 - pillars/best-ai-agent-for-lead-generation.md (4945 words, 13 links)
 - reviews/github-copilot.md (4941 words, 14 links)
 - reviews/claude-code.md (4932 words, 15 links)
-- reviews/yellow-ai-review.md (4909 words, 14 links)
+- reviews/yellow-ai-review.md (4908 words, 14 links)
 - pillars/best-ai-agent-for-ecommerce.md (4877 words, 14 links)
 - reviews/replit-agent.md (4869 words, 14 links)
 
