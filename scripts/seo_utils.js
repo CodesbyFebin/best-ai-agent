@@ -1008,6 +1008,9 @@ export function pageSchema(meta) {
         if (!schema.about && meta.entityName) {
           schema.about = { "@type": "Thing", name: meta.entityName };
         }
+        if (Array.isArray(meta.sameAs) && meta.sameAs.length && !schema.sameAs) {
+          schema.sameAs = meta.sameAs;
+        }
       }
     });
   }

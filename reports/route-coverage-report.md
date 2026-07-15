@@ -1,6 +1,6 @@
 # Route Coverage Report
 
-Generated: 2026-07-15T11:58:03.842Z
+Generated: 2026-07-15T12:08:11.992Z
 Total routes: 1286
 
 ## Route Type Distribution
