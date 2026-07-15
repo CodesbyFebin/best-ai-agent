@@ -1219,7 +1219,7 @@ export function readEntityMap() {
       "import { modelEntities } from './src/data/entities/modelEntities.ts';",
       "import { mcpEntities } from './src/data/entities/mcpEntities.ts';",
     ].join("\n"),
-    "[...companyEntities, ...agentEntities, ...frameworkEntities, ...modelEntities, ...mcpEntities].map(({ slug, name, type, competitors, alternatives, overview }) => ({ slug, name, type, competitors, alternatives, overview }))",
+    "[...companyEntities, ...agentEntities, ...frameworkEntities, ...modelEntities, ...mcpEntities].map(({ slug, name, type, competitors, alternatives, overview, officialLinks, sameAs }) => ({ slug, name, type, competitors, alternatives, overview, officialLinks, sameAs }))",
     "entities"
   );
   const map = {};
@@ -1619,9 +1619,9 @@ export function buildTopicalEntries(existingPaths = new Set()) {
         if (entity) {
           meta.entity = entity;
           if (Array.isArray(entity.officialLinks)) {
-            meta.sameAs = entity.officialLinks.filter(
-              (link) => typeof link === "string" && /^https?:\/\//i.test(link)
-            );
+            meta.sameAs = entity.officialLinks
+              .map((link) => (typeof link === "string" ? link : link?.url))
+              .filter((url) => typeof url === "string" && /^https?:\/\//i.test(url));
           }
         }
         meta.sources = [...sourcesForSlug(entitySlug), ...editorialSources()];
