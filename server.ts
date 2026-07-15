@@ -647,6 +647,15 @@ function contentTypeFor(fileName: string) {
   if (fileName.endsWith('.xml')) return fileName === 'feed.xml' ? 'application/rss+xml; charset=utf-8' : 'application/xml; charset=utf-8';
   if (fileName.endsWith('.txt')) return 'text/plain; charset=utf-8';
   if (fileName.endsWith('.json')) return 'application/json; charset=utf-8';
+  if (fileName.endsWith('.js')) return 'text/javascript; charset=utf-8';
+  if (fileName.endsWith('.css')) return 'text/css; charset=utf-8';
+  if (fileName.endsWith('.svg')) return 'image/svg+xml; charset=utf-8';
+  if (fileName.endsWith('.png')) return 'image/png';
+  if (fileName.endsWith('.webp')) return 'image/webp';
+  if (fileName.endsWith('.avif')) return 'image/avif';
+  if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg')) return 'image/jpeg';
+  if (fileName.endsWith('.ico')) return 'image/x-icon';
+  if (fileName.endsWith('.woff2')) return 'font/woff2';
   return 'text/plain; charset=utf-8';
 }
 
@@ -660,6 +669,33 @@ function sendGeneratedFile(res: express.Response, fileName: string) {
   if (!file) return res.status(404).send('Not found');
   res.setHeader('Content-Type', contentTypeFor(fileName));
   return res.send(fs.readFileSync(file, 'utf8'));
+}
+
+function sendAssetFile(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const relativePath = normalizePath(req.path).replace(/^\/assets\/?/, '');
+  if (!relativePath || relativePath.includes('..') || path.isAbsolute(relativePath)) return next();
+
+  const candidates = [
+    path.resolve(process.cwd(), 'public', 'assets', relativePath),
+    path.resolve(process.cwd(), 'dist', 'client', 'assets', relativePath),
+    path.resolve(__dirname, 'public', 'assets', relativePath),
+    path.resolve(__dirname, 'dist', 'client', 'assets', relativePath),
+    path.resolve(__dirname, 'client', 'assets', relativePath),
+    path.resolve(__dirname, 'assets', relativePath),
+    path.resolve(__dirname, '..', 'public', 'assets', relativePath),
+    path.resolve(__dirname, '..', 'dist', 'client', 'assets', relativePath),
+    path.resolve(__dirname, '..', 'client', 'assets', relativePath),
+    path.resolve(__dirname, '..', 'assets', relativePath),
+  ];
+
+  const file = candidates.find((candidate) => fs.existsSync(candidate) && fs.statSync(candidate).isFile());
+  if (!file) return next();
+
+  res.setHeader('Content-Type', contentTypeFor(file));
+  if (/\-[A-Za-z0-9_-]{6,}\./.test(path.basename(file))) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+  return res.send(fs.readFileSync(file));
 }
 
 function findClientIndexHtml(distPath: string) {
@@ -865,6 +901,8 @@ async function createApp() {
     '/tool-relationships.json',
     '/route-meta.json',
   ], (req, res) => sendGeneratedFile(res, req.path.slice(1)));
+
+  app.get('/assets/*', sendAssetFile);
 
   app.post('/api/analyze-doc', async (req, res) => {
     try {
