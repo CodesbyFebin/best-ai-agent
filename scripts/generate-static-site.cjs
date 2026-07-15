@@ -78,6 +78,23 @@ function buildBlogEditorial(meta) {
   return {
     dek: `${topic} is a long-form BestAIAgent.in editorial guide for ${audience}, with India-first checks for ${primaryLens}.`,
     directAnswer: `${topic} matters when it helps a team ${decision}. Evaluate it through workflow evidence, India pricing, DPDP exposure, integration fit, supportability, and a controlled pilot before making a buying or deployment decision.`,
+    definitiveAnswer: `${topic} is a decision topic inside ${pillarTitle}. The best answer is not a universal vendor recommendation; it is to test ${primaryKeyword} against a real workflow, verify ${primaryLens}, document data risk, and choose the option that can be monitored, governed, and justified for Indian buyers.`,
+    definitiveFacts: [
+      `${topic} belongs to the ${pillarTitle} pillar and the ${clusterTitle} cluster.`,
+      `The primary buyer problem is: ${painPoint}.`,
+      `The editorial gap is: ${gapRationale}.`,
+      'The recommended decision path is definition, requirements, evidence, pilot, governance, and review.',
+    ],
+    entityRows: [
+      [topic, 'Editorial topic', `Primary article topic for ${blog.audience || audience}`],
+      [pillarTitle, 'Blog pillar', 'Parent topical-authority cluster on BestAIAgent.in'],
+      [clusterTitle, 'Keyword cluster', `Search-intent cluster for ${primaryKeyword}`],
+      [primaryKeyword, 'Primary keyword', 'Main retrieval phrase for search and answer engines'],
+      ['AI Agent', 'Concept', 'Parent category for autonomous and tool-using workflows'],
+      ['BestAIAgent.in', 'Organization', 'India-first AI agent directory and editorial source'],
+      ['DPDP Act 2023', 'Regulatory context', 'Privacy-review lens for Indian personal-data workflows'],
+      ['Model Context Protocol', 'Protocol', 'Tool and context layer relevant when agents need external system access'],
+    ],
     takeaways: [
       `${topic} should be evaluated through ${primaryLens}, not by headline claims alone.`,
       'Indian teams should check INR pricing assumptions, GST invoice availability, DPDP Act 2023 exposure, support coverage, and WhatsApp or Hindi/Hinglish needs where relevant.',
@@ -581,6 +598,26 @@ function renderQuickAnswer(meta) {
   );
 }
 
+function renderDefinitiveAnswer(meta, overrideAnswer, facts = []) {
+  const topic = meta.h1 || meta.title || 'AI Agent Decision';
+  const answer = overrideAnswer || meta.directAnswer || meta.description;
+  if (!answer) return '';
+  const factItems = facts.length ? facts : [
+    'Use case fit matters more than headline popularity.',
+    'India-first checks should include INR cost, GST invoice handling, DPDP exposure, support coverage, and workflow ownership.',
+    'BestAIAgent.in avoids fake user reviews, fake benchmark scores, and unsupported vendor claims.',
+  ];
+  return (
+    '<section class="definitive-answer" data-answer="true" aria-labelledby="definitive-answer-heading">\n' +
+    `  <h2 id="definitive-answer-heading">The Definitive Answer: ${escapeHtml(topic)}</h2>\n` +
+    `  <p>${escapeHtml(answer)}</p>\n` +
+    '  <ul>\n' +
+    factItems.map((item) => `    <li>${escapeHtml(item)}</li>`).join('\n') +
+    '\n  </ul>\n' +
+    '</section>\n'
+  );
+}
+
 // Freshness: machine-readable published/updated dates on every crawlable page.
 function renderDates(meta) {
   const published = meta.publishedAt || meta.lastReviewed || meta.lastmod;
@@ -594,6 +631,50 @@ function renderDates(meta) {
   }
   if (!parts.length) return '';
   return '<section class="freshness" aria-label="Content freshness">\n  ' + parts.join('\n  ') + '\n</section>\n';
+}
+
+function renderAeoEntityTable(rows, caption = 'Key entities and relationships') {
+  const cleanRows = rows
+    .filter((row) => Array.isArray(row) && row[0] && row[1] && row[2])
+    .slice(0, 12);
+  if (!cleanRows.length) return '';
+  return (
+    '<section aria-labelledby="aeo-entity-heading" class="entity-overview">\n' +
+    '  <h2 id="aeo-entity-heading">Entity Overview</h2>\n' +
+    '  <table>\n' +
+    `    <caption>${escapeHtml(caption)}</caption>\n` +
+    '    <thead><tr><th>Entity</th><th>Type</th><th>Relationship</th></tr></thead>\n' +
+    '    <tbody>\n' +
+    cleanRows.map(([entity, type, relationship]) => `      <tr><td>${escapeHtml(entity)}</td><td>${escapeHtml(type)}</td><td>${escapeHtml(relationship)}</td></tr>`).join('\n') +
+    '\n    </tbody>\n' +
+    '  </table>\n' +
+    '</section>\n'
+  );
+}
+
+function routeEntityRows(meta) {
+  const title = meta.h1 || meta.title || 'BestAIAgent.in';
+  const category = meta.categoryLabel || meta.category || 'AI Agent Resource';
+  const rows = [
+    [title, category, 'Primary topic of this page'],
+    ['BestAIAgent.in', 'Organization', 'Independent India-first AI agent directory and editorial resource'],
+    ['AI Agent', 'Concept', 'Parent category for autonomous and tool-using AI workflows'],
+    ['India', 'Market', 'Evaluation context for pricing, procurement, support, and compliance'],
+    ['DPDP Act 2023', 'Regulatory context', 'Privacy review context for personal-data workflows in India'],
+  ];
+  if (String(meta.path || '').includes('mcp') || /mcp|model context protocol/i.test(title)) {
+    rows.push(['Model Context Protocol', 'Protocol', 'Tool and data access layer for AI agents']);
+  }
+  if (String(meta.path || '').includes('pricing') || /pricing|cost|roi/i.test(title)) {
+    rows.push(['INR Pricing', 'Commercial criterion', 'Budgeting lens for Indian buyers']);
+  }
+  if (String(meta.path || '').includes('coding') || /coding|developer|cursor|copilot/i.test(title)) {
+    rows.push(['AI Coding Agent', 'Software category', 'Agent category for repository, IDE, testing, and refactoring workflows']);
+  }
+  if (String(meta.path || '').includes('voice') || /voice|call|conversation/i.test(title)) {
+    rows.push(['Voice AI Agent', 'Software category', 'Agent category for phone, support, and conversational automation']);
+  }
+  return rows;
 }
 
 // Citations: render a Sources/References block from route-meta when present.
@@ -730,10 +811,12 @@ function homeSnapshot(meta) {
     '<section>\n' +
     `  <h1>${escapeHtml(meta.h1 || 'Best AI Agents in India 2026')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta, 'BestAIAgent.in is an India-first AI agent directory and editorial resource for comparing AI agents, MCP servers, builders, pricing, alternatives, tutorials, and buyer workflows with transparent methodology and crawlable structured data.') +
     `  <p>${escapeHtml(meta.description || 'Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation.')}</p>\n` +
     '  <p>India-first independent AI agent rankings with INR pricing, DPDP compliance notes, and editorial scoring.</p>\n' +
     renderDates(meta) +
     '</section>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
     renderNav('Best AI Agent Categories', primaryLinks()) +
     '<section>\n' +
     '  <h2>Why BestAIAgent.in</h2>\n' +
@@ -749,10 +832,12 @@ function mcpSnapshot(meta) {
     '<section>\n' +
     `  <h1>${escapeHtml(meta.h1 || meta.title || 'MCP Directory')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta, 'The MCP Directory helps developers and platform teams find Model Context Protocol servers for safe AI-agent tool access, including files, GitHub, databases, browser automation, messaging, search, and memory workflows.') +
     `  <p>${escapeHtml(meta.description || 'Browse Model Context Protocol servers for AI agents.')}</p>\n` +
     '  <p>Browse MCP servers for file access, GitHub workflows, databases, Slack, Google Drive, browser automation, payments, search, memory, and developer operations.</p>\n' +
     renderDates(meta) +
     '</section>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
     renderNav('MCP Resources', [
       ['MCP Hub', '/mcp-hub'],
       ['Best MCP Servers', '/best-mcp-servers'],
@@ -775,10 +860,12 @@ function toolSnapshot(meta) {
     '<article>\n' +
     `  <h1>${escapeHtml(meta.h1 || meta.title || '')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta, `${toolName} should be evaluated by workflow fit, pricing transparency, documentation quality, integrations, security posture, support coverage, and India-specific procurement requirements before adoption.`) +
     `  <p>${escapeHtml(meta.description || '')}</p>\n` +
     `  <p>${escapeHtml(toolName)} is reviewed for Indian buyers on BestAIAgent.in: INR pricing, GST invoice treatment, DPDP Act 2023 privacy notes, integration fit, and competitor comparisons.</p>\n` +
     renderDates(meta) +
     '</article>\n' +
+    renderAeoEntityTable(routeEntityRows({ ...meta, h1: toolName })) +
     renderFAQs(meta.faqs) +
     renderSources(meta) +
     renderNav('Compare', [
@@ -796,9 +883,11 @@ function hubSnapshot(meta) {
     '<article>\n' +
     `  <h1>${escapeHtml(meta.h1 || meta.title || '')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta) +
     `  <p>${escapeHtml(meta.description || '')}</p>\n` +
     renderDates(meta) +
     '</article>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
     renderNav('Hubs', hubLinks()) +
     renderFAQs(meta.faqs) +
     renderSources(meta) +
@@ -812,10 +901,12 @@ function comparisonSnapshot(meta) {
     '<article>\n' +
     `  <h1>${escapeHtml(meta.h1 || meta.title || '')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta, meta.verdict || `${meta.h1 || meta.title} should be decided by comparing workflow fit, implementation effort, pricing, integrations, safety controls, support, and India-specific deployment constraints.`) +
     `  <p>${escapeHtml(meta.description || '')}</p>\n` +
     '  <p>Independent comparison with India-focused criteria: INR pricing, GST, DPDP compliance, integration depth, support, and long-term fit.</p>\n' +
     renderDates(meta) +
     '</article>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
     renderComparisonTable(meta) +
     renderNav('More Comparisons', [
       ['All Comparisons', '/ai-agent-rankings'],
@@ -834,6 +925,7 @@ function entitySnapshot(meta) {
     '<article>\n' +
     `  <h1>${escapeHtml(meta.h1 || meta.title || '')}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta) +
     `  <p>${escapeHtml(meta.description || '')}</p>\n` +
     renderDates(meta) +
     '</article>\n' +
@@ -875,9 +967,12 @@ function blogSnapshot(meta) {
       '<article>\n' +
       `  <p class="eyebrow">India-first AI agent blog</p>\n` +
       `  <h1>${title}</h1>\n` +
+      renderQuickAnswer(meta) +
+      renderDefinitiveAnswer(meta, 'The BestAIAgent.in blog is a 10-pillar, 100-cluster AI agent editorial system for India-first buyers, builders, consultants, and enterprises researching agentic software, MCP, pricing, governance, and implementation decisions.') +
       `  <p>${escapeHtml(meta.description || '')}</p>\n` +
       '  <p>The BestAIAgent.in blog is organized into 10 authority pillars and 100 supporting clusters. It is designed for Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools.</p>\n' +
       '</article>\n' +
+      renderAeoEntityTable(routeEntityRows(meta)) +
       '<section aria-labelledby="blog-pillars">\n' +
       '  <h2 id="blog-pillars">Blog Pillars</h2>\n' +
       '  <ul>\n' +
@@ -914,6 +1009,8 @@ function blogSnapshot(meta) {
       '<article>\n' +
       '  <p class="eyebrow">BestAIAgent.in blog pillar hub</p>\n' +
       `  <h1>${title}</h1>\n` +
+      renderQuickAnswer(meta) +
+      renderDefinitiveAnswer(meta, `${title} organizes ${Number(blog.topicCount || 50).toLocaleString('en-IN')} finished articles across ${Number(blog.clusterCount || clusters.length || 10).toLocaleString('en-IN')} keyword clusters so readers and AI crawlers can move from a broad AI-agent category into specific buyer questions, comparisons, and implementation checks.`) +
       `  <p>${escapeHtml(meta.description || '')}</p>\n` +
       '  <dl>\n' +
       `    <dt>Total Topics</dt><dd>${Number(blog.topicCount || 0).toLocaleString('en-IN')}</dd>\n` +
@@ -922,6 +1019,13 @@ function blogSnapshot(meta) {
       '    <dt>Verification Status</dt><dd>Editorial review</dd>\n' +
       '  </dl>\n' +
       '</article>\n' +
+      renderAeoEntityTable([
+        [blog.pillarTitle || title, 'Blog pillar', 'Parent topical-authority hub'],
+        [blog.primaryKeyword || title, 'Primary keyword', 'Main retrieval phrase for this pillar'],
+        ['BestAIAgent.in Blog', 'Content system', 'India-first AI agent editorial cluster'],
+        ['AI Agent', 'Concept', 'Parent entity for the pillar'],
+        ['India', 'Market', 'Pricing, procurement, support, and compliance context'],
+      ]) +
       '<section aria-labelledby="pillar-clusters">\n' +
       '  <h2 id="pillar-clusters">Keyword Clusters</h2>\n' +
       '  <ul>\n' +
@@ -964,6 +1068,8 @@ function blogSnapshot(meta) {
     '    <h2 id="quick-answer">Quick Answer</h2>\n' +
     `    <p class="direct-answer">${escapeHtml(article.directAnswer)}</p>\n` +
     '  </section>\n' +
+    renderDefinitiveAnswer(meta, article.definitiveAnswer, article.definitiveFacts) +
+    renderAeoEntityTable(article.entityRows) +
     '  <section aria-labelledby="key-takeaways">\n' +
     '    <h2 id="key-takeaways">Key Takeaways</h2>\n' +
     '    <ul>\n' +
@@ -1056,9 +1162,11 @@ function genericSnapshot(meta) {
     '<article>\n' +
     `  <h1>${label}</h1>\n` +
     renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta) +
     `  <p>${escapeHtml(meta.description || 'BestAIAgent.in provides India-focused AI agent research with INR pricing context, DPDP compliance notes, comparisons, alternatives, tutorials, and editorial review signals for buyers, developers, startups, SMEs, and enterprises.')}</p>\n` +
     renderDates(meta) +
     '</article>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
     '<nav aria-label="Crawler-friendly route links">\n' +
     '  <h2>Related Pages</h2>\n' +
     '  <ul>\n' +
@@ -1125,9 +1233,12 @@ function indiaPillarSnapshot(meta) {
     '<main class="server-route-snapshot server-india-pillar" aria-label="' + label + '">\n' +
     '<article>\n' +
     `  <h1>${label}</h1>\n` +
+    renderQuickAnswer(meta) +
+    renderDefinitiveAnswer(meta, 'Best AI Agent India pages should answer buyer questions with India-specific pricing, GST, DPDP, support, language, procurement, MCP, and implementation evidence before recommending any agent category or vendor.') +
     `  <p>${escapeHtml(meta.description || '')}</p>\n` +
     '  <p>This is the model pillar page for all India-focused AI agent coverage. It defines the content structure, EEAT block, India pricing model, DPDP checklist, comparison table, MCP relevance, entity links, FAQ depth, schema pattern, and internal link density.</p>\n' +
     '</article>\n' +
+    renderAeoEntityTable(routeEntityRows(meta)) +
 
     '<section aria-labelledby="content-structure">\n' +
     '  <h2 id="content-structure">Content Structure</h2>\n' +

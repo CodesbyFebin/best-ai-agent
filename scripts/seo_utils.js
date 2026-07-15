@@ -804,21 +804,21 @@ export function expandedFaqsForMeta(meta) {
   const baseFaqs = Array.isArray(meta.faqs) ? meta.faqs : [];
   const extraFaqs = [
     { question: `What is ${topic}?`, answer: meta.description || `${topic} is a BestAIAgent.in authority page for AI agent evaluation, pricing, implementation, and India-specific buying decisions.` },
-    { question: `Who should read ${topic}?`, answer: "Indian founders, developers, agencies, SMEs, enterprise buyers, and AI consultants should use this page to compare options, risks, costs, and implementation paths." },
-    { question: `How does BestAIAgent.in evaluate ${topic}?`, answer: "We evaluate capability, pricing, documentation, integrations, reliability, security, compliance, India fit, and measurable workflow ROI." },
-    { question: `What India-specific checks matter for ${topic}?`, answer: "Check INR pricing, GST invoice availability, DPDP Act 2023 obligations, UPI or Razorpay relevance, WhatsApp support, Hindi or Hinglish handling, and support coverage." },
-    { question: `Does ${topic} require DPDP review?`, answer: "DPDP review is important when a workflow processes personal data such as chats, calls, CRM records, HR information, support tickets, or uploaded documents." },
-    { question: `How should teams estimate ROI for ${topic}?`, answer: "Measure the current manual process, estimate realistic automation coverage, subtract subscription and implementation cost, then compare quality, escalation rate, and operational risk." },
-    { question: `What hidden costs should buyers watch for?`, answer: "Hidden costs can include API tokens, call minutes, workflow runs, vector database storage, paid connectors, overages, support tiers, forex markup, and GST treatment." },
-    { question: `Is self-hosting better than SaaS for ${topic}?`, answer: "Self-hosting can improve control and data locality, while SaaS is usually faster to deploy. The right choice depends on engineering capacity, compliance needs, uptime, and budget." },
-    { question: `What role does MCP play in ${topic}?`, answer: "MCP matters when agents need safe, maintainable access to tools, APIs, databases, files, browsers, and internal systems." },
-    { question: `What is the safest implementation path?`, answer: "Start with a narrow pilot, non-sensitive data, clear success metrics, logs, human review, permissions, rollback paths, and a named business owner." },
-    { question: `How often should ${topic} be updated?`, answer: "High-value AI agent pages should be reviewed monthly or quarterly because pricing, product limits, model quality, integrations, and compliance posture change quickly." },
-    { question: `Does BestAIAgent.in use affiliate links on ${topic}?`, answer: "Some commercial pages may include affiliate links. Rankings remain independent and are based on editorial methodology rather than commissions." },
-    { question: `Can ${topic} appear in AI search answers?`, answer: "The page is structured with direct answers, entity definitions, comparison language, FAQs, internal links, and schema-friendly sections for AI Overview and LLM extraction." },
-    { question: `What should readers compare next after ${topic}?`, answer: "Readers should compare related reviews, pricing pages, alternatives, tutorials, glossary definitions, MCP pages, and research reports before buying or deploying." },
-    { question: `What common mistake should readers avoid?`, answer: "Avoid buying an AI agent only because it is popular or impressive in a demo. Test it against real workflows, data boundaries, cost assumptions, and failure modes." },
-    { question: `What is the final decision rule for ${topic}?`, answer: "Choose the option that solves a measurable workflow, fits team skills, keeps data risk controlled, has predictable cost, and can be monitored after deployment." },
+    { question: `Who should read ${topic}?`, answer: `Indian founders, developers, agencies, SMEs, enterprise buyers, and AI consultants should use ${topic} to compare options, risks, costs, and implementation paths.` },
+    { question: `How does BestAIAgent.in evaluate ${topic}?`, answer: `We evaluate ${topic} through capability, pricing, documentation, integrations, reliability, security, compliance, India fit, and measurable workflow ROI.` },
+    { question: `What India-specific checks matter for ${topic}?`, answer: `For ${topic}, check INR pricing, GST invoice availability, DPDP Act 2023 obligations, UPI or Razorpay relevance, WhatsApp support, Hindi or Hinglish handling, and support coverage.` },
+    { question: `Does ${topic} require DPDP review?`, answer: `${topic} requires DPDP review when the workflow processes personal data such as chats, calls, CRM records, HR information, support tickets, or uploaded documents.` },
+    { question: `How should teams estimate ROI for ${topic}?`, answer: `To estimate ROI for ${topic}, measure the current manual process, estimate realistic automation coverage, subtract subscription and implementation cost, then compare quality, escalation rate, and operational risk.` },
+    { question: `What hidden costs should buyers watch for in ${topic}?`, answer: `Hidden costs for ${topic} can include API tokens, call minutes, workflow runs, vector database storage, paid connectors, overages, support tiers, forex markup, and GST treatment.` },
+    { question: `Is self-hosting better than SaaS for ${topic}?`, answer: `For ${topic}, self-hosting can improve control and data locality, while SaaS is usually faster to deploy. The right choice depends on engineering capacity, compliance needs, uptime, and budget.` },
+    { question: `What role does MCP play in ${topic}?`, answer: `MCP matters for ${topic} when agents need safe, maintainable access to tools, APIs, databases, files, browsers, and internal systems.` },
+    { question: `What is the safest implementation path for ${topic}?`, answer: `The safest implementation path for ${topic} is a narrow pilot with non-sensitive data, clear success metrics, logs, human review, permissions, rollback paths, and a named business owner.` },
+    { question: `How often should ${topic} be updated?`, answer: `${topic} should be reviewed monthly or quarterly because AI agent pricing, product limits, model quality, integrations, and compliance posture change quickly.` },
+    { question: `Does BestAIAgent.in use affiliate links on ${topic}?`, answer: `Some ${topic} pages may include affiliate links. Rankings remain independent and are based on editorial methodology rather than commissions.` },
+    { question: `Can ${topic} appear in AI search answers?`, answer: `${topic} is structured with direct answers, entity definitions, comparison language, FAQs, internal links, and schema-friendly sections for AI Overview and LLM extraction.` },
+    { question: `What should readers compare next after ${topic}?`, answer: `After ${topic}, readers should compare related reviews, pricing pages, alternatives, tutorials, glossary definitions, MCP pages, and research reports before buying or deploying.` },
+    { question: `What common mistake should readers avoid with ${topic}?`, answer: `With ${topic}, avoid buying an AI agent only because it is popular or impressive in a demo. Test it against real workflows, data boundaries, cost assumptions, and failure modes.` },
+    { question: `What is the final decision rule for ${topic}?`, answer: `For ${topic}, choose the option that solves a measurable workflow, fits team skills, keeps data risk controlled, has predictable cost, and can be monitored after deployment.` },
   ];
   const seen = new Set();
   return [...baseFaqs, ...extraFaqs]
@@ -997,7 +997,7 @@ export function pageSchema(meta) {
       if (schema && ["WebPage", "Article", "FAQPage", "TechArticle"].includes(schema["@type"])) {
         schema.speakable = {
           "@type": "SpeakableSpecification",
-          cssSelector: ["h1", ".direct-answer", ".faq-answer", ".hero .lede", ".lede"],
+          cssSelector: ["h1", ".direct-answer", ".definitive-answer", ".faq-answer", ".hero .lede", ".lede"],
         };
         if (!schema.inLanguage) schema.inLanguage = "en-IN";
         if (!schema.about && meta.entityName) {
@@ -1278,19 +1278,19 @@ function blogFaqs(title, pillarTitle, intent) {
     },
     {
       question: `Who should read ${title}?`,
-      answer: "Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools should read this guide.",
+      answer: `Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating ${title.toLowerCase()} should read this ${pillarTitle} guide.`,
     },
     {
-      question: "What India-specific checks are included?",
-      answer: "BestAIAgent.in emphasizes INR pricing, GST invoice availability, DPDP Act 2023 implications, WhatsApp workflows, Hindi or Hinglish support, data handling, and support coverage for Indian teams.",
+      question: `What India-specific checks are included for ${title}?`,
+      answer: `${title} includes checks for INR pricing, GST invoice availability, DPDP Act 2023 implications, WhatsApp workflows, Hindi or Hinglish support, data handling, and support coverage for Indian teams.`,
     },
     {
-      question: "How is this blog post connected to the BestAIAgent.in directory?",
-      answer: "Each blog topic links readers toward relevant reviews, comparisons, rankings, MCP pages, methodology notes, and directory pages so readers can move from education to shortlist decisions.",
+      question: `How is ${title} connected to the BestAIAgent.in directory?`,
+      answer: `${title} links readers toward relevant reviews, comparisons, rankings, MCP pages, methodology notes, and directory pages so they can move from ${intent.toLowerCase()} into shortlist decisions.`,
     },
     {
-      question: "How often should this topic be reviewed?",
-      answer: "AI agent pricing, benchmark performance, product capabilities, and compliance expectations change quickly, so high-value blog topics should be reviewed monthly or quarterly.",
+      question: `How often should ${title} be reviewed?`,
+      answer: `${title} should be reviewed monthly or quarterly because AI agent pricing, benchmark performance, product capabilities, and compliance expectations change quickly.`,
     },
   ];
 }

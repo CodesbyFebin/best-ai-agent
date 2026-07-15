@@ -14,6 +14,8 @@ const routeMap = buildRouteMeta();
 const routes = Object.values(routeMap)
   .filter((route, index, arr) => route.path && normalizeRoutePath(route.path) === normalizeRoutePath(route.canonicalPath || route.path) && arr.findIndex((other) => other.path === route.path) === index)
   .sort((a, b) => a.path.localeCompare(b.path));
+const isIndexableRoute = (route) => !/\bnoindex\b/i.test(String(route.robots || ""));
+const sitemapRoutes = routes.filter(isIndexableRoute);
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "7f4f2d728f93411eb9a03bestaiagentin";
 
 
@@ -89,26 +91,26 @@ const ALL_AI_AGENT_CATEGORIES = [
 ];
 
 const sitemapGroups = {
-  "ai-agent-sitemap.xml": routes.filter((r) => categoryMatches(r, ALL_AI_AGENT_CATEGORIES)),
-  "tool-sitemap.xml": routes.filter((r) => categoryMatches(r, ["reviews", "tools", "Tool Reviews", "Tool Profiles"])),
-  "comparison-sitemap.xml": routes.filter((r) => r.category === "comparisons" || r.category === "Comparisons"),
-  "pricing-sitemap.xml": routes.filter((r) => categoryMatches(r, ["pricing", "Pricing", "Pricing Intelligence", "pricing-intelligence"])),
-  "alternatives-sitemap.xml": routes.filter((r) => categoryMatches(r, ["alternatives", "Alternatives"])),
-  "tutorials-sitemap.xml": routes.filter((r) => categoryMatches(r, ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications", "courses-certifications"])),
-  "glossary-sitemap.xml": routes.filter((r) => categoryMatches(r, ["glossary", "Glossary"])),
-  "mcp-sitemap.xml": routes.filter((r) => categoryMatches(r, ["mcp", "MCP", "MCP Servers", "mcp-servers"])),
-  "author-sitemap.xml": routes.filter((r) => categoryMatches(r, ["authors", "Authors"])),
-  "hub-sitemap.xml": routes.filter((r) => categoryMatches(r, ["hubs", "editorial", "home", "Hubs", "Editorial", "Home"])),
-  "calculators-sitemap.xml": routes.filter((r) => categoryMatches(r, ["calculators", "Calculators", "longtail-engine"]) || /calculator/i.test(r.path)),
+  "ai-agent-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ALL_AI_AGENT_CATEGORIES)),
+  "tool-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["reviews", "tools", "Tool Reviews", "Tool Profiles"])),
+  "comparison-sitemap.xml": sitemapRoutes.filter((r) => r.category === "comparisons" || r.category === "Comparisons"),
+  "pricing-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["pricing", "Pricing", "Pricing Intelligence", "pricing-intelligence"])),
+  "alternatives-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["alternatives", "Alternatives"])),
+  "tutorials-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications", "courses-certifications"])),
+  "glossary-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["glossary", "Glossary"])),
+  "mcp-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["mcp", "MCP", "MCP Servers", "mcp-servers"])),
+  "author-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["authors", "Authors"])),
+  "hub-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["hubs", "editorial", "home", "Hubs", "Editorial", "Home"])),
+  "calculators-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["calculators", "Calculators", "longtail-engine"]) || /calculator/i.test(r.path)),
   // New dedicated sitemaps for previously un-indexed categories
-  "entity-sitemap.xml": routes.filter((r) => categoryMatches(r, ["entity-pages", "entities", "Entity Pages"])),
-  "longtail-sitemap.xml": routes.filter((r) => categoryMatches(r, ["longtail", "longtail-engine", "Long-tail Guides", "Longtail Engine"])),
-  "industry-sitemap.xml": routes.filter((r) => categoryMatches(r, ["industry-ai-agents", "business-ai-agents", "Industry AI Agents", "Business AI Agents", "voice-ai-agents", "Voice AI Agents"])),
-  "reddit-sitemap.xml": routes.filter((r) => categoryMatches(r, ["reddit", "reddit-community-intent", "Reddit & Community Intent"])),
-  "research-sitemap.xml": routes.filter((r) => categoryMatches(r, ["research-benchmarks", "reports", "Research & Benchmarks"])),
-  "coding-sitemap.xml": routes.filter((r) => categoryMatches(r, ["coding-agents", "Coding Agents", "ai-agent-builders", "AI Agent Builders"])),
-  "free-sitemap.xml": routes.filter((r) => categoryMatches(r, ["free", "Free AI Agents", "open-source-ai-agents", "Open Source AI Agents", "security-compliance", "Security & Compliance"])),
-  "blog-sitemap.xml": routes.filter((r) => categoryMatches(r, ["blog", "Blog"])),
+  "entity-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["entity-pages", "entities", "Entity Pages"])),
+  "longtail-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["longtail", "longtail-engine", "Long-tail Guides", "Longtail Engine"])),
+  "industry-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["industry-ai-agents", "business-ai-agents", "Industry AI Agents", "Business AI Agents", "voice-ai-agents", "Voice AI Agents"])),
+  "reddit-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["reddit", "reddit-community-intent", "Reddit & Community Intent"])),
+  "research-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["research-benchmarks", "reports", "Research & Benchmarks"])),
+  "coding-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["coding-agents", "Coding Agents", "ai-agent-builders", "AI Agent Builders"])),
+  "free-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["free", "Free AI Agents", "open-source-ai-agents", "Open Source AI Agents", "security-compliance", "Security & Compliance"])),
+  "blog-sitemap.xml": sitemapRoutes.filter((r) => categoryMatches(r, ["blog", "Blog"])),
 };
 
 for (const [name, entries] of Object.entries(sitemapGroups)) {
@@ -444,6 +446,7 @@ try { await import("./generate_llms.js"); } catch (e) { console.error("llms gene
 
 console.log(JSON.stringify({
   routeCount: routes.length,
+  indexableRouteCount: sitemapRoutes.length,
   sitemapCount: Object.keys(sitemapGroups).length,
   contentIndexCount: contentIndex.length,
   entityCount: entityIndex.length,

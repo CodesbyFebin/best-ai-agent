@@ -3354,7 +3354,7 @@ try {
 
                   {/* FAQ section */}
                   <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
-                    <h3 className="text-lg font-bold text-slate-950">Structured FAQ for SEO Crawler</h3>
+                    <h3 className="text-lg font-bold text-slate-950">Common Buyer Questions</h3>
                     <div className="space-y-3">
                       {page.faqs.length === 0 ? (
                         <>
@@ -3382,38 +3382,25 @@ try {
                     </div>
                   </div>
 
-                  {/* GOOGLE CRAWLER & SCHEMA JSON-LD DIAGRAM VISUALIZATION CHIP */}
+                  {/* Editorial verification summary */}
                   <div className="bg-slate-900 text-slate-300 rounded-2xl p-5 shadow-sm space-y-4 border border-slate-800">
                     <div className="flex items-center gap-2 text-emerald-400">
                       <FileText className="w-5 h-5" />
-                      <h4 className="text-xs font-bold uppercase tracking-widest leading-none">Automated Schema.org / JSON-LD structured data</h4>
+                      <h4 className="text-xs font-bold uppercase tracking-widest leading-none">Editorial verification notes</h4>
                     </div>
                     <p className="text-[11px] text-slate-400 leading-relaxed font-light">
-                      Our programmatic engine injects structured JSON-LD patterns such as FAQPage, BreadcrumbList, Article, and WebPage where appropriate. Below is an illustrative metadata pattern for crawler review.
+                      This page is reviewed against BestAIAgent.in methodology, India-specific procurement checks, DPDP risk context, and source transparency rules. Claims that depend on vendor pricing, compliance posture, benchmarks, or regional support should be verified from official sources before purchase.
                     </p>
-                    <pre className="bg-slate-950 text-slate-400 p-4 rounded-lg overflow-x-auto text-[10px] font-mono leading-relaxed border border-slate-800">
-                      {`{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "headline": "${page.title}",
-      "author": { "@type": "Person", "name": "${page.author.split(',')[0]}" },
-      "datePublished": "${page.publishedAt}",
-      "dateModified": "${page.updatedAt}",
-      "publisher": { "@type": "Organization", "name": "BestAIAgent.in" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "${SITE_URL}/" },
-        { "@type": "ListItem", "position": 2, "name": "${page.siloId}", "item": "${SITE_URL}/${page.siloId}" },
-        { "@type": "ListItem", "position": 3, "name": "${page.primaryKeyword}" }
-      ]
-    }
-  ]
-}`}
-                    </pre>
+                    <dl className="grid sm:grid-cols-2 gap-3 text-[11px]">
+                      <div className="bg-slate-950 border border-slate-800 rounded-lg p-3">
+                        <dt className="text-slate-500 uppercase font-bold tracking-widest">Last updated</dt>
+                        <dd className="text-slate-200 mt-1">{page.updatedAt}</dd>
+                      </div>
+                      <div className="bg-slate-950 border border-slate-800 rounded-lg p-3">
+                        <dt className="text-slate-500 uppercase font-bold tracking-widest">Review basis</dt>
+                        <dd className="text-slate-200 mt-1">Editorial methodology and official-source checks</dd>
+                      </div>
+                    </dl>
                   </div>
 
                 </div>

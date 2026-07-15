@@ -1315,8 +1315,8 @@ export const siloPages: SiloPage[] = [
     updatedAt: '2026-06-13',
     bodySections: [
       {
-        heading: 'Vapi AI announces localized India billing',
-        text: 'Vapi AI has registered a local India entity, offering billing in domestic currency with UPI compatibility, drastically simplifying expense workflows for Indian startup boards.'
+        heading: 'Voice AI platforms expand regional deployment options',
+        text: 'Voice-agent buyers in India should verify billing currency, GST invoice handling, telephony coverage, latency, support hours, and payment-workflow integrations directly from official vendor documentation before committing to production.'
       }
     ],
     faqs: [],
