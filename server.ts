@@ -220,8 +220,9 @@ const noindexPaths = new Set(['/search', '/filter', '/admin', '/debug', '/previe
 routeMeta['/'] = defaultHomeMeta;
 
 function normalizePath(inputPath: string) {
-  const clean = inputPath.split('?')[0].replace(/\/+$/, '');
-  return clean || '/';
+  const p = inputPath.split('?')[0].replace(/\/index\.html$/, '');
+  const clean = p.length > 1 ? p.replace(/\/+$/, '') : p;
+  return clean;
 }
 
 function fallbackMeta(reqPath: string): RouteMeta {
@@ -275,11 +276,11 @@ function routeImageMeta(meta: RouteMeta) {
   let alt = meta.ogImageAlt;
 
   if (!image) {
-    if (pathName === '/') image = '/assets/og/home.png';
-    else if (pathName.startsWith('/tools/')) image = `/assets/og/${pathName.replace('/tools/', '')}.png`;
+    if (pathName.startsWith('/tools/')) image = `/assets/og/${pathName.replace('/tools/', '')}.png`;
     else if (slug.includes('-vs-')) image = `/assets/comparisons/${slug}.png`;
     else if (slug.endsWith('-hub')) image = `/assets/og/${slug}.png`;
-    else image = '/assets/brand/og-default.png';
+    else if (pathName.startsWith('/authors/')) image = `/assets/og/authors/${slug}.png`;
+    else image = '/assets/og/home.png';
   }
 
   if (!alt) {
@@ -319,6 +320,7 @@ function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: b
   const imageMeta = routeImageMeta(meta);
   const googleVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.VITE_GOOGLE_SITE_VERIFICATION;
   const bingVerification = process.env.BING_SITE_VERIFICATION || process.env.VITE_BING_SITE_VERIFICATION;
+  const isHomepage = canonicalPath === '/';
   const tags = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
@@ -326,6 +328,7 @@ function injectMeta(html: string, meta: RouteMeta, options: { noindexPreview?: b
     `<link rel="canonical" href="${canonical}" />`,
     googleVerification ? `<meta name="google-site-verification" content="${escapeHtml(googleVerification)}" />` : '',
     bingVerification ? `<meta name="msvalidate.01" content="${escapeHtml(bingVerification)}" />` : '',
+    isHomepage ? `<link rel="preload" fetchpriority="high" as="image" href="${imageMeta.image}" type="image/png" />` : '',
     `<meta property="og:type" content="website" />`,
     `<meta property="og:site_name" content="BestAIAgent.in" />`,
     `<meta property="og:url" content="${canonical}" />`,
