@@ -577,7 +577,8 @@ function renderFAQs(faqs) {
     '<div class="faq-list">\n' +
     faqs.map((faq) => {
       const q = escapeHtml(faq.question);
-      const a = escapeHtml(faq.answer);
+      const answerText = faq.shortAnswer || faq.answer || '';
+      const a = escapeHtml(answerText);
       return `  <details><summary>${q}</summary><p class="faq-answer">${a}</p></details>`;
     }).join('\n') +
     '\n  </div>\n' +
