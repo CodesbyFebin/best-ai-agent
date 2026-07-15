@@ -54,6 +54,8 @@ export interface Product {
 export interface FAQItem {
   question: string;
   answer: string;
+  shortAnswer?: string;
+  relatedQuestions?: string[];
 }
 
 export interface SiloPage {
