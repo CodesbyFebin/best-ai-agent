@@ -571,6 +571,8 @@ function injectMeta(html, meta) {
 
 function renderFAQs(faqs) {
   if (!Array.isArray(faqs) || faqs.length === 0) return '';
+  const primaryFaq = faqs[0] || {};
+  const related = Array.isArray(primaryFaq.relatedQuestions) ? primaryFaq.relatedQuestions.filter(Boolean) : [];
   return (
     '<section aria-labelledby="faq-heading">\n' +
     `  <h2 id="faq-heading">Frequently Asked Questions</h2>\n` +
@@ -582,6 +584,12 @@ function renderFAQs(faqs) {
       return `  <details><summary>${q}</summary><p class="faq-answer">${a}</p></details>`;
     }).join('\n') +
     '\n  </div>\n' +
+    (related.length ? '<section aria-labelledby="paa-heading" class="paa-section">\n' +
+      '  <h2 id="paa-heading">People Also Ask</h2>\n' +
+      '<ul>\n' +
+      related.map((r) => `    <li>${escapeHtml(r)}</li>`).join('\n') +
+      '\n  </ul>\n' +
+      '</section>\n' : '') +
     '</section>\n'
   );
 }
