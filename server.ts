@@ -608,7 +608,7 @@ function readClientAssetManifest() {
   for (const filePath of candidates) {
     if (!fs.existsSync(filePath)) continue;
     try {
-      const data = JSON.parse(fs.readFileSync(filePath, 'utf8')) as { script?: string; style?: string | null };
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf8')) as { script?: string; style?: string | null; styleContent?: string | null };
       if (data.script && data.script.startsWith('/assets/')) return data;
     } catch (error) {
       console.warn(`[client-assets] failed to parse ${filePath}: ${error instanceof Error ? error.message : error}`);
@@ -689,7 +689,16 @@ function sendAssetFile(req: express.Request, res: express.Response, next: expres
   ];
 
   const file = candidates.find((candidate) => fs.existsSync(candidate) && fs.statSync(candidate).isFile());
-  if (!file) return next();
+  if (!file) {
+    const manifest = readClientAssetManifest();
+    const requestedAsset = `/assets/${relativePath}`;
+    if (manifest?.style === requestedAsset && manifest.styleContent) {
+      res.setHeader('Content-Type', 'text/css; charset=utf-8');
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      return res.send(manifest.styleContent);
+    }
+    return next();
+  }
 
   res.setHeader('Content-Type', contentTypeFor(file));
   if (/\-[A-Za-z0-9_-]{6,}\./.test(path.basename(file))) {
