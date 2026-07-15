@@ -10,7 +10,7 @@ const DIST_DIR = path.join(ROOT, 'dist');
 const REPORTS_DIR = path.join(ROOT, 'reports');
 
 const COMMANDS = [
-  { label: 'Build static site', cmd: 'npm run build', check: () => false, nonBlocking: true },
+  { label: 'Build static site', cmd: 'npm run build', check: () => fs.existsSync(path.join(DIST_DIR, 'static-site')) },
   { label: 'Generate route manifest', cmd: 'npx tsx scripts/generate-route-manifest.ts', check: () => fs.existsSync(path.join(PUBLIC_DIR, 'route-manifest.json')) },
   { label: 'Generate SEO sitemaps', cmd: 'node scripts/generate_sitemaps.js', check: () => fs.existsSync(path.join(PUBLIC_DIR, 'sitemap.xml')) },
   { label: 'Generate authority sitemaps', cmd: 'node scripts/generate-authority-sitemaps.cjs', check: () => fs.existsSync(path.join(PUBLIC_DIR, 'sitemaps', 'pillars.xml')) },
@@ -18,7 +18,7 @@ const COMMANDS = [
   { label: 'Validate crawl readiness', cmd: 'node scripts/validate-crawl-readiness.cjs', check: () => fs.existsSync(path.join(REPORTS_DIR, 'ai-crawl-readiness-report.md')) },
 ];
 
-function runCommand(label, cmd, nonBlocking = false) {
+function runCommand(label, cmd) {
   console.log(`\n${'='.repeat(60)}`);
   console.log(`▶ ${label}`);
   console.log(`  ${cmd}`);
@@ -29,10 +29,6 @@ function runCommand(label, cmd, nonBlocking = false) {
     return true;
   } catch (error) {
     console.error(`❌ ${label} failed:`, error.message);
-    if (nonBlocking) {
-      console.warn(`⚠️  ${label} failed but continuing...`);
-      return true;
-    }
     return false;
   }
 }
@@ -51,7 +47,7 @@ function main() {
       results.push({ label: step.label, skipped: true });
       continue;
     }
-    const success = runCommand(step.label, step.cmd, step.nonBlocking);
+    const success = runCommand(step.label, step.cmd);
     results.push({ label: step.label, success });
   }
 
