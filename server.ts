@@ -342,7 +342,7 @@ function getRouteMeta(reqPath: string): RouteMeta | null {
   if (noindexPaths.has(pathName)) {
     return { ...fallbackMeta(pathName), robots: 'noindex,follow' };
   }
-  return routeMeta[pathName] || fallbackMeta(pathName);
+  return routeMeta[pathName] || null;
 }
 
 function getRouteMetaForRequest(req: express.Request): RouteMeta | null {
@@ -362,7 +362,7 @@ function schemaScript(meta: RouteMeta) {
     if (schema && (schema['@type'] === 'WebPage' || schema['@type'] === 'Article' || schema['@type'] === 'FAQPage')) {
       schema.speakable = {
         '@type': 'SpeakableSpecification',
-        'cssSelector': ['h1', '.direct-answer', '.faq-answer']
+        'cssSelector': ['h1', '.direct-answer', '.definitive-answer', '.faq-answer']
       };
       if (!schema.inLanguage) {
         schema.inLanguage = ['en-IN', 'hi-IN'];
@@ -1018,10 +1018,13 @@ async function createApp() {
       const htmlPath = findClientIndexHtml(distPath);
       if (!htmlPath) return res.status(404).send('Not found');
       try {
-        const meta = getRouteMetaForRequest(req) || fallbackMeta(pathName);
-        const html = await renderHtml(req, fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        return res.send(html);
+      const meta = getRouteMetaForRequest(req);
+      if (!meta) {
+        return res.status(404).send('Not found');
+      }
+      const html = await renderHtml(req, fs.readFileSync(htmlPath, 'utf8'), meta, { noindexPreview: isPreviewHost(req.headers.host) });
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      return res.send(html);
       } catch (error) {
         return next(error);
       }

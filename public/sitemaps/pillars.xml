@@ -342,16 +342,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://bestaiagent.in/tools</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://bestaiagent.in/reviews</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
 </urlset>

@@ -102,10 +102,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://bestaiagent.in/ai-agent-frameworks-hub</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
 </urlset>

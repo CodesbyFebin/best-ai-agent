@@ -31,7 +31,9 @@ if (hashRoutes.length) {
   hashRoutes.forEach((r) => addIssue(r.path, 'Hash-based URL in canonical path'));
 }
 
-// 2. Duplicate canonicals
+// 2. Duplicate canonicals - only flag when two or more routes both claim to be canonical
+//    (i.e., both have path === canonicalPath). Redirect routes (path !== canonicalPath)
+//    are expected and should not be flagged.
 const seen = {};
 const dupes = [];
 for (const r of routes) {
@@ -41,8 +43,14 @@ for (const r of routes) {
 }
 for (const [canonical, paths] of Object.entries(seen)) {
   if (paths.length > 1) {
-    dupes.push({ canonical, paths });
-    paths.forEach((p) => addIssue(p, 'Duplicate canonical path'));
+    const canonicalRoutes = paths.filter((p) => {
+      const route = routes.find((r) => r.path === p);
+      return route && route.path === route.canonicalPath;
+    });
+    if (canonicalRoutes.length > 1) {
+      dupes.push({ canonical, paths: canonicalRoutes });
+      canonicalRoutes.forEach((p) => addIssue(p, 'Duplicate canonical path'));
+    }
   }
 }
 

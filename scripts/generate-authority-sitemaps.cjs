@@ -56,6 +56,7 @@ function site(pathName) {
 const locations = routes.map((r) => site(r.canonicalPath));
 const byType = {};
 for (const r of routes) {
+  if (r.path !== r.canonicalPath) continue;
   const t = r.type || 'other';
   byType[t] = byType[t] || [];
   byType[t].push(r);
@@ -71,12 +72,12 @@ const entities = [...(byType['entity'] || [])];
 const research = [...(byType['research'] || []), ...(byType['report'] || [])];
 const pillars = [...(byType['pillar'] || [])];
 const hubs = [...(byType['hub'] || [])];
-const topics = routes.filter((r) => !['home', 'tool', 'mcp', 'entity', 'research', 'pillar', 'hub', 'comparison', 'author', 'trust', 'india'].includes(r.type));
+const topics = routes.filter((r) => r.path === r.canonicalPath && !['home', 'tool', 'mcp', 'entity', 'research', 'pillar', 'hub', 'comparison', 'author', 'trust', 'india'].includes(r.type));
 const comparisons = [...(byType['comparison'] || [])];
-const rankings = routes.filter((r) => /ranking/.test(r.canonicalPath) || /rankings/.test(r.canonicalPath));
-const india = routes.filter((r) => /india/.test(r.canonicalPath) || r.type === 'india' || r.parentHub === 'ai-agents-india');
-const trust = routes.filter((r) => ['home', 'trust', 'author', 'editorial'].includes(r.type) || /methodology|editorial|affiliate/.test(r.canonicalPath));
-const authors = routes.filter((r) => /^\/authors\//.test(r.canonicalPath) || r.type === 'author');
+const rankings = routes.filter((r) => r.path === r.canonicalPath && (/ranking/.test(r.canonicalPath) || /rankings/.test(r.canonicalPath)));
+const india = routes.filter((r) => r.path === r.canonicalPath && (/india/.test(r.canonicalPath) || r.type === 'india' || r.parentHub === 'ai-agents-india'));
+const trust = routes.filter((r) => r.path === r.canonicalPath && ['home', 'trust', 'author', 'editorial'].includes(r.type) || /methodology|editorial|affiliate/.test(r.canonicalPath));
+const authors = routes.filter((r) => r.path === r.canonicalPath && (/^\/authors\//.test(r.canonicalPath) || r.type === 'author'));
 
 write('sitemap.xml', sitemapIndex([
   { path: '/sitemaps/agents.xml' },

@@ -131,7 +131,7 @@ function inferMeta(routePath: string, meta: any): any {
 
   return {
     slug,
-    canonicalPath: meta.path || normalized,
+    canonicalPath: meta.canonicalPath || meta.path || normalized,
     title,
     description,
     type,

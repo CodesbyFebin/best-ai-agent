@@ -109,12 +109,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/about-editorial-team</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://bestaiagent.in/contact</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -145,19 +139,13 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/editorial-board</loc>
+    <loc>https://bestaiagent.in/editorial-policy</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/review-policy</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://bestaiagent.in/downloads/methodology-42point.pdf</loc>
+    <loc>https://bestaiagent.in/methodology</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
