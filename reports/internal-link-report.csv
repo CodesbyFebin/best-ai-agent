@@ -181,14 +181,17 @@ mcp/tutorials/index.md,1187,1,N/A,N/A
 mcp/tutorials/mcp-with-claude-desktop.md,3444,13,Desktop Integration Team,N/A
 mcp/tutorials/mcp-with-cursor-ai.md,3567,14,Developer Experience Team,N/A
 mcp/what-is-mcp.md,3841,15,N/A,N/A
+pillars/ai-agent-frameworks.md,3318,10,N/A,N/A
+pillars/ai-agents-india.md,4726,14,N/A,N/A
 pillars/best-ai-agent-automation-platform.md,3671,13,N/A,N/A
-pillars/best-ai-agent-builder.md,4367,16,N/A,N/A
+pillars/best-ai-agent-builder.md,4733,14,N/A,N/A
 pillars/best-ai-agent-development-platform.md,3701,13,N/A,N/A
 pillars/best-ai-agent-for-accountants.md,4597,13,N/A,N/A
 pillars/best-ai-agent-for-agencies.md,4749,13,N/A,N/A
 pillars/best-ai-agent-for-appointment-booking.md,3701,14,N/A,N/A
 pillars/best-ai-agent-for-banking.md,3696,14,N/A,N/A
-pillars/best-ai-agent-for-business.md,4684,14,N/A,N/A
+pillars/best-ai-agent-for-business.md,4760,14,N/A,N/A
+pillars/best-ai-agent-for-coding.md,4773,14,N/A,N/A
 pillars/best-ai-agent-for-consultants.md,4626,13,N/A,N/A
 pillars/best-ai-agent-for-crm.md,5039,13,N/A,N/A
 pillars/best-ai-agent-for-customer-support.md,4735,13,N/A,N/A
@@ -219,13 +222,22 @@ pillars/best-ai-agent-for-whatsapp-support.md,4600,13,N/A,N/A
 pillars/best-ai-agent-for-whatsapp.md,3696,13,N/A,N/A
 pillars/best-ai-agent-platform.md,4571,14,N/A,N/A
 pillars/best-ai-agent-workflow-builder.md,3728,14,N/A,N/A
+pillars/best-ai-agent.md,4692,14,N/A,N/A
 pillars/best-ai-agents-for-business.md,2928,16,N/A,N/A
 pillars/best-ai-call-center-agent.md,3701,13,N/A,N/A
 pillars/best-ai-phone-agent.md,3648,14,N/A,N/A
-pillars/best-ai-voice-agent.md,3722,14,N/A,N/A
+pillars/best-ai-voice-agent.md,4769,14,N/A,N/A
+pillars/best-free-ai-agents.md,3976,14,N/A,N/A
 pillars/best-no-code-ai-agent-builder.md,4342,14,N/A,N/A
 pillars/best-open-source-ai-agents.md,3673,14,N/A,N/A
 pillars/index.md,978,0,N/A,N/A
+pillars/mcp-agent-protocols.md,3975,13,N/A,N/A
+pillars/topic/ai-agent-builders/best-ai-agent-builder.md,4733,14,N/A,N/A
+pillars/topic/ai-agent-frameworks/best-ai-agent-framework.md,3329,10,N/A,N/A
+pillars/topic/ai-agent-frameworks/topic/ai-agent-frameworks.md,3319,10,N/A,N/A
+pillars/topic/ai-coding-agents/best-ai-agent-for-coding.md,4776,14,N/A,N/A
+pillars/what-are-ai-agents.md,4350,12,N/A,N/A
+placeholder.md,0,0,N/A,N/A
 pricing/claude-code-pricing.md,3775,14,N/A,N/A
 pricing/copilot-free-vs-paid.md,3932,13,N/A,N/A
 pricing/cursor-free-vs-pro.md,3898,14,N/A,N/A

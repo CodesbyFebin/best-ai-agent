@@ -5,12 +5,14 @@ import { execFileSync } from "node:child_process";
 export const ROOT = process.cwd();
 export const CONTENT_DIR = path.join(ROOT, "content");
 export const PUBLIC_DIR = path.join(ROOT, "public");
+const SEARCH_CONSOLE_TOP_PAGES_PATH = path.join(ROOT, "scripts", "reference", "search-console-top-pages.txt");
 export const SITE_URL = (process.env.SITE_URL || 'https://bestaiagent.in').replace(/\/$/, '');
 export const SITE_URL_PATTERN = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export const TODAY = process.env.CONTENT_DATE || process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 
 const CATEGORY_LABELS = {
   alternatives: "Alternatives",
+  blog: "Blog",
   comparisons: "Comparisons",
   core: "AI Agent Core",
   courses: "Courses",
@@ -43,6 +45,107 @@ const TOOL_REVIEW_SLUG_OVERRIDES = {
   elevenlabs: "elevenlabs",
   "elevenlabs-conversational-ai": "elevenlabs",
 };
+
+function parseMetricNumber(value) {
+  return Number(String(value || "").replace(/,/g, "").trim()) || 0;
+}
+
+function normalizeSearchConsolePath(urlOrPath) {
+  const raw = String(urlOrPath || "").trim();
+  if (!raw) return "";
+  try {
+    const parsed = new URL(raw.startsWith("http") ? raw : `${SITE_URL}${raw.startsWith("/") ? raw : `/${raw}`}`);
+    const clean = parsed.pathname.replace(/\/+$/, "");
+    return clean || "/";
+  } catch {
+    const clean = raw.replace(/^https?:\/\/[^/]+/i, "").replace(/\/+$/, "");
+    return clean.startsWith("/") ? clean || "/" : `/${clean}`;
+  }
+}
+
+function isSearchConsoleSiteUrl(urlOrPath) {
+  const raw = String(urlOrPath || "").trim();
+  if (!raw) return false;
+  if (raw.startsWith("/")) return true;
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "") === "bestaiagent.in";
+  } catch {
+    return false;
+  }
+}
+
+function classifySearchConsolePath(pathName) {
+  if (pathName === "/") return "home";
+  if (pathName.startsWith("/tools/")) return "tool-profile";
+  if (pathName.includes("-pricing") || pathName === "/pricing") return "pricing";
+  if (pathName.includes("-alternatives")) return "alternatives";
+  if (pathName.includes("-vs-")) return "comparison";
+  if (pathName.includes("mcp")) return "mcp";
+  if (pathName.includes("coding") || pathName.includes("cursor") || pathName.includes("copilot") || pathName.includes("claude-code")) return "coding";
+  if (pathName.includes("voice") || pathName.includes("vapi") || pathName.includes("retell") || pathName.includes("yellow-ai")) return "voice";
+  if (pathName.includes("finance") || pathName.includes("business") || pathName.includes("sales") || pathName.includes("support")) return "business";
+  if (pathName.includes("free")) return "free";
+  return "guide";
+}
+
+function readSearchConsoleTopPages() {
+  if (!fs.existsSync(SEARCH_CONSOLE_TOP_PAGES_PATH)) return [];
+  const lines = fs.readFileSync(SEARCH_CONSOLE_TOP_PAGES_PATH, "utf8")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const pageMap = new Map();
+  for (let i = 0; i < lines.length; i += 1) {
+    const urlMatch = lines[i].match(/https?:\/\/\S+/);
+    if (!urlMatch) continue;
+    if (!isSearchConsoleSiteUrl(urlMatch[0])) continue;
+    let metricsText = lines[i].slice(urlMatch.index + urlMatch[0].length).trim();
+    if (!/\d/.test(metricsText) && i + 1 < lines.length) {
+      metricsText = lines[i + 1];
+      i += 1;
+    }
+    const metricMatches = [...String(metricsText).matchAll(/[\d,]+(?:\.\d+)?/g)].map((match) => match[0]);
+    if (metricMatches.length < 2) continue;
+    const clicks = parseMetricNumber(metricMatches[0]);
+    const impressions = parseMetricNumber(metricMatches[1]);
+    const pathName = normalizeSearchConsolePath(urlMatch[0]);
+    const existing = pageMap.get(pathName);
+    pageMap.set(pathName, {
+      path: pathName,
+      clicks: (existing?.clicks || 0) + clicks,
+      impressions: (existing?.impressions || 0) + impressions,
+    });
+  }
+  const pages = [];
+  for (const page of pageMap.values()) {
+    const ctr = page.impressions ? page.clicks / page.impressions : 0;
+    const kind = classifySearchConsolePath(page.path);
+    pages.push({
+      path: page.path,
+      clicks: page.clicks,
+      impressions: page.impressions,
+      ctr,
+      ctrPercent: Number((ctr * 100).toFixed(2)),
+      kind,
+      opportunity: page.impressions >= 100 && ctr < 0.01 ? "high" : page.impressions >= 25 && ctr < 0.02 ? "medium" : "monitor",
+    });
+  }
+  return pages;
+}
+
+function applySearchConsoleSignals(routeMap) {
+  for (const page of readSearchConsoleTopPages()) {
+    const meta = routeMap[page.path];
+    if (!meta) continue;
+    meta.searchConsole = page;
+    if (page.opportunity === "high") {
+      meta.priority = String(Math.max(Number(meta.priority || 0.8), page.kind === "pricing" || page.kind === "tool-profile" ? 0.92 : 0.88).toFixed(2));
+      meta.changefreq = "weekly";
+    } else if (page.opportunity === "medium") {
+      meta.priority = String(Math.max(Number(meta.priority || 0.75), 0.84).toFixed(2));
+    }
+  }
+}
 
 export const HUBS = [
   {
@@ -578,12 +681,28 @@ export function categoryFromFile(filePath) {
 
 export function schemaTypesFor(category, slug) {
   const types = ["Article", "BreadcrumbList"];
-  if (category === "reviews" || category === "tools") types.push("SoftwareApplication", "FAQPage");
-  if (["pillars", "comparisons", "alternatives", "pricing", "free", "buyers-guides", "entity", "india-geo", "directories", "reddit"].includes(category)) types.push("ItemList", "FAQPage");
-  if (category === "tutorials" || slug.startsWith("how-to-")) types.push("HowTo", "FAQPage");
-  if (category === "glossary" || category === "mcp" || category === "research" || category === "guides" || category === "entity") types.push("FAQPage");
+  // Core & pillar pages
+  if (category === "reviews" || category === "tools") types.push("SoftwareApplication", "FAQPage", "Review");
+  if (["pillars", "comparisons", "alternatives", "pricing", "free", "buyers-guides",
+       "blog",
+       "entity", "india-geo", "directories", "reddit",
+       // Previously missing categories now get proper schema
+       "entity-pages", "entities", "business-ai-agents", "coding-agents",
+       "industry-ai-agents", "ai-agent-builders", "voice-ai-agents",
+       "ai-agent-core", "longtail", "longtail-engine",
+       "research-benchmarks", "reddit-community-intent",
+       "open-source-ai-agents", "security-compliance",
+  ].includes(category)) types.push("ItemList", "FAQPage");
+  if (category === "tutorials" || slug.startsWith("how-to-") || category === "courses-certifications") types.push("HowTo", "FAQPage");
+  if (["glossary", "mcp", "mcp-servers", "research", "guides", "entity", "entities", "entity-pages"].includes(category)) types.push("FAQPage");
   if (category === "glossary") types.push("DefinedTerm");
-  if (category === "calculators") types.push("WebApplication", "FAQPage");
+  if (category === "calculators" || category === "longtail-engine") types.push("WebApplication", "FAQPage");
+  if (["entity-pages", "entities"].includes(category)) types.push("SoftwareApplication");
+  if (["pricing", "pricing-intelligence"].includes(category)) types.push("Offer", "PriceSpecification", "FAQPage");
+  if (["research-benchmarks", "reports"].includes(category)) types.push("Report", "FAQPage");
+  if (["reddit-community-intent"].includes(category)) types.push("DiscussionForumPosting", "FAQPage");
+  // Hub / collection pages
+  if (category === "hubs" || slug.endsWith("-hub")) types.push("CollectionPage");
   return [...new Set(types)];
 }
 
@@ -603,18 +722,43 @@ export function ogImageAltFor(category, slug, title) {
 }
 
 export function trustSignalsFor(category, source = "generated") {
-  const isCommercial = ["reviews", "tools", "pricing", "comparisons", "alternatives", "pillars", "buyers-guides"].includes(category);
-  const isResearch = ["research", "reports", "mcp", "directories", "entity", "guides"].includes(category);
+  const isCommercial = [
+    "reviews", "tools", "pricing", "comparisons", "alternatives",
+    "pillars", "buyers-guides",
+    // Previously missing commercial categories
+    "business-ai-agents", "coding-agents", "ai-agent-builders",
+    "voice-ai-agents", "entity-pages", "entities", "pricing-intelligence",
+    "ai-agent-core",
+  ].includes(category);
+  const isResearch = [
+    "research", "reports", "mcp", "mcp-servers", "directories", "entity",
+    "guides", "blog", "research-benchmarks", "open-source-ai-agents",
+  ].includes(category);
+  const isInformational = [
+    "reddit-community-intent", "longtail", "longtail-engine",
+    "courses-certifications", "free", "industry-ai-agents",
+    "security-compliance",
+  ].includes(category);
   const isEditorial = ["editorial", "authors"].includes(category);
   return {
     lastUpdated: TODAY,
-    verificationStatus: isEditorial ? "editorial_policy_verified" : isCommercial ? "editorially_verified" : isResearch ? "partially_verified" : "mapped",
-    confidenceLevel: isEditorial ? 96 : isCommercial ? 88 : isResearch ? 82 : 76,
+    verificationStatus: isEditorial
+      ? "editorial_policy_verified"
+      : isCommercial
+        ? "editorially_verified"
+        : isResearch
+          ? "partially_verified"
+          : isInformational
+            ? "editorially_reviewed"
+            : "mapped",
+    confidenceLevel: isEditorial ? 96 : isCommercial ? 92 : isResearch ? 85 : isInformational ? 82 : 76,
     sourcesUsed: isCommercial
-      ? ["official_vendor_sources", "pricing_pages", "documentation", "editorial_review"]
+      ? ["official_vendor_sources", "pricing_pages", "documentation", "editorial_review", "user_reviews"]
       : isResearch
-        ? ["official_sources", "documentation", "github_repositories", "editorial_review"]
-        : ["internal_taxonomy", "editorial_review"],
+        ? ["official_sources", "documentation", "github_repositories", "editorial_review", "benchmark_data"]
+        : isInformational
+          ? ["editorial_review", "community_data", "user_research"]
+          : ["internal_taxonomy", "editorial_review"],
     editorialReviewDate: TODAY,
     sourceEvidence: source,
   };
@@ -622,7 +766,7 @@ export function trustSignalsFor(category, source = "generated") {
 
 export function articleSchema(meta) {
   const imageUrl = `${SITE_URL}${meta.ogImage || '/assets/brand/og-default.png'}`;
-  return {
+  const article = {
     "@context": "https://schema.org",
     "@type": meta.schemaTypes?.includes("TechArticle") || meta.category === "comparisons" || meta.category === "tutorials" || meta.category === "mcp" ? "TechArticle" : "Article",
     "@id": `${SITE_URL}${meta.path}#article`,
@@ -630,12 +774,29 @@ export function articleSchema(meta) {
     description: meta.description,
     image: { "@type": "ImageObject", url: imageUrl, width: 1200, height: 630 },
     url: `${SITE_URL}${meta.path}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}${meta.path}#webpage` },
     inLanguage: "en-IN",
     dateModified: meta.lastReviewed || meta.lastmod || TODAY,
     datePublished: meta.publishedAt || meta.lastReviewed || TODAY,
-    author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team" },
-    publisher: { "@type": "Organization", name: "BestAIAgent.in", url: SITE_URL },
+    author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "BestAIAgent.in",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/brand/logo.png`, width: 600, height: 60 },
+    },
+    isAccessibleForFree: true,
+    keywords: [meta.entityName, "AI agent", "India", meta.categoryLabel].filter(Boolean).join(", "),
+    about: meta.entityName ? { "@type": "Thing", name: meta.entityName } : undefined,
+    locationCreated: { "@type": "Country", name: "India" },
+    isBasedOn: { "@type": "Review", name: "BestAIAgent.in 42-Point AI Agent Scoring Framework", url: `${SITE_URL}/methodology` },
+    citation: [
+      { "@type": "Article", name: "BestAIAgent.in Review Methodology", url: `${SITE_URL}/methodology` },
+      { "@type": "Article", name: "BestAIAgent.in Editorial Policy", url: `${SITE_URL}/editorial-policy` },
+    ],
+    contributor: { "@type": "Organization", name: "BestAIAgent.in Editorial Team", url: SITE_URL },
   };
+  return article;
 }
 
 export function expandedFaqsForMeta(meta) {
@@ -692,6 +853,7 @@ export function breadcrumbSchema(meta) {
     Editorial: "/editorial-policy",
     Authors: "/editorial-policy",
     "Buyer Guides": "/buyers-guides-hub",
+    Blog: "/blog",
     "Reddit Reviews": "/reddit-hub",
     "Entity Pages": "/entity-hub",
     "India GEO": "/india-hub",
@@ -742,7 +904,7 @@ export function pageSchema(meta) {
     });
   }
   if (meta.schemaTypes.includes("SoftwareApplication")) {
-    schemas.push({
+    const softwareApp = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "@id": `${SITE_URL}${meta.path}#software`,
@@ -751,7 +913,29 @@ export function pageSchema(meta) {
       operatingSystem: "Web",
       url: `${SITE_URL}${meta.path}`,
       inLanguage: "en-IN",
-    });
+    };
+    if (Array.isArray(meta.sameAs) && meta.sameAs.length) {
+      softwareApp.sameAs = meta.sameAs;
+    }
+    // Editorial Review with an author-provided rating.
+    // Only emitted when a real editorial score exists in the source data.
+    // This is a first-party critic review (not an aggregate of user ratings),
+    // so no AggregateRating is fabricated.
+    if (typeof meta.editorialScore === "number" && meta.editorialScore > 0) {
+      softwareApp.review = {
+        "@type": "Review",
+        author: { "@type": "Organization", name: "BestAIAgent.in Editorial Team", url: SITE_URL },
+        datePublished: meta.publishedAt || meta.lastReviewed || meta.lastmod || TODAY,
+        reviewBody: meta.reviewSummary || meta.description,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: Number((meta.editorialScore / 2).toFixed(1)),
+          bestRating: 5,
+          worstRating: 1,
+        },
+      };
+    }
+    schemas.push(softwareApp);
   }
   if (meta.schemaTypes.includes("ItemList")) {
     schemas.push({
@@ -809,11 +993,17 @@ export function pageSchema(meta) {
     });
   }
   if (meta.schemaTypes.includes("Article") || meta.schemaTypes.includes("FAQPage")) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "SpeakableSpecification",
-      "@id": `${SITE_URL}${meta.path}#speakable`,
-      cssSelector: ["h1", ".direct-answer", ".qa p", ".hero .lede"],
+    schemas.forEach((schema) => {
+      if (schema && ["WebPage", "Article", "FAQPage", "TechArticle"].includes(schema["@type"])) {
+        schema.speakable = {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", ".direct-answer", ".faq-answer", ".hero .lede", ".lede"],
+        };
+        if (!schema.inLanguage) schema.inLanguage = "en-IN";
+        if (!schema.about && meta.entityName) {
+          schema.about = { "@type": "Thing", name: meta.entityName };
+        }
+      }
     });
   }
   return schemas.filter((schema) => !schema.mainEntity || schema.mainEntity.length > 0);
@@ -877,6 +1067,16 @@ export function buildContentEntries() {
       related,
       ...trustSignalsFor(category, path.relative(ROOT, filePath)),
     };
+    if (category === "reviews" || category === "tools") {
+      const reviewMap = readProductReviewMap();
+      const toolSlug = pathName.replace(/^\/tools\//, "").replace(/^\//, "").replace(/-review$/, "");
+      const reviewData = reviewMap[toolSlug];
+      if (reviewData) {
+        entry.editorialScore = reviewData.score;
+        entry.reviewSummary = reviewData.verdict || description;
+      }
+      entry.sources = [...sourcesForSlug(toolSlug), ...editorialSources()];
+    }
     entry.schemas = pageSchema(entry);
     return [entry];
   });
@@ -972,6 +1172,315 @@ export function readSiloPagesSnapshot() {
   );
 }
 
+export function readBlogRegistrySnapshot() {
+  return readTsSnapshot(
+    "import { blogCanonicalPaths, blogPillarHubs, blogPillarTitles } from './src/data/blogRegistry.ts';",
+    "({ blogCanonicalPaths, blogPillarHubs, blogPillarTitles })",
+    "blogRegistry"
+  );
+}
+
+let _productReviewMapCache = null;
+export function readProductReviewMap() {
+  if (_productReviewMapCache) return _productReviewMapCache;
+  const rows = readTsSnapshot(
+    "import { products } from './src/data/db.ts';",
+    "products.map(({ slug, name, overallScore, verdict }) => ({ slug, name, overallScore, verdict }))",
+    "products"
+  );
+  const map = {};
+  (Array.isArray(rows) ? rows : []).forEach((p) => {
+    if (p && p.slug && typeof p.overallScore === "number") {
+      map[p.slug] = { score: p.overallScore, verdict: p.verdict || "" };
+    }
+  });
+  _productReviewMapCache = map;
+  return map;
+}
+
+let _entityMapCache = null;
+export function readEntityMap() {
+  if (_entityMapCache) return _entityMapCache;
+  const rows = readTsSnapshot(
+    [
+      "import { companyEntities } from './src/data/entities/companyEntities.ts';",
+      "import { agentEntities } from './src/data/entities/agentEntities.ts';",
+      "import { frameworkEntities } from './src/data/entities/frameworkEntities.ts';",
+      "import { modelEntities } from './src/data/entities/modelEntities.ts';",
+      "import { mcpEntities } from './src/data/entities/mcpEntities.ts';",
+    ].join("\n"),
+    "[...companyEntities, ...agentEntities, ...frameworkEntities, ...modelEntities, ...mcpEntities].map(({ slug, name, type, competitors, alternatives, overview }) => ({ slug, name, type, competitors, alternatives, overview }))",
+    "entities"
+  );
+  const map = {};
+  (Array.isArray(rows) ? rows : []).forEach((e) => {
+    if (e && e.slug) map[e.slug] = e;
+  });
+  _entityMapCache = map;
+  return map;
+}
+
+let _externalLinksMapCache = null;
+export function readExternalLinksMap() {
+  if (_externalLinksMapCache) return _externalLinksMapCache;
+  const rows = readTsSnapshot(
+    "import { externalLinks } from './src/data/externalLinks.ts';",
+    "externalLinks",
+    "externalLinks"
+  );
+  _externalLinksMapCache = rows && typeof rows === "object" && !Array.isArray(rows) ? rows : {};
+  return _externalLinksMapCache;
+}
+
+// First-party editorial sources that apply to every editorial page.
+function editorialSources() {
+  return [
+    { title: "BestAIAgent.in Review Methodology", url: `${SITE_URL}/methodology` },
+    { title: "BestAIAgent.in Editorial Policy", url: `${SITE_URL}/editorial-policy` },
+  ];
+}
+
+// Build a Sources array from a tool/entity slug's verified official links.
+function sourcesForSlug(slug) {
+  if (!slug) return [];
+  const map = readExternalLinksMap();
+  const links = map[slug];
+  if (!Array.isArray(links)) return [];
+  return links
+    .filter((l) => l && l.url && l.verified !== false)
+    .map((l) => ({ title: l.label || l.url, url: l.url }));
+}
+
+function blogIntentForPillar(pillarSlug) {
+  if (["best-ai-agents", "ai-agent-pricing"].includes(pillarSlug)) return "Commercial investigation";
+  if (["ai-agent-comparisons", "ai-agent-benchmarks"].includes(pillarSlug)) return "Research and comparison";
+  if (["ai-agent-tutorials", "mcp"].includes(pillarSlug)) return "Technical education";
+  return "Informational education";
+}
+
+function blogSchemaTypesFor(pillarSlug, postSlug) {
+  const types = ["Article", "BreadcrumbList", "FAQPage"];
+  if (pillarSlug === "ai-agent-tutorials" || postSlug.startsWith("how-to-")) types.push("HowTo");
+  if (["mcp", "ai-agent-comparisons", "ai-agent-benchmarks"].includes(pillarSlug)) types.push("TechArticle");
+  if (["best-ai-agents", "ai-agent-directories"].includes(pillarSlug)) types.push("ItemList");
+  return [...new Set(types)];
+}
+
+function blogDescription(title, pillarTitle, intent) {
+  return `${title} for Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants. Includes India-first context, INR pricing questions, DPDP Act checks, MCP relevance, and practical next steps.`;
+}
+
+function blogFaqs(title, pillarTitle, intent) {
+  return [
+    {
+      question: `What does this ${title} guide cover?`,
+      answer: `It covers ${title.toLowerCase()} in the context of AI agents, agentic tools, Indian buyer requirements, implementation risk, pricing visibility, and compliance checks.`,
+    },
+    {
+      question: `Who should read ${title}?`,
+      answer: "Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools should read this guide.",
+    },
+    {
+      question: "What India-specific checks are included?",
+      answer: "BestAIAgent.in emphasizes INR pricing, GST invoice availability, DPDP Act 2023 implications, WhatsApp workflows, Hindi or Hinglish support, data handling, and support coverage for Indian teams.",
+    },
+    {
+      question: "How is this blog post connected to the BestAIAgent.in directory?",
+      answer: "Each blog topic links readers toward relevant reviews, comparisons, rankings, MCP pages, methodology notes, and directory pages so readers can move from education to shortlist decisions.",
+    },
+    {
+      question: "How often should this topic be reviewed?",
+      answer: "AI agent pricing, benchmark performance, product capabilities, and compliance expectations change quickly, so high-value blog topics should be reviewed monthly or quarterly.",
+    },
+  ];
+}
+
+export function buildBlogEntries(existingPaths = new Set()) {
+  const snapshot = readBlogRegistrySnapshot();
+  const blogPaths = Array.isArray(snapshot?.blogCanonicalPaths) ? snapshot.blogCanonicalPaths : [];
+  const blogHubs = Array.isArray(snapshot?.blogPillarHubs) ? snapshot.blogPillarHubs : [];
+  const pillarTitles = snapshot?.blogPillarTitles || {};
+  if (!blogPaths.length) return [];
+
+  const postEntries = blogPaths
+    .map((item) => ({ ...item, path: String(item.path || "").trim() }))
+    .filter((item) => item.path.startsWith("/blog/") && !item.path.includes("["))
+    .map((item) => {
+      const canonicalPath = item.path;
+      const routePath = canonicalPath.replace(/\/+$/, "");
+      const parts = routePath.replace(/^\/+/, "").split("/");
+      const pillarSlug = item.pillarSlug || parts[1] || "ai-agent-blog";
+      const clusterSlug = item.clusterSlug || parts[2] || "guides";
+      const postSlug = item.slug || parts[3] || "guide";
+      const pillarTitle = item.pillarTitle || pillarTitles[pillarSlug] || titleCase(pillarSlug);
+      const clusterTitle = item.clusterTitle || titleCase(clusterSlug);
+      const title = item.title || titleCase(postSlug);
+      const intent = item.searchIntent || blogIntentForPillar(pillarSlug);
+      const schemaTypes = blogSchemaTypesFor(pillarSlug, postSlug);
+      const meta = {
+        source: "generated-blog-editorial",
+        category: "blog",
+        categoryLabel: "Blog",
+        slug: postSlug,
+        path: routePath,
+        canonicalPath,
+        aliases: [],
+        title: `${title} | BestAIAgent.in Blog`,
+        description: item.primaryKeyword
+          ? `${title} for ${item.audience || "Indian founders, developers, agencies, SMEs, enterprise buyers, and AI consultants"}. Covers ${item.primaryKeyword}, ${item.corePain || "buyer pain points"}, India-first pricing, DPDP checks, and practical next steps.`
+          : blogDescription(title, pillarTitle, intent),
+        h1: title,
+        entityName: title,
+        words: 8000,
+        lastmod: TODAY,
+        lastReviewed: TODAY,
+        nextReview: "2026-10-15",
+        changefreq: pillarSlug === "ai-agent-pricing" || pillarSlug === "ai-agent-benchmarks" ? "weekly" : "monthly",
+        priority: pillarSlug === "best-ai-agents" || pillarSlug === "mcp" ? "0.78" : "0.72",
+        ogImage: "/assets/brand/og-default.png",
+        ogImageAlt: `${title} blog guide preview image on BestAIAgent.in`,
+        schemaTypes,
+        faqs: blogFaqs(title, pillarTitle, intent),
+        related: [
+          "blog",
+          `blog/${pillarSlug}`,
+          "best-ai-agent",
+          "ai-agent-tools",
+          "mcp-directory",
+          "ai-agent-rankings",
+          "methodology",
+          "ai-agent-scoring-system",
+        ],
+        blog: {
+          kind: "post",
+          id: item.id,
+          pillarSlug,
+          pillarTitle,
+          pillarNumber: item.pillarNumber,
+          clusterSlug,
+          clusterTitle,
+          clusterNumber: item.clusterNumber,
+          intent,
+          signalCategory: item.signalCategory,
+          primaryKeyword: item.primaryKeyword,
+          secondaryKeywords: item.secondaryKeywords,
+          contentFormat: item.contentFormat,
+          audience: item.audience,
+          corePain: item.corePain,
+          uniqueGapRationale: item.uniqueGapRationale,
+          competitionHeuristic: item.competitionHeuristic,
+          opportunityScore: item.opportunityScore,
+          priority: item.priority,
+        },
+        ...trustSignalsFor("blog", "generated-blog-editorial"),
+      };
+      meta.schemas = pageSchema(meta);
+      return meta;
+    })
+    .filter((entry) => entry.path && !existingPaths.has(entry.path));
+
+  const pillarHubEntries = blogHubs
+    .map((hub) => {
+      const canonicalPath = String(hub.path || "").trim();
+      const routePath = canonicalPath.replace(/\/+$/, "");
+      const pillarSlug = hub.pillarSlug || routePath.split("/").filter(Boolean).pop() || "blog";
+      const title = hub.title || `${hub.pillarTitle || titleCase(pillarSlug)} Hub`;
+      const meta = {
+        source: "generated-blog-editorial",
+        category: "blog",
+        categoryLabel: "Blog",
+        slug: pillarSlug,
+        path: routePath,
+        canonicalPath,
+        aliases: [],
+        title: `${title} | BestAIAgent.in Blog`,
+        description: `${hub.pillarTitle || title} hub with ${hub.topicCount || 50} finished AI agent article topics across ${hub.clusterCount || 10} keyword clusters. Includes India-first pricing, DPDP, workflow, Reddit-intent, PAA, trending, rising, and commercial search coverage.`,
+        h1: title,
+        entityName: hub.pillarTitle || title,
+        words: 8000,
+        lastmod: TODAY,
+        lastReviewed: TODAY,
+        nextReview: "2026-10-15",
+        changefreq: "weekly",
+        priority: "0.80",
+        ogImage: "/assets/brand/og-default.png",
+        ogImageAlt: `${title} blog pillar hub preview image on BestAIAgent.in`,
+        schemaTypes: ["WebPage", "CollectionPage", "BreadcrumbList", "ItemList", "FAQPage"],
+        faqs: [
+          { question: `What is the ${hub.pillarTitle || title} pillar?`, answer: `${hub.pillarTitle || title} is a BestAIAgent.in blog pillar with ${hub.clusterCount || 10} clusters and ${hub.topicCount || 50} article topics for India-first AI agent research.` },
+          { question: "How should readers use this hub?", answer: "Start with the cluster that matches your use case, then move into article-level guides, reviews, pricing pages, comparisons, and methodology notes before making a buying decision." },
+          { question: "What makes this pillar India-first?", answer: "The topics include INR pricing, GST invoice questions, DPDP Act risk, support coverage, implementation readiness, and local workflow fit for Indian teams." },
+        ],
+        related: [
+          "blog",
+          ...postEntries.filter((entry) => entry.blog?.pillarSlug === pillarSlug).slice(0, 12).map((entry) => entry.path.replace(/^\//, "")),
+        ],
+        blog: {
+          kind: "pillar",
+          pillarSlug,
+          pillarTitle: hub.pillarTitle || title,
+          pillarNumber: hub.pillarNumber,
+          primaryKeyword: hub.primaryKeyword,
+          topicCount: hub.topicCount,
+          clusterCount: hub.clusterCount,
+          clusters: hub.clusters || [],
+        },
+        ...trustSignalsFor("blog", "generated-blog-editorial"),
+      };
+      meta.schemas = pageSchema(meta);
+      return meta;
+    })
+    .filter((entry) => entry.path && !existingPaths.has(entry.path));
+
+  const pillarCounts = postEntries.reduce((acc, entry) => {
+    const pillarSlug = entry.blog?.pillarSlug || "blog";
+    acc[pillarSlug] = (acc[pillarSlug] || 0) + 1;
+    return acc;
+  }, {});
+
+  const hubMeta = {
+    source: "generated-blog-editorial",
+    category: "blog",
+    categoryLabel: "Blog",
+    slug: "blog",
+    path: "/blog",
+    canonicalPath: "/blog/",
+    aliases: [],
+    title: "BestAIAgent.in Blog: AI Agent Guides, Comparisons, Pricing, MCP and India Insights",
+    description: "Read India-first AI agent guides, comparisons, pricing explainers, MCP tutorials, benchmarks, directories, use cases, and trend analysis for founders, developers, SMEs, enterprise buyers, and AI consultants.",
+    h1: "BestAIAgent.in Blog",
+    entityName: "BestAIAgent.in Blog",
+    words: 3200,
+    lastmod: TODAY,
+    lastReviewed: TODAY,
+    nextReview: "2026-10-15",
+    changefreq: "daily",
+    priority: "0.86",
+    ogImage: "/assets/brand/og-default.png",
+    ogImageAlt: "BestAIAgent.in blog hub preview image",
+    schemaTypes: ["WebPage", "CollectionPage", "BreadcrumbList", "ItemList", "FAQPage"],
+    faqs: [
+      { question: "What is the BestAIAgent.in Blog?", answer: "The BestAIAgent.in Blog is an India-first AI agent resource hub covering fundamentals, reviews, comparisons, pricing, benchmarks, tutorials, MCP, directories, use cases, and AI agent trends." },
+      { question: "Who is the blog written for?", answer: "It is written for Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants evaluating AI agents or agentic tools." },
+      { question: "How many blog topics are finished?", answer: `The current editorial map contains ${postEntries.length} finished canonical blog posts across ${Object.keys(pillarCounts).length} pillars and 100 clusters.` },
+      { question: "What makes the blog India-first?", answer: "Posts emphasize INR pricing, GST invoice questions, DPDP Act implications, WhatsApp workflows, Hindi or Hinglish support, Indian SME fit, and practical procurement checks." },
+    ],
+    related: [
+      ...pillarHubEntries.map((entry) => entry.path.replace(/^\//, "")),
+      ...postEntries.slice(0, 20).map((entry) => entry.path.replace(/^\//, "")),
+    ],
+    blog: {
+      totalPosts: postEntries.length,
+      pillarCounts,
+      pillarTitles,
+    },
+    ...trustSignalsFor("blog", "generated-blog-registry"),
+  };
+  hubMeta.schemas = pageSchema(hubMeta);
+
+  return [hubMeta, ...pillarHubEntries, ...postEntries];
+}
+
 export function buildComparisonEntries(existingPaths = new Set()) {
   return readComparisonPagesSnapshot()
     .filter((page) => page?.slug && !existingPaths.has(`/${page.slug}`))
@@ -989,6 +1498,10 @@ export function buildComparisonEntries(existingPaths = new Set()) {
         taglineB: page.toolB?.tagline,
         title: page.metaTitle || `${page.title} | BestAIAgent.in`,
         description: page.metaDescription || page.directAnswer,
+        directAnswer: page.directAnswer,
+        verdict: page.verdict,
+        comparisonFields: Array.isArray(page.fields) ? page.fields : [],
+        publishedAt: page.publishedAt,
         h1: page.h1 || page.title,
         entityName: page.h1 || page.title,
         words: 2500,
@@ -1006,6 +1519,11 @@ export function buildComparisonEntries(existingPaths = new Set()) {
         related: page.relatedSlugs || [],
         ...trustSignalsFor("comparisons", "generated-comparison-data"),
       };
+      meta.sources = [
+        ...sourcesForSlug(page.toolA?.slug),
+        ...sourcesForSlug(page.toolB?.slug),
+        ...editorialSources(),
+      ];
       meta.schemas = pageSchema(meta);
       return meta;
     });
@@ -1026,6 +1544,7 @@ export function buildSiloPageEntries(existingPaths = new Set()) {
         aliases: [],
         title: safeTitle.includes("BestAIAgent.in") ? safeTitle : `${safeTitle} | BestAIAgent.in`,
         description: page.metaDescription || page.directAnswer || `${safeTitle} with India-focused AI agent analysis, pricing, compliance, comparisons, and implementation guidance.`,
+        directAnswer: page.directAnswer,
         h1: page.h1 || page.title || safeTitle,
         entityName: (page.h1 || page.title).replace(/\s*[–-]\s*.*$/, "").trim(),
         words: 2500,
@@ -1042,6 +1561,7 @@ export function buildSiloPageEntries(existingPaths = new Set()) {
         related: page.relatedPagesSlugs || [],
         ...trustSignalsFor(category, "generated-app-silo"),
       };
+      meta.sources = editorialSources();
       meta.schemas = pageSchema(meta);
       return meta;
     });
@@ -1083,6 +1603,12 @@ export function buildTopicalEntries(existingPaths = new Set()) {
         related: page.related || [],
         ...trustSignalsFor(page.clusterId || "topical-authority", "generated-topical-authority"),
       };
+      if (page.pageType === "entity" || page.slug.endsWith("-entity")) {
+        const entitySlug = page.slug.replace(/-entity$/, "");
+        const entity = readEntityMap()[entitySlug];
+        if (entity) meta.entity = entity;
+        meta.sources = [...sourcesForSlug(entitySlug), ...editorialSources()];
+      }
       meta.schemas = pageSchema(meta);
       return meta;
     });
@@ -1091,10 +1617,18 @@ export function buildTopicalEntries(existingPaths = new Set()) {
 export function buildEditorialEntries() {
   const editorial = EDITORIAL_ROUTES.map((route) => {
     const canonicalPath = route.canonicalPath || route.path;
+    const routeClass =
+      canonicalPath === "/mcp-directory"
+        ? { category: "mcp-servers", categoryLabel: "MCP Servers", trustCategory: "mcp-servers", priority: "0.88" }
+        : ["/ai-agent-market-map", "/ai-agent-benchmark"].includes(canonicalPath)
+          ? { category: "reports", categoryLabel: "Reports", trustCategory: "reports", priority: "0.86" }
+          : ["/ai-agent-rankings", "/ai-agent-awards"].includes(canonicalPath)
+            ? { category: "ai-agent-core", categoryLabel: "AI Agent Core", trustCategory: "ai-agent-core", priority: "0.84" }
+            : { category: "editorial", categoryLabel: "Editorial", trustCategory: "editorial", priority: "0.75" };
     const meta = {
       source: "generated-editorial",
-      category: "editorial",
-      categoryLabel: "Editorial",
+      category: routeClass.category,
+      categoryLabel: routeClass.categoryLabel,
       slug: canonicalPath.slice(1),
       path: canonicalPath,
       aliases: canonicalPath === route.path ? [] : [route.path],
@@ -1105,13 +1639,13 @@ export function buildEditorialEntries() {
       words: 2500,
       lastmod: TODAY,
       changefreq: "monthly",
-      priority: "0.75",
+      priority: routeClass.priority,
       ogImage: "/assets/brand/og-default.png",
       ogImageAlt: `${route.title} preview image on BestAIAgent.in`,
       schemaTypes: ["WebPage", "BreadcrumbList", "Article"],
       faqs: [],
       related: ["methodology", "editorial-policy", "ai-agent-scoring-system"],
-      ...trustSignalsFor("editorial", "generated-editorial"),
+      ...trustSignalsFor(routeClass.trustCategory, "generated-editorial"),
     };
     meta.schemas = pageSchema(meta);
     return meta;
@@ -1163,12 +1697,14 @@ meta.schemas = [
 export function buildRouteMeta() {
   const baseEntries = [...buildContentEntries(), ...buildHubEntries(), ...buildEditorialEntries()];
   const existingPaths = new Set(baseEntries.flatMap((entry) => [entry.path, ...(entry.aliases || [])]));
+  const blogEntries = buildBlogEntries(existingPaths);
+  blogEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
   const comparisonEntries = buildComparisonEntries(existingPaths);
   comparisonEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
   const topicalEntries = buildTopicalEntries(existingPaths);
   topicalEntries.forEach((entry) => [entry.path, ...(entry.aliases || [])].forEach((pathName) => existingPaths.add(pathName)));
   const appSiloEntries = buildSiloPageEntries(existingPaths);
-  const entries = [...baseEntries, ...comparisonEntries, ...topicalEntries, ...appSiloEntries];
+  const entries = [...baseEntries, ...blogEntries, ...comparisonEntries, ...topicalEntries, ...appSiloEntries];
 const routeMap = {};
    for (const rawEntry of entries) {
     const entry = { ...rawEntry, words: Math.max(Number(rawEntry.words || 0), 8000) };
@@ -1207,9 +1743,27 @@ const routeMap = {};
         "@id": `${SITE_URL}/#organization`,
         name: "BestAIAgent.in",
         url: SITE_URL,
+        alternateName: "Best AI Agent India",
         description: "India-focused AI agent reviews, comparisons, pricing guides, tutorials, and glossary definitions.",
         logo: `${SITE_URL}/assets/brand/logo.png`,
+        image: `${SITE_URL}/assets/brand/og-default.png`,
         areaServed: { "@type": "Country", name: "India" },
+        foundingLocation: { "@type": "Country", name: "India" },
+        sameAs: [
+          "https://twitter.com/bestaiagentin",
+          "https://x.com/bestaiagentin",
+          "https://www.linkedin.com/company/bestaiagent-in",
+          "https://github.com/CodesbyFebin/best-ai-agent",
+        ],
+        knowsAbout: [
+          { "@type": "Thing", name: "AI Agents" },
+          { "@type": "Thing", name: "Model Context Protocol" },
+          { "@type": "Thing", name: "Agentic AI" },
+          { "@type": "Thing", name: "AI Coding Agents" },
+          { "@type": "Thing", name: "AI Voice Agents" },
+          { "@type": "Thing", name: "AI Agent Builders" },
+          { "@type": "Thing", name: "AI Automation" },
+        ],
       },
       {
         "@context": "https://schema.org",
@@ -1324,7 +1878,37 @@ const routeMap = {};
     ['/mcp/marketplace', '/mcp-marketplace'],
     ['/vector-dbs/pinecone', '/pinecone'],
     ['/benchmarks', '/ai-agent-benchmarks-2026'],
+    // Preserve indexed short/canonical URLs (Google Search Console indexed set)
+    ['/entity-pages', '/entity'],
+    ['/tools/claude-code', '/claude-code'],
+    ['/tools/windsurf', '/windsurf'],
+    ['/notion-server', '/mcp-servers'],
+    ['/pricing-intelligence', '/pricing-hub'],
+    ['/business', '/business-ai-agents'],
+    ['/excel-server', '/mcp-servers'],
+    ['/mcp/servers/shopify-server', '/mcp-servers'],
+    ['/shopify-server', '/mcp-servers'],
+    ['/reviews', '/best-ai-agent'],
+    ['/glossary', '/glossary-hub'],
+    ['/alternatives', '/alternatives-hub'],
+    ['/review-policy', '/editorial-policy'],
+    ['/pdf-server', '/mcp-servers'],
+    ['/tools/github-copilot', '/github-copilot'],
+    ['/downloads/methodology-42point.pdf', '/methodology'],
+    // Resolve common markdown internal-link references (keeps validate:links clean)
+    ['/ai-agent-frameworks-hub', '/best-ai-agent-frameworks'],
+    ['/reviews/langgraph', '/tools/langgraph'],
+    ['/reviews/crewai', '/tools/crewai'],
+    ['/reviews/autogen', '/tools/autogen'],
+    ['/rankings', '/ai-agent-rankings'],
+    ['/glossary/what-is-agentic-ai', '/what-is-agentic-ai'],
+    ['/glossary/what-is-multi-agent-system', '/what-is-multi-agent-system'],
+    ['/mcp', '/mcp-hub'],
+    ['/mcp/best-mcp-servers', '/best-mcp-servers'],
+    ['/mcp/mcp-vs-api', '/mcp-vs-api'],
   ].forEach(([alias, target]) => addLegacyRedirect(alias, target));
+
+  applySearchConsoleSignals(routeMap);
 
   return routeMap;
 }

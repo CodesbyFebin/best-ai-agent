@@ -1,5 +1,5 @@
 # BestAIAgent.in — Complete LLM Context (Extended)
-Updated: 2026-07-03
+Updated: 2026-07-15
 Site: https://bestaiagent.in
 
 ## Machine-Readable File References
@@ -29,11 +29,6 @@ Path: //ai-agents
 Category: ai-agent-core
 Description: Complete AI agents landing page covering definitions, categories, use cases, pricing, directories, builders, autonomous agents, and India-specific buying guidance.
 
-### Best AI Agent for Coding in India 2026 | BestAIAgent.in
-Path: //best-ai-agent-for-coding
-Category: coding-agents
-Description: Compare the best AI coding agents for Indian developers: Cursor AI, GitHub Copilot, Claude Code, Windsurf, and more.
-
 ### AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses
 Path: //ai-agent-examples
 Category: core
@@ -53,11 +48,6 @@ Description: Explore the top AI agent trends in 2026. From multi-agent systems t
 Path: //ai-agent-use-cases
 Category: core
 Description: Explore AI agent use cases for Indian businesses in 2026. From customer support to coding, discover how AI agents transform industries.
-
-### Best AI Agent 2026 – Top AI Agents for Indian Developers & Businesses
-Path: //best-ai-agent
-Category: core
-Description: Compare the best AI agents in 2026 for Indian developers and businesses. Comprehensive guide covering coding, business, voice, automation agents with India-specific pricing, compliance, and recommendations.
 
 ### Best AI Agents 2026 – India's Independent Authority Guide
 Path: //best-ai-agents
@@ -79,10 +69,10 @@ Path: //business-ai-agents
 Category: business-ai-agents
 Description: Compare business AI agents for Indian startups, SMEs, agencies, and enterprises across sales, support, CRM, WhatsApp, finance, marketing, and workflow automation.
 
-### Best AI Agent 2026 – Top AI Agents for Indian Developers & Businesses
-Path: //tools
-Category: core
-Description: Compare the best AI agents in 2026 for Indian developers and businesses. Comprehensive guide covering coding, business, voice, automation agents with India-specific pricing, compliance, and recommendations.
+### Business AI Agents: Best Tools for Automation, Support & Sales | BestAIAgent.in
+Path: //business
+Category: business-ai-agents
+Description: Compare business AI agents for Indian startups, SMEs, agencies, and enterprises across sales, support, CRM, WhatsApp, finance, marketing, and workflow automation.
 
 ### Autonomous AI Agents: Definition, Tools, Use Cases & Risks | BestAIAgent.in
 Path: //autonomous-ai-agents
@@ -103,6 +93,26 @@ Description: Comprehensive guide to AI agents for business automation, CRM, sale
 Path: //whatsapp-ai-agent-india
 Category: industry-ai-agents
 Description: Build and deploy AI agents on WhatsApp for Indian businesses: Yellow.ai, Wati, Intercom, Haptik, Gupshup, WhatsApp Business API setup, template approval, and real Indian deployment case studies.
+
+### Cursor Pricing 2026 Plans, Costs & India-Specific Pricing Breakdown
+Path: //cursor-pricing
+Category: pricing
+Description: Cursor AI pricing explained: Free vs Pro vs Business plans, costs in INR, student discounts, team pricing, and whether Cursor is worth it for Indian developers.
+
+### GitHub Copilot Pricing 2026 – Plans, Costs in INR & India Payment Guide
+Path: //github-copilot-pricing
+Category: pricing
+Description: GitHub Copilot pricing explained: Free tier (2000 completions), Individual vs Business vs Enterprise plans, costs in INR, student discounts, and whether Copilot is worth it compared to Cursor.
+
+### CrewAI Review 2026: Features, Pricing, Use Cases & Alternatives | BestAIAgent.in
+Path: //tools/crewai
+Category: reviews
+Description: In-depth CrewAI review for 2026: features, pricing, India suitability, and comparison with LangGraph, AutoGen, and OpenAI Agents SDK. Find out if CrewAI is the best multi-agent framework for Indian developers.
+
+### Flowise Review 2026 – Best Open-Source AI Agent Builder for India
+Path: //tools/flowise
+Category: reviews
+Description: In-depth Flowise review for 2026: features, pricing, India suitability, security, and comparison with Dify, n8n, and LangFlow. Find out if Flowise is the best no-code AI agent builder for Indian startups and agencies.
 
 ### Business AI Agents Hub | BestAIAgent.in
 Path: //business-ai-hub
@@ -149,15 +159,60 @@ Path: //alternatives-hub
 Category: hubs
 Description: Alternative shortlists for Cursor, GitHub Copilot, Vapi, Retell, n8n, Flowise, Dify, Intercom, and other AI agent tools.
 
+### Best AI Agent – 2026 Guide for Indian Enterprises | BestAIAgent.in
+Path: //best-ai-agent
+Category: pillars
+Description: Best AI Agent – 2026 Guide for Indian Enterprises with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### Best Free AI Agents – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //best-free-ai-agents
+Category: pillars
+Description: Best Free AI Agents – 2026 Guide for Indian Developers with India-focused free AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
+
+### Agentic AI vs AI Agents: What's the Difference? (2026) | BestAIAgent.in
+Path: //agentic-ai-vs-ai-agents
+Category: pillars
+Description: Agentic AI vs AI agents in 2026: definitions, relationship, and why the distinction matters for Indian enterprises building autonomous systems.
+
+### AI Agent Cost Optimization: 7 Ways to Save (2026) | BestAIAgent.in
+Path: //ai-agent-cost-optimization
+Category: pillars
+Description: AI agent cost optimization in 2026: 7 practical ways Indian teams cut spend on tokens, calls, and seats without hurting quality, plus monitoring and ROI tips.
+
+### AI Agent Frameworks – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //ai-agent-frameworks
+Category: pillars
+Description: AI Agent Frameworks – 2026 Guide for Indian Developers with India-focused AI agent framework analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
+
+### AI Agent Pricing Models Explained (2026) | BestAIAgent.in
+Path: //ai-agent-pricing-models
+Category: pillars
+Description: AI agent pricing models in 2026: subscription, usage-based, seat-based, outcome-based, and hybrid plans explained with India INR context, GST notes, and buyer guidance.
+
+### AI Agents in India – 2026 Guide for Indian Enterprises | BestAIAgent.in
+Path: //aio-agents-india
+Category: pillars
+Description: AI Agents in India – 2026 Guide for Indian Enterprises with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### AI Agents vs Chatbots: What's the Difference? (2026) | BestAIAgent.in
+Path: //ai-agents-vs-chatbots
+Category: pillars
+Description: AI agents vs chatbots in 2026: clear differences, decision matrix, and when Indian businesses should use each for support, automation, and workflows.
+
+### AI Copilots vs AI Agents: Which Do You Need? (2026) | BestAIAgent.in
+Path: //ai-copilots-vs-ai-agents
+Category: pillars
+Description: AI copilots vs AI agents in 2026: differences, overlap, and how Indian teams should choose between assistive copilots and autonomous agents.
+
 ### Best AI Agent Automation Platform 2026 – Top Platforms for Indian Businesses
 Path: //best-ai-agent-automation-platform
 Category: pillars
 Description: Compare the best AI agent automation platforms in 2026, including Yellow.ai, Zapier AI, Make.com, and n8n. Find the right automation platform for Indian businesses.
 
-### Best AI Agent Builder 2026 – Top No-Code AI Agent Platforms for Indian Developers
+### Best AI Agent Builder – 2026 Guide for Indian Enterprises | BestAIAgent.in
 Path: //best-ai-agent-builder
 Category: pillars
-Description: Compare the best AI agent builders in 2026, including Flowise, Dify, LangGraph, CrewAI, and n8n. Find the right no-code platform to build AI agents for Indian startups, agencies, and enterprises.
+Description: Best AI Agent Builder – 2026 Guide for Indian Enterprises with India-focused AI agent builder analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
 
 ### Best AI Agent Development Platform 2026 – Top Platforms for Indian Developers
 Path: //best-ai-agent-development-platform
@@ -188,6 +243,11 @@ Description: Compare the best AI agents for banking in 2026. Find the right AI s
 Path: //best-ai-agent-for-business
 Category: pillars
 Description: Best AI Agent for Business – 2026 Guide for Indian Enterprises with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### Best AI Agent for Coding – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //best-ai-agent-for-coding
+Category: pillars
+Description: Best AI Agent for Coding – 2026 Guide for Indian Developers with India-focused AI coding agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
 
 ### Best AI Agent for Consultants 2026 – Top AI Tools for Indian Consulting Firms
 Path: //best-ai-agent-for-consultants
@@ -354,10 +414,15 @@ Path: //best-ai-phone-agent
 Category: pillars
 Description: Compare the best AI phone agents in 2026, including Vapi, Retell AI, Bland AI, and Exotel. Find the right AI phone solution for Indian businesses.
 
-### Best AI Voice Agent 2026 – Top Voice AI Platforms for Indian Businesses
+### Best AI Voice Agent – 2026 Guide for Indian Enterprises | BestAIAgent.in
 Path: //best-ai-voice-agent
 Category: pillars
-Description: Compare the best AI voice agents in 2026, including Vapi, Retell AI, Bland AI, and Yellow.ai. Find the right voice AI platform for Indian customer support, sales, and IVR.
+Description: Best AI Voice Agent – 2026 Guide for Indian Enterprises with India-focused AI voice agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### Best Multi-Agent Frameworks 2026: 7 Ranked | BestAIAgent.in
+Path: //best-multi-agent-frameworks-2026
+Category: pillars
+Description: Best multi-agent frameworks 2026: 7 ranked options for Indian developers with India fit, pricing, self-hosting, and production readiness compared.
 
 ### Best No-Code AI Agent Builder 2026 – Top No-Code Platforms for Indian Businesses
 Path: //best-no-code-ai-agent-builder
@@ -368,6 +433,56 @@ Description: Compare the top no-code AI agent builders for 2026, including Dify,
 Path: //best-open-source-ai-agents
 Category: pillars
 Description: Compare the best open-source AI agents in 2026, including CrewAI, AutoGen, LangGraph, and Open Interpreter. Find the best free AI agent framework for Indian developers.
+
+### FastMCP Tutorial: Build an MCP Server in Python (2026) | BestAIAgent.in
+Path: //fastmcp-tutorial
+Category: pillars
+Description: FastMCP tutorial 2026: build a Model Context Protocol server in Python step by step, with tools, resources, and India deployment notes.
+
+### How Much Do AI Agents Cost? Complete Breakdown (2026) | BestAIAgent.in
+Path: //how-much-do-ai-agents-cost
+Category: pillars
+Description: How much AI agents cost in 2026: real INR price ranges for coding, voice, business, and no-code agents, with hidden costs, GST notes, and ROI guidance for Indian teams.
+
+### LangChain vs LangGraph: When to Use Each (2026) | BestAIAgent.in
+Path: //langchain-vs-langgraph
+Category: pillars
+Description: LangChain vs LangGraph in 2026: when to use each for Indian developer teams, with architecture differences, use cases, and India deployment notes.
+
+### LangGraph vs CrewAI vs AutoGen: Which Framework Wins? (2026) | BestAIAgent.in
+Path: //langgraph-vs-crewai-vs-autogen
+Category: pillars
+Description: LangGraph vs CrewAI vs AutoGen in 2026: detailed comparison of architecture, India fit, pricing, and use cases to help Indian developers choose the right multi-agent framework.
+
+### MCP & Agent Protocols – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //mcp-agent-protocols
+Category: pillars
+Description: MCP & Agent Protocols – 2026 Guide for Indian Developers with India-focused MCP protocol analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
+
+### MCP Architecture: Clients, Servers, and Tools (2026) | BestAIAgent.in
+Path: //mcp-architecture
+Category: pillars
+Description: MCP architecture in 2026: how Model Context Protocol clients, servers, tools, resources, and transports fit together, with a diagram-style explanation for Indian teams.
+
+### MCP vs A2A: Which Protocol Is Right for You? (2026) | BestAIAgent.in
+Path: //mcp-vs-a2a
+Category: pillars
+Description: MCP vs A2A in 2026: how Model Context Protocol and Agent-to-Agent protocol differ, with guidance for Indian teams building agent integrations.
+
+### Best AI Agent Framework – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //best-ai-agent-framework
+Category: pillars
+Description: Best AI Agent Framework – 2026 Guide for Indian Developers with India-focused AI agent framework analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
+
+### AI Agent Frameworks – 2026 Guide for Indian Developers | BestAIAgent.in
+Path: //aio-agent-frameworks
+Category: pillars
+Description: AI Agent Frameworks – 2026 Guide for Indian Developers with India-focused AI agent framework analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian developers, startups, agencies, and enterprises.
+
+### What Are AI Agents? – Complete Guide for Beginners | BestAIAgent.in
+Path: //what-are-ai-agents
+Category: pillars
+Description: What Are AI Agents? – Complete Guide for Beginners with AI agent definition, types, examples, how they work, differences from chatbots and assistants, memory and tool use, planning and reasoning capabilities, use cases, future outlook, and India-specific considerations for businesses and developers.
 
 ### AI Agent Pricing Hub | BestAIAgent.in
 Path: //pricing-hub
@@ -478,4 +593,34 @@ Description: Best AI agents for India: INR pricing, GST invoice notes, DPDP comp
 Path: //pricing
 Category: hubs
 Description: INR pricing, GST invoice notes, free-vs-paid comparisons, ROI models, and procurement guidance for AI agent tools in India.
+
+### Best AI Agent – 2026 Guide for Indian Enterprises | BestAIAgent.in
+Path: //tools
+Category: pillars
+Description: Best AI Agent – 2026 Guide for Indian Enterprises with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### AI Agent Pricing Hub | BestAIAgent.in
+Path: //pricing-intelligence
+Category: hubs
+Description: INR pricing, GST invoice notes, free-vs-paid comparisons, ROI models, and procurement guidance for AI agent tools in India.
+
+### Best AI Agent – 2026 Guide for Indian Enterprises | BestAIAgent.in
+Path: //reviews
+Category: pillars
+Description: Best AI Agent – 2026 Guide for Indian Enterprises with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.
+
+### AI Agent Glossary Hub | BestAIAgent.in
+Path: //glossary
+Category: hubs
+Description: Plain-English definitions for RAG, MCP, tool use, function calling, context windows, multi-agent systems, AgentOps, and AI benchmarks.
+
+### AI Agent Alternatives Hub | BestAIAgent.in
+Path: //alternatives
+Category: hubs
+Description: Alternative shortlists for Cursor, GitHub Copilot, Vapi, Retell, n8n, Flowise, Dify, Intercom, and other AI agent tools.
+
+### MCP Hub | BestAIAgent.in
+Path: //mcp
+Category: hubs
+Description: Model Context Protocol explainers, MCP server directories, security guidance, API comparisons, and implementation tutorials.
 

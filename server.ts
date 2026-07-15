@@ -102,6 +102,10 @@ function homePageSchemas() {
         name: 'India',
       },
       inLanguage: 'en-IN',
+      sameAs: [
+        'https://twitter.com/bestaiagentin',
+        'https://github.com/CodesbyFebin/best-ai-agent',
+      ],
     },
     {
       '@context': 'https://schema.org',
@@ -257,7 +261,7 @@ routeMeta['/'] = routeMeta['/'] || defaultHomeMeta;
 
 const redirectRoutes = new Map(
   Object.entries(routeMeta)
-    .filter(([, meta]) => meta.canonicalPath && meta.canonicalPath !== meta.path)
+    .filter(([, meta]) => meta.canonicalPath && normalizePath(meta.canonicalPath) !== normalizePath(meta.path))
     .map(([pathName, meta]) => [pathName, meta.canonicalPath || meta.path]),
 );
 
@@ -352,6 +356,20 @@ function getRouteMetaForRequest(req: express.Request): RouteMeta | null {
 
 function schemaScript(meta: RouteMeta) {
   const schemas = meta.schemas && meta.schemas.length ? meta.schemas : fallbackMeta(meta.path).schemas || [];
+  
+  // AEO Voice Optimization (SpeakableSpecification for India/Hinglish)
+  schemas.forEach((schema: any) => {
+    if (schema && (schema['@type'] === 'WebPage' || schema['@type'] === 'Article' || schema['@type'] === 'FAQPage')) {
+      schema.speakable = {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['h1', '.direct-answer', '.faq-answer']
+      };
+      if (!schema.inLanguage) {
+        schema.inLanguage = ['en-IN', 'hi-IN'];
+      }
+    }
+  });
+
   return schemas
     .map((schema) => `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`)
     .join('\n  ');
@@ -654,6 +672,27 @@ function findClientIndexHtml(distPath: string) {
   return candidates.find((candidate) => fs.existsSync(candidate));
 }
 
+function findStaticHtmlFile(reqPath: string): string | null {
+  const clean = normalizePath(reqPath);
+  const segments = clean === '/' ? '' : clean.replace(/^\/+|\/+$/g, '');
+  const candidates = [
+    path.resolve(process.cwd(), 'dist', 'static-site', segments, 'index.html'),
+    path.resolve(process.cwd(), 'dist', 'static-site', segments),
+    path.resolve(process.cwd(), 'dist', 'static-site', `${segments}.html`),
+  ];
+  return candidates.find((candidate) => fs.existsSync(candidate) && fs.statSync(candidate).isFile()) || null;
+}
+
+function sendStaticHtmlSnapshot(req: express.Request, res: express.Response, staticFile: string) {
+  const html = fs.readFileSync(staticFile, 'utf8');
+  const withAssets = isProd ? ensureProductionAssetShell(html) : html;
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  if (isPreviewHost(req.headers.host)) {
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow, noarchive');
+  }
+  return res.send(withAssets);
+}
+
 function simulatedRecommendation(prompt: string) {
   const lower = prompt.toLowerCase();
   if (lower.includes('code') || lower.includes('developer') || lower.includes('frontend') || lower.includes('backend')) {
@@ -669,6 +708,9 @@ async function createApp() {
   const app = express();
   app.use(express.json({ limit: '2mb' }));
   app.use((req, res, next) => {
+    if (isProd && req.headers['x-forwarded-proto'] && req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(308, `https://${req.headers.host}${req.originalUrl}`);
+    }
     if (isWwwProductionHost(req.headers.host)) {
       const pathName = normalizePath(req.path);
       const query = req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '';
@@ -752,6 +794,14 @@ async function createApp() {
     }
   }
 
+  app.post('/api/vector-search', rateLimit, (req, res) => {
+    safeWriteHandler(req, res, (body) => {
+      // Placeholder for vector search implementation
+      // TODO: Integrate vector DB (Pinecone/Weaviate/pgvector) for GEO
+      return { ok: true };
+    });
+  });
+
   app.get('/', (req, res, next) => {
     const view = typeof req.query.view === 'string' ? req.query.view : '';
     const article = typeof req.query.article === 'string' ? req.query.article : '';
@@ -790,6 +840,14 @@ async function createApp() {
     '/author-sitemap.xml',
     '/hub-sitemap.xml',
     '/calculators-sitemap.xml',
+    '/entity-sitemap.xml',
+    '/longtail-sitemap.xml',
+    '/industry-sitemap.xml',
+    '/reddit-sitemap.xml',
+    '/research-sitemap.xml',
+    '/coding-sitemap.xml',
+    '/free-sitemap.xml',
+    '/blog-sitemap.xml',
     '/image-sitemap.xml',
     '/feed.xml',
     '/llms.txt',
@@ -908,6 +966,15 @@ async function createApp() {
 
   if (!isProd) {
     app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
+    app.use(express.static(path.resolve(process.cwd(), 'dist', 'static-site'), { index: false, redirect: false }));
+    const staticSitePath = path.resolve(process.cwd(), 'dist', 'static-site');
+    app.use((req, res, next) => {
+      const staticFile = findStaticHtmlFile(req.path);
+      if (staticFile) {
+        return sendStaticHtmlSnapshot(req, res, staticFile);
+      }
+      return next();
+    });
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({ server: { middlewareMode: true }, appType: 'custom' });
     app.use(vite.middlewares);
@@ -933,10 +1000,21 @@ async function createApp() {
   } else {
     const distPath = path.resolve(process.cwd(), 'dist', 'client');
     app.use(express.static(path.resolve(process.cwd(), 'public'), { index: false }));
+    app.use((req, res, next) => {
+      const staticFile = findStaticHtmlFile(req.path);
+      if (staticFile) {
+        return sendStaticHtmlSnapshot(req, res, staticFile);
+      }
+      return next();
+    });
     app.use(express.static(distPath, { index: false }));
     app.get('*', async (req, res, next) => {
       const pathName = normalizePath(req.path);
       if (noindexPaths.has(pathName)) return res.status(404).send('Not found');
+      const staticFile = findStaticHtmlFile(req.path);
+      if (staticFile) {
+        return sendStaticHtmlSnapshot(req, res, staticFile);
+      }
       const htmlPath = findClientIndexHtml(distPath);
       if (!htmlPath) return res.status(404).send('Not found');
       try {

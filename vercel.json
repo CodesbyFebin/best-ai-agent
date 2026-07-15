@@ -35,6 +35,14 @@
           "public/author-sitemap.xml",
           "public/hub-sitemap.xml",
           "public/calculators-sitemap.xml",
+          "public/entity-sitemap.xml",
+          "public/longtail-sitemap.xml",
+          "public/industry-sitemap.xml",
+          "public/reddit-sitemap.xml",
+          "public/research-sitemap.xml",
+          "public/coding-sitemap.xml",
+          "public/free-sitemap.xml",
+          "public/blog-sitemap.xml",
           "public/image-sitemap.xml",
           "public/feed.xml",
           "public/client-assets.json",
@@ -52,15 +60,11 @@
           "public/7f4f2d728f93411eb9a03bestaiagentin.txt"
         ]
       }
-    },
-    {
-      "src": "public/assets/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.ts" },
-    { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
+    { "src": "/assets/(.*)", "dest": "server.ts" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "server.ts" }
   ]

@@ -1,5 +1,5 @@
 # Legal Pages Report
-Generated: 2026-07-02
+Generated: 2026-07-15
 
 ## DPDP / GDPR Compliance
 | Page | DPDP Reference | GDPR Equivalent | Status |

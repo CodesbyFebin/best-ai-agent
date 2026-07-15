@@ -1,5 +1,5 @@
 # BestAIAgent.in robots.txt
-# Updated: 2026-07-03
+# Updated: 2026-07-15
 
 User-agent: *
 Allow: /
@@ -41,6 +41,14 @@ Sitemap: https://bestaiagent.in/author-sitemap.xml
 Sitemap: https://bestaiagent.in/hub-sitemap.xml
 Sitemap: https://bestaiagent.in/calculators-sitemap.xml
 Sitemap: https://bestaiagent.in/image-sitemap.xml
+Sitemap: https://bestaiagent.in/entity-sitemap.xml
+Sitemap: https://bestaiagent.in/longtail-sitemap.xml
+Sitemap: https://bestaiagent.in/industry-sitemap.xml
+Sitemap: https://bestaiagent.in/reddit-sitemap.xml
+Sitemap: https://bestaiagent.in/research-sitemap.xml
+Sitemap: https://bestaiagent.in/coding-sitemap.xml
+Sitemap: https://bestaiagent.in/free-sitemap.xml
+Sitemap: https://bestaiagent.in/blog-sitemap.xml
 
 # NOTE: feed.xml and llms.txt are NOT XML sitemaps — listed for completeness
 # feed.xml: https://bestaiagent.in/feed.xml (RSS feed)

@@ -63,6 +63,7 @@ const IndiaMcpCustomizer = lazy(() => import('./components/IndiaMcpCustomizer'))
 const IndiaGeneralPillarCustomizer = lazy(() => import('./components/IndiaGeneralPillarCustomizer'));
 const GoogleDriveDashboard = lazy(() => import('./components/GoogleDriveDashboard'));
 const TopicalAuthorityMap = lazy(() => import('./components/TopicalAuthorityMap'));
+const BlogExperience = lazy(() => import('./components/BlogExperience'));
 
 const directorySlugOverrides: Record<string, string> = {
   ChatGPT: 'chatgpt',
@@ -87,6 +88,21 @@ const getDirectoryToolSlug = (name: string) =>
 
 const getResourceTypesForSlug = (slug: string) =>
   ['official', 'docs', 'github', 'pricing'].filter((type) => getExternalLinks(slug).some((link) => link.type === type)) as ExternalLinkType[];
+
+const getBlogPostTitleForPath = (pathName: string) => {
+  const cleanPath = (pathName || '/blog').replace(/\/+$/, '') || '/blog';
+  const parts = cleanPath.replace(/^\/+/, '').split('/').filter(Boolean);
+  const postSlug = parts[3] || parts[1] || 'guide';
+  return postSlug
+    .split(/[-/\s]+/)
+    .filter(Boolean)
+    .map((part) => {
+      const lower = part.toLowerCase();
+      if (['ai', 'api', 'mcp', 'rag', 'seo', 'crm', 'gst', 'dpdp', 'llm', 'sme', 'smb', 'roi'].includes(lower)) return lower.toUpperCase();
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(' ');
+};
 
 function AnimateOnIntersection({ children, delay = 0 }: { children: React.ReactNode; delay?: number; key?: string }) {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -248,6 +264,9 @@ export default function App() {
       pageTitle = 'Team | BestAIAgent.in';
     } else if (currentView === 'contact') {
       pageTitle = trustPages.contact?.metaTitle || "Contact BestAIAgent.in | BestAIAgent.in";
+    } else if (currentView === 'blog') {
+      const blogTitle = getBlogPostTitleForPath(typeof window !== 'undefined' ? window.location.pathname : '/blog');
+      pageTitle = blogTitle ? `${blogTitle} | BestAIAgent.in Blog` : "BestAIAgent.in Blog | AI Agent Guides, Comparisons, Pricing and MCP";
     } else if (currentView === 'drive') {
       pageTitle = "Google Drive AI Agent Workspace & Requirements Audit | BestAIAgent.in";
     } else if (currentView === 'not-found') {
@@ -259,6 +278,8 @@ export default function App() {
     const canonical = publicUrl(routePath === '/' ? '/' : routePath);
     const metaDescription = currentView === 'product'
       ? products.find(item => item.slug === selectedProductSlug)?.summary
+      : currentView === 'blog'
+        ? "India-first AI agent blog covering guides, comparisons, pricing, MCP tutorials, benchmarks, directories, use cases, and trend analysis for Indian founders, developers, SMEs, agencies, and enterprise buyers."
       : currentView === 'article'
         ? siloPages.find(item => item.slug === selectedArticleSlug)?.metaDescription || siloPages.find(item => item.slug === selectedArticleSlug)?.description
         : trustPages[selectedArticleSlug]?.metaDescription || authorityPages[selectedArticleSlug]?.metaDescription || "Compare the best AI agents in India with independent rankings, INR pricing, DPDP-aware privacy notes, and expert reviews.";
@@ -309,6 +330,10 @@ export default function App() {
     if (view === 'compliance') return '/ai-agent-security';
     if (view === 'about') return '/about';
     if (view === 'contact') return '/contact';
+    if (view === 'blog') {
+      const cleanBlogPath = articleSlug ? articleSlug.replace(/^\/+/, '').replace(/\/+$/, '') : 'blog';
+      return `/${cleanBlogPath}/`;
+    }
     if (view === 'topical-map') return '/topical-authority-map';
     if (view === 'drive') return '/google-drive-ai-agent-workspace';
     if (view === 'tuner') return '/ai-agent-score-tuner';
@@ -334,6 +359,11 @@ export default function App() {
     const slug = cleanPath.replace(/^\//, '');
     if (cleanPath === '/') {
       setCurrentView('home');
+      return;
+    }
+    if (cleanPath === '/blog' || cleanPath.startsWith('/blog/')) {
+      setCurrentView('blog');
+      setSelectedArticleSlug(cleanPath.replace(/^\//, ''));
       return;
     }
     if (cleanPath === '/ai-agent-tools' || cleanPath === '/search') {
@@ -470,6 +500,7 @@ export default function App() {
     { label: 'Compare', href: '/compare' },
     { label: 'Rankings', href: '/ai-agent-rankings' },
     { label: 'Tools', href: '/best-ai-tools' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Resources', href: '/tutorials-hub' },
     { label: 'Pricing', href: '/pricing' },
   ];
@@ -719,7 +750,10 @@ export default function App() {
         "addressRegion": "Maharashtra",
         "addressCountry": "IN"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://twitter.com/bestaiagentin",
+        "https://github.com/CodesbyFebin/best-ai-agent"
+      ]
     };
 
     const websiteSchema = {
@@ -1133,7 +1167,7 @@ try {
   };
 
   const currentAuthorityExpansion = (() => {
-    if (currentView === 'not-found' || currentView === 'author' || currentView === 'topical-map' || currentView === 'editorial') return null;
+    if (currentView === 'not-found' || currentView === 'author' || currentView === 'topical-map' || currentView === 'editorial' || currentView === 'blog') return null;
     if (currentView === 'home') {
       return {
         slug: 'home',
@@ -1345,7 +1379,8 @@ try {
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
             <a href="/" onClick={(event) => navigateToPath(event, '/')} className="flex items-center gap-2 text-left focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded p-1">
-              <img src="/assets/brand/logo.png" alt="BestAIAgent.in" width={900} height={289} className="h-11 sm:h-12 w-auto max-w-[190px] sm:max-w-[240px] rounded-md object-contain shadow-sm" loading="eager" decoding="async" />
+              <img src="/assets/brand/logo-mark.svg" alt="BestAIAgent.in" width={128} height={128} className="h-11 w-11 sm:hidden rounded-xl object-contain shadow-sm" loading="eager" decoding="async" />
+              <img src="/assets/brand/logo.png" alt="BestAIAgent.in" width={900} height={289} className="hidden h-11 w-auto max-w-[190px] rounded-md object-contain shadow-sm sm:block sm:h-12 sm:max-w-[240px]" loading="eager" decoding="async" />
             </a>
           </div>
 
@@ -4525,6 +4560,10 @@ try {
                 </button>
               </form>
             </div>
+          )}
+
+          {currentView === 'blog' && (
+            <BlogExperience selectedArticleSlug={selectedArticleSlug} navigateToPath={navigateToPath} />
           )}
 
           {currentView === 'not-found' && (

@@ -5,10 +5,14 @@ import { AUTHORS, HUBS, PUBLIC_DIR, SITE_URL, TODAY, buildRouteMeta, ensurePubli
 ensurePublicDir();
 
 const normalizeRelatedSlug = (slug) => slug.replace(/^\//, "").replace(/\/$/, "");
+const normalizeRoutePath = (pathName = "/") => {
+  const clean = String(pathName || "/").replace(/\/+$/, "");
+  return clean || "/";
+};
 
 const routeMap = buildRouteMeta();
 const routes = Object.values(routeMap)
-  .filter((route, index, arr) => route.path && route.path === (route.canonicalPath || route.path) && arr.findIndex((other) => other.path === route.path) === index)
+  .filter((route, index, arr) => route.path && normalizeRoutePath(route.path) === normalizeRoutePath(route.canonicalPath || route.path) && arr.findIndex((other) => other.path === route.path) === index)
   .sort((a, b) => a.path.localeCompare(b.path));
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || "7f4f2d728f93411eb9a03bestaiagentin";
 
@@ -23,7 +27,7 @@ function urlset(entries) {
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...entries.map((entry) => [
       "  <url>",
-      `    <loc>${SITE_URL}${xmlEscape(entry.path)}</loc>`,
+      `    <loc>${SITE_URL}${xmlEscape(entry.canonicalPath || entry.path)}</loc>`,
       `    <lastmod>${entry.lastmod || TODAY}</lastmod>`,
       `    <changefreq>${entry.changefreq || "weekly"}</changefreq>`,
       `    <priority>${entry.priority || "0.80"}</priority>`,
@@ -59,18 +63,52 @@ function imageSitemap() {
 
 const categoryMatches = (route, categories) => categories.includes(route.category) || categories.includes(route.categoryLabel);
 
+// ─── ALL CATEGORIES (including the 19 previously missing ones) ───────────────
+const ALL_AI_AGENT_CATEGORIES = [
+  // Core / pillars
+  "core", "pillars", "guides", "research", "frameworks", "buyers-guides",
+  "directories", "india-geo", "blog",
+  // Previously missing — now included
+  "ai-agent-core", "ai-agent-builders", "business-ai-agents", "coding-agents",
+  "courses-certifications", "entity-pages", "entities", "free",
+  "industry-ai-agents", "longtail", "longtail-engine", "mcp-servers",
+  "open-source-ai-agents", "pricing-intelligence", "reddit-community-intent",
+  "reports", "research-benchmarks", "security-compliance", "voice-ai-agents",
+  // Label variants
+  "AI Agent Core", "AI Frameworks & Tools", "Buyer Guides",
+  "Blog",
+  "Reddit & Community Intent", "Entity Pages", "India GEO Targeting",
+  "Directories", "Open Source AI Agents", "Security & Compliance",
+  "Industry AI Agents", "Longtail Engine", "Long-tail Guides",
+  "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence",
+  "Voice AI Agents", "Business AI Agents", "AI Agent Builders",
+  "Coding Agents", "MCP Servers", "Glossary", "Tutorials",
+  "Alternatives", "Free AI Agents",
+  // Reddit / community
+  "reddit",
+];
+
 const sitemapGroups = {
-  "ai-agent-sitemap.xml": routes.filter((r) => categoryMatches(r, ["core", "pillars", "guides", "research", "frameworks", "buyers-guides", "reddit", "entity", "india-geo", "directories", "AI Agent Core", "AI Frameworks & Tools", "Buyer Guides", "Reddit & Community Intent", "Entity Pages", "India GEO Targeting", "Directories", "Open Source AI Agents", "Security & Compliance", "Industry AI Agents", "Longtail Engine", "Long-tail Guides", "Research & Benchmarks", "Courses & Certifications", "Pricing Intelligence", "Voice AI Agents", "Business AI Agents", "AI Agent Builders", "Coding Agents", "MCP Servers", "Glossary", "Tutorials", "Alternatives", "Free AI Agents"])),
+  "ai-agent-sitemap.xml": routes.filter((r) => categoryMatches(r, ALL_AI_AGENT_CATEGORIES)),
   "tool-sitemap.xml": routes.filter((r) => categoryMatches(r, ["reviews", "tools", "Tool Reviews", "Tool Profiles"])),
   "comparison-sitemap.xml": routes.filter((r) => r.category === "comparisons" || r.category === "Comparisons"),
-  "pricing-sitemap.xml": routes.filter((r) => categoryMatches(r, ["pricing", "Pricing", "Pricing Intelligence"])),
+  "pricing-sitemap.xml": routes.filter((r) => categoryMatches(r, ["pricing", "Pricing", "Pricing Intelligence", "pricing-intelligence"])),
   "alternatives-sitemap.xml": routes.filter((r) => categoryMatches(r, ["alternatives", "Alternatives"])),
-  "tutorials-sitemap.xml": routes.filter((r) => categoryMatches(r, ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications"])),
+  "tutorials-sitemap.xml": routes.filter((r) => categoryMatches(r, ["tutorials", "courses", "Tutorials", "Courses", "Courses & Certifications", "courses-certifications"])),
   "glossary-sitemap.xml": routes.filter((r) => categoryMatches(r, ["glossary", "Glossary"])),
-  "mcp-sitemap.xml": routes.filter((r) => categoryMatches(r, ["mcp", "MCP", "MCP Servers"])),
+  "mcp-sitemap.xml": routes.filter((r) => categoryMatches(r, ["mcp", "MCP", "MCP Servers", "mcp-servers"])),
   "author-sitemap.xml": routes.filter((r) => categoryMatches(r, ["authors", "Authors"])),
   "hub-sitemap.xml": routes.filter((r) => categoryMatches(r, ["hubs", "editorial", "home", "Hubs", "Editorial", "Home"])),
-  "calculators-sitemap.xml": routes.filter((r) => categoryMatches(r, ["calculators", "Calculators"]) || /calculator/i.test(r.path)),
+  "calculators-sitemap.xml": routes.filter((r) => categoryMatches(r, ["calculators", "Calculators", "longtail-engine"]) || /calculator/i.test(r.path)),
+  // New dedicated sitemaps for previously un-indexed categories
+  "entity-sitemap.xml": routes.filter((r) => categoryMatches(r, ["entity-pages", "entities", "Entity Pages"])),
+  "longtail-sitemap.xml": routes.filter((r) => categoryMatches(r, ["longtail", "longtail-engine", "Long-tail Guides", "Longtail Engine"])),
+  "industry-sitemap.xml": routes.filter((r) => categoryMatches(r, ["industry-ai-agents", "business-ai-agents", "Industry AI Agents", "Business AI Agents", "voice-ai-agents", "Voice AI Agents"])),
+  "reddit-sitemap.xml": routes.filter((r) => categoryMatches(r, ["reddit", "reddit-community-intent", "Reddit & Community Intent"])),
+  "research-sitemap.xml": routes.filter((r) => categoryMatches(r, ["research-benchmarks", "reports", "Research & Benchmarks"])),
+  "coding-sitemap.xml": routes.filter((r) => categoryMatches(r, ["coding-agents", "Coding Agents", "ai-agent-builders", "AI Agent Builders"])),
+  "free-sitemap.xml": routes.filter((r) => categoryMatches(r, ["free", "Free AI Agents", "open-source-ai-agents", "Open Source AI Agents", "security-compliance", "Security & Compliance"])),
+  "blog-sitemap.xml": routes.filter((r) => categoryMatches(r, ["blog", "Blog"])),
 };
 
 for (const [name, entries] of Object.entries(sitemapGroups)) {
@@ -139,6 +177,14 @@ write("robots.txt", [
   `Sitemap: ${SITE_URL}/hub-sitemap.xml`,
   `Sitemap: ${SITE_URL}/calculators-sitemap.xml`,
   `Sitemap: ${SITE_URL}/image-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/entity-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/longtail-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/industry-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/reddit-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/research-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/coding-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/free-sitemap.xml`,
+  `Sitemap: ${SITE_URL}/blog-sitemap.xml`,
   "",
   `# NOTE: feed.xml and llms.txt are NOT XML sitemaps — listed for completeness`,
   `# feed.xml: https://bestaiagent.in/feed.xml (RSS feed)`,
@@ -286,7 +332,7 @@ const tutorialRoutes = routes.filter((route) => route.category === "tutorials");
 
 const contentIndex = routes.map((route) => ({
   path: route.path,
-  canonical: `${SITE_URL}${route.path === "/" ? "/" : route.path}`,
+  canonical: `${SITE_URL}${route.canonicalPath || (route.path === "/" ? "/" : route.path)}`,
   slug: route.slug,
   title: route.title,
   description: route.description,
@@ -302,6 +348,7 @@ const contentIndex = routes.map((route) => ({
     route.category === "free" ? "/free-ai-agents-hub" :
     route.category === "reviews" || route.category === "tools" ? "/best-ai-agent" :
     route.category === "comparisons" ? "/best-ai-agent" :
+    route.category === "blog" ? "/blog" :
     route.category === "hubs" ? "/" :
     "/best-ai-agent",
   lastmod: route.lastmod || TODAY,
@@ -315,6 +362,7 @@ const contentIndex = routes.map((route) => ({
   editorialReviewDate: route.editorialReviewDate || TODAY,
   changefreq: route.changefreq,
   priority: route.priority,
+  searchConsole: route.searchConsole || null,
   schemaTypes: route.schemaTypes || [],
   relatedPages: (route.related || [])
     .map((slug) => normalizeRelatedSlug(slug))

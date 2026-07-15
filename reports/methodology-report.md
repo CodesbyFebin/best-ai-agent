@@ -1,5 +1,5 @@
 # Methodology Report
-Generated: 2026-07-02
+Generated: 2026-07-15
 
 ## Scoring Matrix
 **Location:** `src/data/trustContent.ts` — `methodology` entry

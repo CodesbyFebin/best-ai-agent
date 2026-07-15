@@ -1,5 +1,5 @@
 # Schema (JSON-LD) Report
-Generated: 2026-07-02
+Generated: 2026-07-15
 
 ## Schema Types
 | Type | Where Used | Status |

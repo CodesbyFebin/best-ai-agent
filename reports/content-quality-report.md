@@ -1,11 +1,11 @@
 # Content Quality Report
-Generated: 2026-07-02
+Generated: 2026-07-15
 
-- **Total markdown files:** 336
-- **Average word count:** 2769
-- **Files under 1,500 words:** 127
-- **Files with < 10 internal links:** 138
-- **Files missing author:** 301
+- **Total markdown files:** 348
+- **Average word count:** 2810
+- **Files under 1,500 words:** 128
+- **Files with < 10 internal links:** 139
+- **Files missing author:** 313
 
 ## Longest Pages
 - pillars/best-ai-agent-for-crm.md (5039 words, 13 links)
@@ -20,6 +20,7 @@ Generated: 2026-07-02
 - reviews/replit-agent.md (4869 words, 14 links)
 
 ## Shortest Pages (may need expansion)
+- placeholder.md (0 words, 0 links)
 - research/agent-ops.md (817 words, 2 links)
 - trust/contact.md (833 words, 3 links)
 - authors/priya-iyer.md (839 words, 2 links)
@@ -29,7 +30,6 @@ Generated: 2026-07-02
 - mcp/servers/linkedin-server.md (847 words, 1 links)
 - mcp/servers/medium-server.md (847 words, 1 links)
 - mcp/servers/playwright-server.md (847 words, 1 links)
-- mcp/servers/puppeteer-server.md (847 words, 1 links)
 
 ## Recommendations
 - Expand pages with < 1500 words to meet minimum threshold
