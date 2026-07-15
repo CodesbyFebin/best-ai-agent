@@ -675,11 +675,18 @@ function findClientIndexHtml(distPath: string) {
 function findStaticHtmlFile(reqPath: string): string | null {
   const clean = normalizePath(reqPath);
   const segments = clean === '/' ? '' : clean.replace(/^\/+|\/+$/g, '');
-  const candidates = [
-    path.resolve(process.cwd(), 'dist', 'static-site', segments, 'index.html'),
-    path.resolve(process.cwd(), 'dist', 'static-site', segments),
-    path.resolve(process.cwd(), 'dist', 'static-site', `${segments}.html`),
+  const staticRoots = [
+    path.resolve(process.cwd(), 'dist', 'static-site'),
+    path.resolve(__dirname, 'dist', 'static-site'),
+    path.resolve(__dirname, 'static-site'),
+    path.resolve(__dirname, '..', 'dist', 'static-site'),
+    path.resolve(__dirname, '..', 'static-site'),
   ];
+  const candidates = staticRoots.flatMap((root) => [
+    path.join(root, segments, 'index.html'),
+    path.join(root, segments),
+    path.join(root, `${segments}.html`),
+  ]);
   return candidates.find((candidate) => fs.existsSync(candidate) && fs.statSync(candidate).isFile()) || null;
 }
 

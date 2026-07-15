@@ -1,6 +1,6 @@
 # AI Crawl Readiness Report
 
-Generated: 2026-07-15T11:16:04.607Z
+Generated: 2026-07-15T11:39:24.135Z
 
 ## Summary
 
