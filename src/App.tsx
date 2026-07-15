@@ -228,6 +228,8 @@ export default function App() {
     let pageTitle = "BestAIAgent.in | India's AI Agent Authority Review Hub";
     if (currentView === 'home') {
       pageTitle = "BestAIAgent.in | Discover, Compare & Scale AI Agents for Business";
+    } else if (currentView === 'directory') {
+      pageTitle = "AI Agent Tools Directory India 2026 | BestAIAgent.in";
     } else if (currentView === 'silo-pillar') {
       const s = silos.find(item => item.id === selectedSiloId);
       pageTitle = `${s?.pillarTitle} | ${s?.name} Dashboard | BestAIAgent.in`;
@@ -278,6 +280,8 @@ export default function App() {
     const canonical = publicUrl(routePath === '/' ? '/' : routePath);
     const metaDescription = currentView === 'product'
       ? products.find(item => item.slug === selectedProductSlug)?.summary
+      : currentView === 'directory'
+        ? "Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, and implementation fit."
       : currentView === 'blog'
         ? "India-first AI agent blog covering guides, comparisons, pricing, MCP tutorials, benchmarks, directories, use cases, and trend analysis for Indian founders, developers, SMEs, agencies, and enterprise buyers."
       : currentView === 'article'
@@ -316,6 +320,7 @@ export default function App() {
 
   const pathForRoute = (view: string, siloId?: string, articleSlug?: string, productSlug?: string) => {
     if (view === 'home') return '/';
+    if (view === 'directory') return '/ai-agent-tools';
     if (view === 'product') return `/tools/${productSlug || selectedProductSlug}`;
     if (view === 'article') return `/${articleSlug || selectedArticleSlug}`;
     if (view === 'compare') return articleSlug ? `/${articleSlug}` : '/compare';
@@ -367,7 +372,7 @@ export default function App() {
       return;
     }
     if (cleanPath === '/ai-agent-tools' || cleanPath === '/search') {
-      setCurrentView('home');
+      setCurrentView('directory');
       if (cleanPath === '/ai-agent-tools') {
         window.setTimeout(() => document.getElementById('productivity-directory')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
       }
@@ -769,12 +774,18 @@ export default function App() {
       }
     };
 
-    if (currentView === 'home') {
+    if (currentView === 'home' || currentView === 'directory') {
       schemaData = {
         "@context": "https://schema.org",
         "@graph": [
           organizationSchema,
-          websiteSchema
+          websiteSchema,
+          ...(currentView === 'directory' ? [{
+            "@type": "CollectionPage",
+            "name": "AI Agent Tools Directory",
+            "url": publicUrl('/ai-agent-tools'),
+            "description": "India-first AI agent tools directory with categories, pricing, use cases, reviews, comparisons, and implementation checks."
+          }] : [])
         ]
       };
     } else if (currentView === 'silo-pillar') {
@@ -1168,13 +1179,15 @@ try {
 
   const currentAuthorityExpansion = (() => {
     if (currentView === 'not-found' || currentView === 'author' || currentView === 'topical-map' || currentView === 'editorial' || currentView === 'blog') return null;
-    if (currentView === 'home') {
+    if (currentView === 'home' || currentView === 'directory') {
       return {
-        slug: 'home',
-        title: 'BestAIAgent.in: India AI Agent Authority',
-        description: 'BestAIAgent.in helps Indian founders, developers, SMEs, agencies, and enterprises compare AI agents, coding tools, voice agents, builders, MCP servers, pricing, alternatives, and implementation guides.',
-        primaryKeyword: 'best ai agents india',
-        category: 'Home',
+        slug: currentView === 'directory' ? 'ai-agent-tools' : 'home',
+        title: currentView === 'directory' ? 'AI Agent Tools Directory India' : 'BestAIAgent.in: India AI Agent Authority',
+        description: currentView === 'directory'
+          ? 'Browse and filter AI agent tools, coding assistants, voice agents, business automation platforms, no-code builders, MCP resources, pricing guides, and implementation evidence for Indian buyers.'
+          : 'BestAIAgent.in helps Indian founders, developers, SMEs, agencies, and enterprises compare AI agents, coding tools, voice agents, builders, MCP servers, pricing, alternatives, and implementation guides.',
+        primaryKeyword: currentView === 'directory' ? 'ai agent tools directory india' : 'best ai agents india',
+        category: currentView === 'directory' ? 'Directory' : 'Home',
         intent: 'commercial research',
         variant: 'hub' as const,
       };
@@ -1508,7 +1521,7 @@ try {
           {/* ==========================================
             VIEW A: HOMEPAGE (MEDIA HUB)
             ========================================== */}
-          {currentView === 'home' && (
+          {(currentView === 'home' || currentView === 'directory') && (
             <div className="space-y-12">
               <ReferenceHomeHero
                 onNavigate={navigateToPath}

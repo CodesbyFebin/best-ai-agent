@@ -55,4 +55,5 @@ export interface AuthorityEntity {
   confidenceLevel: number;
   lastVerified: string;
   officialLinks?: unknown;
+  sameAs?: string[];
 }

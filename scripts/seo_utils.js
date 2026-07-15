@@ -46,6 +46,10 @@ const TOOL_REVIEW_SLUG_OVERRIDES = {
   "elevenlabs-conversational-ai": "elevenlabs",
 };
 
+const TOOL_CANONICAL_REVIEW_SLUGS = new Set([
+  "github-copilot",
+]);
+
 function parseMetricNumber(value) {
   return Number(String(value || "").replace(/,/g, "").trim()) || 0;
 }
@@ -665,6 +669,7 @@ export function cleanSlug(raw, filePath) {
 
 export function contentRoute(category, slug) {
   if (category === "tools") return `/tools/${slug}`;
+  if (category === "reviews" && TOOL_CANONICAL_REVIEW_SLUGS.has(slug)) return `/tools/${slug}`;
   if (category === "reviews" && slug.endsWith("-review")) {
     const base = slug.replace(/-review$/, "");
     const toolSlug = TOOL_REVIEW_SLUG_OVERRIDES[base] || base;
@@ -1034,6 +1039,8 @@ export function buildContentEntries() {
       aliases.push(`/${slug}`);
       const legacyToolSlug = TOOL_REVIEW_SLUG_OVERRIDES[reviewBase];
       if (legacyToolSlug && legacyToolSlug !== reviewBase) aliases.push(`/tools/${reviewBase}`);
+    } else if (category === "reviews" && TOOL_CANONICAL_REVIEW_SLUGS.has(slug)) {
+      aliases.push(`/${slug}`);
     }
     const title = field(markdown, "SEO Title") || h1(markdown) || titleCase(slug);
     const description = field(markdown, "Meta Description") || `${title} with India-focused AI agent analysis, INR pricing notes, DPDP considerations, comparisons, FAQs, and implementation guidance.`;
@@ -1606,7 +1613,14 @@ export function buildTopicalEntries(existingPaths = new Set()) {
       if (page.pageType === "entity" || page.slug.endsWith("-entity")) {
         const entitySlug = page.slug.replace(/-entity$/, "");
         const entity = readEntityMap()[entitySlug];
-        if (entity) meta.entity = entity;
+        if (entity) {
+          meta.entity = entity;
+          if (Array.isArray(entity.officialLinks)) {
+            meta.sameAs = entity.officialLinks.filter(
+              (link) => typeof link === "string" && /^https?:\/\//i.test(link)
+            );
+          }
+        }
         meta.sources = [...sourcesForSlug(entitySlug), ...editorialSources()];
       }
       meta.schemas = pageSchema(meta);
@@ -1839,6 +1853,73 @@ const routeMap = {};
        },
     ],
   };
+  const aiAgentToolsMeta = {
+    source: "generated-directory",
+    category: "directories",
+    categoryLabel: "Directories",
+    slug: "ai-agent-tools",
+    path: "/ai-agent-tools",
+    aliases: ["/search"],
+    title: "AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in",
+    description: "Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, alternatives, and implementation fit.",
+    h1: "AI Agent Tools Directory",
+    entityName: "AI Agent Tools Directory",
+    words: 8000,
+    lastmod: TODAY,
+    changefreq: "weekly",
+    priority: "0.92",
+    ogImage: "/assets/brand/og-default.png",
+    ogImageAlt: "BestAIAgent.in AI agent tools directory preview",
+    schemaTypes: ["WebPage", "CollectionPage", "BreadcrumbList", "ItemList", "FAQPage"],
+    faqs: [
+      {
+        question: "What is the BestAIAgent.in AI Agent Tools Directory?",
+        answer: "It is an India-first directory for discovering and comparing AI agents, coding assistants, voice agents, no-code builders, MCP servers, workflow automation tools, and enterprise AI platforms.",
+      },
+      {
+        question: "Who should use the AI Agent Tools Directory?",
+        answer: "Indian founders, developers, automation agencies, SMEs, IT teams, enterprise buyers, and AI consultants can use the directory to shortlist agent tools before reading reviews, pricing pages, comparisons, and methodology notes.",
+      },
+      {
+        question: "How are tools organized in the directory?",
+        answer: "Tools are organized by category, pricing model, best-fit workflow, evaluation score, India-readiness signals, and related review or comparison pages where available.",
+      },
+      {
+        question: "Is the AI Agent Tools Directory independent?",
+        answer: "Yes. BestAIAgent.in separates editorial evaluation from affiliate monetization and documents scoring, review, correction, and disclosure policies on its methodology and policy pages.",
+      },
+    ],
+    related: [
+      "best-ai-agent",
+      "mcp-directory",
+      "ai-agent-rankings",
+      "pricing-hub",
+      "alternatives-hub",
+      "coding-agents-hub",
+      "business-ai-hub",
+      "voice-ai-hub",
+      "ai-agent-builders-hub",
+      "methodology",
+      "ai-agent-scoring-system",
+      "editorial-policy",
+    ],
+    ...trustSignalsFor("directories", "generated-directory"),
+  };
+  aiAgentToolsMeta.schemas = pageSchema(aiAgentToolsMeta);
+  aiAgentToolsMeta.schemas.push({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/ai-agent-tools#directory-itemlist`,
+    name: "AI agent tools directory",
+    itemListElement: HOME_TOP_TOOLS.map(([name, itemPath], index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name,
+      url: `${SITE_URL}${itemPath}`,
+    })),
+  });
+  routeMap["/ai-agent-tools"] = aiAgentToolsMeta;
+  routeMap["/search"] = { ...aiAgentToolsMeta, path: "/search", canonicalPath: "/ai-agent-tools", aliases: ["/search"] };
   const addLegacyRedirect = (alias, target) => {
     const targetMeta = routeMap[target];
     if (!targetMeta) return;
@@ -1853,7 +1934,6 @@ const routeMap = {};
 
   [
     ['/pricing', '/pricing-hub'],
-    ['/ai-agent-tools', '/'],
     ['/tools', '/best-ai-agent'],
     ['/services', '/custom-ai-agent-development'],
     ['/editorial-board', '/about'],
@@ -1893,7 +1973,6 @@ const routeMap = {};
     ['/alternatives', '/alternatives-hub'],
     ['/review-policy', '/editorial-policy'],
     ['/pdf-server', '/mcp-servers'],
-    ['/tools/github-copilot', '/github-copilot'],
     ['/downloads/methodology-42point.pdf', '/methodology'],
     // Resolve common markdown internal-link references (keeps validate:links clean)
     ['/ai-agent-frameworks-hub', '/best-ai-agent-frameworks'],

@@ -1,11 +1,11 @@
 # Route Coverage Report
 
-Generated: 2026-07-15T11:39:13.993Z
-Total routes: 1285
+Generated: 2026-07-15T11:58:03.842Z
+Total routes: 1286
 
 ## Route Type Distribution
 
-- page: 737
+- page: 738
 - comparison: 119
 - mcp: 96
 - tool: 64

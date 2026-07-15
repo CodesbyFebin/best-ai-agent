@@ -284,6 +284,12 @@
       "url": "https://bestaiagent.in/ai-agent-statistics"
     },
     {
+      "id": "/ai-agent-tools",
+      "type": "directories",
+      "label": "AI Agent Tools Directory",
+      "url": "https://bestaiagent.in/ai-agent-tools"
+    },
+    {
       "id": "/ai-agent-trends",
       "type": "core",
       "label": "AI Agent Trends 2026 – What's Shaping AI Agents in India",
@@ -5282,12 +5288,6 @@
       "url": "https://bestaiagent.in/github-actions-pipeline-debugger-mcp"
     },
     {
-      "id": "/github-copilot",
-      "type": "reviews",
-      "label": "GitHub Copilot Review – India's Independent Assessment (June 2026)",
-      "url": "https://bestaiagent.in/github-copilot"
-    },
-    {
       "id": "/github-copilot-alternatives",
       "type": "alternatives",
       "label": "GitHub Copilot Alternatives 2026 – Best Competitors for Indian Developers",
@@ -6710,6 +6710,12 @@
       "url": "https://bestaiagent.in/tools/flowise"
     },
     {
+      "id": "/tools/github-copilot",
+      "type": "reviews",
+      "label": "GitHub Copilot Review – India's Independent Assessment (June 2026)",
+      "url": "https://bestaiagent.in/tools/github-copilot"
+    },
+    {
       "id": "/tools/intercom-ai",
       "type": "reviews",
       "label": "Intercom AI Review – India's Independent Assessment (June 2026)",
@@ -7610,6 +7616,11 @@
     },
     {
       "from": "/ai-agent-statistics",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
+      "from": "/ai-agent-tools",
       "to": "/best-ai-agent",
       "relation": "parentHub"
     },
@@ -11769,11 +11780,6 @@
       "relation": "parentHub"
     },
     {
-      "from": "/github-copilot",
-      "to": "/best-ai-agent",
-      "relation": "parentHub"
-    },
-    {
       "from": "/github-copilot-alternatives",
       "to": "/alternatives-hub",
       "relation": "parentHub"
@@ -12959,6 +12965,11 @@
       "relation": "parentHub"
     },
     {
+      "from": "/tools/github-copilot",
+      "to": "/best-ai-agent",
+      "relation": "parentHub"
+    },
+    {
       "from": "/tools/intercom-ai",
       "to": "/best-ai-agent",
       "relation": "parentHub"
@@ -13519,46 +13530,6 @@
       "relation": "tutorial"
     },
     {
-      "from": "/github-copilot",
-      "to": "Tool Reviews",
-      "relation": "category"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/github-copilot-pricing",
-      "relation": "pricing"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/cursor-vs-github-copilot",
-      "relation": "competitor"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/github-copilot-vs-amazon-codewhisperer",
-      "relation": "competitor"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/github-copilot-vs-tabnine",
-      "relation": "competitor"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/github-copilot-vs-windsurf",
-      "relation": "competitor"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/github-copilot-alternatives",
-      "relation": "alternative"
-    },
-    {
-      "from": "/github-copilot",
-      "to": "/how-to-use-github-copilot",
-      "relation": "tutorial"
-    },
-    {
       "from": "/replit-agent",
       "to": "Tool Reviews",
       "relation": "category"
@@ -13881,6 +13852,46 @@
     {
       "from": "/tools/flowise",
       "to": "/how-to-build-ai-agent-with-flowise",
+      "relation": "tutorial"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "Tool Reviews",
+      "relation": "category"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/github-copilot-pricing",
+      "relation": "pricing"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/cursor-vs-github-copilot",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/github-copilot-vs-amazon-codewhisperer",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/github-copilot-vs-tabnine",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/github-copilot-vs-windsurf",
+      "relation": "competitor"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/github-copilot-alternatives",
+      "relation": "alternative"
+    },
+    {
+      "from": "/tools/github-copilot",
+      "to": "/how-to-use-github-copilot",
       "relation": "tutorial"
     },
     {
@@ -14625,6 +14636,11 @@
     },
     {
       "from": "entity:MCP",
+      "to": "/ai-agent-tools",
+      "relation": "mentionedOn"
+    },
+    {
+      "from": "entity:MCP",
       "to": "/ai-agent-trends",
       "relation": "mentionedOn"
     },
@@ -14666,11 +14682,6 @@
     {
       "from": "entity:MCP",
       "to": "/blog",
-      "relation": "mentionedOn"
-    },
-    {
-      "from": "entity:MCP",
-      "to": "/blog/agent-security-governance-compliance/mcp-supply-chain-security/production-checklist-mcp-supply-chain-security-for-organizations-installing-third-party-servers",
       "relation": "mentionedOn"
     },
     {

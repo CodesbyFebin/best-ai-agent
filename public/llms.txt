@@ -235,7 +235,6 @@ Path: //ai-agent-frameworks-hub - Build next-gen autonomous systems. Technical i
 ## Topical Authorities (Priority ≥ 0.90)
 
 - [Best AI Agents in India 2026: Compare Tools, Builders, Coding Agents and Business Automation](//) (priority: 1.00)
-- [Best AI Agents in India 2026: Compare Tools, Builders, Coding Agents and Business Automation](//ai-agent-tools) (priority: 1.00)
 - [AI Agents: Complete Guide, Categories & India Buyer Map | BestAIAgent.in](//ai-agents) (priority: 0.97)
 - [AI Agent Examples 2026 – 30 Real-World Examples for Indian Businesses](//ai-agent-examples) (priority: 0.95)
 - [AI Agent News 2026 – Latest Developments for Indian Developers](//ai-agent-news) (priority: 0.95)
@@ -254,8 +253,10 @@ Path: //ai-agent-frameworks-hub - Build next-gen autonomous systems. Technical i
 - [GitHub Copilot Pricing 2026 – Plans, Costs in INR & India Payment Guide](//github-copilot-pricing) (priority: 0.92)
 - [CrewAI Review 2026: Features, Pricing, Use Cases & Alternatives | BestAIAgent.in](//tools/crewai) (priority: 0.92)
 - [Flowise Review 2026 – Best Open-Source AI Agent Builder for India](//tools/flowise) (priority: 0.92)
+- [AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in](//ai-agent-tools) (priority: 0.92)
 - [Business AI Agents Hub | BestAIAgent.in](//business-ai-hub) (priority: 0.92)
 - [DPDP Act 2023 Compliance for AI Agents: Complete Checklist | BestAIAgent.in](//dpdp-compliance-ai) (priority: 0.92)
+- [AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in](//search) (priority: 0.92)
 - [Multi-Agent Systems: Frameworks, Architecture & Tooling Guide | BestAIAgent.in](//multi-agent-systems) (priority: 0.91)
 - [Top 500 AI Agents Database: Complete Directory | BestAIAgent.in](//top-500-ai-agents-database) (priority: 0.91)
 - [AI Agents for Indian SMEs: Budget-Friendly Automation | BestAIAgent.in](//ai-agents-for-smes) (priority: 0.91)
@@ -273,7 +274,6 @@ Path: //ai-agent-frameworks-hub - Build next-gen autonomous systems. Technical i
 - [AI Agents vs Chatbots: What's the Difference? (2026) | BestAIAgent.in](//ai-agents-vs-chatbots) (priority: 0.90)
 - [AI Copilots vs AI Agents: Which Do You Need? (2026) | BestAIAgent.in](//ai-copilots-vs-ai-agents) (priority: 0.90)
 - [Best AI Agent Automation Platform 2026 – Top Platforms for Indian Businesses](//best-ai-agent-automation-platform) (priority: 0.90)
-- [Best AI Agent Builder – 2026 Guide for Indian Enterprises | BestAIAgent.in](//best-ai-agent-builder) (priority: 0.90)
 
 ## Tool Reviews
 Scored tool review pages are available in the tool sitemap and content index, with review, pricing, alternatives, and tutorial relationships also exposed in JSON.

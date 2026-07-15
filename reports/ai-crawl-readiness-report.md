@@ -1,10 +1,10 @@
 # AI Crawl Readiness Report
 
-Generated: 2026-07-15T11:39:24.135Z
+Generated: 2026-07-15T11:58:22.888Z
 
 ## Summary
 
-- Total routes: 1505
+- Total routes: 1506
 - Issues: 0
 - Warnings: 20
 

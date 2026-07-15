@@ -78,26 +78,6 @@
     ]
   },
   {
-    "tool": "GitHub Copilot",
-    "review": "/github-copilot",
-    "category": "Tool Reviews",
-    "pricing": [
-      "/github-copilot-pricing"
-    ],
-    "competitors": [
-      "/cursor-vs-github-copilot",
-      "/github-copilot-vs-amazon-codewhisperer",
-      "/github-copilot-vs-tabnine",
-      "/github-copilot-vs-windsurf"
-    ],
-    "alternatives": [
-      "/github-copilot-alternatives"
-    ],
-    "tutorials": [
-      "/how-to-use-github-copilot"
-    ]
-  },
-  {
     "tool": "Replit Agent",
     "review": "/replit-agent",
     "category": "Tool Reviews",
@@ -278,6 +258,26 @@
     ],
     "tutorials": [
       "/how-to-build-ai-agent-with-flowise"
+    ]
+  },
+  {
+    "tool": "GitHub Copilot",
+    "review": "/tools/github-copilot",
+    "category": "Tool Reviews",
+    "pricing": [
+      "/github-copilot-pricing"
+    ],
+    "competitors": [
+      "/cursor-vs-github-copilot",
+      "/github-copilot-vs-amazon-codewhisperer",
+      "/github-copilot-vs-tabnine",
+      "/github-copilot-vs-windsurf"
+    ],
+    "alternatives": [
+      "/github-copilot-alternatives"
+    ],
+    "tutorials": [
+      "/how-to-use-github-copilot"
     ]
   },
   {

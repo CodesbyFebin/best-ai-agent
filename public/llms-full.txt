@@ -19,11 +19,6 @@ Path: //
 Category: home
 Description: Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation. Independent rankings with INR pricing, DPDP checks, and expert reviews.
 
-### Best AI Agents in India 2026: Compare Tools, Builders, Coding Agents and Business Automation
-Path: //ai-agent-tools
-Category: home
-Description: Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation. Independent rankings with INR pricing, DPDP checks, and expert reviews.
-
 ### AI Agents: Complete Guide, Categories & India Buyer Map | BestAIAgent.in
 Path: //ai-agents
 Category: ai-agent-core
@@ -114,6 +109,11 @@ Path: //tools/flowise
 Category: reviews
 Description: In-depth Flowise review for 2026: features, pricing, India suitability, security, and comparison with Dify, n8n, and LangFlow. Find out if Flowise is the best no-code AI agent builder for Indian startups and agencies.
 
+### AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in
+Path: //ai-agent-tools
+Category: directories
+Description: Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, alternatives, and implementation fit.
+
 ### Business AI Agents Hub | BestAIAgent.in
 Path: //business-ai-hub
 Category: business-ai-agents
@@ -123,6 +123,11 @@ Description: AI agents for Indian SMEs, startups, and enterprises covering CRM, 
 Path: //dpdp-compliance-ai
 Category: industry-ai-agents
 Description: DPDP Act compliance for AI agents in India: consent, data retention, cross-border transfers, deletion rights, grievance handling, and what Indian businesses must implement before deploying AI agents.
+
+### AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in
+Path: //search
+Category: directories
+Description: Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, alternatives, and implementation fit.
 
 ### Multi-Agent Systems: Frameworks, Architecture & Tooling Guide | BestAIAgent.in
 Path: //multi-agent-systems

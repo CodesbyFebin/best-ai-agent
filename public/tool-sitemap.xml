@@ -31,12 +31,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://bestaiagent.in/github-copilot</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://bestaiagent.in/replit-agent</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,6 +101,12 @@
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://bestaiagent.in/tools/github-copilot</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://bestaiagent.in/tools/intercom-ai</loc>

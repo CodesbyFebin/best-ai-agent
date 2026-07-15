@@ -363,85 +363,9 @@ export default function IndiaMcpCustomizer({
     }
   };
 
-  // Comprehensive JSON-LD structured schemas for AEO and SEO crawls
-  const seoJsonLd = useMemo(() => {
-    // FAQ Schema
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the Model Context Protocol (MCP) standard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Model Context Protocol (MCP) is an open standard designed by Anthropic and supported by leading platforms (like Google and Cursor) that enables AI models to connect securely and dynamically with local resources, files, databases, web tools, and microservice contexts using a structured JSON-RPC protocol."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you install or register an MCP server inside Claude?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For Claude Desktop, configure the global configuration file (claude_desktop_config.json) by adding command parameters under the 'mcpServers' object, detailing command, args and localized environment variable flags as needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why are security profiles critical in MCP configurations?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Since MCP grant large language models access to local storage directories or relational database systems, developer operators must restrict directories list, configure read-only schemas, and verify credential environments strictly."
-          }
-        }
-      ]
-    };
-
-    // DataCatalog Schema for our Registry
-    const catalogSchema = {
-      "@context": "https://schema.org",
-      "@type": "DataCatalog",
-      "name": "BestAIAgent MCP Authorized Server Registry Catalog",
-      "description": "An open community-reviewed index directory detailing verified Model Context Protocol clients, adapters, and server repositories.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "BestAIAgent.in",
-        "url": SITE_URL
-      },
-      "dataset": serversList.map(srv => ({
-        "@type": "Dataset",
-        "name": srv.name,
-        "description": srv.useCase,
-        "license": "https://opensource.org/licenses/MIT",
-        "creator": {
-          "@type": "Organization",
-          "name": srv.authorName || "Model Context Protocol Community"
-        }
-      }))
-    };
-
-    // TechArticle describing Model Context Protocol
-    const articleSchema = {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Model Context Protocol Authority Hub - Absolute 2026 Developer Blueprint",
-      "description": "Standardize local workspace databases, APIs, memory loops, and agent context tunnels through the official Model Context Protocol architecture standard.",
-      "author": {
-        "@type": "Person",
-        "name": "Arshdeep Singh"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "BestAIAgent.in",
-        "logo": {
-          "@type": "ImageObject",
-          "url": publicUrl('/assets/brand/logo.png')
-        }
-      }
-    };
-
-    return [faqSchema, catalogSchema, articleSchema];
-  }, [serversList]);
+  // JSON-LD schemas are generated server-side via route-meta and static snapshots.
+  // This component no longer builds client-side JSON-LD to avoid duplicate or
+  // conflicting schema objects.
 
   return (
     <div className="space-y-12">
@@ -1090,7 +1014,7 @@ export default function IndiaMcpCustomizer({
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
                 </span>
-                <span>Active schema headers contain verified <strong className="text-slate-900 font-bold">DataCatalog</strong>, <strong className="text-slate-900 font-bold">TechArticle</strong>, &amp; <strong className="text-slate-900 font-bold">FAQPage</strong> JSON-LD objects.</span>
+                <span>Schema is generated server-side via route-meta and static snapshots for crawlable JSON-LD output.</span>
               </div>
               <span className="text-[10px] bg-teal-100 text-teal-850 px-2 py-0.5 rounded font-black font-mono">Verified Crawlable</span>
             </div>

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-15T11:39:13.974Z",
+  "generatedAt": "2026-07-15T11:58:03.816Z",
   "baseUrl": "https://bestaiagent.in",
-  "totalRoutes": 1505,
+  "totalRoutes": 1506,
   "categories": [
     "hub",
     "alternative",
@@ -4680,9 +4680,33 @@
       "entityName": "Flowise"
     },
     {
+      "path": "/tools/github-copilot",
+      "slug": "github-copilot",
+      "canonicalPath": "/tools/github-copilot",
+      "title": "GitHub Copilot Review – India's Independent Assessment (June 2026) | BestAIAgent.in",
+      "description": "GitHub Copilot Review – India's Independent Assessment (June 2026) with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.",
+      "type": "tool",
+      "parentPillar": "tools",
+      "parentHub": "coding-agents-hub",
+      "lastModified": "2026-07-15",
+      "priority": "0.80",
+      "changefreq": "weekly",
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "SoftwareApplication",
+        "FAQPage",
+        "Review"
+      ],
+      "internalLinkCount": 12,
+      "sourceDataKey": "content/reviews/github-copilot.md",
+      "faqCount": 10,
+      "entityName": "GitHub Copilot"
+    },
+    {
       "path": "/github-copilot",
       "slug": "github-copilot",
-      "canonicalPath": "/github-copilot",
+      "canonicalPath": "/tools/github-copilot",
       "title": "GitHub Copilot Review – India's Independent Assessment (June 2026) | BestAIAgent.in",
       "description": "GitHub Copilot Review – India's Independent Assessment (June 2026) with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.",
       "type": "tool",
@@ -6557,29 +6581,27 @@
     },
     {
       "path": "/ai-agent-tools",
-      "slug": "home",
-      "canonicalPath": "/",
-      "title": "Best AI Agents in India 2026: Compare Tools, Builders, Coding Agents and Business Automation",
-      "description": "Compare the best AI agents in India for coding, business automation, WhatsApp, voice bots, CRM, support, and workflow automation. Independent rankings with INR pricing, DPDP checks, and expert reviews.",
+      "slug": "ai-agent-tools",
+      "canonicalPath": "/ai-agent-tools",
+      "title": "AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in",
+      "description": "Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, alternatives, and implementation fit.",
       "type": "page",
       "parentPillar": "general",
       "parentHub": "",
       "lastModified": "2026-07-15",
-      "priority": "1.00",
-      "changefreq": "daily",
+      "priority": "0.92",
+      "changefreq": "weekly",
       "schemaTypes": [
-        "Organization",
-        "WebSite",
         "WebPage",
         "CollectionPage",
         "BreadcrumbList",
         "ItemList",
         "FAQPage"
       ],
-      "internalLinkCount": 25,
-      "sourceDataKey": "home",
-      "faqCount": 16,
-      "entityName": "BestAIAgent.in"
+      "internalLinkCount": 17,
+      "sourceDataKey": "generated-directory",
+      "faqCount": 4,
+      "entityName": "AI Agent Tools Directory"
     },
     {
       "path": "/authors/arshdeep-singh",
@@ -27882,6 +27904,30 @@
       "entityName": "AI Agent Case Studies and Verified Business Examples"
     },
     {
+      "path": "/search",
+      "slug": "ai-agent-tools",
+      "canonicalPath": "/ai-agent-tools",
+      "title": "AI Agent Tools Directory India 2026: Compare Agents, Builders, MCP Servers and Automation Platforms | BestAIAgent.in",
+      "description": "Browse the BestAIAgent.in AI agent tools directory for India. Compare coding agents, voice agents, business automation tools, no-code builders, MCP servers, pricing evidence, alternatives, and implementation fit.",
+      "type": "page",
+      "parentPillar": "general",
+      "parentHub": "",
+      "lastModified": "2026-07-15",
+      "priority": "0.92",
+      "changefreq": "weekly",
+      "schemaTypes": [
+        "WebPage",
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList",
+        "FAQPage"
+      ],
+      "internalLinkCount": 17,
+      "sourceDataKey": "generated-directory",
+      "faqCount": 4,
+      "entityName": "AI Agent Tools Directory"
+    },
+    {
       "path": "/pricing",
       "slug": "pricing-hub",
       "canonicalPath": "/pricing-hub",
@@ -28464,30 +28510,6 @@
       "sourceDataKey": "generated-editorial",
       "faqCount": 0,
       "entityName": "MCP Servers Directory: Browse & Compare Model Context Protocol Servers for AI Agents in India"
-    },
-    {
-      "path": "/tools/github-copilot",
-      "slug": "github-copilot",
-      "canonicalPath": "/github-copilot",
-      "title": "GitHub Copilot Review – India's Independent Assessment (June 2026) | BestAIAgent.in",
-      "description": "GitHub Copilot Review – India's Independent Assessment (June 2026) with India-focused AI agent analysis, INR pricing context, GST invoice considerations, DPDP Act 2023 privacy notes, comparisons, FAQs, and implementation guidance for Indian startups, SMEs, agencies, developers, and enterprises.",
-      "type": "tool",
-      "parentPillar": "tools",
-      "parentHub": "coding-agents-hub",
-      "lastModified": "2026-07-15",
-      "priority": "0.80",
-      "changefreq": "weekly",
-      "schemaTypes": [
-        "Article",
-        "BreadcrumbList",
-        "SoftwareApplication",
-        "FAQPage",
-        "Review"
-      ],
-      "internalLinkCount": 12,
-      "sourceDataKey": "content/reviews/github-copilot.md",
-      "faqCount": 10,
-      "entityName": "GitHub Copilot"
     },
     {
       "path": "/downloads/methodology-42point.pdf",

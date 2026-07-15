@@ -726,20 +726,24 @@ function renderEntityTable(meta) {
   const relRows = [];
   (entity.competitors || []).forEach((c) => relRows.push([c, 'Competes with']));
   (entity.alternatives || []).forEach((a) => relRows.push([a, 'Alternative to']));
-  if (!relRows.length && !entity.type) return '';
+  const sameAsRows = (entity.sameAs || []).filter((link) => typeof link === 'string' && /^https?:\/\//i.test(link)).slice(0, 6);
+  if (!relRows.length && !entity.type && !sameAsRows.length) return '';
   const typeRow = entity.type
     ? `<tr><td>${escapeHtml(entity.name || meta.h1 || '')}</td><td>Type</td><td>${escapeHtml(entity.type)}</td></tr>\n`
     : '';
   const rows = relRows
     .map(([name, rel]) => `<tr><td>${escapeHtml(entity.name || meta.h1 || '')}</td><td>${escapeHtml(rel)}</td><td>${escapeHtml(titleCase(name))}</td></tr>`)
     .join('\n');
+  const sameAsBlock = sameAsRows.length
+    ? '<tr><td>External Authority</td><td>Same As</td><td>' + sameAsRows.map((link) => `<a href="${escapeHtml(link)}" rel="nofollow noopener">${escapeHtml(link)}</a>`).join('<br>') + '</td></tr>\n'
+    : '';
   return (
     '<section aria-labelledby="entity-heading">\n' +
     '  <h2 id="entity-heading">Entity Overview</h2>\n' +
     '<table>\n' +
-    '  <caption>Key relationships</caption>\n' +
+    '  <caption>Key relationships and authority links</caption>\n' +
     '  <thead><tr><th>Entity</th><th>Relationship</th><th>Related</th></tr></thead>\n' +
-    '<tbody>\n' + typeRow + rows + '\n  </tbody>\n</table>\n' +
+    '<tbody>\n' + typeRow + rows + sameAsBlock + '\n  </tbody>\n</table>\n' +
     '</section>\n'
   );
 }

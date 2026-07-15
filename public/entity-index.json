@@ -143,6 +143,7 @@
       "/ai-agent-market-map",
       "/ai-agent-marketplace",
       "/ai-agent-rankings",
+      "/ai-agent-tools",
       "/ai-agent-trends",
       "/amadeus-sabre-gds-travel-reservation-mcp",
       "/amazon-dynamodb-nosql-partition-mcp",
@@ -151,8 +152,7 @@
       "/aws-cloudformation-cdk-planner-mcp",
       "/best-ai-agent-rankings",
       "/best-mcp-servers",
-      "/blog",
-      "/blog/agent-security-governance-compliance/mcp-supply-chain-security/production-checklist-mcp-supply-chain-security-for-organizations-installing-third-party-servers"
+      "/blog"
     ],
     "relatedConcepts": [
       "AI Agent",
