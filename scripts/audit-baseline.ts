@@ -87,7 +87,7 @@ function main() {
     byGroup[r.sitemapGroup] = (byGroup[r.sitemapGroup] || 0) + 1;
   }
   const dynamicPatterns = ['agents', 'categories', 'compare', 'mcp/servers', 'research', 'authors'];
-  const syntheticRisk: { pattern: string; exampleValid: string; exampleFake: string }[] = [];
+  const syntheticRisk: { pattern: string; exampleValid: string; exampleFake: string; currentlyReturns: string }[] = [];
   // Valid route sample per dynamic pattern
   for (const p of dynamicPatterns) {
     const prefix = `/${p}/`;
