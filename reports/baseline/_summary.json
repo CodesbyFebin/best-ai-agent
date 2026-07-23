@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "baselineScore": 52,
+  "routeCount": 64,
+  "redirectCount": 42,
+  "redirectProblems": 3,
+  "hashRoutingRefs": 22,
+  "legacyARefs": 43,
+  "legacyToolsRefs": 24,
+  "p0Blockers": 10,
+  "reportsWritten": [
+    "content-score.json",
+    "duplicate-intent-pages.csv",
+    "duplicate-intent-pages.json",
+    "internal-links.json",
+    "redirects.json",
+    "repository-inventory.json",
+    "routes.json",
+    "security-findings.md",
+    "seo-score.json",
+    "sitemaps.json"
+  ]
+}

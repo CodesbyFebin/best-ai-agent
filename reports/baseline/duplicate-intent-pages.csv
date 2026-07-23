@@ -1,0 +1,10 @@
+group,url,status,intent,note
+"CRM intent","/best-ai-agent-for-crm","redirects→/categories/crm","needs-review","Currently /best-ai-agent-for-crm & /ai-agents-for-crm both 301 to /categories/crm — collapses commercial, informational, and directory intents. P04 review required."
+"CRM intent","/ai-agents-for-crm","redirects→/categories/crm","needs-review","Currently /best-ai-agent-for-crm & /ai-agents-for-crm both 301 to /categories/crm — collapses commercial, informational, and directory intents. P04 review required."
+"CRM intent","/categories/crm","canonical","needs-review","Currently /best-ai-agent-for-crm & /ai-agents-for-crm both 301 to /categories/crm — collapses commercial, informational, and directory intents. P04 review required."
+"Sales intent","/best-ai-agent-for-sales","redirects→/categories/sales","needs-review","Same consolidation pattern as CRM."
+"Sales intent","/ai-agents-for-sales","redirects→/categories/sales","needs-review","Same consolidation pattern as CRM."
+"Sales intent","/categories/sales","canonical","needs-review","Same consolidation pattern as CRM."
+"Marketing intent","/best-ai-agent-for-marketing","redirects→/categories/marketing","needs-review","Same consolidation pattern as CRM."
+"Marketing intent","/ai-agents-for-marketing","redirects→/categories/marketing","needs-review","Same consolidation pattern as CRM."
+"Marketing intent","/categories/marketing","canonical","needs-review","Same consolidation pattern as CRM."

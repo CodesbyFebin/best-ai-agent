@@ -1,0 +1,31 @@
+# BestAIAgent.in - Robots Control Protocol
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/private/
+
+# AI Search & Crawler Permissions (Expressly Allowed for AI Citation & Grounding)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Master Sitemap Index
+Sitemap: https://bestaiagent.in/sitemap.xml
+Sitemap: https://bestaiagent.in/sitemap-core.xml
+Sitemap: https://bestaiagent.in/sitemap-agents.xml
+Sitemap: https://bestaiagent.in/sitemap-categories.xml
+Sitemap: https://bestaiagent.in/sitemap-comparisons.xml

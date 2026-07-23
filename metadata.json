@@ -1,0 +1,6 @@
+{
+  "name": "BestAIAgent.in",
+  "description": "The premier Indian-focused authority hub for discovering, comparing, and understanding AI agents, frameworks, builders, and coding assistants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

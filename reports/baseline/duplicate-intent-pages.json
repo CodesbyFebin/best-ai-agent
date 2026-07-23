@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "candidates": [
+    {
+      "group": "CRM intent",
+      "urls": [
+        "/best-ai-agent-for-crm",
+        "/ai-agents-for-crm",
+        "/categories/crm"
+      ],
+      "note": "Currently /best-ai-agent-for-crm & /ai-agents-for-crm both 301 to /categories/crm — collapses commercial, informational, and directory intents. P04 review required."
+    },
+    {
+      "group": "Sales intent",
+      "urls": [
+        "/best-ai-agent-for-sales",
+        "/ai-agents-for-sales",
+        "/categories/sales"
+      ],
+      "note": "Same consolidation pattern as CRM."
+    },
+    {
+      "group": "Marketing intent",
+      "urls": [
+        "/best-ai-agent-for-marketing",
+        "/ai-agents-for-marketing",
+        "/categories/marketing"
+      ],
+      "note": "Same consolidation pattern as CRM."
+    }
+  ]
+}

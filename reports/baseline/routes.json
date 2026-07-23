@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "canonicalRouteCount": 64,
+  "byStatus": {
+    "published": 64
+  },
+  "byType": {
+    "pillar": 13,
+    "pricing": 1,
+    "research": 3,
+    "governance": 12,
+    "category": 10,
+    "agent": 15,
+    "comparison": 6,
+    "mcp-server": 4
+  },
+  "bySitemapGroup": {
+    "pages": 23,
+    "mcp": 6,
+    "comparisons": 7,
+    "research": 3,
+    "categories": 10,
+    "agents": 15
+  },
+  "dynamicSynthesisRisk": [
+    {
+      "pattern": "/agents/:slug",
+      "exampleValid": "/agents/cursor",
+      "exampleFake": "/agents/definitely-fake-76ee4a",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    },
+    {
+      "pattern": "/categories/:slug",
+      "exampleValid": "/categories/coding-agents",
+      "exampleFake": "/categories/definitely-fake-b0b5cc",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    },
+    {
+      "pattern": "/compare/:slug",
+      "exampleValid": "/compare/cursor-vs-copilot",
+      "exampleFake": "/compare/definitely-fake-1f83af",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    },
+    {
+      "pattern": "/mcp/servers/:slug",
+      "exampleValid": "/mcp/servers/github",
+      "exampleFake": "/mcp/servers/definitely-fake-e2093d",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    },
+    {
+      "pattern": "/research/:slug",
+      "exampleValid": "/research/state-of-ai-agents-india-2026",
+      "exampleFake": "/research/definitely-fake-7412df",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    },
+    {
+      "pattern": "/authors/:slug",
+      "exampleValid": "/authors/<unknown>",
+      "exampleFake": "/authors/definitely-fake-5d9449",
+      "currentlyReturns": "200 published indexable (synthesized in routeResolver.ts)"
+    }
+  ],
+  "note": "routeResolver.ts:31-160 synthesizes published+indexable routes for ANY non-empty slug under /agents, /categories, /compare, /mcp/servers, /research, /authors. This is the #1 P0 defect (infinite soft-404s)."
+}

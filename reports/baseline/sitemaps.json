@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "findings": [
+    {
+      "severity": "high",
+      "issue": "/sitemap.xml, /sitemap-index.xml, /sitemap-indexed.xml all return 200 with the index",
+      "file": "server.ts:200",
+      "required": "/sitemap-index.xml → 200; /sitemap.xml & /sitemap-indexed.xml → 301 to index"
+    },
+    {
+      "severity": "high",
+      "issue": "robots.txt advertises /sitemap.xml + /sitemap-core.xml (latter not implemented) + individual segments",
+      "file": "public/robots.txt",
+      "required": "Advertise only: Sitemap: https://bestaiagent.in/sitemap-index.xml"
+    },
+    {
+      "severity": "medium",
+      "issue": "Missing required segments: sitemap-reviews, sitemap-pricing, sitemap-alternatives, sitemap-frameworks, sitemap-authors",
+      "file": "server.ts, src/data/sitemapGenerator.ts"
+    },
+    {
+      "severity": "medium",
+      "issue": "Synthetic metadata: changefreq=weekly, priority=0.80-1.00, bulk lastmod 2026-07-23",
+      "file": "src/data/sitemapGenerator.ts:48-54",
+      "required": "Drop changefreq+priority; use real lastmod only when available"
+    },
+    {
+      "severity": "medium",
+      "issue": "Competing llms.txt sources (public/llms.txt static vs server.ts dynamic)",
+      "file": "server.ts:178, public/llms.txt"
+    }
+  ]
+}

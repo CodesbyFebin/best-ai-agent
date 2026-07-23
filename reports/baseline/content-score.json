@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "baselineScore": 40,
+  "issues": [
+    "renderSsrBody.ts uses template-constant scores (9.6/10, 9.4/10) and price (₹1,680/mo) for ALL agent pages",
+    "Synthetic updatedAt \"2026-07-23\" applied to every route",
+    "Unsupported authority claims (5000+ agents, 72% overhead reduction) without sources",
+    "No author/reviewer provenance on SSR content",
+    "No [SOURCE REQUIRED] marker system yet"
+  ]
+}

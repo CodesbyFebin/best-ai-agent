@@ -1,0 +1,369 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "redirectCount": 42,
+  "entries": [
+    {
+      "from": "/tools/cursor",
+      "to": "/agents/cursor",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/cursor-ai",
+      "to": "/agents/cursor",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/claude-code",
+      "to": "/agents/claude-code",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/chatgpt",
+      "to": "/agents/chatgpt",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/claude",
+      "to": "/agents/claude",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/vapi",
+      "to": "/agents/vapi",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/vapi-ai",
+      "to": "/agents/vapi",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/crewai",
+      "to": "/agents/crewai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/yellow-ai",
+      "to": "/agents/yellow-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/flowise",
+      "to": "/agents/flowise-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/flowise-ai",
+      "to": "/agents/flowise-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/reclaim-ai",
+      "to": "/agents/reclaim-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/n8n",
+      "to": "/agents/n8n",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/relevance-ai",
+      "to": "/agents/relevance-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/langgraph",
+      "to": "/agents/langgraph",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/autogen",
+      "to": "/agents/autogen",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/windsurf",
+      "to": "/agents/windsurf",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/retell-ai",
+      "to": "/agents/retell-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/cursor/",
+      "to": "/agents/cursor",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/claude-code/",
+      "to": "/agents/claude-code",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/chatgpt/",
+      "to": "/agents/chatgpt",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/vapi/",
+      "to": "/agents/vapi",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/crewai/",
+      "to": "/agents/crewai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/tools/yellow-ai/",
+      "to": "/agents/yellow-ai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/a/best-ai-agent/reviews/chatgpt",
+      "to": "/agents/chatgpt",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/a/best-ai-agent/reviews/claude",
+      "to": "/agents/claude",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/a/best-ai-agent/reviews/cursor",
+      "to": "/agents/cursor",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/a/best-ai-agent/reviews/vapi",
+      "to": "/agents/vapi",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/a/best-ai-agent/reviews/crewai",
+      "to": "/agents/crewai",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/notion-server",
+      "to": "/mcp/servers/slack",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/slack)"
+    },
+    {
+      "from": "/excel-server",
+      "to": "/mcp/servers/filesystem",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/filesystem)"
+    },
+    {
+      "from": "/shopify-server",
+      "to": "/mcp/servers/github",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/github)"
+    },
+    {
+      "from": "/best-ai-agent-for-crm",
+      "to": "/categories/crm",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/ai-agents-for-crm",
+      "to": "/categories/crm",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/best-ai-agent-for-sales",
+      "to": "/categories/sales",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/ai-agents-for-sales",
+      "to": "/categories/sales",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/best-ai-agent-for-marketing",
+      "to": "/categories/marketing",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/ai-agents-for-marketing",
+      "to": "/categories/marketing",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/glossary",
+      "to": "/sitemap",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/glossary-hub",
+      "to": "/sitemap",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/pricing-hub",
+      "to": "/pricing",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/pricing-intelligence",
+      "to": "/pricing",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": null
+    }
+  ],
+  "problems": [
+    {
+      "from": "/notion-server",
+      "to": "/mcp/servers/slack",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/slack)"
+    },
+    {
+      "from": "/excel-server",
+      "to": "/mcp/servers/filesystem",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/filesystem)"
+    },
+    {
+      "from": "/shopify-server",
+      "to": "/mcp/servers/github",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": true,
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/github)"
+    }
+  ],
+  "problemCount": 3
+}

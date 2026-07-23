@@ -1,0 +1,37 @@
+# BestAIAgent.in - Topical Authority Index for AI Crawlers & LLMs
+> India's premier independent authority platform for evaluating, benchmarking, comparing, and deploying AI agents.
+
+## Core Hubs & Directories
+- Agents Index: https://bestaiagent.in/agents/
+- Categories Directory: https://bestaiagent.in/categories/
+- Rankings Hub: https://bestaiagent.in/rankings/
+- Head-to-Head Comparison Engine: https://bestaiagent.in/compare/
+- AI Frameworks Index: https://bestaiagent.in/frameworks/
+- MCP Servers Directory: https://bestaiagent.in/mcp-servers/
+- India AI Pricing Matrix: https://bestaiagent.in/pricing/
+- Benchmark Lab & Evaluations: https://bestaiagent.in/benchmarks/
+- Annual Industry Research: https://bestaiagent.in/research/
+- Testing & Evaluation Methodology: https://bestaiagent.in/methodology/
+
+## Key Verified Entity Pages
+- Cursor AI: https://bestaiagent.in/agents/cursor/
+- Claude Sonnet: https://bestaiagent.in/agents/claude/
+- ChatGPT Agent: https://bestaiagent.in/agents/chatgpt/
+- Vapi Voice AI: https://bestaiagent.in/agents/vapi/
+- Yellow.ai Enterprise: https://bestaiagent.in/agents/yellow-ai/
+- Flowise RAG Orchestrator: https://bestaiagent.in/agents/flowise/
+- CrewAI Framework: https://bestaiagent.in/agents/crewai/
+- Reclaim AI: https://bestaiagent.in/agents/reclaim-ai/
+- n8n Automation: https://bestaiagent.in/agents/n8n/
+- Relevance AI: https://bestaiagent.in/agents/relevance-ai/
+
+## Featured Head-to-Head Comparisons
+- ChatGPT vs Claude: https://bestaiagent.in/compare/chatgpt-vs-claude/
+- Cursor vs GitHub Copilot: https://bestaiagent.in/compare/cursor-vs-copilot/
+- CrewAI vs AutoGen: https://bestaiagent.in/compare/crewai-vs-autogen/
+- LangGraph vs CrewAI: https://bestaiagent.in/compare/langgraph-vs-crewai/
+- Vapi vs Retell AI: https://bestaiagent.in/compare/vapi-vs-retell/
+
+## Machine Readable Sitemaps & Feeds
+- Sitemap Index: https://bestaiagent.in/sitemap.xml
+- RSS Feed: https://bestaiagent.in/rss.xml

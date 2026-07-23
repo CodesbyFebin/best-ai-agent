@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "baselineScore": 52,
+  "dimensions": {
+    "routing": 58,
+    "ssr": 40,
+    "hydration": 10,
+    "canonicals": 60,
+    "redirects": 38,
+    "handling404": 15,
+    "sitemaps": 57,
+    "structuredData": 44,
+    "internalLinking": 42,
+    "technicalSeo": 61,
+    "aeo": 66,
+    "geo": 60,
+    "accessibility": 60,
+    "security": 35,
+    "performance": 45
+  }
+}
