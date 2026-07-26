@@ -1,0 +1,98 @@
+{
+  "base": {
+    "id": "agent/chatgpt",
+    "type": "agent",
+    "data": {
+      "slug": "chatgpt",
+      "name": "ChatGPT (Agent Mode)",
+      "company": "OpenAI",
+      "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+      "summary": "OpenAI's flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.",
+      "bestFor": [
+        "General Reasoning",
+        "Multi-modal Analysis",
+        "Custom GPT Workflows",
+        "Interactive Canvas Drafting"
+      ],
+      "categories": [
+        "Personal AI Assistants",
+        "Coding Agents",
+        "Research Agents"
+      ],
+      "pricing": {
+        "type": "freemium",
+        "startingPriceUSD": "$20/mo",
+        "startingPriceINR": "₹1,999/mo",
+        "verifiedAt": "2026-07-20",
+        "evidenceClaimIds": [
+          "pricing-chatgpt-1",
+          "pricing-openai-2"
+        ],
+        "details": "Free Tier with GPT-4o mini; Plus at $20/mo; Enterprise customized."
+      },
+      "score": {
+        "overall": 9.5,
+        "reasoning": 9.7,
+        "toolUse": 9.4,
+        "value": 9.2,
+        "privacy": 8.8,
+        "easeOfUse": 9.8,
+        "indiaFit": 9.3,
+        "evidenceQuality": 95
+      },
+      "deployment": [
+        "Web",
+        "Desktop (Mac/Win)",
+        "API",
+        "Mobile (iOS/Android)"
+      ],
+      "integrations": [
+        "Google Workspace",
+        "Microsoft 365",
+        "GitHub",
+        "Zapier"
+      ],
+      "openSource": false,
+      "officialUrl": "https://chatgpt.com",
+      "featured": true,
+      "trending": true,
+      "contentState": "published",
+      "lastVerified": "2026-07-23"
+    }
+  },
+  "enrichment": {
+    "pricing": {
+      "type": "freemium",
+      "startingPriceUSD": "$20/mo",
+      "startingPriceINR": "₹1,999/mo",
+      "verifiedAt": "2026-07-20",
+      "evidenceClaimIds": [
+        "pricing-chatgpt-1",
+        "pricing-openai-2"
+      ],
+      "details": "Free Tier with GPT-4o mini; Plus at $20/mo; Enterprise customized."
+    },
+    "reviews": [],
+    "competitors": [],
+    "company_info": {
+      "name": "OpenAI",
+      "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80"
+    },
+    "use_cases": [
+      "General Reasoning",
+      "Multi-modal Analysis",
+      "Custom GPT Workflows",
+      "Interactive Canvas Drafting"
+    ],
+    "market_data": {
+      "overall": 9.5,
+      "reasoning": 9.7,
+      "toolUse": 9.4,
+      "value": 9.2,
+      "privacy": 8.8,
+      "easeOfUse": 9.8,
+      "indiaFit": 9.3,
+      "evidenceQuality": 95
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "base": {
+    "id": "research/ai-agent-benchmark-index",
+    "type": "research",
+    "data": {
+      "slug": "ai-agent-benchmark-index",
+      "title": "Global AI Agent Benchmark Index (Q3 2026)",
+      "reportType": "Benchmark Index",
+      "summary": "Standardized evaluation measuring agent reasoning accuracy, tool execution reliability, token cost efficiency, and latency under 100 complex multi-step workflows.",
+      "citationReadySummary": "According to the Q3 2026 BestAIAgent Benchmark Index, top-tier coding agents achieve a 94.2% task resolution rate, while general-purpose assistants average 88.5% tool execution accuracy across 1,250 evaluated platforms.",
+      "keyTakeaways": [
+        "Claude 3.5 Sonnet leads software engineering accuracy with 96.4% unit test pass rate.",
+        "Vapi AI leads voice conversational latency at 420ms average round-trip audio.",
+        "Open-source frameworks reduced agent token overhead by 31% year-over-year."
+      ],
+      "urlPath": "/research/state-of-ai-agents-india-2026/",
+      "datasetAvailable": true
+    }
+  },
+  "enrichment": {
+    "pricing": null,
+    "reviews": [],
+    "competitors": [],
+    "company_info": {},
+    "use_cases": [],
+    "market_data": null
+  }
+}

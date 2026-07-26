@@ -1,0 +1,33 @@
+{
+  "base": {
+    "id": "comparison/chatgpt-vs-claude",
+    "type": "comparison",
+    "data": {
+      "pairSlug": "chatgpt-vs-claude",
+      "title": "ChatGPT-4o vs Claude 3.5 Sonnet",
+      "itemA": {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+        "score": 9.5
+      },
+      "itemB": {
+        "name": "Claude",
+        "slug": "claude",
+        "logo": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=120&q=80",
+        "score": 9.6
+      },
+      "verdict": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
+      "urlPath": "/compare/chatgpt-vs-claude/",
+      "lastUpdated": "2026-07-22"
+    }
+  },
+  "enrichment": {
+    "pricing": null,
+    "reviews": [],
+    "competitors": [],
+    "company_info": {},
+    "use_cases": [],
+    "market_data": null
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "manifest": "agent-review",
+  "entityId": "agent/chatgpt",
+  "output": "dist/content/chatgpt-deep/index.html"
+}

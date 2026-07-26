@@ -1,0 +1,27 @@
+{
+  "base": {
+    "id": "category/coding-agents",
+    "type": "category",
+    "data": {
+      "slug": "coding-agents",
+      "name": "Coding Agents",
+      "description": "Autonomous IDE editors, terminal debugging co-pilots, and repository refactoring tools.",
+      "toolCount": 1245,
+      "topAgentSlug": "cursor-ai",
+      "urlPath": "/categories/coding-agents/",
+      "popularKeywords": [
+        "Cursor vs Windsurf",
+        "Autonomous Code Fixer",
+        "Terminal AI Agent"
+      ]
+    }
+  },
+  "enrichment": {
+    "pricing": null,
+    "reviews": [],
+    "competitors": [],
+    "company_info": {},
+    "use_cases": [],
+    "market_data": null
+  }
+}

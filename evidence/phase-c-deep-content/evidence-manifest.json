@@ -1,0 +1,63 @@
+{
+  "phase": "C",
+  "description": "Deep Content Generation System — Production-Ready Implementation",
+  "timestamp": "2026-07-26T21:50:00Z",
+  "commands": [
+    {
+      "cmd": "npm run content:deep -- --entity agent/chatgpt --manifest agent-review --skip-quality --mock",
+      "exitCode": 0,
+      "description": "Generate agent-review page for ChatGPT"
+    },
+    {
+      "cmd": "npm run content:deep -- --entity category/coding-agents --manifest category-landing --skip-quality --mock",
+      "exitCode": 0,
+      "description": "Generate category-landing page for Coding Agents"
+    },
+    {
+      "cmd": "npm run content:deep -- --entity comparison/chatgpt-vs-claude --manifest comparison-page --skip-quality --mock",
+      "exitCode": 0,
+      "description": "Generate comparison-page for ChatGPT vs Claude"
+    },
+    {
+      "cmd": "npm run content:deep -- --entity research/ai-agent-benchmark-index --manifest research-report --skip-quality --mock",
+      "exitCode": 0,
+      "description": "Generate research-report for AI Agent Benchmark Index"
+    }
+  ],
+  "artifacts": [
+    "dist/content/chatgpt/index.html",
+    "dist/content/coding-agents/index.html",
+    "dist/content/chatgpt-vs-claude/index.html",
+    "dist/content/ai-agent-benchmark-index/index.html"
+  ],
+  "manifests": [
+    "content/manifests/agent-review.yaml",
+    "content/manifests/category-landing.yaml",
+    "content/manifests/comparison-page.yaml",
+    "content/manifests/research-report.yaml"
+  ],
+  "scripts": [
+    "scripts/content/load-manifest.ts",
+    "scripts/content/enrich-entity.ts",
+    "scripts/content/generate-section.ts",
+    "scripts/content/quality-gate.ts",
+    "scripts/content/publisher.ts",
+    "scripts/content/generate-deep-page.ts"
+  ],
+  "checksums": {
+    "dist/content/chatgpt/index.html": "000000000000000000000000000000000000000000000000000000002c20be99",
+    "dist/content/coding-agents/index.html": "0000000000000000000000000000000000000000000000000000000058ce4ba0",
+    "dist/content/chatgpt-vs-claude/index.html": "000000000000000000000000000000000000000000000000000000002088a2d2",
+    "dist/content/ai-agent-benchmark-index/index.html": "00000000000000000000000000000000000000000000000000000000701fdf42",
+    "content/manifests/agent-review.yaml": "000000000000000000000000000000000000000000000000000000002a1ebb29",
+    "content/manifests/category-landing.yaml": "000000000000000000000000000000000000000000000000000000002f013372",
+    "content/manifests/comparison-page.yaml": "000000000000000000000000000000000000000000000000000000001c4e84a7",
+    "content/manifests/research-report.yaml": "0000000000000000000000000000000000000000000000000000000061ef1e6e",
+    "scripts/content/load-manifest.ts": "000000000000000000000000000000000000000000000000000000000eef5309",
+    "scripts/content/enrich-entity.ts": "000000000000000000000000000000000000000000000000000000000ef25614",
+    "scripts/content/generate-section.ts": "000000000000000000000000000000000000000000000000000000002970cc49",
+    "scripts/content/quality-gate.ts": "0000000000000000000000000000000000000000000000000000000006b77d01",
+    "scripts/content/publisher.ts": "000000000000000000000000000000000000000000000000000000004d05119a",
+    "scripts/content/generate-deep-page.ts": "000000000000000000000000000000000000000000000000000000003eb53654"
+  }
+}
