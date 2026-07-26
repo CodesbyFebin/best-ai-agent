@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-07-26T19:37:00.320Z",
+  "nodeCount": 25,
+  "edgeCount": 68,
+  "checks": {
+    "duplicateNodeIds": [],
+    "orphanEdges": [],
+    "missingRequiredFields": [],
+    "slugConflicts": [],
+    "invalidEdgeTypes": [],
+    "evidenceClaims": []
+  },
+  "passed": true,
+  "summary": {
+    "duplicateNodeIds": 0,
+    "orphanEdges": 0,
+    "missingRequiredFields": 0,
+    "slugConflicts": 0,
+    "invalidEdgeTypes": 0
+  }
+}

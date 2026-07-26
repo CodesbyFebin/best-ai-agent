@@ -17,7 +17,8 @@
     "test:graph": "tsx scripts/verify-graph.ts",
     "test:manifest": "tsx scripts/verify-manifest.ts",
     "test:production": "tsx scripts/verify-production.mjs",
-    "test:ssr-runtime": "tsx scripts/verify-ssr-runtime.tsx"
+    "test:ssr-runtime": "tsx scripts/verify-ssr-runtime.tsx",
+    "test:graph-integrity": "tsx scripts/verify-graph-integrity.tsx"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

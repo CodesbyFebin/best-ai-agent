@@ -1,0 +1,14 @@
+{
+  "phase": "P0-03",
+  "control": "Graph duplicate semantics and entity integrity",
+  "generatedAt": "2026-07-26T19:37:00.322Z",
+  "graphFile": "graph-data.json",
+  "summary": {
+    "duplicateNodeIds": 0,
+    "orphanEdges": 0,
+    "missingRequiredFields": 0,
+    "slugConflicts": 0,
+    "invalidEdgeTypes": 0
+  },
+  "passed": true
+}
