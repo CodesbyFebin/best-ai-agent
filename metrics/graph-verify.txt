@@ -1,0 +1,37 @@
+
+> react-example@0.0.0 test:graph
+> tsx scripts/verify-graph.ts
+
+🔍 Verifying Knowledge Graph...
+
+✅ graph-data.json exists and is valid JSON
+
+📊 Graph Summary:
+   Nodes: 25
+   Edges: 68
+   Node types: agent, category, comparison, research
+   - agent: 8
+   - category: 10
+   - comparison: 4
+   - research: 3
+
+🔗 Edge types: BELONGS_TO, TOP_AGENT, COMPARED_WITH, SIMILAR_TO, CITED_BY
+   - BELONGS_TO: 18
+   - TOP_AGENT: 6
+   - COMPARED_WITH: 2
+   - SIMILAR_TO: 40
+   - CITED_BY: 2
+✅ All node IDs follow type/id format
+✅ All edges reference valid nodes
+✅ All agents have relationships
+✅ All agents assigned to categories
+✅ Comparison edges are bidirectional
+
+📈 Graph Density: 11.33% (sparse networks typical)
+✅ Graph metadata present (generated: 2026-07-25T18:46:53.582Z)
+
+==================================================
+✅ Graph verification complete
+==================================================
+
+🎉 Graph structure looks perfect!

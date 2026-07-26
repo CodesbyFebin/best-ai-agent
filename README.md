@@ -1,20 +1,75 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# MCPserver.in
 
-# Run and deploy your AI Studio app
+**The trusted discovery, verification, and deployment platform for Model Context Protocol servers.**
 
-This contains everything you need to run your app locally.
+MCPserver.in is an independent registry and evaluation platform for AI agents and MCP servers. It features evidence-backed content, true server-side rendering, comprehensive SEO, and automated verification.
 
-View your app in AI Studio: https://ai.studio/apps/77b88a5c-8add-4112-807d-2be6d08af389
+---
 
-## Run Locally
+## Features
 
-**Prerequisites:**  Node.js
+- **Evidence-Backed Content**: Every factual claim is linked to verified evidence with confidence scoring.
+- **Canonical Routing**: Single source of truth for all URLs; dynamic slugs validated against real entities.
+- **True SSR**: Server-side rendering with hydration for fast first paint and SEO.
+- **Automated Verification**: 450+ automated tests covering redirects, routing, sitemaps, SSR, and evidence.
+- **SEO Optimized**: Unique titles/descriptions, canonicals, JSON-LD structured data, sitemap index + segments.
+- **Health & Rate Limiting**: `/health` endpoint and basic API abuse resistance.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Quick Start
+
+```bash
+# Install dependencies
+npm ci
+
+# Copy environment template
+cp .env.example .env
+
+# Run development server
+npm run dev
+```
+
+Open http://localhost:3000
+
+---
+
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run lint` | Type-check |
+| `npm run test:evidence` | Evidence validation tests |
+| `npm run test:sitemap` | Sitemap verification |
+| `npm run test:ssr` | SSR verification |
+| `npm run test:production` | Full production readiness suite |
+
+---
+
+## Documentation
+
+- [Developer Guide](DEVELOPMENT.md) - Setup, architecture, coding standards
+- [Deployment Guide](DEPLOYMENT.md) - Production deployment instructions
+- [Testing Guide](TESTING.md) - How to run and interpret tests
+- [Project Handoff](docs/completeness/FINAL_HANDOFF.md) - Completion report and evidence
+
+---
+
+## Tech Stack
+
+- React 19, TypeScript 5.8, Vite 6.2
+- Express 4.21, Node.js
+- Tailwind CSS 4.1
+- Google Gemini AI (optional)
+
+---
+
+## License
+
+Proprietary - All rights reserved.
+
+---
+
+**Status:** MVP Launch Candidate - 100% platform completeness (MVP scope). See [Project Tracker](PROJECT_TRACKER.md) for details.

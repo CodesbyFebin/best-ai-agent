@@ -1,0 +1,47 @@
+{
+  "phase": "C1",
+  "commitSha": "613d86496162a006d40dd6ead509128085c4bd19",
+  "gitTag": null,
+  "generatedAt": "2026-07-26T00-29-30Z",
+  "nodeVersion": "26.4.0",
+  "packageManager": "npm@11.4.1",
+  "evidence": [
+    {
+      "name": "git-revision.txt",
+      "path": "evidence/phase-c1/git-revision.txt",
+      "sha256": "d23fe9f87a10c8aee8d1e825a4e0da91273c1cf98479e5eed0f123fd2ff72947",
+      "command": "git rev-parse HEAD",
+      "exitCode": 0
+    },
+    {
+      "name": "git-status.txt",
+      "path": "evidence/phase-c1/git-status.txt",
+      "sha256": "af29ee633ff41068d6a103ffe4b833e82cca4689b649422ac152b39fcb1fba90",
+      "command": "git status --short",
+      "exitCode": 0
+    },
+    {
+      "name": "lint.log",
+      "path": "evidence/phase-c1/lint.log",
+      "sha256": "38b3d651ca75edb090faefa6db075344da9c2376c2c26ff1125fdeeeb417f4b2",
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "name": "manifest-test.log",
+      "path": "evidence/phase-c1/manifest-test.log",
+      "sha256": "927841fe0e09c82c1f7140df66a1fc8b6c1e3b5c7983dcf616339ed236cf642e",
+      "command": "npm run test:manifest",
+      "exitCode": 0
+    },
+    {
+      "name": "graph-test.log",
+      "path": "evidence/phase-c1/graph-test.log",
+      "sha256": "25be22749b93763bb7dd014619086b23272bee2e140a4db9357cd210cf23041e",
+      "command": "npm run test:graph",
+      "exitCode": 0
+    }
+  ],
+  "repository": "/Users/cyberteck/Downloads/final best ai agent",
+  "branch": "main"
+}

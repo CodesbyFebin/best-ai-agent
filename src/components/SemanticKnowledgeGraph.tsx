@@ -242,7 +242,7 @@ export default function SemanticKnowledgeGraph({ onNavigateToUrl, onOpenPseoRepo
                 <p className="text-xs text-slate-400 mt-1 line-clamp-2">{entity.description}</p>
                 {onNavigateToUrl && (
                   <button
-                    onClick={() => onNavigateToUrl(`/a/best-ai-agent/reviews/${entity.slug}/`)}
+                    onClick={() => onNavigateToUrl(`/agents/${entity.slug}/`)}
                     className="mt-3 text-[11px] text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1"
                   >
                     View PSEO Review Entity <ArrowRight className="w-3 h-3" />
@@ -288,7 +288,7 @@ export default function SemanticKnowledgeGraph({ onNavigateToUrl, onOpenPseoRepo
       {activeTab === 'urls' && (
         <div className="mt-6 space-y-3">
           <div className="p-3 bg-cyan-950/30 border border-cyan-500/20 rounded-lg text-xs text-cyan-200">
-            <strong>Clean Flat URL Pattern:</strong> <code>/a/best-ai-agent/&#123;type&#125;/&#123;slug&#125;/</code> provides flat 2-directory deep hierarchy for Google crawl efficiency and LLM entity mapping.
+            <strong>Clean Canonical URL Pattern:</strong> <code>/[type]/[slug]/</code> (e.g. <code>/agents/cursor/</code>, <code>/compare/chatgpt-vs-claude/</code>) provides flat 2-directory deep hierarchy for Google crawl efficiency and LLM entity mapping.
           </div>
 
           <div className="space-y-2">

@@ -21,7 +21,7 @@ export const popularCategories: Category[] = [
     toolCount: 1245,
     topAgent: "Cursor AI",
     topAgentSlug: "cursor-ai",
-    urlPath: "/a/best-ai-agent/use-cases/coding/",
+    urlPath: "/categories/coding-agents/",
     popularKeywords: ["Cursor vs Windsurf", "Autonomous Code Fixer", "Terminal AI Agent"]
   },
   {
@@ -33,7 +33,7 @@ export const popularCategories: Category[] = [
     toolCount: 1096,
     topAgent: "Yellow AI",
     topAgentSlug: "yellow-ai",
-    urlPath: "/a/best-ai-agent/use-cases/business-automation/",
+    urlPath: "/categories/business-automation/",
     popularKeywords: ["ERP Automation", "Invoice OCR Agent", "WhatsApp Business AI"]
   },
   {
@@ -45,7 +45,7 @@ export const popularCategories: Category[] = [
     toolCount: 890,
     topAgent: "Krutrim AI",
     topAgentSlug: "krutrim",
-    urlPath: "/a/best-ai-agent/use-cases/customer-support/",
+    urlPath: "/categories/customer-support/",
     popularKeywords: ["Voice Call Support", "WhatsApp Helpdesk", "Refund Processing Agent"]
   },
   {
@@ -57,7 +57,7 @@ export const popularCategories: Category[] = [
     toolCount: 785,
     topAgent: "Perplexity Pro",
     topAgentSlug: "perplexity",
-    urlPath: "/a/best-ai-agent/use-cases/research/",
+    urlPath: "/categories/research-agents/",
     popularKeywords: ["Deep Research Bot", "Academic Citation AI", "Market Intelligence Agent"]
   },
   {
@@ -69,7 +69,7 @@ export const popularCategories: Category[] = [
     toolCount: 654,
     topAgent: "Regie.ai",
     topAgentSlug: "regie-ai",
-    urlPath: "/a/best-ai-agent/use-cases/sales-marketing/",
+    urlPath: "/categories/sales-marketing/",
     popularKeywords: ["Lead Prospecting Agent", "LinkedIn Outreach Bot", "Ad Copy Synthesizer"]
   },
   {
@@ -81,7 +81,7 @@ export const popularCategories: Category[] = [
     toolCount: 420,
     topAgent: "Vapi AI",
     topAgentSlug: "vapi-ai",
-    urlPath: "/a/best-ai-agent/use-cases/voice-agents/",
+    urlPath: "/categories/voice-agents/",
     popularKeywords: ["SIP Telephony Bot", "Inbound Call Agent", "Multilingual Indian Voice"]
   },
   {
@@ -93,7 +93,7 @@ export const popularCategories: Category[] = [
     toolCount: 543,
     topAgent: "CrewAI",
     topAgentSlug: "crewai",
-    urlPath: "/a/best-ai-agent/use-cases/open-source/",
+    urlPath: "/categories/open-source-agents/",
     popularKeywords: ["Self-hosted Agent", "Local LLM Agent", "Ollama Agentic Loop"]
   },
   {
@@ -105,7 +105,7 @@ export const popularCategories: Category[] = [
     toolCount: 312,
     topAgent: "LangGraph",
     topAgentSlug: "langgraph",
-    urlPath: "/a/best-ai-agent/frameworks/langgraph/",
+    urlPath: "/frameworks/langgraph/",
     popularKeywords: ["LangGraph Tutorial", "CrewAI vs AutoGen", "OpenAI Agent SDK"]
   },
   {
@@ -117,7 +117,7 @@ export const popularCategories: Category[] = [
     toolCount: 1024,
     topAgent: "GitHub MCP Server",
     topAgentSlug: "mcp-github",
-    urlPath: "/a/best-ai-agent/use-cases/mcp-servers/",
+    urlPath: "/categories/mcp-servers/",
     popularKeywords: ["Postgres MCP", "Google Drive MCP", "Brave Search MCP"]
   },
   {
@@ -129,7 +129,7 @@ export const popularCategories: Category[] = [
     toolCount: 1120,
     topAgent: "ChatGPT",
     topAgentSlug: "chatgpt",
-    urlPath: "/a/best-ai-agent/use-cases/personal-assistants/",
+    urlPath: "/categories/personal-ai-assistants/",
     popularKeywords: ["Daily Task Bot", "Email Synthesizer", "Voice Assistant"]
   }
 ];

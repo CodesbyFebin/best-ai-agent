@@ -153,15 +153,15 @@ export interface RecommendedPseoUrl {
 }
 
 export const recommendedPseoUrls: RecommendedPseoUrl[] = [
-  { path: "/a/best-ai-agent/reviews/chatgpt/", type: "Review", entity: "ChatGPT", description: "In-depth review of OpenAI ChatGPT Agent Mode, benchmarks, pricing, and India fit." },
-  { path: "/a/best-ai-agent/reviews/claude/", type: "Review", entity: "Claude", description: "Comprehensive analysis of Anthropic Claude 3.5 Sonnet, Computer Use agent, and code benchmark scores." },
-  { path: "/a/best-ai-agent/reviews/grok/", type: "Review", entity: "Grok", description: "xAI Grok 2 & Grok Heavy review, real-time X data telemetry, spicy mode, and API cost." },
-  { path: "/a/best-ai-agent/comparisons/chatgpt-vs-claude/", type: "Comparison", entity: "ChatGPT vs Claude", description: "Head-to-head comparison between ChatGPT-4o and Claude 3.5 Sonnet for coding and reasoning." },
-  { path: "/a/best-ai-agent/comparisons/claude-vs-gemini/", type: "Comparison", entity: "Claude vs Gemini", description: "Anthropic Claude vs Google Gemini 1.5 Pro benchmark showdown across multi-modal reasoning." },
-  { path: "/a/best-ai-agent/pricing/chatgpt/", type: "Pricing", entity: "ChatGPT Pricing", description: "ChatGPT Free vs Plus ($20/mo) vs Team ($25/mo) vs Enterprise API pricing breakdown." },
-  { path: "/a/best-ai-agent/pricing/claude/", type: "Pricing", entity: "Claude Pricing", description: "Claude Free vs Pro ($20/mo) vs API token pricing per 1M tokens." },
-  { path: "/a/best-ai-agent/alternatives/chatgpt/", type: "Alternatives", entity: "ChatGPT Alternatives", description: "Top 10 alternative AI agents to ChatGPT including Claude, Perplexity, and DeepSeek." },
-  { path: "/a/best-ai-agent/frameworks/langgraph/", type: "Framework", entity: "LangGraph", description: "LangGraph production guide for building stateful cyclic multi-agent graphs." },
-  { path: "/a/best-ai-agent/use-cases/customer-support/", type: "Use Case", entity: "Customer Support", description: "Best AI agents for 24/7 customer support automation, voice call handling, and SLA tracking." },
-  { path: "/a/best-ai-agent/industries/healthcare/", type: "Industry", entity: "Healthcare", description: "HIPAA-compliant AI agents for patient scheduling, medical record parsing, and clinical workflow." }
+  { path: "/agents/chatgpt/", type: "Review", entity: "ChatGPT", description: "In-depth review of OpenAI ChatGPT Agent Mode, benchmarks, pricing, and India fit." },
+  { path: "/agents/claude/", type: "Review", entity: "Claude", description: "Comprehensive analysis of Anthropic Claude 3.5 Sonnet, Computer Use agent, and code benchmark scores." },
+  { path: "/agents/grok/", type: "Review", entity: "Grok", description: "xAI Grok 2 & Grok Heavy review, real-time X data telemetry, spicy mode, and API cost." },
+  { path: "/compare/chatgpt-vs-claude/", type: "Comparison", entity: "ChatGPT vs Claude", description: "Head-to-head comparison between ChatGPT-4o and Claude 3.5 Sonnet for coding and reasoning." },
+  { path: "/compare/claude-vs-gemini/", type: "Comparison", entity: "Claude vs Gemini", description: "Anthropic Claude vs Google Gemini 1.5 Pro benchmark showdown across multi-modal reasoning." },
+  { path: "/pricing/chatgpt/", type: "Pricing", entity: "ChatGPT Pricing", description: "ChatGPT Free vs Plus ($20/mo) vs Team ($25/mo) vs Enterprise API pricing breakdown." },
+  { path: "/pricing/claude/", type: "Pricing", entity: "Claude Pricing", description: "Claude Free vs Pro ($20/mo) vs API token pricing per 1M tokens." },
+  { path: "/alternatives/chatgpt/", type: "Alternatives", entity: "ChatGPT Alternatives", description: "Top 10 alternative AI agents to ChatGPT including Claude, Perplexity, and DeepSeek." },
+  { path: "/frameworks/langgraph/", type: "Framework", entity: "LangGraph", description: "LangGraph production guide for building stateful cyclic multi-agent graphs." },
+  { path: "/categories/customer-support/", type: "Use Case", entity: "Customer Support", description: "Best AI agents for 24/7 customer support automation, voice call handling, and SLA tracking." },
+  { path: "/categories/healthcare/", type: "Industry", entity: "Healthcare", description: "HIPAA-compliant AI agents for patient scheduling, medical record parsing, and clinical workflow." }
 ];

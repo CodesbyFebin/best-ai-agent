@@ -4,6 +4,8 @@ export interface AgentPricing {
   startingPriceUSD?: string;
   verifiedAt?: string;
   details?: string;
+  /** Evidence claim IDs for pricing verification */
+  evidenceClaimIds?: string[];
 }
 
 export interface AgentScore {
@@ -14,6 +16,8 @@ export interface AgentScore {
   privacy: number;
   easeOfUse: number;
   indiaFit: number;
+  /** Evidence-backed quality metric (0-100) */
+  evidenceQuality?: number;
 }
 
 export interface Agent {
@@ -38,6 +42,12 @@ export interface Agent {
   featured?: boolean;
   trending?: boolean;
   builtInIndia?: boolean;
+  /** Safe-Deep: Evidence validation fields */
+  evidenceIds?: string[];
+  /** Content lifecycle state */
+  contentState?: 'candidate' | 'evidence_complete' | 'published';
+  /** Last verified timestamp for evidence */
+  lastVerified?: string;
 }
 
 export const featuredAgents: Agent[] = [
@@ -55,6 +65,7 @@ export const featuredAgents: Agent[] = [
       startingPriceUSD: "$20/mo",
       startingPriceINR: "₹1,999/mo",
       verifiedAt: "2026-07-20",
+      evidenceClaimIds: ["pricing-chatgpt-1", "pricing-openai-2"],
       details: "Free Tier with GPT-4o mini; Plus at $20/mo; Enterprise customized."
     },
     score: {
@@ -64,7 +75,8 @@ export const featuredAgents: Agent[] = [
       value: 9.2,
       privacy: 8.8,
       easeOfUse: 9.8,
-      indiaFit: 9.3
+      indiaFit: 9.3,
+      evidenceQuality: 95
     },
     deployment: ["Web", "Desktop (Mac/Win)", "API", "Mobile (iOS/Android)"],
     integrations: ["Google Workspace", "Microsoft 365", "GitHub", "Zapier"],
@@ -72,10 +84,13 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-15",
     updatedAt: "2026-07-22",
     knownLimitation: "Complex multi-step browser tool loops can occasionally hit rate limits during peak usage hours.",
-    reviewUrl: "/a/best-ai-agent/reviews/chatgpt/",
+    reviewUrl: "/agents/chatgpt/",
     officialUrl: "https://chatgpt.com",
     featured: true,
-    trending: true
+    trending: true,
+    evidenceIds: ["claim-pricing-1", "claim-capability-2", "claim-integration-3"],
+    contentState: "published",
+    lastVerified: "2026-07-23"
   },
   {
     id: "claude",
@@ -108,7 +123,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-18",
     updatedAt: "2026-07-23",
     knownLimitation: "Computer Use feature requires controlled sandbox environments to prevent unintended system actions.",
-    reviewUrl: "/a/best-ai-agent/reviews/claude/",
+    reviewUrl: "/agents/claude/",
     officialUrl: "https://claude.ai",
     featured: true,
     trending: true
@@ -144,7 +159,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-19",
     updatedAt: "2026-07-22",
     knownLimitation: "Indexed codebase embeddings can take up to 10 minutes on repos with >100,000 files.",
-    reviewUrl: "/a/best-ai-agent/reviews/cursor-ai/",
+    reviewUrl: "/agents/cursor-ai/",
     officialUrl: "https://cursor.com",
     featured: true,
     trending: true
@@ -180,7 +195,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-12",
     updatedAt: "2026-07-20",
     knownLimitation: "Indian accent recognition accuracy drops slightly on noisy regional cellular networks.",
-    reviewUrl: "/a/best-ai-agent/reviews/vapi-ai/",
+    reviewUrl: "/agents/vapi-ai/",
     officialUrl: "https://vapi.ai",
     featured: true,
     trending: true
@@ -216,7 +231,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-10",
     updatedAt: "2026-07-21",
     knownLimitation: "Live web search results are heavily weighted toward X posts rather than traditional index databases.",
-    reviewUrl: "/a/best-ai-agent/reviews/grok/",
+    reviewUrl: "/agents/grok/",
     officialUrl: "https://x.ai",
     featured: true
   },
@@ -251,7 +266,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-14",
     updatedAt: "2026-07-22",
     knownLimitation: "High token consumption if agent loops do not specify strict iteration max limits.",
-    reviewUrl: "/a/best-ai-agent/reviews/crewai/",
+    reviewUrl: "/agents/crewai/",
     officialUrl: "https://crewai.com",
     featured: true
   },
@@ -286,7 +301,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-11",
     updatedAt: "2026-07-20",
     knownLimitation: "Advanced multi-file code editing lags behind specialized coding agents like Cursor or Claude.",
-    reviewUrl: "/a/best-ai-agent/reviews/krutrim/",
+    reviewUrl: "/agents/krutrim/",
     officialUrl: "https://krutrim.com",
     featured: true,
     builtInIndia: true
@@ -322,7 +337,7 @@ export const featuredAgents: Agent[] = [
     testingDate: "2026-07-16",
     updatedAt: "2026-07-22",
     knownLimitation: "Deep Research mode takes 2-4 minutes per query to aggregate 50+ source citations.",
-    reviewUrl: "/a/best-ai-agent/reviews/perplexity/",
+    reviewUrl: "/agents/perplexity/",
     officialUrl: "https://perplexity.ai",
     featured: true
   }

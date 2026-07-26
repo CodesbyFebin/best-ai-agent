@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "generatedAt": "2026-07-24T01:39:30.263Z",
   "baselineScore": 40,
   "issues": [
     "renderSsrBody.ts uses template-constant scores (9.6/10, 9.4/10) and price (₹1,680/mo) for ALL agent pages",

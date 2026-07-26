@@ -24,12 +24,14 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Product } from '../data/db';
+import { RelatedAgents } from './RelatedAgents';
 
 interface ProductProfileProps {
   product: Product;
   onBack: () => void;
   onCompare: (slug: string) => void;
   isInCompareList: boolean;
+  agentSlug?: string; // For knowledge graph integration
 }
 
 // Extensive curated data for the 5 key tools to meet the E-E-A-T and 10/10 standards
@@ -260,13 +262,13 @@ services:
   }
 };
 
-export default function ProductProfile({ product, onBack, onCompare, isInCompareList }: ProductProfileProps) {
+export default function ProductProfile({ product, onBack, onCompare, isInCompareList, agentSlug }: ProductProfileProps) {
   const extra = productExtraDetails[product.slug] || productExtraDetails['cursor-ai'];
   const [copiedUrl, setCopiedUrl] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'benchmarks' | 'code' | 'alternatives' | 'reviews'>('overview');
 
   const handleCopyUrl = () => {
-    const shareUrl = `${window.location.origin}${window.location.pathname}#view=product&product=${product.slug}`;
+    const shareUrl = `${window.location.origin}${window.location.pathname}`;
     navigator.clipboard.writeText(shareUrl).then(() => {
       setCopiedUrl(true);
       setTimeout(() => setCopiedUrl(false), 2000);
@@ -618,46 +620,8 @@ export default function ProductProfile({ product, onBack, onCompare, isInCompare
                 </div>
               </div>
 
-              {/* Internal Linking Knowledge Graph Block */}
-              <div className="bg-slate-900 text-white rounded-2xl p-6 shadow-md space-y-4">
-                <h3 className="text-base font-bold flex items-center gap-2 text-violet-400 border-b border-slate-800 pb-3">
-                  <Sparkles className="w-5 h-5" /> Knowledge Graph Internal Links &amp; Related Entities
-                </h3>
-                
-                <div className="grid sm:grid-cols-2 gap-4 text-xs">
-                  <div className="space-y-2">
-                    <span className="font-bold text-slate-400 block uppercase text-[10px] tracking-wider">Top Alternatives</span>
-                    <div className="flex flex-wrap gap-1.5">
-                      {extra.alternatives.map((alt, idx) => (
-                        <button key={idx} onClick={() => onBack()} className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold flex items-center gap-1 transition">
-                          {alt.name} <ExternalLink className="w-3 h-3 text-slate-400" />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <span className="font-bold text-slate-400 block uppercase text-[10px] tracking-wider">Cluster Pillar Hubs</span>
-                    <div className="flex flex-wrap gap-1.5">
-                      <button onClick={onBack} className="px-2.5 py-1 bg-violet-900/50 hover:bg-violet-800/80 text-violet-200 rounded-lg text-xs font-semibold border border-violet-700/50">
-                        /best-ai-agent-for-coding
-                      </button>
-                      <button onClick={onBack} className="px-2.5 py-1 bg-violet-900/50 hover:bg-violet-800/80 text-violet-200 rounded-lg text-xs font-semibold border border-violet-700/50">
-                        /best-ai-agent-platform
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2 sm:col-span-2 pt-2 border-t border-slate-800">
-                    <span className="font-bold text-slate-400 block uppercase text-[10px] tracking-wider">Direct Head-to-Head Comparisons</span>
-                    <div className="flex flex-wrap gap-2">
-                      <button onClick={() => onBack()} className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-100 rounded-xl text-xs font-bold border border-slate-700 flex items-center gap-1.5">
-                        <ArrowLeftRight className="w-3.5 h-3.5 text-violet-400" /> {product.name} vs Competitor Comparison Matrix
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Knowledge Graph Powered Related Agents */}
+              {agentSlug && <RelatedAgents agentSlug={agentSlug} />}
 
             </div>
           )}

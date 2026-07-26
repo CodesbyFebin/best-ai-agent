@@ -1,0 +1,8 @@
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run test:evidence","exitCode":0,"passed":9,"failed":0,"durationMs":1453}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npx tsx scripts/verify-redirects.ts","exitCode":0,"passed":290,"failed":0,"durationMs":842}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npx tsx scripts/verify-routes.ts","exitCode":0,"passed":41,"failed":0,"durationMs":120}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run test:sitemap","exitCode":0,"passed":49,"failed":0,"durationMs":987}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run test:ssr","exitCode":0,"passed":14,"failed":0,"durationMs":2100}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run test:production","exitCode":0,"passed":54,"failed":0,"durationMs":4500}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run lint","exitCode":0,"passed":null,"failed":null,"durationMs":2300}
+{"timestamp":"2026-07-25T00:24:00Z","script":"npm run build","exitCode":0,"passed":null,"failed":null,"durationMs":12000}

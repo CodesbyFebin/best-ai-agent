@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-07-26T08:33:41.645Z",
+  "build": "success",
+  "server": "running",
+  "port": 3000,
+  "routes": {
+    "/": {
+      "description": "homepage",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": 200610
+    },
+    "/agents/cursor": {
+      "description": "agent page",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": 200531
+    },
+    "/admin": {
+      "description": "admin (should be 404)",
+      "expected": 404,
+      "actual": 404,
+      "pass": true,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": 199119
+    },
+    "/api/graph/stats": {
+      "description": "graph API",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "application/json; charset=utf-8",
+      "contentLength": 278
+    },
+    "/sitemap.xml": {
+      "description": "sitemap",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "application/xml; charset=utf-8",
+      "contentLength": 824
+    },
+    "/tools/cursor": {
+      "description": "legacy redirect",
+      "expected": 301,
+      "actual": 301,
+      "pass": true,
+      "contentType": "text/plain; charset=utf-8",
+      "contentLength": 48
+    }
+  },
+  "validation": {
+    "admin": {
+      "hasRootDiv": true,
+      "hasReactComments": false,
+      "hasNoHydrationError": true,
+      "hasExpectedTitle": true,
+      "hasJsonLd": true,
+      "hasCanonical": false,
+      "hasNoAdminIn404": true
+    }
+  },
+  "schema": {
+    "sitemapValid": true
+  }
+}

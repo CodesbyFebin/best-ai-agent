@@ -1,7 +1,8 @@
 import { canonicalRoutes, RouteRecord } from '../routing/routeRegistry.js';
 import { getSitemapRoutes } from '../routing/routeResolver.js';
 
-const DOMAIN = 'https://bestaiagent.in';
+const DOMAIN = process.env.SITEMAP_DOMAIN || 'https://bestaiagent.in';
+console.log("SITEMAP_DOMAIN:", process.env.SITEMAP_DOMAIN);
 
 /**
  * Generates XML Sitemap Index (/sitemap-index.xml or /sitemap.xml)

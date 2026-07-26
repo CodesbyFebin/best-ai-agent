@@ -1,0 +1,10 @@
+{"timestamp":"2026-07-23","id":"ADR-001","title":"Single Canonical Route Registry","decision":"Centralize all routes in src/routing/routeRegistry.ts","rationale":"Prevent route sprawl, serve as single source of truth","status":"accepted"}
+{"timestamp":"2026-07-23","id":"ADR-002","title":"Entity Resolution over Slug Synthesis","decision":"Dynamic routes only resolve to real entities; unknown slugs 404","rationale":"Eliminate soft-404s, improve SEO","status":"accepted"}
+{"timestamp":"2026-07-24","id":"ADR-003","title":"True SSR with Hydration","decision":"Render initial HTML into #root div; client hydrates","rationale":"SEO and perceived performance","status":"accepted"}
+{"timestamp":"2026-07-23","id":"ADR-004","title":"Evidence-Backed Content Lifecycle","decision":"Implement EvidenceClaim, quality gates, state machine","rationale":"Ensure factual claims are trustworthy","status":"accepted"}
+{"timestamp":"2026-07-24","id":"ADR-005","title":"Redirect Single-Hop Guarantee","decision":"All redirects must be one hop; verified by tests","rationale":"SEO conservation","status":"accepted"}
+{"timestamp":"2026-07-23","id":"ADR-006","title":"File-Based Data Layer for MVP","decision":"Store data in src/data/*.ts files","rationale":"Simplicity, fast iteration","status":"accepted"}
+{"timestamp":"2026-07-24","id":"ADR-007","title":"Automated Verification Suite","decision":"Create verify-* scripts; all must pass before release","rationale":"Reliability","status":"accepted"}
+{"timestamp":"2026-07-24","id":"ADR-008","title":"SEO by Default","decision":"Implement canonicals, unique titles/descriptions, JSON-LD, sitemaps","rationale":"Rank well in SERPs and AI Overviews","status":"accepted"}
+{"timestamp":"2026-07-25","id":"ADR-009","title":"Health and Rate Limiting","decision":"Add /health endpoint; limit API to 60 req/min","rationale":"Ops readiness and basic abuse resistance","status":"accepted"}
+{"timestamp":"2026-07-25","id":"ADR-010","title":"Documentation as Code","decision":"Keep all docs version-controlled in docs/","rationale":"Knowledge retention and handoff","status":"accepted"}

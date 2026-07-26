@@ -1,0 +1,157 @@
+#!/usr/bin/env node
+/**
+ * ALTAS P06 — Production Verification Script (ESM)
+ *
+ * Verifies that the production deployment is correctly serving key endpoints.
+ * This script is meant to be run against a deployed URL (e.g., Vercel production).
+ *
+ * Usage: BASE_URL=https://your-app.vercel.app node scripts/verify-production.mjs
+ */
+
+import { execSync } from 'child_process';
+
+const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+
+/**
+ * Make an HTTP request and return the status code.
+ * Uses curl for simplicity.
+ */
+async function fetchStatus(url) {
+  try {
+    const output = execSync(`curl -s -o /dev/null -w "%{http_code}" "${url}"`).toString().trim();
+    return parseInt(output, 10);
+  } catch (err) {
+    return 0; // Treat any error as 0 (failed)
+  }
+}
+
+/**
+ * Make an HTTP request and return the response body.
+ */
+async function fetchBody(url) {
+  try {
+    return execSync(`curl -s "${url}"`).toString();
+  } catch (err) {
+    return '';
+  }
+}
+
+async function main() {
+  console.log('ATLAS verify:production — checking production endpoints\n');
+
+  const results = [];
+
+  function assert(testName, condition, details) {
+    const passed = Boolean(condition);
+    results.push({ test: testName, passed, details: details || (passed ? 'OK' : 'FAILED') });
+    console.log(passed ? `✅ ${testName}` : `❌ ${testName} — ${details || ''}`);
+  }
+
+  // Define test cases: [name, path, expectedStatus]
+  const tests = [
+    { name: 'Homepage', path: '/', expectedStatus: 200 },
+    { name: 'Sitemap index', path: '/sitemap-index.xml', expectedStatus: 200 },
+    { name: 'Agent page (Cursor)', path: '/agents/cursor', expectedStatus: 200 },
+    { name: 'Category page (Coding Agents)', path: '/categories/coding-agents', expectedStatus: 200 },
+    { name: 'Comparison page (Cursor vs Copilot)', path: '/compare/cursor-vs-copilot', expectedStatus: 200 },
+    { name: 'MCP server page (GitHub)', path: '/mcp/servers/github', expectedStatus: 200 },
+    { name: 'Research page (State of AI Agents India 2026)', path: '/research/state-of-ai-agents-india-2026', expectedStatus: 200 },
+    { name: 'Author page (Arshdeep Singh)', path: '/authors/arshdeep-singh', expectedStatus: 200 },
+    { name: 'Legacy redirect (/tools/cursor -> /agents/cursor)', path: '/tools/cursor', expectedStatus: 301 },
+    { name: 'Non-existent page (404)', path: '/this-page-does-not-exist', expectedStatus: 404 },
+  ];
+
+  for (const { name, path, expectedStatus } of tests) {
+    const url = `${baseUrl}${path}`;
+    const status = await fetchStatus(url);
+    const statusOk = status === expectedStatus;
+    // For redirects, we also want to check that the redirect is to the correct place (optional)
+    let details = `expected ${expectedStatus}, got ${status}`;
+    if (statusOk) {
+      // For 200 responses, we can do a light content check
+      if (expectedStatus === 200 && ['/', '/agents/cursor', '/categories/coding-agents'].includes(path)) {
+        try {
+          const body = await fetchBody(url);
+          const hasRootDiv = body.includes('<div id="root">');
+          assert(`${name} → contains <div id="root">`, hasRootDiv);
+          // If the above assertion fails, it will be logged, but we still want to mark the status test as passed.
+          // We'll adjust the overall result later.
+        } catch (e) {
+          // Ignore errors in content check for now
+        }
+      }
+    }
+    assert(name, statusOk, details);
+  }
+
+  // Additional check: ensure the sitemap index is valid XML and contains expected sitemaps
+  {
+    const sitemapIndexUrl = `${baseUrl}/sitemap-index.xml`;
+    const status = await fetchStatus(sitemapIndexUrl);
+    assert('Sitemap index → returns 200', status === 200, `status ${status}`);
+    if (status === 200) {
+      try {
+        const xml = await fetchBody(sitemapIndexUrl);
+        const hasSitemapindexTag = xml.includes('<sitemapindex>');
+        assert('Sitemap index → contains <sitemapindex> tag', hasSitemapindexTag);
+        // Check for a few expected sitemaps
+        const expectedSitemaps = ['sitemap-agents.xml', 'sitemap-categories.xml', 'sitemap-comparisons.xml'];
+        for (const sitemap of expectedSitemaps) {
+          const contains = xml.includes(sitemap);
+          assert(`Sitemap index → references ${sitemap}`, contains);
+        }
+      } catch (e) {
+        assert('Sitemap index → valid XML', false, `Failed to read or parse: ${e}`);
+      }
+    }
+  }
+
+  // Additional check: ensure a 404 page does not self-canonicalize
+  {
+    const notFoundUrl = `${baseUrl}/this-page-does-not-exist`;
+    const status = await fetchStatus(notFoundUrl);
+    assert('Non-existent page → returns 404', status === 404, `status ${status}`);
+    if (status === 404) {
+      try {
+        const body = await fetchBody(notFoundUrl);
+        // Check that there is no canonical tag pointing to the current URL
+        const canonicalMatch = /<link rel="canonical" href="([^"]+)"/.exec(body);
+        let noSelfCanonical = true;
+        if (canonicalMatch && canonicalMatch[1]) {
+          const canonUrl = new URL(canonicalMatch[1], baseUrl);
+          const currentUrl = new URL(notFoundUrl);
+          if (canonUrl.href === currentUrl.href) {
+            noSelfCanonical = false;
+          }
+        }
+        assert('404 page → does not self-canonicalize', noSelfCanonical);
+      } catch (e) {
+        assert('404 page → check canonicalization', false, `Failed to read: ${e}`);
+      }
+    }
+  }
+
+  // Summary
+  console.log('\n=== SUMMARY ===');
+  const passed = results.filter(r => r.passed).length;
+  const failed = results.filter(r => !r.passed).length;
+  console.log(`Total tests: ${results.length}`);
+  console.log(`Passed: ${passed}`);
+  console.log(`Failed: ${failed}`);
+
+  if (failed > 0) {
+    console.log('\n❌ FAILED TESTS:');
+    for (const r of results.filter(r => !r.passed)) {
+      console.log(`  - ${r.test}: ${r.details}`);
+    }
+    process.exit(1);
+  } else {
+    console.log('\n✅ ALL PRODUCTION TESTS PASSED');
+    process.exit(0);
+  }
+}
+
+main().catch(err => {
+  console.error('Unexpected error:', err);
+  process.exit(1);
+});

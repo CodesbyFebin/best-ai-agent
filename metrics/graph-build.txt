@@ -1,0 +1,17 @@
+Skipping unknown category 'Developer Tools' for agent cursor-ai
+Skipping TOP_AGENT edge: yellow-ai not in agent set for category business-automation
+Skipping TOP_AGENT edge: regie-ai not in agent set for category sales-marketing
+Skipping TOP_AGENT edge: langgraph not in agent set for category agent-frameworks
+Skipping TOP_AGENT edge: mcp-github not in agent set for category mcp-servers
+Skipping comparison cursor-vs-copilot: missing agents (cursor-ai, copilot)
+Skipping comparison crewai-vs-autogen: missing agents (crewai, autogen)
+Skipping comparison claude-vs-gemini: missing agents (claude, gemini)
+✅ Graph built:
+   Nodes: 25
+   Edges: 68
+   Output: /Users/cyberteck/Downloads/final best ai agent/graph-data.json
+   Node types: agent, category, comparison, research
+   Edge types: BELONGS_TO, TOP_AGENT, COMPARED_WITH, SIMILAR_TO, CITED_BY
+⚠️  Orphaned nodes: 8 (no edges)
+   Examples: category/sales-marketing, category/mcp-servers, comparison/chatgpt-vs-claude, comparison/cursor-vs-copilot, comparison/crewai-vs-autogen
+   Agents with relationships: 8/8

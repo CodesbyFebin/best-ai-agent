@@ -1,0 +1,29 @@
+{
+  "totalRoutes": 69,
+  "routeTypes": [
+    "agent",
+    "category", 
+    "comparison",
+    "mcp-server",
+    "research",
+    "governance",
+    "pillar",
+    "pricing",
+    "directory"
+  ],
+  "routesByType": {
+    "agent": 15,
+    "category": 10,
+    "comparison": 6,
+    "mcp-server": 7,
+    "research": 3,
+    "governance": 12,
+    "pillar": 13,
+    "pricing": 1,
+    "directory": 2
+  },
+  "invalidRoutes": [],
+  "duplicatePaths": [],
+  "unresolvedEntities": [],
+  "missingRequiredFields": []
+}

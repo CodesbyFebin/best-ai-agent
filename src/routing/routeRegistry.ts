@@ -1,29 +1,22 @@
-export interface RouteRecord {
-  path: string;
-  type: 
-    | 'pillar'
-    | 'category'
-    | 'agent'
-    | 'comparison'
-    | 'pricing'
-    | 'alternative'
-    | 'research'
-    | 'mcp-server'
-    | 'governance';
-  status: 'published' | 'draft' | 'archived' | 'redirect';
-  indexable: boolean;
-  canonicalPath: string;
-  title: string;
-  description: string;
-  sitemapGroup: 'agents' | 'categories' | 'comparisons' | 'mcp' | 'research' | 'pages';
-  updatedAt: string;
-  redirectTo?: string;
-}
+// ATLAS P01: types live in types.ts; re-exported here so all existing
+// `import { RouteRecord } from './routeRegistry.js'` imports keep working.
+export type {
+  RouteType,
+  PublicationStatus,
+  SitemapGroup,
+  RouteRecord,
+} from './types.js';
+import type { RouteRecord } from './types.js';
 
 // 1. Central Canonical Route Registry
+// ATLAS P01: This is the single source of truth. Dynamic routes in
+// routeResolver.ts validate slugs against entityResolvers — arbitrary slugs
+// are no longer synthesized as published.
 export const canonicalRoutes: Record<string, RouteRecord> = {
+  // ATLAS P02 complete — /a/ and /tools/ migrated, MCP redirects fixed.
   // --- Master Pillars & Hubs ---
   '/': {
+    id: 'home',
     path: '/',
     type: 'pillar',
     status: 'published',
@@ -32,9 +25,38 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     title: 'BestAIAgent.in - #1 AI Agent Directory, Rankings & India Pricing Index (2026)',
     description: 'India\'s premier independent AI agent evaluation registry. Benchmark latency, compare prices in INR (₹), and deploy top AI coding, voice, and workflow agents.',
     sitemapGroup: 'pages',
+    view: 'home',
+    updatedAt: '2026-07-23'
+  },
+  // ATLAS P01: directory hub pages (rendered client-side, must be canonical too)
+  '/agents': {
+    id: 'hub:agents',
+    path: '/agents',
+    type: 'directory',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents',
+    title: 'AI Agents Directory & Index - BestAIAgent.in',
+    description: 'Browse the complete directory of evaluated AI agents. Filter by category, compare benchmarks, and review India pricing.',
+    sitemapGroup: 'pages',
+    view: 'home', // Treat agents directory as home for now
+    updatedAt: '2026-07-23'
+  },
+  '/categories': {
+    id: 'hub:categories',
+    path: '/categories',
+    type: 'directory',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/categories',
+    title: 'AI Agent Categories Directory - BestAIAgent.in',
+    description: 'Explore all AI agent categories: coding, voice, customer support, sales, automation, frameworks, and MCP servers.',
+    sitemapGroup: 'pages',
+    view: 'home', // Treat categories directory as home for now
     updatedAt: '2026-07-23'
   },
   '/best-ai-agent': {
+    id: 'pillar:best-ai-agent',
     path: '/best-ai-agent',
     type: 'pillar',
     status: 'published',
@@ -46,6 +68,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/best-ai-agent-for-business': {
+    id: 'pillar:business',
     path: '/best-ai-agent-for-business',
     type: 'pillar',
     status: 'published',
@@ -57,6 +80,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/best-ai-agent-for-coding': {
+    id: 'pillar:coding',
     path: '/best-ai-agent-for-coding',
     type: 'pillar',
     status: 'published',
@@ -68,6 +92,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/best-ai-agent-alternatives': {
+    id: 'pillar:alternatives',
     path: '/best-ai-agent-alternatives',
     type: 'pillar',
     status: 'published',
@@ -79,6 +104,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/best-ai-agents-for-automation': {
+    id: 'pillar:automation',
     path: '/best-ai-agents-for-automation',
     type: 'pillar',
     status: 'published',
@@ -90,6 +116,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/best-ai-agent-frameworks': {
+    id: 'pillar:frameworks',
     path: '/best-ai-agent-frameworks',
     type: 'pillar',
     status: 'published',
@@ -101,6 +128,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/mcp-directory': {
+    id: 'pillar:mcp-directory',
     path: '/mcp-directory',
     type: 'pillar',
     status: 'published',
@@ -112,6 +140,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/mcp-servers': {
+    id: 'pillar:mcp-servers',
     path: '/mcp-servers',
     type: 'pillar',
     status: 'published',
@@ -123,6 +152,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/frameworks': {
+    id: 'pillar:frameworks-list',
     path: '/frameworks',
     type: 'pillar',
     status: 'published',
@@ -134,6 +164,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/rankings': {
+    id: 'pillar:rankings',
     path: '/rankings',
     type: 'pillar',
     status: 'published',
@@ -145,6 +176,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/pricing': {
+    id: 'hub:pricing',
     path: '/pricing',
     type: 'pricing',
     status: 'published',
@@ -156,17 +188,19 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/reviews': {
+    id: 'pillar:reviews',
     path: '/reviews',
     type: 'pillar',
     status: 'published',
     indexable: true,
     canonicalPath: '/reviews',
     title: 'AI Agent Reviews & Technical Audits Directory (2026) - BestAIAgent.in',
-    description: 'Independent reviews and empirical test scores for over 5,000 evaluated AI agents, developer tools, and enterprise automation bots.',
+    description: 'Independent reviews and empirical test scores for evaluated AI agents, developer tools, and enterprise automation bots.',
     sitemapGroup: 'pages',
     updatedAt: '2026-07-23'
   },
   '/compare': {
+    id: 'hub:compare',
     path: '/compare',
     type: 'pillar',
     status: 'published',
@@ -178,6 +212,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/research': {
+    id: 'hub:research',
     path: '/research',
     type: 'research',
     status: 'published',
@@ -189,6 +224,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/sitemap': {
+    id: 'hub:sitemap',
     path: '/sitemap',
     type: 'governance',
     status: 'published',
@@ -202,6 +238,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 
   // --- Governance & Editorial Pages ---
   '/about': {
+    id: 'gov:about',
     path: '/about',
     type: 'governance',
     status: 'published',
@@ -213,6 +250,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/authors': {
+    id: 'hub:authors',
     path: '/authors',
     type: 'governance',
     status: 'published',
@@ -224,6 +262,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/methodology': {
+    id: 'gov:methodology',
     path: '/methodology',
     type: 'governance',
     status: 'published',
@@ -235,6 +274,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/editorial-policy': {
+    id: 'gov:editorial-policy',
     path: '/editorial-policy',
     type: 'governance',
     status: 'published',
@@ -246,6 +286,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/review-process': {
+    id: 'gov:review-process',
     path: '/review-process',
     type: 'governance',
     status: 'published',
@@ -257,6 +298,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/corrections': {
+    id: 'gov:corrections',
     path: '/corrections',
     type: 'governance',
     status: 'published',
@@ -268,6 +310,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/privacy-policy': {
+    id: 'gov:privacy-policy',
     path: '/privacy-policy',
     type: 'governance',
     status: 'published',
@@ -279,6 +322,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/terms': {
+    id: 'gov:terms',
     path: '/terms',
     type: 'governance',
     status: 'published',
@@ -290,6 +334,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/affiliate-disclosure': {
+    id: 'gov:affiliate-disclosure',
     path: '/affiliate-disclosure',
     type: 'governance',
     status: 'published',
@@ -301,6 +346,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/contact': {
+    id: 'gov:contact',
     path: '/contact',
     type: 'governance',
     status: 'published',
@@ -312,6 +358,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/knowledge-graph': {
+    id: 'gov:knowledge-graph',
     path: '/knowledge-graph',
     type: 'governance',
     status: 'published',
@@ -325,6 +372,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 
   // --- Category Hubs (/categories/[slug]) ---
   '/categories/coding-agents': {
+    id: 'cat:coding-agents',
     path: '/categories/coding-agents',
     type: 'category',
     status: 'published',
@@ -336,6 +384,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/voice-bots': {
+    id: 'cat:voice-bots',
     path: '/categories/voice-bots',
     type: 'category',
     status: 'published',
@@ -347,6 +396,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/orchestration': {
+    id: 'cat:orchestration',
     path: '/categories/orchestration',
     type: 'category',
     status: 'published',
@@ -358,6 +408,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/business': {
+    id: 'cat:business',
     path: '/categories/business',
     type: 'category',
     status: 'published',
@@ -369,6 +420,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/crm': {
+    id: 'cat:crm',
     path: '/categories/crm',
     type: 'category',
     status: 'published',
@@ -380,6 +432,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/customer-support': {
+    id: 'cat:customer-support',
     path: '/categories/customer-support',
     type: 'category',
     status: 'published',
@@ -391,6 +444,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/sales': {
+    id: 'cat:sales',
     path: '/categories/sales',
     type: 'category',
     status: 'published',
@@ -402,6 +456,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/marketing': {
+    id: 'cat:marketing',
     path: '/categories/marketing',
     type: 'category',
     status: 'published',
@@ -413,6 +468,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/research': {
+    id: 'cat:research',
     path: '/categories/research',
     type: 'category',
     status: 'published',
@@ -424,6 +480,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/categories/automation': {
+    id: 'cat:automation',
     path: '/categories/automation',
     type: 'category',
     status: 'published',
@@ -437,6 +494,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 
   // --- Agent Entity Pages (/agents/[slug]) ---
   '/agents/cursor': {
+    id: 'agent:cursor',
     path: '/agents/cursor',
     type: 'agent',
     status: 'published',
@@ -448,6 +506,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/claude-code': {
+    id: 'agent:claude-code',
     path: '/agents/claude-code',
     type: 'agent',
     status: 'published',
@@ -459,6 +518,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/chatgpt': {
+    id: 'agent:chatgpt',
     path: '/agents/chatgpt',
     type: 'agent',
     status: 'published',
@@ -470,6 +530,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/claude': {
+    id: 'agent:claude',
     path: '/agents/claude',
     type: 'agent',
     status: 'published',
@@ -481,6 +542,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/vapi': {
+    id: 'agent:vapi',
     path: '/agents/vapi',
     type: 'agent',
     status: 'published',
@@ -492,6 +554,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/crewai': {
+    id: 'agent:crewai',
     path: '/agents/crewai',
     type: 'agent',
     status: 'published',
@@ -503,6 +566,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/yellow-ai': {
+    id: 'agent:yellow-ai',
     path: '/agents/yellow-ai',
     type: 'agent',
     status: 'published',
@@ -514,6 +578,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/flowise-ai': {
+    id: 'agent:flowise-ai',
     path: '/agents/flowise-ai',
     type: 'agent',
     status: 'published',
@@ -525,6 +590,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/reclaim-ai': {
+    id: 'agent:reclaim-ai',
     path: '/agents/reclaim-ai',
     type: 'agent',
     status: 'published',
@@ -536,6 +602,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/n8n': {
+    id: 'agent:n8n',
     path: '/agents/n8n',
     type: 'agent',
     status: 'published',
@@ -547,6 +614,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/relevance-ai': {
+    id: 'agent:relevance-ai',
     path: '/agents/relevance-ai',
     type: 'agent',
     status: 'published',
@@ -558,6 +626,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/langgraph': {
+    id: 'agent:langgraph',
     path: '/agents/langgraph',
     type: 'agent',
     status: 'published',
@@ -569,6 +638,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/autogen': {
+    id: 'agent:autogen',
     path: '/agents/autogen',
     type: 'agent',
     status: 'published',
@@ -580,6 +650,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/windsurf': {
+    id: 'agent:windsurf',
     path: '/agents/windsurf',
     type: 'agent',
     status: 'published',
@@ -591,6 +662,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/agents/retell-ai': {
+    id: 'agent:retell-ai',
     path: '/agents/retell-ai',
     type: 'agent',
     status: 'published',
@@ -604,6 +676,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 
   // --- Comparison Pages (/compare/[slug]) ---
   '/compare/cursor-vs-copilot': {
+    id: 'cmp:cursor-vs-copilot',
     path: '/compare/cursor-vs-copilot',
     type: 'comparison',
     status: 'published',
@@ -615,6 +688,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/compare/chatgpt-vs-claude': {
+    id: 'cmp:chatgpt-vs-claude',
     path: '/compare/chatgpt-vs-claude',
     type: 'comparison',
     status: 'published',
@@ -626,6 +700,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/compare/crewai-vs-autogen': {
+    id: 'cmp:crewai-vs-autogen',
     path: '/compare/crewai-vs-autogen',
     type: 'comparison',
     status: 'published',
@@ -637,6 +712,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/compare/langgraph-vs-crewai': {
+    id: 'cmp:langgraph-vs-crewai',
     path: '/compare/langgraph-vs-crewai',
     type: 'comparison',
     status: 'published',
@@ -648,6 +724,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/compare/vapi-vs-retell': {
+    id: 'cmp:vapi-vs-retell',
     path: '/compare/vapi-vs-retell',
     type: 'comparison',
     status: 'published',
@@ -659,6 +736,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/compare/flowise-vs-dify': {
+    id: 'cmp:flowise-vs-dify',
     path: '/compare/flowise-vs-dify',
     type: 'comparison',
     status: 'published',
@@ -672,6 +750,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 
   // --- MCP Servers (/mcp/servers/[slug]) ---
   '/mcp/servers/github': {
+    id: 'mcp:github',
     path: '/mcp/servers/github',
     type: 'mcp-server',
     status: 'published',
@@ -683,6 +762,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/mcp/servers/postgres': {
+    id: 'mcp:postgres',
     path: '/mcp/servers/postgres',
     type: 'mcp-server',
     status: 'published',
@@ -694,6 +774,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/mcp/servers/slack': {
+    id: 'mcp:slack',
     path: '/mcp/servers/slack',
     type: 'mcp-server',
     status: 'published',
@@ -705,6 +786,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/mcp/servers/filesystem': {
+    id: 'mcp:filesystem',
     path: '/mcp/servers/filesystem',
     type: 'mcp-server',
     status: 'published',
@@ -715,9 +797,46 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     sitemapGroup: 'mcp',
     updatedAt: '2026-07-23'
   },
+  '/mcp/servers/notion': {
+    id: 'mcp:notion',
+    path: '/mcp/servers/notion',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/notion',
+    title: 'Notion MCP Server Setup & Integration Guide - BestAIAgent.in',
+    description: 'Connect Claude and AI agents to Notion workspaces via MCP protocol. Read/write pages, databases, and search workspace content.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/excel': {
+    id: 'mcp:excel',
+    path: '/mcp/servers/excel',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/excel',
+    title: 'Excel MCP Server Setup & Spreadsheet Automation - BestAIAgent.in',
+    description: 'Programmatic Excel and spreadsheet operations via MCP server. Read, write, and analyze spreadsheet data with AI agents.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/shopify': {
+    id: 'mcp:shopify',
+    path: '/mcp/servers/shopify',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/shopify',
+    title: 'Shopify MCP Server Setup & E-Commerce Integration - BestAIAgent.in',
+    description: 'Connect AI agents to Shopify stores via MCP protocol. Manage products, orders, customers, and inventory programmatically.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
 
   // --- Research Reports (/research/[slug]) ---
   '/research/state-of-ai-agents-india-2026': {
+    id: 'research:india-2026',
     path: '/research/state-of-ai-agents-india-2026',
     type: 'research',
     status: 'published',
@@ -729,6 +848,7 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     updatedAt: '2026-07-23'
   },
   '/research/voice-latency-report': {
+    id: 'research:voice-latency',
     path: '/research/voice-latency-report',
     type: 'research',
     status: 'published',
@@ -742,6 +862,8 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 };
 
 // 2. Legacy Server-Side 301 Redirect Registry
+// ATLAS P02 will migrate /a/ and /tools/ references and fix the wrong MCP
+// redirects (notion→slack, excel→filesystem, shopify→github).
 export const legacyRedirects: Record<string, string> = {
   // Legacy /tools/ to /agents/ entity mapping
   '/tools/cursor': '/agents/cursor',
@@ -779,9 +901,10 @@ export const legacyRedirects: Record<string, string> = {
   '/a/best-ai-agent/reviews/crewai': '/agents/crewai',
 
   // Root MCP server legacy consolidation
-  '/notion-server': '/mcp/servers/slack',
-  '/excel-server': '/mcp/servers/filesystem',
-  '/shopify-server': '/mcp/servers/github',
+  // ATLAS P02: fix these — redirects now point to semantically correct entities
+  '/notion-server': '/mcp/servers/notion',
+  '/excel-server': '/mcp/servers/excel',
+  '/shopify-server': '/mcp/servers/shopify',
 
   // Keyword overlap consolidation
   '/best-ai-agent-for-crm': '/categories/crm',
@@ -793,5 +916,8 @@ export const legacyRedirects: Record<string, string> = {
   '/glossary': '/sitemap',
   '/glossary-hub': '/sitemap',
   '/pricing-hub': '/pricing',
-  '/pricing-intelligence': '/pricing'
+  '/pricing-intelligence': '/pricing',
+  // Sitemap aliases
+  '/sitemap.xml': '/sitemap-index.xml',
+  '/sitemap-indexed.xml': '/sitemap-index.xml',
 };

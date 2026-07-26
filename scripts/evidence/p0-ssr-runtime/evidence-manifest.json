@@ -1,0 +1,21 @@
+{
+  "phase": "P0-02",
+  "control": "SSR runtime and hydration verification",
+  "commit": "(working tree)",
+  "generatedAt": "2026-07-26T08:33:41.662Z",
+  "buildSuccess": true,
+  "serverPort": 3000,
+  "testRoutes": [
+    "/",
+    "/agents/cursor",
+    "/admin",
+    "/api/graph/stats",
+    "/sitemap.xml",
+    "/tools/cursor"
+  ],
+  "summary": {
+    "totalRoutes": 6,
+    "passedRoutes": 6,
+    "htmlValid": false
+  }
+}

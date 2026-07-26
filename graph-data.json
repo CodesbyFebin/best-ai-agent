@@ -1,0 +1,1383 @@
+{
+  "nodes": [
+    {
+      "id": "agent/chatgpt",
+      "type": "agent",
+      "data": {
+        "slug": "chatgpt",
+        "name": "ChatGPT (Agent Mode)",
+        "company": "OpenAI",
+        "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+        "summary": "OpenAI's flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.",
+        "bestFor": [
+          "General Reasoning",
+          "Multi-modal Analysis",
+          "Custom GPT Workflows",
+          "Interactive Canvas Drafting"
+        ],
+        "categories": [
+          "Personal AI Assistants",
+          "Coding Agents",
+          "Research Agents"
+        ],
+        "pricing": {
+          "type": "freemium",
+          "startingPriceUSD": "$20/mo",
+          "startingPriceINR": "₹1,999/mo",
+          "verifiedAt": "2026-07-20",
+          "evidenceClaimIds": [
+            "pricing-chatgpt-1",
+            "pricing-openai-2"
+          ],
+          "details": "Free Tier with GPT-4o mini; Plus at $20/mo; Enterprise customized."
+        },
+        "score": {
+          "overall": 9.5,
+          "reasoning": 9.7,
+          "toolUse": 9.4,
+          "value": 9.2,
+          "privacy": 8.8,
+          "easeOfUse": 9.8,
+          "indiaFit": 9.3,
+          "evidenceQuality": 95
+        },
+        "deployment": [
+          "Web",
+          "Desktop (Mac/Win)",
+          "API",
+          "Mobile (iOS/Android)"
+        ],
+        "integrations": [
+          "Google Workspace",
+          "Microsoft 365",
+          "GitHub",
+          "Zapier"
+        ],
+        "openSource": false,
+        "officialUrl": "https://chatgpt.com",
+        "featured": true,
+        "trending": true,
+        "contentState": "published",
+        "lastVerified": "2026-07-23"
+      }
+    },
+    {
+      "id": "agent/claude",
+      "type": "agent",
+      "data": {
+        "slug": "claude",
+        "name": "Claude 3.5 Sonnet & Computer Use",
+        "company": "Anthropic",
+        "logo": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=120&q=80",
+        "summary": "Industry-leading agent for complex code generation, autonomous OS control (Computer Use), and deep document analysis.",
+        "bestFor": [
+          "Complex Code Refactoring",
+          "Autonomous Computer Control",
+          "Long Document Analysis",
+          "Artifact Generation"
+        ],
+        "categories": [
+          "Coding Agents",
+          "Research Agents",
+          "Personal AI Assistants"
+        ],
+        "pricing": {
+          "type": "freemium",
+          "startingPriceUSD": "$20/mo",
+          "startingPriceINR": "₹1,999/mo",
+          "verifiedAt": "2026-07-21",
+          "details": "Free Tier; Pro at $20/mo; Team at $25/user/mo; Pay-as-you-go API."
+        },
+        "score": {
+          "overall": 9.6,
+          "reasoning": 9.8,
+          "toolUse": 9.7,
+          "value": 9.3,
+          "privacy": 9.2,
+          "easeOfUse": 9.5,
+          "indiaFit": 9.1
+        },
+        "deployment": [
+          "Web",
+          "Desktop",
+          "API",
+          "CLI"
+        ],
+        "integrations": [
+          "GitHub",
+          "VS Code",
+          "Slack",
+          "Google Drive"
+        ],
+        "openSource": false,
+        "officialUrl": "https://claude.ai",
+        "featured": true,
+        "trending": true
+      }
+    },
+    {
+      "id": "agent/cursor-ai",
+      "type": "agent",
+      "data": {
+        "slug": "cursor-ai",
+        "name": "Cursor AI Editor",
+        "company": "Anysphere",
+        "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=120&q=80",
+        "summary": "AI-first fork of VS Code with multi-file Agent Mode, terminal execution, and deep codebase indexing.",
+        "bestFor": [
+          "Full-stack Codebase Refactoring",
+          "Autonomous Terminal Debugging",
+          "Multi-file Changes"
+        ],
+        "categories": [
+          "Coding Agents",
+          "Developer Tools"
+        ],
+        "pricing": {
+          "type": "freemium",
+          "startingPriceUSD": "$20/mo",
+          "startingPriceINR": "₹1,800/mo",
+          "verifiedAt": "2026-07-19",
+          "details": "Free trial (2,000 completions); Pro at $20/mo; Business at $40/user/mo."
+        },
+        "score": {
+          "overall": 9.7,
+          "reasoning": 9.6,
+          "toolUse": 9.8,
+          "value": 9.5,
+          "privacy": 9,
+          "easeOfUse": 9.7,
+          "indiaFit": 9.6
+        },
+        "deployment": [
+          "Desktop IDE (Mac/Win/Linux)"
+        ],
+        "integrations": [
+          "Git",
+          "GitHub",
+          "Terminal",
+          "VS Code Extensions"
+        ],
+        "openSource": false,
+        "officialUrl": "https://cursor.com",
+        "featured": true,
+        "trending": true
+      }
+    },
+    {
+      "id": "agent/vapi-ai",
+      "type": "agent",
+      "data": {
+        "slug": "vapi-ai",
+        "name": "Vapi Voice AI Platform",
+        "company": "Vapi Labs",
+        "logo": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=120&q=80",
+        "summary": "Enterprise voice AI orchestration platform powering low-latency phone agents and conversational voice workflows.",
+        "bestFor": [
+          "Inbound Customer Phone Support",
+          "Outbound Appointment Scheduling",
+          "Low-latency Voice Bots"
+        ],
+        "categories": [
+          "Voice Agents",
+          "Customer Support",
+          "Business Automation"
+        ],
+        "pricing": {
+          "type": "paid",
+          "startingPriceUSD": "$0.05/min",
+          "startingPriceINR": "₹4.50/min",
+          "verifiedAt": "2026-07-15",
+          "details": "Pay-as-you-go per audio minute + telephony costs."
+        },
+        "score": {
+          "overall": 9.3,
+          "reasoning": 9,
+          "toolUse": 9.5,
+          "value": 9.2,
+          "privacy": 9.4,
+          "easeOfUse": 9.2,
+          "indiaFit": 9.5
+        },
+        "deployment": [
+          "API",
+          "Telephony (SIP/Twilio)",
+          "Web SDK",
+          "Mobile SDK"
+        ],
+        "integrations": [
+          "Twilio",
+          "Exotel",
+          "Salesforce",
+          "Zapier",
+          "HubSpot"
+        ],
+        "openSource": false,
+        "officialUrl": "https://vapi.ai",
+        "featured": true,
+        "trending": true
+      }
+    },
+    {
+      "id": "agent/grok",
+      "type": "agent",
+      "data": {
+        "slug": "grok",
+        "name": "Grok 2 & Grok Heavy",
+        "company": "xAI",
+        "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+        "summary": "Uncensored conversational AI agent with real-time X telemetry access, FLUX image synthesis, and vision logic.",
+        "bestFor": [
+          "Real-time News Analysis",
+          "Social Media Trend Intelligence",
+          "Filter-free Debates"
+        ],
+        "categories": [
+          "Personal AI Assistants",
+          "Research Agents"
+        ],
+        "pricing": {
+          "type": "paid",
+          "startingPriceUSD": "$8/mo",
+          "startingPriceINR": "₹650/mo",
+          "verifiedAt": "2026-07-10",
+          "details": "Included with X Premium ($8/mo) or X Premium+ ($16/mo)."
+        },
+        "score": {
+          "overall": 8.9,
+          "reasoning": 9,
+          "toolUse": 8.6,
+          "value": 9.1,
+          "privacy": 8.3,
+          "easeOfUse": 9,
+          "indiaFit": 8.8
+        },
+        "deployment": [
+          "Web",
+          "X iOS/Android App",
+          "API"
+        ],
+        "integrations": [
+          "X Telemetry",
+          "FLUX Image Gen"
+        ],
+        "openSource": false,
+        "officialUrl": "https://x.ai",
+        "featured": true
+      }
+    },
+    {
+      "id": "agent/crewai",
+      "type": "agent",
+      "data": {
+        "slug": "crewai",
+        "name": "CrewAI Orchestration",
+        "company": "CrewAI Inc",
+        "logo": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
+        "summary": "Leading Python multi-agent framework enabling role-based agent coordination, tool delegation, and sequential execution.",
+        "bestFor": [
+          "Multi-agent Task Pipelines",
+          "Autonomous Content Production",
+          "Hierarchical Agent Teams"
+        ],
+        "categories": [
+          "Agent Frameworks",
+          "Open-Source Agents"
+        ],
+        "pricing": {
+          "type": "open_source",
+          "startingPriceUSD": "Free",
+          "startingPriceINR": "Free",
+          "verifiedAt": "2026-07-15",
+          "details": "100% Open-Source Python library; Enterprise Cloud starting at $250/mo."
+        },
+        "score": {
+          "overall": 9.4,
+          "reasoning": 9.3,
+          "toolUse": 9.6,
+          "value": 9.8,
+          "privacy": 9.6,
+          "easeOfUse": 9.1,
+          "indiaFit": 9.5
+        },
+        "deployment": [
+          "Python Package (PyPI)",
+          "Docker",
+          "Self-hosted Server",
+          "Cloud Run"
+        ],
+        "integrations": [
+          "LangChain Tools",
+          "LlamaIndex",
+          "OpenAI API",
+          "Anthropic API"
+        ],
+        "openSource": true,
+        "officialUrl": "https://crewai.com",
+        "featured": true
+      }
+    },
+    {
+      "id": "agent/krutrim",
+      "type": "agent",
+      "data": {
+        "slug": "krutrim",
+        "name": "Krutrim AI Agent",
+        "company": "Ola Krutrim",
+        "logo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80",
+        "summary": "India's pioneer sovereign AI agent suite trained on 22 Indic languages with native Indian context and payments support.",
+        "bestFor": [
+          "Indic Language Customer Service",
+          "Indian Regulatory Workflows",
+          "UPI Payment Integration"
+        ],
+        "categories": [
+          "Business Automation",
+          "Personal AI Assistants"
+        ],
+        "pricing": {
+          "type": "freemium",
+          "startingPriceUSD": "Free",
+          "startingPriceINR": "Free",
+          "verifiedAt": "2026-07-18",
+          "details": "Free Consumer Tier; Cloud API starting at ₹0.09 per 1,000 tokens."
+        },
+        "score": {
+          "overall": 8.8,
+          "reasoning": 8.4,
+          "toolUse": 8.7,
+          "value": 9.5,
+          "privacy": 9,
+          "easeOfUse": 8.9,
+          "indiaFit": 9.9
+        },
+        "deployment": [
+          "Web",
+          "Mobile App",
+          "REST API",
+          "Krutrim Cloud"
+        ],
+        "integrations": [
+          "UPI Payments",
+          "WhatsApp Business",
+          "ONDC Protocol"
+        ],
+        "openSource": false,
+        "officialUrl": "https://krutrim.com",
+        "featured": true,
+        "builtInIndia": true
+      }
+    },
+    {
+      "id": "agent/perplexity",
+      "type": "agent",
+      "data": {
+        "slug": "perplexity",
+        "name": "Perplexity Pro Agent",
+        "company": "Perplexity AI",
+        "logo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+        "summary": "Conversational answer engine combining live web synthesis, citation verification, and Deep Research agent workflows.",
+        "bestFor": [
+          "Academic & Market Research",
+          "Fact-checked Syntheses",
+          "Real-time Citation Verification"
+        ],
+        "categories": [
+          "Research Agents",
+          "Personal AI Assistants"
+        ],
+        "pricing": {
+          "type": "freemium",
+          "startingPriceUSD": "$20/mo",
+          "startingPriceINR": "₹1,999/mo",
+          "verifiedAt": "2026-07-20",
+          "details": "Free Tier (5 Pro searches/day); Pro at $20/mo with unlimited Opus/GPT-4o queries."
+        },
+        "score": {
+          "overall": 9.5,
+          "reasoning": 9.5,
+          "toolUse": 9.6,
+          "value": 9.4,
+          "privacy": 8.9,
+          "easeOfUse": 9.8,
+          "indiaFit": 9.2
+        },
+        "deployment": [
+          "Web",
+          "iOS/Android",
+          "Chrome Extension",
+          "API"
+        ],
+        "integrations": [
+          "Google Search",
+          "Wolfram Alpha",
+          "Academic Papers"
+        ],
+        "openSource": false,
+        "officialUrl": "https://perplexity.ai",
+        "featured": true
+      }
+    },
+    {
+      "id": "category/coding-agents",
+      "type": "category",
+      "data": {
+        "slug": "coding-agents",
+        "name": "Coding Agents",
+        "description": "Autonomous IDE editors, terminal debugging co-pilots, and repository refactoring tools.",
+        "toolCount": 1245,
+        "topAgentSlug": "cursor-ai",
+        "urlPath": "/categories/coding-agents/",
+        "popularKeywords": [
+          "Cursor vs Windsurf",
+          "Autonomous Code Fixer",
+          "Terminal AI Agent"
+        ]
+      }
+    },
+    {
+      "id": "category/business-automation",
+      "type": "category",
+      "data": {
+        "slug": "business-automation",
+        "name": "Business Automation",
+        "description": "Enterprise workflow orchestrators, document processing bots, and SLA monitors.",
+        "toolCount": 1096,
+        "topAgentSlug": "yellow-ai",
+        "urlPath": "/categories/business-automation/",
+        "popularKeywords": [
+          "ERP Automation",
+          "Invoice OCR Agent",
+          "WhatsApp Business AI"
+        ]
+      }
+    },
+    {
+      "id": "category/customer-support",
+      "type": "category",
+      "data": {
+        "slug": "customer-support",
+        "name": "Customer Support",
+        "description": "24/7 omni-channel customer service agents with ticket resolution and SLA guarantees.",
+        "toolCount": 890,
+        "topAgentSlug": "krutrim",
+        "urlPath": "/categories/customer-support/",
+        "popularKeywords": [
+          "Voice Call Support",
+          "WhatsApp Helpdesk",
+          "Refund Processing Agent"
+        ]
+      }
+    },
+    {
+      "id": "category/research-agents",
+      "type": "category",
+      "data": {
+        "slug": "research-agents",
+        "name": "Research Agents",
+        "description": "Deep research synthesis engines with multi-source citation verification and web scraping.",
+        "toolCount": 785,
+        "topAgentSlug": "perplexity",
+        "urlPath": "/categories/research-agents/",
+        "popularKeywords": [
+          "Deep Research Bot",
+          "Academic Citation AI",
+          "Market Intelligence Agent"
+        ]
+      }
+    },
+    {
+      "id": "category/sales-marketing",
+      "type": "category",
+      "data": {
+        "slug": "sales-marketing",
+        "name": "Sales & Marketing",
+        "description": "Automated outbound prospecting, cold email personalization, and content creation suites.",
+        "toolCount": 654,
+        "topAgentSlug": "regie-ai",
+        "urlPath": "/categories/sales-marketing/",
+        "popularKeywords": [
+          "Lead Prospecting Agent",
+          "LinkedIn Outreach Bot",
+          "Ad Copy Synthesizer"
+        ]
+      }
+    },
+    {
+      "id": "category/voice-agents",
+      "type": "category",
+      "data": {
+        "slug": "voice-agents",
+        "name": "Voice Agents",
+        "description": "Low-latency conversational phone agents for inbound inquiries and outbound scheduling.",
+        "toolCount": 420,
+        "topAgentSlug": "vapi-ai",
+        "urlPath": "/categories/voice-agents/",
+        "popularKeywords": [
+          "SIP Telephony Bot",
+          "Inbound Call Agent",
+          "Multilingual Indian Voice"
+        ]
+      }
+    },
+    {
+      "id": "category/open-source-agents",
+      "type": "category",
+      "data": {
+        "slug": "open-source-agents",
+        "name": "Open-Source Agents",
+        "description": "Self-hostable, transparent agent codebases with local model weights and private data privacy.",
+        "toolCount": 543,
+        "topAgentSlug": "crewai",
+        "urlPath": "/categories/open-source-agents/",
+        "popularKeywords": [
+          "Self-hosted Agent",
+          "Local LLM Agent",
+          "Ollama Agentic Loop"
+        ]
+      }
+    },
+    {
+      "id": "category/agent-frameworks",
+      "type": "category",
+      "data": {
+        "slug": "agent-frameworks",
+        "name": "Agent Frameworks",
+        "description": "Developer SDKs and libraries for constructing multi-agent systems and graph workflows.",
+        "toolCount": 312,
+        "topAgentSlug": "langgraph",
+        "urlPath": "/frameworks/langgraph/",
+        "popularKeywords": [
+          "LangGraph Tutorial",
+          "CrewAI vs AutoGen",
+          "OpenAI Agent SDK"
+        ]
+      }
+    },
+    {
+      "id": "category/mcp-servers",
+      "type": "category",
+      "data": {
+        "slug": "mcp-servers",
+        "name": "MCP Servers",
+        "description": "Model Context Protocol servers providing structured data tool access to AI assistants.",
+        "toolCount": 1024,
+        "topAgentSlug": "mcp-github",
+        "urlPath": "/categories/mcp-servers/",
+        "popularKeywords": [
+          "Postgres MCP",
+          "Google Drive MCP",
+          "Brave Search MCP"
+        ]
+      }
+    },
+    {
+      "id": "category/personal-ai-assistants",
+      "type": "category",
+      "data": {
+        "slug": "personal-ai-assistants",
+        "name": "Personal AI Assistants",
+        "description": "Everyday productivity companions for task management, calendar coordination, and drafting.",
+        "toolCount": 1120,
+        "topAgentSlug": "chatgpt",
+        "urlPath": "/categories/personal-ai-assistants/",
+        "popularKeywords": [
+          "Daily Task Bot",
+          "Email Synthesizer",
+          "Voice Assistant"
+        ]
+      }
+    },
+    {
+      "id": "comparison/chatgpt-vs-claude",
+      "type": "comparison",
+      "data": {
+        "pairSlug": "chatgpt-vs-claude",
+        "title": "ChatGPT-4o vs Claude 3.5 Sonnet",
+        "itemA": {
+          "name": "ChatGPT",
+          "slug": "chatgpt",
+          "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+          "score": 9.5
+        },
+        "itemB": {
+          "name": "Claude",
+          "slug": "claude",
+          "logo": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=120&q=80",
+          "score": 9.6
+        },
+        "verdict": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
+        "urlPath": "/compare/chatgpt-vs-claude/",
+        "lastUpdated": "2026-07-22"
+      }
+    },
+    {
+      "id": "comparison/cursor-vs-copilot",
+      "type": "comparison",
+      "data": {
+        "pairSlug": "cursor-vs-copilot",
+        "title": "Cursor AI vs GitHub Copilot Workspace",
+        "itemA": {
+          "name": "Cursor AI",
+          "slug": "cursor-ai",
+          "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=120&q=80",
+          "score": 9.7
+        },
+        "itemB": {
+          "name": "GitHub Copilot",
+          "slug": "copilot",
+          "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&q=80",
+          "score": 8.9
+        },
+        "verdict": "Cursor AI offers far superior multi-file reasoning and terminal execution for professional developers.",
+        "urlPath": "/compare/cursor-vs-copilot/",
+        "lastUpdated": "2026-07-21"
+      }
+    },
+    {
+      "id": "comparison/crewai-vs-autogen",
+      "type": "comparison",
+      "data": {
+        "pairSlug": "crewai-vs-autogen",
+        "title": "CrewAI vs Microsoft AutoGen",
+        "itemA": {
+          "name": "CrewAI",
+          "slug": "crewai",
+          "logo": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
+          "score": 9.4
+        },
+        "itemB": {
+          "name": "AutoGen",
+          "slug": "autogen",
+          "logo": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
+          "score": 9.1
+        },
+        "verdict": "CrewAI is faster to prototype role-based agent teams; AutoGen offers deeper conversational matrix customization.",
+        "urlPath": "/compare/crewai-vs-autogen/",
+        "lastUpdated": "2026-07-20"
+      }
+    },
+    {
+      "id": "comparison/claude-vs-gemini",
+      "type": "comparison",
+      "data": {
+        "pairSlug": "claude-vs-gemini",
+        "title": "Claude 3.5 vs Google Gemini 1.5 Pro",
+        "itemA": {
+          "name": "Claude 3.5",
+          "slug": "claude",
+          "logo": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=120&q=80",
+          "score": 9.6
+        },
+        "itemB": {
+          "name": "Gemini 1.5",
+          "slug": "gemini",
+          "logo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+          "score": 9.3
+        },
+        "verdict": "Gemini excels for massive video/audio/PDF context analysis; Claude wins for code generation and logic precision.",
+        "urlPath": "/compare/claude-vs-gemini/",
+        "lastUpdated": "2026-07-19"
+      }
+    },
+    {
+      "id": "research/ai-agent-benchmark-index",
+      "type": "research",
+      "data": {
+        "slug": "ai-agent-benchmark-index",
+        "title": "Global AI Agent Benchmark Index (Q3 2026)",
+        "reportType": "Benchmark Index",
+        "summary": "Standardized evaluation measuring agent reasoning accuracy, tool execution reliability, token cost efficiency, and latency under 100 complex multi-step workflows.",
+        "citationReadySummary": "According to the Q3 2026 BestAIAgent Benchmark Index, top-tier coding agents achieve a 94.2% task resolution rate, while general-purpose assistants average 88.5% tool execution accuracy across 1,250 evaluated platforms.",
+        "keyTakeaways": [
+          "Claude 3.5 Sonnet leads software engineering accuracy with 96.4% unit test pass rate.",
+          "Vapi AI leads voice conversational latency at 420ms average round-trip audio.",
+          "Open-source frameworks reduced agent token overhead by 31% year-over-year."
+        ],
+        "urlPath": "/research/state-of-ai-agents-india-2026/",
+        "datasetAvailable": true
+      }
+    },
+    {
+      "id": "research/ai-agent-pricing-tracker",
+      "type": "research",
+      "data": {
+        "slug": "ai-agent-pricing-tracker",
+        "title": "AI Agent Enterprise & India Pricing Tracker",
+        "reportType": "Pricing Index",
+        "summary": "Comprehensive market comparison of API token rates, seat licenses, GST compliance, and Indian Rupee (INR) payment gateways for top AI agents.",
+        "citationReadySummary": "BestAIAgent.in's 2026 Pricing Index reveals that 68% of commercial AI agents now support Indian Rupee billing via UPI or net banking, with seat licenses averaging ₹1,650/user/month.",
+        "keyTakeaways": [
+          "UPI & local card support grew from 32% in 2024 to 68% in 2026.",
+          "Average cost per autonomous agent workflow run dropped 42% due to model compression.",
+          "Freemium conversion rates remain highest in coding IDE agents (14.2%)."
+        ],
+        "urlPath": "/research/voice-latency-report/",
+        "datasetAvailable": true
+      }
+    },
+    {
+      "id": "research/india-ai-agent-adoption",
+      "type": "research",
+      "data": {
+        "slug": "india-ai-agent-adoption",
+        "title": "State of AI Agent Adoption in India (2026)",
+        "reportType": "Adoption Survey",
+        "summary": "Detailed study on how Indian startups, IT services enterprises, and MSMEs deploy AI agents across customer care, IT automation, and Indic language support.",
+        "citationReadySummary": "BestAIAgent.in research indicates that 72% of surveyed Indian enterprises deploy voice or WhatsApp AI agents to handle customer inquiries in regional Indic languages.",
+        "keyTakeaways": [
+          "Bengaluru and Hyderabad lead with 62% of India's AI agent startups.",
+          "Indic language support (Hindi, Tamil, Telugu, Kannada) is required by 81% of domestic buyers.",
+          "WhatsApp Business API is the #1 integration channel for Indian customer service bots."
+        ],
+        "urlPath": "/research/ai-agent-benchmark-index/",
+        "datasetAvailable": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "agent/chatgpt",
+      "to": "category/personal-ai-assistants",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "category/coding-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "category/research-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "category/coding-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "category/research-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "category/personal-ai-assistants",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/cursor-ai",
+      "to": "category/coding-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/vapi-ai",
+      "to": "category/voice-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/vapi-ai",
+      "to": "category/customer-support",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/vapi-ai",
+      "to": "category/business-automation",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "category/personal-ai-assistants",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "category/research-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/crewai",
+      "to": "category/agent-frameworks",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/crewai",
+      "to": "category/open-source-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "category/business-automation",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "category/personal-ai-assistants",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "category/research-agents",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "category/personal-ai-assistants",
+      "type": "BELONGS_TO",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/coding-agents",
+      "to": "agent/cursor-ai",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/customer-support",
+      "to": "agent/krutrim",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/research-agents",
+      "to": "agent/perplexity",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/voice-agents",
+      "to": "agent/vapi-ai",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/open-source-agents",
+      "to": "agent/crewai",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "category/personal-ai-assistants",
+      "to": "agent/chatgpt",
+      "type": "TOP_AGENT",
+      "properties": {
+        "confidence": 1
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/claude",
+      "type": "COMPARED_WITH",
+      "properties": {
+        "comparisonUrl": "/compare/chatgpt-vs-claude/",
+        "verdict": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
+        "winnerByUseCase": {
+          "useCase": "Coding & Document Analysis",
+          "winnerName": "Claude 3.5 Sonnet",
+          "reason": "Superior code accuracy and artifact generation with native Computer Use mode."
+        }
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/chatgpt",
+      "type": "COMPARED_WITH",
+      "properties": {
+        "comparisonUrl": "/compare/chatgpt-vs-claude/",
+        "verdict": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
+        "winnerByUseCase": {
+          "useCase": "Coding & Document Analysis",
+          "winnerName": "Claude 3.5 Sonnet",
+          "reason": "Superior code accuracy and artifact generation with native Computer Use mode."
+        }
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/krutrim",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/krutrim",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/krutrim",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/krutrim",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Personal AI Assistants",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/cursor-ai",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/cursor-ai",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/cursor-ai",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/cursor-ai",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Coding Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/chatgpt",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/chatgpt",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/claude",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/claude",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/grok",
+      "to": "agent/perplexity",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/perplexity",
+      "to": "agent/grok",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Research Agents",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/vapi-ai",
+      "to": "agent/krutrim",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Business Automation",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "agent/krutrim",
+      "to": "agent/vapi-ai",
+      "type": "SIMILAR_TO",
+      "properties": {
+        "reason": "same-category",
+        "category": "Business Automation",
+        "score": 0.8
+      }
+    },
+    {
+      "from": "research/ai-agent-benchmark-index",
+      "to": "agent/claude",
+      "type": "CITED_BY",
+      "properties": {
+        "context": "auto-detected mention",
+        "confidence": 0.7
+      }
+    },
+    {
+      "from": "research/ai-agent-benchmark-index",
+      "to": "agent/vapi-ai",
+      "type": "CITED_BY",
+      "properties": {
+        "context": "auto-detected mention",
+        "confidence": 0.7
+      }
+    }
+  ],
+  "metadata": {
+    "generatedAt": "2026-07-26T04:57:25.757Z",
+    "nodeCount": 25,
+    "edgeCount": 68
+  }
+}

@@ -1,0 +1,1508 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: Independent
+        - generic [ref=e11]: Transparent scoring • India-specific pricing and deployment guidance
+      - button "How we test" [ref=e12] [cursor=pointer]
+    - banner [ref=e16]:
+      - generic [ref=e18]:
+        - button "BestAIAgent .in Independent Discovery & Benchmarks" [ref=e20] [cursor=pointer]:
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - generic [ref=e28]: BestAIAgent
+              - generic [ref=e29]: .in
+            - generic [ref=e30]: Independent Discovery & Benchmarks
+        - navigation [ref=e31]:
+          - button "AI Agents" [ref=e32] [cursor=pointer]
+          - button "Categories" [ref=e33] [cursor=pointer]
+          - button "Compare" [ref=e34] [cursor=pointer]
+          - button "Benchmarks & Graph" [ref=e35] [cursor=pointer]
+          - button "Research" [ref=e42] [cursor=pointer]
+          - button "More" [ref=e44] [cursor=pointer]
+        - generic [ref=e48]:
+          - button "Search agents... ⌘K" [ref=e49] [cursor=pointer]:
+            - generic [ref=e53]: Search agents...
+            - generic [ref=e54]: ⌘K
+          - button "Find My Agent" [ref=e55] [cursor=pointer]
+    - main [ref=e60]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e67]: Database updated July 23, 2026
+            - generic [ref=e68]: •
+            - generic [ref=e69]: 1,250+ Agents Evaluated
+          - heading "Find the Right AI Agent for Any Task" [level=1] [ref=e70]
+          - paragraph [ref=e71]: Explore independent reviews, transparent benchmark scores, real pricing, integrations, deployment options, and known limitations across leading AI agents.
+          - generic [ref=e72]:
+            - generic [ref=e73]: What do you need an AI agent for?
+            - generic [ref=e74]:
+              - textbox "What do you need an AI agent for?" [ref=e75]:
+                - /placeholder: e.g. Coding, customer support, research, voice bots, workflow automation...
+              - button "Find Agents" [ref=e76] [cursor=pointer]
+            - generic [ref=e80]:
+              - generic [ref=e81]: "Popular:"
+              - button "Coding" [ref=e82] [cursor=pointer]
+              - button "Customer Support" [ref=e83] [cursor=pointer]
+              - button "Research" [ref=e84] [cursor=pointer]
+              - button "Sales" [ref=e85] [cursor=pointer]
+              - button "Voice" [ref=e86] [cursor=pointer]
+              - button "Automation" [ref=e87] [cursor=pointer]
+              - button "Open Source" [ref=e88] [cursor=pointer]
+              - button "Enterprise" [ref=e89] [cursor=pointer]
+          - generic [ref=e90]:
+            - button "Launch Agent Finder" [ref=e91] [cursor=pointer]
+            - button "Compare Top Agents" [ref=e96] [cursor=pointer]
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: 1,250+
+              - generic [ref=e101]: Agents Indexed
+            - generic [ref=e102]:
+              - generic [ref=e103]: 450+
+              - generic [ref=e104]: Independent Reviews
+            - generic [ref=e105]:
+              - generic [ref=e106]: 280+
+              - generic [ref=e107]: Comparisons
+            - generic [ref=e108]:
+              - generic [ref=e109]: 100% Verified
+              - generic [ref=e110]: Methodology Tested
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]: BestAI Score Matrix
+            - generic [ref=e119]: Live Preview
+          - generic [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - img "Claude 3.5 Sonnet" [ref=e123]
+                - generic [ref=e124]:
+                  - heading "Claude 3.5 Sonnet" [level=2] [ref=e125]
+                  - generic [ref=e126]: Anthropic • Coding & Reasoning
+              - generic [ref=e128]:
+                - generic [ref=e131]: "9.6"
+                - generic [ref=e132]: /10
+            - paragraph [ref=e133]: Top performer for complex software refactoring, multi-file code editing, and Computer Use desktop control.
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]: Reasoning
+                - generic [ref=e137]: "9.8"
+              - generic [ref=e138]:
+                - generic [ref=e139]: Tool Use
+                - generic [ref=e140]: "9.7"
+              - generic [ref=e141]:
+                - generic [ref=e142]: India Pricing
+                - generic [ref=e143]: ₹1,999/mo
+            - generic [ref=e144]:
+              - generic [ref=e145]: Verified Review
+              - generic [ref=e149]: View Breakdown →
+          - generic [ref=e150] [cursor=pointer]:
+            - generic [ref=e154]:
+              - strong [ref=e155]: "Cursor AI vs Copilot:"
+              - text: Multi-file agent editing winner
+            - generic [ref=e156]: Compare →
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - button [ref=e160] [cursor=pointer]:
+            - generic [ref=e165]:
+              - strong [ref=e166]: 1,250+
+              - text: Agents Indexed
+          - button [ref=e167] [cursor=pointer]:
+            - generic [ref=e171]:
+              - strong [ref=e172]: 450+
+              - text: Independent Reviews
+          - button [ref=e173] [cursor=pointer]:
+            - generic [ref=e176]:
+              - strong [ref=e177]: 100+
+              - text: Published Benchmarks
+        - generic [ref=e184]:
+          - text: "Database Last Updated:"
+          - strong [ref=e185]: July 23, 2026
+      - generic [ref=e187]:
+        - generic [ref=e188]: AEO Direct Answer Summary
+        - heading "What is the best AI agent?" [level=2] [ref=e193]
+        - paragraph [ref=e194]: The best AI agent depends on the task. Coding teams may prioritize repository understanding and code execution (e.g. Cursor AI or Claude 3.5 Sonnet), while businesses may need workflow automation, integrations, governance, and predictable pricing (e.g. Yellow AI or Krutrim). BestAIAgent.in compares agents using transparent criteria rather than naming one universal winner.
+        - generic [ref=e195]:
+          - generic [ref=e196]: "Explore Rankings & Tools:"
+          - button "Best Coding Agents" [ref=e197] [cursor=pointer]
+          - button "Best Business Agents" [ref=e202] [cursor=pointer]
+          - button "Best Research Agents" [ref=e207] [cursor=pointer]
+          - button "Compare Matrix" [ref=e212] [cursor=pointer]
+          - button "Our Methodology" [ref=e218] [cursor=pointer]
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - generic [ref=e226]: Curated Directories
+            - heading "Explore AI Agents by Category" [level=2] [ref=e227]
+            - paragraph [ref=e228]: Browse agents by task, workflow, deployment model, and technology stack.
+          - button "View All Categories" [ref=e229] [cursor=pointer]
+        - generic [ref=e233]:
+          - generic [ref=e234] [cursor=pointer]:
+            - generic [ref=e240]:
+              - heading "Coding Agents" [level=3] [ref=e241]
+              - paragraph [ref=e242]: Autonomous IDE editors, terminal debugging co-pilots, and repository refactoring tools.
+            - generic [ref=e243]:
+              - generic [ref=e244]: 1,245 Agents
+              - 'generic "Top: Cursor AI" [ref=e245]'
+          - generic [ref=e246] [cursor=pointer]:
+            - generic [ref=e253]:
+              - heading "Business Automation" [level=3] [ref=e254]
+              - paragraph [ref=e255]: Enterprise workflow orchestrators, document processing bots, and SLA monitors.
+            - generic [ref=e256]:
+              - generic [ref=e257]: 1,096 Agents
+              - 'generic "Top: Yellow AI" [ref=e258]'
+          - generic [ref=e259] [cursor=pointer]:
+            - generic [ref=e264]:
+              - heading "Customer Support" [level=3] [ref=e265]
+              - paragraph [ref=e266]: 24/7 omni-channel customer service agents with ticket resolution and SLA guarantees.
+            - generic [ref=e267]:
+              - generic [ref=e268]: 890 Agents
+              - 'generic "Top: Krutrim AI" [ref=e269]'
+          - generic [ref=e270] [cursor=pointer]:
+            - generic [ref=e276]:
+              - heading "Research Agents" [level=3] [ref=e277]
+              - paragraph [ref=e278]: Deep research synthesis engines with multi-source citation verification and web scraping.
+            - generic [ref=e279]:
+              - generic [ref=e280]: 785 Agents
+              - 'generic "Top: Perplexity Pro" [ref=e281]'
+          - generic [ref=e282] [cursor=pointer]:
+            - generic [ref=e288]:
+              - heading "Sales & Marketing" [level=3] [ref=e289]
+              - paragraph [ref=e290]: Automated outbound prospecting, cold email personalization, and content creation suites.
+            - generic [ref=e291]:
+              - generic [ref=e292]: 654 Agents
+              - 'generic "Top: Regie.ai" [ref=e293]'
+          - generic [ref=e294] [cursor=pointer]:
+            - generic [ref=e300]:
+              - heading "Voice Agents" [level=3] [ref=e301]
+              - paragraph [ref=e302]: Low-latency conversational phone agents for inbound inquiries and outbound scheduling.
+            - generic [ref=e303]:
+              - generic [ref=e304]: 420 Agents
+              - 'generic "Top: Vapi AI" [ref=e305]'
+          - generic [ref=e306] [cursor=pointer]:
+            - generic [ref=e312]:
+              - heading "Open-Source Agents" [level=3] [ref=e313]
+              - paragraph [ref=e314]: Self-hostable, transparent agent codebases with local model weights and private data privacy.
+            - generic [ref=e315]:
+              - generic [ref=e316]: 543 Agents
+              - 'generic "Top: CrewAI" [ref=e317]'
+          - generic [ref=e318] [cursor=pointer]:
+            - generic [ref=e324]:
+              - heading "Agent Frameworks" [level=3] [ref=e325]
+              - paragraph [ref=e326]: Developer SDKs and libraries for constructing multi-agent systems and graph workflows.
+            - generic [ref=e327]:
+              - generic [ref=e328]: 312 Agents
+              - 'generic "Top: LangGraph" [ref=e329]'
+          - generic [ref=e330] [cursor=pointer]:
+            - generic [ref=e338]:
+              - heading "MCP Servers" [level=3] [ref=e339]
+              - paragraph [ref=e340]: Model Context Protocol servers providing structured data tool access to AI assistants.
+            - generic [ref=e341]:
+              - generic [ref=e342]: 1,024 Agents
+              - 'generic "Top: GitHub MCP Server" [ref=e343]'
+          - generic [ref=e344] [cursor=pointer]:
+            - generic [ref=e350]:
+              - heading "Personal AI Assistants" [level=3] [ref=e351]
+              - paragraph [ref=e352]: Everyday productivity companions for task management, calendar coordination, and drafting.
+            - generic [ref=e353]:
+              - generic [ref=e354]: 1,120 Agents
+              - 'generic "Top: ChatGPT" [ref=e355]'
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - generic [ref=e360]: Independent Evaluation Matrix
+            - heading "Featured AI Agents & Benchmarks" [level=2] [ref=e365]
+            - paragraph [ref=e366]: Top-performing platforms evaluated using our transparent 7-dimension scoring framework.
+          - button "How scores are calculated" [ref=e367] [cursor=pointer]
+        - generic [ref=e371]:
+          - generic [ref=e372]:
+            - generic [ref=e373]:
+              - generic [ref=e374]:
+                - generic [ref=e375]:
+                  - img "ChatGPT (Agent Mode)" [ref=e376]
+                  - generic [ref=e377]:
+                    - heading "ChatGPT (Agent Mode)" [level=3] [ref=e379] [cursor=pointer]
+                    - generic [ref=e380]: OpenAI
+                - generic [ref=e382]:
+                  - generic [ref=e385]: "9.5"
+                  - generic [ref=e386]: /10
+              - paragraph [ref=e387]: OpenAI's flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.
+              - generic [ref=e388]:
+                - generic [ref=e389]: General Reasoning
+                - generic [ref=e390]: Multi-modal Analysis
+              - generic [ref=e391]:
+                - generic [ref=e392]:
+                  - generic [ref=e393]: "Pricing:"
+                  - generic [ref=e394]: $20/mo (₹1,999/mo)
+                - generic [ref=e395]:
+                  - generic [ref=e396]: "Deployment:"
+                  - generic [ref=e397]: Web, Desktop (Mac/Win)
+              - generic [ref=e398]:
+                - strong [ref=e399]: "Note:"
+                - text: Complex multi-step browser tool loops can occasionally hit rate limits during peak usage hours.
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - button "View Review" [ref=e402] [cursor=pointer]
+                - button "Compare" [ref=e403] [cursor=pointer]
+              - link "Visit Official Site" [ref=e404] [cursor=pointer]:
+                - /url: https://chatgpt.com
+          - generic [ref=e410]:
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]:
+                  - img "Claude 3.5 Sonnet & Computer Use" [ref=e414]
+                  - generic [ref=e415]:
+                    - heading "Claude 3.5 Sonnet & Computer Use" [level=3] [ref=e417] [cursor=pointer]
+                    - generic [ref=e418]: Anthropic
+                - generic [ref=e420]:
+                  - generic [ref=e423]: "9.6"
+                  - generic [ref=e424]: /10
+              - paragraph [ref=e425]: Industry-leading agent for complex code generation, autonomous OS control (Computer Use), and deep document analysis.
+              - generic [ref=e426]:
+                - generic [ref=e427]: Complex Code Refactoring
+                - generic [ref=e428]: Autonomous Computer Control
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - generic [ref=e431]: "Pricing:"
+                  - generic [ref=e432]: $20/mo (₹1,999/mo)
+                - generic [ref=e433]:
+                  - generic [ref=e434]: "Deployment:"
+                  - generic [ref=e435]: Web, Desktop
+              - generic [ref=e436]:
+                - strong [ref=e437]: "Note:"
+                - text: Computer Use feature requires controlled sandbox environments to prevent unintended system actions.
+            - generic [ref=e438]:
+              - generic [ref=e439]:
+                - button "View Review" [ref=e440] [cursor=pointer]
+                - button "Compare" [ref=e441] [cursor=pointer]
+              - link "Visit Official Site" [ref=e442] [cursor=pointer]:
+                - /url: https://claude.ai
+          - generic [ref=e448]:
+            - generic [ref=e449]:
+              - generic [ref=e450]:
+                - generic [ref=e451]:
+                  - img "Cursor AI Editor" [ref=e452]
+                  - generic [ref=e453]:
+                    - heading "Cursor AI Editor" [level=3] [ref=e455] [cursor=pointer]
+                    - generic [ref=e456]: Anysphere
+                - generic [ref=e458]:
+                  - generic [ref=e461]: "9.7"
+                  - generic [ref=e462]: /10
+              - paragraph [ref=e463]: AI-first fork of VS Code with multi-file Agent Mode, terminal execution, and deep codebase indexing.
+              - generic [ref=e464]:
+                - generic [ref=e465]: Full-stack Codebase Refactoring
+                - generic [ref=e466]: Autonomous Terminal Debugging
+              - generic [ref=e467]:
+                - generic [ref=e468]:
+                  - generic [ref=e469]: "Pricing:"
+                  - generic [ref=e470]: $20/mo (₹1,800/mo)
+                - generic [ref=e471]:
+                  - generic [ref=e472]: "Deployment:"
+                  - generic [ref=e473]: Desktop IDE (Mac/Win/Linux)
+              - generic [ref=e474]:
+                - strong [ref=e475]: "Note:"
+                - text: Indexed codebase embeddings can take up to 10 minutes on repos with >100,000 files.
+            - generic [ref=e476]:
+              - generic [ref=e477]:
+                - button "View Review" [ref=e478] [cursor=pointer]
+                - button "Compare" [ref=e479] [cursor=pointer]
+              - link "Visit Official Site" [ref=e480] [cursor=pointer]:
+                - /url: https://cursor.com
+          - generic [ref=e486]:
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - generic [ref=e489]:
+                  - img "Vapi Voice AI Platform" [ref=e490]
+                  - generic [ref=e491]:
+                    - heading "Vapi Voice AI Platform" [level=3] [ref=e493] [cursor=pointer]
+                    - generic [ref=e494]: Vapi Labs
+                - generic [ref=e496]:
+                  - generic [ref=e499]: "9.3"
+                  - generic [ref=e500]: /10
+              - paragraph [ref=e501]: Enterprise voice AI orchestration platform powering low-latency phone agents and conversational voice workflows.
+              - generic [ref=e502]:
+                - generic [ref=e503]: Inbound Customer Phone Support
+                - generic [ref=e504]: Outbound Appointment Scheduling
+              - generic [ref=e505]:
+                - generic [ref=e506]:
+                  - generic [ref=e507]: "Pricing:"
+                  - generic [ref=e508]: $0.05/min (₹4.50/min)
+                - generic [ref=e509]:
+                  - generic [ref=e510]: "Deployment:"
+                  - generic [ref=e511]: API, Telephony (SIP/Twilio)
+              - generic [ref=e512]:
+                - strong [ref=e513]: "Note:"
+                - text: Indian accent recognition accuracy drops slightly on noisy regional cellular networks.
+            - generic [ref=e514]:
+              - generic [ref=e515]:
+                - button "View Review" [ref=e516] [cursor=pointer]
+                - button "Compare" [ref=e517] [cursor=pointer]
+              - link "Visit Official Site" [ref=e518] [cursor=pointer]:
+                - /url: https://vapi.ai
+          - generic [ref=e524]:
+            - generic [ref=e525]:
+              - generic [ref=e526]:
+                - generic [ref=e527]:
+                  - img "Grok 2 & Grok Heavy" [ref=e528]
+                  - generic [ref=e529]:
+                    - heading "Grok 2 & Grok Heavy" [level=3] [ref=e531] [cursor=pointer]
+                    - generic [ref=e532]: xAI
+                - generic [ref=e534]:
+                  - generic [ref=e537]: "8.9"
+                  - generic [ref=e538]: /10
+              - paragraph [ref=e539]: Uncensored conversational AI agent with real-time X telemetry access, FLUX image synthesis, and vision logic.
+              - generic [ref=e540]:
+                - generic [ref=e541]: Real-time News Analysis
+                - generic [ref=e542]: Social Media Trend Intelligence
+              - generic [ref=e543]:
+                - generic [ref=e544]:
+                  - generic [ref=e545]: "Pricing:"
+                  - generic [ref=e546]: $8/mo (₹650/mo)
+                - generic [ref=e547]:
+                  - generic [ref=e548]: "Deployment:"
+                  - generic [ref=e549]: Web, X iOS/Android App
+              - generic [ref=e550]:
+                - strong [ref=e551]: "Note:"
+                - text: Live web search results are heavily weighted toward X posts rather than traditional index databases.
+            - generic [ref=e552]:
+              - generic [ref=e553]:
+                - button "View Review" [ref=e554] [cursor=pointer]
+                - button "Compare" [ref=e555] [cursor=pointer]
+              - link "Visit Official Site" [ref=e556] [cursor=pointer]:
+                - /url: https://x.ai
+          - generic [ref=e562]:
+            - generic [ref=e563]:
+              - generic [ref=e564]:
+                - generic [ref=e565]:
+                  - img "CrewAI Orchestration" [ref=e566]
+                  - generic [ref=e567]:
+                    - heading "CrewAI Orchestration" [level=3] [ref=e569] [cursor=pointer]
+                    - generic [ref=e570]: CrewAI Inc
+                - generic [ref=e572]:
+                  - generic [ref=e575]: "9.4"
+                  - generic [ref=e576]: /10
+              - paragraph [ref=e577]: Leading Python multi-agent framework enabling role-based agent coordination, tool delegation, and sequential execution.
+              - generic [ref=e578]:
+                - generic [ref=e579]: Multi-agent Task Pipelines
+                - generic [ref=e580]: Autonomous Content Production
+              - generic [ref=e581]:
+                - generic [ref=e582]:
+                  - generic [ref=e583]: "Pricing:"
+                  - generic [ref=e584]: Free (Free)
+                - generic [ref=e585]:
+                  - generic [ref=e586]: "Deployment:"
+                  - generic [ref=e587]: Python Package (PyPI), Docker
+              - generic [ref=e588]:
+                - strong [ref=e589]: "Note:"
+                - text: High token consumption if agent loops do not specify strict iteration max limits.
+            - generic [ref=e590]:
+              - generic [ref=e591]:
+                - button "View Review" [ref=e592] [cursor=pointer]
+                - button "Compare" [ref=e593] [cursor=pointer]
+              - link "Visit Official Site" [ref=e594] [cursor=pointer]:
+                - /url: https://crewai.com
+          - generic [ref=e600]:
+            - generic [ref=e601]:
+              - generic [ref=e602]:
+                - generic [ref=e603]:
+                  - img "Krutrim AI Agent" [ref=e604]
+                  - generic [ref=e605]:
+                    - generic [ref=e606]:
+                      - heading "Krutrim AI Agent" [level=3] [ref=e607] [cursor=pointer]
+                      - generic "Built in India 🇮🇳" [ref=e608]: 🇮🇳
+                    - generic [ref=e609]: Ola Krutrim
+                - generic [ref=e611]:
+                  - generic [ref=e614]: "8.8"
+                  - generic [ref=e615]: /10
+              - paragraph [ref=e616]: India's pioneer sovereign AI agent suite trained on 22 Indic languages with native Indian context and payments support.
+              - generic [ref=e617]:
+                - generic [ref=e618]: Indic Language Customer Service
+                - generic [ref=e619]: Indian Regulatory Workflows
+              - generic [ref=e620]:
+                - generic [ref=e621]:
+                  - generic [ref=e622]: "Pricing:"
+                  - generic [ref=e623]: Free (Free)
+                - generic [ref=e624]:
+                  - generic [ref=e625]: "Deployment:"
+                  - generic [ref=e626]: Web, Mobile App
+              - generic [ref=e627]:
+                - strong [ref=e628]: "Note:"
+                - text: Advanced multi-file code editing lags behind specialized coding agents like Cursor or Claude.
+            - generic [ref=e629]:
+              - generic [ref=e630]:
+                - button "View Review" [ref=e631] [cursor=pointer]
+                - button "Compare" [ref=e632] [cursor=pointer]
+              - link "Visit Official Site" [ref=e633] [cursor=pointer]:
+                - /url: https://krutrim.com
+          - generic [ref=e639]:
+            - generic [ref=e640]:
+              - generic [ref=e641]:
+                - generic [ref=e642]:
+                  - img "Perplexity Pro Agent" [ref=e643]
+                  - generic [ref=e644]:
+                    - heading "Perplexity Pro Agent" [level=3] [ref=e646] [cursor=pointer]
+                    - generic [ref=e647]: Perplexity AI
+                - generic [ref=e649]:
+                  - generic [ref=e652]: "9.5"
+                  - generic [ref=e653]: /10
+              - paragraph [ref=e654]: Conversational answer engine combining live web synthesis, citation verification, and Deep Research agent workflows.
+              - generic [ref=e655]:
+                - generic [ref=e656]: Academic & Market Research
+                - generic [ref=e657]: Fact-checked Syntheses
+              - generic [ref=e658]:
+                - generic [ref=e659]:
+                  - generic [ref=e660]: "Pricing:"
+                  - generic [ref=e661]: $20/mo (₹1,999/mo)
+                - generic [ref=e662]:
+                  - generic [ref=e663]: "Deployment:"
+                  - generic [ref=e664]: Web, iOS/Android
+              - generic [ref=e665]:
+                - strong [ref=e666]: "Note:"
+                - text: Deep Research mode takes 2-4 minutes per query to aggregate 50+ source citations.
+            - generic [ref=e667]:
+              - generic [ref=e668]:
+                - button "View Review" [ref=e669] [cursor=pointer]
+                - button "Compare" [ref=e670] [cursor=pointer]
+              - link "Visit Official Site" [ref=e671] [cursor=pointer]:
+                - /url: https://perplexity.ai
+      - generic [ref=e679]:
+        - generic [ref=e680]:
+          - generic [ref=e681]: Interactive Recommendation Engine
+          - heading "Find the Best AI Agent for Your Workflow" [level=2] [ref=e686]
+          - paragraph [ref=e687]: Answer 3 quick questions to receive independent, data-backed recommendations based on our benchmark scores.
+        - generic [ref=e689]:
+          - generic [ref=e690]:
+            - generic [ref=e691]: 1. Task / Workflow
+            - generic [ref=e692]: 2. Primary Priority
+            - generic [ref=e693]: 3. Deployment Target
+          - generic [ref=e694]:
+            - generic [ref=e695]: "Step 1: What do you need help with?"
+            - generic [ref=e696]:
+              - button "Coding" [ref=e697] [cursor=pointer]
+              - button "Research" [ref=e698] [cursor=pointer]
+              - button "Customer Support" [ref=e699] [cursor=pointer]
+              - button "Sales & Marketing" [ref=e700] [cursor=pointer]
+              - button "Voice Agents" [ref=e701] [cursor=pointer]
+              - button "Workflow Automation" [ref=e702] [cursor=pointer]
+            - button "Next Step" [ref=e704] [cursor=pointer]
+      - generic [ref=e709]:
+        - generic [ref=e710]:
+          - generic [ref=e711]:
+            - generic [ref=e712]: Transparent Evaluation Directory
+            - heading "Top-Rated AI Agents Leaderboard" [level=2] [ref=e717]
+            - paragraph [ref=e718]: Ranked using our published 7-dimension evaluation methodology across 50 benchmark tasks.
+          - generic [ref=e719]:
+            - button "Overall" [ref=e720] [cursor=pointer]
+            - button "Coding" [ref=e721] [cursor=pointer]
+            - button "Business" [ref=e722] [cursor=pointer]
+            - button "Research" [ref=e723] [cursor=pointer]
+            - button "Voice" [ref=e724] [cursor=pointer]
+            - button "Open Source" [ref=e725] [cursor=pointer]
+            - button "India Fit" [ref=e726] [cursor=pointer]
+        - table [ref=e728]:
+          - rowgroup [ref=e729]:
+            - row [ref=e730]:
+              - columnheader "Rank" [ref=e731]
+              - columnheader "Agent Platform" [ref=e732]
+              - columnheader "Best For" [ref=e733]
+              - columnheader "BestAI Score" [ref=e734]
+              - columnheader "Reasoning" [ref=e735]
+              - columnheader "Tool Use" [ref=e736]
+              - columnheader "India Fit" [ref=e737]
+              - columnheader "Pricing" [ref=e738]
+              - columnheader "Action" [ref=e739]
+          - rowgroup [ref=e740]:
+            - row [ref=e741] [cursor=pointer]:
+              - cell "#1" [ref=e742]
+              - cell "Cursor AI Editor Cursor AI Editor Anysphere" [ref=e743]:
+                - generic [ref=e744]:
+                  - img "Cursor AI Editor" [ref=e745]
+                  - generic [ref=e746]:
+                    - generic [ref=e747]: Cursor AI Editor
+                    - generic [ref=e749]: Anysphere
+              - cell "Full-stack Codebase Refactoring, Autonomous Terminal Debugging" [ref=e750]
+              - cell "9.7" [ref=e752]
+              - cell "9.6" [ref=e757]
+              - cell "9.8" [ref=e758]
+              - cell "9.6" [ref=e759]
+              - cell "$20/mo ₹1,800/mo" [ref=e760]:
+                - generic [ref=e761]: $20/mo
+                - generic [ref=e762]: ₹1,800/mo
+              - cell [ref=e763]:
+                - button "Review" [ref=e764]
+            - row [ref=e765] [cursor=pointer]:
+              - cell "#2" [ref=e766]
+              - cell "Claude 3.5 Sonnet & Computer Use Claude 3.5 Sonnet & Computer Use Anthropic" [ref=e767]:
+                - generic [ref=e768]:
+                  - img "Claude 3.5 Sonnet & Computer Use" [ref=e769]
+                  - generic [ref=e770]:
+                    - generic [ref=e771]: Claude 3.5 Sonnet & Computer Use
+                    - generic [ref=e773]: Anthropic
+              - cell "Complex Code Refactoring, Autonomous Computer Control" [ref=e774]
+              - cell "9.6" [ref=e776]
+              - cell "9.8" [ref=e781]
+              - cell "9.7" [ref=e782]
+              - cell "9.1" [ref=e783]
+              - cell "$20/mo ₹1,999/mo" [ref=e784]:
+                - generic [ref=e785]: $20/mo
+                - generic [ref=e786]: ₹1,999/mo
+              - cell [ref=e787]:
+                - button "Review" [ref=e788]
+            - row [ref=e789] [cursor=pointer]:
+              - cell "#3" [ref=e790]
+              - cell "ChatGPT (Agent Mode) ChatGPT (Agent Mode) OpenAI" [ref=e791]:
+                - generic [ref=e792]:
+                  - img "ChatGPT (Agent Mode)" [ref=e793]
+                  - generic [ref=e794]:
+                    - generic [ref=e795]: ChatGPT (Agent Mode)
+                    - generic [ref=e797]: OpenAI
+              - cell "General Reasoning, Multi-modal Analysis" [ref=e798]
+              - cell "9.5" [ref=e800]
+              - cell "9.7" [ref=e805]
+              - cell "9.4" [ref=e806]
+              - cell "9.3" [ref=e807]
+              - cell "$20/mo ₹1,999/mo" [ref=e808]:
+                - generic [ref=e809]: $20/mo
+                - generic [ref=e810]: ₹1,999/mo
+              - cell [ref=e811]:
+                - button "Review" [ref=e812]
+            - row [ref=e813] [cursor=pointer]:
+              - cell "#4" [ref=e814]
+              - cell "Perplexity Pro Agent Perplexity Pro Agent Perplexity AI" [ref=e815]:
+                - generic [ref=e816]:
+                  - img "Perplexity Pro Agent" [ref=e817]
+                  - generic [ref=e818]:
+                    - generic [ref=e819]: Perplexity Pro Agent
+                    - generic [ref=e821]: Perplexity AI
+              - cell "Academic & Market Research, Fact-checked Syntheses" [ref=e822]
+              - cell "9.5" [ref=e824]
+              - cell "9.5" [ref=e829]
+              - cell "9.6" [ref=e830]
+              - cell "9.2" [ref=e831]
+              - cell "$20/mo ₹1,999/mo" [ref=e832]:
+                - generic [ref=e833]: $20/mo
+                - generic [ref=e834]: ₹1,999/mo
+              - cell [ref=e835]:
+                - button "Review" [ref=e836]
+            - row [ref=e837] [cursor=pointer]:
+              - cell "#5" [ref=e838]
+              - cell "CrewAI Orchestration CrewAI Orchestration CrewAI Inc" [ref=e839]:
+                - generic [ref=e840]:
+                  - img "CrewAI Orchestration" [ref=e841]
+                  - generic [ref=e842]:
+                    - generic [ref=e843]: CrewAI Orchestration
+                    - generic [ref=e845]: CrewAI Inc
+              - cell "Multi-agent Task Pipelines, Autonomous Content Production" [ref=e846]
+              - cell "9.4" [ref=e848]
+              - cell "9.3" [ref=e853]
+              - cell "9.6" [ref=e854]
+              - cell "9.5" [ref=e855]
+              - cell "Free Free" [ref=e856]:
+                - generic [ref=e857]: Free
+                - generic [ref=e858]: Free
+              - cell [ref=e859]:
+                - button "Review" [ref=e860]
+            - row [ref=e861] [cursor=pointer]:
+              - cell "#6" [ref=e862]
+              - cell "Vapi Voice AI Platform Vapi Voice AI Platform Vapi Labs" [ref=e863]:
+                - generic [ref=e864]:
+                  - img "Vapi Voice AI Platform" [ref=e865]
+                  - generic [ref=e866]:
+                    - generic [ref=e867]: Vapi Voice AI Platform
+                    - generic [ref=e869]: Vapi Labs
+              - cell "Inbound Customer Phone Support, Outbound Appointment Scheduling" [ref=e870]
+              - cell "9.3" [ref=e872]
+              - cell "9.0" [ref=e877]
+              - cell "9.5" [ref=e878]
+              - cell "9.5" [ref=e879]
+              - cell "$0.05/min ₹4.50/min" [ref=e880]:
+                - generic [ref=e881]: $0.05/min
+                - generic [ref=e882]: ₹4.50/min
+              - cell [ref=e883]:
+                - button "Review" [ref=e884]
+            - row [ref=e885] [cursor=pointer]:
+              - cell "#7" [ref=e886]
+              - cell "Grok 2 & Grok Heavy Grok 2 & Grok Heavy xAI" [ref=e887]:
+                - generic [ref=e888]:
+                  - img "Grok 2 & Grok Heavy" [ref=e889]
+                  - generic [ref=e890]:
+                    - generic [ref=e891]: Grok 2 & Grok Heavy
+                    - generic [ref=e893]: xAI
+              - cell "Real-time News Analysis, Social Media Trend Intelligence" [ref=e894]
+              - cell "8.9" [ref=e896]
+              - cell "9.0" [ref=e901]
+              - cell "8.6" [ref=e902]
+              - cell "8.8" [ref=e903]
+              - cell "$8/mo ₹650/mo" [ref=e904]:
+                - generic [ref=e905]: $8/mo
+                - generic [ref=e906]: ₹650/mo
+              - cell [ref=e907]:
+                - button "Review" [ref=e908]
+            - row [ref=e909] [cursor=pointer]:
+              - cell "#8" [ref=e910]
+              - cell "Krutrim AI Agent Krutrim AI Agent 🇮🇳 Ola Krutrim" [ref=e911]:
+                - generic [ref=e912]:
+                  - img "Krutrim AI Agent" [ref=e913]
+                  - generic [ref=e914]:
+                    - generic [ref=e915]:
+                      - generic [ref=e916]: Krutrim AI Agent
+                      - generic "Built in India" [ref=e917]: 🇮🇳
+                    - generic [ref=e918]: Ola Krutrim
+              - cell "Indic Language Customer Service, Indian Regulatory Workflows" [ref=e919]
+              - cell "8.8" [ref=e921]
+              - cell "8.4" [ref=e926]
+              - cell "8.7" [ref=e927]
+              - cell "9.9" [ref=e928]
+              - cell "Free Free" [ref=e929]:
+                - generic [ref=e930]: Free
+                - generic [ref=e931]: Free
+              - cell [ref=e932]:
+                - button "Review" [ref=e933]
+      - generic [ref=e935]:
+        - generic [ref=e936]:
+          - generic [ref=e937]:
+            - generic [ref=e938]: Head-to-Head Analysis
+            - heading "Popular AI Agent Comparisons" [level=2] [ref=e944]
+            - paragraph [ref=e945]: Side-by-side benchmark evaluations across reasoning, API pricing, tool accuracy, and deployment models.
+          - button "Build Custom Comparison" [ref=e946] [cursor=pointer]
+        - generic [ref=e950]:
+          - generic [ref=e951] [cursor=pointer]:
+            - generic [ref=e952]:
+              - generic [ref=e953]:
+                - generic [ref=e954]:
+                  - img "ChatGPT" [ref=e955]
+                  - generic [ref=e956]: VS
+                  - img "Claude" [ref=e957]
+                - generic [ref=e958]: Updated 2026-07-22
+              - heading "ChatGPT-4o vs Claude 3.5 Sonnet" [level=3] [ref=e959]
+              - generic [ref=e960]:
+                - generic [ref=e961]: Winner for Coding & Document Analysis
+                - generic [ref=e962]: Claude 3.5 Sonnet
+                - generic [ref=e966]: Superior code accuracy and artifact generation with native Computer Use mode.
+              - paragraph [ref=e967]:
+                - strong [ref=e968]: "Verdict:"
+                - text: Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.
+            - generic [ref=e969]: Explore Full Head-to-Head Report
+          - generic [ref=e973] [cursor=pointer]:
+            - generic [ref=e974]:
+              - generic [ref=e975]:
+                - generic [ref=e976]:
+                  - img "Cursor AI" [ref=e977]
+                  - generic [ref=e978]: VS
+                  - img "GitHub Copilot" [ref=e979]
+                - generic [ref=e980]: Updated 2026-07-21
+              - heading "Cursor AI vs GitHub Copilot Workspace" [level=3] [ref=e981]
+              - generic [ref=e982]:
+                - generic [ref=e983]: Winner for Multi-file Codebase Editing
+                - generic [ref=e984]: Cursor AI
+                - generic [ref=e988]: Agent Mode auto-indexes full workspace AST and runs terminal error loops.
+              - paragraph [ref=e989]:
+                - strong [ref=e990]: "Verdict:"
+                - text: Cursor AI offers far superior multi-file reasoning and terminal execution for professional developers.
+            - generic [ref=e991]: Explore Full Head-to-Head Report
+          - generic [ref=e995] [cursor=pointer]:
+            - generic [ref=e996]:
+              - generic [ref=e997]:
+                - generic [ref=e998]:
+                  - img "CrewAI" [ref=e999]
+                  - generic [ref=e1000]: VS
+                  - img "AutoGen" [ref=e1001]
+                - generic [ref=e1002]: Updated 2026-07-20
+              - heading "CrewAI vs Microsoft AutoGen" [level=3] [ref=e1003]
+              - generic [ref=e1004]:
+                - generic [ref=e1005]: Winner for Ease of Role-based Agent Setup
+                - generic [ref=e1006]: CrewAI
+                - generic [ref=e1010]: Cleaner Python decorator syntax and intuitive task delegation abstractions.
+              - paragraph [ref=e1011]:
+                - strong [ref=e1012]: "Verdict:"
+                - text: CrewAI is faster to prototype role-based agent teams; AutoGen offers deeper conversational matrix customization.
+            - generic [ref=e1013]: Explore Full Head-to-Head Report
+          - generic [ref=e1017] [cursor=pointer]:
+            - generic [ref=e1018]:
+              - generic [ref=e1019]:
+                - generic [ref=e1020]:
+                  - img "Claude 3.5" [ref=e1021]
+                  - generic [ref=e1022]: VS
+                  - img "Gemini 1.5" [ref=e1023]
+                - generic [ref=e1024]: Updated 2026-07-19
+              - heading "Claude 3.5 vs Google Gemini 1.5 Pro" [level=3] [ref=e1025]
+              - generic [ref=e1026]:
+                - generic [ref=e1027]: Winner for 2 Million Token Long-Context Search
+                - generic [ref=e1028]: Gemini 1.5 Pro
+                - generic [ref=e1032]: Unmatched 2M token context window and native Google Workspace grounding.
+              - paragraph [ref=e1033]:
+                - strong [ref=e1034]: "Verdict:"
+                - text: Gemini excels for massive video/audio/PDF context analysis; Claude wins for code generation and logic precision.
+            - generic [ref=e1035]: Explore Full Head-to-Head Report
+      - generic [ref=e1040]:
+        - generic [ref=e1041]:
+          - generic [ref=e1042]:
+            - generic [ref=e1043]: Original Industry Research
+            - heading "AI Agent Benchmarks & Market Reports" [level=2] [ref=e1047]
+            - paragraph [ref=e1048]: Data-backed research datasets, pricing indices, and technical whitepapers produced by our evaluation team.
+          - button "Browse All Research Reports" [ref=e1049] [cursor=pointer]
+        - generic [ref=e1053]:
+          - generic [ref=e1054]:
+            - generic [ref=e1055]:
+              - generic [ref=e1056]:
+                - generic [ref=e1057]: Benchmark Index
+                - generic [ref=e1058]: 1,250 Tested Agents
+              - heading "Global AI Agent Benchmark Index (Q3 2026)" [level=3] [ref=e1059]
+              - paragraph [ref=e1060]: Standardized evaluation measuring agent reasoning accuracy, tool execution reliability, token cost efficiency, and latency under 100 complex multi-step workflows.
+              - generic [ref=e1061]:
+                - generic [ref=e1062]: "Citation-Ready Key Finding:"
+                - paragraph [ref=e1063]: "\"According to the Q3 2026 BestAIAgent Benchmark Index, top-tier coding agents achieve a 94.2% task resolution rate, while general-purpose assistants average 88.5% tool execution accuracy across 1,250 evaluated platforms.\""
+            - generic [ref=e1064]:
+              - generic [ref=e1065]: Updated 2026-07-20
+              - generic [ref=e1066]: Dataset Available
+          - generic [ref=e1070]:
+            - generic [ref=e1071]:
+              - generic [ref=e1072]:
+                - generic [ref=e1073]: Pricing Index
+                - generic [ref=e1074]: 450 Pricing Tiers
+              - heading "AI Agent Enterprise & India Pricing Tracker" [level=3] [ref=e1075]
+              - paragraph [ref=e1076]: Comprehensive market comparison of API token rates, seat licenses, GST compliance, and Indian Rupee (INR) payment gateways for top AI agents.
+              - generic [ref=e1077]:
+                - generic [ref=e1078]: "Citation-Ready Key Finding:"
+                - paragraph [ref=e1079]: "\"BestAIAgent.in's 2026 Pricing Index reveals that 68% of commercial AI agents now support Indian Rupee billing via UPI or net banking, with seat licenses averaging ₹1,650/user/month.\""
+            - generic [ref=e1080]:
+              - generic [ref=e1081]: Updated 2026-07-22
+              - generic [ref=e1082]: Dataset Available
+          - generic [ref=e1086]:
+            - generic [ref=e1087]:
+              - generic [ref=e1088]:
+                - generic [ref=e1089]: Adoption Survey
+                - generic [ref=e1090]: 850 Indian Founders & Tech Leaders
+              - heading "State of AI Agent Adoption in India (2026)" [level=3] [ref=e1091]
+              - paragraph [ref=e1092]: Detailed study on how Indian startups, IT services enterprises, and MSMEs deploy AI agents across customer care, IT automation, and Indic language support.
+              - generic [ref=e1093]:
+                - generic [ref=e1094]: "Citation-Ready Key Finding:"
+                - paragraph [ref=e1095]: "\"BestAIAgent.in research indicates that 72% of surveyed Indian enterprises deploy voice or WhatsApp AI agents to handle customer inquiries in regional Indic languages.\""
+            - generic [ref=e1096]:
+              - generic [ref=e1097]: Updated 2026-07-18
+              - generic [ref=e1098]: Dataset Available
+      - generic [ref=e1103]:
+        - generic [ref=e1104]:
+          - generic [ref=e1105]: Continuous Quality Assurance
+          - heading "Recently Tested & Updated" [level=2] [ref=e1112]
+          - paragraph [ref=e1113]: Live changelog showing our latest re-tests, pricing verifications, and benchmark updates.
+        - generic [ref=e1114]:
+          - generic [ref=e1115] [cursor=pointer]:
+            - generic [ref=e1116]:
+              - generic [ref=e1117]: Benchmark Updated
+              - generic [ref=e1118]: July 23, 2026
+            - generic [ref=e1119]:
+              - heading "Claude 3.5 Sonnet" [level=3] [ref=e1120]
+              - generic [ref=e1121]: "9.6"
+            - paragraph [ref=e1125]: Added native Computer Use benchmark scores; 96.4% code resolution rate.
+            - generic [ref=e1126]: View Full Review →
+          - generic [ref=e1128] [cursor=pointer]:
+            - generic [ref=e1129]:
+              - generic [ref=e1130]: Major Product Release
+              - generic [ref=e1131]: July 22, 2026
+            - generic [ref=e1132]:
+              - heading "Cursor AI Editor" [level=3] [ref=e1133]
+              - generic [ref=e1134]: "9.7"
+            - paragraph [ref=e1138]: Multi-file Agent Mode expanded with autonomous terminal execution sandbox.
+            - generic [ref=e1139]: View Full Review →
+          - generic [ref=e1141] [cursor=pointer]:
+            - generic [ref=e1142]:
+              - generic [ref=e1143]: Pricing Updated
+              - generic [ref=e1144]: July 20, 2026
+            - generic [ref=e1145]:
+              - heading "Vapi Voice AI" [level=3] [ref=e1146]
+              - generic [ref=e1147]: "9.3"
+            - paragraph [ref=e1151]: Telephony audio rates re-verified at $0.05/min with Rupee billing.
+            - generic [ref=e1152]: View Full Review →
+          - generic [ref=e1154] [cursor=pointer]:
+            - generic [ref=e1155]:
+              - generic [ref=e1156]: Feature Added
+              - generic [ref=e1157]: July 19, 2026
+            - generic [ref=e1158]:
+              - heading "ChatGPT Agent Mode" [level=3] [ref=e1159]
+              - generic [ref=e1160]: "9.5"
+            - paragraph [ref=e1164]: Canvas multi-document drafting integrated with custom GPT store.
+            - generic [ref=e1165]: View Full Review →
+          - generic [ref=e1167] [cursor=pointer]:
+            - generic [ref=e1168]:
+              - generic [ref=e1169]: New Review
+              - generic [ref=e1170]: July 18, 2026
+            - generic [ref=e1171]:
+              - heading "Ola Krutrim AI" [level=3] [ref=e1172]
+              - generic [ref=e1173]: "8.8"
+            - paragraph [ref=e1177]: 22 Indic language models benchmarked for UPI payment bot support.
+            - generic [ref=e1178]: View Full Review →
+          - generic [ref=e1180] [cursor=pointer]:
+            - generic [ref=e1181]:
+              - generic [ref=e1182]: Methodology Updated
+              - generic [ref=e1183]: July 15, 2026
+            - generic [ref=e1184]:
+              - heading "CrewAI Framework" [level=3] [ref=e1185]
+              - generic [ref=e1186]: "9.4"
+            - paragraph [ref=e1190]: Multi-agent token overhead evaluated across PyPI v0.80 releases.
+            - generic [ref=e1191]: View Full Review →
+      - generic [ref=e1194]:
+        - generic [ref=e1195]:
+          - generic [ref=e1196]: Open Network Architecture
+          - heading "Explore the AI Agent Ecosystem" [level=2] [ref=e1203]
+          - paragraph [ref=e1204]: Sister platforms and specialized directories under common ownership providing dedicated tools and developer resources.
+        - generic [ref=e1205]:
+          - link "CodingAgent.in Development guides, prompt matrices, and benchmark reports for coding agents. Part of the BestAIAgent ecosystem" [ref=e1206] [cursor=pointer]:
+            - /url: https://codingagent.in
+            - generic [ref=e1207]:
+              - generic [ref=e1208]: CodingAgent.in
+              - paragraph [ref=e1215]: Development guides, prompt matrices, and benchmark reports for coding agents.
+            - generic [ref=e1216]: Part of the BestAIAgent ecosystem
+          - link "MCPServer.in Open directory and hosting configurations for Model Context Protocol servers. Part of the BestAIAgent ecosystem" [ref=e1217] [cursor=pointer]:
+            - /url: https://mcpserver.in
+            - generic [ref=e1218]:
+              - generic [ref=e1219]: MCPServer.in
+              - paragraph [ref=e1226]: Open directory and hosting configurations for Model Context Protocol servers.
+            - generic [ref=e1227]: Part of the BestAIAgent ecosystem
+          - link "AgentSwarm.in Multi-agent orchestration patterns and swarm deployment frameworks. Part of the BestAIAgent ecosystem" [ref=e1228] [cursor=pointer]:
+            - /url: https://agentswarm.in
+            - generic [ref=e1229]:
+              - generic [ref=e1230]: AgentSwarm.in
+              - paragraph [ref=e1237]: Multi-agent orchestration patterns and swarm deployment frameworks.
+            - generic [ref=e1238]: Part of the BestAIAgent ecosystem
+          - link "WorkerAgent.cloud Ready-to-deploy enterprise AI workers and background task runners. Part of the BestAIAgent ecosystem" [ref=e1239] [cursor=pointer]:
+            - /url: https://workeragent.cloud
+            - generic [ref=e1240]:
+              - generic [ref=e1241]: WorkerAgent.cloud
+              - paragraph [ref=e1248]: Ready-to-deploy enterprise AI workers and background task runners.
+            - generic [ref=e1249]: Part of the BestAIAgent ecosystem
+          - link "PersonalAI.cloud Privacy-focused personal AI workspace and local LLM sandboxes. Part of the BestAIAgent ecosystem" [ref=e1250] [cursor=pointer]:
+            - /url: https://personalai.cloud
+            - generic [ref=e1251]:
+              - generic [ref=e1252]: PersonalAI.cloud
+              - paragraph [ref=e1259]: Privacy-focused personal AI workspace and local LLM sandboxes.
+            - generic [ref=e1260]: Part of the BestAIAgent ecosystem
+      - generic [ref=e1262]:
+        - generic [ref=e1263]:
+          - generic [ref=e1264]:
+            - generic [ref=e1265]: Editorial Integrity & Transparency
+            - heading "How We Evaluate AI Agents" [level=2] [ref=e1270]
+            - paragraph [ref=e1271]: Every score on BestAIAgent.in is calculated using 7 weighted criteria verified by our engineering team.
+          - generic [ref=e1272]:
+            - button "Read Full Methodology" [ref=e1273] [cursor=pointer]
+            - button "Meet Review Team" [ref=e1274] [cursor=pointer]
+        - generic [ref=e1275]:
+          - generic [ref=e1276]:
+            - generic [ref=e1277]:
+              - generic [ref=e1278]: Task Performance
+              - generic [ref=e1279]: 20%
+            - paragraph [ref=e1280]: Success rate across 50 standardized real-world benchmark tasks.
+          - generic [ref=e1281]:
+            - generic [ref=e1282]:
+              - generic [ref=e1283]: Reasoning & Logic
+              - generic [ref=e1284]: 15%
+            - paragraph [ref=e1285]: Multi-step problem decomposition and edge-case handling.
+          - generic [ref=e1286]:
+            - generic [ref=e1287]:
+              - generic [ref=e1288]: Tool Execution & AST
+              - generic [ref=e1289]: 15%
+            - paragraph [ref=e1290]: Reliability of function calling, API invocation, and terminal commands.
+          - generic [ref=e1291]:
+            - generic [ref=e1292]:
+              - generic [ref=e1293]: Cost & Value
+              - generic [ref=e1294]: 15%
+            - paragraph [ref=e1295]: Pricing transparency, token efficiency, and ROI against human baselines.
+          - generic [ref=e1296]:
+            - generic [ref=e1297]:
+              - generic [ref=e1298]: Privacy & Governance
+              - generic [ref=e1299]: 15%
+            - paragraph [ref=e1300]: Data retention guarantees, SOC2 compliance, and self-hosting support.
+          - generic [ref=e1301]:
+            - generic [ref=e1302]:
+              - generic [ref=e1303]: Ease of Deployment
+              - generic [ref=e1304]: 10%
+            - paragraph [ref=e1305]: Time-to-first-value, documentation clarity, and SDK ergonomics.
+          - generic [ref=e1306]:
+            - generic [ref=e1307]:
+              - generic [ref=e1308]: India Market Fit
+              - generic [ref=e1309]: 10%
+            - paragraph [ref=e1310]: INRRupee pricing, UPI payment options, GST invoices, and Indic language support.
+        - generic [ref=e1311]:
+          - generic [ref=e1312]:
+            - generic [ref=e1313]: AS
+            - generic [ref=e1314]:
+              - generic [ref=e1315]: Arshdeep Singh
+              - generic [ref=e1316]: Technical Lead & AI Systems Engineer • Lead Evaluator
+              - generic [ref=e1317]: Evaluated 120+ LLM & Agent Architectures
+          - generic [ref=e1322]:
+            - button "Editorial Policy" [ref=e1323]
+            - generic [ref=e1324]: •
+            - button "Correction Policy" [ref=e1325]
+            - generic [ref=e1326]: •
+            - button "Affiliate Disclosure" [ref=e1327]
+      - generic [ref=e1330]:
+        - generic [ref=e1331]: Weekly Market Intelligence
+        - heading "Track the AI Agent Market" [level=2] [ref=e1336]
+        - paragraph [ref=e1337]: Get weekly benchmark updates, pricing changes, new agent launches, and major product releases delivered directly to your inbox.
+        - generic [ref=e1338]:
+          - generic [ref=e1339]:
+            - textbox "Enter your work email address..." [ref=e1340]
+            - button "Subscribe" [ref=e1341] [cursor=pointer]
+          - generic [ref=e1345]: Zero spam • Unsubscribe anytime • Privacy policy protected
+    - contentinfo [ref=e1350]:
+      - generic [ref=e1352]:
+        - generic [ref=e1353]:
+          - paragraph [ref=e1354]: Independent AI agent intelligence
+          - heading "Find the right AI agent for your work" [level=2] [ref=e1358]
+          - paragraph [ref=e1359]: Compare capabilities, pricing, deployment options, benchmarks and real-world use cases.
+        - generic [ref=e1360]:
+          - link "Find My Agent" [ref=e1361] [cursor=pointer]:
+            - /url: /agents/
+          - link "Compare Agents" [ref=e1365] [cursor=pointer]:
+            - /url: /compare/
+      - generic [ref=e1367]:
+        - generic [ref=e1368]:
+          - generic [ref=e1369]:
+            - paragraph [ref=e1370]: Programmatic authority index
+            - heading "Explore the complete AI agent knowledge map" [level=2] [ref=e1371]
+            - paragraph [ref=e1372]: Browse guides grouped by agent type, business function, development workflow, industry, research and MCP infrastructure.
+          - link "View complete HTML sitemap" [ref=e1373] [cursor=pointer]:
+            - /url: /sitemap/
+            - generic [ref=e1375]: →
+        - generic [ref=e1376]:
+          - navigation "Best AI Agents" [ref=e1377]:
+            - heading [level=3] [ref=e1378]:
+              - link "Best AI Agents" [ref=e1379] [cursor=pointer]:
+                - /url: /best-ai-agent/
+            - list [ref=e1380]:
+              - listitem [ref=e1381]:
+                - link "Best AI Agent" [ref=e1382] [cursor=pointer]:
+                  - /url: /best-ai-agent/
+              - listitem [ref=e1383]:
+                - link "Best AI Agent for Business" [ref=e1384] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-business/
+              - listitem [ref=e1385]:
+                - link "Best AI Agent for Coding" [ref=e1386] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-coding/
+              - listitem [ref=e1387]:
+                - link "Best AI Agent Alternatives" [ref=e1388] [cursor=pointer]:
+                  - /url: /best-ai-agent-alternatives/
+              - listitem [ref=e1389]:
+                - link "Best AI Agents for Automation" [ref=e1390] [cursor=pointer]:
+                  - /url: /best-ai-agents-for-automation/
+          - navigation "Business Functions" [ref=e1391]:
+            - heading "Business Functions" [level=3] [ref=e1392]
+            - list [ref=e1394]:
+              - listitem [ref=e1395]:
+                - link "AI Agents for CRM" [ref=e1396] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-crm/
+              - listitem [ref=e1397]:
+                - link "AI Agents for Customer Support" [ref=e1398] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-customer-support/
+              - listitem [ref=e1399]:
+                - link "AI Agents for Sales" [ref=e1400] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-sales/
+              - listitem [ref=e1401]:
+                - link "AI Agents for HR" [ref=e1402] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-hr/
+              - listitem [ref=e1403]:
+                - link "AI Agents for Marketing" [ref=e1404] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-marketing/
+          - navigation "Agent Builders" [ref=e1405]:
+            - heading "Agent Builders" [level=3] [ref=e1406]
+            - list [ref=e1408]:
+              - listitem [ref=e1409]:
+                - link "AI Agent Builder" [ref=e1410] [cursor=pointer]:
+                  - /url: /best-ai-agent-builder/
+              - listitem [ref=e1411]:
+                - link "AI Agent Creator" [ref=e1412] [cursor=pointer]:
+                  - /url: /best-ai-agent-creator/
+              - listitem [ref=e1413]:
+                - link "AI Agent Maker" [ref=e1414] [cursor=pointer]:
+                  - /url: /best-ai-agent-maker/
+              - listitem [ref=e1415]:
+                - link "AI Agent App Builder" [ref=e1416] [cursor=pointer]:
+                  - /url: /best-ai-agent-app-builder/
+              - listitem [ref=e1417]:
+                - link "No-Code AI Agent Platforms" [ref=e1418] [cursor=pointer]:
+                  - /url: /best-ai-agent-no-code-platform/
+              - listitem [ref=e1419]:
+                - link "AI Workflow Builders" [ref=e1420] [cursor=pointer]:
+                  - /url: /best-ai-agent-workflow-builder/
+              - listitem [ref=e1421]:
+                - link "AI Agent Platforms" [ref=e1422] [cursor=pointer]:
+                  - /url: /best-ai-agent-platform/
+          - navigation "Coding Agents" [ref=e1423]:
+            - heading "Coding Agents" [level=3] [ref=e1424]
+            - list [ref=e1426]:
+              - listitem [ref=e1427]:
+                - link "AI Agents for Code Review" [ref=e1428] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-code-review/
+              - listitem [ref=e1429]:
+                - link "AI Agents for Frontend Development" [ref=e1430] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-frontend-development/
+              - listitem [ref=e1431]:
+                - link "AI Agents for Backend Development" [ref=e1432] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-backend-development/
+              - listitem [ref=e1433]:
+                - link "AI Agents for VS Code" [ref=e1434] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-vs-code/
+              - listitem [ref=e1435]:
+                - link "AI Agent Extensions for VS Code" [ref=e1436] [cursor=pointer]:
+                  - /url: /best-ai-agent-extension-for-vs-code/
+              - listitem [ref=e1437]:
+                - link "AI Agents for IDEs" [ref=e1438] [cursor=pointer]:
+                  - /url: /best-ai-agent-for-ides/
+          - navigation "Frameworks & Developer Tools" [ref=e1439]:
+            - heading "Frameworks & Developer Tools" [level=3] [ref=e1440]
+            - list [ref=e1442]:
+              - listitem [ref=e1443]:
+                - link "AI Agent Frameworks" [ref=e1444] [cursor=pointer]:
+                  - /url: /best-ai-agent-frameworks/
+              - listitem [ref=e1445]:
+                - link "Agent Orchestration Tools" [ref=e1446] [cursor=pointer]:
+                  - /url: /best-ai-agent-orchestration-tools/
+              - listitem [ref=e1447]:
+                - link "AI Agent SDKs" [ref=e1448] [cursor=pointer]:
+                  - /url: /best-ai-agent-sdks/
+              - listitem [ref=e1449]:
+                - link "Open-Source Agent Tools" [ref=e1450] [cursor=pointer]:
+                  - /url: /best-open-source-ai-agent-tools/
+              - listitem [ref=e1451]:
+                - link "AI Agent Libraries" [ref=e1452] [cursor=pointer]:
+                  - /url: /best-ai-agent-libraries/
+              - listitem [ref=e1453]:
+                - link "AI Agent Prompt Tools" [ref=e1454] [cursor=pointer]:
+                  - /url: /best-ai-agent-prompt-tools/
+              - listitem [ref=e1455]:
+                - link "AI Agent Development Tools" [ref=e1456] [cursor=pointer]:
+                  - /url: /best-ai-agent-development-tools/
+          - navigation "Agents by Organization" [ref=e1457]:
+            - heading "Agents by Organization" [level=3] [ref=e1458]
+            - list [ref=e1460]:
+              - listitem [ref=e1461]:
+                - link "AI Agents for Business" [ref=e1462] [cursor=pointer]:
+                  - /url: /ai-agents-for-business/
+              - listitem [ref=e1463]:
+                - link "AI Agents for Enterprises" [ref=e1464] [cursor=pointer]:
+                  - /url: /ai-agents-for-enterprises/
+              - listitem [ref=e1465]:
+                - link "AI Agents for SMEs" [ref=e1466] [cursor=pointer]:
+                  - /url: /ai-agents-for-smes/
+              - listitem [ref=e1467]:
+                - link "Workflow Automation Agents" [ref=e1468] [cursor=pointer]:
+                  - /url: /ai-agents-for-workflow-automation/
+              - listitem [ref=e1469]:
+                - link "Support Automation Agents" [ref=e1470] [cursor=pointer]:
+                  - /url: /ai-agents-for-support-automation/
+          - navigation "Agents by Industry" [ref=e1471]:
+            - heading "Agents by Industry" [level=3] [ref=e1472]
+            - list [ref=e1474]:
+              - listitem [ref=e1475]:
+                - link "AI Agents for Finance" [ref=e1476] [cursor=pointer]:
+                  - /url: /ai-agents-for-finance/
+              - listitem [ref=e1477]:
+                - link "AI Agents for Security" [ref=e1478] [cursor=pointer]:
+                  - /url: /ai-agents-for-security/
+              - listitem [ref=e1479]:
+                - link "AI Agents for Healthcare" [ref=e1480] [cursor=pointer]:
+                  - /url: /ai-agents-for-healthcare/
+              - listitem [ref=e1481]:
+                - link "AI Agents for HR" [ref=e1482] [cursor=pointer]:
+                  - /url: /ai-agents-for-hr/
+              - listitem [ref=e1483]:
+                - link "AI Agents for Procurement" [ref=e1484] [cursor=pointer]:
+                  - /url: /ai-agents-for-procurement/
+          - navigation "Research & Intelligence" [ref=e1485]:
+            - heading "Research & Intelligence" [level=3] [ref=e1486]
+            - list [ref=e1488]:
+              - listitem [ref=e1489]:
+                - link "AI Agent Research" [ref=e1490] [cursor=pointer]:
+                  - /url: /ai-agent-research/
+              - listitem [ref=e1491]:
+                - link "AI Agent News" [ref=e1492] [cursor=pointer]:
+                  - /url: /ai-agent-news/
+              - listitem [ref=e1493]:
+                - link "AI Agent Trends" [ref=e1494] [cursor=pointer]:
+                  - /url: /ai-agent-trends/
+              - listitem [ref=e1495]:
+                - link "AI Agent Benchmarks" [ref=e1496] [cursor=pointer]:
+                  - /url: /ai-agent-benchmarks/
+              - listitem [ref=e1497]:
+                - link "AI Agent Roadmap" [ref=e1498] [cursor=pointer]:
+                  - /url: /ai-agent-roadmap/
+              - listitem [ref=e1499]:
+                - link "AI Agent Updates" [ref=e1500] [cursor=pointer]:
+                  - /url: /ai-agent-updates/
+              - listitem [ref=e1501]:
+                - link "AI Agent Cases and Examples" [ref=e1502] [cursor=pointer]:
+                  - /url: /ai-agent-cases-and-examples/
+          - navigation "MCP Ecosystem" [ref=e1503]:
+            - heading [level=3] [ref=e1504]:
+              - link "MCP Ecosystem" [ref=e1505] [cursor=pointer]:
+                - /url: /mcp-directory/
+            - list [ref=e1506]:
+              - listitem [ref=e1507]:
+                - link "What Is MCP?" [ref=e1508] [cursor=pointer]:
+                  - /url: /what-is-mcp/
+              - listitem [ref=e1509]:
+                - link "Best MCP Servers" [ref=e1510] [cursor=pointer]:
+                  - /url: /best-mcp-servers/
+              - listitem [ref=e1511]:
+                - link "MCP Directory" [ref=e1512] [cursor=pointer]:
+                  - /url: /mcp-directory/
+      - generic [ref=e1514]:
+        - generic [ref=e1515]:
+          - link "BestAIAgent.in homepage" [ref=e1516] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e1517]: BA
+            - generic [ref=e1518]: BestAIAgent.in
+          - paragraph [ref=e1519]: Independent research, comparisons, rankings and implementation guidance for AI agents, frameworks and MCP infrastructure.
+          - generic "Editorial principles" [ref=e1520]:
+            - generic [ref=e1521]: Independent
+            - generic [ref=e1522]: Evidence-led
+            - generic [ref=e1523]: Human-reviewed
+            - generic [ref=e1524]: Updated regularly
+        - navigation "Platform navigation" [ref=e1525]:
+          - heading "Platform" [level=3] [ref=e1526]
+          - list [ref=e1527]:
+            - listitem [ref=e1528]:
+              - link "AI Agents" [ref=e1529] [cursor=pointer]:
+                - /url: /agents/
+            - listitem [ref=e1530]:
+              - link "Categories" [ref=e1531] [cursor=pointer]:
+                - /url: /categories/
+            - listitem [ref=e1532]:
+              - link "Rankings" [ref=e1533] [cursor=pointer]:
+                - /url: /rankings/
+            - listitem [ref=e1534]:
+              - link "Compare" [ref=e1535] [cursor=pointer]:
+                - /url: /compare/
+            - listitem [ref=e1536]:
+              - link "Frameworks" [ref=e1537] [cursor=pointer]:
+                - /url: /frameworks/
+            - listitem [ref=e1538]:
+              - link "MCP Servers" [ref=e1539] [cursor=pointer]:
+                - /url: /mcp-servers/
+            - listitem [ref=e1540]:
+              - link "Research" [ref=e1541] [cursor=pointer]:
+                - /url: /research/
+            - listitem [ref=e1542]:
+              - link "HTML Sitemap" [ref=e1543] [cursor=pointer]:
+                - /url: /sitemap/
+        - navigation "Trust & Editorial navigation" [ref=e1544]:
+          - heading "Trust & Editorial" [level=3] [ref=e1545]
+          - list [ref=e1546]:
+            - listitem [ref=e1547]:
+              - link "Methodology" [ref=e1548] [cursor=pointer]:
+                - /url: /methodology/
+            - listitem [ref=e1549]:
+              - link "Editorial Policy" [ref=e1550] [cursor=pointer]:
+                - /url: /editorial-policy/
+            - listitem [ref=e1551]:
+              - link "Review Process" [ref=e1552] [cursor=pointer]:
+                - /url: /review-process/
+            - listitem [ref=e1553]:
+              - link "Authors" [ref=e1554] [cursor=pointer]:
+                - /url: /authors/
+            - listitem [ref=e1555]:
+              - link "Corrections" [ref=e1556] [cursor=pointer]:
+                - /url: /corrections/
+        - navigation "Company navigation" [ref=e1557]:
+          - heading "Company & Feeds" [level=3] [ref=e1558]
+          - list [ref=e1559]:
+            - listitem [ref=e1560]:
+              - link "About" [ref=e1561] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e1562]:
+              - link "Contact" [ref=e1563] [cursor=pointer]:
+                - /url: /contact/
+            - listitem [ref=e1564]:
+              - link "Privacy" [ref=e1565] [cursor=pointer]:
+                - /url: /privacy-policy/
+            - listitem [ref=e1566]:
+              - link "Terms" [ref=e1567] [cursor=pointer]:
+                - /url: /terms/
+            - listitem [ref=e1568]:
+              - link "Affiliate Disclosure" [ref=e1569] [cursor=pointer]:
+                - /url: /affiliate-disclosure/
+            - listitem [ref=e1570]:
+              - button "RSS & XML Feeds" [ref=e1571]
+            - listitem [ref=e1572]:
+              - button "PSEO Blueprint" [ref=e1573]
+      - generic [ref=e1575]:
+        - paragraph [ref=e1576]: © 2026 BestAIAgent.in. All rights reserved.
+        - paragraph [ref=e1577]: Product names and trademarks belong to their respective owners.
+  - contentinfo [ref=e1578]:
+    - generic [ref=e1580]:
+      - generic [ref=e1581]:
+        - paragraph [ref=e1582]: Independent AI agent intelligence
+        - heading "Find the right AI agent for your work" [level=2] [ref=e1586]
+        - paragraph [ref=e1587]: Compare capabilities, pricing, deployment options, benchmarks and real-world use cases.
+      - generic [ref=e1588]:
+        - link "Find My Agent" [ref=e1589] [cursor=pointer]:
+          - /url: /agents/
+        - link "Compare Agents" [ref=e1593] [cursor=pointer]:
+          - /url: /compare/
+    - generic [ref=e1595]:
+      - generic [ref=e1596]:
+        - generic [ref=e1597]:
+          - paragraph [ref=e1598]: Programmatic authority index
+          - heading "Explore the complete AI agent knowledge map" [level=2] [ref=e1599]
+          - paragraph [ref=e1600]: Browse guides grouped by agent type, business function, development workflow, industry, research and MCP infrastructure.
+        - link "View complete HTML sitemap" [ref=e1601] [cursor=pointer]:
+          - /url: /sitemap/
+          - generic [ref=e1603]: →
+      - generic [ref=e1604]:
+        - navigation "Best AI Agents" [ref=e1605]:
+          - heading [level=3] [ref=e1606]:
+            - link "Best AI Agents" [ref=e1607] [cursor=pointer]:
+              - /url: /best-ai-agent/
+          - list [ref=e1608]:
+            - listitem [ref=e1609]:
+              - link "Best AI Agent" [ref=e1610] [cursor=pointer]:
+                - /url: /best-ai-agent/
+            - listitem [ref=e1611]:
+              - link "Best AI Agent for Business" [ref=e1612] [cursor=pointer]:
+                - /url: /best-ai-agent-for-business/
+            - listitem [ref=e1613]:
+              - link "Best AI Agent for Coding" [ref=e1614] [cursor=pointer]:
+                - /url: /best-ai-agent-for-coding/
+            - listitem [ref=e1615]:
+              - link "Best AI Agent Alternatives" [ref=e1616] [cursor=pointer]:
+                - /url: /best-ai-agent-alternatives/
+            - listitem [ref=e1617]:
+              - link "Best AI Agents for Automation" [ref=e1618] [cursor=pointer]:
+                - /url: /best-ai-agents-for-automation/
+        - navigation "Business Functions" [ref=e1619]:
+          - heading "Business Functions" [level=3] [ref=e1620]
+          - list [ref=e1622]:
+            - listitem [ref=e1623]:
+              - link "AI Agents for CRM" [ref=e1624] [cursor=pointer]:
+                - /url: /best-ai-agent-for-crm/
+            - listitem [ref=e1625]:
+              - link "AI Agents for Customer Support" [ref=e1626] [cursor=pointer]:
+                - /url: /best-ai-agent-for-customer-support/
+            - listitem [ref=e1627]:
+              - link "AI Agents for Sales" [ref=e1628] [cursor=pointer]:
+                - /url: /best-ai-agent-for-sales/
+            - listitem [ref=e1629]:
+              - link "AI Agents for HR" [ref=e1630] [cursor=pointer]:
+                - /url: /best-ai-agent-for-hr/
+            - listitem [ref=e1631]:
+              - link "AI Agents for Marketing" [ref=e1632] [cursor=pointer]:
+                - /url: /best-ai-agent-for-marketing/
+        - navigation "Agent Builders" [ref=e1633]:
+          - heading "Agent Builders" [level=3] [ref=e1634]
+          - list [ref=e1636]:
+            - listitem [ref=e1637]:
+              - link "AI Agent Builder" [ref=e1638] [cursor=pointer]:
+                - /url: /best-ai-agent-builder/
+            - listitem [ref=e1639]:
+              - link "AI Agent Creator" [ref=e1640] [cursor=pointer]:
+                - /url: /best-ai-agent-creator/
+            - listitem [ref=e1641]:
+              - link "AI Agent Maker" [ref=e1642] [cursor=pointer]:
+                - /url: /best-ai-agent-maker/
+            - listitem [ref=e1643]:
+              - link "AI Agent App Builder" [ref=e1644] [cursor=pointer]:
+                - /url: /best-ai-agent-app-builder/
+            - listitem [ref=e1645]:
+              - link "No-Code AI Agent Platforms" [ref=e1646] [cursor=pointer]:
+                - /url: /best-ai-agent-no-code-platform/
+            - listitem [ref=e1647]:
+              - link "AI Workflow Builders" [ref=e1648] [cursor=pointer]:
+                - /url: /best-ai-agent-workflow-builder/
+            - listitem [ref=e1649]:
+              - link "AI Agent Platforms" [ref=e1650] [cursor=pointer]:
+                - /url: /best-ai-agent-platform/
+        - navigation "Coding Agents" [ref=e1651]:
+          - heading "Coding Agents" [level=3] [ref=e1652]
+          - list [ref=e1654]:
+            - listitem [ref=e1655]:
+              - link "AI Agents for Code Review" [ref=e1656] [cursor=pointer]:
+                - /url: /best-ai-agent-for-code-review/
+            - listitem [ref=e1657]:
+              - link "AI Agents for Frontend Development" [ref=e1658] [cursor=pointer]:
+                - /url: /best-ai-agent-for-frontend-development/
+            - listitem [ref=e1659]:
+              - link "AI Agents for Backend Development" [ref=e1660] [cursor=pointer]:
+                - /url: /best-ai-agent-for-backend-development/
+            - listitem [ref=e1661]:
+              - link "AI Agents for VS Code" [ref=e1662] [cursor=pointer]:
+                - /url: /best-ai-agent-for-vs-code/
+            - listitem [ref=e1663]:
+              - link "AI Agent Extensions for VS Code" [ref=e1664] [cursor=pointer]:
+                - /url: /best-ai-agent-extension-for-vs-code/
+            - listitem [ref=e1665]:
+              - link "AI Agents for IDEs" [ref=e1666] [cursor=pointer]:
+                - /url: /best-ai-agent-for-ides/
+        - navigation "Frameworks & Developer Tools" [ref=e1667]:
+          - heading "Frameworks & Developer Tools" [level=3] [ref=e1668]
+          - list [ref=e1670]:
+            - listitem [ref=e1671]:
+              - link "AI Agent Frameworks" [ref=e1672] [cursor=pointer]:
+                - /url: /best-ai-agent-frameworks/
+            - listitem [ref=e1673]:
+              - link "Agent Orchestration Tools" [ref=e1674] [cursor=pointer]:
+                - /url: /best-ai-agent-orchestration-tools/
+            - listitem [ref=e1675]:
+              - link "AI Agent SDKs" [ref=e1676] [cursor=pointer]:
+                - /url: /best-ai-agent-sdks/
+            - listitem [ref=e1677]:
+              - link "Open-Source Agent Tools" [ref=e1678] [cursor=pointer]:
+                - /url: /best-open-source-ai-agent-tools/
+            - listitem [ref=e1679]:
+              - link "AI Agent Libraries" [ref=e1680] [cursor=pointer]:
+                - /url: /best-ai-agent-libraries/
+            - listitem [ref=e1681]:
+              - link "AI Agent Prompt Tools" [ref=e1682] [cursor=pointer]:
+                - /url: /best-ai-agent-prompt-tools/
+            - listitem [ref=e1683]:
+              - link "AI Agent Development Tools" [ref=e1684] [cursor=pointer]:
+                - /url: /best-ai-agent-development-tools/
+        - navigation "Agents by Organization" [ref=e1685]:
+          - heading "Agents by Organization" [level=3] [ref=e1686]
+          - list [ref=e1688]:
+            - listitem [ref=e1689]:
+              - link "AI Agents for Business" [ref=e1690] [cursor=pointer]:
+                - /url: /ai-agents-for-business/
+            - listitem [ref=e1691]:
+              - link "AI Agents for Enterprises" [ref=e1692] [cursor=pointer]:
+                - /url: /ai-agents-for-enterprises/
+            - listitem [ref=e1693]:
+              - link "AI Agents for SMEs" [ref=e1694] [cursor=pointer]:
+                - /url: /ai-agents-for-smes/
+            - listitem [ref=e1695]:
+              - link "Workflow Automation Agents" [ref=e1696] [cursor=pointer]:
+                - /url: /ai-agents-for-workflow-automation/
+            - listitem [ref=e1697]:
+              - link "Support Automation Agents" [ref=e1698] [cursor=pointer]:
+                - /url: /ai-agents-for-support-automation/
+        - navigation "Agents by Industry" [ref=e1699]:
+          - heading "Agents by Industry" [level=3] [ref=e1700]
+          - list [ref=e1702]:
+            - listitem [ref=e1703]:
+              - link "AI Agents for Finance" [ref=e1704] [cursor=pointer]:
+                - /url: /ai-agents-for-finance/
+            - listitem [ref=e1705]:
+              - link "AI Agents for Security" [ref=e1706] [cursor=pointer]:
+                - /url: /ai-agents-for-security/
+            - listitem [ref=e1707]:
+              - link "AI Agents for Healthcare" [ref=e1708] [cursor=pointer]:
+                - /url: /ai-agents-for-healthcare/
+            - listitem [ref=e1709]:
+              - link "AI Agents for HR" [ref=e1710] [cursor=pointer]:
+                - /url: /ai-agents-for-hr/
+            - listitem [ref=e1711]:
+              - link "AI Agents for Procurement" [ref=e1712] [cursor=pointer]:
+                - /url: /ai-agents-for-procurement/
+        - navigation "Research & Intelligence" [ref=e1713]:
+          - heading "Research & Intelligence" [level=3] [ref=e1714]
+          - list [ref=e1716]:
+            - listitem [ref=e1717]:
+              - link "AI Agent Research" [ref=e1718] [cursor=pointer]:
+                - /url: /ai-agent-research/
+            - listitem [ref=e1719]:
+              - link "AI Agent News" [ref=e1720] [cursor=pointer]:
+                - /url: /ai-agent-news/
+            - listitem [ref=e1721]:
+              - link "AI Agent Trends" [ref=e1722] [cursor=pointer]:
+                - /url: /ai-agent-trends/
+            - listitem [ref=e1723]:
+              - link "AI Agent Benchmarks" [ref=e1724] [cursor=pointer]:
+                - /url: /ai-agent-benchmarks/
+            - listitem [ref=e1725]:
+              - link "AI Agent Roadmap" [ref=e1726] [cursor=pointer]:
+                - /url: /ai-agent-roadmap/
+            - listitem [ref=e1727]:
+              - link "AI Agent Updates" [ref=e1728] [cursor=pointer]:
+                - /url: /ai-agent-updates/
+            - listitem [ref=e1729]:
+              - link "AI Agent Cases and Examples" [ref=e1730] [cursor=pointer]:
+                - /url: /ai-agent-cases-and-examples/
+        - navigation "MCP Ecosystem" [ref=e1731]:
+          - heading [level=3] [ref=e1732]:
+            - link "MCP Ecosystem" [ref=e1733] [cursor=pointer]:
+              - /url: /mcp-directory/
+          - list [ref=e1734]:
+            - listitem [ref=e1735]:
+              - link "What Is MCP?" [ref=e1736] [cursor=pointer]:
+                - /url: /what-is-mcp/
+            - listitem [ref=e1737]:
+              - link "Best MCP Servers" [ref=e1738] [cursor=pointer]:
+                - /url: /best-mcp-servers/
+            - listitem [ref=e1739]:
+              - link "MCP Directory" [ref=e1740] [cursor=pointer]:
+                - /url: /mcp-directory/
+    - generic [ref=e1742]:
+      - generic [ref=e1743]:
+        - link "BestAIAgent.in homepage" [ref=e1744] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e1745]: BA
+          - generic [ref=e1746]: BestAIAgent.in
+        - paragraph [ref=e1747]: Independent research, comparisons, rankings and implementation guidance for AI agents, frameworks and MCP infrastructure.
+        - generic "Editorial principles" [ref=e1748]:
+          - generic [ref=e1749]: Independent
+          - generic [ref=e1750]: Evidence-led
+          - generic [ref=e1751]: Human-reviewed
+          - generic [ref=e1752]: Updated regularly
+      - navigation "Platform navigation" [ref=e1753]:
+        - heading "Platform" [level=3] [ref=e1754]
+        - list [ref=e1755]:
+          - listitem [ref=e1756]:
+            - link "AI Agents" [ref=e1757] [cursor=pointer]:
+              - /url: /agents/
+          - listitem [ref=e1758]:
+            - link "Categories" [ref=e1759] [cursor=pointer]:
+              - /url: /categories/
+          - listitem [ref=e1760]:
+            - link "Rankings" [ref=e1761] [cursor=pointer]:
+              - /url: /rankings/
+          - listitem [ref=e1762]:
+            - link "Compare" [ref=e1763] [cursor=pointer]:
+              - /url: /compare/
+          - listitem [ref=e1764]:
+            - link "Frameworks" [ref=e1765] [cursor=pointer]:
+              - /url: /frameworks/
+          - listitem [ref=e1766]:
+            - link "MCP Servers" [ref=e1767] [cursor=pointer]:
+              - /url: /mcp-servers/
+          - listitem [ref=e1768]:
+            - link "Research" [ref=e1769] [cursor=pointer]:
+              - /url: /research/
+          - listitem [ref=e1770]:
+            - link "HTML Sitemap" [ref=e1771] [cursor=pointer]:
+              - /url: /sitemap/
+      - navigation "Trust & Editorial navigation" [ref=e1772]:
+        - heading "Trust & Editorial" [level=3] [ref=e1773]
+        - list [ref=e1774]:
+          - listitem [ref=e1775]:
+            - link "Methodology" [ref=e1776] [cursor=pointer]:
+              - /url: /methodology/
+          - listitem [ref=e1777]:
+            - link "Editorial Policy" [ref=e1778] [cursor=pointer]:
+              - /url: /editorial-policy/
+          - listitem [ref=e1779]:
+            - link "Review Process" [ref=e1780] [cursor=pointer]:
+              - /url: /review-process/
+          - listitem [ref=e1781]:
+            - link "Authors" [ref=e1782] [cursor=pointer]:
+              - /url: /authors/
+          - listitem [ref=e1783]:
+            - link "Corrections" [ref=e1784] [cursor=pointer]:
+              - /url: /corrections/
+      - navigation "Company navigation" [ref=e1785]:
+        - heading "Company & Feeds" [level=3] [ref=e1786]
+        - list [ref=e1787]:
+          - listitem [ref=e1788]:
+            - link "About" [ref=e1789] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=e1790]:
+            - link "Contact" [ref=e1791] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e1792]:
+            - link "Privacy" [ref=e1793] [cursor=pointer]:
+              - /url: /privacy-policy/
+          - listitem [ref=e1794]:
+            - link "Terms" [ref=e1795] [cursor=pointer]:
+              - /url: /terms/
+          - listitem [ref=e1796]:
+            - link "Affiliate Disclosure" [ref=e1797] [cursor=pointer]:
+              - /url: /affiliate-disclosure/
+    - generic [ref=e1799]:
+      - paragraph [ref=e1800]: © 2026 BestAIAgent.in. All rights reserved.
+      - paragraph [ref=e1801]: Product names and trademarks belong to their respective owners.

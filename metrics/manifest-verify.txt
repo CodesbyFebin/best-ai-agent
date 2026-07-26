@@ -1,0 +1,14 @@
+
+> react-example@0.0.0 test:manifest
+> tsx scripts/verify-manifest.ts
+
+[36mINFO:[0m 📦 Loading manifest data...
+[36mINFO:[0m ✅ Loaded 1 manifest(s)
+[36mINFO:[0m ✅ Loaded graph data (25 nodes)
+[36mINFO:[0m ─────────────────────────────────────────────────────────────
+[32m✅ Manifest structure looks perfect![0m
+[36mINFO:[0m    Total manifests: 1
+[36mINFO:[0m    Unique IDs: 1
+[36mINFO:[0m    Unique canonical URLs: 1
+[36mINFO:[0m    Unique entity references: 1
+[36mINFO:[0m ─────────────────────────────────────────────────────────────

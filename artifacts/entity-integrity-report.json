@@ -1,0 +1,78 @@
+{
+  "commit": "auto-detected",
+  "timestamp": "2026-07-26T05:01:45.655Z",
+  "nodes": {
+    "total": 25,
+    "byType": {
+      "agent": 8,
+      "category": 10,
+      "comparison": 4,
+      "research": 3
+    }
+  },
+  "edges": {
+    "total": 68,
+    "byType": {
+      "BELONGS_TO": 18,
+      "TOP_AGENT": 6,
+      "COMPARED_WITH": 2,
+      "SIMILAR_TO": 40,
+      "CITED_BY": 2
+    }
+  },
+  "validation": {
+    "validNodeIds": 25,
+    "brokenEdges": 0,
+    "duplicateEdges": 14,
+    "orphanedNodes": 8
+  },
+  "issues": [
+    {
+      "type": "duplicate_edge",
+      "severity": "warning",
+      "count": 14,
+      "example": [
+        {
+          "from": "agent/chatgpt",
+          "to": "agent/claude",
+          "type": "SIMILAR_TO",
+          "properties": {
+            "reason": "same-category",
+            "category": "Coding Agents",
+            "score": 0.8
+          }
+        },
+        {
+          "from": "agent/claude",
+          "to": "agent/chatgpt",
+          "type": "SIMILAR_TO",
+          "properties": {
+            "reason": "same-category",
+            "category": "Coding Agents",
+            "score": 0.8
+          }
+        },
+        {
+          "from": "agent/chatgpt",
+          "to": "agent/claude",
+          "type": "SIMILAR_TO",
+          "properties": {
+            "reason": "same-category",
+            "category": "Research Agents",
+            "score": 0.8
+          }
+        }
+      ]
+    },
+    {
+      "type": "orphaned_node",
+      "severity": "info",
+      "count": 8,
+      "examples": [
+        "category/sales-marketing",
+        "category/mcp-servers",
+        "comparison/chatgpt-vs-claude"
+      ]
+    }
+  ]
+}

@@ -1,90 +1,6 @@
 {
-  "generatedAt": "2026-07-23T11:45:41.281Z",
+  "generatedAt": "2026-07-24T01:39:30.263Z",
   "hashRoutingReferences": [
-    {
-      "file": "src/App.tsx",
-      "line": 230,
-      "text": "const hash = window.location.hash;",
-      "pattern": "window\\.location\\.hash"
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 338,
-      "text": "window.addEventListener('hashchange', handleRouter);",
-      "pattern": "hashchange"
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 341,
-      "text": "window.removeEventListener('hashchange', handleRouter);",
-      "pattern": "hashchange"
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 362,
-      "text": "\"target\": \"https://bestaiagent.in/#view=home&q={search_term_string}\",",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 374,
-      "text": "\"url\": `https://bestaiagent.in/#view=silo-pillar&silo=${s.id}`,",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 379,
-      "text": "\"url\": `https://bestaiagent.in/#view=product&product=${p.slug}`",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 403,
-      "text": "\"item\": `https://bestaiagent.in/#view=silo-pillar&silo=${p.siloId}`",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 409,
-      "text": "\"item\": `https://bestaiagent.in/#view=article&article=${p.slug}`",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 431,
-      "text": "\"mainEntityOfPage\": `https://bestaiagent.in/#view=article&article=${p.slug}`",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 943,
-      "text": "\"url\": \"https://bestaiagent.in/#view=product&slug=cursor-ai\"",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 949,
-      "text": "\"url\": \"https://bestaiagent.in/#view=product&slug=vapi-ai\"",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 955,
-      "text": "\"url\": \"https://bestaiagent.in/#view=product&slug=crewai\"",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 1526,
-      "text": "const shareUrl = `${window.location.origin}${window.location.pathname}#view=silo-pillar&silo=${activeSilo.id}`;",
-      "pattern": "#view="
-    },
-    {
-      "file": "src/App.tsx",
-      "line": 2228,
-      "text": "const shareUrl = `${window.location.origin}${window.location.pathname}#view=article&article=${page.slug}`;",
-      "pattern": "#view="
-    },
     {
       "file": "src/components/IndiaMcpCustomizer.tsx",
       "line": 185,
@@ -134,230 +50,8 @@
       "pattern": "#view="
     }
   ],
-  "hashRoutingCount": 22,
+  "hashRoutingCount": 8,
   "legacyAReferences": [
-    {
-      "file": "src/components/SemanticKnowledgeGraph.tsx",
-      "line": 245,
-      "text": "onClick={() => onNavigateToUrl(`/a/best-ai-agent/reviews/${entity.slug}/`)}",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 75,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/chatgpt/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 111,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/claude/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 147,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/cursor-ai/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 183,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/vapi-ai/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 219,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/grok/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 254,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/crewai/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 289,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/krutrim/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/agents.ts",
-      "line": 325,
-      "text": "reviewUrl: \"/a/best-ai-agent/reviews/perplexity/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 24,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/coding/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 36,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/business-automation/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 48,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/customer-support/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 60,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/research/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 72,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/sales-marketing/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 84,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/voice-agents/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 96,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/open-source/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 108,
-      "text": "urlPath: \"/a/best-ai-agent/frameworks/langgraph/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 120,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/mcp-servers/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/categories.ts",
-      "line": 132,
-      "text": "urlPath: \"/a/best-ai-agent/use-cases/personal-assistants/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/comparisons.ts",
-      "line": 53,
-      "text": "urlPath: \"/a/best-ai-agent/comparisons/chatgpt-vs-claude/\"",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/comparisons.ts",
-      "line": 78,
-      "text": "urlPath: \"/a/best-ai-agent/comparisons/cursor-vs-copilot/\"",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/comparisons.ts",
-      "line": 103,
-      "text": "urlPath: \"/a/best-ai-agent/comparisons/crewai-vs-autogen/\"",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/comparisons.ts",
-      "line": 128,
-      "text": "urlPath: \"/a/best-ai-agent/comparisons/claude-vs-gemini/\"",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/research.ts",
-      "line": 32,
-      "text": "urlPath: \"/a/best-ai-agent/research/benchmark-index-2026/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/research.ts",
-      "line": 50,
-      "text": "urlPath: \"/a/best-ai-agent/research/pricing-tracker-2026/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/research.ts",
-      "line": 68,
-      "text": "urlPath: \"/a/best-ai-agent/research/india-adoption-2026/\",",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 156,
-      "text": "{ path: \"/a/best-ai-agent/reviews/chatgpt/\", type: \"Review\", entity: \"ChatGPT\", description: \"In-depth review of OpenAI ChatGPT Agent Mode, benchmarks, pricing, and India fit.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 157,
-      "text": "{ path: \"/a/best-ai-agent/reviews/claude/\", type: \"Review\", entity: \"Claude\", description: \"Comprehensive analysis of Anthropic Claude 3.5 Sonnet, Computer Use agent, and code benchmark scores.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 158,
-      "text": "{ path: \"/a/best-ai-agent/reviews/grok/\", type: \"Review\", entity: \"Grok\", description: \"xAI Grok 2 & Grok Heavy review, real-time X data telemetry, spicy mode, and API cost.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 159,
-      "text": "{ path: \"/a/best-ai-agent/comparisons/chatgpt-vs-claude/\", type: \"Comparison\", entity: \"ChatGPT vs Claude\", description: \"Head-to-head comparison between ChatGPT-4o and Claude 3.5 Sonnet for coding and reasoning.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 160,
-      "text": "{ path: \"/a/best-ai-agent/comparisons/claude-vs-gemini/\", type: \"Comparison\", entity: \"Claude vs Gemini\", description: \"Anthropic Claude vs Google Gemini 1.5 Pro benchmark showdown across multi-modal reasoning.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 161,
-      "text": "{ path: \"/a/best-ai-agent/pricing/chatgpt/\", type: \"Pricing\", entity: \"ChatGPT Pricing\", description: \"ChatGPT Free vs Plus ($20/mo) vs Team ($25/mo) vs Enterprise API pricing breakdown.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 162,
-      "text": "{ path: \"/a/best-ai-agent/pricing/claude/\", type: \"Pricing\", entity: \"Claude Pricing\", description: \"Claude Free vs Pro ($20/mo) vs API token pricing per 1M tokens.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 163,
-      "text": "{ path: \"/a/best-ai-agent/alternatives/chatgpt/\", type: \"Alternatives\", entity: \"ChatGPT Alternatives\", description: \"Top 10 alternative AI agents to ChatGPT including Claude, Perplexity, and DeepSeek.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 164,
-      "text": "{ path: \"/a/best-ai-agent/frameworks/langgraph/\", type: \"Framework\", entity: \"LangGraph\", description: \"LangGraph production guide for building stateful cyclic multi-agent graphs.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 165,
-      "text": "{ path: \"/a/best-ai-agent/use-cases/customer-support/\", type: \"Use Case\", entity: \"Customer Support\", description: \"Best AI agents for 24/7 customer support automation, voice call handling, and SLA tracking.\" },",
-      "pattern": "[\"'`]\\/a\\/"
-    },
-    {
-      "file": "src/data/semanticClusters.ts",
-      "line": 166,
-      "text": "{ path: \"/a/best-ai-agent/industries/healthcare/\", type: \"Industry\", entity: \"Healthcare\", description: \"HIPAA-compliant AI agents for patient scheduling, medical record parsing, and clinical workflow.\" }",
-      "pattern": "[\"'`]\\/a\\/"
-    },
     {
       "file": "src/data/sitemapGenerator.ts",
       "line": 45,
@@ -366,178 +60,178 @@
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 775,
+      "line": 897,
       "text": "'/a/best-ai-agent/reviews/chatgpt': '/agents/chatgpt',",
       "pattern": "[\"'`]\\/a\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 776,
+      "line": 898,
       "text": "'/a/best-ai-agent/reviews/claude': '/agents/claude',",
       "pattern": "[\"'`]\\/a\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 777,
+      "line": 899,
       "text": "'/a/best-ai-agent/reviews/cursor': '/agents/cursor',",
       "pattern": "[\"'`]\\/a\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 778,
+      "line": 900,
       "text": "'/a/best-ai-agent/reviews/vapi': '/agents/vapi',",
       "pattern": "[\"'`]\\/a\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 779,
+      "line": 901,
       "text": "'/a/best-ai-agent/reviews/crewai': '/agents/crewai',",
       "pattern": "[\"'`]\\/a\\/"
     }
   ],
-  "legacyACount": 43,
+  "legacyACount": 6,
   "legacyToolsReferences": [
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 747,
+      "line": 869,
       "text": "'/tools/cursor': '/agents/cursor',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 748,
+      "line": 870,
       "text": "'/tools/cursor-ai': '/agents/cursor',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 749,
+      "line": 871,
       "text": "'/tools/claude-code': '/agents/claude-code',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 750,
+      "line": 872,
       "text": "'/tools/chatgpt': '/agents/chatgpt',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 751,
+      "line": 873,
       "text": "'/tools/claude': '/agents/claude',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 752,
+      "line": 874,
       "text": "'/tools/vapi': '/agents/vapi',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 753,
+      "line": 875,
       "text": "'/tools/vapi-ai': '/agents/vapi',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 754,
+      "line": 876,
       "text": "'/tools/crewai': '/agents/crewai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 755,
+      "line": 877,
       "text": "'/tools/yellow-ai': '/agents/yellow-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 756,
+      "line": 878,
       "text": "'/tools/flowise': '/agents/flowise-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 757,
+      "line": 879,
       "text": "'/tools/flowise-ai': '/agents/flowise-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 758,
+      "line": 880,
       "text": "'/tools/reclaim-ai': '/agents/reclaim-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 759,
+      "line": 881,
       "text": "'/tools/n8n': '/agents/n8n',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 760,
+      "line": 882,
       "text": "'/tools/relevance-ai': '/agents/relevance-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 761,
+      "line": 883,
       "text": "'/tools/langgraph': '/agents/langgraph',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 762,
+      "line": 884,
       "text": "'/tools/autogen': '/agents/autogen',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 763,
+      "line": 885,
       "text": "'/tools/windsurf': '/agents/windsurf',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 764,
+      "line": 886,
       "text": "'/tools/retell-ai': '/agents/retell-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 767,
+      "line": 889,
       "text": "'/tools/cursor/': '/agents/cursor',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 768,
+      "line": 890,
       "text": "'/tools/claude-code/': '/agents/claude-code',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 769,
+      "line": 891,
       "text": "'/tools/chatgpt/': '/agents/chatgpt',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 770,
+      "line": 892,
       "text": "'/tools/vapi/': '/agents/vapi',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 771,
+      "line": 893,
       "text": "'/tools/crewai/': '/agents/crewai',",
       "pattern": "[\"'`]\\/tools\\/"
     },
     {
       "file": "src/routing/routeRegistry.ts",
-      "line": 772,
+      "line": 894,
       "text": "'/tools/yellow-ai/': '/agents/yellow-ai',",
       "pattern": "[\"'`]\\/tools\\/"
     }
@@ -545,7 +239,7 @@
   "legacyToolsCount": 24,
   "verdict": {
     "hashRoutingActive": true,
-    "legacyARemaining": 43,
+    "legacyARemaining": 6,
     "legacyToolsRemaining": 24
   }
 }

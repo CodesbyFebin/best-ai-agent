@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-23T11:45:41.281Z",
-  "redirectCount": 42,
+  "generatedAt": "2026-07-24T01:39:30.263Z",
+  "redirectCount": 44,
   "entries": [
     {
       "from": "/tools/cursor",
@@ -236,27 +236,27 @@
     },
     {
       "from": "/notion-server",
-      "to": "/mcp/servers/slack",
+      "to": "/mcp/servers/notion",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/slack)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/notion)"
     },
     {
       "from": "/excel-server",
-      "to": "/mcp/servers/filesystem",
+      "to": "/mcp/servers/excel",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/filesystem)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/excel)"
     },
     {
       "from": "/shopify-server",
-      "to": "/mcp/servers/github",
+      "to": "/mcp/servers/shopify",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/github)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/shopify)"
     },
     {
       "from": "/best-ai-agent-for-crm",
@@ -337,33 +337,65 @@
       "chainHop": "one-hop",
       "toExists": true,
       "unrelatedMcp": null
+    },
+    {
+      "from": "/sitemap.xml",
+      "to": "/sitemap-index.xml",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": false,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/sitemap-indexed.xml",
+      "to": "/sitemap-index.xml",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": false,
+      "unrelatedMcp": null
     }
   ],
   "problems": [
     {
       "from": "/notion-server",
-      "to": "/mcp/servers/slack",
+      "to": "/mcp/servers/notion",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/slack)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/notion)"
     },
     {
       "from": "/excel-server",
-      "to": "/mcp/servers/filesystem",
+      "to": "/mcp/servers/excel",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/filesystem)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/excel)"
     },
     {
       "from": "/shopify-server",
-      "to": "/mcp/servers/github",
+      "to": "/mcp/servers/shopify",
       "loopsBack": false,
       "chainHop": "one-hop",
       "toExists": true,
-      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/github)"
+      "unrelatedMcp": "redirects to semantically unrelated entity (/mcp/servers/shopify)"
+    },
+    {
+      "from": "/sitemap.xml",
+      "to": "/sitemap-index.xml",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": false,
+      "unrelatedMcp": null
+    },
+    {
+      "from": "/sitemap-indexed.xml",
+      "to": "/sitemap-index.xml",
+      "loopsBack": false,
+      "chainHop": "one-hop",
+      "toExists": false,
+      "unrelatedMcp": null
     }
   ],
-  "problemCount": 3
+  "problemCount": 5
 }

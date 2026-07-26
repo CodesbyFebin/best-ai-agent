@@ -1,43 +1,73 @@
-import { products, siloPages } from '../data/db';
+/**
+ * ATLAS P07 — RSS Feed Generator
+ * Generates RSS feed for latest content
+ */
+import { featuredAgents } from '../data/agents.js';
+import { featuredComparisons } from '../data/comparisons.js';
+import { researchReports } from '../data/research.js';
 
 /**
- * Utility to generate a compliant RSS 2.0 XML feed from product listings and topical silo pages.
+ * Generate RSS feed XML
+ * @returns {string} RSS XML string
  */
 export function generateRssFeedXml(): string {
-  const baseUrl = "https://bestaiagent.in";
-  const buildDate = new Date().toUTCString();
+  const siteUrl = 'https://bestaiagent.in';
+  const lastBuildDate = new Date().toUTCString();
+  
+  // Combine all content types for the feed
+  const items = [
+    // Latest agent reviews
+    ...featuredAgents
+      .filter(agent => agent.featured)
+      .map(agent => ({
+        title: `${agent.name} Review, Benchmarks & India Pricing (2026) - BestAIAgent.in`,
+        link: `${siteUrl}/agents/${agent.slug}/`,
+        description: `Empirical technical audit and benchmark evaluation of ${agent.name}. Performance, latency, tool execution, and INR subscription costs.`,
+        pubDate: new Date(agent.updatedAt).toUTCString(),
+        guid: `${siteUrl}/agents/${agent.slug}/`
+      })),
+    
+    // Latest comparisons
+    ...featuredComparisons
+      .filter((_, index) => index < 3) // Latest 3 comparisons
+      .map(comp => ({
+        title: `${comp.title} - BestAIAgent.in`,
+        link: `${siteUrl}/compare/${comp.pairSlug}/`,
+        description: comp.verdict,
+        pubDate: new Date(comp.lastUpdated).toUTCString(),
+        guid: `${siteUrl}/compare/${comp.pairSlug}/`
+      })),
+    
+    // Latest research reports
+    ...researchReports
+      .filter((_, index) => index < 3) // Latest 3 research reports
+      .map(report => ({
+        title: `${report.title} - BestAIAgent.in`,
+        link: `${siteUrl}/research/${report.slug}/`,
+        description: report.summary,
+        pubDate: new Date(report.updatedDate).toUTCString(),
+        guid: `${siteUrl}/research/${report.slug}/`
+      }))
+  ].sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()); // Sort by date descending
 
-  const productItems = products.map(p => `
-    <item>
-      <title><![CDATA[${p.name} Review, Benchmark Scores & India Fit (${p.overallScore}/10)]]></title>
-      <link>${baseUrl}/#view=product&amp;product=${p.slug}</link>
-      <guid isPermaLink="true">${baseUrl}/#view=product&amp;product=${p.slug}</guid>
-      <pubDate>${buildDate}</pubDate>
-      <description><![CDATA[${p.summary} Ideal for ${p.bestFor}. Overall score: ${p.overallScore}/10. Starting price: ${p.startingPriceUSD} (${p.startingPriceINR}).]]></description>
-      <category><![CDATA[${p.category || 'AI Agent'}]]></category>
-    </item>`).join('');
-
-  const siloItems = siloPages.slice(0, 15).map(sp => `
-    <item>
-      <title><![CDATA[${sp.title}]]></title>
-      <link>${baseUrl}/#view=article&amp;article=${sp.slug}</link>
-      <guid isPermaLink="true">${baseUrl}/#view=article&amp;article=${sp.slug}</guid>
-      <pubDate>${buildDate}</pubDate>
-      <description><![CDATA[${sp.metaDescription}]]></description>
-      <category><![CDATA[AI Agents & Research]]></category>
-    </item>`).join('');
-
-  return `<?xml version="1.0" encoding="UTF-8" ?>
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BestAIAgent.in RSS Feed | Discover, Compare &amp; Scale AI Agents</title>
-    <link>${baseUrl}</link>
-    <description>Latest AI agent reviews, benchmark score updates, comparison guides, and developer frameworks in India and worldwide.</description>
-    <language>en-in</language>
-    <lastBuildDate>${buildDate}</lastBuildDate>
-    <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
-    ${productItems}
-    ${siloItems}
+    <title>BestAIAgent.in - AI Agent Reviews & Comparisons</title>
+    <link>${siteUrl}/</link>
+    <description>Independent AI Agent Evaluation Registry & Benchmark Platform</description>
+    <language>en-us</language>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
+    ${items.map(item => `
+      <item>
+        <title><![CDATA[${item.title}]]></title>
+        <link>${item.link}</link>
+        <description><![CDATA[${item.description}]]></description>
+        <pubDate>${item.pubDate}</pubDate>
+        <guid>${item.guid}</guid>
+      </item>
+    `).join('')}
   </channel>
 </rss>`;
 }

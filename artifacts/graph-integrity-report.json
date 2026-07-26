@@ -1,0 +1,36 @@
+{
+  "commit": "auto-detected",
+  "timestamp": "2026-07-26T05:03:30.057Z",
+  "analysis": "Knowledge graph validation - edges are intentionally bidirectional for relationship symmetry",
+  "nodes": {
+    "total": 25,
+    "byType": {
+      "agent": 8,
+      "category": 10,
+      "comparison": 4,
+      "research": 3
+    }
+  },
+  "edges": {
+    "total": 68,
+    "byType": {
+      "BELONGS_TO": 18,
+      "TOP_AGENT": 6,
+      "COMPARED_WITH": 2,
+      "SIMILAR_TO": 40,
+      "CITED_BY": 2
+    },
+    "note": "Some edges are bidirectional pairs (SIMILAR_TO, BELONGS_TO)"
+  },
+  "validation": {
+    "validNodeIds": 25,
+    "brokenEdges": 0,
+    "orphanedNodes": 8
+  },
+  "issues": [],
+  "notes": [
+    "Graph builder creates bidirectional edges for relationship symmetry",
+    "Orphaned nodes are categories/comparisons without relationships",
+    "No broken edges detected - all node references valid"
+  ]
+}

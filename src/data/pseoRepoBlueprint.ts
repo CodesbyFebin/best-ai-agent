@@ -53,12 +53,12 @@ python scripts/deploy.py
           path: "best-ai-agent-pseo/docs/01-information-architecture.md",
           codeSnippet: `# Information Architecture
 Flat 2-directory deep structure for optimal crawl budget and page rank distribution:
-/a/best-ai-agent/reviews/{agent_slug}/
-/a/best-ai-agent/comparisons/{pair_slug}/
-/a/best-ai-agent/pricing/{agent_slug}/
-/a/best-ai-agent/alternatives/{agent_slug}/
-/a/best-ai-agent/frameworks/{framework_slug}/
-/a/best-ai-agent/use-cases/{usecase_slug}/`
+/agents/{agent_slug}/
+/compare/{pair_slug}/
+/pricing/{agent_slug}/
+/alternatives/{agent_slug}/
+/frameworks/{framework_slug}/
+/categories/{usecase_slug}/`
         },
         {
           name: "02-semantic-entity-model.md",
@@ -87,10 +87,10 @@ Flat 2-directory deep structure for optimal crawl budget and page rank distribut
           path: "best-ai-agent-pseo/docs/04-url-architecture.md",
           codeSnippet: `# Recommended URL Architecture
 All long-tail URLs strictly formatted to <=60 chars:
-- /a/best-ai-agent/reviews/chatgpt/
-- /a/best-ai-agent/comparisons/chatgpt-vs-claude/
-- /a/best-ai-agent/pricing/claude/
-- /a/best-ai-agent/alternatives/cursor/`
+- /agents/chatgpt/
+- /compare/chatgpt-vs-claude/
+- /pricing/claude/
+- /alternatives/cursor/`
         },
         {
           name: "05-internal-linking-engine.md",
@@ -243,14 +243,15 @@ def humanize_article(raw_text):
       path: "best-ai-agent-pseo/website/",
       description: "Target URL hierarchy structure for web routing.",
       children: [
-        {
-          name: "a",
-          type: "folder",
-          path: "best-ai-agent-pseo/website/a/",
-          children: [
-            { name: "best-ai-agent", type: "folder", path: "best-ai-agent-pseo/website/a/best-ai-agent/" }
-          ]
-        }
+        { name: "agents", type: "folder", path: "best-ai-agent-pseo/website/agents/" },
+        { name: "compare", type: "folder", path: "best-ai-agent-pseo/website/compare/" },
+        { name: "pricing", type: "folder", path: "best-ai-agent-pseo/website/pricing/" },
+        { name: "alternatives", type: "folder", path: "best-ai-agent-pseo/website/alternatives/" },
+        { name: "categories", type: "folder", path: "best-ai-agent-pseo/website/categories/" },
+        { name: "frameworks", type: "folder", path: "best-ai-agent-pseo/website/frameworks/" },
+        { name: "mcp", type: "folder", path: "best-ai-agent-pseo/website/mcp/" },
+        { name: "research", type: "folder", path: "best-ai-agent-pseo/website/research/" },
+        { name: "authors", type: "folder", path: "best-ai-agent-pseo/website/authors/" }
       ]
     }
   ]

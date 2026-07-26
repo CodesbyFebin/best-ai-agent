@@ -1,0 +1,102 @@
+ M .atlas/project-status.json
+ M README.md
+ M package-lock.json
+ M package.json
+ M reports/baseline/_summary.json
+ M reports/baseline/content-score.json
+ M reports/baseline/duplicate-intent-pages.json
+ M reports/baseline/internal-links.json
+ M reports/baseline/redirects.json
+ M reports/baseline/repository-inventory.json
+ M reports/baseline/routes.json
+ M reports/baseline/security-findings.md
+ M reports/baseline/seo-score.json
+ M reports/baseline/sitemaps.json
+ D server.ts
+ M src/App.tsx
+ M src/components/IndiaMcpCustomizer.tsx
+ M src/components/ProductProfile.tsx
+ M src/components/RouterApp.tsx
+ M src/components/SemanticKnowledgeGraph.tsx
+ M src/data/agents.ts
+ M src/data/categories.ts
+ M src/data/comparisons.ts
+ M src/data/pseoRepoBlueprint.ts
+ M src/data/research.ts
+ M src/data/semanticClusters.ts
+ M src/data/sitemapGenerator.ts
+ M src/data/topicalAuthority.ts
+ M src/main.tsx
+ D src/routing/renderSsrBody.ts
+ M src/routing/routeRegistry.ts
+ M src/routing/routeResolver.ts
+ M src/utils/rss-feed-generator.ts
+ M tsconfig.json
+?? .playwright-mcp/
+?? .safe-deep/
+?? ACHIEVEMENTS.md
+?? ATLAS_SAFE-DEEP_OS_Master_Prompt.md
+?? CHANGES_AUDIT.md
+?? CONSOLIDATION_SUMMARY.md
+?? CURRENT_IMPLEMENTATION.md
+?? DEPLOYMENT.md
+?? DEVELOPMENT.md
+?? FINAL_REPORT.md
+?? FINAL_SIGNOFF.md
+?? HANDOFF_STAGING.md
+?? PLATFORM_VERIFICATION_SUMMARY.txt
+?? PROJECT_COMPLETENESS.md
+?? PROJECT_TRACKER.md
+?? RELEASE_CHECKLIST.md
+?? Safe-Deep-BestAIAgent-MVP.zip
+?? TESTING.md
+?? VERIFICATION_COMPLETE.md
+?? artifacts/
+?? audit/
+?? docs/AI_SEARCH.md
+?? docs/ARCHITECTURE.md
+?? docs/CONTENT_OS.md
+?? docs/CURRENT_IMPLEMENTATION.md
+?? docs/EDITORIAL_OS.md
+?? docs/INDEX.md
+?? docs/KNOWLEDGE_GRAPH.md
+?? docs/MASTER_ROADMAP.md
+?? docs/PHASE_B_KNOWLEDGE_GRAPH.md
+?? docs/PHASE_C_PLAN.md
+?? docs/PLATFORM_GAP_ANALYSIS.md
+?? docs/RELEASE_REPORT.md
+?? docs/SAFE_DEEP.md
+?? docs/SEO_ENGINE.md
+?? docs/TEST_REPORT.md
+?? docs/audits/
+?? docs/completeness/
+?? evidence/
+?? graph-data.json
+?? kernel/
+?? metrics/
+?? scripts/build-graph.ts
+?? scripts/ingest.ts
+?? scripts/populate-agent-evidence.ts
+?? scripts/verify-evidence.ts
+?? scripts/verify-graph.ts
+?? scripts/verify-production.mjs
+?? scripts/verify-production.mjs.back
+?? scripts/verify-redirects.ts
+?? scripts/verify-routes.ts
+?? scripts/verify-sitemaps.ts
+?? scripts/verify-sitemaps.ts.back
+?? scripts/verify-ssr.ts
+?? scripts/verify-ssr.ts.corrupted
+?? server.tsx
+?? src/components/RelatedAgents.tsx
+?? src/components/VerifiedClaims.tsx
+?? src/components/pages/ChatPage.tsx
+?? src/data/agentEvidence.ts
+?? src/data/evidenceSchema.ts
+?? src/routing/canonicalUrl.ts
+?? src/routing/entityResolvers.ts
+?? src/routing/evidenceRoutes.ts
+?? src/routing/pathNormalization.ts
+?? src/routing/types.ts
+?? test-resolve.ts
+?? test.mjs

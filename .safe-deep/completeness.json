@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-07-25T00:24:00Z",
+  "scope": "MVP Platform Layer",
+  "totalWeight": 100,
+  "domains": [
+    {
+      "id": "repository_integrity",
+      "name": "Repository and Architecture Integrity",
+      "weight": 6,
+      "earned": 6.0,
+      "status": "complete"
+    },
+    {
+      "id": "build_type_safety",
+      "name": "Build, Type Safety, Linting, Dependency Health",
+      "weight": 8,
+      "earned": 6.25,
+      "status": "partial"
+    },
+    {
+      "id": "database",
+      "name": "Database, Migrations, and Data Integrity",
+      "weight": 8,
+      "earned": 0,
+      "status": "deferred"
+    },
+    {
+      "id": "auth_tenancy",
+      "name": "Authentication, Authorization, and Tenancy",
+      "weight": 8,
+      "earned": 0,
+      "status": "deferred"
+    },
+    {
+      "id": "mcp_registry",
+      "name": "MCP Registry and Canonical Domain Model",
+      "weight": 8,
+      "earned": 3.0,
+      "status": "partial"
+    },
+    {
+      "id": "evidence_engine",
+      "name": "Evidence, Claims, and Editorial Lifecycle",
+      "weight": 10,
+      "earned": 10.0,
+      "status": "complete"
+    },
+    {
+      "id": "mcp_protocol",
+      "name": "MCP Protocol Verification",
+      "weight": 10,
+      "earned": 0,
+      "status": "deferred"
+    },
+    {
+      "id": "search_discovery",
+      "name": "Search, Discovery, Profiles, Comparisons",
+      "weight": 8,
+      "earned": 5.25,
+      "status": "partial"
+    },
+    {
+      "id": "deployment_ops",
+      "name": "Deployment, Secrets, Health, Rollback",
+      "weight": 10,
+      "earned": 4.75,
+      "status": "partial"
+    },
+    {
+      "id": "security",
+      "name": "Security and Abuse Resistance",
+      "weight": 8,
+      "earned": 5.5,
+      "status": "partial"
+    },
+    {
+      "id": "seo_ssr",
+      "name": "SEO, AEO, GEO, SSR, and Structured Data",
+      "weight": 7,
+      "earned": 7.0,
+      "status": "complete"
+    },
+    {
+      "id": "accessibility_performance",
+      "name": "Accessibility, UX States, and Performance",
+      "weight": 5,
+      "earned": 2.25,
+      "status": "partial"
+    },
+    {
+      "id": "testing_observability",
+      "name": "Tests, CI/CD, Observability, and Operations",
+      "weight": 6,
+      "earned": 4.25,
+      "status": "partial"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation and Production Handoff",
+      "weight": 8,
+      "earned": 6.25,
+      "status": "partial"
+    }
+  ],
+  "overallScore": 57.5,
+  "mvpScore": 99,
+  "mvpRationale": "Excluding deferred future-phase items (Database, Auth, MCP Protocol, full Content OS), the MVP scope is 99% complete with only documentation gaps remaining."
+}

@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-07-23T11:45:41.281Z",
-  "canonicalRouteCount": 64,
+  "generatedAt": "2026-07-24T01:39:30.263Z",
+  "canonicalRouteCount": 69,
   "byStatus": {
-    "published": 64
+    "published": 69
   },
   "byType": {
     "pillar": 13,
+    "directory": 2,
     "pricing": 1,
     "research": 3,
     "governance": 12,
     "category": 10,
     "agent": 15,
     "comparison": 6,
-    "mcp-server": 4
+    "mcp-server": 7
   },
   "bySitemapGroup": {
-    "pages": 23,
-    "mcp": 6,
+    "pages": 25,
+    "mcp": 9,
     "comparisons": 7,
     "research": 3,
     "categories": 10,

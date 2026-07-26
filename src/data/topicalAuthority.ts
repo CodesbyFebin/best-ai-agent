@@ -359,7 +359,7 @@ export function generateLlmsTxt(): string {
     txt += `${cluster.description}\n`;
     cluster.slugs.forEach(slug => {
       const meta = getAuthorityPageMetadata(slug);
-      txt += `- [${meta.title}](https://bestaiagent.in/#view=article&article=${slug}) - ${meta.type} Pillar | ${meta.wordCountRange}\n`;
+      txt += `- [${meta.title}](https://bestaiagent.in/${slug}/) - ${meta.type} Pillar | ${meta.wordCountRange}\n`;
     });
     txt += `\n`;
   });

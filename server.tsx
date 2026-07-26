@@ -5,15 +5,38 @@ import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
+import { renderToString } from 'react-dom/server';
 import { generateRssFeedXml } from './src/utils/rss-feed-generator.js';
 import { generateMasterSitemapXml, generateSegmentedSitemapXml } from './src/data/sitemapGenerator.js';
 import { resolveRoute } from './src/routing/routeResolver.js';
-import { renderSsrBody } from './src/routing/renderSsrBody.js';
+import { AppRouter } from './src/components/RouterApp';
+import { Request, Response } from 'express';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Knowledge Graph types
+interface GraphNode {
+  id: string;
+  type: 'agent' | 'category' | 'comparison' | 'research';
+  data: Record<string, unknown>;
+}
+
+interface GraphEdge {
+  from: string;
+  to: string;
+  type: string;
+  properties: Record<string, unknown>;
+}
+
+interface GraphData {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  metadata: {
+    generatedAt: string;
+    nodeCount: number;
+    edgeCount: number;
+  };
+}
 
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = 3000;
@@ -39,16 +62,16 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
     if (resolution.kind === 'not-found') {
       const title = "404 - Page Not Found | BestAIAgent.in";
       const description = "The requested URL was not found in the BestAIAgent.in directory.";
-      const canonical = `https://bestaiagent.in${urlPath}`;
+      // Do NOT include canonical on 404 pages (SEO best practice - prevents indexing of invalid URLs)
       
       const headMeta = `
         <title>${title}</title>
         <meta name="description" content="${description}">
         <meta name="robots" content="noindex, follow">
-        <link rel="canonical" href="${canonical}">
       `;
 
-      const ssrBody = renderSsrBody(null, urlPath);
+      // Render the app for 404 (we'll pass null route to AppRouter)
+      const reactHtml = renderToString(<AppRouter route={null} />);
 
       let result = templateHtml;
       if (result.includes('<title>')) {
@@ -56,11 +79,8 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
       }
       result = result.replace('</head>', `${headMeta}\n</head>`);
 
-      if (result.includes('<div id="root"></div>')) {
-        result = result.replace('<div id="root"></div>', ssrBody);
-      } else if (result.includes('<div id="root">')) {
-        result = result.replace(/<div id="root">[\s\S]*?<\/div>/, ssrBody);
-      }
+      // Replace root div content while preserving the div itself
+      result = result.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${reactHtml}</div>`);
 
       return { statusCode: 404, html: result };
     }
@@ -108,7 +128,8 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
       </script>
     `;
 
-    const ssrBody = renderSsrBody(route, urlPath);
+    // Render the app with the resolved route
+    const reactHtml = renderToString(<AppRouter route={route} />);
 
     let result = templateHtml;
     if (result.includes('<title>')) {
@@ -116,11 +137,7 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
     }
     result = result.replace('</head>', `${headMeta}\n</head>`);
 
-    if (result.includes('<div id="root"></div>')) {
-      result = result.replace('<div id="root"></div>', ssrBody);
-    } else if (result.includes('<div id="root">')) {
-      result = result.replace(/<div id="root">[\s\S]*?<\/div>/, ssrBody);
-    }
+    result = result.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${reactHtml}</div>`);
 
     return { statusCode: 200, html: result };
   } catch (err) {
@@ -132,6 +149,17 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
 async function startServer() {
   const app = express();
   app.use(express.json());
+
+  // Load Knowledge Graph data
+  let graphData: GraphData | null = null;
+  try {
+    const graphPath = path.resolve('./graph-data.json');
+    const graphJson = fs.readFileSync(graphPath, 'utf-8');
+    graphData = JSON.parse(graphJson) as GraphData;
+    console.log(`Server: Knowledge Graph loaded (${graphData.nodes.length} nodes, ${graphData.edges.length} edges)`);
+  } catch (e) {
+    console.warn('Server: graph-data.json not found. Graph API endpoints will return empty data.');
+  }
 
   // Setup Server-Side Gemini API Client
   const apiKey = process.env.GEMINI_API_KEY;
@@ -233,6 +261,16 @@ async function startServer() {
     res.send(generateSegmentedSitemapXml('pages'));
   });
 
+  // Health check endpoint
+  app.get('/health', (req, res) => {
+    res.json({
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV || 'development',
+    });
+  });
+
   // Backward compatibility sitemaps
   app.get(['/ai-agent-sitemap.xml', '/tool-sitemap.xml', '/pseo-sitemap.xml'], (req, res) => {
     res.setHeader('Content-Type', 'application/xml');
@@ -250,8 +288,39 @@ async function startServer() {
     res.send(generateRssFeedXml());
   });
 
-  // API Endpoints
-  app.post('/api/analyze-doc', async (req, res) => {
+  // Rate limiting middleware for API endpoints
+  const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+  const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+  const RATE_LIMIT_MAX = 60;
+
+  function apiRateLimit(req: Request, res: Response, next: Function) {
+    const ip = req.ip || req.connection.remoteAddress || 'unknown';
+    const now = Date.now();
+    const record = rateLimitMap.get(ip);
+
+    if (!record || now > record.resetTime) {
+      rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+      res.setHeader('X-RateLimit-Limit', RATE_LIMIT_MAX.toString());
+      res.setHeader('X-RateLimit-Remaining', (RATE_LIMIT_MAX - 1).toString());
+      return next();
+    }
+
+    if (record.count >= RATE_LIMIT_MAX) {
+      res.setHeader('X-RateLimit-Limit', RATE_LIMIT_MAX.toString());
+      res.setHeader('X-RateLimit-Remaining', '0');
+      res.setHeader('X-RateLimit-Reset', Math.floor(record.resetTime / 1000).toString());
+      return res.status(429).json({ error: 'Too many requests. Please try again later.' });
+    }
+
+    record.count++;
+    res.setHeader('X-RateLimit-Limit', RATE_LIMIT_MAX.toString());
+    res.setHeader('X-RateLimit-Remaining', (RATE_LIMIT_MAX - record.count).toString());
+    res.setHeader('X-RateLimit-Reset', Math.floor(record.resetTime / 1000).toString());
+    next();
+  }
+
+  // API Endpoints (with rate limiting)
+  app.post('/api/analyze-doc', apiRateLimit, async (req, res) => {
     try {
       const { content, filename, mimeType } = req.body;
       if (!content || typeof content !== 'string') {
@@ -321,6 +390,203 @@ Query: "${prompt}", Industry: ${industry || 'Unspecified'}, Budget: ${budget || 
 
   app.post('/api/subscribe', (req, res) => {
     res.json({ success: true, message: "Subscribed successfully." });
+  });
+
+  // ========================================
+  // KNOWLEDGE GRAPH API ENDPOINTS (Phase B)
+  // ========================================
+
+  // GET /api/graph/stats - Graph statistics
+  app.get('/api/graph/stats', (req, res) => {
+    if (!graphData) {
+      return res.status(503).json({ error: 'Graph data not loaded' });
+    }
+
+    const nodeTypeCounts: Record<string, number> = {};
+    const edgeTypeCounts: Record<string, number> = {};
+
+    for (const node of graphData.nodes) {
+      nodeTypeCounts[node.type] = (nodeTypeCounts[node.type] || 0) + 1;
+    }
+    for (const edge of graphData.edges) {
+      edgeTypeCounts[edge.type] = (edgeTypeCounts[edge.type] || 0) + 1;
+    }
+
+    res.json({
+      metadata: graphData.metadata,
+      nodes: {
+        total: graphData.nodes.length,
+        byType: nodeTypeCounts
+      },
+      edges: {
+        total: graphData.edges.length,
+        byType: edgeTypeCounts
+      }
+    });
+  });
+
+  // GET /api/graph/related/:entityType/:entityId - Get entities related to a given entity
+  app.get('/api/graph/related/:entityType/:entityId', (req, res) => {
+    if (!graphData) {
+      return res.status(503).json({ error: 'Graph data not loaded' });
+    }
+
+    const { entityType, entityId } = req.params;
+    const limit = Math.min(parseInt(req.query.limit as string) || 10, 50);
+
+    const nodeId = `${entityType}/${entityId}`;
+
+    // Find edges where this node is the source
+    const outgoingEdges = graphData.edges.filter(e => e.from === nodeId);
+    const incomingEdges = graphData.edges.filter(e => e.to === nodeId);
+
+    // Build related entities
+    const related: Array<{ node: GraphNode; edge: GraphEdge; direction: 'outgoing' | 'incoming' }> = [];
+
+    for (const edge of outgoingEdges) {
+      const targetNode = graphData.nodes.find(n => n.id === edge.to);
+      if (targetNode) {
+        related.push({ node: targetNode, edge, direction: 'outgoing' });
+      }
+    }
+
+    for (const edge of incomingEdges) {
+      const sourceNode = graphData.nodes.find(n => n.id === edge.from);
+      if (sourceNode) {
+        related.push({ node: sourceNode, edge, direction: 'incoming' });
+      }
+    }
+
+    // Sort by edge type relevance (prioritize certain relationships)
+    const priorityEdges = ['SIMILAR_TO', 'BELONGS_TO', 'TOP_AGENT', 'COMPARED_WITH', 'WRITTEN_BY', 'CITED_BY'];
+    related.sort((a, b) => {
+      const aPriority = priorityEdges.indexOf(a.edge.type);
+      const bPriority = priorityEdges.indexOf(b.edge.type);
+      if (aPriority === -1 && bPriority === -1) return 0;
+      if (aPriority === -1) return 1;
+      if (bPriority === -1) return -1;
+      return aPriority - bPriority;
+    });
+
+    const paginated = related.slice(0, limit);
+
+    res.json({
+      entityId: nodeId,
+      total: related.length,
+      limit,
+      relationships: paginated.map(r => ({
+        node: r.node,
+        relationship: r.edge.type,
+        direction: r.direction,
+        properties: r.edge.properties
+      }))
+    });
+  });
+
+  // GET /api/graph/similar/:entityType/:entityId - Find similar entities (agents in same categories)
+  app.get('/api/graph/similar/:entityType/:entityId', (req, res) => {
+    if (!graphData) {
+      return res.status(503).json({ error: 'Graph data not loaded' });
+    }
+
+    const { entityType, entityId } = req.params;
+    const limit = Math.min(parseInt(req.query.limit as string) || 5, 20);
+
+    if (entityType !== 'agent') {
+      return res.status(400).json({ error: 'Similarity currently only supported for agents' });
+    }
+
+    const nodeId = `agent/${entityId}`;
+    const agentNode = graphData.nodes.find(n => n.id === nodeId);
+    if (!agentNode) {
+      return res.status(404).json({ error: 'Agent not found' });
+    }
+
+    // Find categories this agent belongs to
+    const categoryEdges = graphData.edges.filter(e => e.from === nodeId && e.type === 'BELONGS_TO');
+    const categoryIds = categoryEdges.map(e => e.to);
+
+    if (categoryIds.length === 0) {
+      return res.json({ entityId: nodeId, total: 0, limit, similar: [] });
+    }
+
+    // Find other agents in the same categories
+    const similarAgents = new Map<string, { node: GraphNode; score: number }>();
+
+    for (const categoryId of categoryIds) {
+      const agentEdges = graphData.edges.filter(e => e.to === categoryId && e.from !== nodeId && e.from.startsWith('agent/'));
+      
+      for (const edge of agentEdges) {
+        const existing = similarAgents.get(edge.from);
+        const newScore = (existing?.score || 0) + 1; // Count shared categories
+        
+        const targetNode = graphData.nodes.find(n => n.id === edge.from);
+        if (targetNode) {
+          similarAgents.set(edge.from, { node: targetNode, score: newScore });
+        }
+      }
+    }
+
+    // Sort by similarity score (most shared categories first)
+    const sorted = Array.from(similarAgents.values())
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit);
+
+    res.json({
+      entityId: nodeId,
+      total: similarAgents.size,
+      limit,
+      similar: sorted.map(s => ({
+        node: s.node,
+        similarityScore: s.score
+      }))
+    });
+  });
+
+  // GET /api/graph/path/:fromType/:fromId/:toType/:toId - Find shortest path between entities
+  app.get('/api/graph/path/:fromType/:fromId/:toType/:toId', (req, res) => {
+    if (!graphData) {
+      return res.status(503).json({ error: 'Graph data not loaded' });
+    }
+
+    const { fromType, fromId, toType, toId } = req.params;
+    const fromNodeId = `${fromType}/${fromId}`;
+    const toNodeId = `${toType}/${toId}`;
+
+    // Simple BFS to find shortest path
+    const queue: Array<{ nodeId: string; path: string[] }> = [{ nodeId: fromNodeId, path: [fromNodeId] }];
+    const visited = new Set<string>([fromNodeId]);
+
+    while (queue.length > 0) {
+      const { nodeId, path } = queue.shift()!;
+
+      if (nodeId === toNodeId) {
+        // Build path with edge info
+        const fullPath = [];
+        for (let i = 0; i < path.length - 1; i++) {
+          const edge = graphData.edges.find(e => e.from === path[i] && e.to === path[i + 1]);
+          const fromNode = graphData.nodes.find(n => n.id === path[i]);
+          const toNode = graphData.nodes.find(n => n.id === path[i + 1]);
+          fullPath.push({
+            from: fromNode,
+            to: toNode,
+            edge
+          });
+        }
+        return res.json({ path: fullPath, length: path.length - 1 });
+      }
+
+      // Explore neighbors
+      const outgoingEdges = graphData.edges.filter(e => e.from === nodeId);
+      for (const edge of outgoingEdges) {
+        if (!visited.has(edge.to)) {
+          visited.add(edge.to);
+          queue.push({ nodeId: edge.to, path: [...path, edge.to] });
+        }
+      }
+    }
+
+    res.status(404).json({ error: 'No path found between entities' });
   });
 
   // --- VITE MIDDLEWARE & SERVER-SIDE SEO INTERCEPTION ---

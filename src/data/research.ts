@@ -29,7 +29,7 @@ export const researchReports: ResearchReport[] = [
       "Vapi AI leads voice conversational latency at 420ms average round-trip audio.",
       "Open-source frameworks reduced agent token overhead by 31% year-over-year."
     ],
-    urlPath: "/a/best-ai-agent/research/benchmark-index-2026/",
+    urlPath: "/research/state-of-ai-agents-india-2026/",
     datasetAvailable: true
   },
   {
@@ -47,7 +47,7 @@ export const researchReports: ResearchReport[] = [
       "Average cost per autonomous agent workflow run dropped 42% due to model compression.",
       "Freemium conversion rates remain highest in coding IDE agents (14.2%)."
     ],
-    urlPath: "/a/best-ai-agent/research/pricing-tracker-2026/",
+    urlPath: "/research/voice-latency-report/",
     datasetAvailable: true
   },
   {
@@ -65,7 +65,7 @@ export const researchReports: ResearchReport[] = [
       "Indic language support (Hindi, Tamil, Telugu, Kannada) is required by 81% of domestic buyers.",
       "WhatsApp Business API is the #1 integration channel for Indian customer service bots."
     ],
-    urlPath: "/a/best-ai-agent/research/india-adoption-2026/",
+    urlPath: "/research/ai-agent-benchmark-index/",
     datasetAvailable: true
   }
 ];

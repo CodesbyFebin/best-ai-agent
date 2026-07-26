@@ -50,7 +50,7 @@ export const featuredComparisons: FeaturedComparison[] = [
     pricingDifference: "Both $20/mo ($1,999/mo in India); Claude has lower API output token costs.",
     verdict: "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
     lastUpdated: "2026-07-22",
-    urlPath: "/a/best-ai-agent/comparisons/chatgpt-vs-claude/"
+    urlPath: "/compare/chatgpt-vs-claude/"
   },
   {
     pairSlug: "cursor-vs-copilot",
@@ -75,7 +75,7 @@ export const featuredComparisons: FeaturedComparison[] = [
     pricingDifference: "Cursor Pro $20/mo; Copilot Individual $10/mo.",
     verdict: "Cursor AI offers far superior multi-file reasoning and terminal execution for professional developers.",
     lastUpdated: "2026-07-21",
-    urlPath: "/a/best-ai-agent/comparisons/cursor-vs-copilot/"
+    urlPath: "/compare/cursor-vs-copilot/"
   },
   {
     pairSlug: "crewai-vs-autogen",
@@ -100,7 +100,7 @@ export const featuredComparisons: FeaturedComparison[] = [
     pricingDifference: "Both 100% open-source libraries.",
     verdict: "CrewAI is faster to prototype role-based agent teams; AutoGen offers deeper conversational matrix customization.",
     lastUpdated: "2026-07-20",
-    urlPath: "/a/best-ai-agent/comparisons/crewai-vs-autogen/"
+    urlPath: "/compare/crewai-vs-autogen/"
   },
   {
     pairSlug: "claude-vs-gemini",
@@ -125,6 +125,6 @@ export const featuredComparisons: FeaturedComparison[] = [
     pricingDifference: "Both offer $20/mo premium subscriptions.",
     verdict: "Gemini excels for massive video/audio/PDF context analysis; Claude wins for code generation and logic precision.",
     lastUpdated: "2026-07-19",
-    urlPath: "/a/best-ai-agent/comparisons/claude-vs-gemini/"
+    urlPath: "/compare/claude-vs-gemini/"
   }
 ];
