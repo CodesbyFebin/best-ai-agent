@@ -55,11 +55,6 @@ export function RouterApp({ route }: { route?: RouteRecord }): React.ReactElemen
     return null;
   }
 
-  // Admin route (Protected & Isolated)
-  if (currentPath === '/admin' || currentPath.startsWith('/admin/')) {
-    return <AdminDashboard />;
-  }
-
   // If resolution returned not-found, display NotFoundPage (HTTP 404 UI)
   if (resolution.kind === 'not-found') {
     return (

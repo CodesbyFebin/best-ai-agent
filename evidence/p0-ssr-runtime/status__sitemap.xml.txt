@@ -1,5 +1,7 @@
 Status: 200
 Content-Type: application/xml; charset=utf-8
+Expected Content: sitemap
+Content Match: true
 
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

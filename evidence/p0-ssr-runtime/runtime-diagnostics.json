@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-26T08:33:41.645Z",
+  "timestamp": "2026-07-26T08:39:15.378Z",
   "build": "success",
   "server": "running",
   "port": 3000,
@@ -10,7 +10,9 @@
       "actual": 200,
       "pass": true,
       "contentType": "text/html; charset=utf-8",
-      "contentLength": 200610
+      "contentLength": 200610,
+      "contentMatch": true,
+      "expectedContent": "BestAIAgent.in"
     },
     "/agents/cursor": {
       "description": "agent page",
@@ -18,7 +20,9 @@
       "actual": 200,
       "pass": true,
       "contentType": "text/html; charset=utf-8",
-      "contentLength": 200531
+      "contentLength": 200531,
+      "contentMatch": true,
+      "expectedContent": "Cursor AI"
     },
     "/admin": {
       "description": "admin (should be 404)",
@@ -26,7 +30,9 @@
       "actual": 404,
       "pass": true,
       "contentType": "text/html; charset=utf-8",
-      "contentLength": 199119
+      "contentLength": 199119,
+      "contentMatch": null,
+      "expectedContent": null
     },
     "/api/graph/stats": {
       "description": "graph API",
@@ -34,7 +40,9 @@
       "actual": 200,
       "pass": true,
       "contentType": "application/json; charset=utf-8",
-      "contentLength": 278
+      "contentLength": 278,
+      "contentMatch": true,
+      "expectedContent": "nodes"
     },
     "/sitemap.xml": {
       "description": "sitemap",
@@ -42,7 +50,9 @@
       "actual": 200,
       "pass": true,
       "contentType": "application/xml; charset=utf-8",
-      "contentLength": 824
+      "contentLength": 824,
+      "contentMatch": true,
+      "expectedContent": "sitemap"
     },
     "/tools/cursor": {
       "description": "legacy redirect",
@@ -50,7 +60,9 @@
       "actual": 301,
       "pass": true,
       "contentType": "text/plain; charset=utf-8",
-      "contentLength": 48
+      "contentLength": 48,
+      "contentMatch": null,
+      "expectedContent": null
     }
   },
   "validation": {

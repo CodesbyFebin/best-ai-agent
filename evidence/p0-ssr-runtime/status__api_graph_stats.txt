@@ -1,4 +1,6 @@
 Status: 200
 Content-Type: application/json; charset=utf-8
+Expected Content: nodes
+Content Match: true
 
 {"metadata":{"generatedAt":"2026-07-26T04:57:25.757Z","nodeCount":25,"edgeCount":68},"nodes":{"total":25,"byType":{"agent":8,"category":10,"comparison":4,"research":3}},"edges":{"total":68,"byType":{"BELONGS_TO":18,"TOP_AGENT":6,"COMPARED_WITH":2,"SIMILAR_TO":40,"CITED_BY":2}}}

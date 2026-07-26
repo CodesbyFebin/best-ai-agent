@@ -1,4 +1,6 @@
 Status: 301
 Content-Type: text/plain; charset=utf-8
+Expected Content: any
+Content Match: true
 
 Moved Permanently. Redirecting to /agents/cursor

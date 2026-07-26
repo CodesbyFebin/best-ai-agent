@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const EVIDENCE_DIR = path.join(__dirname, 'evidence', 'p0-ssr-runtime');
+const EVIDENCE_DIR = path.join(__dirname, '..', 'evidence', 'p0-ssr-runtime');
 const BUILD_LOG = path.join(EVIDENCE_DIR, 'build.log');
 const SERVER_LOG = path.join(EVIDENCE_DIR, 'server.log');
 const DIAGNOSTICS = path.join(EVIDENCE_DIR, 'runtime-diagnostics.json');
@@ -157,37 +157,54 @@ async function probeRoute(port: number, path: string, expectedStatus: number = 2
 
 async function runProbes(port: number): Promise<any> {
   console.log('🔍 Probing routes...\n');
-  const results: any = {};
-  
+  const results: any = {
+    
+  };
+
   const routes = [
-    { path: '/', description: 'homepage' },
-    { path: '/agents/cursor', description: 'agent page' },
-    { path: '/admin', description: 'admin (should be 404)', expect: 404 },
-    { path: '/api/graph/stats', description: 'graph API' },
-    { path: '/sitemap.xml', description: 'sitemap' },
-    { path: '/tools/cursor', description: 'legacy redirect', expect: 301 }
+    { path: '/', description: 'homepage', expectContent: 'BestAIAgent.in' },
+    { path: '/agents/cursor', description: 'agent page', expectContent: 'Cursor AI' },
+    { path: '/admin', description: 'admin (should be 404)', expect: 404, expectContent: null },
+    { path: '/api/graph/stats', description: 'graph API', expectContent: 'nodes' },
+    { path: '/sitemap.xml', description: 'sitemap', expectContent: 'sitemap' },
+    { path: '/tools/cursor', description: 'legacy redirect', expect: 301, expectContent: null }
   ];
 
   for (const r of routes) {
     const probed = await probeRoute(port, r.path, r.expect);
     const key = r.path.replace(/\//g, '_') || 'root';
     fs.writeFileSync(path.join(EVIDENCE_DIR, `response_${key}.html`), probed.body);
+    
+    let contentPass: boolean = true;
+    if (r.expectContent) {
+      if (r.path === '/api/graph/stats') {
+        try {
+          const json = JSON.parse(probed.body);
+          contentPass = json.nodes !== undefined && json.edges !== undefined;
+        } catch {
+          contentPass = false;
+        }
+      } else {
+        contentPass = probed.body.includes(r.expectContent);
+      }
+    }
+
     results[r.path] = {
       description: r.description,
       expected: r.expect || 200,
       actual: probed.status,
-      pass: probed.status === (r.expect || 200),
+      pass: probed.status === (r.expect || 200) && contentPass,
       contentType: probed.headers['content-type'],
-      contentLength: probed.body.length
+      contentLength: probed.body.length,
+      contentMatch: r.expectContent ? contentPass : null,
+      expectedContent: r.expectContent
     };
     if (probed.body.length < 10000) {
-      // Save small bodies as readable logs
       fs.writeFileSync(path.join(EVIDENCE_DIR, `status_${key}.txt`), 
-        `Status: ${probed.status}\nContent-Type: ${probed.headers['content-type']}\n\n${probed.body.substring(0, 2000)}`);
+        `Status: ${probed.status}\nContent-Type: ${probed.headers['content-type']}\nExpected Content: ${r.expectContent || 'any'}\nContent Match: ${contentPass}\n\n${probed.body.substring(0, 2000)}`);
     }
   }
 
-  // Additional probes
   console.log('');
   return results;
 }
