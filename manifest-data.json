@@ -1,0 +1,42 @@
+[
+  {
+    "id": "manifest:page:product_detail:chatgpt",
+    "slug": "chatgpt",
+    "canonicalUrl": "https://bestaiagent.in/agents/chatgpt/",
+    "entityId": "agent/chatgpt",
+    "entityType": "agent",
+    "blueprintId": "product-detail-v1",
+    "graphNodeId": "agent/chatgpt",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "seo": {
+        "title": "ChatGPT (Agent Mode) - Best AI Agent",
+        "description": "OpenAI's flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.",
+        "keywords": ["ChatGPT", "OpenAI", "AI Agent", "Personal AI Assistant"],
+        "ogImage": "/images/og/chatgpt.jpg"
+      },
+      "build": {
+        "buildId": "build-20250725-001",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      }
+    }
+  }
+]

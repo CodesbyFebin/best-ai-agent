@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bestaiagent.in/schemas/content-manifest-v1.0.0.json",
+  "title": "ContentManifest",
+  "description": "Schema for Content OS ContentManifest — the single source of truth for every page. Version 1.0.0",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "canonicalUrl",
+    "entityId",
+    "entityType",
+    "blueprintId",
+    "graphNodeId",
+    "contentType",
+    "status",
+    "language",
+    "version",
+    "createdAt",
+    "updatedAt",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Globally unique manifest identifier: 'manifest:page:{contentType}:{slug}'",
+      "pattern": "^manifest:page:[a-z0-9_]+:[a-z0-9-]+$"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-safe identifier (alphanumeric and hyphens only)",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Full canonical URL (must be under bestaiagent.in domain)",
+      "pattern": "^https://bestaiagent\\.in/.*$"
+    },
+    "entityId": {
+      "type": "string",
+      "description": "Knowledge Graph node ID: '{type}/{slug}'",
+      "pattern": "^[a-z]+/[a-z0-9-]+$"
+    },
+    "entityType": {
+      "type": "string",
+      "enum": ["agent", "category", "comparison", "research"],
+      "description": "Type of the associated entity"
+    },
+    "blueprintId": {
+      "type": "string",
+      "description": "Identifier of blueprint to use for rendering"
+    },
+    "graphNodeId": {
+      "type": "string",
+      "description": "Same as entityId (for convenience)", 
+      "pattern": "^[a-z]+/[a-z0-9-]+$"
+    },
+    "contentType": {
+      "type": "string",
+      "enum": ["product_detail", "category_overview", "comparison_page", "research_article", "landing_page"],
+      "description": "Type of content page"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "in_review", "published", "archived"],
+      "description": "Publication lifecycle status"
+    },
+    "language": {
+      "type": "string",
+      "description": "BCP 47 language tag",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of manifest (not blueprint)",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when manifest was created"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when manifest was last modified"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["seo", "build", "quality", "editorial"],
+      "properties": {
+        "seo": {
+          "type": "object",
+          "required": ["title", "description", "keywords"],
+          "properties": {
+            "title": { "type": "string", "maxLength": 70, "description": "SEO title (≤70 chars)" },
+            "description": { "type": "string", "maxLength": 160, "description": "Meta description (≤160 chars)" },
+            "keywords": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "SEO keywords"
+            },
+            "ogImage": {
+              "type": "string",
+              "format": "uri",
+              "description": "Open Graph image URL (optional)"
+            },
+            "canonical": {
+              "type": "string",
+              "format": "uri",
+              "description": "Alternate canonical URL if different from manifest.canonicalUrl"
+            }
+          },
+          "additionalProperties": false
+        },
+        "build": {
+          "type": "object",
+          "required": ["buildId", "generatedAt", "blueprintVersion", "contentVersion"],
+          "properties": {
+            "buildId": { "type": "string", "description": "Unique build identifier" },
+            "generatedAt": { "type": "string", "format": "date-time", "description": "When this content was generated" },
+            "blueprintVersion": { "type": "string", "description": "Blueprint version used" },
+            "contentVersion": { "type": "string", "description": "Content data version" }
+          },
+          "additionalProperties": false
+        },
+        "quality": {
+          "type": "object",
+          "required": ["score", "passed", "lastValidated", "validatorVersion"],
+          "properties": {
+            "score": { "type": "number", "minimum": 0, "maximum": 100, "description": "Quality score 0–100" },
+            "passed": { "type": "boolean", "description": "True if score meets threshold" },
+            "lastValidated": { "type": "string", "format": "date-time", "description": "Last validation timestamp" },
+            "validatorVersion": { "type": "string", "description": "Version of validation rules used" }
+          },
+          "additionalProperties": false
+        },
+        "editorial": {
+          "type": "object",
+          "required": ["state"],
+          "properties": {
+            "state": {
+              "type": "string",
+              "enum": ["drafting", "ready_for_review", "in_review", "approved", "rejected", "published"],
+              "description": "Editorial workflow state"
+            },
+            "reviewer": { "type": "string", "description": "Reviewer identifier (optional)" },
+            "reviewedAt": { "type": "string", "format": "date-time", "description": "Review completion timestamp (optional)" },
+            "revisionNotes": { "type": "string", "description": "Notes about revisions (optional)" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
