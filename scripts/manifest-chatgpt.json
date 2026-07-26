@@ -1,0 +1,20 @@
+{
+  "id": "agent/chatgpt",
+  "slug": "chatgpt",
+  "canonicalUrl": "https://bestaiagent.in/agents/chatgpt/",
+  "entityId": "agent/chatgpt",
+  "entityType": "agent",
+  "blueprintId": "default-page",
+  "contentType": "profile",
+  "status": "published",
+  "language": "en",
+  "version": "1.0.0",
+  "createdAt": "2026-07-26T00:00:00Z",
+  "updatedAt": "2026-07-26T00:00:00Z",
+  "metadata": {
+    "title": "ChatGPT Agent Mode Review & India Pricing (2026) - BestAIAgent.in",
+    "description": "Evaluation of OpenAI's agentic capabilities, web canvas, memory, custom GPT workflows, and INR pricing.",
+    "sitemapGroup": "agents",
+    "indexable": true
+  }
+}

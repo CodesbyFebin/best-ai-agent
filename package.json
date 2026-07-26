@@ -18,8 +18,8 @@
     "test:manifest": "tsx scripts/verify-manifest.ts",
     "test:production": "tsx scripts/verify-production.mjs",
     "test:ssr-runtime": "tsx scripts/verify-ssr-runtime.tsx",
-    "test:graph-integrity": "tsx scripts/verify-graph-integrity.tsx",
-    "test:scope-freeze": "tsx scripts/verify-scope-freeze.tsx"
+    "test:scope-freeze": "tsx scripts/verify-scope-freeze.tsx",
+    "generate:content": "tsx scripts/generate-content.tsx"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
