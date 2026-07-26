@@ -1,0 +1,20 @@
+{
+  "id": "research/ai-agent-benchmark-index",
+  "slug": "ai-agent-benchmark-index",
+  "canonicalUrl": "https://bestaiagent.in/research/state-of-ai-agents-india-2026/",
+  "entityId": "research/ai-agent-benchmark-index",
+  "entityType": "research",
+  "blueprintId": "default-page",
+  "contentType": "research",
+  "status": "published",
+  "language": "en",
+  "version": "1.0.0",
+  "createdAt": "2026-07-26T19:59:55.813Z",
+  "updatedAt": "2026-07-26T19:59:55.818Z",
+  "metadata": {
+    "title": "Global AI Agent Benchmark Index (Q3 2026)",
+    "description": "Standardized evaluation measuring agent reasoning accuracy, tool execution reliability, token cost efficiency, and latency under 100 complex multi-step workflows.",
+    "sitemapGroup": "research",
+    "indexable": true
+  }
+}

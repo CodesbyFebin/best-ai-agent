@@ -1,0 +1,20 @@
+{
+  "id": "category/coding-agents",
+  "slug": "coding-agents",
+  "canonicalUrl": "https://bestaiagent.in/categories/coding-agents/",
+  "entityId": "category/coding-agents",
+  "entityType": "category",
+  "blueprintId": "default-page",
+  "contentType": "page",
+  "status": "published",
+  "language": "en",
+  "version": "1.0.0",
+  "createdAt": "2026-07-26T00:00:00Z",
+  "updatedAt": "2026-07-26T00:00:00Z",
+  "metadata": {
+    "title": "Best AI Coding Agents Directory & Benchmarks (2026) - BestAIAgent.in",
+    "description": "Explore top autonomous coding agents for IDEs, terminal workflows, and full-stack software development.",
+    "sitemapGroup": "categories",
+    "indexable": true
+  }
+}

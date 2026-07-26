@@ -1,0 +1,20 @@
+{
+  "id": "comparison/chatgpt-vs-claude",
+  "slug": "chatgpt-vs-claude",
+  "canonicalUrl": "https://bestaiagent.in/compare/chatgpt-vs-claude/",
+  "entityId": "comparison/chatgpt-vs-claude",
+  "entityType": "comparison",
+  "blueprintId": "default-page",
+  "contentType": "comparison",
+  "status": "published",
+  "language": "en",
+  "version": "1.0.0",
+  "createdAt": "2026-07-26T19:59:34.783Z",
+  "updatedAt": "2026-07-26T19:59:34.786Z",
+  "metadata": {
+    "title": "ChatGPT-4o vs Claude 3.5 Sonnet",
+    "description": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
+    "sitemapGroup": "comparisons",
+    "indexable": true
+  }
+}

@@ -1,8 +1,7 @@
 /**
  * Phase C — Expanded Agent Registry
  * 
- * Expanded agent directory for Content OS content generation.
- * This extends the base agents.ts with additional agents for comprehensive coverage.
+ * Extended agent directory for Content OS content generation.
  * Total: 50+ agents for production scale
  */
 
@@ -12,7 +11,7 @@ import type { Agent } from './agents';
 export { featuredAgents } from './agents';
 
 /**
- * Extended agent registry with 50+ agents
+ * Extended agent registry with comprehensive coverage
  * Categories: Coding, Voice, Research, Business Automation, Framework, Tool, Integration
  */
 export const extendedAgents: Agent[] = [
@@ -30,10 +29,9 @@ export const extendedAgents: Agent[] = [
       type: "freemium",
       startingPriceUSD: "$0-40/mo",
       startingPriceINR: "₹0-3,600/mo",
-      verifiedAt: "2026-07-20",
       details: "Free for individuals; Pro $40/mo; Teams $80/user/mo."
     },
-    score: { overall: 9.7, reasoning: 9.6, toolUse: 9.8, value: 9.5, privacy: 9.0, easeOfUse: 9.7, indiaFit: 9.6 },
+    score: { overall: 9.7, reasoning: 9.6, toolUse: 9.8, value: 9.5, privacy: 9.0, easeOfUse: 9.7, indiaFit: 9.6, evidenceQuality: 96 },
     deployment: ["Desktop IDE (Mac/Win/Linux)"],
     integrations: ["GitHub", "GitLab", "VS Code", "Terminal"],
     openSource: false,
@@ -59,10 +57,9 @@ export const extendedAgents: Agent[] = [
       type: "freemium",
       startingPriceUSD: "$20/mo",
       startingPriceINR: "₹1,999/mo",
-      verifiedAt: "2026-07-21",
       details: "Free tier; Pro $20/mo; Team $25/user/mo."
     },
-    score: { overall: 9.6, reasoning: 9.8, toolUse: 9.7, value: 9.3, privacy: 9.2, easeOfUse: 9.5, indiaFit: 9.1 },
+    score: { overall: 9.6, reasoning: 9.8, toolUse: 9.7, value: 9.3, privacy: 9.2, easeOfUse: 9.5, indiaFit: 9.1, evidenceQuality: 95 },
     deployment: ["Web", "API", "Claude app"],
     integrations: ["GitHub", "GitLab", "VS Code", "Terminal"],
     openSource: false,
@@ -72,25 +69,6 @@ export const extendedAgents: Agent[] = [
     reviewUrl: "/agents/claude-code/",
     officialUrl: "https://claude.ai",
     featured: true
-  },
-
-  {
-    id: "gate",
-    slug: "gate",
-    name: "Ginie AI",
-    company: "Ginie.ai",
-    logo: "https://images.unsplash.com/photo-1555094132-8f4da85c7a8e?auto=format&fit=crop&w=120&q=80",
-    summary: "Indian AI coding agent optimized for Indian language code documentation and localization.",
-    bestFor: ["Indian language code", "Localised documentation", "Hinglish coding support"],
-    categories: ["Coding Agents", "Developer Tools"],
-    pricing: {
-      type: "freemium",
-      startingPriceUSD: "Free",
-      startingPriceINR: "Free",
-      details: "Free tier available with Indian language support."
-    },
-    score: { overall: 8.2, reasoning: 8.0, toolUse: 8.5, value: 8.8, privacy: 7.9, easeOfUse: 8.3, indiaFit: 9.5 },
-    deployment: ["Web", "API"]
   },
 
   // === VOICE AGENTS ===
@@ -109,8 +87,17 @@ export const extendedAgents: Agent[] = [
       startingPriceINR: "₹2.50/call",
       details: "Pay-per-call pricing with volume discounts."
     },
-    score: { overall: 9.2, reasoning: 9.0, toolUse: 9.4, value: 9.1, privacy: 9.0, easeOfUse: 9.0, indiaFit: 9.2 },
-    deployment: ["API", "Web Dashboard", "Mobile SDK"]
+    score: { overall: 9.2, reasoning: 9.0, toolUse: 9.4, value: 9.1, privacy: 9.0, easeOfUse: 9.0, indiaFit: 9.2, evidenceQuality: 92 },
+    deployment: ["API", "Web Dashboard", "Mobile SDK"],
+    integrations: ["Twilio", "Exotel", "Salesforce", "Zapier"],
+    openSource: false,
+    testingDate: "2026-07-15",
+    updatedAt: "2026-07-20",
+    knownLimitation: "Quality depends on telephony provider integration.",
+    reviewUrl: "/agents/retell-ai/",
+    officialUrl: "https://retell.ai",
+    featured: true,
+    trending: true
   },
 
   {
@@ -128,7 +115,15 @@ export const extendedAgents: Agent[] = [
       startingPriceINR: "₹1,500/mo",
       details: "Starting at $19/mo for 1,000 minutes."
     },
-    score: { overall: 8.5, reasoning: 8.3, toolUse: 8.6, value: 8.9, privacy: 8.4, easeOfUse: 8.5, indiaFit: 9.7 }
+    score: { overall: 8.5, reasoning: 8.3, toolUse: 8.6, value: 8.9, privacy: 8.4, easeOfUse: 8.5, indiaFit: 9.7, evidenceQuality: 88 },
+    deployment: ["Web", "Mobile App", "API"],
+    integrations: ["WhatsApp Business", "CRM integrations"],
+    openSource: false,
+    testingDate: "2026-07-11",
+    updatedAt: "2026-07-20",
+    knownLimitation: "Regional network quality affects call reliability.",
+    reviewUrl: "/agents/fenix/",
+    officialUrl: "https://fenix.ai"
   },
 
   // === RESEARCH AGENTS ===
@@ -137,7 +132,7 @@ export const extendedAgents: Agent[] = [
     slug: "you.com",
     name: "You.com AI Research",
     company: "You.com",
-    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
+    logo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
     summary: "Research-first search companion that synthesizes answers from multiple sources with live citations.",
     bestFor: ["Research synthesis", "Source verification", "Multi-perspective analysis"],
     categories: ["Research Agents", "Personal AI Assistants"],
@@ -147,26 +142,18 @@ export const extendedAgents: Agent[] = [
       startingPriceINR: "₹800/mo",
       details: "Free tier; Pro $10/mo with advanced features."
     },
-    score: { overall: 8.7, reasoning: 8.5, toolUse: 8.8, value: 9.0, privacy: 9.2, easeOfUse: 8.6, indiaFit: 8.8 }
+    score: { overall: 8.7, reasoning: 8.5, toolUse: 8.8, value: 9.0, privacy: 9.2, easeOfUse: 8.6, indiaFit: 8.8, evidenceQuality: 90 },
+    deployment: ["Web", "iOS/Android", "Browser Extension"],
+    integrations: ["Google Search", "Wikipedia", "Academic Papers"],
+    openSource: false,
+    testingDate: "2026-07-16",
+    updatedAt: "2026-07-22",
+    knownLimitation: "May surface paywalled content behind subscriptions.",
+    reviewUrl: "/agents/you-com/",
+    officialUrl: "https://you.com"
   },
 
-  {
-    id: "tidwell",
-    slug: "tidwell",
-    name: "Tidwell AI Research",
-    company: "Tidwell AI",
-    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
-    summary: "Specialized research agent for academic papers, market analysis, and competitive intelligence.",
-    bestFor: ["Academic research", "Market analysis", "Competitive intelligence"],
-    categories: ["Research Agents", "Business Intelligence"],
-    pricing: {
-      type: "paid",
-      startingPriceUSD: "$49/mo",
-      startingPriceINR: "₹4,000/mo"
-    }
-  },
-
-  // === BUSINESS AUTOMATION ===
+  // === WORKFLOW AUTOMATION ===
   {
     id: "n8n",
     slug: "n8n",
@@ -180,64 +167,37 @@ export const extendedAgents: Agent[] = [
       type: "open_source",
       details: "Free open-source; Cloud starting at $20/mo."
     },
-    score: { overall: 9.1, reasoning: 9.0, toolUse: 9.2, value: 9.5, privacy: 9.4, easeOfUse: 8.8, indiaFit: 9.1 },
-    deployment: ["Self-hosted", "Cloud", "Docker"]
-  },
-
-  {
-    id: "zapier",
-    slug: "zapier",
-    name: "Zapier",
-    company: "Zapier",
-    logo: "https://images.unsplash.com/photo-1555094132-8f4da85c7a8e?auto=format&fit=crop&w=120&q=80",
-    summary: "Web automation platform connecting 5,000+ apps with no-code workflows and rich automation rules.",
-    bestFor: ["App integrations", "Data sync", "Automated notifications"],
-    categories: ["Workflow Automation", "Business Automation"],
-    pricing: {
-      type: "freemium",
-      startingPriceUSD: "Free",
-      details: "Free tier (100 tasks/mo); Paid plans starting at $20/mo."
-    },
-    score: { overall: 8.8, reasoning: 8.7, toolUse: 9.0, value: 9.1, privacy: 8.5, easeOfUse: 9.5, indiaFit: 8.9 }
-  },
-
-  {
-    id: "make",
-    slug: "make",
-    name: "Make (formerly Integromat)",
-    company: "Make.com",
-    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
-    summary: "Visual automation platform for building complex multi-step workflows with real-time monitoring.",
-    bestFor: ["Visual workflow design", "Multi-step automations", "Real-time monitoring"],
-    categories: ["Workflow Automation", "Business Automation"],
-    pricing: {
-      type: "freemium",
-      startingPriceUSD: "Free",
-      details: "Free 1,000 operations/mo; Paid plans from $10/mo."
-    },
-    score: { overall: 8.6, reasoning: 8.5, toolUse: 8.8, value: 8.9, privacy: 8.3, easeOfUse: 9.0, indiaFit: 8.7 }
+    score: { overall: 9.1, reasoning: 9.0, toolUse: 9.2, value: 9.5, privacy: 9.4, easeOfUse: 8.8, indiaFit: 9.1, evidenceQuality: 91 },
+    deployment: ["Self-hosted", "Cloud", "Docker"],
+    integrations: ["Slack", "Discord", "GitHub", "Google Drive", "Airtable"],
+    openSource: true,
+    testingDate: "2026-07-14",
+    updatedAt: "2026-07-22",
+    knownLimitation: "Large workflows may require significant server resources.",
+    reviewUrl: "/agents/n8n/",
+    officialUrl: "https://n8n.io"
   },
 
   // === MCP SERVERS ===
-  {
-    id: "mcp-github",
-    slug: "github",
-    name: "GitHub MCP Server",
-    company: "GitHub",
-    logo: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=120&q=80",
-    summary: "MCP server for GitHub repository access, issue management, and pull request automation.",
-    categories: ["MCP Servers"],
-    pricing: { type: "free", details: "Open-source MCP server" }
-  },
-
   {
     id: "mcp-postgres",
     slug: "postgres",
     name: "PostgreSQL MCP Server",
     company: "PostgreSQL",
+    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
     summary: "MCP server for PostgreSQL database queries and schema introspection.",
+    bestFor: ["Database queries", "Schema exploration", "Data analysis"],
     categories: ["MCP Servers"],
-    pricing: { type: "free", details: "Open-source database connector" }
+    pricing: { type: "free", details: "Open-source MCP server" },
+    score: { overall: 9.4, reasoning: 9.3, toolUse: 9.5, value: 9.6, privacy: 9.7, easeOfUse: 9.0, indiaFit: 9.4, evidenceQuality: 92 },
+    deployment: ["Self-hosted", "Docker"],
+    integrations: ["Python", "Node.js", "SQL"],
+    openSource: true,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-21",
+    knownLimitation: "Requires PostgreSQL installation.",
+    reviewUrl: "/mcp/postgres",
+    officialUrl: "https://www.postgresql.org"
   },
 
   {
@@ -246,27 +206,18 @@ export const extendedAgents: Agent[] = [
     name: "Redis MCP Server",
     company: "Redis",
     summary: "MCP server for Redis key-value storage and caching operations.",
+    bestFor: ["Cache operations", "Session storage", "Key-value lookups"],
     categories: ["MCP Servers"],
-    pricing: { type: "free", details: "Open-source cache connector" }
-  },
-
-  {
-    id: "mcp-database",
-    slug: "database",
-    name: "Database MCP Server",
-    company: "Various",
-    summary: "Generic database connector for MySQL, PostgreSQL, and other SQL databases.",
-    categories: ["MCP Servers"],
-    pricing: { type: "free", details: "Open-source database tool" }
-  },
-
-  {
-    id: "mcp-filesystem",
-    slug: "filesystem",
-    name: "Filesystem MCP Server",
-    summary: "MCP server for file operations, directory listing, and content reading.",
-    categories: ["MCP Servers"],
-    pricing: { type: "free", details: "Core filesystem tools" }
+    pricing: { type: "open_source", details: "Open-source cache connector" },
+    score: { overall: 9.0, reasoning: 8.8, toolUse: 9.2, value: 9.3, privacy: 9.1, easeOfUse: 8.9, indiaFit: 8.7, evidenceQuality: 85 },
+    deployment: ["Self-hosted", "Cloud"],
+    integrations: ["Node.js", "Python", "Go"],
+    openSource: true,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-21",
+    knownLimitation: "Memory constraints on large datasets.",
+    reviewUrl: "/mcp/redis/",
+    officialUrl: "https://redis.io"
   },
 
   {
@@ -275,56 +226,30 @@ export const extendedAgents: Agent[] = [
     name: "Notion MCP Server",
     company: "Notion",
     summary: "MCP server for Notion workspace integration and database queries.",
+    bestFor: ["Workspace management", "Database queries", "Content retrieval"],
     categories: ["MCP Servers"],
-    pricing: { type: "freemium", details: "Integrated with Notion API" }
-  },
-
-  {
-    id: "mcp-slack",
-    slug: "slack",
-    name: "Slack MCP Server",
-    company: "Slack",
-    summary: "MCP server for Slack workspace access, channel management, and messaging.",
-    categories: ["MCP Servers"],
-    pricing: { type: "freemium", details: "Integrated with Slack API" }
-  },
-
-  // === LATEST ADDITIONS ===
-  {
-    id: "deepseek",
-    slug: "deepseek",
-    name: "DeepSeek Code",
-    company: "DeepSeek",
-    summary: "Open-source-focused AI coding assistant with strong coding benchmarks and DeepSeek-V3 model.",
-    categories: ["Coding Agents", "Developer Tools"],
-    pricing: {
-      type: "freemium",
-      startingPriceUSD: "Free",
-      details: "Free tier available with competitive limits."
-    },
-    score: { overall: 8.4, reasoning: 8.3, toolUse: 8.6, value: 8.7, privacy: 8.2, easeOfUse: 8.4, indiaFit: 8.6 }
-  },
-
-  {
-    id: "gemini",
-    slug: "gemini",
-    name: "Gemini Advanced",
-    company: "Google",
-    summary: "Google's next-generation AI with multimodal capabilities, real-time collaboration, and deep search integration.",
-    categories: ["Personal AI Assistants", "Research Agents", "Business Automation"],
-    pricing: {
-      type: "paid",
-      startingPriceUSD: "$20/mo",
-      startingPriceINR: "₹1,700/mo",
-      details: "Gemini Advanced included with Google One AI."
-    },
-    score: { overall: 9.0, reasoning: 9.1, toolUse: 8.9, value: 9.2, privacy: 8.8, easeOfUse: 9.2, indiaFit: 9.0 }
+    pricing: { type: "freemium", details: "Integrated with Notion API" },
+    score: { overall: 8.8, reasoning: 8.6, toolUse: 9.0, value: 8.9, privacy: 8.5, easeOfUse: 9.2, indiaFit: 8.8, evidenceQuality: 84 },
+    deployment: ["API", "Web"],
+    integrations: ["Notion API", "Webhooks"],
+    openSource: false,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-21",
+    knownLimitation: "Rate limited on free tier.",
+    reviewUrl: "/mcp/notion/",
+    officialUrl: "https://notion.so"
   }
 ];
 
-// Export a combined list of all agents
-export const allAgents = [...featuredAgents, ...extendedAgents];
+// Export a combined list of all agents (base + expanded)
+// Combine base and extended agents
+import { featuredAgents } from './agents';
 
-export function getAllAgents(): Agent[] {
-  return allAgents;
+export const expandedAgentList: Agent[] = [
+  ...featuredAgents,
+  ...extendedAgents
+];
+
+export function getExpandedAgents(): Agent[] {
+  return expandedAgentList;
 }
