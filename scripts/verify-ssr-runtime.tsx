@@ -164,6 +164,8 @@ async function runProbes(port: number): Promise<any> {
   const routes = [
     { path: '/', description: 'homepage', expectContent: 'BestAIAgent.in' },
     { path: '/agents/cursor', description: 'agent page', expectContent: 'Cursor AI' },
+    { path: '/categories/coding-agents', description: 'category page', expectContent: 'Coding Agents' },
+    { path: '/best-ai-agent-for-coding', description: 'pillar page', expectContent: 'Best AI Coding Agents' },
     { path: '/admin', description: 'admin (should be 404)', expect: 404, expectContent: null },
     { path: '/api/graph/stats', description: 'graph API', expectContent: 'nodes' },
     { path: '/sitemap.xml', description: 'sitemap', expectContent: 'sitemap' },

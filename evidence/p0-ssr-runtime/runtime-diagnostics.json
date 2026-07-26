@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-26T08:39:15.378Z",
+  "timestamp": "2026-07-26T19:31:28.687Z",
   "build": "success",
   "server": "running",
   "port": 3000,
@@ -20,9 +20,29 @@
       "actual": 200,
       "pass": true,
       "contentType": "text/html; charset=utf-8",
-      "contentLength": 200531,
+      "contentLength": 50038,
       "contentMatch": true,
       "expectedContent": "Cursor AI"
+    },
+    "/categories/coding-agents": {
+      "description": "category page",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": 19883,
+      "contentMatch": true,
+      "expectedContent": "Coding Agents"
+    },
+    "/best-ai-agent-for-coding": {
+      "description": "pillar page",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": 19990,
+      "contentMatch": true,
+      "expectedContent": "Best AI Coding Agents"
     },
     "/admin": {
       "description": "admin (should be 404)",

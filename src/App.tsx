@@ -112,13 +112,195 @@ function ProductProfileWrapper({ productSlug, onBack, onCompare, isInCompareList
   );
 }
 
+function deriveView(route: RouteRecord | null): {
+  view: string;
+  siloId: string;
+  articleSlug: string;
+  productSlug: string;
+  comparisonPair: string;
+  authorId: string;
+} {
+  if (!route) {
+    return {
+      view: 'home',
+      siloId: 'reviews',
+      articleSlug: '',
+      productSlug: 'cursor-ai',
+      comparisonPair: 'cursor-vs-copilot',
+      authorId: 'arshdeep-singh'
+    };
+  }
+
+  const { path, type, sitemapGroup } = route;
+
+  let view: string = 'home';
+  let siloId: string = 'reviews';
+  let articleSlug: string = '';
+  let productSlug: string = 'cursor-ai';
+  let comparisonPair: string = 'cursor-vs-copilot';
+  let authorId: string = 'arshdeep-singh';
+
+  if (path === '/' || path === '/agents' || path === '/categories') {
+    view = 'home';
+    siloId = 'reviews';
+  } else if (type === 'pillar' && sitemapGroup === 'pages') {
+    if (path === '/best-ai-agent') {
+      view = 'home';
+      siloId = 'reviews';
+    } else if (path === '/best-ai-agent-for-business') {
+      view = 'silo-pillar';
+      siloId = 'business';
+    } else if (path === '/best-ai-agent-for-coding') {
+      view = 'silo-pillar';
+      siloId = 'coding-agents';
+    } else if (path === '/best-ai-agent-alternatives') {
+      view = 'silo-pillar';
+      siloId = 'alternatives';
+    } else if (path === '/best-ai-agents-for-automation') {
+      view = 'silo-pillar';
+      siloId = 'automation';
+    } else if (path === '/best-ai-agent-frameworks') {
+      view = 'silo-pillar';
+      siloId = 'frameworks';
+    } else if (path === '/mcp-directory') {
+      view = 'silo-pillar';
+      siloId = 'mcp';
+    } else if (path === '/mcp-servers') {
+      view = 'silo-pillar';
+      siloId = 'mcp-servers';
+    } else if (path === '/frameworks') {
+      view = 'silo-pillar';
+      siloId = 'frameworks-list';
+    } else if (path === '/rankings') {
+      view = 'silo-pillar';
+      siloId = 'rankings';
+    } else if (path === '/pricing') {
+      view = 'silo-pillar';
+      siloId = 'pricing';
+    } else if (path === '/reviews') {
+      view = 'silo-pillar';
+      siloId = 'reviews';
+    } else if (path === '/compare') {
+      view = 'compare';
+    } else if (path === '/research') {
+      view = 'silo-pillar';
+      siloId = 'research';
+    } else if (path === '/sitemap') {
+      view = 'silo-pillar';
+      siloId = 'sitemap';
+    } else if (path === '/about') {
+      view = 'about';
+    } else if (path === '/authors') {
+      view = 'authors';
+    } else if (path === '/methodology') {
+      view = 'methodology';
+    } else if (path === '/editorial-policy' || path === '/review-process' || path === '/corrections' || path === '/privacy-policy' || path === '/terms') {
+      view = 'policy';
+    } else if (path === '/affiliate-disclosure') {
+      view = 'disclosure';
+    } else if (path === '/contact') {
+      view = 'about';
+    } else if (path === '/knowledge-graph') {
+      view = 'topical-map';
+    }
+  } else if (type === 'directory') {
+    view = 'home';
+    siloId = 'reviews';
+  } else if (type === 'agent') {
+    view = 'product';
+    const slugMatch = path.match(/^\/agents\/(.+)$/);
+    productSlug = slugMatch ? slugMatch[1] : 'cursor-ai';
+    siloId = 'reviews';
+    articleSlug = '';
+  } else if (type === 'category') {
+    view = 'silo-pillar';
+    const slugMatch = path.match(/^\/categories\/(.+)$/);
+    siloId = slugMatch ? slugMatch[1] : 'reviews';
+  } else if (type === 'comparison') {
+    view = 'compare';
+    const slugMatch = path.match(/^\/compare\/(.+)$/);
+    comparisonPair = slugMatch ? slugMatch[1] : 'cursor-vs-copilot';
+  } else if (type === 'mcp-server') {
+    view = 'article';
+    siloId = 'mcp';
+    const slugMatch = path.match(/^\/mcp\/servers\/(.+)$/);
+    articleSlug = slugMatch ? slugMatch[1] : 'github';
+  } else if (type === 'research') {
+    view = 'article';
+    siloId = 'research';
+    const slugMatch = path.match(/^\/research\/(.+)$/);
+    articleSlug = slugMatch ? slugMatch[1] : 'state-of-ai-agents-india-2026';
+  } else if (type === 'governance') {
+    if (path === '/authors') {
+      view = 'authors';
+    } else if (path === '/about') {
+      view = 'about';
+    } else if (path === '/methodology') {
+      view = 'methodology';
+    } else if (path === '/editorial-policy' || path === '/review-process' || path === '/corrections' || path === '/privacy-policy' || path === '/terms') {
+      view = 'policy';
+    } else if (path === '/affiliate-disclosure') {
+      view = 'disclosure';
+    } else if (path === '/contact') {
+      view = 'about';
+    } else if (path === '/knowledge-graph') {
+      view = 'topical-map';
+    } else if (path.startsWith('/authors/')) {
+      view = 'author';
+      const slugMatch = path.match(/^\/authors\/(.+)$/);
+      authorId = slugMatch ? slugMatch[1] : 'arshdeep-singh';
+    }
+  } else {
+    if (path.startsWith('/agents/')) {
+      view = 'product';
+      const slugMatch = path.match(/^\/agents\/(.+)$/);
+      productSlug = slugMatch ? slugMatch[1] : 'cursor-ai';
+      siloId = 'reviews';
+    } else if (path.startsWith('/categories/')) {
+      view = 'silo-pillar';
+      const slugMatch = path.match(/^\/categories\/(.+)$/);
+      siloId = slugMatch ? slugMatch[1] : 'reviews';
+    } else if (path.startsWith('/compare/')) {
+      view = 'compare';
+      const slugMatch = path.match(/^\/compare\/(.+)$/);
+      comparisonPair = slugMatch ? slugMatch[1] : 'cursor-vs-copilot';
+    } else if (path.startsWith('/mcp/servers/')) {
+      view = 'article';
+      siloId = 'mcp';
+      const slugMatch = path.match(/^\/mcp\/servers\/(.+)$/);
+      articleSlug = slugMatch ? slugMatch[1] : 'github';
+    } else if (path.startsWith('/research/')) {
+      view = 'article';
+      siloId = 'research';
+      const slugMatch = path.match(/^\/research\/(.+)$/);
+      articleSlug = slugMatch ? slugMatch[1] : 'state-of-ai-agents-india-2026';
+    } else if (path.startsWith('/authors/')) {
+      view = 'author';
+      const slugMatch = path.match(/^\/authors\/(.+)$/);
+      authorId = slugMatch ? slugMatch[1] : 'arshdeep-singh';
+    } else {
+      view = 'home';
+    }
+  }
+
+  return { view, siloId, articleSlug, productSlug, comparisonPair, authorId };
+}
+
 export default function App({ route, navigate }: { route: RouteRecord | null; navigate: (path: string) => void }) {
-  // Navigation / Router State
-  // Views: 'home' | 'silo-pillar' | 'article' | 'compare' | 'chat' | 'tuner' | 'editorial' | 'about' | 'disclosure' | 'policy' | 'product'
-  const [currentView, setCurrentView] = useState<string>('home');
-  const [selectedSiloId, setSelectedSiloId] = useState<string>('reviews');
-  const [selectedArticleSlug, setSelectedArticleSlug] = useState<string>('');
-  const [selectedProductSlug, setSelectedProductSlug] = useState<string>('cursor-ai');
+  const derived = useMemo(() => deriveView(route), [route]);
+
+  // Derived routing state (read-only)
+  const currentView = derived.view;
+  const selectedSiloId = derived.siloId;
+  const selectedArticleSlug = derived.articleSlug;
+  const selectedProductSlug = derived.productSlug;
+  const activeComparisonPair = derived.comparisonPair;
+  const activeAuthorId = derived.authorId;
+
+  // Derived canonical path for SEO (used in client-side head updates)
+  const canonicalPath = route?.canonicalPath || (currentView === 'home' ? '/' : currentView);
+
+  // Transient UI state (not derived from route)
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [copiedArticleSlug, setCopiedArticleSlug] = useState<string | null>(null);
@@ -144,8 +326,7 @@ export default function App({ route, navigate }: { route: RouteRecord | null; na
   const [compareList, setCompareList] = useState<string[]>(['cursor-ai', 'vapi-ai', 'yellow-ai']);
   const [isRssModalOpen, setIsRssModalOpen] = useState(false);
   const [isPseoRepoOpen, setIsPseoRepoOpen] = useState(false);
-  const [activeComparisonPair, setActiveComparisonPair] = useState('cursor-vs-copilot');
-  const [activeAuthorId, setActiveAuthorId] = useState('arshdeep-singh');
+  // activeComparisonPair and activeAuthorId are now derived
 
   // Submission Forms State
   const [toolSubmitForm, setToolSubmitForm] = useState({ name: '', url: '', category: '', description: '', email: '' });
@@ -186,50 +367,27 @@ export default function App({ route, navigate }: { route: RouteRecord | null; na
   const [newUgcUseCase, setNewUgcUseCase] = useState('');
   const [newUgcContent, setNewUgcContent] = useState('');
 
-  // Update state based on route changes
+  // Update document head for client-side navigation and reset transient UI
+  const isFirstRender = useRef(true);
   useEffect(() => {
-    if (!route) {
-      // Default to home if no route
-      setCurrentView('home');
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-      setSearchQuery('');
-      setCompareList(['cursor-ai', 'vapi-ai', 'yellow-ai']);
-      setActiveComparisonPair('cursor-vs-copilot');
-      setActiveAuthorId('arshdeep-singh');
-      // Reset form states
-      setToolSubmitForm({ name: '', url: '', category: '', description: '', email: '' });
-      setToolSubmitSuccess('');
-      setNewsletterEmail('');
-      setNewsletterSuccess('');
-      setLeadForm({ name: '', company: '', phone: '', desc: '' });
-      setLeadSuccess('');
-      setDraftStatuses({});
-      setNewSEOArticleSlug('');
-      setSchemaViewerSlug('best-ai-agent');
-      setFaqSearchQuery('');
-      setFaqCurrentPage(1);
-      setUgcSearchQuery('');
-      setUgcRatingFilter('all');
-      setUgcTechFilter('all');
-      setUserSubmittedUgcs([]);
-      setIsUgcModalOpen(false);
-      setShowAllTelemetry(false);
-      setNewUgcAuthor('');
-      setUgcRole('');
-      setUgcCompany('');
-      setNewUgcRating(5.0);
-      setNewUgcTitle('');
-      setNewUgcUseCase('');
-      setNewUgcContent('');
+    // Skip SEO update on first render; server already injected head
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
       return;
     }
 
-    // Determine view and set state based on route properties
-    const { path, type, sitemapGroup, canonicalPath } = route;
-    
-    // Reset form states on route change
+    // Client-side navigation: update document head
+    if (route) {
+      document.title = route.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', route.description);
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical && route.canonicalPath) {
+        canonical.setAttribute('href', `https://bestaiagent.in${route.canonicalPath === '/' ? '/' : route.canonicalPath + '/'}`);
+      }
+    }
+
+    // Reset transient UI state on route change
     setToolSubmitForm({ name: '', url: '', category: '', description: '', email: '' });
     setToolSubmitSuccess('');
     setNewsletterEmail('');
@@ -254,286 +412,7 @@ export default function App({ route, navigate }: { route: RouteRecord | null; na
     setNewUgcTitle('');
     setNewUgcUseCase('');
     setNewUgcContent('');
-
-    // Set view based on route type and path
-    if (path === '/') {
-      setCurrentView('home');
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else if (path === '/agents') {
-      setCurrentView('home'); // Agents directory treated as home for now
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else if (path === '/categories') {
-      setCurrentView('home'); // Categories directory treated as home for now
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else if (type === 'pillar' && sitemapGroup === 'pages') {
-      // Handle pillar pages
-      if (path === '/best-ai-agent') {
-        setCurrentView('home'); // Main pillar treated as home
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      } else if (path === '/best-ai-agent-for-business') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('business');
-      } else if (path === '/best-ai-agent-for-coding') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('coding-agents');
-      } else if (path === '/best-ai-agent-alternatives') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('alternatives');
-      } else if (path === '/best-ai-agents-for-automation') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('automation');
-      } else if (path === '/best-ai-agent-frameworks') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('frameworks');
-      } else if (path === '/mcp-directory') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('mcp');
-      } else if (path === '/mcp-servers') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('mcp-servers');
-      } else if (path === '/frameworks') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('frameworks-list');
-      } else if (path === '/rankings') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('rankings');
-      } else if (path === '/pricing') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('pricing');
-      } else if (path === '/reviews') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('reviews');
-      } else if (path === '/compare') {
-        setCurrentView('compare');
-      } else if (path === '/research') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('research');
-      } else if (path === '/sitemap') {
-        setCurrentView('silo-pillar');
-        setSelectedSiloId('sitemap');
-      } else if (path === '/about') {
-        setCurrentView('about');
-      } else if (path === '/authors') {
-        setCurrentView('authors');
-      } else if (path === '/methodology') {
-        setCurrentView('methodology');
-      } else if (path === '/editorial-policy') {
-        setCurrentView('policy');
-      } else if (path === '/review-process') {
-        setCurrentView('policy'); // treat as policy
-      } else if (path === '/corrections') {
-        setCurrentView('policy'); // treat as policy
-      } else if (path === '/privacy-policy') {
-        setCurrentView('policy');
-      } else if (path === '/terms') {
-        setCurrentView('policy'); // treat as policy
-      } else if (path === '/affiliate-disclosure') {
-        setCurrentView('disclosure');
-      } else if (path === '/contact') {
-        setCurrentView('about'); // treat as about
-      } else if (path === '/knowledge-graph') {
-        setCurrentView('topical-map');
-      } else {
-        // Default to home for unknown pillars
-        setCurrentView('home');
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      }
-    } else if (type === 'directory') {
-      // Handle directory pages
-      if (path === '/agents') {
-        setCurrentView('home'); // Treat agents directory as home
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      } else if (path === '/categories') {
-        setCurrentView('home'); // Treat categories directory as home
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      }
-    } else if (type === 'agent') {
-      setCurrentView('product');
-      // Extract slug from path like /agents/cursor
-      const slugMatch = path.match(/^\/agents\/(.+)$/);
-      if (slugMatch && slugMatch[1]) {
-        setSelectedProductSlug(slugMatch[1]);
-      } else {
-        setSelectedProductSlug('cursor-ai');
-      }
-      setSelectedSiloId('reviews'); // Default silo
-      setSelectedArticleSlug('');
-    } else if (type === 'category') {
-      setCurrentView('silo-pillar');
-      // Extract slug from path like /categories/coding-agents
-      const slugMatch = path.match(/^\/categories\/(.+)$/);
-      if (slugMatch && slugMatch[1]) {
-        setSelectedSiloId(slugMatch[1]);
-      } else {
-        setSelectedSiloId('reviews');
-      }
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else if (type === 'comparison') {
-      setCurrentView('compare');
-      // Extract slug from path like /compare/cursor-vs-copilot
-      const slugMatch = path.match(/^\/compare\/(.+)$/);
-      if (slugMatch && slugMatch[1]) {
-        setActiveComparisonPair(slugMatch[1]);
-      } else {
-        setActiveComparisonPair('cursor-vs-copilot');
-      }
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else if (type === 'mcp-server') {
-      setCurrentView('article');
-      // Extract slug from path like /mcp/servers/github
-      const slugMatch = path.match(/^\/mcp\/servers\/(.+)$/);
-      if (slugMatch && slugMatch[1]) {
-        setSelectedSiloId('mcp');
-        setSelectedArticleSlug(slugMatch[1]);
-      } else {
-        setSelectedSiloId('mcp');
-        setSelectedArticleSlug('github');
-      }
-      setSelectedProductSlug('cursor-ai');
-    } else if (type === 'research') {
-      setCurrentView('article');
-      // Extract slug from path like /research/state-of-ai-agents-india-2026
-      const slugMatch = path.match(/^\/research\/(.+)$/);
-      if (slugMatch && slugMatch[1]) {
-        setSelectedSiloId('research');
-        setSelectedArticleSlug(slugMatch[1]);
-      } else {
-        setSelectedSiloId('research');
-        setSelectedArticleSlug('state-of-ai-agents-india-2026');
-      }
-      setSelectedProductSlug('cursor-ai');
-    } else if (type === 'governance') {
-      // Handle governance pages
-      if (path === '/authors') {
-        setCurrentView('authors');
-      } else if (path === '/about') {
-        setCurrentView('about');
-      } else if (path === '/methodology') {
-        setCurrentView('methodology');
-      } else if (path === '/editorial-policy') {
-        setCurrentView('policy');
-      } else if (path === '/review-process') {
-        setCurrentView('policy');
-      } else if (path === '/corrections') {
-        setCurrentView('policy');
-      } else if (path === '/privacy-policy') {
-        setCurrentView('policy');
-      } else if (path === '/terms') {
-        setCurrentView('policy');
-      } else if (path === '/affiliate-disclosure') {
-        setCurrentView('disclosure');
-      } else if (path === '/contact') {
-        setCurrentView('about');
-      } else if (path === '/knowledge-graph') {
-        setCurrentView('topical-map');
-      } else if (path.startsWith('/authors/')) {
-        // Author profile page like /authors/arshdeep-singh
-        setCurrentView('author');
-        const slugMatch = path.match(/^\/authors\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setActiveAuthorId(slugMatch[1]);
-        } else {
-          setActiveAuthorId('arshdeep-singh');
-        }
-      } else {
-        // Default to about
-        setCurrentView('about');
-      }
-      setSelectedSiloId('reviews');
-      setSelectedArticleSlug('');
-      setSelectedProductSlug('cursor-ai');
-    } else {
-      // Fallback - try to determine from path
-      if (path.startsWith('/agents/')) {
-        setCurrentView('product');
-        const slugMatch = path.match(/^\/agents\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setSelectedProductSlug(slugMatch[1]);
-        } else {
-          setSelectedProductSlug('cursor-ai');
-        }
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-      } else if (path.startsWith('/categories/')) {
-        setCurrentView('silo-pillar');
-        const slugMatch = path.match(/^\/categories\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setSelectedSiloId(slugMatch[1]);
-        } else {
-          setSelectedSiloId('reviews');
-        }
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      } else if (path.startsWith('/compare/')) {
-        setCurrentView('compare');
-        const slugMatch = path.match(/^\/compare\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setActiveComparisonPair(slugMatch[1]);
-        } else {
-          setActiveComparisonPair('cursor-vs-copilot');
-        }
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      } else if (path.startsWith('/mcp/servers/')) {
-        setCurrentView('article');
-        const slugMatch = path.match(/^\/mcp\/servers\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setSelectedSiloId('mcp');
-          setSelectedArticleSlug(slugMatch[1]);
-        } else {
-          setSelectedSiloId('mcp');
-          setSelectedArticleSlug('github');
-        }
-        setSelectedProductSlug('cursor-ai');
-      } else if (path.startsWith('/research/')) {
-        setCurrentView('article');
-        const slugMatch = path.match(/^\/research\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setSelectedSiloId('research');
-          setSelectedArticleSlug(slugMatch[1]);
-        } else {
-          setSelectedSiloId('research');
-          setSelectedArticleSlug('state-of-ai-agents-india-2026');
-        }
-        setSelectedProductSlug('cursor-ai');
-      } else if (path.startsWith('/authors/')) {
-        setCurrentView('author');
-        const slugMatch = path.match(/^\/authors\/(.+)$/);
-        if (slugMatch && slugMatch[1]) {
-          setActiveAuthorId(slugMatch[1]);
-        } else {
-          setActiveAuthorId('arshdeep-singh');
-        }
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      } else {
-        // Default to home
-        setCurrentView('home');
-        setSelectedSiloId('reviews');
-        setSelectedArticleSlug('');
-        setSelectedProductSlug('cursor-ai');
-      }
-    }
-  }, [route]); // Re-run whenever route changes
+  }, [route]);
 
   // We keep the routeTo function for compatibility with the existing JSX
   const routeTo = (view: string, siloId?: string, articleSlug?: string, productSlug?: string) => {
