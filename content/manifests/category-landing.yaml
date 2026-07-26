@@ -1,0 +1,103 @@
+id: category-landing
+name: "AI Agent Category Landing"
+word_target: 2000
+seo_threshold: 80
+sections:
+  - id: introduction
+    required: true
+    prompt_template: |
+      Write an introduction to {entity.name}. Cover:
+      - What this category encompasses
+      - Why it matters in the AI agent landscape
+      - The types of problems it solves
+      - Target audience (who should read this)
+    min_words: 250
+    data_sources: [entity, category_overview]
+
+  - id: top-agents
+    required: true
+    prompt_template: |
+      Present the top agents in {entity.name}. For each:
+      - Name and brief description
+      - Key strengths
+      - Ideal use case
+      - Pricing tier indicator (low/mid/high)
+    min_words: 400
+    data_sources: [entity.top_agents, agent_scores, pricing_data]
+
+  - id: feature-comparison
+    required: true
+    prompt_template: |
+      Create a feature comparison table for top {entity.name.toLowerCase()} agents.
+      Include columns: Feature, Agent A, Agent B, Agent C...
+      Features to compare: Open Source, Offline Mode, Context Window, Pricing, API Access, MCP Support
+    min_words: 150
+    data_sources: [agent_features, capabilities_matrix]
+
+  - id: use-case-matrix
+    required: true
+    prompt_template: |
+      Build a matrix showing which agents are best for different scenarios:
+      - Scenario / Use Case (rows)
+      - Recommended agents (columns)
+      - Reasoning for each recommendation
+    min_words: 300
+    data_sources: [use_cases, agent_specialties]
+
+  - id: pricing-analysis
+    required: true
+    prompt_template: |
+      Analyze pricing for {entity.name} agents:
+      - Price ranges (budget, mid, premium)
+      - Free tier availability
+      - Value for money insights
+      - Enterprise options
+    min_words: 250
+    data_sources: [pricing_data, subscription_plans]
+
+  - id: deployment-options
+    required: true
+    prompt_template: |
+      Describe deployment options for {entity.name} agents:
+      - Cloud SaaS
+      - Self-hosted
+      - On-premise
+      - Mobile/Desktop apps
+      - API-only services
+    min_words: 200
+    data_sources: [entity.deployment_types, infrastructure_requirements]
+
+  - id: selection-guide
+    required: true
+    prompt_template: |
+      Provide a decision framework for choosing the right {entity.name} agent:
+      - Questions to ask
+      - Budget considerations
+      - Technical requirements
+      - Team size and skills needed
+    min_words: 250
+    data_sources: [selection_criteria, buyer_guides]
+
+  - id: conclusion
+    required: true
+    prompt_template: |
+      Summarise the {entity.name} landscape and provide final recommendations.
+      Link to detailed reviews and comparisons.
+    min_words: 200
+    data_sources: [entity, category_trends]
+
+schema:
+  CollectionPage: true
+  ItemList: true
+  FAQPage: true
+
+internal_links:
+  min: 12
+  related_entity_types: [agent, comparison, research]
+  link_targets:
+    - path: /agents/{slug}
+      type: agent
+    - path: /compare/{slug}
+      type: comparison
+    - path: /research/{slug}
+      type: research

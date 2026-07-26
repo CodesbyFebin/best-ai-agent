@@ -1,0 +1,114 @@
+id: agent-review
+name: "AI Agent Review"
+word_target: 2500
+seo_threshold: 85
+sections:
+  - id: overview
+    required: true
+    prompt_template: |
+      Write a comprehensive overview of {entity.name}. Cover:
+      - What it is and who it's for
+      - The core problem it solves
+      - How it fits into the AI agent ecosystem
+      - Company background and funding status if available.
+    min_words: 300
+    data_sources: [entity, company_info]
+
+  - id: key-features
+    required: true
+    prompt_template: |
+      Detail the key features of {entity.name}. For each feature:
+      - Explain what it does
+      - Why it matters to the user
+      - How it compares to competitors
+    min_words: 400
+    data_sources: [entity.features, competitor_overview]
+
+  - id: pricing
+    required: true
+    prompt_template: |
+      Explain the pricing model of {entity.name}. Cover:
+      - Free tier (if any)
+      - Paid plans and what each includes
+      - Enterprise pricing (if available)
+      - Value for money compared to alternatives
+    min_words: 250
+    data_sources: [entity.pricing, pricing_comparison]
+
+  - id: pros-cons
+    required: true
+    prompt_template: |
+      List the pros and cons of {entity.name}. For each:
+      - Clear statement
+      - Brief explanation with context
+      - Who this matters to
+    min_words: 300
+    data_sources: [entity.bestFor, user_reviews, expert_analysis]
+
+  - id: integrations
+    required: true
+    prompt_template: |
+      Describe the integrations available for {entity.name}:
+      - Native integrations (tool names)
+      - API capabilities
+      - How they enhance the product
+    min_words: 250
+    data_sources: [entity.integrations, api_documentation]
+
+  - id: use-cases
+    required: true
+    prompt_template: |
+      Provide detailed use cases for {entity.name}. For each:
+      - The user persona
+      - The scenario
+      - How it solves the problem
+      - Real-world examples where possible
+    min_words: 350
+    data_sources: [entity.bestFor, case_studies, industry_use_cases]
+
+  - id: alternatives
+    required: true
+    prompt_template: |
+      Compare {entity.name} with its main alternatives. For each:
+      - Brief overview
+      - Key differences
+      - When to choose which
+    min_words: 300
+    data_sources: [entity.competitors, comparison_data]
+
+  - id: faq
+    required: true
+    prompt_template: |
+      Generate 8-12 FAQs about {entity.name} with concise, factual answers.
+      Include links to related pages where appropriate.
+    min_words: 200
+    data_sources: [entity.common_questions, support_docs]
+
+  - id: conclusion
+    required: true
+    prompt_template: |
+      Write a conclusion that:
+      - Summarises key takeaways
+      - Recommends who should use {entity.name}
+      - Links to related content (best lists, comparisons)
+    min_words: 150
+    data_sources: [entity, related_entities]
+
+schema:
+  SoftwareApplication: true
+  FAQPage: true
+  BreadcrumbList: true
+  Review: true
+
+internal_links:
+  min: 15
+  related_entity_types: [agent, category, comparison, research]
+  link_targets:
+    - path: /agents/{slug}
+      type: agent
+    - path: /categories/{slug}
+      type: category
+    - path: /compare/{slug}
+      type: comparison
+    - path: /research/{slug}
+      type: research

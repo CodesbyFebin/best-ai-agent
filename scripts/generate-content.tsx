@@ -176,9 +176,18 @@ ${JSON.stringify({
 // ----------------------------
 async function main() {
   const arg = process.argv[2];
-  if (!arg) {
-    console.error('Usage: npx tsx scripts/generate-content.tsx <manifestId|manifestFile.json>');
-    process.exit(1);
+  if (!arg || arg === '--help' || arg === '-h') {
+    console.log(`
+Content Generation Script (Phase C Runtime)
+
+Usage: npx tsx scripts/generate-content.tsx <manifestId|manifestFile.json>
+
+Or: node dist/server.cjs for full server-side generation
+
+Reads manifest-data.json, resolves entities, applies blueprint, writes HTML.
+Output: dist/content/<slug>/index.html
+`);
+    process.exit(0);
   }
 
   // Load data
@@ -188,20 +197,33 @@ async function main() {
   let manifest: ContentManifest;
   if (arg.endsWith('.json')) {
     // Treat as file path
-    manifest = JSON.parse(fs.readFileSync(path.resolve(arg), 'utf-8')) as ContentManifest;
+    const manifestContent = fs.readFileSync(path.resolve(arg), 'utf-8');
+    manifest = JSON.parse(manifestContent) as ContentManifest;
   } else {
     // Treat as manifest ID, lookup in manifest-data.json
+    if (!fs.existsSync(manifestDataPath)) {
+      console.error('ERROR: manifest-data.json not found');
+      console.error('Run: node scripts/build-manifests.ts first');
+      process.exit(1);
+    }
     const allManifests: ContentManifest[] = JSON.parse(fs.readFileSync(manifestDataPath, 'utf-8'));
-    const found = allManifests.find(m => m.id === arg);
+    // Try by slug first, then by ID
+    const found = allManifests.find(m => m.slug === arg || m.id === arg);
     if (!found) {
-      console.error(`Manifest ID not found: ${arg}`);
+      console.error(`Manifest not found with slug or ID: ${arg}`);
+      console.error(`Available manifests: ${allManifests.map(m => m.slug).join(', ')}`);
       process.exit(1);
     }
     manifest = found;
   }
 
+  if (!fs.existsSync(graphDataPath)) {
+    console.error('ERROR: graph-data.json not found');
+    console.error('Run: node scripts/build-graph.ts first');
+    process.exit(1);
+  }
+
   const graph: GraphData = JSON.parse(fs.readFileSync(graphDataPath, 'utf-8'));
-  // ... rest unchanged
 
   // Resolve entity
   const entity = resolveEntity(manifest.entityId, graph);
@@ -222,8 +244,18 @@ async function main() {
     features: {}
   };
 
+  // Check if deep content is required (2000+ words)
+  const isDeepContent = manifest.metadata?.minWordCount && manifest.metadata.minWordCount >= 2000;
+  
   // Generate
-  const blueprint = new DefaultPageBlueprint();
+  let blueprint: DefaultPageBlueprint;
+  if (isDeepContent) {
+    console.log(`\n📝 Generating DEEP content page (${manifest.metadata?.minWordCount}+ words) for ${manifest.slug}...`);
+    blueprint = new DefaultPageBlueprint();
+  } else {
+    blueprint = new DefaultPageBlueprint();
+  }
+  
   const output = await blueprint.generate(ctx);
 
   // Write to dist/content/<slug>/index.html
@@ -231,10 +263,26 @@ async function main() {
   ensureDir(outDir);
   fs.writeFileSync(path.join(outDir, 'index.html'), output.html);
 
+  // Also create a JSON representation for programmatic access
+  const jsonOutput = {
+    ...manifest,
+    generatedContent: {
+      wordCount: output.html.split(/\s+/).length,
+      sectionCount: output.sections?.length || 0,
+      file: `dist/content/${manifest.slug}/index.html`,
+      deepContent: isDeepContent
+    }
+  };
+  fs.writeFileSync(path.join(outDir, 'data.json'), JSON.stringify(jsonOutput, null, 2));
+
   console.log(`✅ Generated: ${manifest.slug}/index.html`);
   console.log(`   Title: ${output.metadata.title}`);
   console.log(`   Canonical: ${output.metadata.canonical}`);
   console.log(`   Size: ${output.html.length} bytes`);
+  console.log(`   Word Count: ${output.html.split(/\s+/).length}`);
+  if (isDeepContent) {
+    console.log(`   🚀 DEEP CONTENT: ${output.html.split(/\s+/).length}+ words generated`);
+  }
 }
 
 main().catch(err => {

@@ -1,0 +1,110 @@
+id: research-report
+name: "Research Report"
+word_target: 3000
+seo_threshold: 85
+sections:
+  - id: executive-summary
+    required: true
+    prompt_template: |
+      Write an executive summary of {entity.title}.
+      Include:
+      - Research question or objective
+      - Key findings (top 3-5 takeaways)
+      - Who should care about this research
+      - Implications for the industry
+    min_words: 250
+    data_sources: [entity, key_takeaways]
+
+  - id: methodology
+    required: true
+    prompt_template: |
+      Describe the research methodology:
+      - Data sources used
+      - Sample size and selection criteria
+      - Evaluation framework
+      - Limitations of the study
+    min_words: 300
+    data_sources: [entity.methodology, research_design]
+
+  - id: findings
+    required: true
+    prompt_template: |
+      Present the key findings in detail.
+      Organise by theme or research question.
+      Include specific data points, percentages, and statistics.
+      Explain the significance of each finding.
+    min_words: 800
+    data_sources: [entity.findings, raw_data, statistical_analysis]
+
+  - id: analysis
+    required: true
+    prompt_template: |
+      Provide expert analysis of the findings:
+      - What do these numbers mean?
+      - How do they compare to previous research?
+      - What trends are emerging?
+      - What are the implications for practitioners?
+    min_words: 500
+    data_sources: [findings, industry_trends, expert_commentary]
+
+  - id: recommendations
+    required: true
+    prompt_template: |
+      Based on the findings, provide actionable recommendations for:
+      - Individual practitioners
+      - Teams and organisations
+      - Product builders
+      - Industry stakeholders
+    min_words: 400
+    data_sources: [findings, best_practices, expert_guidance]
+
+  - id: data-tables
+    required: true
+    prompt_template: |
+      Generate structured tables summarising key data:
+      - Statistical results
+      - Performance benchmarks
+      - Breakdown by category
+      Use proper Markdown table syntax.
+    min_words: 200
+    data_sources: [entity.data_tables, statistical_results]
+
+  - id: citations
+    required: true
+    prompt_template: |
+      List all sources cited in this research in proper format.
+      Include links where available.
+    min_words: 100
+    data_sources: [bibliography, source_list]
+
+  - id: conclusion
+    required: true
+    prompt_template: |
+      Summarise the research and its significance.
+      Suggest areas for future research.
+      Link to related studies.
+    min_words: 200
+    data_sources: [entity, related_research]
+
+  - id: faq
+    required: true
+    prompt_template: |
+      Create a FAQ section addressing common questions about this research report.
+    min_words: 150
+    data_sources: [common_questions, research_faq]
+
+schema:
+  ResearchDataset: true
+  ScholarlyArticle: true
+  FAQPage: true
+
+internal_links:
+  min: 10
+  related_entity_types: [agent, category, comparison]
+  link_targets:
+    - path: /agents/{slug}
+      type: agent
+    - path: /categories/{slug}
+      type: category
+    - path: /compare/{slug}
+      type: comparison

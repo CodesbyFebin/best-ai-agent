@@ -1,11 +1,11 @@
 [
   {
-    "id": "manifest:page:product_detail:chatgpt",
+    "id": "manifest:page:agent:chatgpt",
     "slug": "chatgpt",
     "canonicalUrl": "https://bestaiagent.in/agents/chatgpt/",
     "entityId": "agent/chatgpt",
     "entityType": "agent",
-    "blueprintId": "product-detail-v1",
+    "blueprintId": "agent-detail-v1",
     "graphNodeId": "agent/chatgpt",
     "contentType": "product_detail",
     "status": "published",
@@ -14,14 +14,18 @@
     "createdAt": "2025-07-25T12:00:00Z",
     "updatedAt": "2025-07-25T12:00:00Z",
     "metadata": {
-      "seo": {
-        "title": "ChatGPT (Agent Mode) - Best AI Agent",
-        "description": "OpenAI's flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.",
-        "keywords": ["ChatGPT", "OpenAI", "AI Agent", "Personal AI Assistant"],
-        "ogImage": "/images/og/chatgpt.jpg"
-      },
+      "title": "ChatGPT (Agent Mode) - Best AI Agent",
+      "description": "Detailed review and analysis of ChatGPT (Agent Mode), a leading AI agent for modern applications.",
+      "keywords": [
+        "chatgpt",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/chatgpt.jpg",
       "build": {
-        "buildId": "build-20250725-001",
+        "buildId": "build-20250725-0",
         "generatedAt": "2025-07-25T12:00:00Z",
         "blueprintVersion": "1.0.0",
         "contentVersion": "1.0.0"
@@ -36,7 +40,1370 @@
         "state": "published",
         "reviewer": "editorial-team",
         "reviewedAt": "2025-07-25T10:00:00Z"
-      }
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:claude",
+    "slug": "claude",
+    "canonicalUrl": "https://bestaiagent.in/agents/claude/",
+    "entityId": "agent/claude",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/claude",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Claude 3.5 Sonnet - Best AI Agent",
+      "description": "Detailed review and analysis of Claude 3.5 Sonnet, a leading AI agent for modern applications.",
+      "keywords": [
+        "claude",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/claude.jpg",
+      "build": {
+        "buildId": "build-20250725-1",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:claude-3-opus",
+    "slug": "claude-3-opus",
+    "canonicalUrl": "https://bestaiagent.in/agents/claude-3-opus/",
+    "entityId": "agent/claude-3-opus",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/claude-3-opus",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Claude 3 Opus - Best AI Agent",
+      "description": "Detailed review and analysis of Claude 3 Opus, a leading AI agent for modern applications.",
+      "keywords": [
+        "claude-3-opus",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/claude-3-opus.jpg",
+      "build": {
+        "buildId": "build-20250725-2",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:claude-3-sonnet",
+    "slug": "claude-3-sonnet",
+    "canonicalUrl": "https://bestaiagent.in/agents/claude-3-sonnet/",
+    "entityId": "agent/claude-3-sonnet",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/claude-3-sonnet",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Claude 3.5 Sonnet - Best AI Agent",
+      "description": "Detailed review and analysis of Claude 3.5 Sonnet, a leading AI agent for modern applications.",
+      "keywords": [
+        "claude-3-sonnet",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/claude-3-sonnet.jpg",
+      "build": {
+        "buildId": "build-20250725-3",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:claude-code",
+    "slug": "claude-code",
+    "canonicalUrl": "https://bestaiagent.in/agents/claude-code/",
+    "entityId": "agent/claude-code",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/claude-code",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Claude Code - Best AI Agent",
+      "description": "Detailed review and analysis of Claude Code, a leading AI agent for modern applications.",
+      "keywords": [
+        "claude-code",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/claude-code.jpg",
+      "build": {
+        "buildId": "build-20250725-4",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:cursor-ai",
+    "slug": "cursor-ai",
+    "canonicalUrl": "https://bestaiagent.in/agents/cursor-ai/",
+    "entityId": "agent/cursor-ai",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/cursor-ai",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Cursor AI Editor - Best AI Agent",
+      "description": "Detailed review and analysis of Cursor AI Editor, a leading AI agent for modern applications.",
+      "keywords": [
+        "cursor-ai",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/cursor-ai.jpg",
+      "build": {
+        "buildId": "build-20250725-5",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:copilot",
+    "slug": "copilot",
+    "canonicalUrl": "https://bestaiagent.in/agents/copilot/",
+    "entityId": "agent/copilot",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/copilot",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "GitHub Copilot - Best AI Agent",
+      "description": "Detailed review and analysis of GitHub Copilot, a leading AI agent for modern applications.",
+      "keywords": [
+        "copilot",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/copilot.jpg",
+      "build": {
+        "buildId": "build-20250725-6",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:vapi-ai",
+    "slug": "vapi-ai",
+    "canonicalUrl": "https://bestaiagent.in/agents/vapi-ai/",
+    "entityId": "agent/vapi-ai",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/vapi-ai",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Vapi Voice AI Platform - Best AI Agent",
+      "description": "Detailed review and analysis of Vapi Voice AI Platform, a leading AI agent for modern applications.",
+      "keywords": [
+        "vapi-ai",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/vapi-ai.jpg",
+      "build": {
+        "buildId": "build-20250725-7",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:eleven-labs",
+    "slug": "eleven-labs",
+    "canonicalUrl": "https://bestaiagent.in/agents/eleven-labs/",
+    "entityId": "agent/eleven-labs",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/eleven-labs",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "ElevenLabs Voice AI - Best AI Agent",
+      "description": "Detailed review and analysis of ElevenLabs Voice AI, a leading AI agent for modern applications.",
+      "keywords": [
+        "eleven-labs",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/eleven-labs.jpg",
+      "build": {
+        "buildId": "build-20250725-8",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:grok",
+    "slug": "grok",
+    "canonicalUrl": "https://bestaiagent.in/agents/grok/",
+    "entityId": "agent/grok",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/grok",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Grok 2 - Best AI Agent",
+      "description": "Detailed review and analysis of Grok 2, a leading AI agent for modern applications.",
+      "keywords": [
+        "grok",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/grok.jpg",
+      "build": {
+        "buildId": "build-20250725-9",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:perplexity",
+    "slug": "perplexity",
+    "canonicalUrl": "https://bestaiagent.in/agents/perplexity/",
+    "entityId": "agent/perplexity",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/perplexity",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Perplexity Pro Agent - Best AI Agent",
+      "description": "Detailed review and analysis of Perplexity Pro Agent, a leading AI agent for modern applications.",
+      "keywords": [
+        "perplexity",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/perplexity.jpg",
+      "build": {
+        "buildId": "build-20250725-10",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:crewai",
+    "slug": "crewai",
+    "canonicalUrl": "https://bestaiagent.in/agents/crewai/",
+    "entityId": "agent/crewai",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/crewai",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "CrewAI Orchestration - Best AI Agent",
+      "description": "Detailed review and analysis of CrewAI Orchestration, a leading AI agent for modern applications.",
+      "keywords": [
+        "crewai",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/crewai.jpg",
+      "build": {
+        "buildId": "build-20250725-11",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:n8n",
+    "slug": "n8n",
+    "canonicalUrl": "https://bestaiagent.in/agents/n8n/",
+    "entityId": "agent/n8n",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/n8n",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "n8n Workflow Automation - Best AI Agent",
+      "description": "Detailed review and analysis of n8n Workflow Automation, a leading AI agent for modern applications.",
+      "keywords": [
+        "n8n",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/n8n.jpg",
+      "build": {
+        "buildId": "build-20250725-12",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:mistral-large",
+    "slug": "mistral-large",
+    "canonicalUrl": "https://bestaiagent.in/agents/mistral-large/",
+    "entityId": "agent/mistral-large",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/mistral-large",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Mistral Large - Best AI Agent",
+      "description": "Detailed review and analysis of Mistral Large, a leading AI agent for modern applications.",
+      "keywords": [
+        "mistral-large",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/mistral-large.jpg",
+      "build": {
+        "buildId": "build-20250725-13",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:gemini-pro",
+    "slug": "gemini-pro",
+    "canonicalUrl": "https://bestaiagent.in/agents/gemini-pro/",
+    "entityId": "agent/gemini-pro",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/gemini-pro",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Gemini Pro - Best AI Agent",
+      "description": "Detailed review and analysis of Gemini Pro, a leading AI agent for modern applications.",
+      "keywords": [
+        "gemini-pro",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/gemini-pro.jpg",
+      "build": {
+        "buildId": "build-20250725-14",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:qwen2.5",
+    "slug": "qwen2.5",
+    "canonicalUrl": "https://bestaiagent.in/agents/qwen2.5/",
+    "entityId": "agent/qwen2.5",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/qwen2.5",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Qwen 2.5 - Best AI Agent",
+      "description": "Detailed review and analysis of Qwen 2.5, a leading AI agent for modern applications.",
+      "keywords": [
+        "qwen2.5",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/qwen2.5.jpg",
+      "build": {
+        "buildId": "build-20250725-15",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:deepseek-coder",
+    "slug": "deepseek-coder",
+    "canonicalUrl": "https://bestaiagent.in/agents/deepseek-coder/",
+    "entityId": "agent/deepseek-coder",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/deepseek-coder",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "DeepSeek Coder - Best AI Agent",
+      "description": "Detailed review and analysis of DeepSeek Coder, a leading AI agent for modern applications.",
+      "keywords": [
+        "deepseek-coder",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/deepseek-coder.jpg",
+      "build": {
+        "buildId": "build-20250725-16",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:ollama",
+    "slug": "ollama",
+    "canonicalUrl": "https://bestaiagent.in/agents/ollama/",
+    "entityId": "agent/ollama",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/ollama",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Ollama - Best AI Agent",
+      "description": "Detailed review and analysis of Ollama, a leading AI agent for modern applications.",
+      "keywords": [
+        "ollama",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/ollama.jpg",
+      "build": {
+        "buildId": "build-20250725-17",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:tabnine",
+    "slug": "tabnine",
+    "canonicalUrl": "https://bestaiagent.in/agents/tabnine/",
+    "entityId": "agent/tabnine",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/tabnine",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Tabnine - Best AI Agent",
+      "description": "Detailed review and analysis of Tabnine, a leading AI agent for modern applications.",
+      "keywords": [
+        "tabnine",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/tabnine.jpg",
+      "build": {
+        "buildId": "build-20250725-18",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:autogpt",
+    "slug": "autogpt",
+    "canonicalUrl": "https://bestaiagent.in/agents/autogpt/",
+    "entityId": "agent/autogpt",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/autogpt",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AutoGPT - Best AI Agent",
+      "description": "Detailed review and analysis of AutoGPT, a leading AI agent for modern applications.",
+      "keywords": [
+        "autogpt",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/autogpt.jpg",
+      "build": {
+        "buildId": "build-20250725-19",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:zapier-mcp",
+    "slug": "zapier-mcp",
+    "canonicalUrl": "https://bestaiagent.in/agents/zapier-mcp/",
+    "entityId": "agent/zapier-mcp",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/zapier-mcp",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Zapier MCP Connector - Best AI Agent",
+      "description": "Detailed review and analysis of Zapier MCP Connector, a leading AI agent for modern applications.",
+      "keywords": [
+        "zapier-mcp",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/zapier-mcp.jpg",
+      "build": {
+        "buildId": "build-20250725-20",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:kagi",
+    "slug": "kagi",
+    "canonicalUrl": "https://bestaiagent.in/agents/kagi/",
+    "entityId": "agent/kagi",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/kagi",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Kagi Search - Best AI Agent",
+      "description": "Detailed review and analysis of Kagi Search, a leading AI agent for modern applications.",
+      "keywords": [
+        "kagi",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/kagi.jpg",
+      "build": {
+        "buildId": "build-20250725-21",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:agent:replit",
+    "slug": "replit",
+    "canonicalUrl": "https://bestaiagent.in/agents/replit/",
+    "entityId": "agent/replit",
+    "entityType": "agent",
+    "blueprintId": "agent-detail-v1",
+    "graphNodeId": "agent/replit",
+    "contentType": "product_detail",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "Replit Ghostwriter - Best AI Agent",
+      "description": "Detailed review and analysis of Replit Ghostwriter, a leading AI agent for modern applications.",
+      "keywords": [
+        "replit",
+        "ai",
+        "agent",
+        "review",
+        "comparison"
+      ],
+      "ogImage": "/images/og/replit.jpg",
+      "build": {
+        "buildId": "build-20250725-22",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0",
+        "contentVersion": "1.0.0"
+      },
+      "quality": {
+        "score": 85,
+        "passed": true,
+        "lastValidated": "2025-07-25T12:00:00Z",
+        "validatorVersion": "1.0.0"
+      },
+      "editorial": {
+        "state": "published",
+        "reviewer": "editorial-team",
+        "reviewedAt": "2025-07-25T10:00:00Z"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:category:coding-agents",
+    "slug": "coding-agents",
+    "canonicalUrl": "https://bestaiagent.in/categories/coding-agents/",
+    "entityId": "category/coding-agents",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/coding-agents",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for coding agents",
+      "description": "Comprehensive guide to AI agents in the coding-agents category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "coding-agents",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:voice-agents",
+    "slug": "voice-agents",
+    "canonicalUrl": "https://bestaiagent.in/categories/voice-agents/",
+    "entityId": "category/voice-agents",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/voice-agents",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for voice agents",
+      "description": "Comprehensive guide to AI agents in the voice-agents category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "voice-agents",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:business-automation",
+    "slug": "business-automation",
+    "canonicalUrl": "https://bestaiagent.in/categories/business-automation/",
+    "entityId": "category/business-automation",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/business-automation",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for business automation",
+      "description": "Comprehensive guide to AI agents in the business-automation category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "business-automation",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:research-agents",
+    "slug": "research-agents",
+    "canonicalUrl": "https://bestaiagent.in/categories/research-agents/",
+    "entityId": "category/research-agents",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/research-agents",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for research agents",
+      "description": "Comprehensive guide to AI agents in the research-agents category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "research-agents",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:developer-tools",
+    "slug": "developer-tools",
+    "canonicalUrl": "https://bestaiagent.in/categories/developer-tools/",
+    "entityId": "category/developer-tools",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/developer-tools",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for developer tools",
+      "description": "Comprehensive guide to AI agents in the developer-tools category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "developer-tools",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:open-source-agents",
+    "slug": "open-source-agents",
+    "canonicalUrl": "https://bestaiagent.in/categories/open-source-agents/",
+    "entityId": "category/open-source-agents",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/open-source-agents",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for open source-agents",
+      "description": "Comprehensive guide to AI agents in the open-source-agents category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "open-source-agents",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:category:frameworks",
+    "slug": "frameworks",
+    "canonicalUrl": "https://bestaiagent.in/categories/frameworks/",
+    "entityId": "category/frameworks",
+    "entityType": "category",
+    "blueprintId": "category-deep-dive-v1",
+    "graphNodeId": "category/frameworks",
+    "contentType": "article",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "AI Agents for frameworks",
+      "description": "Comprehensive guide to AI agents in the frameworks category.",
+      "keywords": [
+        "ai",
+        "agents",
+        "frameworks",
+        "review"
+      ],
+      "build": {
+        "buildId": "build-20250725-cat",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2500
+    }
+  },
+  {
+    "id": "manifest:page:comparison:chatgpt-vs-claude",
+    "slug": "chatgpt-vs-claude",
+    "canonicalUrl": "https://bestaiagent.in/compare/chatgpt-vs-claude",
+    "entityId": "comparison/chatgpt-vs-claude",
+    "entityType": "comparison",
+    "blueprintId": "comparison-deep-v1",
+    "graphNodeId": "comparison/chatgpt-vs-claude",
+    "contentType": "comparison",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "chatgpt vs claude - AI Agent Comparison",
+      "description": "Detailed head-to-head comparison of chatgpt and claude AI agents.",
+      "keywords": [
+        "chatgpt",
+        "claude",
+        "comparison",
+        "ai agent"
+      ],
+      "build": {
+        "buildId": "build-20250725-comp-1785102093306",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:comparison:cursor-ai-vs-copilot",
+    "slug": "cursor-ai-vs-copilot",
+    "canonicalUrl": "https://bestaiagent.in/compare/cursor-ai-vs-copilot",
+    "entityId": "comparison/cursor-ai-vs-copilot",
+    "entityType": "comparison",
+    "blueprintId": "comparison-deep-v1",
+    "graphNodeId": "comparison/cursor-ai-vs-copilot",
+    "contentType": "comparison",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "cursor-ai vs copilot - AI Agent Comparison",
+      "description": "Detailed head-to-head comparison of cursor-ai and copilot AI agents.",
+      "keywords": [
+        "cursor-ai",
+        "copilot",
+        "comparison",
+        "ai agent"
+      ],
+      "build": {
+        "buildId": "build-20250725-comp-1785102093306",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:comparison:vapi-ai-vs-eleven-labs",
+    "slug": "vapi-ai-vs-eleven-labs",
+    "canonicalUrl": "https://bestaiagent.in/compare/vapi-ai-vs-eleven-labs",
+    "entityId": "comparison/vapi-ai-vs-eleven-labs",
+    "entityType": "comparison",
+    "blueprintId": "comparison-deep-v1",
+    "graphNodeId": "comparison/vapi-ai-vs-eleven-labs",
+    "contentType": "comparison",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "vapi-ai vs eleven-labs - AI Agent Comparison",
+      "description": "Detailed head-to-head comparison of vapi-ai and eleven-labs AI agents.",
+      "keywords": [
+        "vapi-ai",
+        "eleven-labs",
+        "comparison",
+        "ai agent"
+      ],
+      "build": {
+        "buildId": "build-20250725-comp-1785102093306",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:comparison:crewai-vs-autogpt",
+    "slug": "crewai-vs-autogpt",
+    "canonicalUrl": "https://bestaiagent.in/compare/crewai-vs-autogpt",
+    "entityId": "comparison/crewai-vs-autogpt",
+    "entityType": "comparison",
+    "blueprintId": "comparison-deep-v1",
+    "graphNodeId": "comparison/crewai-vs-autogpt",
+    "contentType": "comparison",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "crewai vs autogpt - AI Agent Comparison",
+      "description": "Detailed head-to-head comparison of crewai and autogpt AI agents.",
+      "keywords": [
+        "crewai",
+        "autogpt",
+        "comparison",
+        "ai agent"
+      ],
+      "build": {
+        "buildId": "build-20250725-comp-1785102093306",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2000
+    }
+  },
+  {
+    "id": "manifest:page:comparison:n8n-vs-make",
+    "slug": "n8n-vs-make",
+    "canonicalUrl": "https://bestaiagent.in/compare/n8n-vs-make",
+    "entityId": "comparison/n8n-vs-make",
+    "entityType": "comparison",
+    "blueprintId": "comparison-deep-v1",
+    "graphNodeId": "comparison/n8n-vs-make",
+    "contentType": "comparison",
+    "status": "published",
+    "language": "en-US",
+    "version": "1.0.0",
+    "createdAt": "2025-07-25T12:00:00Z",
+    "updatedAt": "2025-07-25T12:00:00Z",
+    "metadata": {
+      "title": "n8n vs make - AI Agent Comparison",
+      "description": "Detailed head-to-head comparison of n8n and make AI agents.",
+      "keywords": [
+        "n8n",
+        "make",
+        "comparison",
+        "ai agent"
+      ],
+      "build": {
+        "buildId": "build-20250725-comp-1785102093306",
+        "generatedAt": "2025-07-25T12:00:00Z",
+        "blueprintVersion": "1.0.0"
+      },
+      "minWordCount": 2000
     }
   }
 ]

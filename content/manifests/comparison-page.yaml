@@ -1,0 +1,102 @@
+id: comparison-page
+name: "Agent Comparison"
+word_target: 3000
+seo_threshold: 90
+sections:
+  - id: introduction
+    required: true
+    prompt_template: |
+      Write an introduction comparing {entity.itemA.name} vs {entity.itemB.name}.
+      Explain why these two are compared, who this comparison is for, and what the reader will learn.
+    min_words: 200
+    data_sources: [entity, comparison_context]
+
+  - id: overview-table
+    required: true
+    prompt_template: |
+      Create a detailed comparison table covering:
+      - Pricing (free tier, paid plans)
+      - Core features and capabilities
+      - Performance metrics (latency, accuracy)
+      - Integration ecosystem
+      - Deployment options
+      - Target audience
+    min_words: 100
+    data_sources: [entity.itemA, entity.itemB, feature_matrix]
+
+  - id: detailed-comparison
+    required: true
+    prompt_template: |
+      Provide an in-depth, section-by-section comparison:
+      - Reasoning能力 (code generation, multi-step tasks)
+      - Tool use and API integration
+      - Context window and memory
+      - Ease of use and developer experience
+      - Pricing and value
+      For each, state which is better and why with evidence.
+    min_words: 800
+    data_sources: [benchmark_data, performance_tests, user_reviews]
+
+  - id: head-to-head-scenarios
+    required: true
+    prompt_template: |
+      Evaluate each tool in specific real-world scenarios:
+      - Scenario 1: [e.g., autonomous coding agent]
+      - Scenario 2: [e.g., research assistant]
+      - Scenario 3: [e.g., workflow automation]
+      For each, declare a winner and justify with criteria.
+    min_words: 600
+    data_sources: [use_case_benchmarks, scenario_tests]
+
+  - id: pros-cons
+    required: true
+    prompt_template: |
+      List pros and cons for each tool separately, then summarize trade-offs.
+    min_words: 300
+    data_sources: [entity.itemA.pros_cons, entity.itemB.pros_cons, expert_opinions]
+
+  - id: pricing-deep-dive
+    required: true
+    prompt_template: |
+      Deep dive into pricing models:
+      - Break down each plan's inclusions
+      - Calculate cost for typical usage patterns
+      - Compare total cost of ownership over 12 months
+    min_words: 300
+    data_sources: [pricing_plans, usage_calculators]
+
+  - id: verdict
+    required: true
+    prompt_template: |
+      Provide a clear verdict: which tool wins in which situations?
+      Include a recommendation matrix and final call.
+    min_words: 200
+    data_sources: [comparison_results, final_scoring]
+
+  - id: faq
+    required: true
+    prompt_template: |
+      Answer 8-10 common questions about this comparison.
+    min_words: 200
+    data_sources: [common_queries, comparison_faq]
+
+  - id: conclusion
+    required: true
+    prompt_template: |
+      Summarise key findings and link to detailed reviews of each product.
+    min_words: 100
+    data_sources: [entity]
+
+schema:
+  Comparison: true
+  Product: true
+  FAQPage: true
+
+internal_links:
+  min: 10
+  related_entity_types: [agent, research]
+  link_targets:
+    - path: /agents/{slug}
+      type: agent
+    - path: /research/{slug}
+      type: research

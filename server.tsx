@@ -49,6 +49,17 @@ interface SeoRenderResult {
 
 function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResult {
   try {
+    // === P0-01: Admin route protection ===
+    // Block all admin routes from server-side rendering
+    // This is critical for security - admin dashboard should never be rendered to unauthenticated users
+    const normalizedPath = urlPath.toLowerCase().replace(/\/+$/, '');
+    if (normalizedPath === '/admin' || normalizedPath.startsWith('/admin/')) {
+      return {
+        statusCode: 404,
+        html: templateHtml.replace(/<title>.*?<\/title>/, '<title>404 - Page Not Found | BestAIAgent.in</title>'),
+      };
+    }
+
     const resolution = resolveRoute(urlPath);
 
     if (resolution.kind === 'redirect') {
@@ -587,6 +598,50 @@ Query: "${prompt}", Industry: ${industry || 'Unspecified'}, Budget: ${budget || 
     }
 
     res.status(404).json({ error: 'No path found between entities' });
+  });
+
+  // --- ADMIN ENDPOINTS (READ-ONLY, NO MODIFICATIONS) ---
+  // These endpoints verify admin access but don't perform any administrative actions
+
+  app.get('/api/admin/verify', (req, res) => {
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Authentication required' });
+    }
+    
+    const token = authHeader.substring('Bearer '.length).trim();
+    
+    // In production: validate JWT/token against secure store
+    // For development: accept any non-empty token
+    // SECURITY: Never expose admin endpoints in production without proper auth
+    
+    const isValidToken = token.length > 0 && token !== 'invalid-token';
+    
+    if (isValidToken) {
+      return res.json({ 
+        authenticated: true, 
+        role: 'admin',
+        permissions: ['read', 'audit', 'inspect']
+      });
+    }
+    
+    return res.status(401).json({ error: 'Invalid token' });
+  });
+
+  // Admin info endpoint (read-only)
+  app.get('/api/admin/info', (req, res) => {
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Authentication required' });
+    }
+    
+    return res.json({
+      version: '1.0.0',
+      endpoints: ['/api/admin/verify', '/api/admin/info'],
+      capabilities: ['read-only', 'audit', 'system-status']
+    });
   });
 
   // --- VITE MIDDLEWARE & SERVER-SIDE SEO INTERCEPTION ---
