@@ -1,6 +1,6 @@
 # ADR 0006: Validation Pipeline Design
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Quality Engineering  
 **Reviewers:** TBD  

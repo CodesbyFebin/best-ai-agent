@@ -1,6 +1,6 @@
 # ADR 0005: Blueprint Engine Architecture
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Content Platform  
 **Reviewers:** TBD  

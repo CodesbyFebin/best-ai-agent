@@ -1,6 +1,6 @@
 # ADR 0008: Weighted Quality Scoring Model
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Quality Engineering  
 **Reviewers:** TBD  

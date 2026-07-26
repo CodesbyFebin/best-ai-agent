@@ -1,6 +1,6 @@
 # ADR 0007: Evidence Layer for Factual Grounding
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Content Platform  
 **Reviewers:** TBD  

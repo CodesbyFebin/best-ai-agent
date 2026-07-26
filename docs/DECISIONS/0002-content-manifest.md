@@ -1,6 +1,6 @@
 # ADR 0002: Content Manifest as Single Source of Truth
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Platform Engineering, Content Platform  
 **Reviewers:** TBD  

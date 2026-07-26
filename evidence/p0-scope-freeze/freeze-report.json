@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-07-26T19:40:09.044Z",
+  "contracts": {
+    "pass": true,
+    "details": [
+      {
+        "file": "Blueprint.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "ContentManifest.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "EntityResolver.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "Evidence.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "GenerationContext.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "Linker.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "Quality.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      },
+      {
+        "file": "Validation.ts",
+        "status": "Frozen (v1.0.0)",
+        "pass": true
+      }
+    ]
+  },
+  "adrs": {
+    "pass": true,
+    "details": [
+      {
+        "file": "0002-content-manifest.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0003-entity-resolver.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0004-generation-context.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0005-blueprint-engine.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0006-validation-pipeline.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0007-evidence-layer.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0008-quality-scoring.md",
+        "status": "Approved",
+        "pass": true
+      },
+      {
+        "file": "0009-internal-linking.md",
+        "status": "Approved",
+        "pass": true
+      }
+    ]
+  },
+  "contentOsSpec": {
+    "pass": true,
+    "version": "1.0.0",
+    "status": "Frozen"
+  },
+  "scopeFreezeSignoff": {
+    "pass": true,
+    "exists": true
+  },
+  "passed": true
+}

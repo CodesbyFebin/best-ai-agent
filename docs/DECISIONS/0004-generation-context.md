@@ -1,6 +1,6 @@
 # ADR 0004: Immutable Generation Context
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Content Platform  
 **Reviewers:** TBD  

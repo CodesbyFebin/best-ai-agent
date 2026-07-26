@@ -1,6 +1,6 @@
 # ADR 0003: Entity Resolver as Single Resolution Point
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Platform Engineering, Content Platform  
 **Reviewers:** TBD  

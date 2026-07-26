@@ -1,6 +1,6 @@
 # ADR 0009: Graph-Driven Internal Link Engine
 
-**Status:** Draft  
+**Status:** Approved  
 **Date:** 2026-07-25  
 **Authors:** Content Platform  
 **Reviewers:** TBD  
