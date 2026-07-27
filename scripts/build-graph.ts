@@ -7,7 +7,7 @@
  * Run: npx tsx scripts/build-graph.ts
  */
 
-import { featuredAgents } from '../src/data/agents.js';
+import { featuredAgents, codingAgents, voiceAgents, businessAgents, additionalAgents } from '../src/data/agents.js';
 import { popularCategories } from '../src/data/categories.js';
 import { featuredComparisons } from '../src/data/comparisons.js';
 import { researchReports } from '../src/data/research.js';
@@ -48,7 +48,15 @@ const edges: GraphEdge[] = [];
 
 // === AGENT NODES ===
 const agentSlugSet = new Set<string>();
-for (const agent of featuredAgents) {
+const allAgentsList = [
+  ...featuredAgents,
+  ...codingAgents,
+  ...voiceAgents,
+  ...businessAgents,
+  ...additionalAgents
+];
+
+for (const agent of allAgentsList) {
   nodes.push({
     id: `agent/${agent.slug}`,
     type: 'agent',
@@ -236,7 +244,7 @@ for (const comparison of featuredComparisons) {
 // === SIMILAR_TO (inferred from shared categories + comparisons) ===
 // Get category → agents mapping
 const categoryToAgents = new Map<string, string[]>();
-for (const agent of featuredAgents) {
+for (const agent of allAgentsList) {
   if (agent.categories) {
     for (const cat of agent.categories) {
       const existing = categoryToAgents.get(cat) || [];
@@ -283,7 +291,7 @@ for (const [categorySlug, agentSlugs] of categoryToAgents.entries()) {
 for (const research of researchReports) {
   const researchText = `${research.summary} ${research.citationReadySummary} ${research.keyTakeaways.join(' ')}`.toLowerCase();
 
-  for (const agent of featuredAgents) {
+  for (const agent of allAgentsList) {
     const agentNameVariations = [
       agent.name.toLowerCase(),
       agent.company.toLowerCase(),

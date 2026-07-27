@@ -45,19 +45,20 @@
     "scripts/content/generate-deep-page.ts"
   ],
   "checksums": {
-    "dist/content/chatgpt/index.html": "000000000000000000000000000000000000000000000000000000002c20be99",
-    "dist/content/coding-agents/index.html": "0000000000000000000000000000000000000000000000000000000058ce4ba0",
-    "dist/content/chatgpt-vs-claude/index.html": "000000000000000000000000000000000000000000000000000000002088a2d2",
-    "dist/content/ai-agent-benchmark-index/index.html": "00000000000000000000000000000000000000000000000000000000701fdf42",
-    "content/manifests/agent-review.yaml": "000000000000000000000000000000000000000000000000000000002a1ebb29",
-    "content/manifests/category-landing.yaml": "000000000000000000000000000000000000000000000000000000002f013372",
-    "content/manifests/comparison-page.yaml": "000000000000000000000000000000000000000000000000000000001c4e84a7",
-    "content/manifests/research-report.yaml": "0000000000000000000000000000000000000000000000000000000061ef1e6e",
-    "scripts/content/load-manifest.ts": "000000000000000000000000000000000000000000000000000000000eef5309",
-    "scripts/content/enrich-entity.ts": "000000000000000000000000000000000000000000000000000000000ef25614",
-    "scripts/content/generate-section.ts": "000000000000000000000000000000000000000000000000000000002970cc49",
-    "scripts/content/quality-gate.ts": "0000000000000000000000000000000000000000000000000000000006b77d01",
-    "scripts/content/publisher.ts": "000000000000000000000000000000000000000000000000000000004d05119a",
-    "scripts/content/generate-deep-page.ts": "000000000000000000000000000000000000000000000000000000003eb53654"
-  }
+    "dist/content/chatgpt/index.html": "b41dbf81cb7cadf36d2ac9ab2175b679a1f53397",
+    "dist/content/coding-agents/index.html": "44b3b95d0ba413ba380341631aaaf2863881b21d",
+    "dist/content/chatgpt-vs-claude/index.html": "a042039e60402173225aa6808234d5342687c431",
+    "dist/content/ai-agent-benchmark-index/index.html": "b95572cc575f51ef7a11e8a8991bf6816f4ad94b",
+    "content/manifests/agent-review.yaml": "e8286fe9b2bd019533d4dd9a8de685cc272b4af2",
+    "content/manifests/category-landing.yaml": "1c5d28177e70ad260c4163df011cc3b8aed9341e",
+    "content/manifests/comparison-page.yaml": "89a52f5d735df1da2a047fdc79358ce8cb324d0c",
+    "content/manifests/research-report.yaml": "4aafdfefef5a45de3502545678dc6d8d3c028e6a",
+    "scripts/content/load-manifest.ts": "f3d8fc058e12d395712482983b057f0e9c3abe5b",
+    "scripts/content/enrich-entity.ts": "74d4a87c2a747a08f5d4d21c7a143d7968df791e",
+    "scripts/content/generate-section.ts": "66dcda0a8b54197655628c957713e3d0cb20e7f0",
+    "scripts/content/quality-gate.ts": "a06071c87c6143859da7e4cc904b862d2c371bc7",
+    "scripts/content/publisher.ts": "88874017a50f7b9d35e750b3101d9562d301c1df",
+    "scripts/content/generate-deep-page.ts": "fe51ae513fcdaa4f04adadfe8a59e1187f843d82"
+  },
+  "keynote": "Phase C Complete: Deep content generation system with mock AI mode producing 1000+ word pages with proper schema markup"
 }

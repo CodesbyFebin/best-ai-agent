@@ -18,14 +18,19 @@ export function renderHtml(
   const slug = entityNode.id.split('/')[1];
   const canonical = `${baseUrl}/${slug}/`;
 
+  // Build quick answer from first paragraph
+  const quickAnswer = buildQuickAnswer(contentBySection, manifest, entityNode);
+
+  // Convert markdown sections to clean HTML
   const sectionsHtml = manifest.sections
     .map(sec => {
       const content = contentBySection[sec.id] || `<p>Missing section: ${sec.id}</p>`;
-      return `<section id="${sec.id}"><h2>${sec.id.replace(/-/g, ' ')}</h2>\n${content}</section>`;
+      const htmlContent = convertMarkdownToCleanHtml(content);
+      return `<section id="${sec.id}"><h2>${formatSectionId(sec.id)}</h2>\n${htmlContent}</section>`;
     })
     .join('\n');
 
-  const schema = buildSchema(manifest, entityNode, canonical);
+  const schema = buildSchema(manifest, entityNode, canonical, contentBySection);
 
   const style = template === 'minimal'
     ? 'body{font-family:system-ui,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;line-height:1.6}'
@@ -57,17 +62,87 @@ a:hover{text-decoration:underline}`;
 </head>
 <body>
   <header><a href="/">← BestAIAgent.in</a></header>
-  <main>${sectionsHtml}</main>
+  <main>
+    ${quickAnswer}
+    ${sectionsHtml}
+  </main>
   <footer>© 2026 BestAIAgent.in — All rights reserved.</footer>
 </body>
 </html>`;
 }
 
+function formatSectionId(id: string): string {
+  return id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function buildQuickAnswer(contentBySection: Record<string, string>, manifest: Manifest, entityNode: any): string {
+  const firstSection = manifest.sections.find(s => s.required);
+  if (!firstSection || !contentBySection[firstSection.id]) {
+    return '';
+  }
+
+  const content = contentBySection[firstSection.id];
+  const text = stripMarkdown(content);
+  const sentences = text.split(/[.!?]+/).filter(Boolean);
+  
+  if (sentences.length === 0) return '';
+
+  const quickSentences = sentences.slice(0, 2).join('. ') + '.';
+  const entityName = entityNode.data?.title || entityNode.data?.name || 'AI Agent';
+
+  return `<section id="quick-answer" class="quick-answer">
+    <h2>Quick Answer</h2>
+    <p><strong>${entityName}:</strong> ${quickSentences}</p>
+  </section>`;
+}
+
+function convertMarkdownToCleanHtml(markdown: string): string {
+  let html = markdown;
+  
+  // Remove markdown headers and convert to clean paragraphs
+  html = html.replace(/^#{1,6}\s+/gm, '');
+  
+  // Handle bold **text**
+  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  
+  // Handle italic *text* (avoid matching bold already processed)
+  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  
+  // Handle bullet lists
+  html = html.replace(/^[\*\-] (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/(<li>.*<\/li>\n?)/gs, '<ul>$1</ul>');
+  
+  // Convert multiple newlines to paragraph breaks
+  const paragraphs = html.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+  html = paragraphs.map(p => {
+    const cleanP = p.trim();
+    if (cleanP.startsWith('<ul>') || cleanP.startsWith('<ol>')) {
+      return cleanP;
+    }
+    return `<p>${cleanP}</p>`;
+  }).join('\n');
+  
+  return html;
+}
+
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function inferTitle(manifest: Manifest, entity: any): string {
-  // Check entity data for SEO title, fallback to manifest name
-  const entityName = entity.data?.name || entity.id.split('/')[1];
+  const entityName = entity.data?.title || entity.data?.name || entity.id.split('/')[1];
   if (manifest.schema['Review']) {
     return `${entityName} Review — Best AI Agent`;
+  }
+  if (manifest.schema['Comparison'] || manifest.name === 'Agent Comparison') {
+    return `${entityName} — BestAIAgent.in Comparison`;
   }
   if (manifest.schema['WebPage']) {
     return `${entityName} — BestAIAgent.in Guide`;
@@ -76,7 +151,6 @@ function inferTitle(manifest: Manifest, entity: any): string {
 }
 
 function inferDescription(manifest: Manifest, contentBySection: Record<string, string>): string {
-  // Try to get first paragraph from first required section
   const firstSection = manifest.sections.find(s => s.required);
   if (firstSection && contentBySection[firstSection.id]) {
     const text = stripMarkdown(contentBySection[firstSection.id]);
@@ -88,29 +162,31 @@ function inferDescription(manifest: Manifest, contentBySection: Record<string, s
   return manifest.name;
 }
 
-function stripMarkdown(text: string): string {
-  return text
-    .replace(/#{1,6}\s+/g, '')
-    .replace(/\*\*(.+?)\*\*/g, '$1')
-    .replace(/\*(.+?)\*/g, '$1')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/\n+/g, ' ');
-}
-
-function buildSchema(manifest: Manifest, entityNode: any, canonical: string) {
-  const base = {
+function buildSchema(manifest: Manifest, entityNode: any, canonical: string, contentBySection?: Record<string, string>): any {
+  const base: any = {
     "@context": "https://schema.org",
     "@graph": []
   };
 
-  const webPage = {
+  const webPage: any = {
     "@type": "WebPage",
     "@id": canonical,
     "url": canonical,
     "name": inferTitle(manifest, entityNode),
-    "description": inferDescription(manifest, {} as any),
-    "inLanguage": "en-US"
+    "description": inferDescription(manifest, contentBySection || {}),
+    "inLanguage": "en-US",
+    "mainEntityOfPage": true
   };
+
+  // Add BreadcrumbList for all pages
+  const breadcrumbs = buildBreadcrumbs(entityNode);
+  if (breadcrumbs.length > 0) {
+    webPage.breadcrumb = {
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs
+    };
+  }
+
   base["@graph"].push(webPage);
 
   // Add entity-specific schema
@@ -120,11 +196,11 @@ function buildSchema(manifest: Manifest, entityNode: any, canonical: string) {
       "name": webPage.name,
       "reviewedBody": {
         "@type": "Thing",
-        "name": entityNode.data.name
+        "name": entityNode.data?.name || 'AI Agent'
       },
       "reviewRating": {
         "@type": "Rating",
-        "ratingValue": entityNode.data.score?.overall || 0,
+        "ratingValue": entityNode.data?.score?.overall || 0,
         "bestRating": 10,
         "worstRating": 1
       },
@@ -137,16 +213,130 @@ function buildSchema(manifest: Manifest, entityNode: any, canonical: string) {
     base["@graph"].push(review);
   }
 
-  // Add mainEntity if applicable
-  if (entityNode.data?.name) {
-    const mainEntity = entityNode.type === 'agent'
-      ? { "@type": "Product", "name": entityNode.data.name, "brand": { "@type": "Organization", "name": entityNode.data.company } }
-      : undefined;
-
-    if (mainEntity) {
-      webPage.mainEntity = mainEntity;
+  // Add FAQPage schema for pages with FAQ sections
+  if (manifest.sections.some(s => s.id === 'faq')) {
+    const faqSchema = buildFaqSchema(manifest, entityNode);
+    if (faqSchema) {
+      base["@graph"].push(faqSchema);
     }
   }
 
+  // Add mainEntity if applicable
+  if (entityNode.type === 'agent') {
+    webPage.mainEntity = {
+      "@type": "Product",
+      "name": entityNode.data?.name || 'AI Agent',
+      "brand": {
+        "@type": "Organization",
+        "name": entityNode.data?.company || 'AI Company'
+      }
+    };
+  }
+
   return base;
+}
+
+function buildFaqSchema(manifest: Manifest, entityNode: any): any {
+  const faqQuestions = [
+    {
+      "@type": "Question",
+      "name": `What is ${entityNode.data?.name || 'this AI agent'}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${entityNode.data?.name || 'This AI agent'} is a powerful AI assistant with capabilities including reasoning, coding, and workflow automation.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `How much does ${entityNode.data?.name || 'this AI agent'} cost?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Pricing varies by plan. ${entityNode.data?.pricing?.details || 'Standard plans start at affordable monthly rates.'}`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `Is ${entityNode.data?.name || 'this AI agent'} suitable for enterprise use?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Yes, ${entityNode.data?.name || 'This AI agent'} offers enterprise-grade security, compliance, and integration capabilities.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `How secure is ${entityNode.data?.name || 'this AI agent'}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${entityNode.data?.name || 'This AI agent'} uses industry-standard encryption and security measures.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `Can I integrate ${entityNode.data?.name || 'this AI agent'} with my tools?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${entityNode.data?.name || 'This AI agent'} offers extensive API integrations and tools ecosystem.`
+      }
+    }
+  ];
+
+  return {
+    "@type": "FAQPage",
+    "mainEntity": faqQuestions
+  };
+}
+
+function buildBreadcrumbs(entityNode: any): any[] {
+  const breadcrumbs: any[] = [];
+  const entityName = entityNode.data?.title || entityNode.data?.name || entityNode.id.split('/')[1];
+  
+  breadcrumbs.push({
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://bestaiagent.in/"
+  });
+
+  if (entityNode.type === 'agent') {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Agents",
+      "item": "https://bestaiagent.in/agents/"
+    });
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": entityName,
+      "item": `https://bestaiagent.in/agents/${entityNode.data?.slug || entityNode.id.split('/')[1]}/`
+    });
+  } else if (entityNode.type === 'comparison') {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Comparisons",
+      "item": "https://bestaiagent.in/compare/"
+    });
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": entityName,
+      "item": `https://bestaiagent.in/compare/${entityNode.id.split('/')[1]}/`
+    });
+  } else if (entityNode.type === 'category') {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Categories",
+      "item": "https://bestaiagent.in/categories/"
+    });
+    breadcrumbs.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": entityName,
+      "item": `https://bestaiagent.in/categories/${entityNode.data?.slug || entityNode.id.split('/')[1]}/`
+    });
+  }
+
+  return breadcrumbs;
 }

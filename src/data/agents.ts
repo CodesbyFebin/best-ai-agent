@@ -430,7 +430,39 @@ export const codingAgents: Agent[] = [
     knownLimitation: "Tied to AWS ecosystem; limited outside AWS.",
     reviewUrl: "/agents/amazon-q/",
     officialUrl: "https://aws.amazon.com/q/"
-}
+  },
+  {
+    id: "copilot",
+    slug: "copilot",
+    name: "GitHub Copilot",
+    company: "GitHub (Microsoft)",
+    logo: "https://images.unsplash.com/photo-1659383593931-8f2185858c88?auto=format&fit=crop&w=120&q=80",
+    summary: "AI pair programmer with deep integration into GitHub and VS Code, offering real-time code suggestions and documentation.",
+    bestFor: ["Pair programming", "Code suggestions", "Open-source contribution", "Documentation generation"],
+    categories: ["Coding Agents", "Developer Tools"],
+    pricing: {
+      type: "paid",
+      startingPriceUSD: "$10/mo",
+      details: "Copilot Individual at $10/mo; Teams at $19/user/mo."
+    },
+    score: {
+      overall: 9.3,
+      reasoning: 9.5,
+      toolUse: 9.4,
+      value: 9.1,
+      privacy: 8.4,
+      easeOfUse: 9.6,
+      indiaFit: 8.9
+    },
+    deployment: ["VS Code", "JetBrains", "GitHub Codespaces", "CLI"],
+    integrations: ["GitHub", "VS Code", "Neovim", "Cursor", "Elment"],
+    openSource: false,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Privacy concerns with OSS repositories; may suggest code with similar licensing.",
+    reviewUrl: "/agents/copilot/",
+    officialUrl: "https://copilot.github.com"
+  }
   ];
   
 export const voiceAgents: Agent[] = [
@@ -556,11 +588,51 @@ export const businessAgents: Agent[] = [
     knownLimitation: "Limited for highly technical content.",
     reviewUrl: "/agents/scrittore/",
     officialUrl: "https://scrittore.ai"
+  },
+  {
+    id: "yellow-ai",
+    slug: "yellow-ai",
+    name: "Yellow AI",
+    company: "Yellow AI",
+    logo: "https://images.unsplash.com/product/1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
+    summary: "Enterprise conversational AI platform for business automation with 24/7 customer service capabilities.",
+    bestFor: ["Enterprise customer service", "Conversational AI", "Customer support automation"],
+    categories: ["Business Automation"],
+    pricing: { type: "enterprise", details: "Enterprise pricing; starts at $500/mo." },
+    score: { overall: 9.2, reasoning: 9.4, toolUse: 9.0, value: 8.9, privacy: 8.5, easeOfUse: 9.0, indiaFit: 8.8 },
+    deployment: ["Cloud", "API", "Web"],
+    integrations: ["Salesforce", "Shopify", "Zendesk", "Slack", "Microsoft Teams"],
+    openSource: false,
+    testingDate: "2026-07-18",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Enterprise pricing model may not suit small businesses.",
+    reviewUrl: "/agents/yellow-ai/",
+    officialUrl: "https://yellow.ai"
+  },
+  {
+    id: "regie-ai",
+    slug: "regie-ai",
+    name: "Regie AI",
+    company: "Regie",
+    logo: "https://images.unsplash.com/product/1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
+    summary: "AI-powered content generation platform for sales outreach, email sequences, and marketing copy automation.",
+    bestFor: ["Cold email personalization", "Lead generation", "Content personalization"],
+    categories: ["Sales & Marketing"],
+    pricing: { type: "paid", startingPriceUSD: "$49/mo", details: "Creator at $49/mo; Business plans available." },
+    score: { overall: 8.8, reasoning: 8.7, toolUse: 9.0, value: 8.8, privacy: 8.4, easeOfUse: 9.1, indiaFit: 8.5 },
+    deployment: ["Web", "API"],
+    integrations: ["HubSpot", "Salesforce", "Pipedrive", "Airtable", "Notion"],
+    openSource: false,
+    testingDate: "2026-07-19",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Results quality depends on input prompt quality.",
+    reviewUrl: "/agents/regie-ai/",
+    officialUrl: "https://regie.ai"
   }
 ];
 
 // Additional Phase C Agents - 30 more agents for comprehensive coverage
-const additionalAgents: Agent[] = [
+export const additionalAgents: Agent[] = [
   {
     id: "claude-3-opus",
     slug: "claude-3-opus",
@@ -1460,6 +1532,98 @@ const additionalAgents: Agent[] = [
     knownLimitation: "Requires good internet connection.",
     reviewUrl: "/agents/hedra/",
     officialUrl: "https://hedra.org"
+  },
+  {
+    id: "autogen",
+    slug: "autogen",
+    name: "Microsoft AutoGen",
+    company: "Microsoft Research",
+    logo: "https://images.unsplash.com/product/1518770660439-4636190af475?auto=format&fit=crop&w=120&q=80",
+    summary: "Microsoft's open-source framework for building next-generation AI applications with agent communication patterns.",
+    bestFor: ["Agent communication patterns", "Talk-Show workflows", "Conversational AI", "Adaptive AI"],
+    categories: ["Agent Frameworks", "Open-Source Agents"],
+    pricing: { type: "open_source", details: "100% open-source Python library." },
+    score: { overall: 9.1, reasoning: 9.0, toolUse: 9.3, value: 9.2, privacy: 8.5, easeOfUse: 8.7, indiaFit: 8.0 },
+    deployment: ["Python Package", "Docker", "Local", "Azure"],
+    integrations: ["Azure AI", "OpenAI", "Anthropic", "HuggingFace"],
+    openSource: true,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Complex setup for beginners; requires Python expertise.",
+    reviewUrl: "/agents/autogen/",
+    officialUrl: "https://microsoft.github.io/autogen/"
+  },
+  {
+    id: "gemini",
+    slug: "gemini",
+    name: "Google Gemini 1.5 Pro",
+    company: "Google",
+    logo: "https://images.unsplash.com/product/1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+    summary: "Google's most capable multimodal model with massive 2M token context window and native Google Workspace integration.",
+    bestFor: ["Massive context analysis", "Video understanding", "Multi-modal processing", "Google Workspace integration"],
+    categories: ["Personal AI Assistants", "Research Agents"],
+    pricing: {
+      type: "paid",
+      startingPriceUSD: "$20/mo",
+      details: "Gemini Pro at $20/mo; Gemini Ultra available via API."
+    },
+    score: {
+      overall: 9.3,
+      reasoning: 9.4,
+      toolUse: 9.2,
+      value: 9.0,
+      privacy: 8.2,
+      easeOfUse: 9.5,
+      indiaFit: 8.5
+    },
+    deployment: ["Web", "API", "Android", "Google Workspace"],
+    integrations: ["Google Workspace", "Gmail", "Docs", "Drive", "Photos"],
+    openSource: false,
+    testingDate: "2026-07-19",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Limited availability in some regions; heavily tied to Google ecosystem.",
+    reviewUrl: "/agents/gemini/",
+    officialUrl: "https://gemini.google.com"
+  },
+  {
+    id: "langgraph",
+    slug: "langgraph",
+    name: "LangGraph",
+    company: "LangChain",
+    logo: "https://images.unsplash.com/product/1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
+    summary: "LangGraph is a framework for buildinglanguage-aware, context-sensitive applications that persist across turns and are built on top of the current leading open-source LLM runtime - LangChain.",
+    bestFor: ["Stateful LLM applications", "Multi-agent systems", "Long-running workflows"],
+    categories: ["Agent Frameworks"],
+    pricing: { type: "open_source", details: "100% open-source Python library; Cloud service available." },
+    score: { overall: 9.2, reasoning: 9.4, toolUse: 9.1, value: 9.3, privacy: 8.6, easeOfUse: 8.8, indiaFit: 8.2 },
+    deployment: ["Python", "JavaScript", "API", "Docker"],
+    integrations: ["LangChain", "OpenAI", "Anthropic", "HuggingFace"],
+    openSource: true,
+    testingDate: "2026-07-20",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Steeper learning curve for complex graph architectures.",
+    reviewUrl: "/agents/langgraph/",
+    officialUrl: "https://www.langchain.com/langgraph"
+  },
+  {
+    id: "mcp-github",
+    slug: "mcp-github",
+    name: "GitHub MCP Server",
+    company: "GitHub",
+    logo: "https://images.unsplash.com/photo-1659383593931-8f2185858c88?auto=format&fit=crop&w=120&q=80",
+    summary: "Model Context Protocol server that provides structured data tool access to AI assistants through GitHub APIs.",
+    bestFor: ["Code repository analysis", "Pull request automation", "Issue management"],
+    categories: ["MCP Servers"],
+    pricing: { type: "free", details: "Free with GitHub account." },
+    score: { overall: 9.0, reasoning: 9.2, toolUse: 9.3, value: 9.4, privacy: 8.5, easeOfUse: 9.5, indiaFit: 8.0 },
+    deployment: ["API", "Docker", "Self-hosted"],
+    integrations: ["GitHub", "GitHub Actions", "GitHub Apps"],
+    openSource: true,
+    testingDate: "2026-07-21",
+    updatedAt: "2026-07-23",
+    knownLimitation: "Requires understanding of MCP protocol.",
+    reviewUrl: "/agents/mcp-github/",
+    officialUrl: "https://github.com/modelcontextprotocol"
   }
 ];
 
