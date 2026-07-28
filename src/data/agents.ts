@@ -854,26 +854,6 @@ export const additionalAgents: Agent[] = [
     officialUrl: "https://wandb.com/codey"
   },
   {
-    id: "copilot",
-    slug: "copilot",
-    name: "GitHub Copilot",
-    company: "GitHub (Microsoft)",
-    logo: "https://images.unsplash.com/photo-1659383593931-8f2185858c88?auto=format&fit=crop&w=120&q=80",
-    summary: "AI pair programmer with deep integration into GitHub and VS Code.",
-    bestFor: ["Pair programming", "Code suggestions", "Open-source contribution"],
-    categories: ["Coding Agents", "Developer Tools"],
-    pricing: { type: "paid", startingPriceUSD: "$10/mo", details: "Copilot Individual at $10/mo." },
-    score: { overall: 9.3, reasoning: 9.5, toolUse: 9.4, value: 9.1, privacy: 8.4, easeOfUse: 9.6, indiaFit: 8.9 },
-    deployment: ["VS Code", "JetBrains", "GitHub Codespaces", "CLI"],
-    integrations: ["GitHub", "VS Code", "Neovim", "Cursor"],
-    openSource: false,
-    testingDate: "2026-07-17",
-    updatedAt: "2026-07-23",
-    knownLimitation: "Privacy concerns with OSS repositories.",
-    reviewUrl: "/agents/copilot/",
-    officialUrl: "https://copilot.github.com"
-  },
-  {
     id: "replit",
     slug: "replit",
     name: "Replit Ghostwriter",
@@ -994,8 +974,8 @@ export const additionalAgents: Agent[] = [
     officialUrl: "https://claude.ai"
   },
   {
-    id: "qwen2.5",
-    slug: "qwen2.5",
+    id: "qwen2-5",
+    slug: "qwen2-5",
     name: "Qwen 2.5",
     company: "Alibaba Cloud",
     logo: "https://images.unsplash.com/photo/1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
@@ -1010,7 +990,7 @@ export const additionalAgents: Agent[] = [
     testingDate: "2026-07-21",
     updatedAt: "2026-07-23",
     knownLimitation: "Limited English support.",
-    reviewUrl: "/agents/qwen2.5/",
+    reviewUrl: "/agents/qwen2-5/",
     officialUrl: "https://qwen.ai"
   },
   {

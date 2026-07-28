@@ -8,7 +8,7 @@
   "baselineScore": 52,
   "verifiedScore": 62,
   "targetScore": 100,
-  "lastUpdated": "2026-07-26T04:57:43.237Z",
+  "lastUpdated": "2026-07-26T05:00:00.000Z",
   "baselineVerifications": {
     "typecheck": "PASS",
     "build": "PASS (1 warning: import.meta in CJS output)",
@@ -61,7 +61,7 @@
     {
       "id": "P07",
       "name": "Metadata + route-specific JSON-LD",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "P08",

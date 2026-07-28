@@ -1,0 +1,434 @@
+{
+  "phase": "P0-02",
+  "control": "SSR runtime and hydration verification",
+  "generatedAt": "2026-07-27T22:46:29.655Z",
+  "tests": [
+    {
+      "path": "/",
+      "status": "pass",
+      "checksum": "ck:8d9coa:116"
+    },
+    {
+      "path": "/agents",
+      "status": "pass",
+      "checksum": "ck:vw6pht:92"
+    },
+    {
+      "path": "/categories",
+      "status": "pass",
+      "checksum": "ck:kyaf2q:98"
+    },
+    {
+      "path": "/best-ai-agent",
+      "status": "pass",
+      "checksum": "ck:e1i81t:121"
+    },
+    {
+      "path": "/best-ai-agent-for-business",
+      "status": "pass",
+      "checksum": "ck:b28tgs:132"
+    },
+    {
+      "path": "/best-ai-agent-for-coding",
+      "status": "pass",
+      "checksum": "ck:dadd3d:133"
+    },
+    {
+      "path": "/best-ai-agent-alternatives",
+      "status": "pass",
+      "checksum": "ck:zgfleo:132"
+    },
+    {
+      "path": "/best-ai-agents-for-automation",
+      "status": "pass",
+      "checksum": "ck:wpq90x:130"
+    },
+    {
+      "path": "/best-ai-agent-frameworks",
+      "status": "pass",
+      "checksum": "ck:130to1:137"
+    },
+    {
+      "path": "/mcp-directory",
+      "status": "pass",
+      "checksum": "ck:ldj1wt:120"
+    },
+    {
+      "path": "/mcp-servers",
+      "status": "pass",
+      "checksum": "ck:kny7po:98"
+    },
+    {
+      "path": "/frameworks",
+      "status": "pass",
+      "checksum": "ck:5pttmp:114"
+    },
+    {
+      "path": "/rankings",
+      "status": "pass",
+      "checksum": "ck:olp7lo:118"
+    },
+    {
+      "path": "/pricing",
+      "status": "pass",
+      "checksum": "ck:xn13nh:103"
+    },
+    {
+      "path": "/reviews",
+      "status": "pass",
+      "checksum": "ck:g9yajf:115"
+    },
+    {
+      "path": "/compare",
+      "status": "pass",
+      "checksum": "ck:9yr0b:109"
+    },
+    {
+      "path": "/research",
+      "status": "pass",
+      "checksum": "ck:yhxwss:123"
+    },
+    {
+      "path": "/sitemap",
+      "status": "pass",
+      "checksum": "ck:xxv0l:115"
+    },
+    {
+      "path": "/about",
+      "status": "pass",
+      "checksum": "ck:tgn2rj:111"
+    },
+    {
+      "path": "/authors",
+      "status": "pass",
+      "checksum": "ck:5p9woc:106"
+    },
+    {
+      "path": "/methodology",
+      "status": "pass",
+      "checksum": "ck:6mvaae:120"
+    },
+    {
+      "path": "/editorial-policy",
+      "status": "pass",
+      "checksum": "ck:va09jl:117"
+    },
+    {
+      "path": "/review-process",
+      "status": "pass",
+      "checksum": "ck:nwej3x:120"
+    },
+    {
+      "path": "/corrections",
+      "status": "pass",
+      "checksum": "ck:opubvq:114"
+    },
+    {
+      "path": "/privacy-policy",
+      "status": "pass",
+      "checksum": "ck:ffwhty:115"
+    },
+    {
+      "path": "/terms",
+      "status": "pass",
+      "checksum": "ck:pbqwnr:81"
+    },
+    {
+      "path": "/affiliate-disclosure",
+      "status": "pass",
+      "checksum": "ck:z4t1zd:125"
+    },
+    {
+      "path": "/contact",
+      "status": "pass",
+      "checksum": "ck:7gcoxa:91"
+    },
+    {
+      "path": "/knowledge-graph",
+      "status": "pass",
+      "checksum": "ck:2yfgaj:117"
+    },
+    {
+      "path": "/categories/coding-agents",
+      "status": "pass",
+      "checksum": "ck:kiauh:133"
+    },
+    {
+      "path": "/categories/voice-bots",
+      "status": "pass",
+      "checksum": "ck:etoads:123"
+    },
+    {
+      "path": "/categories/orchestration",
+      "status": "pass",
+      "checksum": "ck:t49nkd:130"
+    },
+    {
+      "path": "/categories/business",
+      "status": "pass",
+      "checksum": "ck:h3emcj:105"
+    },
+    {
+      "path": "/categories/crm",
+      "status": "pass",
+      "checksum": "ck:fbyt2v:97"
+    },
+    {
+      "path": "/categories/customer-support",
+      "status": "pass",
+      "checksum": "ck:nb0tuu:123"
+    },
+    {
+      "path": "/categories/sales",
+      "status": "pass",
+      "checksum": "ck:j3mo5o:112"
+    },
+    {
+      "path": "/categories/marketing",
+      "status": "pass",
+      "checksum": "ck:y62wc7:109"
+    },
+    {
+      "path": "/categories/research",
+      "status": "pass",
+      "checksum": "ck:papqli:127"
+    },
+    {
+      "path": "/categories/automation",
+      "status": "pass",
+      "checksum": "ck:tbbrgc:120"
+    },
+    {
+      "path": "/agents/cursor",
+      "status": "pass",
+      "checksum": "ck:r9xmht:119"
+    },
+    {
+      "path": "/agents/claude-code",
+      "status": "pass",
+      "checksum": "ck:6kee4z:130"
+    },
+    {
+      "path": "/agents/chatgpt",
+      "status": "pass",
+      "checksum": "ck:rghkc9:117"
+    },
+    {
+      "path": "/agents/claude",
+      "status": "pass",
+      "checksum": "ck:t7cabh:104"
+    },
+    {
+      "path": "/agents/vapi",
+      "status": "pass",
+      "checksum": "ck:fji9en:122"
+    },
+    {
+      "path": "/agents/crewai",
+      "status": "pass",
+      "checksum": "ck:5ynr3w:116"
+    },
+    {
+      "path": "/agents/yellow-ai",
+      "status": "pass",
+      "checksum": "ck:6g1ueo:121"
+    },
+    {
+      "path": "/agents/flowise-ai",
+      "status": "pass",
+      "checksum": "ck:ap41xb:123"
+    },
+    {
+      "path": "/agents/reclaim-ai",
+      "status": "pass",
+      "checksum": "ck:jdt02:128"
+    },
+    {
+      "path": "/agents/n8n",
+      "status": "pass",
+      "checksum": "ck:4pm9x4:116"
+    },
+    {
+      "path": "/agents/relevance-ai",
+      "status": "pass",
+      "checksum": "ck:u9e22k:122"
+    },
+    {
+      "path": "/agents/langgraph",
+      "status": "pass",
+      "checksum": "ck:u4htdd:118"
+    },
+    {
+      "path": "/agents/autogen",
+      "status": "pass",
+      "checksum": "ck:pb4cg:118"
+    },
+    {
+      "path": "/agents/windsurf",
+      "status": "pass",
+      "checksum": "ck:5q5940:112"
+    },
+    {
+      "path": "/agents/retell-ai",
+      "status": "pass",
+      "checksum": "ck:kixudg:124"
+    },
+    {
+      "path": "/compare/cursor-vs-copilot",
+      "status": "pass",
+      "checksum": "ck:8qjow4:143"
+    },
+    {
+      "path": "/compare/chatgpt-vs-claude",
+      "status": "pass",
+      "checksum": "ck:e4fkc6:142"
+    },
+    {
+      "path": "/compare/crewai-vs-autogen",
+      "status": "pass",
+      "checksum": "ck:5loulp:132"
+    },
+    {
+      "path": "/compare/langgraph-vs-crewai",
+      "status": "pass",
+      "checksum": "ck:jmsvht:142"
+    },
+    {
+      "path": "/compare/vapi-vs-retell",
+      "status": "pass",
+      "checksum": "ck:kbkrjy:137"
+    },
+    {
+      "path": "/compare/flowise-vs-dify",
+      "status": "pass",
+      "checksum": "ck:midtto:136"
+    },
+    {
+      "path": "/mcp/servers/github",
+      "status": "pass",
+      "checksum": "ck:3nlrt7:124"
+    },
+    {
+      "path": "/mcp/servers/postgres",
+      "status": "pass",
+      "checksum": "ck:guydtw:134"
+    },
+    {
+      "path": "/mcp/servers/slack",
+      "status": "pass",
+      "checksum": "ck:wztz89:133"
+    },
+    {
+      "path": "/mcp/servers/filesystem",
+      "status": "pass",
+      "checksum": "ck:u0w6xa:135"
+    },
+    {
+      "path": "/mcp/servers/notion",
+      "status": "pass",
+      "checksum": "ck:yewpy5:121"
+    },
+    {
+      "path": "/mcp/servers/excel",
+      "status": "pass",
+      "checksum": "ck:18tq64:124"
+    },
+    {
+      "path": "/mcp/servers/shopify",
+      "status": "pass",
+      "checksum": "ck:zbiivi:128"
+    },
+    {
+      "path": "/research/state-of-ai-agents-india-2026",
+      "status": "pass",
+      "checksum": "ck:49emkw:153"
+    },
+    {
+      "path": "/research/voice-latency-report",
+      "status": "pass",
+      "checksum": "ck:lpaetd:132"
+    },
+    {
+      "path": "/",
+      "status": "pass",
+      "checksum": "ck:ipq9m0:422"
+    },
+    {
+      "path": "/agents/cursor",
+      "status": "pass",
+      "checksum": "ck:q6smcb:400"
+    },
+    {
+      "path": "/categories/coding-agents",
+      "status": "pass",
+      "checksum": "ck:rpnb8e:413"
+    },
+    {
+      "path": "/compare/cursor-vs-copilot",
+      "status": "pass",
+      "checksum": "ck:zeal7n:448"
+    },
+    {
+      "path": "/research/state-of-ai-agents-india-2026",
+      "status": "pass",
+      "checksum": "ck:3uqpvb:485"
+    },
+    {
+      "path": "/about",
+      "status": "pass",
+      "checksum": "ck:cm1qv6:371"
+    },
+    {
+      "path": "/methodology",
+      "status": "pass",
+      "checksum": "ck:7vtpxi:419"
+    },
+    {
+      "path": "/",
+      "status": "pass"
+    },
+    {
+      "path": "/agents/cursor",
+      "status": "pass"
+    },
+    {
+      "path": "/categories/coding-agents",
+      "status": "pass"
+    },
+    {
+      "path": "/compare",
+      "status": "pass"
+    },
+    {
+      "path": "/about",
+      "status": "pass"
+    },
+    {
+      "path": "src/App.tsx",
+      "status": "warn",
+      "error": "Contains 4 window/document accesses - verify they are within useEffect or event handlers"
+    },
+    {
+      "path": "src/components/RouterApp.tsx",
+      "status": "warn",
+      "error": "Contains 8 window/document accesses - verify they are within useEffect or event handlers"
+    },
+    {
+      "path": "src/main.tsx",
+      "status": "warn",
+      "error": "Contains 1 window/document accesses - verify they are within useEffect or event handlers"
+    },
+    {
+      "path": "/",
+      "status": "pass"
+    },
+    {
+      "path": "/agents/cursor",
+      "status": "pass"
+    },
+    {
+      "path": "/about",
+      "status": "pass"
+    }
+  ]
+}

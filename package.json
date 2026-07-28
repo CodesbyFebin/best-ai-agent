@@ -13,7 +13,7 @@
     "test:evidence": "tsx scripts/verify-evidence.ts",
     "test:sitemap": "tsx scripts/verify-sitemaps.ts",
     "test:ssr": "tsx scripts/verify-ssr.ts",
-    "test:ssr-hydration": "tsx scripts/verify-ssr-hydration.ts",
+    "test:ssr-hydration": "tsx scripts/verify-ssr-hydration.tsx",
     "test:graph": "tsx scripts/verify-graph.ts",
     "test:manifest": "tsx scripts/verify-manifest.ts",
     "test:production": "tsx scripts/verify-production.mjs",
