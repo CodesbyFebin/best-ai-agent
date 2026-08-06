@@ -1,3 +1,4 @@
+<img width="1672" height="941" alt="ChatGPT Image Aug 6, 2026, 10_47_23 AM" src="https://github.com/user-attachments/assets/caac3a9d-5145-4c51-a687-53f5e4d3619d" />
 # MCPserver.in
 
 **The trusted discovery, verification, and deployment platform for Model Context Protocol servers.**
