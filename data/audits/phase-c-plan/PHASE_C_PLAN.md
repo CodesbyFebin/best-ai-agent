@@ -1,115 +1,233 @@
 # Phase C Plan
 
 **Date**: 2026-08-08
-**Status**: PLANNED
-**Checkpoint**: Phase B frozen at `authority-phase-b-commercial-intent`
+**Status**: ACTIVE
+**Checkpoint**: Phase B frozen at `authority-phase-b-commercial-intent` (tag committed)
+**Branch**: `audit/phase-c-authority-integrity`
 
 ---
 
-## Strategic Direction
+## Operating Rule
 
-Phase C applies the Phase B provenance + protocol-freshness + intent-ownership system to 10 remaining pages in the top-tier audit set. Execution is organized into four deterministic batches, not page-by-page.
-
-## Execution Order (Four Batches)
-
-### Batch 1: Protocol + Code Correctness
-| Page | Rationale |
-|------|-----------|
-| `/how-to-build-mcp-server/` | Highest density of executable code; every snippet must carry a status label |
-| `/glossary/streamable-http/` | Transport reference must match 2026-07-28 spec model |
-
-### Batch 2: Deployment + Conceptual Boundaries
-| Page | Rationale |
-|------|-----------|
-| `/mcp-server-hosting/` | Must distinguish protocol requirements from operational recommendations |
-| `/glossary/model-serving/` | Must distinguish model serving from MCP server functionality |
-
-### Batch 3: Knowledge Architecture
-| Page | Rationale |
-|------|-----------|
-| `/glossary/` + remaining client/server/integration content | Post-Phase-B alignment; each glossary page must have unique entity/intent |
-
-### Batch 4: Temporal / Editorial
-| Page | Rationale |
-|------|-----------|
-| `/state-of-mcp/` | Every time-sensitive claim must carry `as_of`, source, review date |
-| `/blog/` | Evergreen search intent must remain owned by permanent guides |
+No further architectural changes before starting Batch 1. All governance rules are versioned in this plan and the schema files under `data/schemas/`.
 
 ---
 
-## CI Guards (Phase C)
-
-Three deterministic CI guards run on every page during Phase C:
+## Execution Flow
 
 ```text
-NO_UNLABELED_EXECUTABLE_CODE
-  → Every code snippet must carry one of: TESTED | SOURCE_VERIFIED | ILLUSTRATIVE | STALE | UNVERIFIED
-  → FAIL if any code block has no label
+FROZEN
+authority-phase-b-commercial-intent
 
-NO_PROTOCOL_REQUIREMENT_AS_DEPLOYMENT_OPINION
-  → MCP protocol requirements sourced from specification/2026-07-28/
-  → Operational recommendations must be labeled "best practice" with evidence
-  → Cloud/provider claims must be labeled "deployment context" with source
-  → FAIL if any statement conflates protocol requirement with deployment recommendation
+        ↓
 
-NO_UNDATED_TEMPORAL_CLAIMS
-  → Every time-sensitive claim must carry: as_of, source, source_type, retrieved_at, expires_review_at
-  → FAIL if any claim references a date, count, or metric without provenance metadata
+audit/phase-c-authority-integrity
+
+Batch 1 → Protocol + Code
+Batch 2 → Deployment + Conceptual
+Batch 3 → Knowledge Architecture
+Batch 4 → Temporal + Editorial
+
+        ↓
+
+PHASE_C_EXIT_GATE
+
+        ↓
+
+authority-phase-c-integrity
+
+        ↓
+
+Phase D — 971-page rollout
 ```
 
 ---
 
-## Code Example Labels
+## Batch 1: Protocol + Code Correctness
 
-Every executable code snippet in Phase C pages must carry exactly one label:
+### Pages
+- `/how-to-build-mcp-server/`
+- `/glossary/streamable-http/`
+
+### Batch 1 Gate: Executable Code Labeling
+
+Every code block must carry exactly one state:
 
 ```text
 TESTED          — actually run against current SDK; version + date documented
 SOURCE_VERIFIED — matches vendor/SDK documentation exactly; not independently executed
-ILLUSTRATIVE    — conceptual example; not production-tested
-STALE           — uses pre-2026-07-28 API features
+ILLUSTRATIVE    — conceptual pseudocode; marked non-executable
+STALE           — uses pre-2026-07-28 API features (initialize, HTTP+SSE, server-initiated requests)
 UNVERIFIED      — not yet checked against current SDK
 ```
 
-**Rule**: `ILLUSTRATIVE` examples must be presented with explicit caveats. `STALE` examples are rewritten or removed. `UNVERIFIED` examples are flagged for follow-up.
+**Blocker rule**: `STALE` and `UNVERIFIED` executable examples block Batch 1 completion until:
+- Corrected to `TESTED` or `SOURCE_VERIFIED`
+- Converted to `ILLUSTRATIVE` (non-executable pseudocode)
+- Removed
 
----
+### Code Record Schema
 
-## Temporal Evidence Model
-
-For `/state-of-mcp/` and any time-sensitive claims in `/blog/`:
+Each code example is tracked as:
 
 ```json
 {
-  "claim": "The official MCP Registry lists 150,000+ servers",
-  "as_of": "2026-08-08",
-  "source": "https://registry.modelcontextprotocol.io/v0.1/servers?limit=1",
-  "source_type": "PRIMARY",
-  "retrieved_at": "2026-08-08T01:42:00Z",
-  "expires_review_at": "2026-09-08",
-  "status": "CURRENT"
+  "example_id": "how-to-build-mcp-001",
+  "page": "/how-to-build-mcp-server/",
+  "language": "typescript",
+  "claim_scope": "SDK",
+  "verification_state": "TESTED",
+  "sdk_or_package": "@modelcontextprotocol/sdk",
+  "version_or_commit": "2.0.0",
+  "source": "https://github.com/modelcontextprotocol/docs/blob/main/docs/2026-07-28/develop/build-server.md",
+  "verified_at": "2026-08-08",
+  "test_command": "npx tsx example.ts",
+  "test_result": "PASS"
 }
 ```
 
-Source types:
-- `PRIMARY` — MCP spec or Registry API
-- `SECONDARY` — vendor documentation
-- `REPORTED` — community or industry report
-- `INFERRED` — requires independent verification
+### `/glossary/streamable-http/` Batch 1 Gate
+
+Every statement must fall into one of: `PROTOCOL`, `SDK`, `OPERATIONS`, or `EDITORIAL`.
+
+Operational advice must not be silently upgraded into protocol requirements. The page must explicitly distinguish:
+- Current Streamable HTTP model (2026-07-28 spec)
+- Legacy HTTP+SSE (deprecated, not universally prohibited for existing deployments)
 
 ---
 
-## Glossary Entry Requirements
+## Batch 2: Deployment + Conceptual Boundaries
 
-Each glossary page must include:
+### Pages
+- `/mcp-server-hosting/`
+- `/glossary/model-serving/`
 
-1. **Entity/intent**: What entity does this page represent, and what is the user's intent?
-2. **Direct answer**: Concise definition at the top (1-2 sentences)
-3. **MCP relevance**: How this concept relates to MCP specifically
-4. **Example**: Concrete example of usage in or relation to MCP
-5. **Limitations**: If applicable, what does NOT count
-6. **Primary source**: Link to spec section or vendor docs
-7. **Contextual links**: Cross-references to related glossary pages and guide pages
+### Batch 2 Gate: Semantic Boundary
+
+```text
+MCP SPECIFICATION
+≠
+SDK IMPLEMENTATION DETAIL
+≠
+DEPLOYMENT BEST PRACTICE
+≠
+MCPServer.in EDITORIAL RECOMMENDATION
+```
+
+Every claim on these pages must carry `claim_scope`: `PROTOCOL` | `SDK` | `OPERATIONS` | `EDITORIAL`.
+
+- Protocol requirements: sourced from `specification/2026-07-28/` documents
+- Best practices: labeled "best practice" with evidence
+- Cloud/provider claims: labeled "deployment context" with source
+- No invented latency, SLA, residency, region, scalability, or provider claims
+
+### `/glossary/model-serving/` Gate
+
+Must explain:
+1. Model serving: runs/exposes inference models
+2. MCP server: exposes contextual capabilities to MCP clients
+3. MCP client/host: may use both an LLM/model service AND MCP servers
+4. These roles are related but not interchangeable
+
+---
+
+## Batch 3: Knowledge Architecture
+
+### Pages
+- `/glossary/` (all entries)
+- Post-Phase-B alignment for `/clients/`, `/servers/`, `/integrations/` content
+
+### Batch 3 Gate: Glossary Anti-Thinness (Six Binary Gates)
+
+Each glossary page must pass all six gates:
+
+```text
+DEFINITION             PASS
+MCP_RELATIONSHIP       PASS
+PRACTICAL_CONTEXT      PASS
+LIMITATION_BOUNDARY    PASS
+EVIDENCE               PASS
+GRAPH_LINKAGE          PASS
+```
+
+- **DEFINITION**: Concise direct answer at top (1-2 sentences)
+- **MCP_RELATIONSHIP**: How this concept relates to MCP specifically
+- **PRACTICAL_CONTEXT**: Example or operational context of usage
+- **LIMITATION_BOUNDARY**: What does NOT count / non-equivalence
+- **EVIDENCE**: Authoritative source (spec section, vendor docs)
+- **GRAPH_LINKAGE**: Inbound/outbound links to related glossary and guide pages
+
+A page failing 2+ gates enters `MERGE_OR_REMOVE_REVIEW` — not auto-enriched.
+
+---
+
+## Batch 4: Temporal + Editorial
+
+### Pages
+- `/state-of-mcp/`
+- `/blog/`
+
+### Batch 4 Gate: Temporal Evidence
+
+Every time-sensitive claim carries:
+
+```json
+{
+  "as_of": "2026-08-08",
+  "source": "https://registry.modelcontextprotocol.io/v0/openapi.yaml",
+  "source_type": "PRIMARY",
+  "retrieved_at": "2026-08-08T01:42:00Z",
+  "review_interval_days": 30,
+  "next_review_due": "2026-09-07",
+  "freshness_status": "CURRENT"
+}
+```
+
+### Temporal State Transition
+
+```text
+CURRENT
+   ↓ review deadline passes
+STALE_REVIEW_REQUIRED
+   ↓ hard expiry threshold passes
+EXPIRED
+   ↓ human/source verification
+CURRENT | REVISED | REMOVED
+```
+
+**Important**: `EXPIRED` does NOT mean the claim is false. It means the evidence is no longer fresh enough to support continued publication without review. CI flags `EXPIRED` claims for human review — automated remediation must NOT remove claims based solely on `EXPIRED` status.
+
+### Blog Evergreen Guard
+
+If a blog post begins ranking for an evergreen canonical intent:
+
+```text
+KEEP_NEWS_INTENT       — post is time-bound news
+MERGE_INTO_EVERGREEN   — canonical info should move to permanent guide
+301_TO_CANONICAL       — blog post duplicates a permanent guide, redirect
+```
+
+### CI Guard: Claim Scope Contradiction
+
+```text
+claim_scope     = PROTOCOL
+source_type     != PRIMARY
+materiality     = HIGH
+evidence_status != SUPPORTED
+
+→ FAIL
+```
+
+---
+
+## CI Guards (Summary)
+
+| Guard | Applies To | Failure Condition |
+|-------|-----------|-------------------|
+| `NO_UNLABELED_EXECUTABLE_CODE` | Batch 1 | Any code block with no `verification_state` label |
+| `NO_PROTOCOL_REQUIREMENT_AS_DEPLOYMENT_OPINION` | Batch 2 | Statement conflates protocol requirement with deployment recommendation |
+| `NO_UNDATED_TEMPORAL_CLAIMS` | Batch 4 | Time-sensitive claim without `temporal_evidence` metadata |
+| `CI_CLAIM_SCOPE_CONTRADICTION` | All batches | `PROTOCOL`-scoped HIGH claims with non-PRIMARY evidence |
 
 ---
 
@@ -120,12 +238,12 @@ PHASE_C_COMPLETE
 
 CODE_CORRECTNESS
   unlabeled executable code                  0
-  tested examples properly labeled           PASS
+  stale/unverified executable examples       0
   current SDK alignment                      PASS
 
 PROTOCOL
   current spec alignment                     PASS
-  transport reference                        PASS
+  transport reference (Streamable HTTP vs SSE)  PASS
 
 DEPLOYMENT
   protocol-vs-operations boundary            PASS
@@ -135,7 +253,7 @@ DEPLOYMENT
 
 KNOWLEDGE_ARCHITECTURE
   glossary intent ownership                  PASS
-  thin definitions (no entity/relevance/example)  0
+  glossary thin definitions (>=2 gates)      0
 
 EDITORIAL
   dated temporal claims                      PASS
@@ -150,36 +268,25 @@ GLOBAL
 
 ---
 
-## Phase D: Authority Rollout (Planned)
+## Authority Contract (Phase D Interface)
 
-After Phase C, the program transitions to Phase D — systematic rollout across 971 legacy indexable URLs:
+The output of Phase C is a reusable **authority contract** that all 971 pages consume in Phase D:
 
-```text
-971 legacy pages
-      ↓
-entity + intent classification
-      ↓
-risk scoring (P0/P1/P2)
-      ↓
-spec freshness check (2026-07-28 alignment)
-      ↓
-claim/evidence audit
-      ↓
-P0 factual remediation
-      ↓
-P1 authority enrichment
-      ↓
-internal-link graph
-      ↓
-schema validation
-      ↓
-editorial approval
-      ↓
-AUTHORITY_READY
+```json
+{
+  "intent_owned": true,
+  "canonical_valid": true,
+  "claim_scopes_valid": true,
+  "critical_claims_supported": true,
+  "spec_freshness_valid": true,
+  "temporal_evidence_valid": true,
+  "entity_provenance_valid": true,
+  "internal_links_valid": true,
+  "schema_valid": true,
+  "manual_review_required": true
+}
 ```
 
-Phase C produces reusable templates for Phase D:
-- Code example labels → apply to all tutorial/documentation pages
-- Temporal evidence model → apply to all state-of/evergreen pages
-- Deployment boundary pattern → apply to all hosting/operations pages
-- Glossary entry requirements → apply to all remaining /glossary/ pages
+**Phase D should consume the standards and schemas proven in A–C; it should not redefine them.** Any new governance rule discovered during Phase D rollout shall be proposed separately, tested on a small cohort, versioned, then applied globally.
+
+Schema: `data/schemas/authority-contract.schema.ts`
