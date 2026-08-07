@@ -121,45 +121,88 @@ No spec_version is inferred from a webpage unless the vendor explicitly states i
 
 ---
 
-## Phase C: Content Audit Sequence
+## Phase C: Execution Plan
 
-| Order | Page | Rationale |
-|-------|------|-----------|
-| 1 | /how-to-build-mcp-server/ | Highest density of protocol assumptions |
-| 2 | /glossary/streamable-http/ | Transport deprecation, 2026-07-28 Streamable HTTP changes |
-| 3 | /clients/ | Phase B audit → full content pass |
-| 4 | /servers/ | Phase B audit → content pass + Registry integration |
-| 5 | /integrations/ | Phase B audit → full content pass |
-| 6 | /mcp-server-hosting/ | May reference deprecated transports/sessions |
-| 7 | /glossary/ | Terminology must match 2026-07-28 spec |
-| 8 | /glossary/model-serving/ | May reference deprecated Sampling |
-| 9 | /state-of-mcp/ | Editorial, high visibility |
-| 10 | /blog/ | Editorial, lowest urgency |
+**Checkpoint**: Phase B frozen at `authority-phase-b-commercial-intent`
 
----
+### Batch structure (four deterministic batches)
 
-## Phase C: Risk Focus Areas
+| Batch | Pages | Focus |
+|-------|-------|-------|
+| 1 — Protocol + Code | `/how-to-build-mcp-server/`, `/glossary/streamable-http/` | Every executable snippet labeled; spec freshness gate |
+| 2 — Deployment + Conceptual | `/mcp-server-hosting/`, `/glossary/model-serving/` | Protocol requirement ≠ operational recommendation ≠ provider claim |
+| 3 — Knowledge Architecture | `/glossary/` + post-Phase-B client/server/integration alignment | Unique entity/intent per glossary page |
+| 4 — Temporal/Editorial | `/state-of-mcp/`, `/blog/` | `as_of`/source/review date on all claims; no evergreen cannibalization |
 
-1. **Code Correctness** (`/how-to-build-mcp-server/`) — every executable example labeled `TESTED`, `SOURCE_VERIFIED`, `ILLUSTRATIVE`, `STALE`, or `UNVERIFIED`
-2. **Protocol Reference** (`/glossary/streamable-http/`) — technical reference, not dictionary definition; covers transport model, routing headers, streaming, migration from HTTP+SSE
-3. **Deployment Boundaries** (`/mcp-server-hosting/`) — strict separation: protocol requirement ≠ operational best practice ≠ cloud vendor recommendation
-4. **Temporal Evidence** (`/state-of-mcp/`) — every claim carries `as_of`, `source`, `expires_review_at`
-5. **Glossary Integrity** (`/glossary/`, `/glossary/model-serving/`) — protocol terms cite spec; model serving distinct from MCP primitives
-6. **Editorial** (`/blog/`) — discovery surface, not evergreen authority; evergreen claims classified as KEEP_NEWS_INTENT/MERGE_INTO_EVERGREEN/301_TO_CANONICAL
-
-## Phase C Exit Gate
+### CI Guards
 
 ```text
-CODE_EXAMPLES: false/unverified executable claims = 0
-PROTOCOL: legacy protocol assumptions = 0
-DEPLOYMENT: fabricated hosting claims = 0, fabricated SLA/latency claims = 0
-EDITORIAL: unsupported ecosystem metrics = 0
-GLOSSARY: distinct intent ownership = PASS
-BLOG: evergreen cannibalization = 0
+NO_UNLABELED_EXECUTABLE_CODE
+NO_PROTOCOL_REQUIREMENT_AS_DEPLOYMENT_OPINION
+NO_UNDATED_TEMPORAL_CLAIMS
+```
+
+### Code example labels
+
+`TESTED` | `SOURCE_VERIFIED` | `ILLUSTRATIVE` | `STALE` | `UNVERIFIED` — every snippet must carry exactly one.
+
+### Phase C Exit Gate
+
+```text
+PHASE_C_COMPLETE
+
+CODE_CORRECTNESS                    PASS
+CURRENT_SPEC_ALIGNMENT              PASS
+TRANSPORT_REFERENCE                 PASS
+
+PROTOCOL_VS_OPERATIONS              PASS
+MODEL_SERVING_BOUNDARY             PASS
+FABRICATED_HOSTING_CLAIMS          0
+FABRICATED_SLA_LATENCY_CLAIMS      0
+
+GLOSSARY_INTENT_OWNERSHIP          PASS
+GLOSSARY_THIN_DEFINITIONS          0
+
+TEMPORAL_CLAIMS_DATED              PASS
+EVERGREEN_BLOG_CANNIBALIZATION     0
+
+FALSE_CRITICAL_CLAIMS              0
+UNSUPPORTED_HIGH_CLAIMS            0
+FABRICATED_COUNTS                  0
+CANONICAL_CONFLICTS                0
 ```
 
 ---
 
+## Phase D: Authority Rollout (Planned)
+
+After Phase C, systematic rollout across 971 legacy indexable URLs:
+
+```text
+971 legacy pages
+      ↓
+entity + intent classification
+      ↓
+risk scoring (P0/P1/P2)
+      ↓
+spec freshness check (2026-07-28 alignment)
+      ↓
+claim/evidence audit
+      ↓
+P0 factual remediation
+      ↓
+P1 authority enrichment
+      ↓
+internal-link graph
+      ↓
+schema validation
+      ↓
+editorial approval
+      ↓
+AUTHORITY_READY
+```
+
+---
 ## Quality Gate: Count of Violations
 
 | Violation type | Count |
