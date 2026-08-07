@@ -35,6 +35,11 @@ NON_PAGE_SITEMAP_LEAKAGE = 0
 
 ## Phase D: READY
 
-- Will consume standards and schemas proven in A–C.
-- Should not redefine governance rules during rollout.
-- Any new governance rule discovered during Phase D rollout should be proposed separately, tested on a small cohort, then versioned before being applied globally.
+- Branch: `audit/phase-d-authority-rollout`
+- State machine: `LEGACY_LIVE → CLASSIFIED → INTENT_VALIDATED → CLAIMS_AUDITED → EVIDENCE_VALIDATED → REMEDIATED → LINKS_VALIDATED → SCHEMA_VALIDATED → EDITORIAL_REVIEWED → AUTHORITY_READY`
+- Risk cohorts: P0 (critical) → P1 (high authority) → P2 (search opportunity) → P3 (supporting)
+- First cohort: 25–50 highest-risk/highest-opportunity URLs
+- **No new schema fields or editorial rules during Phase D**
+- **No batch-wide approval by inheritance** — each page evaluated independently
+- Phase D checkpoint: `data/audits/phase-d/PHASE_D_PLAN.md`
+- Cohort 01 sample: `data/audits/phase-d/cohort-01-sample/COHORT_01_SAMPLE.md`
