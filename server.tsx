@@ -105,7 +105,6 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
       // Do NOT include canonical on 404 pages (SEO best practice - prevents indexing of invalid URLs)
       
       const headMeta = `
-        <title>${title}</title>
         <meta name="description" content="${description}">
         <meta name="robots" content="noindex, follow">
       `;
@@ -156,7 +155,6 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
     };
 
     const headMeta = `
-      <title>${title}</title>
       <meta name="description" content="${description}">
       <link rel="canonical" href="${canonical}">
       <meta property="og:title" content="${title}">
@@ -189,6 +187,15 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
 async function startServer() {
   const app = express();
   app.use(express.json());
+
+  app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'DENY');
+    res.setHeader('X-XSS-Protection', '1; mode=block');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+    next();
+  });
 
   // Load Knowledge Graph data
   let graphData: GraphData | null = null;

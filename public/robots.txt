@@ -5,16 +5,19 @@ Disallow: /admin/
 Disallow: /api/private/
 
 # AI Search & Crawler Permissions (Expressly Allowed for AI Citation & Grounding)
-User-agent: GPTBot
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: ClaudeBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -23,9 +26,15 @@ Allow: /
 User-agent: Cohere-ai
 Allow: /
 
+# Training crawlers: blocked per governance
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
 # Master Sitemap Index
 Sitemap: https://bestaiagent.in/sitemap.xml
-Sitemap: https://bestaiagent.in/sitemap-core.xml
 Sitemap: https://bestaiagent.in/sitemap-agents.xml
 Sitemap: https://bestaiagent.in/sitemap-categories.xml
 Sitemap: https://bestaiagent.in/sitemap-comparisons.xml
