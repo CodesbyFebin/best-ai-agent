@@ -1,7 +1,32 @@
-node_modules/
-dist/
+# Build outputs
+dist
+build
 *.log
+
+# Dependencies
+node_modules
+.npm
+.pnpm-store
+
+# Environment
 .env
+.env.*
+!.env.example
+
+# OS/editor
 .DS_Store
-.vite/
-reports/generated/
+Thumbs.db
+*.swp
+*.swo
+
+# Local P2 measurement artifacts
+reports/p2/*.json
+evidence/
+
+# Local tooling
+.kilo/node_modules
+.kilocode/node_modules
+
+# Git
+.git
+.gitignore.backup

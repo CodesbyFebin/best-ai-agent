@@ -5,6 +5,8 @@ import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
+import crypto from 'node:crypto';
+import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { generateRssFeedXml } from './src/utils/rss-feed-generator.js';
 import { generateMasterSitemapXml, generateSegmentedSitemapXml } from './src/data/sitemapGenerator.js';
@@ -40,6 +42,33 @@ interface GraphData {
 
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = 3000;
+
+function timingSafeEqual(a: string, b: string): boolean {
+  const bufA = Buffer.from(a);
+  const bufB = Buffer.from(b);
+  if (bufA.length !== bufB.length) return false;
+  return crypto.timingSafeEqual(bufA, bufB);
+}
+
+function authenticateAdmin(req: Request, res: Response, next: Function): void {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ error: 'Authentication required' });
+  }
+  const token = authHeader.substring('Bearer '.length).trim();
+  if (token.length === 0) {
+    return res.status(401).json({ error: 'Invalid token' });
+  }
+  const expectedToken = process.env.ADMIN_API_TOKEN;
+  if (expectedToken && timingSafeEqual(token, expectedToken)) {
+    return next();
+  }
+  if (!isProd && !expectedToken) {
+    console.warn('[auth] ADMIN_API_TOKEN not set; accepting dev admin token');
+    return next();
+  }
+  return res.status(401).json({ error: 'Invalid token' });
+}
 
 interface SeoRenderResult {
   statusCode: number;
@@ -391,16 +420,43 @@ Query: "${prompt}", Industry: ${industry || 'Unspecified'}, Budget: ${budget || 
     }
   });
 
-  app.post('/api/submit-lead', (req, res) => {
-    res.json({ success: true, message: "Lead captured successfully." });
+  app.post('/api/submit-lead', apiRateLimit, (req, res) => {
+    try {
+      const { name, company, phone, desc } = req.body || {};
+      if (!name || !company || !desc) {
+        return res.status(400).json({ error: 'name, company, and desc are required.' });
+      }
+      const id = `lead-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+      res.status(201).json({ success: true, id, message: 'Lead captured successfully.' });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message || 'Error processing lead submission' });
+    }
   });
 
-  app.post('/api/submit-tool', (req, res) => {
-    res.json({ success: true, message: "Tool submitted successfully." });
+  app.post('/api/submit-tool', apiRateLimit, (req, res) => {
+    try {
+      const { name, url, category, description, email } = req.body || {};
+      if (!name || !url || !category || !description) {
+        return res.status(400).json({ error: 'name, url, category, and description are required.' });
+      }
+      const id = `tool-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+      res.status(201).json({ success: true, id, message: 'Tool submitted successfully.' });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message || 'Error processing tool submission' });
+    }
   });
 
-  app.post('/api/subscribe', (req, res) => {
-    res.json({ success: true, message: "Subscribed successfully." });
+  app.post('/api/subscribe', apiRateLimit, (req, res) => {
+    try {
+      const { email } = req.body || {};
+      if (!email || !validateEmail(email)) {
+        return res.status(400).json({ error: 'A valid email is required.' });
+      }
+      const id = `sub-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+      res.status(201).json({ success: true, id, message: 'Subscribed successfully.' });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message || 'Error processing subscription' });
+    }
   });
 
   // ========================================
@@ -603,41 +659,17 @@ Query: "${prompt}", Industry: ${industry || 'Unspecified'}, Budget: ${budget || 
   // --- ADMIN ENDPOINTS (READ-ONLY, NO MODIFICATIONS) ---
   // These endpoints verify admin access but don't perform any administrative actions
 
-  app.get('/api/admin/verify', (req, res) => {
-    const authHeader = req.headers.authorization;
-    
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({ error: 'Authentication required' });
-    }
-    
-    const token = authHeader.substring('Bearer '.length).trim();
-    
-    // In production: validate JWT/token against secure store
-    // For development: accept any non-empty token
-    // SECURITY: Never expose admin endpoints in production without proper auth
-    
-    const isValidToken = token.length > 0 && token !== 'invalid-token';
-    
-    if (isValidToken) {
-      return res.json({ 
-        authenticated: true, 
-        role: 'admin',
-        permissions: ['read', 'audit', 'inspect']
-      });
-    }
-    
-    return res.status(401).json({ error: 'Invalid token' });
+  app.get('/api/admin/verify', authenticateAdmin, (req, res) => {
+    res.json({
+      authenticated: true,
+      role: 'admin',
+      permissions: ['read', 'audit', 'inspect']
+    });
   });
 
   // Admin info endpoint (read-only)
-  app.get('/api/admin/info', (req, res) => {
-    const authHeader = req.headers.authorization;
-    
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({ error: 'Authentication required' });
-    }
-    
-    return res.json({
+  app.get('/api/admin/info', authenticateAdmin, (req, res) => {
+    res.json({
       version: '1.0.0',
       endpoints: ['/api/admin/verify', '/api/admin/info'],
       capabilities: ['read-only', 'audit', 'system-status']
