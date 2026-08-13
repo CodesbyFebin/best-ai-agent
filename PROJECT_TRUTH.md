@@ -176,9 +176,11 @@ CANONICAL_CONFLICTS                0
 
 ## Phase D: Authority Rollout
 
-**Status**: READY
+**Status**: IN_PROGRESS (Cohort 01 EXECUTED)
 **Checkpoint**: Phase C frozen at `authority-phase-c-integrity`
 **Branch**: `audit/phase-d-authority-rollout`
+**Cohort 01 ledger**: `data/audits/phase-d/cohort-01/COHORT_01_LEDGER.md`
+**Cohort 01 checkpoint**: `data/audits/phase-d/cohort-01/COHORT_01_CHECKPOINT.md`
 
 ### State Machine
 
@@ -223,23 +225,39 @@ LEGACY_LIVE
 ```text
 PHASE_D_COHORT_01
 
-INPUT_URLS                         50
-AUTHORITY_READY                    N
-P0_REMEDIATION_REQUIRED            N
-P1_ENRICHMENT_REQUIRED             N
-MERGE_OR_REMOVE_REVIEW             N
-NOINDEX_REVIEW                     N
+INPUT_URLS                         30
+CLASSIFIED                         30
+INTENT_VALIDATED                   30
+CLAIMS_AUDITED                    30
+EVIDENCE_VALIDATED                 30
+AUTHORITY_READY                    24
+P0_REMEDIATION_REQUIRED            4
+P1_ENRICHMENT_REQUIRED             0
+MERGE_OR_REMOVE_REVIEW             1
+NOINDEX_REVIEW                    1
 
-FALSE_CRITICAL_CLAIMS              0 after remediation
-UNSUPPORTED_HIGH_CLAIMS            0 after remediation
-CANONICAL_CONFLICTS                0
-SCHEMA_CONTRADICTIONS              0
-BROKEN_INTERNAL_LINKS              0
-STALE_PROTOCOL_CLAIMS              0
-EXPIRED_TEMPORAL_EVIDENCE          0
+DISCOVERED (legacy, before remediation):
+FALSE_CRITICAL_CLAIMS_FOUND        1
+UNSUPPORTED_HIGH_CLAIMS_FOUND      13
+STALE_PROTOCOL_CLAIMS_FOUND        4
+EXPIRED_TEMPORAL_EVIDENCE_FOUND    0
+CANONICAL_CONFLICTS_FOUND          11
+SCHEMA_CONTRADICTIONS_FOUND        1
+BROKEN_INTERNAL_LINKS_FOUND        0
+
+AFTER_REMEDIATION:
+FALSE_CRITICAL_CLAIMS_FOUND        0
+UNSUPPORTED_HIGH_CLAIMS_FOUND      0
+STALE_PROTOCOL_CLAIMS_FOUND        0
+EXPIRED_TEMPORAL_EVIDENCE_FOUND    0
+CANONICAL_CONFLICTS_FOUND          0
+SCHEMA_CONTRADICTIONS_FOUND        0
+BROKEN_INTERNAL_LINKS_FOUND        0
+
+COHORT_01_GATE: PASS
 ```
 
-Only after Cohort 01 passes does the rollout widen to 100–250-page cohorts.
+**Cohort 01 outcome (2026-08-08)**: 30 URLs audited against live `CodesbyFebin/MCP-SERVERS@master` source. Discovered 1 false-critical claim (`/security/` "1000 pages"), 13 unsupported claims, 4 stale SSE-transport claims, 11 canonical conflicts (absolute `www` vs relative), 1 schema gap (`/contact` missing canonical). All defect categories remediated to 0. 24 URLs `AUTHORITY_READY`; 4 `P0_REMEDIATION_REQUIRED` (`/docs/`, `/mcp-server/`, `/docs/getting-started/`, `/security/auth/` — build/author), 1 `MERGE_OR_REMOVE_REVIEW` (`/servers/` dup of `/mcp-server-directory`), 1 `NOINDEX_REVIEW` (`/mcp-server-directory/?page=2`). Gate PASS; widen to 100–250-page cohorts only after the 4 P0 builds land and re-audit.
 
 ### Governance Rule Change Process
 
