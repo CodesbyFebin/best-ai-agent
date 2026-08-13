@@ -187,6 +187,45 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     sitemapGroup: 'pages',
     updatedAt: '2026-07-23'
   },
+  '/cursor-pricing': {
+    id: 'pricing:cursor',
+    path: '/cursor-pricing',
+    type: 'pricing',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/cursor-pricing',
+    title: 'Cursor Pricing in India 2026: INR Plans & Cost Guide - BestAIAgent.in',
+    description: 'Review Cursor pricing in India with INR estimates, plan comparisons, free-tier information, and cost context for Indian developers and teams.',
+    sitemapGroup: 'pages',
+    view: 'pricing',
+    updatedAt: '2026-08-14'
+  },
+  '/github-copilot-pricing': {
+    id: 'pricing:github-copilot',
+    path: '/github-copilot-pricing',
+    type: 'pricing',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/github-copilot-pricing',
+    title: 'GitHub Copilot Pricing in India 2026: INR Plans - BestAIAgent.in',
+    description: 'Compare GitHub Copilot pricing in India with INR estimates, individual and business plan context, and India-focused purchasing guidance.',
+    sitemapGroup: 'pages',
+    view: 'pricing',
+    updatedAt: '2026-08-14'
+  },
+  '/claude-code-pricing': {
+    id: 'pricing:claude-code',
+    path: '/claude-code-pricing',
+    type: 'pricing',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/claude-code-pricing',
+    title: 'Claude Code Pricing in India 2026: INR Cost Guide - BestAIAgent.in',
+    description: 'Understand Claude Code pricing for Indian developers with INR estimates, subscription and API cost context, and plan-selection guidance.',
+    sitemapGroup: 'pages',
+    view: 'pricing',
+    updatedAt: '2026-08-14'
+  },
   '/reviews': {
     id: 'pillar:reviews',
     path: '/reviews',
