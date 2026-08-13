@@ -13,7 +13,7 @@ import * as path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { fileURLToPath } from 'url';
 import { renderToString } from 'react-dom/server';
-import { resolveRoute, type RouteRecord } from '../src/routing/routeResolver.js';
+import { resolveRoute } from '../src/routing/routeResolver.js';
 import { AppRouter } from '../src/components/RouterApp.js';
 import type { RouteRecord as RouteRecordType } from '../src/routing/types.js';
 
@@ -51,8 +51,6 @@ function assert(condition: boolean, message: string): void {
  */
 async function testServerRenderAllRoutes(vite: any): Promise<void> {
   console.log('\n📋 Test 1: Server Render All Canonical Routes\n');
-
-  const routes = Object.values(import('../src/routing/routeRegistry.js').then((r: any) => r.canonicalRoutes).catch(() => ({} as Record<string, RouteRecord>)));
 
   // We'll load the registry dynamically to avoid import issues
   const registry = await import('../src/routing/routeRegistry.js');
@@ -177,7 +175,7 @@ async function testServerClientMarkupMatch(): Promise<void> {
         throw new Error(`Resolution mismatch: server=${serverResolution.kind}, client=${clientResolution.kind}`);
       }
 
-      if (serverResolution.kind === 'valid') {
+      if (serverResolution.kind === 'valid' && clientResolution.kind === 'valid') {
         const serverRoute = serverResolution.route as RouteRecordType;
         const clientRoute = clientResolution.route as RouteRecordType;
         
