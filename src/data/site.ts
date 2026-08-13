@@ -53,6 +53,6 @@ export const siteConfig = {
     { name: "Cost & Value", weight: "15%", description: "Pricing transparency, token efficiency, and ROI against human baselines." },
     { name: "Privacy & Governance", weight: "15%", description: "Data retention guarantees, SOC2 compliance, and self-hosting support." },
     { name: "Ease of Deployment", weight: "10%", description: "Time-to-first-value, documentation clarity, and SDK ergonomics." },
-    { name: "India Market Fit", weight: "10%", description: "INRRupee pricing, UPI payment options, GST invoices, and Indic language support." }
+    { name: "India Market Fit", weight: "10%", description: "INR pricing, UPI payment options, GST invoices, DPDP considerations, and Indic language support." }
   ]
 };
