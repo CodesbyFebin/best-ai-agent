@@ -7,10 +7,18 @@
       "includeFiles": "{dist/**,graph-data.json}"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/((?!assets/).*)",
-      "destination": "/api/index"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(robots|llms|llms-full|security|humans)\\.txt",
+      "dest": "/$1.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index"
     }
   ]
 }
