@@ -25,7 +25,3 @@ Allow: /
 
 # Master Sitemap Index
 Sitemap: https://bestaiagent.in/sitemap.xml
-Sitemap: https://bestaiagent.in/sitemap-core.xml
-Sitemap: https://bestaiagent.in/sitemap-agents.xml
-Sitemap: https://bestaiagent.in/sitemap-categories.xml
-Sitemap: https://bestaiagent.in/sitemap-comparisons.xml
