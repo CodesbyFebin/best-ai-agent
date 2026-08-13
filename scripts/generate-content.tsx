@@ -5,7 +5,8 @@
  * Usage:
  *   npx tsx scripts/generate-content.tsx [manifestId]
  *
- * Reads manifest-data.json, resolves entities, applies blueprint, writes HTML.
+ * Reads the quarantined legacy manifest only when explicitly enabled, resolves
+ * entities, applies a blueprint, and writes HTML.
  *
  * Output: dist/content/<slug>/index.html
  */
@@ -329,8 +330,13 @@ Output: dist/content/<slug>/index.html
     process.exit(0);
   }
 
+  if (process.env.ENABLE_LEGACY_MANIFEST !== 'true') {
+    console.log('Quarantined manifest skipped. Set ENABLE_LEGACY_MANIFEST=true only for an approved audit or recovery run.');
+    return;
+  }
+
   // Load data
-  const manifestDataPath = path.join(__dirname, '..', 'manifest-data.json');
+  const manifestDataPath = path.join(__dirname, '..', 'quarantine', '21k-manifest-data.json');
   const graphDataPath = path.join(__dirname, '..', 'graph-data.json');
 
   let manifest: ContentManifest;
@@ -341,8 +347,7 @@ Output: dist/content/<slug>/index.html
   } else {
     // Treat as manifest ID, lookup in manifest-data.json
     if (!fs.existsSync(manifestDataPath)) {
-      console.error('ERROR: manifest-data.json not found');
-      console.error('Run: node scripts/build-manifests.ts first');
+      console.error('ERROR: quarantined legacy manifest not found');
       process.exit(1);
     }
     const allManifests: ContentManifest[] = JSON.parse(fs.readFileSync(manifestDataPath, 'utf-8'));

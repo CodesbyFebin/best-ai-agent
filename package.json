@@ -19,7 +19,9 @@
     "test:production": "tsx scripts/verify-production.mjs",
     "test:ssr-runtime": "tsx scripts/verify-ssr-runtime.tsx",
     "test:scope-freeze": "tsx scripts/verify-scope-freeze.tsx",
+    "check:quarantine": "tsx scripts/check-quarantine.ts",
     "generate:content": "tsx scripts/generate-content.tsx",
+    "quarantine:enable": "ENABLE_LEGACY_MANIFEST=true npm run generate:content --",
     "content:deep": "tsx scripts/content/generate-deep-page.ts",
     "content:enrich": "tsx scripts/content/enrich-entity.ts"
   },
