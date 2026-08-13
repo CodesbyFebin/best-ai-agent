@@ -157,7 +157,7 @@ function renderHtmlWithSeo(urlPath: string, templateHtml: string): SeoRenderResu
   }
 }
 
-async function startServer() {
+export async function createApp() {
   const app = express();
   app.use(express.json());
 
@@ -701,9 +701,18 @@ Query: "${prompt}", Industry: ${industry || 'Unspecified'}, Budget: ${budget || 
     });
   }
 
+  return app;
+}
+
+async function startServer() {
+  const app = await createApp();
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server: Running on http://0.0.0.0:${PORT} (isProd: ${isProd})`);
   });
 }
 
-startServer();
+// Vercel imports createApp() from api/index.ts. Local and self-hosted builds
+// still launch the long-running Node server through this entry point.
+if (!process.env.VERCEL) {
+  startServer();
+}
