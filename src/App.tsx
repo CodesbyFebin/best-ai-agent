@@ -56,6 +56,7 @@ import PseoRepoViewer from './components/PseoRepoViewer';
 import Homepage from './components/home/Homepage';
 import Footer from './components/layout/Footer';
 import ChatPage from './components/pages/ChatPage';
+import PricingPage from './components/pages/PricingPage';
 import type { RouteRecord } from './routing/routeRegistry.js';
 
 // Wrapper component to bridge agent slug to ProductProfile
@@ -206,6 +207,8 @@ function deriveView(route: RouteRecord | null): {
   } else if (type === 'directory') {
     view = 'home';
     siloId = 'reviews';
+  } else if (type === 'pricing') {
+    view = 'pricing';
   } else if (type === 'agent') {
     view = 'product';
     const slugMatch = path.match(/^\/agents\/(.+)$/);
@@ -629,6 +632,9 @@ export default function App({ route, navigate }: { route: RouteRecord | null; na
             </p>
           </div>
         </div>
+      )}
+      {currentView === 'pricing' && (
+        <PricingPage onNavigate={navigate} />
       )}
       {currentView === 'chat' && (
         <ChatPage />
