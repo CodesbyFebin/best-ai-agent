@@ -1,9 +1,10 @@
-<img width="1672" height="941" alt="ChatGPT Image Aug 6, 2026, 10_47_23 AM" src="https://github.com/user-attachments/assets/caac3a9d-5145-4c51-a687-53f5e4d3619d" />
-# MCPserver.in
+<img width="1672" height="941" alt="BestAIAgent.in — independent India-first AI agent discovery and evaluation platform" src="https://github.com/user-attachments/assets/caac3a9d-5145-4c51-a687-53f5e4d3619d" />
 
-**The trusted discovery, verification, and deployment platform for Model Context Protocol servers.**
+# BestAIAgent.in
 
-MCPserver.in is an independent registry and evaluation platform for AI agents and MCP servers. It features evidence-backed content, true server-side rendering, comprehensive SEO, and automated verification.
+**India-first, evidence-backed AI agent discovery, comparison, pricing, and evaluation platform.**
+
+[BestAIAgent.in](https://bestaiagent.in/) helps Indian developers, startups, SMEs, and enterprise buyers compare AI agents using transparent evidence, INR pricing context, India Fit signals, DPDP considerations, and reproducible editorial scoring.
 
 ---
 
@@ -13,7 +14,8 @@ MCPserver.in is an independent registry and evaluation platform for AI agents an
 - **Canonical Routing**: Single source of truth for all URLs; dynamic slugs validated against real entities.
 - **True SSR**: Server-side rendering with hydration for fast first paint and SEO.
 - **Automated Verification**: 450+ automated tests covering redirects, routing, sitemaps, SSR, and evidence.
-- **SEO Optimized**: Unique titles/descriptions, canonicals, JSON-LD structured data, sitemap index + segments.
+- **India-first evaluation**: INR pricing context, GST billing signals, DPDP considerations, and India Fit scoring.
+- **SEO/AEO/GEO foundation**: Unique metadata, canonicals, JSON-LD, segmented XML sitemaps, and LLM crawler indexes.
 - **Health & Rate Limiting**: `/health` endpoint and basic API abuse resistance.
 
 ---
@@ -73,4 +75,4 @@ Proprietary - All rights reserved.
 
 ---
 
-**Status:** MVP Launch Candidate - 100% platform completeness (MVP scope). See [Project Tracker](PROJECT_TRACKER.md) for details.
+**Status:** Production platform under evidence-gated expansion. See [Project Tracker](PROJECT_TRACKER.md) for verified scope and current work.
