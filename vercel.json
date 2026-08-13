@@ -4,10 +4,7 @@
   "outputDirectory": "dist",
   "functions": {
     "api/index.ts": {
-      "includeFiles": [
-        "dist/**",
-        "graph-data.json"
-      ]
+      "includeFiles": "{dist/**,graph-data.json}"
     }
   },
   "rewrites": [
