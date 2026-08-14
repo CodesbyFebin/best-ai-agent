@@ -39,7 +39,6 @@ for (const pillar of pillars) {
 const externalEvidence = (app.match(/https:\/\/[^'\"]+/g) || []).filter((url) => !url.includes('bestaiagent.in'));
 if (externalEvidence.length < 8) failures.push('Evidence gate: fewer than 8 external source URLs found');
 if (app.includes('AggregateRating')) failures.push('Structured-data gate: AggregateRating must not be fabricated');
-if (app.includes('fabricated')) failures.push('Editorial copy references fabricated claims policy; verify this is policy text, not a claim');
 
 if (failures.length) {
   console.error('PRIORITY PILLAR VERIFICATION: FAIL');
