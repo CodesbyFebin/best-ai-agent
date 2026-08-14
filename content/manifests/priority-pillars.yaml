@@ -1,0 +1,45 @@
+id: priority-pillars
+name: "BestAIAgent.in Priority Pillars"
+word_target: 3000
+seo_threshold: 95
+publication_state: editorial_review
+pages:
+  - id: pillar:best-ai-agent
+    canonicalUrl: /best-ai-agent/
+    pageType: best-list
+    primaryKeyword: best ai agent
+    searchIntent: commercial-investigation
+    schemaTypes: [WebPage, ItemList, FAQPage, BreadcrumbList]
+  - id: pillar:business
+    canonicalUrl: /best-ai-agent-for-business/
+    pageType: best-list
+    primaryKeyword: best ai agent for business
+    searchIntent: commercial-investigation
+    schemaTypes: [WebPage, ItemList, FAQPage, BreadcrumbList]
+  - id: pillar:coding
+    canonicalUrl: /best-ai-agent-for-coding/
+    pageType: best-list
+    primaryKeyword: best ai agent for coding
+    searchIntent: commercial-investigation
+    schemaTypes: [WebPage, ItemList, FAQPage, BreadcrumbList]
+  - id: pillar:alternatives
+    canonicalUrl: /best-ai-agent-alternatives/
+    pageType: alternatives
+    primaryKeyword: best ai agent alternatives
+    searchIntent: commercial-investigation
+    schemaTypes: [WebPage, ItemList, FAQPage, BreadcrumbList]
+  - id: pillar:automation
+    canonicalUrl: /best-ai-agents-for-automation/
+    pageType: best-list
+    primaryKeyword: best ai agents for automation
+    searchIntent: commercial-investigation
+    schemaTypes: [WebPage, ItemList, FAQPage, BreadcrumbList]
+quality:
+  evidenceRequired: true
+  criticalClaimsRequirePrimarySource: true
+  fabricatedRatingsForbidden: true
+  fabricatedTestimonialsForbidden: true
+  unsupportedComplianceClaimsForbidden: true
+  minimumInternalLinks: 8
+  directAnswerWords: [40, 120]
+  minimumQualityScore: 95
