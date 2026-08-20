@@ -1,0 +1,64 @@
+name: Feature request
+description: Suggest a new entity, comparison, capability, or improvement
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! A reminder of the project's evidence discipline:
+        - New factual claims **must** ship with an `EvidenceClaim` (a real `EvidenceSource` — `url` + `publisher` + `retrievedAt` + the EXACT `passage` quoted from the source; this repo does not hash source content). No fabricated metrics or invented entities.
+        - This is a **catalogue/evaluation platform**, not an agent runtime — feature requests that ask to "run"/"host"/"orchestrate" agents are out of scope; see [docs/POSITIONING.md](../../docs/POSITIONING.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Who hits it, and what does the absence of this feature force them to do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: A concrete scenario — ideally a real search/intent a user would have.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature category
+      options:
+        - New AI-agent entity (add to `src/data/agents.ts`)
+        - New head-to-head comparison
+        - New MCP-server setup page
+        - New category / hub
+        - New evidence source / receipt
+        - India pricing / India-Fit improvement
+        - API / `/api/graph/*` enrichment
+        - SEO / AEO / sitemap
+        - Documentation
+        - Tooling / CI
+        - Other (describe)
+    validations:
+      required: true
+  - type: checkboxes
+    id: evidence-readiness
+    attributes:
+      label: Evidence
+      options:
+        - label: I have a primary source (vendor docs / upstream repo / official page) to back the claims, or I am requesting one be added.
+          required: true
+        - label: I understand unsupported claims are quarantined rather than published.
+          required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source URL (if you have one)
+      placeholder: https://...

@@ -1,0 +1,84 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semantic version to release (e.g. 0.1.1) — without leading v'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # Evidence-first release: run the same gates CI runs, on the tagged commit.
+      # A release must not ship if any verify gate fails. ESLint is advisory
+      # (matches ci.yml's ratchet policy) and does NOT block the release.
+      - run: npm ci
+      - name: Typecheck
+        run: npm run lint
+      - name: Quarantine integrity
+        run: npm run check:quarantine
+      - name: Build
+        run: npm run build
+      - name: Verify invariants
+        run: npx tsx scripts/verify-invariants.ts
+      - name: Verify evidence
+        run: npx tsx scripts/verify-evidence.ts
+      - name: Verify sitemap
+        run: npx tsx scripts/verify-sitemaps.ts
+      - name: Verify SSR
+        run: npx tsx scripts/verify-ssr.ts
+      - name: Verify routes
+        run: npx tsx scripts/verify-routes.ts
+      - name: Verify redirects
+        run: npx tsx scripts/verify-redirects.ts
+      - name: Verify manifest
+        run: npx tsx scripts/verify-manifest.ts
+      - name: Verify scope freeze
+        run: npx tsx scripts/verify-scope-freeze.tsx
+
+      # Resolve the tag we are releasing (from push or from the workflow_dispatch input).
+      - name: Resolve tag
+        id: tag
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            echo "tag=v${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+          body: |
+            ## Verification
+
+            This release was cut only after all CI verify gates passed on the tagged commit:
+            typecheck, quarantine, build, invariants, evidence, sitemap, SSR, routes, redirects, manifest, scope-freeze.
+
+            See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for the full change history.
+
+            ## Notes
+
+            - Licensing decision is still pending owner confirmation (see `LICENSE` placeholder and `AUDIT.md`).
+            - ESLint runs advisory only — see the ratchet policy in `eslint.config.js`.

@@ -18,7 +18,11 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run lint
+      - name: Typecheck (npm run lint = tsc --noEmit)
+        run: npm run lint
+      - name: ESLint (advisory — see AUDIT.md §G.2; ratchet to a hard gate once baseline hits 0)
+        continue-on-error: true
+        run: npm run lint:eslint
       - run: npm run check:quarantine
       - run: npm run build
       - name: Verify invariants

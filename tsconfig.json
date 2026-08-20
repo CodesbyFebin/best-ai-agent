@@ -23,6 +23,7 @@
     "scripts/**/*.tsx"
   ],
   "exclude": [
-    "**/*.mjs"
+    "**/*.mjs",
+    "scripts/generate-manifests-scaled.ts"
   ]
 }

@@ -5,3 +5,24 @@ dist/
 .DS_Store
 .vite/
 reports/generated/
+
+# --- Security & hygiene (added 2026-08-20, AUDIT.md §F.4/§G.3) ---
+# Untracked local credential/config file — must never be committed.
+account
+*.pem
+*.pfx
+*.key
+id_rsa
+id_rsa.pub
+.aws/
+.env.local
+.env.production
+
+# Untracked scratch scripts that currently break typecheck (committed tree is clean;
+# see AUDIT.md §G.3). Do not commit these until they pass `npm run typecheck`.
+scripts/generate-manifests-scaled.ts
+scripts/generate-all-scaled-content.ts
+scripts/generate-scaled-content.ts
+scripts/verify-sitemaps-static.ts
+scripts/generate-phase-c-content.ts
+scripts/generate-mcp-pillar.md

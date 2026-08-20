@@ -1,0 +1,51 @@
+# License — Best AI Agent
+
+> **Status: Pending owner confirmation.**
+>
+> The prior `README.md` stated "Proprietary — All rights reserved." and `package.json`
+> had no `license` field. That proprietary status is **preserved** here unchanged —
+> no open-source license (MIT, Apache-2.0, etc.) is granted by this file.
+>
+> ## Why this file exists
+
+This file documents the licensing state honestly:
+
+- `package.json` declares `"license": "UNLICENSED"`, the npm convention indicating a
+  proprietary / not-for-public-distribution package. This **preserves** the prior
+  "Proprietary — All rights reserved" status documented in README history. It is
+  **not** a silent license change.
+- The repository's open-source presentation work (README, CONTRIBUTING, community-health
+  files) has been done with the goal of making the project **deserve** open-source
+  adoption. Whether the owner formally relicenses to an OSI-approved license (e.g.
+  MIT, Apache-2.0) is a decision only the owner can make. Until then, no open-source
+  license is granted.
+
+## What you may do today
+
+- **Read and study the source** for evaluation purposes.
+- **Open issues, PRs, and discussions** per [`CONTRIBUTING.md`](CONTRIBUTING.md).
+  Contributions are accepted on a per-commit basis per the maintainer's guidance in the
+  PR, pending the licensing decision.
+
+## What you may NOT do today
+
+- You may **not** redistribute, sublicense, commercially use, or create derivative works
+  of this codebase in a way not authorized by the owner.
+- No contributor other than the owner (`@CodesbyFebin`) may assert a license on this
+  repository. (See [`GOVERNANCE.md`](GOVERNANCE.md) §Decision making.)
+
+## How this will be updated
+
+When the owner confirms an open-source license, this file will be replaced with that
+license's standard text (e.g. the MIT or Apache-2.0 license body), `package.json`'s
+`license` field will be updated to match, and the change will be noted in
+[`CHANGELOG.md`](CHANGELOG.md). Until then, the proprietary status stands.
+
+## Evidence
+
+- Prior `README.md` (commit `a54d4fa`): "License: Proprietary — All rights reserved."
+- `AUDIT.md` §O.2: licensing decision flagged as `[CRITICAL — identity]` and gated on owner confirmation.
+
+---
+
+_Last updated: 2026-08-20 — Phase 14 release-engineering work._

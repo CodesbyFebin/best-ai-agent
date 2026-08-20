@@ -1,15 +1,46 @@
 {
-  "name": "react-example",
+  "name": "best-ai-agent",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "India-first, evidence-backed AI agent discovery, comparison, pricing, and evaluation platform.",
   "type": "module",
+  "keywords": [
+    "ai-agents",
+    "ai-agent",
+    "ai-agent-directory",
+    "agent-comparison",
+    "mcp",
+    "model-context-protocol",
+    "india",
+    "inr-pricing",
+    "evidence-based",
+    "canonical-routing",
+    "ssr",
+    "react",
+    "express",
+    "vite"
+  ],
+  "homepage": "https://bestaiagent.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodesbyFebin/best-ai-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodesbyFebin/best-ai-agent/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "tsx server.tsx",
     "build": "vite build && esbuild server.tsx --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "start": "node dist/server.cjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
+    "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
+    "lint:eslint": "eslint .",
     "test:evidence": "tsx scripts/verify-evidence.ts",
     "test:sitemap": "tsx scripts/verify-sitemaps.ts",
     "test:ssr": "tsx scripts/verify-ssr.ts",
@@ -41,6 +72,7 @@
     "yaml": "^2.7.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/express": "^4.17.25",
     "@types/node": "^22.20.1",
     "@types/react": "^19.2.17",
@@ -50,9 +82,11 @@
     "autoprefixer": "^10.4.21",
     "csv-parse": "^5.6.0",
     "esbuild": "^0.25.0",
+    "globals": "^17.11.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.23.1",
     "typescript": "~5.8.2",
+    "typescript-eslint": "^8.67.0",
     "vite": "^6.2.3"
   }
 }

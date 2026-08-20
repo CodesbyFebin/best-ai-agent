@@ -1,448 +1,201 @@
-# BestAIAgent.in - Platform Architecture
+# BestAIAgent.in — Platform Architecture
 
-**Version:** ATLAS P99 + Safe-Deep OS v5.0  
-**Last Updated:** 2026-07-24  
-**Status:** Production Ready (Staging Verification Pending)
-
----
-
-## 1. System Overview
-
-BestAIAgent.in is an AI agent evaluation and benchmarking platform built on the ATLAS P99 architecture with Safe-Deep OS v5.0 evidence validation layer.
-
-### Core Principles
-
-- **Evidence-Backed Claims**: All content assertions require verifiable evidence with confidence scoring
-- **Deterministic Validation**: Strict state machine governs content lifecycle
-- **Canonical Authority**: Single source of truth for all routes and entities
-- **SSR-First**: Server-side rendering with preserved hydration for SEO and performance
-- **Type Safety**: End-to-end TypeScript with zero compilation errors
+> **Evidence-first rewrite (2026-08-20).** This document was rewritten to remove fabricated metrics (the prior version claimed "53 canonical routes", "100/100", "417/417", "Production Ready", and referenced `renderSsrBody.ts` / `head-manager.tsx` files that do not exist in the tree). Every figure below is traced to a verified source on commit `a54d4fa`. Counts are dated; if the code drifts, this doc must be regenerated from `scripts/audit-baseline.ts` + `src/routing/routeRegistry.ts`.
+> **Product type:** this is a content/evaluation catalogue, not an agent runtime — see [`POSITIONING.md`](./POSITIONING.md). The diagrams describe request, resolution, evidence, and rendering lifecycles that actually exist here (adapted from the master prompt's "agent / tool / memory / model" flow language to the real product type).
 
 ---
 
-## 2. Architectural Layers
+## 1. System overview
 
-### 2.1 Presentation Layer
+```mermaid
+flowchart TB
+    subgraph Runtime["Runtime (process)"]
+        Express["Express app\n(server.tsx → createApp, line 160)"]
+        Resolver["routeResolver.ts\nresolveRoute(path)"]
+        Registry["routeRegistry.ts\n110 canonical routes / 171 redirects\n(as of 2026-08-20)"]
+        Entities["entityResolvers.ts\nvalidate slugs against real registry"]
+        Data["src/data/*\nagents • categories • comparisons\nresearch • directory • evidence"]
+        Sitemap["sitemapGenerator.ts\ngenerateMasterSitemapXml + generateSegmentedSitemapXml"]
+        Rss["utils/rss-feed-generator.ts\ngenerateRssFeedXml"]
+        Graph["/api/graph/*\nrelated • similar • path"]
+    end
+    subgraph Deploy["Deploy targets"]
+        Vercel["api/index.ts\n→ require dist/server.cjs → createApp()"]
+        Local["npm run dev\ntsx server.tsx + Vite HMR"]
+        Prod["npm start\nnode dist/server.cjs"]
+    end
+    subgraph StaticOut["Static outputs (public/)"]
+        Robots["robots.txt (27 lines)"]
+        Llms["llms.txt (37 lines) + llms-full.txt (21 lines)"]
+        Security["security.txt + humans.txt"]
+    end
+    Local --> Express
+    Prod --> Express
+    Vercel --> Express
+    Express --> Resolver
+    Resolver --> Registry
+    Resolver --> Entities
+    Entities --> Data
+    Express --> Sitemap
+    Express --> Rss
+    Express --> Graph
+    Express -.served at root via vercel.json.-> Robots
+    Express -.served at root.-> Llms
+    Express -.served at root.-> Security
+```
 
-**Components:**
-- React 19 (SPA with SSR)
-- Tailwind CSS v4
-- Motion for animations
-- Lucide React icons
-
-**Key Components:**
-- `RouterApp.tsx` - Client-side routing with SSR hydration support
-- `App.tsx` - Main application container
-- `VerifiedClaims.tsx` - Evidence display component
-- `NotFoundPage.tsx` - Custom 404 with navigation
-
-### 2.2 Routing Layer
-
-**Registry:** `src/routing/routeRegistry.ts`
-- 53 canonical routes
-- Route types: pillar, category, agent, comparison, pricing, alternative, research, benchmark, guide, tutorial, glossary, author, mcp-server, mcp-category, governance, calculator, directory
-
-**Resolver:** `src/routing/routeResolver.ts`
-- Central routing engine
-- Entity slug validation
-- Evidence requirement checks
-- Redirect detection (301)
-
-**Entity Resolvers:** `src/routing/entityResolvers.ts`
-- `getAgentBySlug()`
-- `getCategoryBySlug()`
-- `getComparisonBySlug()`
-- `getMcpServerBySlug()`
-- `getAuthorBySlug()`
-- `getResearchBySlug()`
-
-### 2.3 Data Layer
-
-**File-Based Storage:** `src/data/*.ts`
-- `agents.ts` - AI agent profiles (extended with evidence fields)
-- `categories.ts` - Taxonomy categories
-- `comparisons.ts` - Comparison data
-- `research.ts` - Research reports
-- `directory.ts` - Site directory
-- `site.ts` - Site metadata
-
-**Evidence Layer:** `src/data/evidenceSchema.ts`, `agentEvidence.ts`
-- EvidenceClaim & EvidenceSource interfaces
-- Validation rules (CRITICAL, STANDARD, COMPARISON)
-- Quality scoring engine (6 dimensions)
-- ContentState machine (11 states)
-
-### 2.4 Server Layer
-
-**Express Server:** `server.tsx`
-- SSR interception for SEO
-- API endpoints (Gemini integration)
-- Rate limiting
-- Static asset serving
-- Sitemap & RSS endpoints
-
-**SSR Renderer:** `src/routing/renderSsrBody.ts`
-- HTML generation with SEO injection
-- JSON-LD structured data
-- 404 special handling (no self-canonicalization)
-
-**Head Manager:** `src/routing/head-manager.tsx`
-- Context for collecting head tags during SSR
-- React component for dynamic metadata
+**VERIFIED:** `createApp()` is an `async export` in `server.tsx` (line 160). `api/index.ts` does `require('../dist/server.cjs').createApp()` and caches an `appPromise`. Route counts are from `routeRegistry.ts` on commit `a54d4fa`. `sitemapGenerator.ts` exports the two XML generators. The five root text files live in `public/` and are routed by `vercel.json`'s `/(robots|llms|llms-full|security|humans)\.txt` rule.
 
 ---
 
-## 3. Evidence System (Safe-Deep Integration)
+## 2. Request lifecycle (the "agent lifecycle" analog adapted to a catalogue)
 
-### 3.1 Core Interfaces
-
-```typescript
-interface EvidenceSource {
-  url: string;
-  publisher: string;
-  passage: string;
-  authority: 'primary' | 'secondary' | 'tertiary';
-  retrievedAt: string;
-  freshness: number; // 0-1 score
-}
-
-interface EvidenceClaim {
-  id: string;
-  statement: string;
-  evidence: EvidenceSource[];
-  confidence: number; // 0-1
-  status: 'pending' | 'verified' | 'refuted' | 'expired';
-  verifiedAt?: string;
-}
+```mermaid
+flowchart TD
+    Req["HTTP request\nGET /agents/cursor"] --> Handler["createApp() → Express handler"]
+    Handler --> RenderFn["renderHtmlWithSeo(urlPath, templateHtml)\nserver.tsx"]
+    RenderFn --> AdminGuard{"/admin* ?\n(server.tsx SSR-block, lines 52-61)"}
+    AdminGuard -->|yes| Admin404["404 — admin never SSR-rendered"]
+    AdminGuard -->|no| Resolve["resolveRoute(urlPath)\nrouteResolver.ts"]
+    Resolve -->|"normalizePath(path)\npathNormalization.ts"| Norm["normalized path"]
+    Norm --> LegacyCheck{"legacyRedirects[path]?\nrouteRegistry.ts (~171)"}
+    LegacyCheck -->|hit| R301["301 → destination"]
+    Norm --> ExactCheck{"canonicalRoutes[path]?\n(~110)"}
+    ExactCheck -->|hit + status:redirect| R301
+    ExactCheck -->|hit + published| Valid["valid RouteRecord"]
+    Norm --> DynCheck{"/agents/ /categories/ /compare/\n/mcp/servers/ /research/ /authors/ ?"}
+    DynCheck -->|yes, valid entity slug| Valid
+    DynCheck -->|unknown slug| NF404["404 — not synthesized into a page"]
+    DynCheck -->|non-canonical slug form| CanonicalR["301 → canonical slug"]
+    Valid --> SSR["renderToString(<AppRouter route=route />)\nrenderToString(... route=null ...) for 404"]
+    SSR --> Inject["inject <head> meta + <title> + JSON-LD\ninto template HTML"]
+    Inject --> Response["HTTP 200 + SSR HTML"]
+    R301 --> RedirectResp["HTTP 301"]
+    NF404 --> Response404["HTTP 404 + noindex,follow"]
+    Admin404 --> Response404
 ```
 
-### 3.2 Validation Rules
+**VERIFIED:**
+- `/admin*` is SSR-blocked before routing (`server.tsx` lines 52–61): returns a 404 title, never calls `resolveRoute`. Admin dashboard is never streamed to unauthenticated clients.
+- 404 pages include `<meta name="robots" content="noindex, follow">` and omit a canonical tag (per the inline comment, "prevents indexing of invalid URLs").
+- Resolution order (`routeResolver.ts`): home → legacy 301 → exact canonical (published or redirect) → dynamic entity (validated against the real registry; non-canonical slug → 301 to canonical; unknown slug → 404).
+- `AppRouter` accepts a `route` prop and falls back to internal re-resolution for browser hydration (hybrid SSR + client resolution).
 
-| Rule | Confidence | Sources Required |
-|------|------------|------------------|
-| CRITICAL | ≥0.90 | 2+ primary OR 1 primary + 2 secondary |
-| STANDARD | ≥0.80 | 1+ primary |
-| COMPARISON | ≥0.85 | 2+ primary |
-
-### 3.3 Quality Scoring
-
-Six dimensions (total 100 points):
-1. Evidence sufficiency (0-25)
-2. Authority strength (0-25)
-3. Freshness proximity (0-20)
-4. Contradiction risk penalty (0-10)
-5. Intent satisfaction (0-10)
-6. Entity coverage (0-10)
-
-### 3.4 Content State Machine
-
-11 states with guarded transitions:
-```
-candidate
-  ↓ intent_validated
-  ↓ evidence_complete
-  ↓ blueprint_approved
-  ↓ draft
-  ↓ automated_validation
-  ↓ human_review
-  ↓ publish_approved
-  ↓ published
-  ↓ monitored
-  ↓ refresh_required
-```
+> **Note on the prior doc:** the previous version of this file claimed the SSR renderer lived in `src/routing/renderSsrBody.ts` and mentioned `src/routing/head-manager.tsx`. Neither file exists in `src/routing/` (verified: only `canonicalUrl.ts`, `entityResolvers.ts`, `evidenceRoutes.ts`, `pathNormalization.ts`, `routeRegistry.ts`, `routeResolver.ts`, `types.ts`). SSR is performed inline in `server.tsx` via `renderHtmlWithSeo` + `react-dom/server`'s `renderToString`. Do not re-add references to the non-existent files.
 
 ---
 
-## 4. SEO & Technical Optimization
+## 3. Evidence lifecycle (the "memory" analog — claims trace to receipts)
 
-### 4.1 Server-Side Rendering
+```mermaid
+flowchart LR
+    Vendor["Vendor / docs page\n(primary source)"] -->|fetched + quoted| Source["EvidenceSource\n{ url, publisher, retrievedAt,\npassage (exact quote),\nlocator?, authority: primary|secondary|tertiary,\nfreshness? }"]
+    RepoSource["Upstream OSS repo\n(framework identity)"] -->|officialUrl| EntityField["entity.officialUrl\n(stored on the Agent row)"]
+    EditorialFlag["Editorial claim"] -->|authority: tertiary| Source
+    Source -->|aggregated into claim.evidence| Claim["EvidenceClaim\n{ id, statement,\nevidence: EvidenceSource[],\nconfidence 0-100,\nstatus: active|expired|contradicted|superseded,\nverifiedAt }"]
+    Claim -->|"referenced via entity.evidenceIds: string[]"| Entity["Entity\n(src/data/agents.ts, etc.)"]
+    Entity --> View["ProductProfile /\nComparePage / CategoryHubPage"]
+    View --> ClaimRender["renders claim + verified status +\nlink to source + retrievedAt"]
+    Gating{{"EVIDENCE_RULES gates\nCRITICAL>=90 (2+ primary OR 1p+2s)\nSTANDARD>=80 (1+ primary)\nCOMPARISON>=85 (2+ primary)\n(validateEvidence in evidenceSchema.ts)"}}
+    Claim -.gated by.-> Gating
+    Claim -.written to disk.-> EvDir["evidence/\n(p0-* and phase-* receipts)\n+ checksums.sha256 (build-artifact integrity, NOT evidence)"]
+    Quarantine{{"Unsupported claim?\nquarantine/ + check:quarantine.ts (CI gate)"}}
+```
 
-- All HTML pages rendered server-side
-- React hydration container preserved
-- Metadata injected (title, description, canonical)
-- JSON-LD structured data embedded
-- Semantic HTML with proper heading hierarchy
-
-### 4.2 Structured Data (schema.org)
-
-- `WebPage` - All pages
-- `Organization` - Site identity
-- `WebSite` - Search engine registration
-- `SoftwareApplication` - Agent pages
-- `ItemList` - Category/comparison pages
-- `TechArticle` - MCP server pages
-- `Report` - Research pages
-- `BreadcrumbList` - Navigation trails
-
-### 4.3 Sitemaps
-
-- Index file: `/sitemap.xml`
-- Segmented sitemaps:
-  - `/sitemap-agents.xml`
-  - `/sitemap-categories.xml`
-  - `/sitemap-comparisons.xml`
-  - `/sitemap-mcp.xml`
-  - `/sitemap-research.xml`
-  - `/sitemap-pages.xml`
-
-### 4.4 Redirect Strategy
-
-- All legacy redirects are 301 (permanent)
-- No redirect chains
-- Consolidation of keyword overlaps
-- MCP semantic fixes
+**VERIFIED (against `src/data/evidenceSchema.ts` + `agentEvidence.ts` + `verify-evidence.ts` on `a54d4fa`):**
+- The evidence model in this donor repo is **`EvidenceClaim` + `EvidenceSource`**, not `EvidenceRecord` with a `contentHash`. A claim has `id`, `statement`, `evidence: EvidenceSource[]`, `confidence` (0-100), `status` (`active`/`expired`/`contradicted`/`superseded`), `verifiedAt`. A source has `url`, `publisher`, `retrievedAt`, `passage` (the EXACT supporting quote), `locator?`, `authority` (`primary`/`secondary`/`tertiary`), `freshness?`. (**Correction:** an earlier draft of this doc conflated the companion production repo's `EvidenceRecord{contentHash}` model with this one; the production repo hashes source content, this donor repo does not.)
+- Confidence gates (`EVIDENCE_RULES`): `CRITICAL` ≥ 90 (2+ primary OR 1 primary + 2 secondary), `STANDARD` ≥ 80 (1+ primary), `COMPARISON` ≥ 85 (2+ primary). Asserted in `verify-evidence.ts` (`rules.CRITICAL.minConfidence !== 90` etc.).
+- Per-entity claims are referenced via `evidenceIds?: string[]` on the `Agent` interface in `src/data/agents.ts`; `agentEvidence.ts` holds agent-specific evidence extensions (`PricingEvidence`, `CapabilityEvidence`); the on-disk `evidence/` tree carries build-time receipts (`p0-*`, `phase-*`) plus a `checksums.sha256` file that protects **build artifacts**, not evidence content.
+- Content lifecycle is an 11-state machine (candidate → intent_validated → evidence_complete → blueprint_approved → draft → automated_validation → human_review → publish_approved → published → monitored → refresh_required); `verify-evidence.ts` asserts the default state is `candidate`.
+- Unsupported claims are quarantined under `quarantine/` (includes `21k-manifest-data.json` + `README.md`) and gated by `npm run check:quarantine`, which CI runs before `npm run build`.
+- `authority` labeling (`primary` / `secondary` / `tertiary`) correlates with the master prompt's VERIFIED / INFERRED / PLANNED classification — only `primary`-sourced claims are presented as fact.
 
 ---
 
-## 5. Build & Deployment
+## 4. Build & deploy lifecycle (the "model flow" analog — outputs that ship)
 
-### 5.1 Build Process
-
-```bash
-npm run build
+```mermaid
+flowchart TD
+    Src["Source: src/ + server.tsx + api/index.ts + public/"] --> NpmCi["npm ci\n(package-lock.json canonical — bun.lock is redundant, see AUDIT.md G.4)"]
+    NpmCi --> Build["npm run build"]
+    Build --> Vite["vite build\n(client assets → dist/)"]
+    Build --> Esbuild["esbuild server.tsx\n--bundle --platform=node --format=cjs\n--packages=external --sourcemap\n→ dist/server.cjs"]
+    Dist["dist/ (Vite client + server.cjs)"] -.served.-> Local["npm start"]
+    Dist -.served.-> Vercel["api/index.ts → createApp()"]
+    CI[".github/workflows/ci.yml\nci: lint → quarantine → build → verify-invariants → verify-evidence → verify-sitemaps → verify-ssr → verify-routes → verify-redirects → verify-manifest → verify-scope-freeze"]
+    CI -.gates merge.-> Merge["PR to main"]
 ```
 
-1. Vite compiles React app → `dist/assets/`
-2. esbuild bundles server.tsx → `dist/server.cjs`
-3. HTML template copied → `dist/index.html`
-
-### 5.2 Runtime
-
-```bash
-npm run dev      # Development (with Vite HMR)
-npm start        # Production (dist/server.cjs)
-```
-
-### 5.3 Verification
-
-```bash
-# TypeScript
-npm run lint
-
-# Build
-npm run build
-
-# Tests
-npm run test:evidence
-npx tsx scripts/verify-redirects.ts
-npm run test:sitemap
-npm run test:ssr
-BASE_URL=http://localhost:3000 npx tsx scripts/verify-production.mjs
-```
+**VERIFIED:** build script from `package.json`: `vite build && esbuild server.tsx --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs`. Vercel function (`api/index.ts`) requires `../dist/server.cjs`; `vercel.json` routes `/assets`, `.txt` files, and the catch-all `/.*` to `/api/index`. CI sequence confirmed in `.github/workflows/ci.yml`.
 
 ---
 
-## 6. Directory Structure
+## 5. Discovery & SEO outputs (served routes)
 
+```mermaid
+flowchart LR
+    SitemapIndex["/sitemap.xml + /sitemap-index.xml + /sitemap-indexed.xml"] --> SegAgents["/sitemap-agents.xml"]
+    SitemapIndex --> SegCategories["/sitemap-categories.xml"]
+    SitemapIndex --> SegComparisons["/sitemap-comparisons.xml"]
+    SitemapIndex --> SegMcp["/sitemap-mcp.xml"]
+    SitemapIndex --> SegResearch["/sitemap-research.xml"]
+    SitemapIndex --> SegPages["/sitemap-pages.xml"]
+    RssFeed["/rss.xml + /feed.xml + /rss"] --> RssGen["generateRssFeedXml"]
+    LlmsTxt["/llms.txt + /llms-full.txt"] --> PublicLlms["public/llms.txt\npublic/llms-full.txt"]
+    Robots["/robots.txt"] --> PublicRobots["public/robots.txt"]
 ```
-/src
-  /components
-    RouterApp.tsx
-    VerifiedClaims.tsx
-    NotFoundPage.tsx
-    ErrorBoundary.tsx
-  /data
-    agents.ts
-    categories.ts
-    comparisons.ts
-    research.ts
-    evidenceSchema.ts
-    agentEvidence.ts
-    sitemapGenerator.ts
-  /routing
-    routeRegistry.ts
-    routeResolver.ts
-    entityResolvers.ts
-    evidenceRoutes.ts
-    renderSsrBody.ts
-    head-manager.tsx
-    canonicalUrl.ts
-    pathNormalization.ts
-    types.ts
-  /utils
-    rss-feed-generator.ts
-  App.tsx
-  main.tsx
-  index.css
-/server.tsx
-  entry-point for Node.js
 
-/docs
-  CURRENT_IMPLEMENTATION.md
-  PLATFORM_GAP_ANALYSIS.md
-  MASTER_ROADMAP.md
-  PROJECT_TRACKER.md
-  PROJECT_COMPLETENESS.md
-  ARCHITECTURE.md (this file)
-  KNOWLEDGE_GRAPH.md
-  CONTENT_OS.md
-  EDITORIAL_OS.md
-  SAFE_DEEP.md
-  AI_SEARCH.md
-  SEO_ENGINE.md
-  TEST_REPORT.md
-  RELEASE_REPORT.md
-  FINAL_SIGNOFF.md
-
-/scripts
-  verify-evidence.ts
-  verify-redirects.ts
-  verify-sitemaps.ts
-  verify-ssr.ts
-  verify-production.mjs
-  ingest.ts
-  populate-agent-evidence.ts
-  update-project-tracker.ts
-```
+**VERIFIED:** all six segment endpoints are wired in `server.tsx` and served by Vercel's text-file route. The sitemap index references the six segments.
 
 ---
 
-## 7. Key Design Decisions
+## 6. Error flow
 
-### 7.1 File-Based Data Layer
-- No database required for launch
-- TypeScript interfaces enforce schema
-- Easy to edit and review
-- Suitable for static content
-
-### 7.2 Evidence-First Content Model
-- Every claim must have evidence
-- Confidence scoring drives quality
-- State machine prevents premature publication
-- Freshness tracking ensures accuracy
-
-### 7.3 Centralized Route Registry
-- Single source of truth for all routes
-- Eliminates route drift
-- Enables automated verification
-- Simplifies redirect management
-
-### 7.4 SSR with Hydration
-- SEO-friendly full HTML render
-- Client-side interactivity preserved
-- Fast Time to First Byte (TTFB)
-- Progressive enhancement
+| Trigger | Result | Notes |
+|---------|--------|-------|
+| `/admin*` SSR request | 404 | SSR-blocked before routing (`server.tsx` lines 52–61). |
+| Unknown dynamic slug (`/agents/does-not-exist`) | 404 + `noindex, follow` | Validated against the real registry; never synthesized. |
+| Unknown canonical path | 404 + `noindex, follow` | Same 404 path; no canonical tag. |
+| Non-canonical slug form (`/agents/cursor-ai`) | 301 → `/agents/cursor` | Server redirects to the canonical slug. |
+| Legacy URL in `legacyRedirects` | 301 → destination | Consolidation layer (~171 entries). |
+| Quarantine drift | CI fails (`npm run check:quarantine`) | Prevents unsupported claims from shipping. |
 
 ---
 
-## 8. API Surface
-
-### 8.1 Public Endpoints
+## 7. API surface (verified)
 
 | Route | Method | Purpose |
 |-------|--------|---------|
-| `/api/analyze-doc` | POST | Document analysis via Gemini |
+| `/api/analyze-doc` | POST | Document analysis |
 | `/api/recommend` | POST | Agent recommendations |
 | `/api/submit-lead` | POST | Lead capture |
 | `/api/submit-tool` | POST | Tool submission |
 | `/api/subscribe` | POST | Newsletter subscription |
+| `/api/graph/stats` | GET | Knowledge-graph statistics |
+| `/api/graph/related/:type/:id` | GET | Related entities |
+| `/api/graph/similar/:type/:id` | GET | Similar entities |
+| `/api/graph/path/:ft/:fi/:tt/:ti` | GET | Entity path |
+| `/api/admin/verify` | GET | Bearer-token check (admin) |
+| `/api/admin/info` | GET | Admin info (auth required) |
 | `/health` | GET | Health check |
+| `/sitemap*.xml`, `/rss*.xml`, `/feed.xml`, `/llms*.txt`, `/robots.txt`, `/security.txt`, `/humans.txt` | GET | Discovery + SEO outputs |
 
-### 8.2 SEO Endpoints
-
-| Route | Purpose |
-|-------|---------|
-| `/sitemap.xml` | Sitemap index |
-| `/sitemap-*.xml` | Segmented sitemaps |
-| `/rss.xml` | RSS feed |
-| `/llms.txt` | AI crawler index |
-| `/robots.txt` | Crawler directives |
-| `/security.txt` | Security contact |
+> Security note: the `/api/admin/*` endpoints use a bearer-token compare, not a hardened identity system. See `SECURITY.md` once created (`AUDIT.md` §F.5) and `scripts/verify-admin-security.ts`.
 
 ---
 
-## 9. Verification Status
+## 8. What is **not** here (and why)
 
-| Component | Status | Tests | Evidence |
-|-----------|--------|-------|----------|
-| TypeScript | ✅ PASS | 0 errors | `npm run lint` |
-| Build | ✅ PASS | 1/1 | `npm run build` |
-| Evidence Engine | ✅ PASS | 9/9 | `npm run test:evidence` |
-| Redirects | ✅ PASS | 290/290 | `verify-redirects.ts` |
-| Sitemaps | ✅ PASS | 49/49 | `npm run test:sitemap` |
-| SSR | ✅ PASS | 15/15 | `npm run test:ssr` |
-| Production Integration | ✅ PASS | 54/54 | `verify-production.mjs` |
-| **Total** | **✅ PASS** | **417/417** | **All suites** |
+The master prompt's "agent lifecycle / tool execution / memory / model flow" sections describe an agent *runtime*. This repo is a **catalogue/evaluation platform** — it does not run LLM loops, call tools, hold agent memory, or serve model inference. The analogs above (request lifecycle, evidence lifecycle, build lifecycle) map those concepts onto what actually exists, so the diagrams remain truthful. Any "tool" / "memory" / "model" documentation belongs on the agent *entities' profile pages*, not in this repo's architecture.
 
 ---
 
-## 10. Platform Layer Score
+## 9. Verification (dated; no fabricated aggregate scores)
 
-Based on automated test results:
+As of commit `a54d4fa` (2026-08-20) on the **committed tree** (untracked scratch scripts set aside):
 
-| Subsystem | Score |
-|-----------|-------|
-| Architecture | 100 |
-| Routing | 100 |
-| Entity Resolution | 100 |
-| Redirects | 100 |
-| SSR | 100 |
-| Evidence Engine | 100 |
-| State Machine | 100 |
-| Technical SEO | 100 |
-| Sitemaps | 100 |
-| Type Safety | 100 |
-| Build System | 100 |
-| Documentation | 100 |
+- `npm run lint` (`tsc --noEmit`) → exit 0 (commit `a54d4fa`)
+- `npm run build` → produces `dist/server.cjs` + Vite client assets
+- 16 `verify-*` scripts available; CI runs 9 of them in `ci.yml`
 
-**Platform Score:** 100/100
-
----
-
-## 11. Future Phases (Out of Scope for P99)
-
-### Phase 13 - Knowledge Graph
-- Entity relationship mapping
-- Graph database integration
-- Related entities API
-- Graph exports
-
-### Phase 14 - Content OS
-- Intent validation
-- SERP analysis automation
-- Brief generation
-- Outline & section generation
-- Quality scoring pipeline
-
-### Phase 15 - Editorial OS
-- Review workflows
-- Approval queues
-- Version history
-- Collaboration tools
-
-### Phase 16 - Publishing Engine
-- Publication gates
-- Scheduled publishing
-- Rollback capabilities
-- Content manifests
-
-### Phase 17 - AI Search
-- Semantic search
-- Vector embeddings
-- Recommendations
-
-### Phase 18 - Programmatic SEO
-- Review templates
-- Comparison templates
-- Pricing pages
-- Alternatives pages
-
-### Phase 19 - Operations
-- Monitoring & alerting
-- Analytics integration
-- CI/CD pipelines
-- Release automation
-
----
-
-## Conclusion
-
-The BestAIAgent.in platform is **architecturally sound, fully implemented, and thoroughly verified**. The foundation is ready for content-scale development and production deployment.
-
-**Next Step:** Deploy to staging and run `BASE_URL=<staging> npx tsx scripts/verify-production.mjs`.
-
----
-
-**Maintained By:** ATLAS Development Team  
-**Last Verified:** 2026-07-24  
-**Verification Suite:** 417 passing tests
+> The prior version of this file listed per-subsystem scores of "100" and a "Platform Score: 100/100" with "417/417" / "419/419" tests. Those figures were asserted without a reproducible harness and are **not** restated. For an evidence-first claims audit, see [`../AUDIT.md`](../AUDIT.md); for the current test reality run, `npm run lint && npm run build && npm run test:*`.
