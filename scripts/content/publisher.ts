@@ -1,4 +1,5 @@
 import { Manifest } from './load-manifest';
+import { programmaticFooterSections } from '../../src/data/footer-navigation';
 
 export interface PublisherOptions {
   baseUrl?: string;
@@ -42,7 +43,22 @@ h2{font-size:1.6rem;margin:2rem 0 1rem;color:#222}
 section{margin-bottom:2rem}
 footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #eee;font-size:0.9rem;color:#666}
 a{color:#0066cc}
-a:hover{text-decoration:underline}`;
+a:hover{text-decoration:underline}
+@media (max-width: 768px) {
+  .footer-top { flex-direction: column; }
+  .footer-columns { flex-direction: column; }
+}
+.footer-container{display:flex;flex-direction:column;min-height:100vh}
+.main-content{flex:1}
+.footer-manual{border-top:1px solid #eee;padding:2rem 0;margin-top:auto}
+.footer-nav{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:1.5rem}
+.footer-col{flex:1;min-width:180px}
+.footer-title{font-weight:bold;margin-bottom:1rem;font-size:0.95rem;color:#333}
+.footer-link-list{list-style:none;padding:0;margin:0}
+.footer-link{margin-bottom:0.5rem}
+.footer-link a{color:#0066cc;text-decoration:none;font-size:0.9rem}
+.footer-link a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;font-size:0.85rem;color:#666;border-top:1px solid #eee;padding-top:1.5rem}`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -66,8 +82,31 @@ a:hover{text-decoration:underline}`;
     ${quickAnswer}
     ${sectionsHtml}
   </main>
-  <footer>© 2026 BestAIAgent.in — All rights reserved.</footer>
-</body>
+  <footer>
+      <div class="footer-top">
+        <div class="footer-cta">
+          <p class="footer-logo">BestAIAgent.in</p>
+          <p class="footer-tagline">Independent AI agent evaluations, benchmarks and implementation guides for India.</p>
+        </div>
+        <div class="footer-columns">
+          ${programmaticFooterSections.map((section, idx) => `
+          <div class="footer-column">
+            <h4 class="footer-section-title">
+              ${section.href ? `<a href="${section.href}">${section.title}</a>` : section.title}
+            </h4>
+            <ul class="footer-links">
+              ${section.links.map((link, linkIdx) => `<li><a href="${link.href}">${link.label}</a></li>`).join('')}
+            </ul>
+          </div>
+          `).join('')}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 BestAIAgent.in — All rights reserved.</p>
+      </div>
+</footer>
+		</div>
+  </body>
 </html>`;
 }
 

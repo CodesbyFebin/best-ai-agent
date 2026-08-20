@@ -83,7 +83,9 @@ function extractSection(content: string, sectionId: string): string {
   // Extract section content between headers
   // Assumes sections are marked with ## heading matching sectionId
   const escapedId = sectionId.replace(/-/g, ' ');
-  const regex = new RegExp(`##\\s*${escapeRegExp(escapedId)}[\\s\\S]*?(?=^##|$)`, 'im');
+  // Match section content: from ## header to either next ## or end of string
+  // Note: We don't use 'm' flag because it makes $ match at line ends
+  const regex = new RegExp(`##\\s*${escapeRegExp(escapedId)}[\\s\\S]*?(?=\\n##|$)`, 'i');
   const match = content.match(regex);
   return match ? match[0] : '';
 }

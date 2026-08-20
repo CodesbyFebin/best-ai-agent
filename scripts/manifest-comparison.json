@@ -15,6 +15,7 @@
     "title": "ChatGPT-4o vs Claude 3.5 Sonnet",
     "description": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
     "sitemapGroup": "comparisons",
-    "indexable": true
+    "indexable": true,
+    "minWordCount": 2000
   }
 }

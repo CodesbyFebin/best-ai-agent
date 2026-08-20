@@ -14,6 +14,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { generateDeepContentForComparison, generateDeepContentForResearch, generateDeepContentForAgent, generateDeepContentForCategory, generateVariationContent, generateScaledAgentContent } from './deep-content-generators';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -88,107 +89,8 @@ function resolveEntity(entityId: string, graph: GraphData): GraphNode | null {
 }
 
 // ----------------------------
-// Deep Content Generator
+// Deep Content Generator (imported from deep-content-generators.ts)
 // ----------------------------
-function generateDeepContentForAgent(agentId: string, manifest: any): string {
-  const agentNames: Record<string, string> = {
-    'chatgpt': 'ChatGPT (Agent Mode)',
-    'claude': 'Claude 3.5 Sonnet',
-    'cursor-ai': 'Cursor AI Editor',
-    'vapi-ai': 'Vapi Voice AI Platform',
-    'perplexity': 'Perplexity Pro Agent',
-    'crewai': 'CrewAI Orchestration',
-    'n8n': 'n8n Workflow Automation',
-    'grok': 'Grok 2',
-    'kagi': 'Kagi Search',
-    'gemini-pro': 'Gemini Pro'
-  };
-
-  const agentDesc: Record<string, string> = {
-    'chatgpt': 'OpenAI\'s flagship assistant featuring web canvas, agentic code execution, memory, and multi-modal tool use.',
-    'claude': 'Anthropic\'s industry-leading agent for complex code generation, autonomous OS control, and deep document analysis.',
-    'cursor-ai': 'AI-first fork of VS Code with multi-file Agent Mode, terminal execution, and deep codebase indexing.',
-    'vapi-ai': 'Enterprise voice AI orchestration platform powering low-latency phone agents and conversational voice workflows.',
-    'perplexity': 'Conversational answer engine combining live web synthesis, citation verification, and Deep Research agent workflows.',
-    'crewai': 'Leading Python multi-agent framework enabling role-based agent coordination, tool delegation, and sequential execution.',
-    'n8n': 'Open-source workflow automation tool with over 300 integrations for business process automation.',
-    'grok': 'Uncensored conversational AI agent with real-time X telemetry access and FLUX image synthesis.',
-    'kagi': 'Ad-free search engine with AI-powered results synthesis and citation support.',
-    'gemini-pro': 'Google\'s multimodal AI with strong integration into Google Workspace and Android ecosystems.'
-  };
-
-  const name = agentNames[agentId] || agentId;
-  const desc = agentDesc[agentId] || `AI agent ${agentId} for modern applications.`;
-
-  // Generate comprehensive 2000+ word content
-  return `
-    <article class="deep-content">
-      <h1>${manifest.title || name}</h1>
-      
-      <section>
-        <h2>Executive Summary</h2>
-        <p>${desc} This comprehensive review provides an in-depth analysis of capabilities, pricing, real-world applications, and competitive positioning. Our evaluation is based on extensive hands-on testing, user feedback, and technical analysis conducted over several weeks of evaluation.</p>
-        <p>Whether you are considering this agent for personal productivity, enterprise automation, or advanced coding tasks, this deep dive will help you understand if it meets your requirements. We have examined the underlying architecture, performance benchmarks, integration capabilities, and compared it against competing solutions to provide you with an objective assessment.</p>
-      </section>
-
-      <section>
-        <h2>Core Capabilities & Features</h2>
-        <p>${name} offers a robust set of capabilities that make it a versatile choice for users across different domains. The agent excels at understanding and processing natural language instructions, making complex tasks accessible through conversational interfaces.</p>
-        <p>Key features include advanced reasoning capabilities, multi-modal input support, and extensive tool integration. The agent can process text, images, and code, providing seamless experiences across different task types. Its memory system allows for context retention across conversations, enabling more natural and productive interactions.</p>
-        <p>Technical capabilities include real-time web browsing, code execution in secure sandboxes, file manipulation, and API integration. The agent supports multiple programming languages and can generate, explain, and debug code across diverse frameworks and technologies.</p>
-        <p>For business users, ${name} provides workflow automation, data analysis, and customer support capabilities. Integration with popular productivity tools like Google Workspace, Microsoft 365, and various CRM systems allows for seamless automation of routine tasks and enhanced productivity.</p>
-      </section>
-
-      <section>
-        <h2>Architecture & Technical Details</h2>
-        <p>The underlying architecture of ${name} leverages state-of-the-art transformer-based models with specialized optimizations for reasoning and knowledge processing. The model architecture has been carefully crafted to balance inference speed with accuracy, providing responsive interactions even for complex queries.</p>
-        <p>From a technical perspective, the agent uses a combination of attention mechanisms, retrieval-augmented generation, and tool-calling protocols to ensure accurate and reliable responses. The infrastructure includes redundant systems and monitoring to maintain high availability and consistent performance.</p>
-        <p>Security considerations include end-to-end encryption for data in transit, secure handling of sensitive information, and configurable privacy settings. The agent architecture supports enterprise-grade security requirements with SOC 2 compliance, GDPR adherence, and custom security policies.</p>
-        <p>The development team has implemented extensive testing frameworks, including unit tests, integration tests, and continuous deployment pipelines. This ensures that new features are thoroughly validated before release, maintaining the quality and reliability that users have come to expect.</p>
-      </section>
-
-      <section>
-        <h2>Pricing Analysis & Cost-Effectiveness</h2>
-        <p>The pricing model for ${name} follows a tiered structure designed to accommodate users with different needs and usage patterns. The free tier provides substantial functionality for casual users, while paid tiers unlock advanced features and higher usage limits.</p>
-        <p>For individual users, the pricing is competitive compared to similar solutions, offering good value for the breadth of features available. Enterprise pricing is customizable, allowing organizations to negotiate packages based on their specific requirements and expected usage volumes.</p>
-        <p>Cost analysis shows that for high-volume users, the per-token pricing model can become expensive. However, the free tier and occasional usage credits help offset costs for lighter users. The billing system is transparent, with real-time usage tracking and spending limits configurable by users.</p>
-        <p>We recommend carefully evaluating your expected usage patterns before committing to a paid plan. The basic plan suits most individual users, while teams and enterprises should consider custom solutions that can scale to their needs.</p>
-      </section>
-
-      <section>
-        <h2>Real-World Use Cases & Applications</h2>
-        <p>${name} has proven valuable across numerous real-world scenarios. In software development, developers use it for code generation, debugging assistance, and architectural guidance. The agent helps accelerate development cycles and reduces time spent on routine coding tasks.</p>
-        <p>Business teams leverage ${name} for content creation, market research, customer support automation, and data analysis. Marketing teams appreciate the ability to generate multiple content variations quickly, while research teams value the synthesis capabilities for complex topics.</p>
-        <p>Educational institutions use the agent for tutoring, course content creation, and personalized learning paths. Students benefit from 24/7 availability and instant feedback on exercises and assignments.</p>
-        <p>Case studies show significant ROI for organizations deploying ${name} at scale. Companies report 30-40% reduction in time-to-answer for complex queries and improved consistency in technical documentation.</p>
-      </section>
-
-      <section>
-        <h2>Market Comparison & Competitive Positioning</h2>
-        <p>When comparing ${name} with alternative solutions, several factors stand out. Competitors like GitHub Copilot excel in code-specific tasks, while solutions like Perplexity lead in web research capabilities. ${name} offers a balanced approach across multiple domains.</p>
-        <p>The agent's unique strengths lie in its versatile tool integration and multi-modal capabilities. Unlike specialized coding assistants, ${name} provides a unified interface for text, code, image, and data tasks. This simplifies user workflows and reduces context switching.</p>
-        <p>Performance benchmarks show competitive results across various tasks. In coding challenges, ${name} performs on par with leading competitors. For research tasks, the real-time data integration provides significant advantages over static knowledge bases.</p>
-        <p>Integration ecosystem is a key differentiator. With over 100 verified integrations and a growing developer community, ${name} offers flexibility that proprietary solutions cannot match. The open plugin system encourages innovation and customization.</p>
-      </section>
-
-      <section>
-        <h2>Pros, Cons & Limitations</h2>
-        <p>Among the advantages of ${name}, we highlight its versatility, tool integration breadth, and strong performance across diverse tasks. Users consistently praise the intuitive interface and helpful error recovery when handling complex queries.</p>
-        <p>The pricing structure, while competitive, may be cost-prohibitive for high-volume enterprise usage. Complex workflows sometimes require careful prompt engineering to achieve optimal results, which may be challenging for less technical users.</p>
-        <p>Limitations include occasional hallucinations in edge cases, dependencies on external services for some capabilities, and regional availability restrictions for certain features. The agent may also struggle with extremely specialized technical domains despite its broad capabilities.</p>
-        <p>Rate limiting policies apply, particularly on free tiers, which can interrupt long-running tasks. Users requiring uninterrupted operation should consider appropriate plan upgrades or dedicated deployments.</p>
-      </section>
-
-      <section>
-        <h2>Conclusion & Recommendation</h2>
-        <p>${name} stands as a compelling choice for users seeking a versatile, capable AI assistant. Its strong performance across multiple domains, robust integration ecosystem, and continuous improvements make it suitable for both individual and enterprise use cases.</p>
-        <p>We recommend ${name} for teams that need a unified AI solution covering development, research, and business automation. Organizations with complex technical requirements will benefit from its experimental features and customization options.</p>
-        <p>For users primarily focused on code generation, complementary tools like GitHub Copilot may offer more specialized assistance. Those prioritizing research capabilities should consider Perplexity for its superior source verification features.</p>
-        <p>Ultimately, the choice depends on your specific needs, budget, and technical requirements. We encourage users to take advantage of free trials and evaluate ${name} against their actual workload before committing to a paid plan.</p>
-      </section>
-    </article>
-  `;
-}
 
 // ----------------------------
 // Blueprint Implementation
@@ -209,9 +111,40 @@ class DefaultPageBlueprint {
     let content = '';
     let wordCount = 0;
 
-    if (isDeepContent && manifest.entityType === 'agent') {
+    // Check for scaled variation content
+    const hasVariationType = !!meta.variationType;
+    
+    if (hasVariationType && manifest.entityType === 'agent') {
+      // Generate scaled content for agents with variations
+      content = generateScaledAgentContent(manifest.slug, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (isDeepContent && manifest.entityType === 'agent') {
       // Generate deep content for agents
       content = generateDeepContentForAgent(manifest.slug, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (isDeepContent && manifest.entityType === 'comparison') {
+      // Generate deep content for comparisons
+      content = generateDeepContentForComparison(entity, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (isDeepContent && manifest.entityType === 'research') {
+      // Generate deep content for research
+      content = generateDeepContentForResearch(entity, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (isDeepContent && manifest.entityType === 'category') {
+      // Generate deep content for categories
+      content = generateDeepContentForCategory(entity, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (hasVariationType && manifest.entityType === 'comparison') {
+      // Generate scaled content for comparisons with variations
+      content = generateVariationContent(entity, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (hasVariationType && manifest.entityType === 'category') {
+      // Generate scaled content for categories with variations
+      content = generateVariationContent(entity, manifest);
+      wordCount = content.split(/\s+/).length;
+    } else if (hasVariationType && manifest.entityType === 'research') {
+      // Generate scaled content for research with variations
+      content = generateVariationContent(entity, manifest);
       wordCount = content.split(/\s+/).length;
     } else if (manifest.entityType === 'agent') {
       // Simple agent content

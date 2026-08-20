@@ -139,6 +139,42 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     sitemapGroup: 'mcp',
     updatedAt: '2026-07-23'
   },
+  '/best-ai-agent-builder': {
+    id: 'pillar:best-ai-agent-builder',
+    path: '/best-ai-agent-builder',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-agent-builder',
+    title: 'Best AI Agent Builders (2026) - No-Code Platforms & Visual Design Tools - BestAIAgent.in',
+    description: 'Top AI agent builders and no-code platforms for visual agent design, workflow automation, and custom agent creation without deep ML expertise.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/silos': {
+    id: 'pillar:silos',
+    path: '/silos',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/silos',
+    title: 'AI Agent Silos - BestAIAgent.in',
+    description: 'Explore categorized AI agent ecosystems including builders, frameworks, business agents, research tools, and MCP servers.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/silos/builders': {
+    id: 'pillar:silos-builders',
+    path: '/silos/builders',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/silos/builders',
+    title: 'AI Agent Builders Silo - BestAIAgent.in',
+    description: 'No-code and low-code AI agent builder platforms and visual design suites for creating custom agents without deep ML expertise.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
   '/mcp-servers': {
     id: 'pillar:mcp-servers',
     path: '/mcp-servers',

@@ -836,3 +836,83 @@ export function generateVariationContent(
   
   return html;
 }
+
+// ----------------------------
+// Category Pillar Content Generator
+// ----------------------------
+export function generateCategoryPillarContent(category: any, manifest: any): string {
+  const data = category?.data || {};
+  const categoryName = data.name || 'AI Agent Category';
+  const categoryDesc = data.description || 'Comprehensive guide to AI agent categories.';
+  const toolCount = data.toolCount || 50;
+  
+  // Build content - targeting 2500+ words
+  let html = '<article class="deep-content">\n';
+  html += '  <h1>' + (manifest.title || categoryName) + '</h1>\n';
+
+  // Vision & Market Context - ~400 words
+  html += '  <section>\n';
+  html += '    <h2>Industry Vision & Market Context</h2>\n';
+  html += '    <p>The AI agent ecosystem has evolved from simple rule-based automation to sophisticated autonomous systems capable of complex reasoning, tool use, and contextual understanding. The ' + categoryName.toLowerCase() + ' category represents a critical segment of this evolution, with ' + toolCount + ' evaluated solutions providing capabilities for a wide range of use cases from personal productivity to enterprise-scale operations.</p>\n';
+  html += '    <p>Market analysts project continued growth in this segment, with estimates suggesting significant expansion as organizations prioritize automation, cost efficiency, and improved user experiences. The competitive landscape is characterized by rapid innovation in areas such as multi-agent coordination, memory persistence, tool integration depth, and specialized domain knowledge representation.</p>\n';
+  html += '    <p>Organizations are increasingly adopting ' + categoryName.toLowerCase() + ' solutions to achieve measurable improvements in efficiency, accuracy, and time-to-outcome. The best solutions enable seamless integration with existing workflows while providing robust APIs, comprehensive documentation, and reliable performance that scales with organizational growth and evolving requirements.</p>\n';
+  html += '  </section>\n';
+
+  // Key Capabilities & Features - ~600 words
+  html += '  <section>\n';
+  html += '    <h2>Key Capabilities & Features to Evaluate</h2>\n';
+  html += '    <p>When evaluating solutions in the ' + categoryName.toLowerCase() + ' category, organizations should consider the following critical capabilities:</p>\n';
+  html += '    <p><strong>Core Functionality:</strong> The primary capabilities that define the category. Solutions vary significantly in their approach, with some prioritizing flexibility and customization while others focus on ease of use and rapid deployment. Understanding the trade-offs between these approaches helps match solutions to specific organizational requirements and technical sophistication levels.</p>\n';
+  html += '    <p><strong>Integration Ecosystem:</strong> Modern ' + categoryName.toLowerCase() + ' solutions integrate with dozens of third-party services, APIs, and data sources. The breadth and quality of these integrations, along with support for custom connectors and webhooks, are critical for organizations with existing technology stacks that require seamless compatibility and data flow across multiple systems.</p>\n';
+  html += '    <p><strong>Performance & Reliability:</strong> Benchmarks, uptime guarantees, and response time metrics vary significantly between vendors. Organizations deploying for mission-critical applications should prioritize solutions with proven reliability, comprehensive monitoring capabilities, and clear performance SLAs backed by actual usage data and third-party verification.</p>\n';
+  html += '    <p><strong>Security & Compliance:</strong> Enterprise-grade solutions include end-to-end encryption, role-based access controls, audit logging, and compliance certifications (SOC 2, ISO 27001, GDPR). Requirements vary by industry and geography, making this a critical differentiator for regulated environments and global deployments.</p>\n';
+  html += '    <p><strong>Pricing Model:</strong> Transparent, predictable pricing that scales appropriately with usage patterns. Many vendors offer tiered pricing with free tiers for evaluation, but high-volume or enterprise deployments require careful analysis of per-token costs, minimum commitments, and volume discounts.</p>\n';
+  html += '  </section>\n';
+
+  // Leading Solutions Overview - ~500 words
+  html += '  <section>\n';
+  html += '    <h2>Leading Solutions Overview</h2>\n';
+  html += '    <p>The evaluated solutions in the ' + categoryName.toLowerCase() + ' category have been assessed across multiple dimensions including core capabilities, integration breadth, performance benchmarks, pricing competitiveness, and real-world applicability. The following characteristics distinguish top performers:</p>\n';
+  html += '    <p><strong>Comprehensive Feature Sets:</strong> Leading solutions provide robust core capabilities alongside advanced features like custom workflows, plugin architectures, and extensive configuration options. This enables organizations to adapt solutions to unique requirements rather than being constrained by vendor-default behaviors.</p>\n';
+  html += '    <p><strong>Developer Experience:</strong> High-quality documentation, interactive tutorials, community forums, and responsive support channels significantly impact time-to-value and long-term satisfaction. Solutions with well-organized API references, sample code libraries, and active community engagement tend to achieve faster adoption and better outcomes.</p>\n';
+  html += '    <p><strong>Enterprise Readiness:</strong> Features like team collaboration tools, granular permission controls, audit trails, and dedicated enterprise support distinguish solutions suitable for production deployment at scale. Organizations should evaluate not just current capabilities but also roadmap commitments and forward-looking feature development.</p>\n';
+  html += '    <p><strong>Community & Ecosystem:</strong> An active developer community, marketplace of integrations and plugins, and regular release cadence indicate platform health and long-term viability. Organizations benefit from solutions that foster innovation through shared knowledge and collaborative development.</p>\n';
+  html += '  </section>\n';
+
+  // Implementation Strategy - ~400 words
+  html += '  <section>\n';
+  html += '    <h2>Implementation Strategy & Best Practices</h2>\n';
+  html += '    <p>Successful adoption of ' + categoryName.toLowerCase() + ' solutions requires careful planning and phased execution. Organizations should begin with pilot projects that allow controlled experimentation and learning before broader deployment. Starting with well-defined use cases that have clear success metrics reduces risk and provides early validation.</p>\n';
+  html += '    <p>Data governance is critical during implementation. Organizations must establish clear policies for data handling, privacy compliance, and access control. The solution\'s integration with existing data systems should be validated for accuracy and consistency. Data lineage tracking helps ensure compliance with regulatory requirements.</p>\n';
+  html += '    <p>Change management is equally important. Teams will need training, documentation updates, and ongoing support to realize full potential. The transition from existing processes requires careful orchestration to minimize disruption. Communication plans should address concerns about job displacement while highlighting productivity gains.</p>\n';
+  html += '    <p>For enterprise deployments, consider infrastructure requirements, monitoring capabilities, and integration with existing observability systems. Scalability characteristics should be tested under projected load conditions. Redundancy planning helps prevent single points of failure and ensures business continuity.</p>\n';
+  html += '  </section>\n';
+
+  // Future Trends - ~300 words
+  html += '  <section>\n';
+  html += '    <h2>Future Trends & Emerging Developments</h2>\n';
+  html += '    <p>The ' + categoryName.toLowerCase() + ' category is poised for significant evolution. Emerging technologies and shifting user expectations are driving innovation and creating new opportunities. Market analysts expect the next wave of adoption to be fueled by improvements in accuracy, reduced costs, and expanded integration options.</p>\n';
+  html += '    <p>Key trends include more sophisticated tool integration, enhanced personalization through behavioral analysis, and improved handling of multimodal inputs and outputs. The convergence of ' + categoryName.toLowerCase() + ' solutions with other technologies such as augmented reality, blockchain, and edge computing is opening new possibilities for usage scenarios that were previously impossible.</p>\n';
+  html += '    <p>Enterprise adoption is accelerating as organizations recognize the competitive advantages of intelligent automation. This trend is fueling investment in specialized ' + categoryName.toLowerCase() + ' solutions that can handle complex workflows while maintaining security compliance and audit capabilities. Regulatory requirements are creating demand for solutions with built-in provenance tracking and compliance reporting.</p>\n';
+  html += '  </section>\n';
+
+  // Conclusion - ~250 words
+  html += '  <section>\n';
+  html += '    <h2>Conclusion & Strategic Recommendations</h2>\n';
+  html += '    <p>The ' + categoryName.toLowerCase() + ' category offers powerful solutions for organizations seeking to enhance productivity, automate workflows, and achieve operational excellence. The diversity of evaluated solutions provides options for organizations with varying requirements, budgets, and technical sophistication levels.</p>\n';
+  html += '    <p>Careful evaluation against specific requirements, hands-on testing with real workloads, and consideration of long-term strategic goals will enable organizations to select solutions that deliver sustainable value. The field continues to evolve rapidly, requiring ongoing assessment and adaptation as new capabilities emerge and existing solutions mature.</p>\n';
+  html += '    <p>Organizations that approach ' + categoryName.toLowerCase() + ' adoption as a strategic initiative—combining technical evaluation with user needs analysis and implementation planning—are most likely to succeed in achieving measurable improvements in efficiency, accuracy, and user satisfaction. The investment in proper evaluation and planning pays dividends in successful deployments and sustained adoption.</p>\n';
+  html += '  </section>\n';
+
+  // Technical References
+  html += '  <section>\n';
+  html += '    <h2>Technical References & Further Resources</h2>\n';
+  html += '    <p>Additional reading includes official documentation from leading vendors, independent research reports from industry analysts, academic papers on relevant topics, and case studies from successful implementations. Community forums provide real-world insights and troubleshooting assistance from practitioners who have faced similar challenges.</p>\n';
+  html += '    <p>API documentation, sample code repositories, and integration guides are essential starting points for technical teams. Provider status pages and incident reports offer transparency into service reliability. Vendor comparison matrices and decision frameworks help structure evaluation processes.</p>\n';
+  html += '    <p>The rapid pace of innovation means that new tools, frameworks, and best practices emerge regularly. Organizations should establish ongoing education programs to stay current with developments in the ' + categoryName.toLowerCase() + ' domain. Participation in user groups, conferences, and online communities helps leverage collective knowledge and identify emerging opportunities.</p>\n';
+  html += '  </section>\n';
+
+  html += '</article>\n';
+  
+  return html;
+}

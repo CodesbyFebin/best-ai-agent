@@ -23,7 +23,7 @@
         "pricing": {
           "type": "freemium",
           "startingPriceUSD": "$20/mo",
-          "startingPriceINR": "\u20b91,999/mo",
+          "startingPriceINR": "₹1,999/mo",
           "verifiedAt": "2026-07-20",
           "evidenceClaimIds": [
             "pricing-chatgpt-1",
@@ -84,7 +84,7 @@
         "pricing": {
           "type": "freemium",
           "startingPriceUSD": "$20/mo",
-          "startingPriceINR": "\u20b91,999/mo",
+          "startingPriceINR": "₹1,999/mo",
           "verifiedAt": "2026-07-21",
           "details": "Free Tier; Pro at $20/mo; Team at $25/user/mo; Pay-as-you-go API."
         },
@@ -136,7 +136,7 @@
         "pricing": {
           "type": "freemium",
           "startingPriceUSD": "$20/mo",
-          "startingPriceINR": "\u20b91,800/mo",
+          "startingPriceINR": "₹1,800/mo",
           "verifiedAt": "2026-07-19",
           "details": "Free trial (2,000 completions); Pro at $20/mo; Business at $40/user/mo."
         },
@@ -186,7 +186,7 @@
         "pricing": {
           "type": "paid",
           "startingPriceUSD": "$0.05/min",
-          "startingPriceINR": "\u20b94.50/min",
+          "startingPriceINR": "₹4.50/min",
           "verifiedAt": "2026-07-15",
           "details": "Pay-as-you-go per audio minute + telephony costs."
         },
@@ -239,7 +239,7 @@
         "pricing": {
           "type": "paid",
           "startingPriceUSD": "$8/mo",
-          "startingPriceINR": "\u20b9650/mo",
+          "startingPriceINR": "₹650/mo",
           "verifiedAt": "2026-07-10",
           "details": "Included with X Premium ($8/mo) or X Premium+ ($16/mo)."
         },
@@ -340,7 +340,7 @@
           "startingPriceUSD": "Free",
           "startingPriceINR": "Free",
           "verifiedAt": "2026-07-18",
-          "details": "Free Consumer Tier; Cloud API starting at \u20b90.09 per 1,000 tokens."
+          "details": "Free Consumer Tier; Cloud API starting at ₹0.09 per 1,000 tokens."
         },
         "score": {
           "overall": 8.8,
@@ -389,7 +389,7 @@
         "pricing": {
           "type": "freemium",
           "startingPriceUSD": "$20/mo",
-          "startingPriceINR": "\u20b91,999/mo",
+          "startingPriceINR": "₹1,999/mo",
           "verifiedAt": "2026-07-20",
           "details": "Free Tier (5 Pro searches/day); Pro at $20/mo with unlimited Opus/GPT-4o queries."
         },
@@ -1514,54 +1514,6 @@
       }
     },
     {
-      "id": "agent/copilot",
-      "type": "agent",
-      "data": {
-        "slug": "copilot",
-        "name": "GitHub Copilot",
-        "company": "GitHub (Microsoft)",
-        "logo": "https://images.unsplash.com/photo-1659383593931-8f2185858c88?auto=format&fit=crop&w=120&q=80",
-        "summary": "AI pair programmer with deep integration into GitHub and VS Code.",
-        "bestFor": [
-          "Pair programming",
-          "Code suggestions",
-          "Open-source contribution"
-        ],
-        "categories": [
-          "Coding Agents",
-          "Developer Tools"
-        ],
-        "pricing": {
-          "type": "paid",
-          "startingPriceUSD": "$10/mo",
-          "details": "Copilot Individual at $10/mo."
-        },
-        "score": {
-          "overall": 9.3,
-          "reasoning": 9.5,
-          "toolUse": 9.4,
-          "value": 9.1,
-          "privacy": 8.4,
-          "easeOfUse": 9.6,
-          "indiaFit": 8.9
-        },
-        "deployment": [
-          "VS Code",
-          "JetBrains",
-          "GitHub Codespaces",
-          "CLI"
-        ],
-        "integrations": [
-          "GitHub",
-          "VS Code",
-          "Neovim",
-          "Cursor"
-        ],
-        "openSource": false,
-        "officialUrl": "https://copilot.github.com"
-      }
-    },
-    {
       "id": "agent/replit",
       "type": "agent",
       "data": {
@@ -1831,10 +1783,10 @@
       }
     },
     {
-      "id": "agent/qwen2.5",
+      "id": "agent/qwen2-5",
       "type": "agent",
       "data": {
-        "slug": "qwen2.5",
+        "slug": "qwen2-5",
         "name": "Qwen 2.5",
         "company": "Alibaba Cloud",
         "logo": "https://images.unsplash.com/photo/1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=120&q=80",
@@ -3409,13 +3361,7 @@
         },
         "verdict": "Claude 3.5 wins for deep software engineering and document parsing; ChatGPT wins for custom GPT web tools and multi-modal voice.",
         "urlPath": "/compare/chatgpt-vs-claude/",
-        "lastUpdated": "2026-07-22",
-        "winnerByUseCase": {
-          "useCase": "General Usage",
-          "winnerName": "Claude",
-          "reason": "Overall value and capabilities"
-        },
-        "pricingDifference": "Pricing varies between platforms"
+        "lastUpdated": "2026-07-22"
       }
     },
     {
@@ -3438,13 +3384,7 @@
         },
         "verdict": "Cursor AI offers far superior multi-file reasoning and terminal execution for professional developers.",
         "urlPath": "/compare/cursor-vs-copilot/",
-        "lastUpdated": "2026-07-21",
-        "winnerByUseCase": {
-          "useCase": "General Usage",
-          "winnerName": "Cursor AI",
-          "reason": "Overall value and capabilities"
-        },
-        "pricingDifference": "Pricing varies between platforms"
+        "lastUpdated": "2026-07-21"
       }
     },
     {
@@ -3467,13 +3407,7 @@
         },
         "verdict": "CrewAI is faster to prototype role-based agent teams; AutoGen offers deeper conversational matrix customization.",
         "urlPath": "/compare/crewai-vs-autogen/",
-        "lastUpdated": "2026-07-20",
-        "winnerByUseCase": {
-          "useCase": "General Usage",
-          "winnerName": "CrewAI",
-          "reason": "Overall value and capabilities"
-        },
-        "pricingDifference": "Pricing varies between platforms"
+        "lastUpdated": "2026-07-20"
       }
     },
     {
@@ -3496,13 +3430,7 @@
         },
         "verdict": "Gemini excels for massive video/audio/PDF context analysis; Claude wins for code generation and logic precision.",
         "urlPath": "/compare/claude-vs-gemini/",
-        "lastUpdated": "2026-07-19",
-        "winnerByUseCase": {
-          "useCase": "General Usage",
-          "winnerName": "Claude 3.5",
-          "reason": "Overall value and capabilities"
-        },
-        "pricingDifference": "Pricing varies between platforms"
+        "lastUpdated": "2026-07-19"
       }
     },
     {
@@ -3520,18 +3448,7 @@
           "Open-source frameworks reduced agent token overhead by 31% year-over-year."
         ],
         "urlPath": "/research/state-of-ai-agents-india-2026/",
-        "datasetAvailable": true,
-        "sampleSize": "1,250 Testers",
-        "isTrending": true,
-        "priorityArea": "AI Agent Performance",
-        "targetAudience": "AI practitioners",
-        "keyBenefitArea": "operational efficiency",
-        "ratioPercentage": "significant",
-        "performanceMetric": "task success rate",
-        "uniqueFinding": "rapid acceleration in AI agent capabilities",
-        "reportPeriod": "Q3 2026",
-        "nextResearchArea": "longitudinal deployment studies",
-        "expandInsight": "industry-specific adoption patterns"
+        "datasetAvailable": true
       }
     },
     {
@@ -3542,25 +3459,14 @@
         "title": "AI Agent Enterprise & India Pricing Tracker",
         "reportType": "Pricing Index",
         "summary": "Comprehensive market comparison of API token rates, seat licenses, GST compliance, and Indian Rupee (INR) payment gateways for top AI agents.",
-        "citationReadySummary": "BestAIAgent.in's 2026 Pricing Index reveals that 68% of commercial AI agents now support Indian Rupee billing via UPI or net banking, with seat licenses averaging \u20b91,650/user/month.",
+        "citationReadySummary": "BestAIAgent.in's 2026 Pricing Index reveals that 68% of commercial AI agents now support Indian Rupee billing via UPI or net banking, with seat licenses averaging ₹1,650/user/month.",
         "keyTakeaways": [
           "UPI & local card support grew from 32% in 2024 to 68% in 2026.",
           "Average cost per autonomous agent workflow run dropped 42% due to model compression.",
           "Freemium conversion rates remain highest in coding IDE agents (14.2%)."
         ],
         "urlPath": "/research/voice-latency-report/",
-        "datasetAvailable": true,
-        "sampleSize": "1,250 Testers",
-        "isTrending": true,
-        "priorityArea": "AI Agent Performance",
-        "targetAudience": "AI practitioners",
-        "keyBenefitArea": "operational efficiency",
-        "ratioPercentage": "significant",
-        "performanceMetric": "task success rate",
-        "uniqueFinding": "rapid acceleration in AI agent capabilities",
-        "reportPeriod": "Q3 2026",
-        "nextResearchArea": "longitudinal deployment studies",
-        "expandInsight": "industry-specific adoption patterns"
+        "datasetAvailable": true
       }
     },
     {
@@ -3578,18 +3484,7 @@
           "WhatsApp Business API is the #1 integration channel for Indian customer service bots."
         ],
         "urlPath": "/research/ai-agent-benchmark-index/",
-        "datasetAvailable": true,
-        "sampleSize": "1,250 Testers",
-        "isTrending": true,
-        "priorityArea": "AI Agent Performance",
-        "targetAudience": "AI practitioners",
-        "keyBenefitArea": "operational efficiency",
-        "ratioPercentage": "significant",
-        "performanceMetric": "task success rate",
-        "uniqueFinding": "rapid acceleration in AI agent capabilities",
-        "reportPeriod": "Q3 2026",
-        "nextResearchArea": "longitudinal deployment studies",
-        "expandInsight": "industry-specific adoption patterns"
+        "datasetAvailable": true
       }
     }
   ],
@@ -4112,7 +4007,7 @@
     },
     {
       "from": "agent/chatgpt",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -4121,7 +4016,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/chatgpt",
       "type": "SIMILAR_TO",
       "properties": {
@@ -4352,7 +4247,7 @@
     },
     {
       "from": "agent/claude",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -4361,7 +4256,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude",
       "type": "SIMILAR_TO",
       "properties": {
@@ -4572,7 +4467,7 @@
     },
     {
       "from": "agent/grok",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -4581,7 +4476,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/grok",
       "type": "SIMILAR_TO",
       "properties": {
@@ -4772,7 +4667,7 @@
     },
     {
       "from": "agent/krutrim",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -4781,7 +4676,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/krutrim",
       "type": "SIMILAR_TO",
       "properties": {
@@ -4952,7 +4847,7 @@
     },
     {
       "from": "agent/perplexity",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -4961,7 +4856,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/perplexity",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5112,7 +5007,7 @@
     },
     {
       "from": "agent/gemini-pro",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5121,7 +5016,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/gemini-pro",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5252,7 +5147,7 @@
     },
     {
       "from": "agent/claude-3-opus",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5261,7 +5156,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude-3-opus",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5372,7 +5267,7 @@
     },
     {
       "from": "agent/mistral-large",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5381,7 +5276,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/mistral-large",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5472,7 +5367,7 @@
     },
     {
       "from": "agent/claude-3-haiku",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5481,7 +5376,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude-3-haiku",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5552,7 +5447,7 @@
     },
     {
       "from": "agent/claude-3-sonnet",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5561,7 +5456,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude-3-sonnet",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5631,7 +5526,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/pgpt",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5642,7 +5537,7 @@
     },
     {
       "from": "agent/pgpt",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5651,7 +5546,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/openassistant",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5662,7 +5557,7 @@
     },
     {
       "from": "agent/openassistant",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5671,7 +5566,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/gemini",
       "type": "SIMILAR_TO",
       "properties": {
@@ -5682,7 +5577,7 @@
     },
     {
       "from": "agent/gemini",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -5952,26 +5847,6 @@
     },
     {
       "from": "agent/chatgpt",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/chatgpt",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/chatgpt",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6052,7 +5927,7 @@
     },
     {
       "from": "agent/chatgpt",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -6061,7 +5936,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/chatgpt",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6312,26 +6187,6 @@
     },
     {
       "from": "agent/claude",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/claude",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/claude",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6412,7 +6267,7 @@
     },
     {
       "from": "agent/claude",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -6421,7 +6276,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6652,26 +6507,6 @@
     },
     {
       "from": "agent/cursor-ai",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/cursor-ai",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/cursor-ai",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6752,7 +6587,7 @@
     },
     {
       "from": "agent/cursor-ai",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -6761,7 +6596,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/cursor-ai",
       "type": "SIMILAR_TO",
       "properties": {
@@ -6972,26 +6807,6 @@
     },
     {
       "from": "agent/claude-sonnet",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/claude-sonnet",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/claude-sonnet",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7072,7 +6887,7 @@
     },
     {
       "from": "agent/claude-sonnet",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -7081,7 +6896,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude-sonnet",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7272,26 +7087,6 @@
     },
     {
       "from": "agent/opencode",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/opencode",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/opencode",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7372,7 +7167,7 @@
     },
     {
       "from": "agent/opencode",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -7381,7 +7176,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/opencode",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7552,26 +7347,6 @@
     },
     {
       "from": "agent/copilot",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7652,7 +7427,7 @@
     },
     {
       "from": "agent/copilot",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -7661,7 +7436,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/copilot",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7812,26 +7587,6 @@
     },
     {
       "from": "agent/claude-code",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/claude-code",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/claude-code",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -7912,7 +7667,7 @@
     },
     {
       "from": "agent/claude-code",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -7921,7 +7676,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/claude-code",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8052,26 +7807,6 @@
     },
     {
       "from": "agent/cursor-with-docs",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/cursor-with-docs",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/cursor-with-docs",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8152,7 +7887,7 @@
     },
     {
       "from": "agent/cursor-with-docs",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -8161,7 +7896,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/cursor-with-docs",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8272,26 +8007,6 @@
     },
     {
       "from": "agent/devgenie",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/devgenie",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/devgenie",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8372,7 +8087,7 @@
     },
     {
       "from": "agent/devgenie",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -8381,7 +8096,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/devgenie",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8472,26 +8187,6 @@
     },
     {
       "from": "agent/tabnine",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/tabnine",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/tabnine",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8572,7 +8267,7 @@
     },
     {
       "from": "agent/tabnine",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -8581,7 +8276,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/tabnine",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8652,26 +8347,6 @@
     },
     {
       "from": "agent/codey",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/codey",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/codey",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8752,7 +8427,7 @@
     },
     {
       "from": "agent/codey",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -8761,7 +8436,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/codey",
       "type": "SIMILAR_TO",
       "properties": {
@@ -8831,166 +8506,6 @@
       }
     },
     {
-      "from": "agent/copilot",
-      "to": "agent/replit",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/replit",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/kody",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/kody",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/mistral-code",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/mistral-code",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/deepseek-coder",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/deepseek-coder",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/qwen2.5",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/qwen2.5",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/mistral-mixtral",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/mistral-mixtral",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/chatdev",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/chatdev",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/santacode",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/santacode",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Coding Agents",
-        "score": 0.8
-      }
-    },
-    {
       "from": "agent/replit",
       "to": "agent/kody",
       "type": "SIMILAR_TO",
@@ -9052,7 +8567,7 @@
     },
     {
       "from": "agent/replit",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9061,7 +8576,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9172,7 +8687,7 @@
     },
     {
       "from": "agent/kody",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9181,7 +8696,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/kody",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9272,7 +8787,7 @@
     },
     {
       "from": "agent/mistral-code",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9281,7 +8796,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/mistral-code",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9352,7 +8867,7 @@
     },
     {
       "from": "agent/deepseek-coder",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9361,7 +8876,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/deepseek-coder",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9431,7 +8946,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/mistral-mixtral",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9442,7 +8957,7 @@
     },
     {
       "from": "agent/mistral-mixtral",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9451,7 +8966,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/chatdev",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9462,7 +8977,7 @@
     },
     {
       "from": "agent/chatdev",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -9471,7 +8986,7 @@
       }
     },
     {
-      "from": "agent/qwen2.5",
+      "from": "agent/qwen2-5",
       "to": "agent/santacode",
       "type": "SIMILAR_TO",
       "properties": {
@@ -9482,7 +8997,7 @@
     },
     {
       "from": "agent/santacode",
-      "to": "agent/qwen2.5",
+      "to": "agent/qwen2-5",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -13442,26 +12957,6 @@
     },
     {
       "from": "agent/codey",
-      "to": "agent/cursor-ai",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/cursor-ai",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
       "to": "agent/cursor-ai",
       "type": "SIMILAR_TO",
       "properties": {
@@ -13652,26 +13147,6 @@
     },
     {
       "from": "agent/copilot",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -13832,26 +13307,6 @@
     },
     {
       "from": "agent/retool",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/retool",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/retool",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -13992,26 +13447,6 @@
     },
     {
       "from": "agent/claude-code",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/claude-code",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/claude-code",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -14132,26 +13567,6 @@
     },
     {
       "from": "agent/devgenie",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/devgenie",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/devgenie",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -14252,26 +13667,6 @@
     },
     {
       "from": "agent/codey",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/codey",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/codey",
       "to": "agent/replit",
       "type": "SIMILAR_TO",
       "properties": {
@@ -14363,106 +13758,6 @@
     {
       "from": "agent/tree-sitter",
       "to": "agent/codey",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/replit",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/replit",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/kody",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/kody",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/ollama",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/ollama",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/lmstudio",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/lmstudio",
-      "to": "agent/copilot",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/copilot",
-      "to": "agent/tree-sitter",
-      "type": "SIMILAR_TO",
-      "properties": {
-        "reason": "same-category",
-        "category": "Developer Tools",
-        "score": 0.8
-      }
-    },
-    {
-      "from": "agent/tree-sitter",
-      "to": "agent/copilot",
       "type": "SIMILAR_TO",
       "properties": {
         "reason": "same-category",
@@ -17508,8 +16803,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2026-07-26T23:25:18.420Z",
-    "nodeCount": 87,
-    "edgeCount": 1394
+    "generatedAt": "2026-07-28T00:44:57.488Z",
+    "nodeCount": 86,
+    "edgeCount": 1334
   }
 }
