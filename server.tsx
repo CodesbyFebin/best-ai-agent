@@ -39,7 +39,7 @@ interface GraphData {
 }
 
 const isProd = process.env.NODE_ENV === 'production';
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 interface SeoRenderResult {
   statusCode: number;
@@ -291,6 +291,95 @@ export async function createApp() {
   app.get('/comparison-sitemap.xml', (req, res) => {
     res.setHeader('Content-Type', 'application/xml');
     res.send(generateSegmentedSitemapXml('comparisons'));
+  });
+
+  // Missing sitemaps from Search Console - map to appropriate segments
+  app.get('/blog-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/image-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    // Image sitemap would list image URLs - for now return empty valid sitemap
+    res.send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+  });
+
+  app.get('/free-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/coding-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('agents'));
+  });
+
+  app.get('/industry-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('categories'));
+  });
+
+  app.get('/longtail-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/entity-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('agents'));
+  });
+
+  app.get('/calculators-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/hub-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/author-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/glossary-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/tutorials-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/alternatives-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('comparisons'));
+  });
+
+  app.get('/pricing-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  app.get('/reddit-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('pages'));
+  });
+
+  // Map mcp-sitemap.xml to sitemap-mcp.xml
+  app.get('/mcp-sitemap.xml', (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('mcp'));
+  });
+
+  // Research sitemap alias
+  app.get(['/research-sitemap.xml', '/research-sitemap.xml'], (req, res) => {
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(generateSegmentedSitemapXml('research'));
   });
 
   // RSS Feed endpoints

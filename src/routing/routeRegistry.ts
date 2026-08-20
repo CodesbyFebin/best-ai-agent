@@ -933,6 +933,434 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
     description: 'Benchmark measuring real audio response delay across Vapi, Retell, Bland AI, and regional voice engines under various network conditions.',
     sitemapGroup: 'research',
     updatedAt: '2026-07-23'
+  },
+
+  // --- ATLAS P02: Additional agent entity routes (preserve Search Console equity) ---
+  '/agents/github-copilot': {
+    id: 'agent:github-copilot',
+    path: '/agents/github-copilot',
+    type: 'agent',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents/github-copilot',
+    title: 'GitHub Copilot Review, Agent Mode & India Pricing (2026) - BestAIAgent.in',
+    description: 'Audit of GitHub Copilot AI pair programmer. Inline code completion, Chat workspace agent, multi-file edits, and INR pricing.',
+    sitemapGroup: 'agents',
+    updatedAt: '2026-07-23'
+  },
+  '/agents/intercom-ai': {
+    id: 'agent:intercom-ai',
+    path: '/agents/intercom-ai',
+    type: 'agent',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents/intercom-ai',
+    title: 'Intercom Fin AI Agent Review & Pricing - BestAIAgent.in',
+    description: 'Review of Intercom Fin AI customer support agent. Resolution automation, conversational coverage, and INR pricing.',
+    sitemapGroup: 'agents',
+    updatedAt: '2026-07-23'
+  },
+  '/agents/codex': {
+    id: 'agent:codex',
+    path: '/agents/codex',
+    type: 'agent',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents/codex',
+    title: 'OpenAI Codex CLI Agent Review & Benchmarks - BestAIAgent.in',
+    description: 'Audit of OpenAI Codex CLI coding agent. Containerized code execution, multi-repo PR workflow, and per-task pricing.',
+    sitemapGroup: 'agents',
+    updatedAt: '2026-07-23'
+  },
+  '/agents/replit': {
+    id: 'agent:replit',
+    path: '/agents/replit',
+    type: 'agent',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents/replit',
+    title: 'Replit AI Agent Review: Autonomous App Builder (2026) - BestAIAgent.in',
+    description: 'Evaluation of Replit Agent autonomous coding capability. End-to-end app generation, deployment, and cloud workspace integration.',
+    sitemapGroup: 'agents',
+    updatedAt: '2026-07-23'
+  },
+  '/agents/agentops': {
+    id: 'agent:agentops',
+    path: '/agents/agentops',
+    type: 'agent',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/agents/agentops',
+    title: 'AgentOps Review: AI Agent Observability & Eval Platform - BestAIAgent.in',
+    description: 'Audit of AgentOps agent monitoring platform. Session replay, token cost tracking, LLM call tracing, and regression evaluation.',
+    sitemapGroup: 'agents',
+    updatedAt: '2026-07-23'
+  },
+
+  // --- ATLAS P02: Additional MCP server canonical routes ---
+  '/mcp/servers/tally-prime-desktop-local-stdio': {
+    id: 'mcp:tally-prime-desktop-local-stdio',
+    path: '/mcp/servers/tally-prime-desktop-local-stdio',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/tally-prime-desktop-local-stdio',
+    title: 'Tally Prime MCP Server (Desktop Local stdio) - BestAIAgent.in',
+    description: 'Connect AI agents to Tally Prime desktop accounting via local stdio MCP server. Ledger read/write, GST return queries, and India SME integration.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/xero-accounting-ledger-integrator': {
+    id: 'mcp:xero-accounting-ledger-integrator',
+    path: '/mcp/servers/xero-accounting-ledger-integrator',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/xero-accounting-ledger-integrator',
+    title: 'Xero Accounting Ledger Integrator MCP Server - BestAIAgent.in',
+    description: 'Programmatic ledger access to Xero accounting via MCP protocol. Invoice, contact, and bank transaction endpoints for AI agents.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/databricks-delta-lake-pipeline': {
+    id: 'mcp:databricks-delta-lake-pipeline',
+    path: '/mcp/servers/databricks-delta-lake-pipeline',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/databricks-delta-lake-pipeline',
+    title: 'Databricks Delta Lake Pipeline MCP Server - BestAIAgent.in',
+    description: 'Orchestrate Databricks Delta Lake pipelines from AI agents via MCP. ETL job triggering, table reads, and schema introspection.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/snyk-open-source-dependency-shield': {
+    id: 'mcp:snyk-open-source-dependency-shield',
+    path: '/mcp/servers/snyk-open-source-dependency-shield',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/snyk-open-source-dependency-shield',
+    title: 'Snyk Open Source Dependency Shield MCP Server - BestAIAgent.in',
+    description: 'AI-driven vulnerability scanning of open source dependencies via Snyk MCP. CVE lookup, license policy checks, and remediation suggestions.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/aadhaar-ekyc-regulatory-sandbox': {
+    id: 'mcp:aadhaar-ekyc-regulatory-sandbox',
+    path: '/mcp/servers/aadhaar-ekyc-regulatory-sandbox',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/aadhaar-ekyc-regulatory-sandbox',
+    title: 'Aadhaar eKYC Regulatory Sandbox MCP Server - BestAIAgent.in',
+    description: 'UIDAI Aadhaar eKYC verification via MCP for AI agents in the regulatory sandbox. OTP/biometric flows, DPDP consent, and audit trails.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/ecourts-india-njdg-document-scraper': {
+    id: 'mcp:ecourts-india-njdg-document-scraper',
+    path: '/mcp/servers/ecourts-india-njdg-document-scraper',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/ecourts-india-njdg-document-scraper',
+    title: 'eCourts India NJDG Document Scraper MCP Server - BestAIAgent.in',
+    description: 'Scrape eCourts India NJDG case status, orders, and judgments via MCP. Rate-limited access, case schema normalization, and agent integration.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/fedex-ups-dhl-global-logistics': {
+    id: 'mcp:fedex-ups-dhl-global-logistics',
+    path: '/mcp/servers/fedex-ups-dhl-global-logistics',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/fedex-ups-dhl-global-logistics',
+    title: 'FedEx UPS DHL Global Logistics MCP Server - BestAIAgent.in',
+    description: 'Unified shipping API across FedEx, UPS, and DHL via MCP. Tracking, label generation, and rate shopping for AI agent workflows.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/flexport-global-freight-forwarding': {
+    id: 'mcp:flexport-global-freight-forwarding',
+    path: '/mcp/servers/flexport-global-freight-forwarding',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/flexport-global-freight-forwarding',
+    title: 'Flexport Global Freight Forwarding MCP Server - BestAIAgent.in',
+    description: 'Flexport freight forwarding integration via MCP. Ocean/air shipment booking, customs documentation, and supply chain visibility.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/supabase-firebase-schema-sync': {
+    id: 'mcp:supabase-firebase-schema-sync',
+    path: '/mcp/servers/supabase-firebase-schema-sync',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/supabase-firebase-schema-sync',
+    title: 'Supabase Firebase Schema Sync MCP Server - BestAIAgent.in',
+    description: 'Sync Supabase Postgres schemas with Firebase Firestore via MCP. Bidirectional schema diffing, migration tooling, and AI agent hooks.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/corelogic-property-data-aggregator': {
+    id: 'mcp:corelogic-property-data-aggregator',
+    path: '/mcp/servers/corelogic-property-data-aggregator',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/corelogic-property-data-aggregator',
+    title: 'CoreLogic Property Data Aggregator MCP Server - BestAIAgent.in',
+    description: 'Aggregate CoreLogic property and mortgage data via MCP. AVM lookups, ownership records, and market analytics for real-estate AI agents.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/pdf': {
+    id: 'mcp:pdf',
+    path: '/mcp/servers/pdf',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/pdf',
+    title: 'PDF Processing MCP Server: Read, Extract & Generate - BestAIAgent.in',
+    description: 'Programmatic PDF operations via MCP server. Page extraction, OCR, form filling, and document generation for AI agent workflows.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+  '/mcp/servers/google-drive': {
+    id: 'mcp:google-drive',
+    path: '/mcp/servers/google-drive',
+    type: 'mcp-server',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/mcp/servers/google-drive',
+    title: 'Google Drive AI Agent Workspace MCP Server - BestAIAgent.in',
+    description: 'Connect AI agents to Google Drive via MCP. File search, document read/write, and workspace automation across Docs, Sheets, and Slides.',
+    sitemapGroup: 'mcp',
+    updatedAt: '2026-07-23'
+  },
+
+  // --- ATLAS P02: Additional comparison routes ---
+  '/compare/cursor-vs-codex': {
+    id: 'cmp:cursor-vs-codex',
+    path: '/compare/cursor-vs-codex',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/cursor-vs-codex',
+    title: 'Cursor AI vs OpenAI Codex CLI: Coding Agent Benchmark (2026) - BestAIAgent.in',
+    description: 'Head-to-head coding agent benchmark. Cursor multi-file IDE context vs Codex containerized CLI execution, latency, and pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/copilot-vs-codex': {
+    id: 'cmp:copilot-vs-codex',
+    path: '/compare/copilot-vs-codex',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/copilot-vs-codex',
+    title: 'GitHub Copilot vs OpenAI Codex: AI Coding Agent Comparison - BestAIAgent.in',
+    description: 'Compare GitHub Copilot inline IDE completion with OpenAI Codex CLI agent. Workflow fit, multi-repo support, and INR pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/claude-code-vs-codex': {
+    id: 'cmp:claude-code-vs-codex',
+    path: '/compare/claude-code-vs-codex',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/claude-code-vs-codex',
+    title: 'Claude Code vs OpenAI Codex CLI: Terminal Coding Agent Test - BestAIAgent.in',
+    description: 'Terminal-native coding agent battle. Anthropic Claude Code vs OpenAI Codex CLI on refactor tasks, repo scale, and tokens-to-PR cost.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/chatgpt-vs-perplexity': {
+    id: 'cmp:chatgpt-vs-perplexity',
+    path: '/compare/chatgpt-vs-perplexity',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/chatgpt-vs-perplexity',
+    title: 'ChatGPT vs Perplexity AI: Research Agent & Search Comparison - BestAIAgent.in',
+    description: 'Compare OpenAI ChatGPT agent mode with Perplexity AI answer engine. Citation quality, web search depth, and India pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/github-copilot-vs-tabnine': {
+    id: 'cmp:github-copilot-vs-tabnine',
+    path: '/compare/github-copilot-vs-tabnine',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/github-copilot-vs-tabnine',
+    title: 'GitHub Copilot vs Tabnine: AI Code Completion Comparison - BestAIAgent.in',
+    description: 'Compare GitHub Copilot vs Tabnine. On-prem deployment, privacy, language coverage, and per-seat INR pricing for Indian dev teams.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/github-copilot-vs-amazon-codewhisperer': {
+    id: 'cmp:github-copilot-vs-amazon-codewhisperer',
+    path: '/compare/github-copilot-vs-amazon-codewhisperer',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/github-copilot-vs-amazon-codewhisperer',
+    title: 'GitHub Copilot vs Amazon CodeWhisperer: Cloud AI Coding Comparison - BestAIAgent.in',
+    description: 'Compare GitHub Copilot with Amazon CodeWhisperer/Q Developer. AWS integration, security scans, multi-language support, and pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/intercom-vs-freshdesk': {
+    id: 'cmp:intercom-vs-freshdesk',
+    path: '/compare/intercom-vs-freshdesk',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/intercom-vs-freshdesk',
+    title: 'Intercom Fin AI vs Freshdesk Freddy AI: Support Agent Comparison - BestAIAgent.in',
+    description: 'Compare Intercom Fin AI vs Freshdesk Freddy AI. Resolution rates, channeled automation, India support costs, and INR pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/retell-ai-vs-elevenlabs': {
+    id: 'cmp:retell-ai-vs-elevenlabs',
+    path: '/compare/retell-ai-vs-elevenlabs',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/retell-ai-vs-elevenlabs',
+    title: 'Retell AI vs ElevenLabs: Voice Bot & TTS Comparison - BestAIAgent.in',
+    description: 'Compare Retell AI voice bot platform with ElevenLabs TTS. Conversation latency, voice cloning, multilingual Indic support, and costs.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+  '/compare/vapi-vs-synthflow': {
+    id: 'cmp:vapi-vs-synthflow',
+    path: '/compare/vapi-vs-synthflow',
+    type: 'comparison',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compare/vapi-vs-synthflow',
+    title: 'Vapi AI vs Synthflow: No-Code Voice Bot Comparison - BestAIAgent.in',
+    description: 'Compare Vapi AI voice infrastructure with Synthflow no-code voice platform. Outbound calling, telephony, and INR per-minute pricing.',
+    sitemapGroup: 'comparisons',
+    updatedAt: '2026-07-23'
+  },
+
+  // --- ATLAS P02: Pillar/hub pages for India compliance & vertical use cases ---
+  '/best-free-ai-agents': {
+    id: 'pillar:best-free-ai-agents',
+    path: '/best-free-ai-agents',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-free-ai-agents',
+    title: 'Best Free AI Agents (2026): Open-Source & Free-Tier Directory - BestAIAgent.in',
+    description: 'Curated list of free and open-source AI agents. Free-tier voice bots, coding agents, and automation frameworks with self-hostable options.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/best-ai-voice-agent': {
+    id: 'pillar:best-ai-voice-agent',
+    path: '/best-ai-voice-agent',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-voice-agent',
+    title: 'Best AI Voice Agent (2026): Sub-Second Latency & India Pricing - BestAIAgent.in',
+    description: 'Independent ranking of AI voice agents. Vapi, Retell, Synthflow, and Indic voice engines benchmarked on latency and INR pricing.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/ai-agents-for-security': {
+    id: 'pillar:ai-agents-for-security',
+    path: '/ai-agents-for-security',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/ai-agents-for-security',
+    title: 'AI Agents for Security: SOC Automation & Vulnerability Triage (2026) - BestAIAgent.in',
+    description: 'AI agents for security operations. Vulnerability scanning, SOC alert triage, threat hunting, and DPDP-aligned data handling.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/india': {
+    id: 'pillar:india',
+    path: '/india',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/india',
+    title: 'AI Agents in India: Market Directory, Pricing & DPDP Compliance (2026) - BestAIAgent.in',
+    description: 'India-focused AI agent hub. INR pricing index, DPDP Act compliance notes, Tier-2 cloud nodes, and Indic language support across vendors.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/compliance/dpdp-act-ai-agents': {
+    id: 'pillar:dpdp-act-ai-agents',
+    path: '/compliance/dpdp-act-ai-agents',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/compliance/dpdp-act-ai-agents',
+    title: 'DPDP Act Compliance for AI Agents (2026) - BestAIAgent.in',
+    description: 'Compliance guide mapping India\'s DPDP Act to AI agent deployments. Consent flows, data residency, principal rights, and audit requirements.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/best-ai-agent-for-call-centers': {
+    id: 'pillar:best-ai-agent-for-call-centers',
+    path: '/best-ai-agent-for-call-centers',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-agent-for-call-centers',
+    title: 'Best AI Agent for Call Centers (2026): Voice Bots & Co-Pilot Comparison - BestAIAgent.in',
+    description: 'AI agent selection for call centers. Inbound IVR handoff, agent-assist co-pilot, multilingual support, and INR per-minute economics.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/best-ai-agent-for-education': {
+    id: 'pillar:best-ai-agent-for-education',
+    path: '/best-ai-agent-for-education',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-agent-for-education',
+    title: 'Best AI Agent for Education (2026): Tutoring, Grading & Personalization - BestAIAgent.in',
+    description: 'AI agents for education workflows. Adaptive tutoring, automated grading, multi-language Indic support, and student data privacy.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/best-ai-agent-for-real-estate-calls': {
+    id: 'pillar:best-ai-agent-for-real-estate-calls',
+    path: '/best-ai-agent-for-real-estate-calls',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-agent-for-real-estate-calls',
+    title: 'Best AI Agent for Real Estate Calls (2026): Lead Qualification & Follow-up - BestAIAgent.in',
+    description: 'Voice AI for real estate outbound calling. Lead qualification scripts, Indian language coverage, DND compliance, and INR call cost.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
+  },
+  '/best-ai-agent-course': {
+    id: 'pillar:best-ai-agent-course',
+    path: '/best-ai-agent-course',
+    type: 'pillar',
+    status: 'published',
+    indexable: true,
+    canonicalPath: '/best-ai-agent-course',
+    title: 'Best AI Agent Course (2026): Build, Evaluate & Deploy Agents - BestAIAgent.in',
+    description: 'Curated AI agent learning path. Frameworks, evaluation methodology, deployment patterns, and Indian instructor-led courses with INR pricing.',
+    sitemapGroup: 'pages',
+    updatedAt: '2026-07-23'
   }
 };
 
@@ -940,6 +1368,10 @@ export const canonicalRoutes: Record<string, RouteRecord> = {
 // ATLAS P02 will migrate /a/ and /tools/ references and fix the wrong MCP
 // redirects (notion→slack, excel→filesystem, shopify→github).
 export const legacyRedirects: Record<string, string> = {
+  // Legacy agent rankings
+  '/ai-agent-rankings': '/rankings',
+  '/ai-agent-rankings/': '/rankings',
+  
   // Legacy /tools/ to /agents/ entity mapping
   '/tools/cursor': '/agents/cursor',
   '/tools/cursor-ai': '/agents/cursor',
@@ -995,4 +1427,161 @@ export const legacyRedirects: Record<string, string> = {
   // Sitemap aliases
   '/sitemap.xml': '/sitemap-index.xml',
   '/sitemap-indexed.xml': '/sitemap-index.xml',
+
+  // ATLAS P03: Search Console URL inventory preservation
+  // These URLs have existing search impressions/clicks - redirect to preserve equity
+
+  // Pricing pages → agent entity pages
+  '/vapi-pricing': '/agents/vapi',
+  '/n8n-pricing': '/agents/n8n',
+  '/yellow-ai-pricing': '/agents/yellow-ai',
+  '/intercom-pricing': '/agents/intercom-ai',
+  '/retell-pricing': '/agents/retell-ai',
+  '/flowise-pricing': '/agents/flowise-ai',
+  '/langgraph-pricing': '/agents/langgraph',
+
+  // Alternatives pages → agent entity pages
+  '/cursor-alternatives': '/agents/cursor',
+  '/claude-code-alternatives': '/agents/claude-code',
+  '/codex-alternatives': '/agents/codex',
+  '/flowise-alternatives': '/agents/flowise-ai',
+  '/vapi-alternatives': '/agents/vapi',
+  '/yellow-ai-alternatives': '/agents/yellow-ai',
+  '/replit-alternatives': '/agents/replit',
+  '/n8n-alternatives': '/agents/n8n',
+  '/intercom-alternatives': '/agents/intercom-ai',
+  '/github-copilot-alternatives': '/agents/github-copilot',
+
+  // How-to pages → agent entity pages
+  '/how-to-use-cursor-ai': '/agents/cursor',
+  '/how-to-use-vapi': '/agents/vapi',
+  '/how-to-use-github-copilot': '/agents/github-copilot',
+  '/how-to-use-yellow-ai': '/agents/yellow-ai',
+  '/how-to-build-ai-agent-with-flowise': '/agents/flowise-ai',
+  '/how-to-create-mcp-server': '/mcp-directory',
+  '/how-to-build-an-ai-agent': '/best-ai-agent-builder',
+
+  // MCP pages → MCP server pages
+  '/tally-prime-desktop-local-stdio-mcp': '/mcp/servers/tally-prime-desktop-local-stdio',
+  '/xero-accounting-ledger-integrator-mcp': '/mcp/servers/xero-accounting-ledger-integrator',
+  '/databricks-delta-lake-pipeline-mcp': '/mcp/servers/databricks-delta-lake-pipeline',
+  '/snyk-open-source-dependency-shield-mcp': '/mcp/servers/snyk-open-source-dependency-shield',
+  '/aadhaar-ekyc-regulatory-sandbox-mcp': '/mcp/servers/aadhaar-ekyc-regulatory-sandbox',
+  '/ecourts-india-njdg-document-scraper-mcp': '/mcp/servers/ecourts-india-njdg-document-scraper',
+  '/fedex-ups-dhl-global-logistics-mcp': '/mcp/servers/fedex-ups-dhl-global-logistics',
+  '/flexport-global-freight-forwarding-mcp': '/mcp/servers/flexport-global-freight-forwarding',
+  '/supabase-firebase-schema-sync-mcp': '/mcp/servers/supabase-firebase-schema-sync',
+  '/corelogic-property-data-aggregator-mcp': '/mcp/servers/corelogic-property-data-aggregator',
+  '/pdf-server': '/mcp/servers/pdf',
+  '/google-drive-ai-agent-workspace': '/mcp/servers/google-drive',
+
+  // Hub pages → relevant hub/category pages
+  '/coding-agents-hub': '/categories/coding-agents',
+  '/mcp-hub': '/mcp-directory',
+  '/free-ai-agents-hub': '/best-free-ai-agents',
+  '/business-ai-hub': '/categories/business',
+  '/longtail-hub': '/sitemap',
+  '/tutorials-hub': '/sitemap',
+  '/reddit-hub': '/sitemap',
+  '/industry-ai-agents-hub': '/categories',
+  '/voice-ai-hub': '/best-ai-voice-agent',
+  '/ai-agent-builders-hub': '/best-ai-agent-builder',
+
+  // Comparison pages → compare routes
+  '/cursor-vs-codex': '/compare/cursor-vs-codex',
+  '/chatgpt-vs-perplexity': '/compare/chatgpt-vs-perplexity',
+  '/crewai-vs-langgraph': '/compare/langgraph-vs-crewai',
+  '/vapi-vs-retell': '/compare/vapi-vs-retell',
+  '/copilot-vs-codex': '/compare/copilot-vs-codex',
+  '/crewai-vs-autogen': '/compare/crewai-vs-autogen',
+  '/cursor-vs-github-copilot': '/compare/cursor-vs-copilot',
+  '/github-copilot-vs-cursor': '/compare/cursor-vs-copilot',
+  '/dify-vs-flowise': '/compare/flowise-vs-dify',
+  '/retell-vs-elevenlabs': '/compare/retell-ai-vs-elevenlabs',
+  '/vapi-vs-synthflow': '/compare/vapi-vs-synthflow',
+  '/claude-code-vs-codex': '/compare/claude-code-vs-codex',
+  '/github-copilot-vs-tabnine': '/compare/github-copilot-vs-tabnine',
+  '/github-copilot-vs-amazon-codewhisperer': '/compare/github-copilot-vs-amazon-codewhisperer',
+  '/intercom-vs-freshdesk': '/compare/intercom-vs-freshdesk',
+
+  // AI agent type/content pages → hub pages
+  '/what-is-mcp': '/mcp-directory',
+  '/ai-agent-benchmarks': '/rankings',
+  '/ai-agent-benchmark': '/rankings',
+  '/ai-agent-market-map': '/sitemap',
+  '/ai-agent-security': '/ai-agents-for-security',
+  '/ai-agent-news': '/sitemap',
+  '/ai-agent-updates': '/sitemap',
+  '/ai-agent-trends': '/sitemap',
+  '/ai-agent-research': '/research',
+  '/ai-agent-awards': '/rankings',
+  '/ai-agent-awards-2026': '/rankings',
+  '/ai-agent-statistics': '/rankings',
+  '/ai-agent-scoring-system': '/methodology',
+  '/ai-agent-glossary': '/sitemap',
+  '/ai-agent-cases-and-examples': '/sitemap',
+  '/ai-agent-roadmap': '/sitemap',
+  '/ai-agent-examples': '/sitemap',
+  '/ai-agent-pricing-india': '/pricing',
+  '/ai-agent-adoption-report': '/research',
+  '/ai-agent-tools': '/best-ai-agent-frameworks',
+  '/ai-coding-agents': '/categories/coding-agents',
+  '/ai-code-completion-tools': '/categories/coding-agents',
+  '/hindi-ai-agent': '/india',
+  '/dpdp-act-ai-compliance': '/compliance/dpdp-act-ai-agents',
+  '/voice-ai-case-studies': '/best-ai-voice-agent',
+  '/voice-ai-faq': '/best-ai-voice-agent',
+  '/voice-ai-for-banking': '/best-ai-agent-for-call-centers',
+  '/voice-ai-for-education': '/best-ai-agent-for-education',
+  '/voice-ai-for-real-estate': '/best-ai-agent-for-real-estate-calls',
+  '/vector-dbs': '/sitemap',
+  '/what-is-rag': '/sitemap',
+  '/what-is-tool-use': '/sitemap',
+  '/what-is-agentops': '/agents/agentops',
+  '/buyers-guides': '/best-ai-agent',
+  '/alternatives': '/compare',
+  '/business': '/categories/business',
+  '/team': '/about',
+  '/entity': '/sitemap',
+  '/reviews': '/sitemap',
+  '/industry-report': '/research',
+
+  // Reddit review pages → agent pages
+  '/vapi-reddit-review': '/agents/vapi',
+  '/claude-code-reddit-review': '/agents/claude-code',
+  '/retell-reddit-review': '/agents/retell-ai',
+  '/best-ai-coding-agent-reddit': '/best-ai-agent-for-coding',
+  '/best-ai-agent-builder-reddit': '/best-ai-agent-builder',
+  '/best-ai-agent-course-reddit': '/best-ai-agent-course',
+
+  // Entity/cost-calculator pages → agent pages
+  '/cursor-ai': '/agents/cursor',
+  '/cursor-ai-entity': '/agents/cursor',
+  '/vapi-cost-calculator': '/agents/vapi',
+  '/retell-cost-calculator': '/agents/retell-ai',
+
+  // Tools redirects (remaining)
+  '/tools/github-copilot': '/agents/github-copilot',
+  '/tools/intercom-ai': '/agents/intercom-ai',
+
+  // MCP related redirects
+  '/mcp-security': '/mcp-directory',
+  '/mcp-monitoring': '/mcp-directory',
+  '/mcp-testing': '/mcp-directory',
+  '/mcp-vscode-extension': '/mcp-directory',
+  '/mcp-use-case-education': '/mcp-directory',
+  '/mcp-open-source-projects': '/mcp-directory',
+  '/building-custom-mcp-server': '/mcp-directory',
+
+  // Trailing slash variants of pillar pages. Self-referential trailing-slash
+  // variants (e.g. '/best-ai-voice-agent/' → '/best-ai-voice-agent') are
+  // intentionally omitted: path normalization already canonicalizes them to
+  // their slashless canonical route, so a redirect entry would never fire.
+  '/what-is-mcp/': '/mcp-directory',
+  '/best-ai-agents': '/best-ai-agent',
+  '/best-ai-agents/': '/best-ai-agent',
+  '/coding-agents-hub/': '/categories/coding-agents',
+
+  // www prefix variant
+  '/www.bestaiagent.in': '/',
 };
