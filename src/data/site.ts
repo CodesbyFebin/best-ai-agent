@@ -8,11 +8,11 @@ export const siteConfig = {
   canonicalHome: "https://bestaiagent.in/",
   lastDatabaseUpdate: "July 23, 2026",
   stats: {
-    agentsCount: "1,250+",
-    reviewsCount: "450+",
-    comparisonsCount: "280+",
-    benchmarksCount: "100+",
-    activeUsers: "100,000+"
+    agentsCount: "150+",
+    reviewsCount: "30+",
+    comparisonsCount: "20+",
+    benchmarksCount: "10+",
+    activeUsers: "QUARANTINED"
   },
   ecosystemNetwork: [
     {
