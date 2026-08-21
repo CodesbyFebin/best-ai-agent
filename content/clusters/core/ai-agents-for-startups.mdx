@@ -58,9 +58,9 @@ Everything else is a distraction. The rest of this page evaluates tools in those
 
 | Agent | Vendor-confirmed price | Source | Confidence |
 |-------|----------------------:|--------|-----------:|
-| Cursor Pro | $20/user/month | [cursor.com/pricing](https://cursor.com/pricing) | 95 |
-| Claude Team | $30/seat/month (monthly) / $25/seat/month (annual) | [anthropic.com/pricing](https://www.anthropic.com/pricing) | 95 |
-| GitHub Copilot Individual | $10/month or $100/year | [github.com/features/copilot/plans](https://github.com/features/copilot/plans) | 95 |
+| Cursor Pro | $20/user/month | [cursor.com/pricing](https://cursor.com/pricing) | 95 — bound to `claim:cursor-pro-pricing` |
+| Claude Team | $30/seat/month (monthly) / $25/seat/month (annual) | [anthropic.com/pricing](https://www.anthropic.com/pricing) | 95 — bound to `claim:claude-team-pricing` |
+| GitHub Copilot Individual | $10/month or $100/year | [github.com/features/copilot/plans](https://github.com/features/copilot/plans) | 95 — bound to `claim:copilot-individual-pricing` |
 | GitHub Copilot Business | $19/user/month | [github.com/features/copilot/plans](https://github.com/features/copilot/plans) | 95 |
 | GitHub Copilot Enterprise | $39/user/month | [github.com/features/copilot/plans](https://github.com/features/copilot/plans) | 95 |
 
@@ -84,8 +84,8 @@ Everything else is a distraction. The rest of this page evaluates tools in those
 
 ## India-specific considerations
 
-- **GST.** Software / IT services billed to Indian entities attract GST at 18%. The rate is declared by the GST Council Rate Schedule; we cite it in [](/trust/privacy-dpdp-editorial-policy).
-- **DPDP.** Any agent that processes Indian user data triggers DPDP Act obligations. The startup is the data fiduciary; the agent vendor is typically a data processor. The startup is responsible for consent, data principal rights, and breach notification regardless of vendor claims.
+- **GST.** Software / IT services billed to Indian entities attract GST at 18%. The rate is declared by the GST Council Rate Schedule (`claim:gst-18-software`); we cite it in [](/trust/privacy-dpdp-editorial-policy).
+- **DPDP.** Any agent that processes Indian user data triggers DPDP Act obligations. Ledger binding for the underlying statute: `claim:dpdp-act-existence`. The startup is the data fiduciary; the agent vendor is typically a data processor. The startup is responsible for consent, data principal rights, and breach notification regardless of vendor claims.
 - **INR billing.** Not every vendor invoices in INR. USD/EUR invoices trigger FX risk and require the buyer to compute GST and reverse charge as applicable. Verify with a chartered accountant before the first invoice.
 - **Cross-border data transfer.** Vendors that store data outside India do not, by themselves, violate DPDP, but they do require a contractual basis under Section 16 of the Act when the data fiduciary is an Indian entity. We do not certify any vendor as DPDP-compliant; we cite the vendor's documentation.
 
@@ -116,6 +116,7 @@ Before adopting any agent, confirm:
 - [Rating methodology](/trust/rating-methodology) — how the scores are computed
 - [Comparison methodology](/trust/comparison-methodology) — how head-to-head pages are built
 - [Editorial methodology](/trust/editorial-methodology) — how we decide what to publish
+- [Evidence methodology](/trust/evidence-methodology) — how we verify vendor claims before they appear on this page
 
 ## Frequently asked questions
 

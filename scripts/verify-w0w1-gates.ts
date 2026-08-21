@@ -6,15 +6,19 @@
  *
  * G1 Identity       — registry ID, canonical slug, parent, no collisions
  * G2 Research       — intent brief complete (proxy: page exists with H1)
- * G3 Evidence       — claims mapped to receipts, evidence gates satisfied
- * G4 Originality    — no template duplication (proxy: unique slugs)
+ * G3 Evidence       — claims mapped to receipts, evidence gates satisfied,
+ *                      and MDX material claims cite ledger claim ids
+ * G4 Originality    — no template duplication (proxy: unique slugs;
+ *                      classifications mutually exclusive, total = 50 for P01)
  * G5 Editorial      — direct prose, no padding (proxy: frontmatter + key takeaways present)
- * G6 Technical      — frontmatter/schema valid, internal links, JSON-LD placeholders
- * G7 Publication    — approved lifecycle state, sitemap eligibility, monitoring active
+ * G6 Technical      — frontmatter/schema valid, graph->MDX inbound-link parity,
+ *                      no orphans in W0/W1 graph
+ * G7 Publication    — HOLD by default; flipped to PASS only after human review
  *
  * Exit codes:
- *   0 — all gates PASS for W0/W1 slice
+ *   0 — every gate PASS
  *   1 — one or more gates FAIL
+ *   2 — one or more gates HOLD (slice not yet GREEN; owner review required)
  */
 
 import { readFileSync, existsSync, statSync, readdirSync } from 'fs';
@@ -143,33 +147,81 @@ function wordCount(p: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// G3 — Evidence (claim ledger populated, receipts cited)
+// G3 — Evidence (claim ledger populated, receipts cited, MDX material claims wired)
 // ---------------------------------------------------------------------------
 {
   const claims = Object.keys(EVIDENCE_CLAIMS);
   const sources = Object.keys(EVIDENCE_SOURCES);
   const allCurrent = claims.every((id) => claimIsCurrent(id));
-  const claimRefsValid = claims.every((c) =>
-    EVIDENCE_CLAIMS[c].evidence.every((s) => sources.includes('')) || true,
-  );
   const noContentHash = true; // enforced by donor schema (no contentHash field)
-  if (claims.length >= 5 && sources.length >= 5 && allCurrent && noContentHash && claimRefsValid) {
-    record('G3', 'PASS', `${claims.length} active claims, ${sources.length} receipts, all current, no contentHash invented.`);
+
+  // Material-claim coverage: scan P01 + trust MDX bodies for `claim:*` references.
+  const pillarCluster = [
+    join(PILLARS_CORE, 'ai-agents.mdx'),
+    ...readdirSync(CLUSTERS_CORE).filter((f) => f.endsWith('.mdx')).map((f) => join(CLUSTERS_CORE, f)),
+  ];
+  const trustFiles = readdirSync(TRUST_DIR).filter((f) => f.endsWith('.mdx'));
+  const allMdxFiles = [...pillarCluster, ...trustFiles.map((f) => join(TRUST_DIR, f))];
+  const claimIdPattern = /\bclaim:[a-z0-9-]+/g;
+  const claimRefsInMdx = new Set<string>();
+  for (const f of allMdxFiles) {
+    if (!fileExists(f)) continue;
+    const txt = readFileSync(f, 'utf-8');
+    for (const m of txt.matchAll(claimIdPattern)) {
+      claimRefsInMdx.add(m[0]);
+    }
+  }
+  const claimIdsKnown = new Set(claims);
+  const unknownClaimRefs = [...claimRefsInMdx].filter((c) => !claimIdsKnown.has(c));
+  const wiredClaimIds = [...claimRefsInMdx].filter((c) => claimIdsKnown.has(c));
+  const wiredPct = claims.length === 0 ? 0 : (wiredClaimIds.length / claims.length) * 100;
+
+  // G3 needs MDX material claims to be tied to ledger claim ids, not just URLs.
+  if (
+    claims.length >= 5 &&
+    sources.length >= 5 &&
+    allCurrent &&
+    noContentHash &&
+    unknownClaimRefs.length === 0 &&
+    wiredClaimIds.length >= Math.min(claims.length, 3)
+  ) {
+    record(
+      'G3',
+      'PASS',
+      `${claims.length} claims, ${sources.length} sources, ${wiredClaimIds.length}/${claims.length} (${wiredPct.toFixed(0)}%) wired into MDX; no contentHash invented.`,
+    );
   } else {
-    record('G3', 'FAIL', `Evidence gate failed. claims=${claims.length} sources=${sources.length} allCurrent=${allCurrent}.`);
+    record(
+      'G3',
+      'HOLD',
+      `Material-claim coverage incomplete: ${wiredClaimIds.length}/${claims.length} claim ids cited in MDX (${wiredPct.toFixed(0)}%); unknown claim refs=${unknownClaimRefs.length}; ledger integrity OK.`,
+    );
   }
 }
 
 // ---------------------------------------------------------------------------
-// G4 — Originality (no template slug collisions; classifications recorded)
+// G4 — Originality (P01 classifications: 50 mutually exclusive entries)
 // ---------------------------------------------------------------------------
 {
+  const total = P01_CLASSIFICATIONS.length;
+  const slugs = P01_CLASSIFICATIONS.map((c) => c.slug);
+  const unique = new Set(slugs).size;
   const dispositions = classificationSummary();
+  const dispositionsTotal = Object.values(dispositions).reduce((a, b) => a + b, 0);
   const buildNowCount = dispositions.build_now ?? 0;
-  if (buildNowCount >= 5) {
-    record('G4', 'PASS', `P01 cluster classification recorded. build_now=${buildNowCount} (wave 1 builds), others quarantined / retargeted.`);
+
+  if (total === 50 && unique === 50 && dispositionsTotal === 50 && buildNowCount >= 5) {
+    record(
+      'G4',
+      'PASS',
+      `P01 cluster classification is mutually exclusive: ${total} entries, ${unique} unique slugs, build_now=${buildNowCount}.`,
+    );
   } else {
-    record('G4', 'HOLD', `Only ${buildNowCount} clusters marked build_now; wave 1 yield is thin.`);
+    record(
+      'G4',
+      'HOLD',
+      `P01 classification is not mutually exclusive or is not 50 rows: total=${total}, unique=${unique}, dispositionsTotal=${dispositionsTotal}, build_now=${buildNowCount}.`,
+    );
   }
 }
 
@@ -237,24 +289,22 @@ function wordCount(p: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// G6 — Technical (frontmatter, internal links)
+// G6 — Technical (frontmatter, link-graph parity with rendered MDX, no orphans)
 // ---------------------------------------------------------------------------
 {
   const filesToCheck = [
     join(PILLARS_CORE, 'ai-agents.mdx'),
-    join(CLUSTERS_CORE, 'agentic-workflows.mdx'),
-    join(CLUSTERS_CORE, 'ai-agents-vs-chatbots.mdx'),
-    join(TRUST_DIR, 'editorial-methodology.mdx'),
+    ...readdirSync(CLUSTERS_CORE).filter((f) => f.endsWith('.mdx')).map((f) => join(CLUSTERS_CORE, f)),
+    ...readdirSync(TRUST_DIR).filter((f) => f.endsWith('.mdx')).map((f) => join(TRUST_DIR, f)),
   ];
   let invalidFrontmatter = 0;
-  let orphanCount = 0;
   for (const f of filesToCheck) {
     if (!fileExists(f)) { invalidFrontmatter++; continue; }
     const fm = parseFrontmatter(readFileSync(f, 'utf-8'));
     if (!fm.slug || !fm.title || !fm.canonicalUrl) invalidFrontmatter++;
   }
 
-  // Orphan detection: approved pages with no inbound link graph entries.
+  // Orphan detection: published pages with no inbound link graph entries.
   const approvedSlugs = ['ai-agents', 'agentic-workflows', 'ai-agents-vs-chatbots',
     'multi-agent-systems', 'ai-agent-orchestration', 'ai-agent-memory',
     'human-in-the-loop-agents', 'ai-agent-tool-calling', 'ai-agent-evaluation',
@@ -263,26 +313,67 @@ function wordCount(p: string): number {
     'comparison-methodology', 'corrections', 'source-classification',
     'affiliate-disclosure', 'author-reviewer-policy',
     'privacy-dpdp-editorial-policy', 'freshness-policy'];
-  orphanCount = orphanRecords(approvedSlugs).length;
+  const orphans = orphanRecords(approvedSlugs);
 
-  if (invalidFrontmatter === 0 && orphanCount === 0) {
-    record('G6', 'PASS', `Frontmatter valid on sampled files; 0 orphan pages in W0/W1 link graph.`);
+  // Graph->MDX parity: every graph edge whose source MDX exists must contain the target slug.
+  let unverifiedEdges = 0;
+  const sourceBodyCache = new Map<string, string>();
+  for (const f of filesToCheck) {
+    if (fileExists(f)) sourceBodyCache.set(f, readFileSync(f, 'utf-8'));
+  }
+  // Map slug -> file body
+  const slugToBody = new Map<string, string>();
+  for (const f of filesToCheck) {
+    if (!fileExists(f)) continue;
+    const fm = parseFrontmatter(readFileSync(f, 'utf-8'));
+    if (fm.slug) slugToBody.set(fm.slug, readFileSync(f, 'utf-8'));
+  }
+  for (const edge of LINK_GRAPH) {
+    const body = slugToBody.get(edge.from);
+    if (!body) continue; // source has no MDX (skip)
+    if (!body.includes(edge.to)) unverifiedEdges++;
+  }
+
+  if (invalidFrontmatter === 0 && orphans.length === 0 && unverifiedEdges === 0) {
+    record(
+      'G6',
+      'PASS',
+      `Frontmatter valid on all W0/W1 files; 0 orphan pages; ${LINK_GRAPH.length}/${LINK_GRAPH.length} graph edges verified in source MDX.`,
+    );
   } else {
-    record('G6', 'HOLD', `Frontmatter gaps=${invalidFrontmatter}; orphans=${orphanCount}.`);
+    record(
+      'G6',
+      'HOLD',
+      `Frontmatter gaps=${invalidFrontmatter}; orphans=${orphans.length}; unverified graph edges=${unverifiedEdges}/${LINK_GRAPH.length}.`,
+    );
   }
 }
 
 // ---------------------------------------------------------------------------
-// G7 — Publication (only approved records are indexable)
+// G7 — Publication (HOLD by default; only trust pages are publicationEligible;
+//      P01 pages require mandatory human approval before publication)
 // ---------------------------------------------------------------------------
 {
   const summary = registrySummary();
   const totalQuarantined = CONTENT_REGISTRY.filter((r) => r.lifecycleStatus === 'quarantined_template').length;
+  const evidenceReadyCount = CONTENT_REGISTRY.filter((r) => r.lifecycleStatus === 'evidence_ready').length;
+  const approvedCount = CONTENT_REGISTRY.filter((r) => r.lifecycleStatus === 'approved').length;
   const indexablePct = (summary.indexable / summary.total) * 100;
-  if (summary.indexable >= 10 && totalQuarantined === 0) {
-    record('G7', 'PASS', `${summary.indexable} indexable records; quarantined=${totalQuarantined}; indexable=${indexablePct.toFixed(1)}% (intentionally low — phased publication).`);
+
+  // Per master prompt §13: publication is gated on human review.
+  // The slice is GREEN-for-trust; P01 pages must be HOLD until reviewer signs off.
+  if (evidenceReadyCount === 0 && approvedCount >= 10) {
+    record(
+      'G7',
+      'PASS',
+      `${approvedCount} approved (indexable) records; ${evidenceReadyCount} awaiting human review.`,
+    );
   } else {
-    record('G7', 'PASS', `${summary.indexable} indexable records; indexable=${indexablePct.toFixed(1)}%. Phased publication in progress.`);
+    record(
+      'G7',
+      'HOLD',
+      `${evidenceReadyCount} P01 pages await mandatory human review (evidence_ready, publicationEligible=false). Trust pages approved=${approvedCount}, indexable=${indexablePct.toFixed(1)}%.`,
+    );
   }
 }
 
@@ -315,5 +406,6 @@ for (const r of results) {
 console.log();
 const fail = results.filter((r) => r.status === 'FAIL').length;
 const hold = results.filter((r) => r.status === 'HOLD').length;
-console.log(`Summary: ${results.length - fail - hold} PASS / ${hold} HOLD / ${fail} FAIL`);
-process.exit(fail > 0 ? 1 : 0);
+const pass = results.filter((r) => r.status === 'PASS').length;
+console.log(`Summary: ${pass} PASS / ${hold} HOLD / ${fail} FAIL`);
+process.exit(fail > 0 ? 1 : hold > 0 ? 2 : 0);

@@ -51,7 +51,7 @@ An AI agent is software that combines a large language model with a perception-r
 The term *AI agent* has no single canonical definition. The definitions used across this site share four commitments:
 
 1. **An LLM at the centre.** A large language model produces reasoning, plans, and natural-language outputs.
-2. **A tool-calling interface.** The model emits a structured payload describing a tool invocation; the application executes the call against an external system. The model does not execute the call directly. (Source: [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling).)
+2. **A tool-calling interface.** The model emits a structured payload describing a tool invocation; the application executes the call against an external system. The model does not execute the call directly. (Source: [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling).) Ledger binding: `claim:openai-function-calling`.
 3. **A control loop.** The agent observes the result of a tool call and decides whether to take another action, return a final answer, or escalate.
 4. **A scope of action.** The agent operates inside a permissioned envelope — tools it may call, resources it may read, prompts it may surface — defined by the application, not the model.
 
@@ -77,7 +77,7 @@ Tool calling (also called *function calling*) is the mechanism by which an agent
 > "Function calling lets you connect models to external tools and APIs. The model does not execute the call — it returns a JSON payload the application then dispatches."
 > — [OpenAI Function Calling documentation](https://platform.openai.com/docs/guides/function-calling) (primary source, retrieved 2026-08-22).
 
-The same primitive appears in every major provider: OpenAI function calling, Anthropic tool use, Google function calling, Mistral function calling, and open-weights models that expose an OpenAI-compatible tool-calling API. The MCP (Model Context Protocol) standardises how tools are advertised and invoked. (Source: [MCP specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18).)
+The same primitive appears in every major provider: OpenAI function calling, Anthropic tool use, Google function calling, Mistral function calling, and open-weights models that expose an OpenAI-compatible tool-calling API. The MCP (Model Context Protocol) standardises how tools are advertised and invoked. (Source: [MCP specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18).) Ledger binding: `claim:mcp-revision-2025-06-18`.
 
 ## Memory
 
@@ -171,7 +171,7 @@ No. Chatbots answer questions. Agents act on external systems via tool calls and
 
 ### Are AI agents safe for Indian deployments?
 
-Safety depends on the deployment, not the model. DPDP Act obligations apply to any agent that processes Indian user data. We do not certify vendors as "DPDP-compliant"; we cite the vendor's privacy documentation and let you evaluate. See [](/trust/privacy-dpdp-editorial-policy).
+Safety depends on the deployment, not the model. DPDP Act obligations apply to any agent that processes Indian user data. Ledger binding for the underlying statute: `claim:dpdp-act-existence`. We do not certify vendors as "DPDP-compliant"; we cite the vendor's privacy documentation and let you evaluate. See [](/trust/privacy-dpdp-editorial-policy).
 
 ### Can I build an agent without writing code?
 
@@ -191,6 +191,10 @@ Agents handle repetitive, well-bounded tasks. They do not replace judgement, cre
 - [Anthropic — Claude's Constitution](https://www.anthropic.com/news/claudes-constitution) (primary, retrieved 2026-08-22). Source for the principle that model behaviour is constrained by documented principles, not inferred.
 - [Model Context Protocol specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) (primary, retrieved 2026-08-22). Source for the MCP revision reviewed on this site.
 - Internal — `src/data/evidenceSchema.ts` (retrieved 2026-08-22). Source for the EVIDENCE_RULES referenced throughout this page.
+
+## Methodology anchors
+
+This page follows [our editorial methodology](/trust/editorial-methodology) — including the decision to publish, the cadence of review, and the boundary between an opinion and a citation. Every claim is also subject to the [evidence methodology](/trust/evidence-methodology) gate, and every numeric score is computed per the [rating methodology](/trust/rating-methodology).
 
 ## Last reviewed
 

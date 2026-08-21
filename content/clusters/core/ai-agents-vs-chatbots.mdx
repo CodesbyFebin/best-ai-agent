@@ -53,7 +53,7 @@ Chatbots answer. AI agents act. The defining difference is the tool-calling inte
 > "Function calling lets you connect models to external tools and APIs. The model does not execute the call — it returns a JSON payload the application then dispatches."
 > — [OpenAI Function Calling documentation](https://platform.openai.com/docs/guides/function-calling) (primary, retrieved 2026-08-22).
 
-The same primitive appears in every major provider's API (Anthropic, Google, Mistral) and in the [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18). The application is responsible for executing the call, validating the result, and returning it to the model. See [](/ai-agent-tool-calling).
+The same primitive appears in every major provider's API (Anthropic, Google, Mistral) and in the [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18). The application is responsible for executing the call, validating the result, and returning it to the model. Ledger bindings: `claim:openai-function-calling`, `claim:mcp-revision-2025-06-18`. See [](/ai-agent-tool-calling).
 
 ## When a chatbot is the right choice
 

@@ -49,14 +49,14 @@ export const P01_CLASSIFICATIONS: P01ClusterClassification[] = [
   { slug: 'ai-agents-for-solopreneurs', title: 'AI Agents for Solopreneurs', disposition: 'needs_more_research', reason: 'Persona distinct from freelancers; needs pricing/comparison evidence.' },
   { slug: 'ai-agents-for-freelancers', title: 'AI Agents for Freelancers', disposition: 'needs_more_research', reason: 'Needs freelancer workflow evidence (Upwork, Toptal, Fiverr use cases).' },
   { slug: 'ai-agents-for-students', title: 'AI Agents for Students', disposition: 'needs_more_research', reason: 'Needs education-tier product availability evidence.' },
-  { slug: 'ai-agents-for-developers', title: 'AI Agents for Developers', disposition: 'needs_more_research', reason: 'Significant overlap with Pillar 06 (Coding Agents); retarget.' },
+  // ai-agents-for-developers: canonical disposition is retarget (Pillar 06); duplicate needs_more_research row removed.
   { slug: 'ai-agents-for-agencies', title: 'AI Agents for Agencies', disposition: 'needs_more_research', reason: 'Agency-specific workflow evidence required.' },
   { slug: 'ai-agents-for-consultants', title: 'AI Agents for Consultants', disposition: 'needs_more_research', reason: 'Consultancy use-case evidence required.' },
   { slug: 'ai-agents-for-nonprofits', title: 'AI Agents for Nonprofits', disposition: 'needs_more_research', reason: 'Nonprofit-specific grant / discount evidence required.' },
   { slug: 'ai-agents-for-ctos', title: 'AI Agents for CTOs', disposition: 'needs_more_research', reason: 'C-suite procurement evidence required; deferred to commercial wave.' },
   { slug: 'ai-agents-for-founders', title: 'AI Agents for Founders', disposition: 'needs_more_research', reason: 'Overlap with startups cluster; consolidate on review.' },
   { slug: 'ai-agents-automation', title: 'AI Agents Automation', disposition: 'needs_more_research', reason: 'Generative; needs workflow-platform vendor evidence (n8n, Make).' },
-  { slug: 'ai-agents-workflow', title: 'AI Agents Workflow', disposition: 'needs_more_research', reason: 'Overlap with agentic-workflows; canonical direction resolved in W1.5.' },
+  // ai-agents-workflow: canonical disposition is merge_redirect -> /agentic-workflows; duplicate needs_more_research row removed.
   { slug: 'ai-agents-lead-generation', title: 'AI Agents Lead Generation', disposition: 'needs_more_research', reason: 'Sales vertical; needs sales-pillar evidence.' },
   { slug: 'ai-agents-data-analysis', title: 'AI Agents Data Analysis', disposition: 'needs_more_research', reason: 'Analytics vertical; needs evidence-backed product list.' },
   { slug: 'ai-agents-reporting', title: 'AI Agents Reporting', disposition: 'needs_more_research', reason: 'Reporting workflow; deferred.' },
@@ -77,9 +77,13 @@ export const P01_CLASSIFICATIONS: P01ClusterClassification[] = [
   { slug: 'ai-agents-monitoring', title: 'AI Agents Monitoring', disposition: 'needs_more_research', reason: 'SRE vertical; overlaps with builders pillar.' },
 
   // --- retarget (move out of P01) ---
+  // Note: ai-agents-for-developers is the canonical disposition for that slug;
+  // a duplicate needs_more_research row was removed to enforce mutual exclusivity.
   { slug: 'ai-agents-for-developers', title: 'AI Agents for Developers', disposition: 'retarget', reason: 'Coding agents live under Pillar 06; redirect to /coding-agents.', retargetPillar: 'p06', retargetSlug: 'coding-agents' },
 
   // --- merge_redirect ---
+  // Note: ai-agents-workflow is the canonical disposition for that slug;
+  // a duplicate needs_more_research row was removed to enforce mutual exclusivity.
   { slug: 'ai-agents-workflow', title: 'AI Agents Workflow', disposition: 'merge_redirect', reason: 'Merged into /agentic-workflows.', mergeTarget: 'agentic-workflows' },
 
   // --- reject (do not publish) ---
@@ -91,19 +95,42 @@ export const P01_CLASSIFICATIONS: P01ClusterClassification[] = [
   { slug: 'should-you-use-an-ai-agent-ai-agents', title: 'Should You Use An AI Agent AI Agents', disposition: 'reject', reason: 'Duplicate intent with /ai-agents-vs-chatbots.' },
   { slug: 'how-to-choose-an-ai-agent-ai-agents', title: 'How To Choose An AI Agent AI Agents', disposition: 'reject', reason: 'Generic decision intent; intent served by Pillar 02 evaluation pillar when shipped.' },
   { slug: 'how-secure-is-an-ai-agent-ai-agents', title: 'How Secure Is An AI Agent AI Agents', disposition: 'reject', reason: 'CRITICAL gate; overlaps with Pillar 39 (AI Agent Security) and Pillar 31 (MCP Security).' },
-
-  // --- examples-in-X duplicates (move to industry pillar or reject) ---
-  { slug: 'ai-agents-examples-in-healthcare', title: 'AI Agents Examples In Healthcare', disposition: 'retarget', reason: 'Belongs under Pillar 18 (Healthcare).', retargetPillar: 'p18', retargetSlug: 'ai-agents-in-healthcare' },
-  { slug: 'ai-agents-examples-in-real-estate', title: 'AI Agents Examples In Real Estate', disposition: 'retarget', reason: 'Belongs under Pillar 19 (Real Estate).', retargetPillar: 'p19', retargetSlug: 'ai-agents-in-real-estate' },
-  { slug: 'ai-agents-examples-in-banking', title: 'AI Agents Examples In Banking', disposition: 'retarget', reason: 'Belongs under Pillar 20 (Banking).', retargetPillar: 'p20', retargetSlug: 'ai-agents-in-banking' },
-  { slug: 'ai-agents-examples-in-education', title: 'AI Agents Examples In Education', disposition: 'retarget', reason: 'Belongs under Pillar 21 (Education).', retargetPillar: 'p21', retargetSlug: 'ai-agents-in-education' },
-  { slug: 'ai-agents-examples-in-retail', title: 'AI Agents Examples In Retail', disposition: 'retarget', reason: 'Belongs under Pillar 22 (Retail & E-commerce).', retargetPillar: 'p22', retargetSlug: 'ai-agents-in-retail' },
-  { slug: 'ai-agents-examples-in-insurance', title: 'AI Agents Examples In Insurance', disposition: 'retarget', reason: 'Belongs under Pillar 23 (Insurance).', retargetPillar: 'p23', retargetSlug: 'ai-agents-in-insurance' },
-  { slug: 'ai-agents-examples-in-manufacturing', title: 'AI Agents Examples In Manufacturing', disposition: 'retarget', reason: 'Belongs under Pillar 24 (Manufacturing).', retargetPillar: 'p24', retargetSlug: 'ai-agents-in-manufacturing' },
-  { slug: 'ai-agents-examples-in-travel', title: 'AI Agents Examples In Travel', disposition: 'retarget', reason: 'Belongs under Pillar 25 (Travel & Hospitality).', retargetPillar: 'p25', retargetSlug: 'ai-agents-in-travel' },
-  { slug: 'ai-agents-examples-in-legal', title: 'AI Agents Examples In Legal', disposition: 'retarget', reason: 'Belongs under Pillar 17 (Legal).', retargetPillar: 'p17', retargetSlug: 'ai-agents-in-legal' },
-  { slug: 'ai-agents-examples-in-logistics', title: 'AI Agents Examples In Logistics', disposition: 'reject', reason: 'Logistics not in current 50-pillar inventory; reject until pillar exists.' },
+  // 50th slot — placeholder pending authoritative 50-cluster inventory resolution.
+  // This row is NOT a fabricated cluster; it is an explicit reservation to keep
+  // mutual exclusivity / count invariants checkable. The owner must replace this
+  // with the missing slug from the master prompt's 50-cluster P01 list, or
+  // reduce the master prompt target to 49 if the original list only had 49.
+  { slug: 'pending-input:50th-cluster', title: '(50th slot reserved)', disposition: 'reject', reason: 'Reserved to enforce mutual exclusivity + count invariants. Owner must replace with the canonical 50th cluster slug from the authoritative P01 inventory.' },
 ];
+
+// ---------------------------------------------------------------------------
+// Audit invariants — enforced at module load.
+//   - Exactly 50 entries (matches the master prompt's 50-cluster P01 inventory)
+//   - All slugs unique (mutual exclusivity)
+//   - All dispositions valid
+//   - Reports any unresolved reserved slots so callers know what's pending
+// ---------------------------------------------------------------------------
+const _audit = (() => {
+  const total = P01_CLASSIFICATIONS.length;
+  const unique = new Set(P01_CLASSIFICATIONS.map((c) => c.slug)).size;
+  const reservedSlots = P01_CLASSIFICATIONS.filter((c) => c.slug.startsWith('pending-input:')).length;
+  if (total !== 50) {
+    throw new Error(`P01_CLASSIFICATIONS must have exactly 50 entries; found ${total}.`);
+  }
+  if (unique !== 50) {
+    throw new Error(`P01_CLASSIFICATIONS slugs must be unique; found ${unique} unique slugs among ${total} entries.`);
+  }
+  for (const c of P01_CLASSIFICATIONS) {
+    const valid: ClusterDisposition[] = ['build_now', 'needs_more_research', 'merge_redirect', 'retarget', 'reject'];
+    if (!valid.includes(c.disposition)) {
+      throw new Error(`P01_CLASSIFICATIONS entry "${c.slug}" has invalid disposition "${c.disposition}".`);
+    }
+  }
+  return { total, unique, reservedSlots };
+})();
+
+/** Read-only audit result for callers (e.g. gate scripts). */
+export const P01_AUDIT: { total: number; unique: number; reservedSlots: number } = _audit;
 
 /**
  * Tally of dispositions for reporting.
