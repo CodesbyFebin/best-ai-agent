@@ -1,0 +1,82 @@
+---
+slug: rating-methodology
+title: "Rating Methodology — How Numeric Scores Are Computed"
+description: "How BestAIAgent.in computes numeric ratings: seven dimensions, evidence gating, weight declaration, and what scores never mean."
+canonicalUrl: "https://bestaiagent.in/trust/rating-methodology"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - "Internal — src/data/evidenceSchema.ts (QualityScore, calculateQualityScore)"
+  - "Internal — src/content/registry/evidence-ledger.ts"
+---
+
+# Rating Methodology
+
+Numeric scores appear on entity profiles and comparison pages. This page documents how those scores are computed, what they do and do not mean, and what we refuse to score.
+
+## Where scores come from
+
+Scores on this site are derived by the `calculateQualityScore` function in `src/data/evidenceSchema.ts`. The function aggregates six signals into a 0-100 score:
+
+| Component | Weight | What it measures |
+|-----------|-------:|------------------|
+| `evidence` | 25% | Share of material claims with at least one receipt |
+| `authority` | 20% | Average authority of cited sources (primary = 100, secondary = 75, community = 50) |
+| `freshness` | 15% | Share of receipts whose freshness date is within 30 days |
+| `contradictionRisk` | 15% | Inverse of contradictions in the claim ledger |
+| `intentSatisfaction` | 10% | Match between the page body and the page's declared search intent |
+| `entityCoverage` | 15% | Coverage of entities referenced by the page |
+
+The function returns an `overall` score that is rounded to the nearest integer and stored on the entity profile. The function returns `false` for `passesQualityGate` until evidence coverage, source authority, and overall score all clear their declared thresholds.
+
+## What scores never mean
+
+- A score is **not** a verdict. A high score means the entity profile has strong evidence coverage; it does not mean the entity is "good" for your use case. The verdict belongs to the comparison and review pages, where evidence windows and review methodology are declared.
+- A score is **not** a ranking. We do not publish score-based leaderboards except where the leaderboard is a declared methodology with declared weights.
+- A score is **not** durable. Scores decay as evidence ages. A page in `refresh_required` shows the score with a freshness warning, not as if it were current.
+
+## What we refuse to score
+
+We refuse to publish numeric scores for:
+
+- Adoption or popularity (we have no audited measurement).
+- "Best in class" verdicts without a declared methodology and weight set.
+- Vendor trust or security certification without access to the certification document.
+- User satisfaction or review scores without a verified sample and methodology.
+- Latency, uptime, or cost without our own measurement or a cited primary source.
+
+When a metric is unavailable we say so plainly. We do not synthesize a number to fill a table cell.
+
+## Declaration on every comparison page
+
+Comparison pages declare:
+
+- The scoring dimensions and their weights.
+- The evidence window for each product.
+- Any vendor relationship that could influence the score (with reference to [](/trust/affiliate-disclosure)).
+- The freshness of the underlying data.
+
+The declaration lives in the methodology section of every comparison page and is reproduced from [](/trust/comparison-methodology).
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Corrections](/trust/corrections)
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`QualityScore`, `calculateQualityScore`, `passesQualityGate`, retrieved 2026-08-22). The score calculation referenced on this page.
+- Internal — `src/content/registry/evidence-ledger.ts` (retrieved 2026-08-22). The receipt store referenced by `evidence` and `authority` components.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

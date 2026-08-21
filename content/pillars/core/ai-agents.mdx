@@ -1,0 +1,199 @@
+---
+slug: ai-agents
+title: "AI Agents — Core Definitions, Architecture, and the Evidence Behind Them"
+description: "Evidence-backed definition of AI agents, the perception-reasoning-action loop, planning, memory, tool calling, multi-agent systems, and orchestration — with primary-source receipts."
+canonicalUrl: "https://bestaiagent.in/ai-agents"
+pillarGroup: core
+pageClass: pillar
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: null
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/what-is-an-ai-agent"
+  - "/ai-agent"
+  - "/agents-explained"
+primaryEntityIds:
+  - "concept:ai-agent"
+  - "concept:agentic-workflow"
+relatedEntityIds:
+  - "concept:mcp"
+  - "concept:tool-calling"
+  - "concept:orchestration"
+sources:
+  - "OpenAI — Function Calling (https://platform.openai.com/docs/guides/function-calling)"
+  - "Anthropic — Claude's Constitution (https://www.anthropic.com/news/claudes-constitution)"
+  - "Model Context Protocol specification, revision 2025-06-18 (https://modelcontextprotocol.io/specification/2025-06-18)"
+---
+
+# AI Agents — Core Definitions, Architecture, and the Evidence Behind Them
+
+## Direct answer (AEO)
+
+An AI agent is software that combines a large language model with a perception-reasoning-action loop, persistent or episodic memory, and tool-calling interfaces that let the model act on external systems. The model proposes actions; the application executes them; the agent observes the result and iterates. AI agents differ from chatbots by acting rather than only answering.
+
+## Key takeaways
+
+- An AI agent is **software that acts**, not just software that replies.
+- The defining primitive is **tool calling** — the model emits a structured request, the host application dispatches it, and the result returns to the model.
+- Agents operate in a **perception → reasoning → action → observation** loop. Memory and planning are layered on top.
+- An **agentic workflow** is the application-level pattern that orchestrates multiple agent steps with branching, retries, and human approval.
+- **Multi-agent systems** coordinate more than one agent; **orchestration** is the engineering discipline that coordinates them.
+- **Evidence rules** govern every claim about an agent on this site; see [](/trust/evidence-methodology).
+
+## What an AI agent is
+
+The term *AI agent* has no single canonical definition. The definitions used across this site share four commitments:
+
+1. **An LLM at the centre.** A large language model produces reasoning, plans, and natural-language outputs.
+2. **A tool-calling interface.** The model emits a structured payload describing a tool invocation; the application executes the call against an external system. The model does not execute the call directly. (Source: [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling).)
+3. **A control loop.** The agent observes the result of a tool call and decides whether to take another action, return a final answer, or escalate.
+4. **A scope of action.** The agent operates inside a permissioned envelope — tools it may call, resources it may read, prompts it may surface — defined by the application, not the model.
+
+A chatbot satisfies the first commitment and not the other three. An AI agent satisfies all four.
+
+## The perception-reasoning-action loop
+
+Every agent on this site implements some variant of the loop below. The naming varies by framework (LangGraph uses `nodes` and `edges`, AutoGen uses `agents` and `groups`, CrewAI uses `tasks` and `crews`), but the underlying cycle is the same.
+
+```
+Perception → Reasoning → Action → Observation → (loop or return)
+```
+
+- **Perception.** The agent accepts input from the user, the environment, or upstream tools. Input may be plain text, structured JSON, image content, audio, or a tool result.
+- **Reasoning.** The LLM interprets the input, decides whether to act, and selects an action. Reasoning may be a single model call or a chain of calls (chain-of-thought, tree-of-thought, plan-and-execute).
+- **Action.** The agent emits a structured tool call. The host application executes the call. The agent does not execute the call directly.
+- **Observation.** The agent receives the result of the call, integrates it into its context, and decides whether to iterate or return.
+
+## Tool calling as the defining primitive
+
+Tool calling (also called *function calling*) is the mechanism by which an agent acts. The model does not call the function itself; the application does.
+
+> "Function calling lets you connect models to external tools and APIs. The model does not execute the call — it returns a JSON payload the application then dispatches."
+> — [OpenAI Function Calling documentation](https://platform.openai.com/docs/guides/function-calling) (primary source, retrieved 2026-08-22).
+
+The same primitive appears in every major provider: OpenAI function calling, Anthropic tool use, Google function calling, Mistral function calling, and open-weights models that expose an OpenAI-compatible tool-calling API. The MCP (Model Context Protocol) standardises how tools are advertised and invoked. (Source: [MCP specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18).)
+
+## Memory
+
+Memory is the part of the agent that persists across steps, sessions, or users. We distinguish three layers:
+
+- **Working memory** — the context window of the current invocation. Bounded by the model's context limit.
+- **Episodic memory** — a log of past steps or past sessions, retrieved on demand. Often stored in a vector database.
+- **Semantic memory** — distilled knowledge (preferences, facts, user profile) retrieved on demand.
+
+Memory is not the model. Memory is the storage layer the agent reads from and writes to.
+
+## Planning
+
+Planning is the part of the agent that decomposes a goal into steps. The model may produce a plan up front (plan-and-execute), generate steps lazily (ReAct), or use a mixture (plan, execute, replan on failure). Planning quality is a primary axis of agent evaluation.
+
+## Agentic workflows
+
+An *agentic workflow* is the application pattern that uses one or more agents to perform a multi-step task. Workflows add structure that pure agent loops lack:
+
+- **Branching** — different paths depending on intermediate results.
+- **Retries** — bounded retries on transient failures.
+- **Human approval** — checkpoint where a human reviews and either approves, modifies, or rejects.
+- **State persistence** — durable state that survives process restarts.
+- **Observability** — structured logs of every step for debugging and audit.
+
+LangGraph, Temporal, Inngest, and AutoGen are common workflow frameworks. (See [agentic workflows cluster](/agentic-workflows) for a deeper treatment.)
+
+## Multi-agent systems
+
+A *multi-agent system* is a system in which more than one agent participates in a shared task. Multi-agent systems trade single-agent simplicity for specialisation: one agent may plan, another may execute, a third may critique. The engineering challenge is coordination — passing state between agents, resolving conflicts, and preserving audit trails. (See [multi-agent systems cluster](/multi-agent-systems).)
+
+## Orchestration
+
+*Orchestration* is the engineering discipline that keeps multi-agent systems reliable. It covers routing, retries, fallbacks, human-in-the-loop checkpoints, observability, and rollback. Frameworks include LangGraph, Temporal, Inngest, AWS Step Functions, and n8n for no-code workflows. (See [agent orchestration cluster](/ai-agent-orchestration).)
+
+## Human-in-the-loop
+
+*Human-in-the-loop* (HITL) is the pattern in which the agent pauses at defined checkpoints and waits for human approval before proceeding. HITL is not optional in regulated contexts (healthcare, finance, legal) and is good practice in any context where the cost of a wrong action exceeds the cost of a human review. (See [HITL cluster](/human-in-the-loop-agents).)
+
+## Autonomy levels
+
+Autonomy describes how much of the loop the agent controls without human approval. We use a four-level scale on this site:
+
+| Level | Description | Example |
+|-------|-------------|---------|
+| **L1 — Assisted** | Agent suggests; human executes | Code completion with confirm-to-apply |
+| **L2 — Supervised** | Agent executes within an approved scope; human audits | Customer-support agent replying within a known FAQ |
+| **L3 — Delegated** | Agent executes across an open scope; human reviews outputs | Research agent that writes a draft; human reviews before sending |
+| **L4 — Autonomous** | Agent executes end-to-end without human approval | Self-driving car; out of scope for most enterprise deployments today |
+
+(See [autonomy levels cluster](/ai-agent-autonomy-levels).)
+
+## What an AI agent is not
+
+- **Not a chatbot.** Chatbots answer; agents act. The distinction is the tool-calling interface and the action loop.
+- **Not AGI.** An AI agent operates inside a permissioned envelope. AGI is a hypothetical system that operates across every domain without an envelope.
+- **Not autonomous by default.** Autonomy is a deployment choice, not a property of the model. An agent deployed with HITL checkpoints is supervised; the same model deployed without checkpoints is more autonomous.
+- **Not infallible.** The model hallucinates; tool calls fail; plans go wrong. Engineering controls (retries, fallbacks, HITL) are part of the agent, not separate from it.
+
+## How we evaluate agents
+
+We score agents across seven dimensions. The dimensions and their weights are declared in [](/trust/rating-methodology). Every numeric score on this site traces to one or more receipts in `src/content/registry/evidence-ledger.ts`.
+
+| Dimension | What we measure | Evidence class |
+|-----------|-----------------|-----------------|
+| Reasoning | Quality of plan and adaptation | STANDARD |
+| Tool use | Coverage of tools, error handling | STANDARD |
+| Latency | End-to-end response time | COMPARISON |
+| Value / token efficiency | Cost per completed task | STANDARD |
+| Reliability | Uptime, failure modes, recovery | STANDARD |
+| India fit | DPDP posture, INR pricing, regional support | CRITICAL |
+| Enterprise scalability | Growth capacity, audit, role-based access | STANDARD |
+
+(See [evaluation cluster](/ai-agent-evaluation).)
+
+## How the agent connects to other pillars
+
+| If you care about | Read |
+|-------------------|------|
+| Coding agents specifically | [Coding agents hub](/coding-agents-hub) (Pillar 06, Wave 2) |
+| MCP and how it standardises tools | [MCP pillar](/mcp) (Pillar 36, Wave 6) |
+| How agents are orchestrated | [Orchestration cluster](/ai-agent-orchestration) |
+| India-region compliance | [DPDP editorial policy](/trust/privacy-dpdp-editorial-policy) |
+| How numeric scores are computed | [Rating methodology](/trust/rating-methodology) |
+
+## Frequently asked questions
+
+### Is an AI agent the same as a chatbot?
+
+No. Chatbots answer questions. Agents act on external systems via tool calls and iterate on the result. The defining primitive is tool calling. See [](/ai-agents-vs-chatbots).
+
+### Are AI agents safe for Indian deployments?
+
+Safety depends on the deployment, not the model. DPDP Act obligations apply to any agent that processes Indian user data. We do not certify vendors as "DPDP-compliant"; we cite the vendor's privacy documentation and let you evaluate. See [](/trust/privacy-dpdp-editorial-policy).
+
+### Can I build an agent without writing code?
+
+Yes — no-code agent builders exist. We evaluate them in Pillar 29 (Builders) in Wave 6.
+
+### How do you decide which agents to cover?
+
+We cover agents that have a primary-source verifiable pricing page, a documented capability list, and an English-language privacy or security page we can cite. We do not cover agents whose vendors refuse to publish pricing or capability documentation.
+
+### Do agents replace human workers?
+
+Agents handle repetitive, well-bounded tasks. They do not replace judgement, creativity, or accountability. See [](/human-in-the-loop-agents).
+
+## Source receipts
+
+- [OpenAI — Function Calling documentation](https://platform.openai.com/docs/guides/function-calling) (primary, retrieved 2026-08-22). Source for the claim that the model returns a structured payload and the application executes the call.
+- [Anthropic — Claude's Constitution](https://www.anthropic.com/news/claudes-constitution) (primary, retrieved 2026-08-22). Source for the principle that model behaviour is constrained by documented principles, not inferred.
+- [Model Context Protocol specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) (primary, retrieved 2026-08-22). Source for the MCP revision reviewed on this site.
+- Internal — `src/data/evidenceSchema.ts` (retrieved 2026-08-22). Source for the EVIDENCE_RULES referenced throughout this page.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

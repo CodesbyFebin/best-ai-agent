@@ -1,0 +1,81 @@
+---
+slug: comparison-methodology
+title: "Comparison Methodology — How Head-to-Head Pages Are Constructed"
+description: "How BestAIAgent.in builds product comparison pages: equivalent evidence windows, declared weights, scenario recommendations, and reverse-route canonicalization."
+canonicalUrl: "https://bestaiagent.in/trust/comparison-methodology"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: COMPARISON
+sources:
+  - "Internal — src/data/evidenceSchema.ts (EVIDENCE_RULES.COMPARISON)"
+  - "Internal — src/content/registry/content-registry.ts (CANONICAL_REDIRECTS)"
+---
+
+# Comparison Methodology
+
+Comparison pages are the most-trusted and the most-misused artefacts on a research site. This page documents how we build comparison pages, what evidence windows we require, and how we handle the reverse-direction ("X vs. Y") slug problem.
+
+## When we will publish a comparison page
+
+We publish a comparison page only when both products under review have:
+
+- A primary source we can cite for at least the head-to-head criteria.
+- Equivalent evidence windows (we do not compare today's evidence for product A against last year's evidence for product B).
+- Comparable surface area in the comparison (we do not compare an enterprise plan against a hobby plan without saying so explicitly).
+
+When one side has thin evidence we either refuse to publish the page, narrow the comparison scope, or move the page to `needs_more_research`.
+
+## Evidence window parity
+
+Every comparison page declares an evidence window (the date range of the receipts we relied on). If the windows are not equivalent — for example because product A was last reviewed on 2026-07-12 and product B was last reviewed on 2025-11-04 — we either re-verify the older side or note the asymmetry in the methodology section.
+
+We do not silently inherit older evidence to make a comparison look fresher than it is.
+
+## Declared weights and criteria
+
+Every comparison page publishes:
+
+- The criteria being compared (e.g. reasoning, tool use, latency, India fit, enterprise scalability).
+- The weight assigned to each criterion.
+- The source for each numeric value.
+- The freshness of each numeric value.
+
+The criteria and weights are declared in the page's methodology section. We do not change weights to force a desired verdict.
+
+## Scenario recommendations
+
+Comparison pages conclude with scenario recommendations ("choose A when X, choose B when Y"). The scenarios are evidence-backed; they are not sales pitches for either vendor.
+
+## Reverse-route canonicalization
+
+For every comparison we choose one canonical direction ("A vs. B" wins, "B vs. A" 301s to "A vs. B"). The reverse-direction routes are listed in `src/content/registry/content-registry.ts` under `CANONICAL_REDIRECTS` and produce 301 status codes at the routing layer.
+
+The canonical direction rule applies regardless of search volume. We do not swap canonical direction to chase a keyword.
+
+## What comparison pages do not do
+
+- We do not declare a winner without a methodology. "X is the best" is rejected unless the methodology is published on the same page.
+- We do not invent `AggregateRating`, `Review`, or numeric review-count schema. We never mark up a comparison page with a score that is not visible on the page.
+- We do not include affiliate links inside the verdict. Affiliate disclosure lives on [](/trust/affiliate-disclosure) and is reproduced on every page that links to a commercial partner.
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Source classification](/trust/source-classification)
+- [Canonical overlay registry](https://github.com/CodesbyFebin/best-ai-agent/blob/main/src/content/registry/content-registry.ts)
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`EVIDENCE_RULES.COMPARISON`, retrieved 2026-08-22). Defines the comparison evidence gate used by every comparison page.
+- Internal — `src/content/registry/content-registry.ts` (`CANONICAL_REDIRECTS`, retrieved 2026-08-22). Declares the reverse-direction 301 redirects for A-vs-B routes.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

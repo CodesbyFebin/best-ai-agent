@@ -1,0 +1,130 @@
+---
+slug: multi-agent-systems
+title: "Multi-Agent Systems — When One Agent Isn't Enough"
+description: "Evidence-backed guide to multi-agent systems: coordination patterns, role specialisation, conflict resolution, and the failure modes that make them harder than they look."
+canonicalUrl: "https://bestaiagent.in/multi-agent-systems"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+primaryEntityIds:
+  - "concept:multi-agent"
+relatedEntityIds:
+  - "framework:autogen"
+  - "framework:crewai"
+sources:
+  - "AutoGen documentation (https://microsoft.github.io/autogen/)"
+  - "CrewAI documentation (https://docs.crewai.com/)"
+---
+
+# Multi-Agent Systems
+
+## Direct answer (AEO)
+
+A multi-agent system is one in which more than one agent participates in a shared task. The agents may be peers (each with their own goal), hierarchically organised (a planner delegates to workers), or critic–worker (one agent produces, another critiques). Multi-agent systems trade single-agent simplicity for specialisation and parallelism; they earn that trade only when the task is too complex for a single prompt.
+
+## Key takeaways
+
+- Multi-agent is a **pattern**, not a product. The same vendor may offer it; multiple vendors may collaborate.
+- Three topographies cover most cases: **peer**, **hierarchical**, **critic–worker**.
+- The hard part is not the agents; it is the **coordination** — passing state, resolving conflicts, preserving audit trails.
+- Multi-agent systems fail in distinctive ways. The engineering controls are different from single-agent controls.
+
+## Why use more than one agent
+
+- **Specialisation.** One agent plans; another executes; a third critiques. Each has a tighter prompt and a narrower tool set.
+- **Parallelism.** Independent sub-tasks run concurrently.
+- **Separation of concerns.** Different agents can have different permission envelopes (read-only vs. write).
+- **Audit.** A multi-agent system produces a structured log of every agent's contribution. A single agent that does everything produces a single trace.
+
+## Topographies
+
+### Peer
+
+Each agent has its own goal and communicates with the others through messages. Common in research and exploratory tasks where no agent is "in charge".
+
+### Hierarchical
+
+A planner agent decomposes the goal into sub-tasks and dispatches them to worker agents. The planner owns the workflow state. Common in production systems where reliability matters.
+
+### Critic–worker
+
+A worker agent produces an output; a critic agent reviews it and either approves or sends it back for revision. Common in writing, code review, and any task where quality is hard to specify in a single prompt.
+
+## Frameworks we evaluate
+
+| Framework | Topography emphasis | Evidence anchor |
+|-----------|---------------------|-----------------|
+| AutoGen | Conversational, peer / hierarchical hybrid | [microsoft.github.io/autogen](https://microsoft.github.io/autogen/) |
+| CrewAI | Role-based, hierarchical | [docs.crewai.com](https://docs.crewai.com/) |
+| LangGraph | Graph-based, supports any topography | [langchain-ai.github.io/langgraph](https://langchain-ai.github.io/langgraph/) |
+| OpenAI Agents SDK | Provider-side multi-agent primitives | platform.openai.com |
+
+## Failure modes specific to multi-agent
+
+1. **State divergence.** Two agents believe different things about the world. Engineering control: a single source of truth that every agent reads from and writes to.
+2. **Conflict loops.** Two agents disagree and neither concedes. Engineering control: a tie-breaker (a planner, a critic, or a human).
+3. **Cost amplification.** Each agent calls an LLM. Two agents doing the work of one doubles the cost. Engineering control: profile cost per task; collapse agents that do not earn their cost.
+4. **Audit trail fragmentation.** Logs are split across agents and the structure is lost. Engineering control: a unified log schema with an agent-id field.
+5. **Latency multiplication.** Sequential agents serialise; parallel agents don't. Engineering control: parallelise where possible, serialise where required.
+
+## When not to use multi-agent
+
+- A single agent with a clear prompt and a small tool set can solve the task.
+- The team does not have observability tooling to debug multi-agent traces.
+- The cost of two agents calling the LLM exceeds the value of the specialisation.
+- The audit trail cannot be reconstructed from the logs.
+
+## What we will not tell you
+
+- We will not tell you which framework is "the best." The right choice depends on the task, the team, and the operational environment.
+- We will not predict productivity gains. We do not have the data.
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Orchestration](/ai-agent-orchestration)
+- [Agentic workflows](/agentic-workflows)
+- [Memory](/ai-agent-memory)
+- [Human-in-the-loop](/human-in-the-loop-agents)
+- [Evaluation](/ai-agent-evaluation)
+
+## Frequently asked questions
+
+### Do multi-agent systems perform better than single-agent systems?
+
+Sometimes. Multi-agent systems trade simplicity for specialisation. They perform better when the task has clearly separable sub-goals that benefit from different prompts, different tool sets, or different permission envelopes. They perform worse when the sub-tasks are tightly coupled and the agents spend more time coordinating than working.
+
+### How many agents should a system have?
+
+As few as possible. Each agent is a new source of cost, latency, and coordination risk. Start with one; add a second only when the first cannot do the job without exceeding its context window or losing coherence.
+
+### What's the difference between a multi-agent system and a workflow with branches?
+
+A workflow with branches is a single decision tree with deterministic transitions. A multi-agent system has agents that make their own decisions inside the workflow. The workflow is the orchestra; the agents are the musicians.
+
+### Can a multi-agent system be deterministic?
+
+No. Each agent has nondeterministic outputs. You can bound the nondeterminism (temperature, top-k, structured outputs) but not eliminate it. Engineering controls (validation, retries, HITL) compensate.
+
+### How do I debug a multi-agent system?
+
+Capture every agent's full trajectory — every reasoning step, every tool call, every result. A unified log schema with an `agent-id` field is non-negotiable. See [](/ai-agent-evaluation) for evaluation patterns.
+
+## Source receipts
+
+- AutoGen documentation (primary, retrieved 2026-08-22). Source for the conversational multi-agent pattern.
+- CrewAI documentation (primary, retrieved 2026-08-22). Source for the role-based hierarchical pattern.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

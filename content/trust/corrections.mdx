@@ -1,0 +1,81 @@
+---
+slug: corrections
+title: "Corrections and Version History"
+description: "How BestAIAgent.in records content corrections: correction log, severity classes, retraction policy, and the difference between refresh and correction."
+canonicalUrl: "https://bestaiagent.in/trust/corrections"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - "Internal — src/content/registry/content-registry.ts (lifecycleStatus field)"
+  - "Internal — src/content/registry/evidence-ledger.ts (EvidenceClaim.status field)"
+---
+
+# Corrections and Version History
+
+Mistakes happen. The integrity of this site depends on how we record and correct them. This page documents the correction log format, severity classes, and the difference between a correction, a refresh, and a retraction.
+
+## What a correction is
+
+A correction is a published change to a claim that was incorrect when published. Corrections are surfaced on the affected page with a visible "Correction" note that links to the entry in this log.
+
+A correction is not the same as:
+
+- **Refresh** — re-verifying claims whose evidence aged past `expiresAt`. The claim may still be correct; we are checking.
+- **Update** — expanding the page with new evidence or context.
+- **Retraction** — withdrawing a page entirely because its central claim cannot be supported.
+
+## Severity classes
+
+We use three severity classes for corrections:
+
+| Class | When | Page treatment |
+|-------|------|----------------|
+| **Minor** | Typographical error, broken link, formatting issue | In-page note, log entry |
+| **Material** | A claim was wrong or out of date but the page's overall conclusion holds | In-page banner, log entry, optional `lastReviewed` reset |
+| **Substantive** | The page's conclusion no longer holds, or the page is unsafe to use | Page moves to `refresh_required` or `rejected`, retraction notice on the index |
+
+## Correction log format
+
+Each entry in this log includes:
+
+- Affected page slug
+- Date of correction
+- Severity class
+- Brief description of the change
+- Receipt that prompted the correction
+- Reviewer name
+
+## Current correction log
+
+| Date | Page | Severity | Description | Receipt |
+|------|------|----------|-------------|---------|
+| 2026-08-22 | Multiple | — | Initial publication of the corrections log | Internal — `src/content/registry/content-registry.ts` |
+
+We have no prior corrections to report. New corrections will be appended below this line.
+
+## How to report a suspected error
+
+Send corrections, supporting evidence, and the URL of the affected page to the address listed on [](/about). We aim to triage submissions within 7 calendar days and to publish either a correction entry or a written explanation of why we declined to correct.
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Source classification](/trust/source-classification)
+- [Author / reviewer policy](/trust/author-reviewer-policy)
+- [Freshness policy](/trust/freshness-policy)
+
+## Source receipts
+
+- Internal — `src/content/registry/content-registry.ts` (`lifecycleStatus` field, retrieved 2026-08-22). The lifecycle state machine that drives the `refresh_required` and `rejected` transitions referenced in this page.
+- Internal — `src/content/registry/evidence-ledger.ts` (`EvidenceClaim.status` field, retrieved 2026-08-22). The claim status (`active`, `expired`, `contradicted`, `superseded`) that distinguishes a correction from a refresh.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

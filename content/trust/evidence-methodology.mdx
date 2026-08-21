@@ -1,0 +1,89 @@
+---
+slug: evidence-methodology
+title: "Evidence Methodology — Passage-and-Locator Discipline"
+description: "How BestAIAgent.in collects, classifies, and weighs evidence: STANDARD, COMPARISON, and CRITICAL gates, passage quotations, and freshness windows."
+canonicalUrl: "https://bestaiagent.in/trust/evidence-methodology"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - "Internal — src/data/evidenceSchema.ts (EVIDENCE_RULES)"
+  - "Internal — src/content/registry/evidence-ledger.ts"
+---
+
+# Evidence Methodology
+
+Every material factual claim on BestAIAgent.in is tied to a stored evidence receipt. This page documents the receipts, the evidence gates, and the freshness windows we apply. If a claim has no receipt, we either remove it or mark it unresolved.
+
+## What a receipt looks like
+
+Each receipt is an `EvidenceSource` object with the following required fields:
+
+- `url` — the canonical URL of the source document.
+- `publisher` — the entity that controls the source.
+- `retrievedAt` — the ISO 8601 date the URL was fetched and the passage verified.
+- `passage` — the exact supporting passage quoted from the source. Paraphrases are not accepted.
+- `authority` — one of `primary`, `secondary`, or `community`.
+- `locator` — optional section heading, page number, or selector that pinpoints the passage inside long-form documents.
+- `freshness` — optional publication or last-modified date for volatile sources.
+
+A claim references one or more receipts via `sourceIds`. A claim without receipts is unpublished; a claim whose receipts have aged past `expiresAt` is re-verified before the next refresh cycle.
+
+## What we do not use
+
+- We do not invent a `contentHash` field. Some adjacent projects use a content hash to authenticate passage quotations, but this repository's evidence schema does not include that field. SHA-256 digests in this repo are reserved for build artifact integrity (`checksums.sha256`) and are not used to authenticate evidence passages.
+- We do not infer a quote from training data. The model that drafts the page may propose a quote, but a human reviewer must verify the quote against the fetched source before publication.
+- We do not fabricate source URLs to satisfy an evidence gate. When a primary source is unavailable, the claim is either removed or reclassified as unresolved.
+
+## Evidence gates
+
+We apply three evidence gates, each tied to a numeric confidence threshold:
+
+| Gate | Minimum confidence | Required authority | Use case |
+|------|-------------------:|--------------------|----------|
+| `STANDARD` | 80 | 1+ primary | Material product / factual claims |
+| `COMPARISON` | 85 | 2+ primary (one per side) | Head-to-head comparisons |
+| `CRITICAL` | 90 | 2+ primary, or 1 primary + 2 secondary | Legal, medical, financial, security, regulatory, safety |
+
+Confidence is a derived signal, not a substitute for the authority requirement. A 99-confidence claim with no primary source fails the gate. The gate definitions live in `src/data/evidenceSchema.ts` under `EVIDENCE_RULES`.
+
+## Freshness windows
+
+Volatile claims (price, model version, plan limits, regulatory status) carry an `expiresAt` date and are re-verified before publication of the next refresh cycle. Typical windows:
+
+- Vendor pricing: 90 days
+- Regulatory status: 180 days
+- Protocol revisions: 365 days
+- Tool / capability lists: 60 days
+- Compliance certifications: 180 days (or as soon as vendor updates the certification page)
+
+When a claim ages past `expiresAt`, the page is moved to `refresh_required` until re-verification completes. Pages in `refresh_required` are not added to fresh sitemaps or `llms.txt`.
+
+## Where receipts live
+
+- Receipt store: `src/content/registry/evidence-ledger.ts` — id-indexed `EvidenceSource` and `EvidenceClaim` records.
+- Schema types: `src/data/evidenceSchema.ts` — `EvidenceSource`, `EvidenceClaim`, `EvidenceValidation`.
+- Validation function: `validateEvidence(claims, level)` returns `{ isValid, contradictions }`.
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Freshness policy](/trust/freshness-policy)
+- [Corrections](/trust/corrections)
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`EVIDENCE_RULES`, retrieved 2026-08-22). The schema that defines `STANDARD`, `COMPARISON`, and `CRITICAL` gates and their authority requirements.
+- Internal — `src/content/registry/evidence-ledger.ts` (retrieved 2026-08-22). The canonical receipt store this page references.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

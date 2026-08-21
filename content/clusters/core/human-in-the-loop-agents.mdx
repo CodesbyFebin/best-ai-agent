@@ -1,0 +1,142 @@
+---
+slug: human-in-the-loop-agents
+title: "Human-in-the-Loop Agents — Where to Pause for Review"
+description: "Evidence-backed guide to human-in-the-loop (HITL) patterns: which decisions require approval, where to put the checkpoint, and how to make HITL practical in production."
+canonicalUrl: "https://bestaiagent.in/human-in-the-loop-agents"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/hitl-agents"
+primaryEntityIds:
+  - "concept:human-in-the-loop"
+sources:
+  - "LangGraph interrupt documentation (https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)"
+---
+
+# Human-in-the-Loop Agents
+
+## Direct answer (AEO)
+
+Human-in-the-loop (HITL) is the pattern in which an agent pauses at a defined checkpoint and waits for human approval before proceeding. The checkpoint is configured in the workflow, not in the agent's prompt. HITL belongs at any decision that is irreversible, high-cost, regulated, or low-confidence.
+
+## Key takeaways
+
+- HITL is a **workflow feature**, not an agent feature.
+- The four triggers for HITL: **irreversible action**, **high cost**, **regulated decision**, **low model confidence**.
+- A HITL checkpoint is a **node** in the workflow graph, not a special agent instruction.
+- A timeout is part of the checkpoint; without a timeout the workflow can hang indefinitely.
+
+## The four triggers
+
+| Trigger | Why HITL | Example |
+|---------|----------|---------|
+| **Irreversible action** | The action cannot be undone automatically | Delete a record, send an email, charge a card |
+| **High cost** | The cost of a wrong action exceeds the cost of a review | Refund over a threshold, large purchase order |
+| **Regulated decision** | A regulator requires a human in the loop | Medical, legal, financial advice |
+| **Low confidence** | The model assigned low probability to the chosen action | Tool call with ambiguous arguments |
+
+If none of the four triggers apply, HITL is optional. If any apply, HITL is mandatory in production.
+
+## Where the checkpoint lives
+
+The HITL checkpoint is a node in the workflow graph. The agent emits an action; the workflow routes the action to the checkpoint; the checkpoint pauses execution, surfaces a review interface to a human, and resumes only on human approval (or timeout).
+
+This separation matters. If HITL is encoded in the agent's prompt, the agent may bypass it on a bad reasoning step. If HITL is encoded in the workflow, the agent cannot bypass it.
+
+## Designing the review interface
+
+A good HITL review interface shows:
+
+- The original request (what the user asked).
+- The agent's plan (what the agent intends to do).
+- The action under review (the specific tool call or message).
+- The agent's confidence (probability or rationale).
+- A clear approve / modify / reject control.
+- A timeout.
+
+Without these, the reviewer cannot make an informed decision and the HITL pattern becomes a rubber stamp.
+
+## Timeouts and escalation
+
+Every checkpoint needs a timeout. Without one, a missed review halts the workflow indefinitely. Typical patterns:
+
+- **Soft timeout.** After N minutes, send a reminder to the reviewer.
+- **Hard timeout.** After N hours, auto-reject and notify the requester.
+- **Escalation.** After N hours, route the review to a backup reviewer.
+
+The right pattern depends on the workflow's latency budget and the cost of delay.
+
+## HITL for compliance
+
+HITL is not a substitute for compliance. A regulated decision still needs the right person in the loop, the right audit trail, and the right retention. See [](/trust/privacy-dpdp-editorial-policy) for India-specific considerations.
+
+## When not to use HITL
+
+- The action is reversible and low-cost.
+- The review latency would exceed the user's latency budget.
+- The reviewer's approval adds no information beyond what the agent already has.
+
+For these cases, the right pattern is fast retries with a fallback, not HITL.
+
+## Vendors and frameworks
+
+- LangGraph interrupt — graph-native HITL primitives ([langchain-ai.github.io/langgraph](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)).
+- Temporal signals — durable signals that pause a workflow.
+- Inngest — event-driven workflows with step functions.
+- AutoGen human_input — conversational human-in-the-loop.
+
+We do not score these against each other on this page. The right choice depends on the workflow framework already in use.
+
+## What we will not tell you
+
+- We will not tell you which HITL implementation is "the best." The right choice depends on the workflow framework already in use and the team's review UI capacity.
+- We will not predict the review latency your team will achieve. That depends on staffing, training, and the review interface design.
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Orchestration](/ai-agent-orchestration)
+- [Autonomy levels](/ai-agent-autonomy-levels)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+
+## Frequently asked questions
+
+### Is HITL the same as human-in-the-middle?
+
+No. "Human-in-the-loop" means the human reviews and approves before the agent acts. "Human-in-the-middle" (a different pattern) means the human is between two agent steps. The terms are sometimes confused.
+
+### Should every agent action go through HITL?
+
+No. HITL adds latency and reviewer load. Apply HITL only at the four triggers: irreversible actions, high-cost actions, regulated decisions, and low-confidence actions. Everything else can proceed.
+
+### Who is the "human" in HITL?
+
+It depends on the action. For a customer-facing email, the reviewer is a customer-success manager. For a financial refund, the reviewer is a finance team member with the right approval authority. For a regulated medical decision, the reviewer is a qualified practitioner.
+
+### How do I avoid HITL becoming a rubber stamp?
+
+Design the review interface for an informed decision: show the original request, the agent's plan, the action under review, the agent's confidence, and a clear approve / modify / reject control. Track reviewer agreement with the agent's recommendation; a 100% approval rate is a signal that the review is not informative.
+
+### Can HITL be automated?
+
+Partially. A policy engine can auto-approve actions that match a rule (e.g. refunds under $50 to verified customers) and route the rest to a human. This is "human-on-the-loop" or "human-out-of-the-loop for matched rules". The policy must be auditable.
+
+## Source receipts
+
+- LangGraph interrupt documentation (primary, retrieved 2026-08-22). Source for the graph-native HITL primitive.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

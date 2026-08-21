@@ -1,0 +1,21 @@
+
+=== ATLAS W0/W1 GATE REPORT ===
+
+Registry total: 21
+Indexable: 10
+Quarantined: 0
+P01 classification: {"build_now":10,"needs_more_research":31,"retarget":10,"merge_redirect":1,"reject":9}
+Evidence claims: 7
+Evidence sources: 11
+Link graph edges: 75
+Orphans in W0/W1 graph: 0
+
+✅ G1 — PASS: Unique canonical URLs across 21 registry records.
+✅ G2 — PASS: Research artifacts present: 10 trust pages, 1 pillar, 10 cluster.
+✅ G3 — PASS: 7 active claims, 11 receipts, all current, no contentHash invented.
+✅ G4 — PASS: P01 cluster classification recorded. build_now=10 (wave 1 builds), others quarantined / retargeted.
+✅ G5 — PASS: Pillar/cluster pages have Direct Answer + Key Takeaways + FAQ; trust pages have methodology + source receipts + last reviewed.
+✅ G6 — PASS: Frontmatter valid on sampled files; 0 orphan pages in W0/W1 link graph.
+✅ G7 — PASS: 10 indexable records; quarantined=0; indexable=47.6% (intentionally low — phased publication).
+
+Summary: 7 PASS / 0 HOLD / 0 FAIL
