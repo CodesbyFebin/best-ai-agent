@@ -4,7 +4,7 @@
 Registry total: 21
 Indexable: 10
 Quarantined: 0
-P01 classification: {"build_now":10,"needs_more_research":29,"retarget":1,"merge_redirect":1,"reject":9}
+P01 classification: {"build_now":10,"needs_more_research":29,"retarget":1,"merge_redirect":1,"reject":8}
 Evidence claims: 7
 Evidence sources: 11
 Link graph edges: 75
@@ -12,10 +12,10 @@ Orphans in W0/W1 graph: 0
 
 ✅ G1 — PASS: Unique canonical URLs across 21 registry records.
 ✅ G2 — PASS: Research artifacts present: 10 trust pages, 1 pillar, 10 cluster.
-✅ G3 — PASS: 7 claims, 11 sources, 7/7 (100%) wired into MDX; no contentHash invented.
-✅ G4 — PASS: P01 cluster classification is mutually exclusive: 50 entries, 50 unique slugs, build_now=10.
-✅ G5 — PASS: Pillar/cluster pages have Direct Answer + Key Takeaways + FAQ; trust pages have methodology + source receipts + last reviewed.
-✅ G6 — PASS: Frontmatter valid on all W0/W1 files; 0 orphan pages; 75/75 graph edges verified in source MDX.
+⚠️  G3 — HOLD: Ledger OK (7/7 wired). Material tally across 21 pages: supported=2 volatile=2 unresolved=37 uncaptured=27 total=68.
+⚠️  G4 — HOLD: Classifications: total=49 unique=49 build_now=10 fabricatedSlots=0; similarity report MISSING at reports/w0w1-similarity-report.json; no cannibalization scan run.
+⚠️  G5 — HOLD: Structural checks pass, but human editorial review is missing on 11 page(s): ai-agents, ai-agents-for-startups, agentic-workflows, ai-agents-vs-chatbots, multi-agent-systems, ai-agent-orchestration, ai-agent-memory, human-in-the-loop-agents, ai-agent-tool-calling, ai-agent-evaluation, ai-agent-autonomy-levels.
+✅ G6 — PASS: Frontmatter valid on all W0/W1 files; 0 orphan pages; 75/75 graph edges resolved to rendered markdown hrefs in source MDX.
 ⚠️  G7 — HOLD: 11 P01 pages await mandatory human review (evidence_ready, publicationEligible=false). Trust pages approved=10, indexable=47.6%.
 
-Summary: 6 PASS / 1 HOLD / 0 FAIL
+Summary: 3 PASS / 4 HOLD / 0 FAIL

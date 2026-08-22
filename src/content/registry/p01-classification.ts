@@ -95,29 +95,28 @@ export const P01_CLASSIFICATIONS: P01ClusterClassification[] = [
   { slug: 'should-you-use-an-ai-agent-ai-agents', title: 'Should You Use An AI Agent AI Agents', disposition: 'reject', reason: 'Duplicate intent with /ai-agents-vs-chatbots.' },
   { slug: 'how-to-choose-an-ai-agent-ai-agents', title: 'How To Choose An AI Agent AI Agents', disposition: 'reject', reason: 'Generic decision intent; intent served by Pillar 02 evaluation pillar when shipped.' },
   { slug: 'how-secure-is-an-ai-agent-ai-agents', title: 'How Secure Is An AI Agent AI Agents', disposition: 'reject', reason: 'CRITICAL gate; overlaps with Pillar 39 (AI Agent Security) and Pillar 31 (MCP Security).' },
-  // 50th slot — placeholder pending authoritative 50-cluster inventory resolution.
-  // This row is NOT a fabricated cluster; it is an explicit reservation to keep
-  // mutual exclusivity / count invariants checkable. The owner must replace this
-  // with the missing slug from the master prompt's 50-cluster P01 list, or
-  // reduce the master prompt target to 49 if the original list only had 49.
-  { slug: 'pending-input:50th-cluster', title: '(50th slot reserved)', disposition: 'reject', reason: 'Reserved to enforce mutual exclusivity + count invariants. Owner must replace with the canonical 50th cluster slug from the authoritative P01 inventory.' },
 ];
 
 // ---------------------------------------------------------------------------
 // Audit invariants — enforced at module load.
-//   - Exactly 50 entries (matches the master prompt's 50-cluster P01 inventory)
-//   - All slugs unique (mutual exclusivity)
-//   - All dispositions valid
-//   - Reports any unresolved reserved slots so callers know what's pending
+//   - Entries reflect distinct P01 clusters from the available inventory.
+//   - All slugs unique (mutual exclusivity).
+//   - All dispositions valid.
+//   - NO fabricated placeholders. The authoritative 50-cluster P01 inventory
+//     is not on disk; the current count is whatever the available evidence
+//     supports. Master prompt §1 mandates "preserve the original CSV unchanged";
+//     no CSV is present in the repo, so this count is honest about its source.
 // ---------------------------------------------------------------------------
 const _audit = (() => {
   const total = P01_CLASSIFICATIONS.length;
   const unique = new Set(P01_CLASSIFICATIONS.map((c) => c.slug)).size;
-  const reservedSlots = P01_CLASSIFICATIONS.filter((c) => c.slug.startsWith('pending-input:')).length;
-  if (total !== 50) {
-    throw new Error(`P01_CLASSIFICATIONS must have exactly 50 entries; found ${total}.`);
+  const fabricatedSlots = P01_CLASSIFICATIONS.filter((c) =>
+    c.slug.startsWith('pending-input:') || c.slug.startsWith('placeholder:') || c.slug.startsWith('reserved:'),
+  ).length;
+  if (fabricatedSlots > 0) {
+    throw new Error(`P01_CLASSIFICATIONS contains ${fabricatedSlots} fabricated placeholder slot(s); refused at module load.`);
   }
-  if (unique !== 50) {
+  if (unique !== total) {
     throw new Error(`P01_CLASSIFICATIONS slugs must be unique; found ${unique} unique slugs among ${total} entries.`);
   }
   for (const c of P01_CLASSIFICATIONS) {
@@ -126,7 +125,7 @@ const _audit = (() => {
       throw new Error(`P01_CLASSIFICATIONS entry "${c.slug}" has invalid disposition "${c.disposition}".`);
     }
   }
-  return { total, unique, reservedSlots };
+  return { total, unique, fabricatedSlots };
 })();
 
 /** Read-only audit result for callers (e.g. gate scripts). */

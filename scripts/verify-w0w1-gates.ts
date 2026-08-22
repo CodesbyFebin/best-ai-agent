@@ -147,15 +147,27 @@ function wordCount(p: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// G3 — Evidence (claim ledger populated, receipts cited, MDX material claims wired)
+// G3 — Evidence (ledger-to-MDX linkage; material-claim completeness audit)
+//
+// Per master prompt §12, G3 requires:
+//   - every material factual claim mapped to receipts
+//   - exact passages and locators stored
+//   - comparative parity met
+//   - volatile claims have expiration dates
+//
+// This gate therefore does TWO things:
+//   (a) verify every ledger claim is referenced from at least one MDX body
+//   (b) extract material claims from every page and report a tally of
+//       supported / unresolved / volatile / uncaptured.
+//       PASS only when uncaptured = 0 AND unresolved = 0.
 // ---------------------------------------------------------------------------
 {
   const claims = Object.keys(EVIDENCE_CLAIMS);
   const sources = Object.keys(EVIDENCE_SOURCES);
   const allCurrent = claims.every((id) => claimIsCurrent(id));
-  const noContentHash = true; // enforced by donor schema (no contentHash field)
+  const noContentHash = true;
 
-  // Material-claim coverage: scan P01 + trust MDX bodies for `claim:*` references.
+  // (a) Ledger -> MDX linkage
   const pillarCluster = [
     join(PILLARS_CORE, 'ai-agents.mdx'),
     ...readdirSync(CLUSTERS_CORE).filter((f) => f.endsWith('.mdx')).map((f) => join(CLUSTERS_CORE, f)),
@@ -167,60 +179,120 @@ function wordCount(p: string): number {
   for (const f of allMdxFiles) {
     if (!fileExists(f)) continue;
     const txt = readFileSync(f, 'utf-8');
-    for (const m of txt.matchAll(claimIdPattern)) {
-      claimRefsInMdx.add(m[0]);
-    }
+    for (const m of txt.matchAll(claimIdPattern)) claimRefsInMdx.add(m[0]);
   }
   const claimIdsKnown = new Set(claims);
   const unknownClaimRefs = [...claimRefsInMdx].filter((c) => !claimIdsKnown.has(c));
   const wiredClaimIds = [...claimRefsInMdx].filter((c) => claimIdsKnown.has(c));
-  const wiredPct = claims.length === 0 ? 0 : (wiredClaimIds.length / claims.length) * 100;
 
-  // G3 needs MDX material claims to be tied to ledger claim ids, not just URLs.
-  if (
-    claims.length >= 5 &&
-    sources.length >= 5 &&
-    allCurrent &&
-    noContentHash &&
-    unknownClaimRefs.length === 0 &&
-    wiredClaimIds.length >= Math.min(claims.length, 3)
-  ) {
+  // (b) Material-claim extraction (heuristic)
+  // Sentences that look like material claims: contain a number, a price, a
+  // statute name (DPDP, GST, Section X), or a vendor name with a version
+  // marker. This is intentionally permissive; the gate's job is to flag
+  // uncaptured, not to declare correctness.
+  const claimSignals = [
+    /\b\d+%/,                  // percentages (18%, 95%)
+    /\$\d+/,                   // dollar amounts
+    /€\d+/,                   // euro amounts
+    /₹\d+/,                   // rupee amounts
+    /\bDPDP\b/,               // statute
+    /\bGST\b/,                 // tax
+    /\bSection \d+/,           // statutory sections
+    /\bAct No\. \d+/,          // act numbers
+    /\bv\d+\.\d+/,             // version numbers
+    /\bCursor\b/,              // vendor names (canonical subset)
+    /\bClaude\b/,
+    /\bCopilot\b/,
+    /\bMCP\b/,
+    /\bfunction calling\b/i,
+  ];
+  const claimSentenceRegex = new RegExp(claimSignals.map((s) => `(?:${s.source})`).join('|'), 'g');
+  let supported = 0;
+  let volatile = 0;
+  let unresolved = 0;
+  let uncaptured = 0;
+  const perPageTally: Array<{ page: string; supported: number; volatile: number; unresolved: number; uncaptured: number; total: number }> = [];
+  const volatileClaimIds = new Set(
+    Object.entries(EVIDENCE_CLAIMS).filter(([id]) => volatileMetadata(id)?.expiresAt).map(([id]) => id),
+  );
+  for (const f of allMdxFiles) {
+    if (!fileExists(f)) continue;
+    const txt = readFileSync(f, 'utf-8');
+    const pageSlug = (parseFrontmatter(txt).slug ?? f.split('/').pop() ?? '').trim();
+    const sentences = txt.split(/(?<=[.!?])\s+/);
+    let pSupp = 0, pVol = 0, pUnr = 0, pUnc = 0;
+    for (const s of sentences) {
+      if (!claimSentenceRegex.test(s)) { claimSentenceRegex.lastIndex = 0; continue; }
+      claimSentenceRegex.lastIndex = 0;
+      // Does this sentence cite at least one claim id?
+      const cited = (s.match(claimIdPattern) ?? [])[0];
+      if (cited && claimIdsKnown.has(cited)) {
+        if (volatileClaimIds.has(cited)) pVol++; else pSupp++;
+      } else if (s.match(/DPDP|GST|Section \d+|Act No\./)) {
+        // Statutory claims without a claim id are unresolved until reviewed.
+        pUnr++;
+      } else {
+        pUnc++;
+      }
+    }
+    supported += pSupp; volatile += pVol; unresolved += pUnr; uncaptured += pUnc;
+    perPageTally.push({ page: pageSlug, supported: pSupp, volatile: pVol, unresolved: pUnr, uncaptured: pUnc, total: pSupp + pVol + pUnr + pUnc });
+  }
+  const total = supported + volatile + unresolved + uncaptured;
+  const ledgerOK = claims.length >= 5 && sources.length >= 5 && allCurrent && noContentHash && unknownClaimRefs.length === 0;
+
+  // G3 PASS only when: ledger OK, every claim id wired, AND uncaptured = 0 AND unresolved = 0
+  const materialOK = uncaptured === 0 && unresolved === 0;
+  if (ledgerOK && wiredClaimIds.length === claims.length && materialOK) {
     record(
       'G3',
       'PASS',
-      `${claims.length} claims, ${sources.length} sources, ${wiredClaimIds.length}/${claims.length} (${wiredPct.toFixed(0)}%) wired into MDX; no contentHash invented.`,
+      `Ledger: ${claims.length} claims / ${sources.length} sources / ${wiredClaimIds.length} wired. Material: supported=${supported} volatile=${volatile} unresolved=${unresolved} uncaptured=${uncaptured}.`,
     );
   } else {
     record(
       'G3',
       'HOLD',
-      `Material-claim coverage incomplete: ${wiredClaimIds.length}/${claims.length} claim ids cited in MDX (${wiredPct.toFixed(0)}%); unknown claim refs=${unknownClaimRefs.length}; ledger integrity OK.`,
+      `Ledger ${ledgerOK && wiredClaimIds.length === claims.length ? 'OK' : 'incomplete'} (${wiredClaimIds.length}/${claims.length} wired). Material tally across ${allMdxFiles.length} pages: supported=${supported} volatile=${volatile} unresolved=${unresolved} uncaptured=${uncaptured} total=${total}.`,
     );
   }
 }
 
 // ---------------------------------------------------------------------------
-// G4 — Originality (P01 classifications: 50 mutually exclusive entries)
+// G4 — Originality (mutual exclusivity of dispositions; similarity & cannibalization evidence)
+//
+// Per master prompt §10, G4 requires:
+//   - intent uniqueness, outline uniqueness, claim/evidence uniqueness,
+//     examples/artifact uniqueness, similarity / shared-paragraph %,
+//     FAQ duplication, title/meta duplication, intent collision,
+//     cross-pillar cannibalization
+// PASS requires a similarity report file on disk and no cannibalization alerts.
 // ---------------------------------------------------------------------------
 {
   const total = P01_CLASSIFICATIONS.length;
   const slugs = P01_CLASSIFICATIONS.map((c) => c.slug);
   const unique = new Set(slugs).size;
+  const fabricatedSlots = P01_CLASSIFICATIONS.filter((c) =>
+    c.slug.startsWith('pending-input:') || c.slug.startsWith('placeholder:') || c.slug.startsWith('reserved:'),
+  ).length;
   const dispositions = classificationSummary();
-  const dispositionsTotal = Object.values(dispositions).reduce((a, b) => a + b, 0);
   const buildNowCount = dispositions.build_now ?? 0;
 
-  if (total === 50 && unique === 50 && dispositionsTotal === 50 && buildNowCount >= 5) {
+  const similarityReport = join(REPO_ROOT, 'reports', 'w0w1-similarity-report.json');
+  const similarityExists = existsSync(similarityReport);
+
+  const mutuallyExclusive = total === unique && fabricatedSlots === 0 && buildNowCount >= 5;
+  if (mutuallyExclusive && similarityExists) {
     record(
       'G4',
       'PASS',
-      `P01 cluster classification is mutually exclusive: ${total} entries, ${unique} unique slugs, build_now=${buildNowCount}.`,
+      `P01 classifications mutually exclusive (${total} entries, ${unique} unique slugs, build_now=${buildNowCount}). Similarity report present at ${similarityReport}.`,
     );
   } else {
     record(
       'G4',
       'HOLD',
-      `P01 classification is not mutually exclusive or is not 50 rows: total=${total}, unique=${unique}, dispositionsTotal=${dispositionsTotal}, build_now=${buildNowCount}.`,
+      `Classifications: total=${total} unique=${unique} build_now=${buildNowCount} fabricatedSlots=${fabricatedSlots}; similarity report ${similarityExists ? 'present' : 'MISSING at reports/w0w1-similarity-report.json'}; no cannibalization scan run.`,
     );
   }
 }
@@ -282,14 +354,48 @@ function wordCount(p: string): number {
   }
 
   if (issues === 0 && paddingIssues === 0) {
-    record('G5', 'PASS', `Pillar/cluster pages have Direct Answer + Key Takeaways + FAQ; trust pages have methodology + source receipts + last reviewed.`);
+    // G5 PASS requires structural integrity AND a human-reviewer record on
+    // every page (per master prompt §12 G5: "human review completed where
+    // required" and §13 publication workflow).
+    const pagesNeedingReview = [
+      ...pillarCluster.map(([_, f]) => f),
+    ];
+    const missingReview: string[] = [];
+    for (const f of pagesNeedingReview) {
+      if (!fileExists(f)) continue;
+      const fm = parseFrontmatter(readFileSync(f, 'utf-8'));
+      // A page passes human review when `humanReviewedBy` and `humanReviewedAt` are set.
+      if (!fm.humanReviewedBy || !fm.humanReviewedAt) missingReview.push(fm.slug ?? f);
+    }
+    if (missingReview.length === 0) {
+      record('G5', 'PASS', `Structural checks pass; human-review record on every P01 page.`);
+    } else {
+      record('G5', 'HOLD', `Structural checks pass, but human editorial review is missing on ${missingReview.length} page(s): ${missingReview.join(', ')}.`);
+    }
   } else {
-    record('G5', 'FAIL', `Structural issues=${issues}; below-minimum word pages=${paddingIssues}.`);
+    record('G5', 'HOLD', `Structural issues=${issues}; below-minimum word pages=${paddingIssues}.`);
   }
 }
 
 // ---------------------------------------------------------------------------
-// G6 — Technical (frontmatter, link-graph parity with rendered MDX, no orphans)
+// G6 — Technical (frontmatter, rendered-HTML link integrity, no orphans)
+//
+// Per master prompt §12 G6:
+//   - frontmatter/schema valid
+//   - internal links valid and canonical
+//   - JSON-LD matches visible content
+//   - rendered HTML contains title, description, canonical, H1, and required content
+//   - accessibility checks pass
+//   - performance budgets pass
+//
+// This gate verifies frontmatter, validates that every graph edge has a
+// matching rendered <a href="..."> in the source MDX (a stricter proxy for
+// rendered-HTML integrity than substring matching), and checks for orphans.
+//
+// Note: prefer-const is an ESLint rule, NOT a TypeScript tsc diagnostic.
+// Repo-wide lint/typecheck status is documented in reports/w0w1-hold-report
+// rather than asserted here, to avoid misattributing the rule to the wrong
+// tool.
 // ---------------------------------------------------------------------------
 {
   const filesToCheck = [
@@ -315,36 +421,76 @@ function wordCount(p: string): number {
     'privacy-dpdp-editorial-policy', 'freshness-policy'];
   const orphans = orphanRecords(approvedSlugs);
 
-  // Graph->MDX parity: every graph edge whose source MDX exists must contain the target slug.
-  let unverifiedEdges = 0;
-  const sourceBodyCache = new Map<string, string>();
-  for (const f of filesToCheck) {
-    if (fileExists(f)) sourceBodyCache.set(f, readFileSync(f, 'utf-8'));
-  }
-  // Map slug -> file body
+  // Rendered-link integrity: for every graph edge, the source MDX body must
+  // contain a markdown link whose target resolves to the target slug.
+  //   Markdown link forms: [text](/path)  or  [text](https://example.com/path)
+  // We extract every href from the source MDX, normalise to /path, and check
+  // that at least one href ends with the target slug.
   const slugToBody = new Map<string, string>();
   for (const f of filesToCheck) {
     if (!fileExists(f)) continue;
     const fm = parseFrontmatter(readFileSync(f, 'utf-8'));
     if (fm.slug) slugToBody.set(fm.slug, readFileSync(f, 'utf-8'));
   }
+
+  let unverifiedEdges = 0;
+  const unverifiedSamples: Array<{ from: string; to: string; hrefs: string[] }> = [];
   for (const edge of LINK_GRAPH) {
     const body = slugToBody.get(edge.from);
-    if (!body) continue; // source has no MDX (skip)
-    if (!body.includes(edge.to)) unverifiedEdges++;
+    if (!body) continue;
+    // Extract markdown link targets: [..]( .. )
+    const hrefs = new Set<string>();
+    const linkRe = /\[[^\]]*\]\(([^)]+)\)/g;
+    for (const m of body.matchAll(linkRe)) {
+      const raw = m[1].trim();
+      // skip images: ![..](..) — already filtered because [^\]]* doesn't match "!" before "["
+      // Strip title portion inside href if present (e.g. "url \"title\"")
+      const url = raw.split(/\s+/)[0];
+      // Normalise: if absolute URL, take pathname; if relative, keep as-is
+      try {
+        if (/^https?:\/\//.test(url)) {
+          hrefs.add(new URL(url).pathname.replace(/\/$/, ''));
+        } else {
+          hrefs.add(url.split('#')[0].replace(/\/$/, ''));
+        }
+      } catch {
+        // ignore malformed
+      }
+    }
+    const targetVariants = new Set<string>([
+      edge.to,
+      '/' + edge.to,
+      '/' + edge.to + '/',
+    ]);
+    let matched = false;
+    for (const href of hrefs) {
+      for (const v of targetVariants) {
+        if (href === v.replace(/\/$/, '') || href.endsWith('/' + v.replace(/^\//, ''))) {
+          matched = true;
+          break;
+        }
+      }
+      if (matched) break;
+    }
+    if (!matched) {
+      unverifiedEdges++;
+      if (unverifiedSamples.length < 10) {
+        unverifiedSamples.push({ from: edge.from, to: edge.to, hrefs: [...hrefs].slice(0, 5) });
+      }
+    }
   }
 
   if (invalidFrontmatter === 0 && orphans.length === 0 && unverifiedEdges === 0) {
     record(
       'G6',
       'PASS',
-      `Frontmatter valid on all W0/W1 files; 0 orphan pages; ${LINK_GRAPH.length}/${LINK_GRAPH.length} graph edges verified in source MDX.`,
+      `Frontmatter valid on all W0/W1 files; 0 orphan pages; ${LINK_GRAPH.length}/${LINK_GRAPH.length} graph edges resolved to rendered markdown hrefs in source MDX.`,
     );
   } else {
     record(
       'G6',
       'HOLD',
-      `Frontmatter gaps=${invalidFrontmatter}; orphans=${orphans.length}; unverified graph edges=${unverifiedEdges}/${LINK_GRAPH.length}.`,
+      `Frontmatter gaps=${invalidFrontmatter}; orphans=${orphans.length}; unverified graph edges=${unverifiedEdges}/${LINK_GRAPH.length} (sample: ${JSON.stringify(unverifiedSamples.slice(0, 3))}). Rendered HTML, JSON-LD, accessibility, and performance gates are out-of-scope for this slice.`,
     );
   }
 }
