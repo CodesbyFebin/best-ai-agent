@@ -1,0 +1,52 @@
+pillar_id,topic_index,source_slug,source_title,intent_group,disposition,canonical_target,reason,source_line
+p01,0,ai-agents,"AI Agents Core & Definitions",pillar,build_now,/ai-agents,"AI Agents Core & Definitions",2
+p01,1,ai-agents-for-startups,"AI Agents For Startups",persona,build_now,/ai-agents-for-startups,"Distinct persona with evidence-backed vendor pricing already in ledger.",3
+p01,2,ai-agents-for-small-business,"AI Agents For Small Business",persona,needs_more_research,/ai-agents-for-small-business,"Persona-specific evidence required; deferred to persona wave.",4
+p01,3,ai-agents-for-enterprises,"AI Agents For Enterprises",persona,needs_more_research,/ai-agents-for-enterprises,"Persona-specific evidence required; deferred to persona wave.",5
+p01,4,ai-agents-for-solopreneurs,"AI Agents For Solopreneurs",persona,needs_more_research,/ai-agents-for-solopreneurs,"Persona-specific evidence required; deferred to persona wave.",6
+p01,5,ai-agents-for-freelancers,"AI Agents For Freelancers",persona,needs_more_research,/ai-agents-for-freelancers,"Persona-specific evidence required; deferred to persona wave.",7
+p01,6,ai-agents-for-students,"AI Agents For Students",persona,needs_more_research,/ai-agents-for-students,"Persona-specific evidence required; deferred to persona wave.",8
+p01,7,ai-agents-for-developers,"AI Agents For Developers",persona,needs_more_research,/ai-agents-for-developers,"Persona-specific evidence required; deferred to persona wave.",9
+p01,8,ai-agents-for-agencies,"AI Agents For Agencies",persona,needs_more_research,/ai-agents-for-agencies,"Persona-specific evidence required; deferred to persona wave.",10
+p01,9,ai-agents-for-consultants,"AI Agents For Consultants",persona,needs_more_research,/ai-agents-for-consultants,"Persona-specific evidence required; deferred to persona wave.",11
+p01,10,ai-agents-for-nonprofits,"AI Agents For Nonprofits",persona,needs_more_research,/ai-agents-for-nonprofits,"Persona-specific evidence required; deferred to persona wave.",12
+p01,11,ai-agents-for-ctos,"AI Agents For Ctos",persona,needs_more_research,/ai-agents-for-ctos,"Persona-specific evidence required; deferred to persona wave.",13
+p01,12,ai-agents-for-founders,"AI Agents For Founders",persona,merge_redirect,/ai-agents-for-startups,"Intent overlaps with topic_index 1 (ai-agents-for-startups); merge.",14
+p01,13,ai-agents-automation,"AI Agents Automation",workflow,needs_more_research,/ai-agents-automation,"Workflow-specific evidence required; deferred to workflow wave.",15
+p01,14,ai-agents-workflow,"AI Agents Workflow",workflow,merge_redirect,/agentic-workflows,"Duplicates /agentic-workflows; merge into the canonical sibling.",16
+p01,15,ai-agents-lead-generation,"AI Agents Lead Generation",workflow,needs_more_research,/ai-agents-lead-generation,"Workflow-specific evidence required; deferred to workflow wave.",17
+p01,16,ai-agents-data-analysis,"AI Agents Data Analysis",workflow,needs_more_research,/ai-agents-data-analysis,"Workflow-specific evidence required; deferred to workflow wave.",18
+p01,17,ai-agents-reporting,"AI Agents Reporting",workflow,needs_more_research,/ai-agents-reporting,"Workflow-specific evidence required; deferred to workflow wave.",19
+p01,18,ai-agents-scheduling,"AI Agents Scheduling",workflow,needs_more_research,/ai-agents-scheduling,"Workflow-specific evidence required; deferred to workflow wave.",20
+p01,19,ai-agents-onboarding,"AI Agents Onboarding",workflow,needs_more_research,/ai-agents-onboarding,"Workflow-specific evidence required; deferred to workflow wave.",21
+p01,20,ai-agents-forecasting,"AI Agents Forecasting",workflow,needs_more_research,/ai-agents-forecasting,"Workflow-specific evidence required; deferred to workflow wave.",22
+p01,21,ai-agents-compliance,"AI Agents Compliance",workflow,needs_more_research,/ai-agents-compliance,"Workflow-specific evidence required; deferred to workflow wave.",23
+p01,22,ai-agents-research,"AI Agents Research",workflow,needs_more_research,/ai-agents-research,"Workflow-specific evidence required; deferred to workflow wave.",24
+p01,23,ai-agents-content-creation,"AI Agents Content Creation",workflow,needs_more_research,/ai-agents-content-creation,"Workflow-specific evidence required; deferred to workflow wave.",25
+p01,24,ai-agents-translation,"AI Agents Translation",workflow,needs_more_research,/ai-agents-translation,"Workflow-specific evidence required; deferred to workflow wave.",26
+p01,25,ai-agents-fraud-detection,"AI Agents Fraud Detection",workflow,needs_more_research,/ai-agents-fraud-detection,"Workflow-specific evidence required; deferred to workflow wave.",27
+p01,26,ai-agents-risk-management,"AI Agents Risk Management",workflow,needs_more_research,/ai-agents-risk-management,"Workflow-specific evidence required; deferred to workflow wave.",28
+p01,27,ai-agents-personalization,"AI Agents Personalization",workflow,needs_more_research,/ai-agents-personalization,"Workflow-specific evidence required; deferred to workflow wave.",29
+p01,28,ai-agents-documentation,"AI Agents Documentation",workflow,needs_more_research,/ai-agents-documentation,"Workflow-specific evidence required; deferred to workflow wave.",30
+p01,29,ai-agents-invoicing,"AI Agents Invoicing",workflow,needs_more_research,/ai-agents-invoicing,"Workflow-specific evidence required; deferred to workflow wave.",31
+p01,30,ai-agents-ticketing,"AI Agents Ticketing",workflow,needs_more_research,/ai-agents-ticketing,"Workflow-specific evidence required; deferred to workflow wave.",32
+p01,31,ai-agents-auditing,"AI Agents Auditing",workflow,needs_more_research,/ai-agents-auditing,"Workflow-specific evidence required; deferred to workflow wave.",33
+p01,32,ai-agents-monitoring,"AI Agents Monitoring",workflow,needs_more_research,/ai-agents-monitoring,"Workflow-specific evidence required; deferred to workflow wave.",34
+p01,33,what-is-an-ai-agent-ai-agents,"What Is An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents,"Generated question slug; merge into /ai-agents or relevant section.",35
+p01,34,how-does-an-ai-agent-ai-agents,"How Does An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents,"Generated question slug; merge into /ai-agents or relevant section.",36
+p01,35,why-use-an-ai-agent-ai-agents,"Why Use An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents,"Generated question slug; merge into /ai-agents or relevant section.",37
+p01,36,is-an-ai-agent-ai-agents,"Is An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents,"Generated question slug; merge into /ai-agents or relevant section.",38
+p01,37,can-an-ai-agent-ai-agents,"Can An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents,"Generated question slug; merge into /ai-agents or relevant section.",39
+p01,38,should-you-use-an-ai-agent-ai-agents,"Should You Use An AI Agent AI Agents",generated-question,merge_redirect,/ai-agents-vs-chatbots,"Generated question slug; merge into /ai-agents or relevant section.",40
+p01,39,how-to-choose-an-ai-agent-ai-agents,"How To Choose An AI Agent AI Agents",generated-question,merge_redirect,/ai-agent-evaluation,"Generated question slug; merge into /ai-agents or relevant section.",41
+p01,40,how-secure-is-an-ai-agent-ai-agents,"How Secure Is An AI Agent AI Agents",generated-question,merge_redirect,/ai-agent-evaluation,"Generated question slug; merge into /ai-agents or relevant section.",42
+p01,41,ai-agents-examples-in-healthcare,"AI Agents Examples In Healthcare",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",43
+p01,42,ai-agents-examples-in-real-estate,"AI Agents Examples In Real Estate",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",44
+p01,43,ai-agents-examples-in-banking,"AI Agents Examples In Banking",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",45
+p01,44,ai-agents-examples-in-education,"AI Agents Examples In Education",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",46
+p01,45,ai-agents-examples-in-retail,"AI Agents Examples In Retail",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",47
+p01,46,ai-agents-examples-in-insurance,"AI Agents Examples In Insurance",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",48
+p01,47,ai-agents-examples-in-manufacturing,"AI Agents Examples In Manufacturing",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",49
+p01,48,ai-agents-examples-in-travel,"AI Agents Examples In Travel",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",50
+p01,49,ai-agents-examples-in-legal,"AI Agents Examples In Legal",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",51
+p01,50,ai-agents-examples-in-logistics,"AI Agents Examples In Logistics",industry,retarget,/tbd/tbd,"Industry intent; retarget to corresponding industry pillar when built.",52

@@ -255,7 +255,7 @@ export function getAuthorityPageMetadata(slug: string): AuthorityPageInfo {
   }
 
   // Humanized names formatting
-  const words = norm.replace(/\-/g, ' ');
+  const words = norm.replace(/-/g, ' ');
   const formattedKeyword = words.replace(/\b\w/g, c => c.toUpperCase());
   
   const title = `${formattedKeyword}: Expert ${type} Pillar Analysis [2026]`;
@@ -273,7 +273,7 @@ export function getAuthorityPageMetadata(slug: string): AuthorityPageInfo {
     type,
     wordCountRange,
     directAnswer,
-    primaryKeyword: norm.replace(/\-/g, ' '),
+    primaryKeyword: norm.replace(/-/g, ' '),
     siloId,
     estimatedWords
   };
@@ -370,7 +370,7 @@ export function generateLlmsTxt(): string {
 // Generate /ai-agent-sitemap.xml
 export function generateSitemap(type: 'ai-agent' | 'tool' | 'comparison' | 'main'): string {
   const timestamp = "2026-06-11T05:22:24Z";
-  let urls: string[] = [];
+  let urls: string[];
 
   if (type === 'ai-agent') {
     urls = topicalClusters.flatMap(c => c.slugs);

@@ -82,8 +82,8 @@ try {
   }
 
   // Invariant checks
-  let errors: string[] = [];
-  let warnings: string[] = [];
+  const errors: string[] = [];
+  const warnings: string[] = [];
 
   const entityIdSet = new Set<string>();
   const canonicalUrlSet = new Set<string>();

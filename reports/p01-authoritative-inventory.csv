@@ -1,0 +1,52 @@
+group,pillar_id,pillar_name,pillar_url,topic_index,topic_slug,full_url,suggested_title,page_class,priority,changefreq,lastmod
+core,p01,AI Agents Core & Definitions,ai-agents,0,ai-agents,https://bestaiagent.in/ai-agents,AI Agents Core & Definitions,pillar,0.9,weekly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,1,ai-agents-for-startups,https://bestaiagent.in/ai-agents-for-startups,AI Agents For Startups,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,2,ai-agents-for-small-business,https://bestaiagent.in/ai-agents-for-small-business,AI Agents For Small Business,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,3,ai-agents-for-enterprises,https://bestaiagent.in/ai-agents-for-enterprises,AI Agents For Enterprises,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,4,ai-agents-for-solopreneurs,https://bestaiagent.in/ai-agents-for-solopreneurs,AI Agents For Solopreneurs,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,5,ai-agents-for-freelancers,https://bestaiagent.in/ai-agents-for-freelancers,AI Agents For Freelancers,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,6,ai-agents-for-students,https://bestaiagent.in/ai-agents-for-students,AI Agents For Students,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,7,ai-agents-for-developers,https://bestaiagent.in/ai-agents-for-developers,AI Agents For Developers,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,8,ai-agents-for-agencies,https://bestaiagent.in/ai-agents-for-agencies,AI Agents For Agencies,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,9,ai-agents-for-consultants,https://bestaiagent.in/ai-agents-for-consultants,AI Agents For Consultants,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,10,ai-agents-for-nonprofits,https://bestaiagent.in/ai-agents-for-nonprofits,AI Agents For Nonprofits,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,11,ai-agents-for-ctos,https://bestaiagent.in/ai-agents-for-ctos,AI Agents For Ctos,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,12,ai-agents-for-founders,https://bestaiagent.in/ai-agents-for-founders,AI Agents For Founders,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,13,ai-agents-automation,https://bestaiagent.in/ai-agents-automation,AI Agents Automation,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,14,ai-agents-workflow,https://bestaiagent.in/ai-agents-workflow,AI Agents Workflow,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,15,ai-agents-lead-generation,https://bestaiagent.in/ai-agents-lead-generation,AI Agents Lead Generation,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,16,ai-agents-data-analysis,https://bestaiagent.in/ai-agents-data-analysis,AI Agents Data Analysis,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,17,ai-agents-reporting,https://bestaiagent.in/ai-agents-reporting,AI Agents Reporting,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,18,ai-agents-scheduling,https://bestaiagent.in/ai-agents-scheduling,AI Agents Scheduling,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,19,ai-agents-onboarding,https://bestaiagent.in/ai-agents-onboarding,AI Agents Onboarding,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,20,ai-agents-forecasting,https://bestaiagent.in/ai-agents-forecasting,AI Agents Forecasting,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,21,ai-agents-compliance,https://bestaiagent.in/ai-agents-compliance,AI Agents Compliance,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,22,ai-agents-research,https://bestaiagent.in/ai-agents-research,AI Agents Research,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,23,ai-agents-content-creation,https://bestaiagent.in/ai-agents-content-creation,AI Agents Content Creation,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,24,ai-agents-translation,https://bestaiagent.in/ai-agents-translation,AI Agents Translation,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,25,ai-agents-fraud-detection,https://bestaiagent.in/ai-agents-fraud-detection,AI Agents Fraud Detection,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,26,ai-agents-risk-management,https://bestaiagent.in/ai-agents-risk-management,AI Agents Risk Management,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,27,ai-agents-personalization,https://bestaiagent.in/ai-agents-personalization,AI Agents Personalization,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,28,ai-agents-documentation,https://bestaiagent.in/ai-agents-documentation,AI Agents Documentation,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,29,ai-agents-invoicing,https://bestaiagent.in/ai-agents-invoicing,AI Agents Invoicing,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,30,ai-agents-ticketing,https://bestaiagent.in/ai-agents-ticketing,AI Agents Ticketing,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,31,ai-agents-auditing,https://bestaiagent.in/ai-agents-auditing,AI Agents Auditing,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,32,ai-agents-monitoring,https://bestaiagent.in/ai-agents-monitoring,AI Agents Monitoring,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,33,what-is-an-ai-agent-ai-agents,https://bestaiagent.in/what-is-an-ai-agent-ai-agents,What Is An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,34,how-does-an-ai-agent-ai-agents,https://bestaiagent.in/how-does-an-ai-agent-ai-agents,How Does An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,35,why-use-an-ai-agent-ai-agents,https://bestaiagent.in/why-use-an-ai-agent-ai-agents,Why Use An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,36,is-an-ai-agent-ai-agents,https://bestaiagent.in/is-an-ai-agent-ai-agents,Is An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,37,can-an-ai-agent-ai-agents,https://bestaiagent.in/can-an-ai-agent-ai-agents,Can An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,38,should-you-use-an-ai-agent-ai-agents,https://bestaiagent.in/should-you-use-an-ai-agent-ai-agents,Should You Use An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,39,how-to-choose-an-ai-agent-ai-agents,https://bestaiagent.in/how-to-choose-an-ai-agent-ai-agents,How To Choose An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,40,how-secure-is-an-ai-agent-ai-agents,https://bestaiagent.in/how-secure-is-an-ai-agent-ai-agents,How Secure Is An AI Agent AI Agents,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,41,ai-agents-examples-in-healthcare,https://bestaiagent.in/ai-agents-examples-in-healthcare,AI Agents Examples In Healthcare,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,42,ai-agents-examples-in-real-estate,https://bestaiagent.in/ai-agents-examples-in-real-estate,AI Agents Examples In Real Estate,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,43,ai-agents-examples-in-banking,https://bestaiagent.in/ai-agents-examples-in-banking,AI Agents Examples In Banking,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,44,ai-agents-examples-in-education,https://bestaiagent.in/ai-agents-examples-in-education,AI Agents Examples In Education,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,45,ai-agents-examples-in-retail,https://bestaiagent.in/ai-agents-examples-in-retail,AI Agents Examples In Retail,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,46,ai-agents-examples-in-insurance,https://bestaiagent.in/ai-agents-examples-in-insurance,AI Agents Examples In Insurance,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,47,ai-agents-examples-in-manufacturing,https://bestaiagent.in/ai-agents-examples-in-manufacturing,AI Agents Examples In Manufacturing,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,48,ai-agents-examples-in-travel,https://bestaiagent.in/ai-agents-examples-in-travel,AI Agents Examples In Travel,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,49,ai-agents-examples-in-legal,https://bestaiagent.in/ai-agents-examples-in-legal,AI Agents Examples In Legal,cluster,0.7,monthly,2026-08-20
+core,p01,AI Agents Core & Definitions,ai-agents,50,ai-agents-examples-in-logistics,https://bestaiagent.in/ai-agents-examples-in-logistics,AI Agents Examples In Logistics,cluster,0.7,monthly,2026-08-20
