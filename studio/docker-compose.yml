@@ -1,0 +1,12 @@
+services:
+  studio:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db:/app/db
+    env_file:
+      - .env
+    environment:
+      STUDIO_ENV: production
+    restart: unless-stopped

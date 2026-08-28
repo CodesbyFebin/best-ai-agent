@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BestAIAgent Studio</title>
+  <link rel="stylesheet" href="/static/studio.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">BestAIAgent<span>Studio</span></div>
+    <div class="provider-badge {{ 'ok' if provider.state == 'configured' else 'off' }}">
+      AI Provider: {{ 'Connected (' ~ provider.model ~ ')' if provider.state == 'configured' else 'Not configured' }}
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="stat-grid">
+      <div class="stat"><span class="stat-value">{{ stats.total_pages }}</span><span class="stat-label">Pages</span></div>
+      <div class="stat"><span class="stat-value">{{ stats.published }}</span><span class="stat-label">Published</span></div>
+      <div class="stat"><span class="stat-value">{{ stats.review }}</span><span class="stat-label">In review</span></div>
+      <div class="stat"><span class="stat-value">{{ stats.draft }}</span><span class="stat-label">Draft</span></div>
+      <div class="stat"><span class="stat-value">{{ (stats.evidence_coverage * 100) | round(1) }}%</span><span class="stat-label">Evidence coverage</span></div>
+      <div class="stat"><span class="stat-value">{{ stats.average_quality }}</span><span class="stat-label">Avg quality</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>System</h2>
+      <table class="facts">
+        <tbody>
+          <tr><th>Database</th><td>Connected — {{ stats.total_pages }} page(s), {{ stats.total_entities }} entit{{ 'y' if stats.total_entities == 1 else 'ies' }}, {{ stats.total_evidence }} evidence record(s)</td></tr>
+          <tr><th>AI provider</th><td>{{ 'Connected — ' ~ provider.model if provider.state == 'configured' else 'Not configured (set OPENROUTER_API_KEY to enable draft generation)' }}</td></tr>
+          <tr><th>Queued jobs</th><td>{{ stats.queued_jobs }}</td></tr>
+          <tr><th>Rejected pages</th><td>{{ stats.rejected }}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Recently updated pages</h2>
+      {% if recent_pages %}
+      <table class="facts">
+        <thead><tr><th>Slug</th><th>Status</th><th>Quality</th><th>Words</th><th>Updated</th></tr></thead>
+        <tbody>
+          {% for p in recent_pages %}
+          <tr>
+            <td>{{ p.slug }}</td>
+            <td><span class="status status-{{ p.status }}">{{ p.status }}</span></td>
+            <td>{{ p.quality_score if p.quality_score is not none else '—' }}</td>
+            <td>{{ p.word_count }}</td>
+            <td>{{ p.updated_at.strftime('%Y-%m-%d %H:%M') }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="empty">No pages yet. Run <code>python scripts/seed_from_bestaiagent.py</code> or POST to <code>/api/pages</code> to create the first one.</p>
+      {% endif %}
+    </section>
+
+    <section class="panel">
+      <h2>Machine surfaces</h2>
+      <ul class="links">
+        <li><a href="/sitemap.xml">/sitemap.xml</a></li>
+        <li><a href="/robots.txt">/robots.txt</a></li>
+        <li><a href="/llms.txt">/llms.txt</a></li>
+        <li><a href="/entities.json">/entities.json</a></li>
+        <li><a href="/knowledge-graph.json">/knowledge-graph.json</a></li>
+        <li><a href="/evidence.json">/evidence.json</a></li>
+        <li><a href="/rss.xml">/rss.xml</a></li>
+        <li><a href="/atom.xml">/atom.xml</a></li>
+        <li><a href="/docs">/docs (API reference)</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

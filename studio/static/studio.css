@@ -1,0 +1,33 @@
+:root {
+  --bg: #060812; --panel: #0d1325; --line: #202b4d; --ink: #f7f8ff; --muted: #8e9abc;
+  --violet: #7c5cff; --cyan: #37c7ff; --green: #47d79a; --amber: #f2b85d; --rose: #fb7185;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.6 -apple-system, ui-sans-serif, sans-serif; }
+a { color: #9c8cff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 900; font-size: 18px; }
+.brand span { color: var(--violet); }
+.provider-badge { font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); }
+.provider-badge.ok { color: var(--green); border-color: rgba(71,215,154,.4); }
+.provider-badge.off { color: var(--amber); border-color: rgba(242,184,93,.4); }
+.shell { max-width: 1100px; margin: 0 auto; padding: 28px; }
+.stat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 24px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; text-align: center; }
+.stat-value { display: block; font-size: 24px; font-weight: 800; }
+.stat-label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+.panel h2 { margin: 0 0 12px; font-size: 15px; }
+.facts { width: 100%; border-collapse: collapse; }
+.facts th, .facts td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.facts th { color: var(--muted); font-weight: 600; width: 160px; }
+.status { padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; border: 1px solid var(--line); }
+.status-published { color: var(--green); }
+.status-review { color: var(--cyan); }
+.status-draft { color: var(--muted); }
+.status-rejected { color: var(--rose); }
+.links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.links li { background: #0a1020; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 12px; }
+.empty { color: var(--muted); }
+code { background: #0a1020; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
