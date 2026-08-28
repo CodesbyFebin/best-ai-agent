@@ -1,0 +1,74 @@
+---
+slug: freshness-policy
+title: "Freshness Policy — When Pages Are Re-verified"
+description: "How BestAIAgent.in declares and enforces freshness: re-verification windows, lifecycle states, and the difference between refresh and correction."
+canonicalUrl: "https://bestaiagent.in/trust/freshness-policy"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - "Internal — src/content/registry/evidence-ledger.ts (EvidenceClaim.expiresAt)"
+  - "Internal — src/content/registry/content-registry.ts (lifecycleStatus)"
+---
+
+# Freshness Policy
+
+Every claim on BestAIAgent.in has a freshness window. When a window closes, the affected page enters a `refresh_required` state until the claim is re-verified. This page documents the windows we use and the page lifecycle that results.
+
+## Default windows by claim type
+
+| Claim type | Window | Rationale |
+|------------|-------:|-----------|
+| Vendor pricing | 90 days | Vendor prices change without notice |
+| Model version / capability list | 60 days | Vendors release model updates frequently |
+| Regulatory status | 180 days | Rule changes are infrequent but consequential |
+| Protocol revision | 365 days | Specifications change slowly |
+| Compliance certification | 180 days | Certifications expire or are renewed annually |
+| Methodology (this page and siblings) | 180 days | Policy is reviewed semi-annually |
+
+## Lifecycle states affected by freshness
+
+The content lifecycle is defined in `src/content/registry/content-registry.ts`:
+
+- `published` — current and indexable.
+- `monitored` — current but flagged for the next scheduled refresh.
+- `refresh_required` — a receipt has aged past `expiresAt`; the page is removed from fresh sitemaps and `llms.txt` until re-verification completes.
+- `rejected` — the page can no longer be supported and is removed from indexable surfaces.
+
+A page in `refresh_required` may still be served to users (with a "This page is being re-verified" notice) but it does not appear in the discovery surfaces of this site until the page is back in `published`.
+
+## How freshness is enforced
+
+- Every claim in `src/content/registry/evidence-ledger.ts` carries an optional `expiresAt` date.
+- A scheduled job queries the ledger for expired claims and moves the owning pages to `monitored` 30 days before expiry, then to `refresh_required` on the expiry date.
+- Re-verification requires a fresh `retrievedAt` date and a fresh passage quotation from the cited source.
+- Re-verified claims enter the ledger with the same id but updated `verifiedAt`, `retrievedAt`, and (optionally) `expiresAt`.
+
+## What we never do
+
+- We never silently update a page's "Last reviewed" date. The date reflects the last genuine review, not the build timestamp.
+- We never publish a page with a fake freshness window. The window is declared in the frontmatter and enforced by the schema.
+- We never back-date a verification to preserve an old receipt's apparent freshness.
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Corrections](/trust/corrections)
+- [Author and reviewer policy](/trust/author-reviewer-policy) — who reviews each refresh cycle
+
+## Source receipts
+
+- Internal — `src/content/registry/evidence-ledger.ts` (`EvidenceClaim.expiresAt`, retrieved 2026-08-22). The expiry field that drives freshness transitions.
+- Internal — `src/content/registry/content-registry.ts` (`lifecycleStatus`, retrieved 2026-08-22). The lifecycle state machine referenced by this policy.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

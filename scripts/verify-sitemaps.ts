@@ -99,7 +99,7 @@ async function main() {
     for (const sitemapUrl of sitemapUrls) {
       // The sitemap index contains absolute URLs (from DOMAIN constant). For local testing,
       // we need to replace the domain with our baseUrl or use relative paths.
-      let absoluteUrl = sitemapUrl;
+      let absoluteUrl: string;
       if (sitemapUrl.startsWith('http')) {
         // Replace the DOMAIN with baseUrl's host for local testing
         try {
@@ -126,7 +126,7 @@ async function main() {
           const sampleSize = Math.min(5, urls.length);
           for (let i = 0; i < sampleSize; i++) {
             const url = urls[i];
-            let absoluteUrl = url;
+            absoluteUrl = url;
             if (url.startsWith('http')) {
               // Replace DOMAIN with baseUrl for local testing
               try {

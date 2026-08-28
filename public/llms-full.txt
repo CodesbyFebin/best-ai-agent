@@ -1,21 +1,208 @@
-# BestAIAgent.in - Full Machine Readable Authority Knowledge Dump
-> Full context document for AI language models, search engines, and automated citation agents.
+# Best AI Agent — Full Reference for AI Systems (llms-full.txt)
 
-## Evaluation Methodology & Scoring Framework
-BestAIAgent.in evaluates AI agents across 7 weighted dimensions:
-1. Reasoning & Complex Logic (12.5%)
-2. Tool Use & API Integration Capability (12.5%)
-3. Execution Speed & Latency (12.5%)
-4. Value for Money & Token Efficiency (12.5%)
-5. System Reliability & Error Handling (12.5%)
-6. India Regional Fit, Currency & Sovereign Compliance (15.0%)
-7. Enterprise Scalability & Security Audit (10.0%)
+> Comprehensive reference document for AI language models, search engines, citation agents, and AI-overview systems.
+> This is the LONG companion to `llms.txt` (the short topical index). Served at https://bestaiagent.in/llms-full.txt
+>
+> **Evidence discipline:** this document describes the *system* and lists entity *names* with their verified primary
+> sources. It does NOT assert specific numeric scores or specific INR prices inline, because such figures must trace
+> to a dated `EvidenceClaim` with at least one `EvidenceSource` quoting the exact supporting passage (see
+> Architecture → Evidence). For the current verified value of any claim, read the entity's profile page and its
+> linked evidence claims. If a figure is not backed by a claim, it is not a fact in this project.
+>
+> **Product type:** this is a content/evaluation CATALOGUE, not an agent runtime. It does not execute LLM loops, host
+> models, call tools, or hold agent memory. It evaluates and compares agents that other people built.
 
-## Key Agent Entities & Specs Summary
-- **Cursor AI**: Autonomous coding agent built as a VS Code fork. Score: 9.7/10. Starting at $20/mo (~₹1,680/mo). Supports deep codebase indexing and inline composer.
-- **Claude Sonnet**: Anthropic's flagship agentic model. Score: 9.6/10. Starting at $20/mo (~₹1,680/mo). Top reasoning and long context window (200k tokens).
-- **ChatGPT Agent**: OpenAI's conversational and research agent. Score: 9.5/10. Starting at $20/mo (~₹1,680/mo). Integrates web search and code interpreter.
-- **Vapi AI**: Low-latency voice AI agent framework. Score: 9.3/10. Starting at ~$0.15/hr (~₹12/hr). Native Hinglish, Tamil, Telugu dialect support.
-- **Yellow.ai**: Enterprise WhatsApp conversational platform. Score: 9.2/10. DPDP Act compliant with Mumbai cloud server endpoints.
-- **Flowise AI**: Visual drag-and-drop RAG and agent workflow builder. Score: 9.1/10. Free Open Source software.
-- **CrewAI**: Role-based multi-agent orchestration framework in Python. Score: 9.4/10. Free Open Source software.
+---
+
+## Identity
+
+- **Name:** Best AI Agent (product site: BestAIAgent.in)
+- **What it is:** India-first, evidence-backed discovery, comparison, pricing, and evaluation platform for AI agents.
+- **What it is NOT:** an agent framework, an LLM runtime, a tool-orchestration engine, or a model host.
+- **Audience:** Indian developers, startups, SMEs, and enterprise buyers evaluating AI agents.
+- **Problem it solves:** AI-agent marketing noise + the absence of India-specific (INR, GST, DPDP, India-Fit) evaluation context in international directories.
+- **Why it exists:** to provide independent, source-linked, evidence-first evaluation instead of vendor claims.
+- **Repository:** https://github.com/CodesbyFebin/best-ai-agent
+- **License:** Pending owner confirmation. `package.json` declares `UNLICENSED`; no open-source license is granted until a `LICENSE` file records the owner's decision. (See LICENSE, GOVERNANCE.md.)
+
+## Capabilities
+
+1. **Agent profiles** — curated entities (coding, research, voice, business, automation agents) with source-linked identity, a verification status, and attached evidence receipts.
+2. **Head-to-head comparisons** — `A-vs-B` pages with a single canonical direction; reverse pairings redirect to canonical (no duplicate indexable comparisons).
+3. **Category/topic hubs** — topical silos connecting related entities without duplicating canonical pages.
+4. **MCP-server setup guides** — connecting clients (Claude, Cursor, etc.) to Model Context Protocol servers.
+5. **India-first pricing** — INR pricing tables with tax/billing/payment context where the vendor publishes it; GST and DPDP signals; an India-Fit score.
+6. **Evidence engine** — every factual claim traces to an `EvidenceClaim` (statement + `EvidenceSource[]` quoting the exact passage, with `retrievedAt` + `authority`) gated by `EVIDENCE_RULES` confidence thresholds.
+7. **Discovery outputs** — segmented XML sitemaps (agents, categories, comparisons, MCP, research, pages), JSON-LD structured data, RSS, and a `llms.txt` topical index.
+8. **Knowledge-graph API** — `/api/graph/{related,similar,path}` for traversing entity relationships.
+
+## Architecture
+
+- **Stack:** React 19, TypeScript 5.8, Vite 6.2 (build), esbuild 0.25 (server bundle), Express 4.21, Tailwind 4.1, Node.js (>=20, CI on 24).
+- **Entry points:** `server.tsx` (Express + Vite SSR, exports `createApp()`), `src/main.tsx` (client hydration), `api/index.ts` (Vercel function → `require dist/server.cjs → createApp()`).
+- **Routing layer** (`src/routing/`):
+  - `routeRegistry.ts` — canonical routes (~110) + legacy redirects (~171) on commit a54d4fa.
+  - `routeResolver.ts` — resolution order: home → legacy 301 → exact canonical → dynamic entity (validated against real registry; non-canonical slug → 301; unknown slug → 404, never synthesized).
+  - `pathNormalization.ts`, `entityResolvers.ts`, `canonicalUrl.ts`, `types.ts`.
+- **Data layer** (`src/data/`): `agents.ts` (~70 agents), `categories.ts`, `comparisons.ts`, `research.ts`, `directory.ts`, `evidenceSchema.ts`, `agentEvidence.ts`, `sitemapGenerator.ts`, `topicalAuthority.ts`, `semanticClusters.ts`. Persistence is file-based (JSON); no database.
+- **SSR:** `renderHtmlWithSeo` in `server.tsx` uses `react-dom/server`'s `renderToString`, injects `<head>` meta + JSON-LD into the HTML template. `/admin*` is SSR-blocked (404 before routing).
+- **Build:** `vite build && esbuild server.tsx --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs`.
+
+> Full diagrams (request lifecycle, evidence lifecycle, build lifecycle, error flow) are in `docs/ARCHITECTURE.md` (rendered Mermaid).
+
+## Evidence model (how claims become facts)
+
+A claim is publishable only if it traces to an `EvidenceClaim` backed by `EvidenceSource` entries. Authoritative in `src/data/evidenceSchema.ts`:
+
+```
+EvidenceSource {
+  url:          "https://<real primary source>"
+  publisher:    "Cursor docs" | "Anthropic" | "GitHub" | ...
+  retrievedAt:  "<ISO 8601 date — when you fetched the source>"
+  passage:      "<the EXACT supporting text you quote from the source>"
+  locator?:     "<optional selector / page / section>"
+  authority:    "primary" | "secondary" | "tertiary"
+  freshness?:   "<optional date>"
+}
+
+EvidenceClaim {
+  id:          "claim-pricing-1" | "claim-capability-2" | ...
+  statement:   "<the exact claim being made>"
+  evidence:    EvidenceSource[]        // one or more sources
+  confidence:  <0-100>                 // gated by EVIDENCE_RULES
+  status:      "active" | "expired" | "contradicted" | "superseded"
+  verifiedAt:  "<ISO 8601 date>"
+}
+```
+
+Each agent references its claims via `evidenceIds?: string[]` on the `Agent` interface in `src/data/agents.ts`. Confidence gates (`EVIDENCE_RULES`): `CRITICAL` ≥ 90 (2+ primary OR 1 primary + 2 secondary), `STANDARD` ≥ 80 (1+ primary), `COMPARISON` ≥ 85 (2+ primary). The content state machine (11 states, default `candidate`) guards the lifecycle.
+
+- **Primary source first.** Vendor docs, official pricing pages, upstream OSS repos. Blog posts and AI summaries are not primary.
+- **Quote the exact passage.** `EvidenceSource.passage` is the supporting text you actually read at `url` on `retrievedAt` — not a paraphrase, and not what a guide said the source contains. (A misread passage is the failure mode that produced the original "Cursor Pro Plus $39" error in upstream analysis, where the real value was $60 — the passage-citation discipline catches this.) Note: this donor repo does **not** hash source content; the receipt's integrity is the quoted passage + retrievable URL + retrievedAt. (A companion production project uses a `contentHash: sha256:…` model; this one does not.)
+- **Authority must match reality.** A `tertiary` source is fine if labeled; presenting a secondary blog as `primary` is a bug.
+- **Unsupported claims are quarantined** (`quarantine/`), gated by `npm run check:quarantine` in CI. They are not published. (`checksums.sha256` in `evidence/` protects build artifacts, not evidence content.)
+
+This is why this document does not list specific numeric scores or INR prices inline: those values live in evidence claims and the entity pages that cite them, and they are refreshed by re-fetching and re-quoting the source. A static number in this file would either go stale or duplicate the claim without its supporting passage.
+
+## Scoring & evaluation methodology
+
+The platform applies an editorial scoring methodology across weighted dimensions (reasoning, tool-use, latency, value/token-efficiency, reliability, India regional fit, enterprise scalability). The exact weights and the per-entity scores are computed and stored alongside the entity's evidence receipts — not asserted here without a receipt. To cite a score, link the entity's profile page and the receipt backing that score. Dimensions and weights are documented in `src/data/evidenceSchema.ts` and the editorial methodology pages on the site.
+
+## Installation
+
+```bash
+git clone https://github.com/CodesbyFebin/best-ai-agent.git
+cd best-ai-agent
+npm ci            # package-lock.json is canonical; bun.lock is redundant
+cp .env.example .env   # add your own GEMINI_API_KEY / APP_URL
+npm run dev       # http://localhost:3000 (tsx server.tsx + Vite HMR)
+```
+
+Requirements: Node.js >=20 (CI runs 24). npm is the canonical package manager.
+
+## Usage
+
+```bash
+npm run dev       # development with Vite HMR
+npm run build     # vite build && esbuild → dist/server.cjs
+npm start         # node dist/server.cjs (production)
+```
+
+## Verification (reproducible)
+
+```bash
+npm run typecheck             # tsc --noEmit
+npm run lint:eslint           # ESLint flat config (advisory baseline; see eslint.config.js)
+npm run check:quarantine      # quarantine integrity
+npm run build                 # production bundle
+npm run test:evidence          # evidence receipts valid + hash-shaped
+npm run test:sitemap           # sitemap index + segments
+npm run test:ssr               # SSR hydration
+npm run test:graph             # knowledge-graph integrity
+npm run test:manifest          # content manifests
+npm run test:production        # full production-readiness suite
+npm run test:scope-freeze      # scope-freeze invariants
+```
+
+`.github/workflows/ci.yml` runs typecheck → quarantine → build → verify-invariants/evidence/sitemap/SSR/routes/redirects/manifest/scope-freeze on every PR and push to main. ESLint runs as an advisory step (`continue-on-error`) per a ratchet policy.
+
+## Configuration
+
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `GEMINI_API_KEY` | Optional (AI features) | Google Gemini API key |
+| `APP_URL` | Optional | Canonical site URL (self-referential links, OAuth, API) |
+| `PORT` | Optional (default 3000) | Server port |
+| `NODE_ENV` | standard | `production` switches to `dist/server.cjs` |
+| `VERCEL` | set by Vercel | Switches the `api/index.ts` handler path |
+
+Never commit real secrets. `.gitignore` excludes `.env`.
+
+## API
+
+Public:
+- `POST /api/analyze-doc` — document analysis
+- `POST /api/recommend` — agent recommendations
+- `POST /api/submit-lead` — lead capture
+- `POST /api/submit-tool` — tool submission
+- `POST /api/subscribe` — newsletter subscription
+- `GET /api/graph/stats` — graph statistics
+- `GET /api/graph/related/:type/:id` — related entities
+- `GET /api/graph/similar/:type/:id` — similar entities
+- `GET /api/graph/path/:ft/:fi/:tt/:ti` — entity path
+- `GET /health` — health check
+
+Discovery outputs (GET): `/sitemap.xml`, `/sitemap-{agents,categories,comparisons,mcp,research,pages}.xml`, `/rss.xml`, `/feed.xml`, `/rss`, `/llms.txt`, `/llms-full.txt`, `/robots.txt`, `/security.txt`, `/humans.txt`.
+
+Admin (auth): `GET /api/admin/verify`, `GET /api/admin/info` — bearer-token gate (NOT a hardened identity system; see SECURITY.md).
+
+## Security
+
+- Report vulnerabilities PRIVATELY via GitHub Security Advisories: https://github.com/CodesbyFebin/best-ai-agent/security/advisories/new — NEVER a public issue.
+- `/admin*` is SSR-blocked (404 before routing).
+- Admin auth is a bearer-token compare, not a proven identity layer; hardening is planned (see SECURITY.md).
+- This is a content platform — it does not execute user-supplied agent code, host models, or run LLM loops. Relevant threat classes: SSRF, input validation, auth-token handling, dependency CVEs.
+
+## Limitations
+
+- **No agent runtime.** This platform does not run, host, or orchestrate the agents it catalogues.
+- **No database.** Persistence is file-based (JSON + on-disk evidence receipts).
+- **Scores are editorial + evidence-linked, not measured in-repo.** The repo does not execute benchmarks against the agents; it links to source evidence.
+- **Licensing is pending** the owner's decision; no open-source license is granted yet.
+- **Some root process docs and a `packages/` monorepo skeleton are present but unwired** (no `workspaces` field); see AUDIT.md.
+- **An eslint baseline of ~24 errors / ~326 warnings exists** and is being driven down via a ratchet; ESLint is advisory in CI until then.
+
+## FAQ (concise, verified)
+
+- **What is Best AI Agent?** An India-first, evidence-backed directory for discovering, comparing, and pricing AI agents. (VERIFIED)
+- **Who is it for?** Indian developers, startups, SMEs, and enterprise buyers. (VERIFIED)
+- **How do I install it?** `git clone … && npm ci && cp .env.example .env && npm run dev`. Node.js >=20. (VERIFIED)
+- **How do I add an agent?** Add an entity to `src/data/agents.ts` with a real `officialUrl`, attach an `EvidenceClaim` (statement + at least one `EvidenceSource` quoting the exact passage, with `retrievedAt` + `authority`), reference the claim's `id` in the entity's `evidenceIds` array, and the resolver, sitemap, and verify scripts pick it up. See CONTRIBUTING.md. (VERIFIED)
+- **How do agents use tools / how does memory work?** Not applicable — this is a catalogue, not a runtime. It does not execute agent loops, call tools, or hold memory. (VERIFIED — scope)
+- **What models are supported?** Not applicable — the platform does not serve or call models for inference. `@google/genai` and `openai` are dependencies but their served-route invocation is limited; new call sites require maintainer review. (INFERRED from deps + audit)
+- **Can it run locally?** Yes — `npm run dev` runs the full SSR site locally on http://localhost:3000. (VERIFIED)
+- **How do I deploy it?** `npm run build` then `npm start`, or deploy to Vercel (`vercel.json` routes to `api/index.ts`). The product site bestaiagent.in runs on a separate Next.js deployment. (VERIFIED)
+- **How do I contribute?** See CONTRIBUTING.md — good first issue is adding one verified entity + one evidence receipt. (VERIFIED)
+- **Where do security reports go?** Private GitHub Security Advisories, not public issues. (VERIFIED)
+
+## Key entity pages (verified primary sources)
+
+These are entity slugs the platform catalogues. For the current verified facts about each, read the entity's profile page and its linked evidence receipts — do not treat any number here as current without a receipt.
+
+- Coding agents: `/agents/cursor`, `/agents/claude`, `/agents/chatgpt`, `/agents/cline`, `/agents/aider`, `/agents/gemini-cli`, `/agents/qwen-code`, `/agents/swe-agent`
+- Frameworks: `/frameworks/crewai`, `/frameworks/langgraph`, `/frameworks/langchain`, `/frameworks/autogen`
+- Browser/research: `/agents/browser-use`, `/agents/gpt-researcher`
+- Upstream OSS repos are linked as each entity's `sourceUrl` (e.g. https://github.com/cline/cline, https://github.com/Aider-AI/aider, https://github.com/langchain-ai/langgraph).
+
+## Where to go next
+
+- Short AI-crawler index: `/llms.txt`
+- Architecture (with diagrams): `docs/ARCHITECTURE.md`
+- Product positioning: `docs/POSITIONING.md`
+- Evidence-first audit: `AUDIT.md`
+- Contributing: `CONTRIBUTING.md`
+- Security: `SECURITY.md`
+
+---
+
+_Last updated: 2026-08-20. This document describes the verified state on commit a54d4fa; specific entity scores and prices are intentionally omitted here and live in evidence-backed entity pages._

@@ -1,0 +1,18 @@
+# CODEOWNERS — review routing for Best AI Agent
+# Default owner: the repository maintainer account owns everything not listed below.
+
+*                                    @CodesbyFebin
+
+# Routing layer is the load-bearing canonical contract — require maintainer review.
+/src/routing/                        @CodesbyFebin
+/server.tsx                          @CodesbyFebin
+/api/index.ts                        @CodesbyFebin
+
+# Evidence schema + quarantine are release gates — require maintainer review.
+/src/data/evidenceSchema.ts          @CodesbyFebin
+/evidence/                           @CodesbyFebin
+/quarantine/                         @CodesbyFebin
+
+# CI workflows and the `verify-*` scripts they run gate the merge.
+/.github/workflows/                  @CodesbyFebin
+/scripts/verify-*.ts                 @CodesbyFebin

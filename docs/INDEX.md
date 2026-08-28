@@ -1,162 +1,88 @@
-# BestAIAgent.in - Documentation Index
+# Documentation Index
 
-**Platform:** ATLAS P99 + Safe-Deep OS v5.0  
-**Status:** Platform Engineering Complete (100/100 Verified)  
-**Last Updated:** 2026-07-24
+> Cleaned (2026-08-20) to remove fabricated aggregate scores ("100/100", "419/419", "Platform Score 100", "Production Ready"). Counts here reflect the real tracked `docs/` tree (57 files) and root-level docs. For an evidence-first audit of the whole repository, start at [`../AUDIT.md`](../AUDIT.md).
 
----
+## Start here
 
-## Quick Navigation
+| Doc | What's in it |
+|-----|--------------|
+| [`../README.md`](../README.md) | Product overview, quick start, features |
+| [`../AUDIT.md`](../AUDIT.md) | Phase 0 evidence-first repository audit (gaps + severity) |
+| [`./POSITIONING.md`](./POSITIONING.md) | One-line / 50 / 150 / technical / beginner / developer / contributor positioning |
+| [`./ARCHITECTURE.md`](./ARCHITECTURE.md) | Code-sourced architecture + request/evidence/build Mermaid diagrams |
 
-### For Developers (Getting Started)
-1. [DEVELOPMENT.md](../../DEVELOPMENT.md) - Local setup, dev workflow
-2. [ARCHITECTURE.md](./ARCHITECTURE.md) - System design overview
-3. [SAFE_DEEP.md](./SAFE_DEEP.md) - Evidence validation system
-4. [TEST_REPORT.md](./TEST_REPORT.md) - Test results (419 passing tests)
+## For developers (getting started)
 
-### For Operators (Deployment)
-1. [DEPLOYMENT.md](../../DEPLOYMENT.md) - Production deployment guide
-2. [RELEASE_REPORT.md](./RELEASE_REPORT.md) - Release notes and checklist
-3. [CURRENT_IMPLEMENTATION.md](./CURRENT_IMPLEMENTATION.md) - Verified platform status
-4. [FINAL_SIGNOFF.md](../../FINAL_SIGNOFF.md) - Official completion attestation
+1. [`../README.md#quick-start`](../README.md#quick-start) — `npm ci` → `npm run dev`
+2. [`./ARCHITECTURE.md`](./ARCHITECTURE.md) — system design + request flow
+3. [`./SAFE_DEEP.md`](./SAFE_DEEP.md) — evidence validation spec
+4. [`../DEVELOPMENT.md`](../DEVELOPMENT.md) — local setup, dev workflow, coding standards
+5. [`../TESTING.md`](../TESTING.md) — how to run and interpret the verify suite
+6. [`../CI_INVARIANTS.md`](../CI_INVARIANTS.md) — the contracts CI enforces
 
-### For Product Management
-1. [MASTER_ROADMAP.md](./MASTER_ROADMAP.md) - Full timeline (P00-P19)
-2. [PLATFORM_GAP_ANALYSIS.md](./PLATFORM_GAP_ANALYSIS.md) - What's done, what's next
-3. [PROJECT_TRACKER.md](../../PROJECT_TRACKER.md) - Task-level tracking
-4. [PROJECT_COMPLETENESS.md](../../PROJECT_COMPLETENESS.md) - Scorecard
+## For operators (deployment)
 
-### For Engineers (Future Phases)
-1. [KNOWLEDGE_GRAPH.md](./KNOWLEDGE_GRAPH.md) - Phase 13 specification
-2. [CONTENT_OS.md](./CONTENT_OS.md) - Phase 14 specification
-3. [EDITORIAL_OS.md](./EDITORIAL_OS.md) - Phase 15 specification
-4. [SEO_ENGINE.md](./SEO_ENGINE.md) - Phase 18 specification
-5. [AI_SEARCH.md](./AI_SEARCH.md) - Phase 17 specification
+1. [`../DEPLOYMENT.md`](../DEPLOYMENT.md) — production deployment guide
+2. [`./RELEASE_REPORT.md`](./RELEASE_REPORT.md) — release notes
+3. [`./CURRENT_IMPLEMENTATION.md`](./CURRENT_IMPLEMENTATION.md) — verified platform status
+4. [`../PROJECT_TRACKER.md`](../PROJECT_TRACKER.md) — task-level tracking
 
-### For QA & Testing
-1. [TEST_REPORT.md](./TEST_REPORT.md) - Complete test results
-2. [TESTING.md](../../TESTING.md) - Testing strategy
-3. Verification scripts in `/scripts/`:
-   - `verify-evidence.ts` - Evidence system tests
-   - `verify-redirects.ts` - Redirect validation
-   - `verify-sitemaps.ts` - Sitemap validation
-   - `verify-ssr.ts` - SSR rendering tests
-   - `verify-production.mjs` - Full integration
+## Architecture & design
 
----
+- [`./ARCHITECTURE.md`](./ARCHITECTURE.md) — system design (canonical)
+- [`./ARCHITECTURE/`](./ARCHITECTURE/) — `ADR_INDEX.md`, `API_CONTRACTS.md`, `CONTENT_OS.md`, `SUBSYSTEMS.md`, `VERSIONING.md`, `README.md`
+- [`./DECISIONS/`](./DECISIONS/) — ADRs `0002`–`0009` (content-manifest, entity-resolver, generation-context, blueprint-engine, validation-pipeline, evidence-layer, quality-scoring, internal-linking)
+- [`./KNOWLEDGE_GRAPH.md`](./KNOWLEDGE_GRAPH.md), [`./PHASE_B_KNOWLEDGE_GRAPH.md`](./PHASE_B_KNOWLEDGE_GRAPH.md)
 
-## Documentation Summary
+## Evidence & quality
 
-### Completed (Platform Layer)
+- [`./SAFE_DEEP.md`](./SAFE_DEEP.md) — evidence validation spec
+- [`./PHASE_C1_EVIDENCE.md`](./PHASE_C1_EVIDENCE.md) — Phase C1 evidence
+- [`./SCOPE.md`](./SCOPE.md), [`./SCOPE_FREEZE_SIGNOFF.md`](./SCOPE_FREEZE_SIGNOFF.md)
+- [`./TEST_REPORT.md`](./TEST_REPORT.md)
+- On-disk evidence receipts: `../evidence/{p0-*,phase-*}/`
+- Quarantine: `../quarantine/` (+ `../scripts/check-quarantine.ts`, a CI gate)
 
-| Document | Purpose | Status |
-|----------|---------|--------|
-| ARCHITECTURE.md | System design & components | ✅ Complete |
-| SAFE_DEEP.md | Evidence validation spec | ✅ Complete |
-| CURRENT_IMPLEMENTATION.md | Verified platform state | ✅ Complete |
-| TEST_REPORT.md | Test results (419 tests) | ✅ Complete |
-| RELEASE_REPORT.md | Release notes | ✅ Complete |
-| PLATFORM_GAP_ANALYSIS.md | Gap analysis (P13-P19) | ✅ Complete |
-| MASTER_ROADMAP.md | Full timeline | ✅ Complete |
-| FINAL_SIGNOFF.md | Official signoff | ✅ Complete |
+## Roadmaps & planning
 
-### Future Phases (Specifications)
+- [`./MASTER_ROADMAP.md`](./MASTER_ROADMAP.md) — full timeline
+- [`./PLATFORM_GAP_ANALYSIS.md`](./PLATFORM_GAP_ANALYSIS.md) — what's done, what's next
+- [`./WORK_BREAKDOWN.md`](./WORK_BREAKDOWN.md)
+- [`./PHASE_C_PLAN.md`](./PHASE_C_PLAN.md), [`./PHASE_C1_CONTENT_MANIFEST.md`](./PHASE_C1_CONTENT_MANIFEST.md)
 
-| Document | Phase | Status |
-|----------|-------|--------|
-| KNOWLEDGE_GRAPH.md | P13 | Spec ready |
-| CONTENT_OS.md | P14 | Spec ready |
-| EDITORIAL_OS.md | P15 | Spec ready |
-| SEO_ENGINE.md | P18 | Spec ready |
-| AI_SEARCH.md | P17 | Spec ready |
+## Process history (archive candidates)
 
-**Note:** P16 (Publishing Engine) and P19 (Operations) specs TBD.
+> The root contains ~22 process `.md` files (`FINAL_REPORT.md`, `IMPLEMENTATION_REPORT.md`, `CONSOLIDATION_SUMMARY.md`, `CONTENT_EXPANSION_V2_REPORT.md`, `FINAL_SIGNOFF.md`, `VERIFICATION_COMPLETE.md`, `ACHIEVEMENTS.md`, `ATLAS_SAFE-DEEP_OS_Master_Prompt.md`, …). `AUDIT.md` §H.2 recommends consolidating these into `docs/archive/` to unclutter the root. They are retained until that cleanup is run.
 
----
+- [`../FINAL_REPORT.md`](../FINAL_REPORT.md), [`../FINAL_SIGNOFF.md`](../FINAL_SIGNOFF.md), [`../VERIFICATION_COMPLETE.md`](../VERIFICATION_COMPLETE.md)
+- [`../PROJECT_COMPLETENESS.md`](../PROJECT_COMPLETENESS.md), [`../CONSOLIDATION_SUMMARY.md`](../CONSOLIDATION_SUMMARY.md)
+- [`../CHANGES_AUDIT.md`](../CHANGES_AUDIT.md)
+- [`./audits/`](./audits/) — `ADMIN_SECURITY_AUDIT.md`, `AUDIT_RECONCILIATION.md`, `ENTITY_INTEGRITY_AUDIT.md`, `PRODUCTION_GAP_ANALYSIS.md`, `SSR_RUNTIME_AUDIT.md`, `SUMMARY.md`
+- [`./completeness/`](./completeness/) — `COMPLETENESS_LEDGER.md`, `CURRENT_STATE.md`, `REQUIREMENTS_TRACEABILITY.md`, `TEST_EVIDENCE.md`, `PRODUCTION_VERIFICATION.md`, `PLATFORM_VERIFICATION.md`, `PHASE_A_CONSOLIDATION.md`, `PHASE_B_KNOWLEDGE_GRAPH.md`, `BLOCKERS.md`, `RISKS.md`, `DECISIONS.md`, `SCOPE.md`, `IMPLEMENTATION_PLAN.md`, `FINAL_HANDOFF.md`
 
-## Verification Checklist
+## Verification scripts
 
-### Before Staging Deployment
-- [x] TypeScript compilation: 0 errors
-- [x] Build succeeds
-- [x] Evidence tests: 9/9 passing
-- [x] Redirect tests: 290/290 passing
-- [x] Sitemap tests: 49/49 passing
-- [x] SSR tests: 15/15 passing
-- [x] Production integration: 54/54 passing
-- [x] Total: 419/419 tests passing (100%)
-- [x] Documentation complete
-
-### Staging Deployment (External Action)
-- [ ] Deploy to staging environment
-- [ ] Run: `BASE_URL=<staging> npx tsx scripts/verify-production.mjs`
-- [ ] Verify all tests pass on staging
-- [ ] Manual smoke test (browse key pages)
-- [ ] Check Search Console indexing
-
-### After Staging Passes
-- [ ] Production deployment
-- [ ] Submit sitemap to Google/Bing
-- [ ] Monitor for 24-48h (Sentry recommended)
-- [ ] Begin P13 planning (Knowledge Graph)
-
----
-
-## File Locations
+Run any of these locally before opening a PR (CI runs a sub-sequence automatically):
 
 ```
-/docs/
-├── INDEX.md                         (this file)
-├── ARCHITECTURE.md                  - System design
-├── SAFE_DEEP.md                     - Evidence system spec
-├── AI_SEARCH.md                     - Phase 17 spec
-├── SEO_ENGINE.md                    - Phase 18 spec
-├── CONTENT_OS.md                    - Phase 14 spec
-├── EDITORIAL_OS.md                  - Phase 15 spec
-├── KNOWLEDGE_GRAPH.md               - Phase 13 spec
-├── CURRENT_IMPLEMENTATION.md       - Verified platform status
-├── PLATFORM_GAP_ANALYSIS.md         - What's missing (P13-P19)
-├── MASTER_ROADMAP.md                - Full timeline
-├── TEST_REPORT.md                   - Test results
-├── RELEASE_REPORT.md                - Release notes
-└── completeness/
-    ├── PLATFORM_VERIFICATION.md    - Detailed verification log
-    ├── COMPLETENESS_LEDGER.md      - Scoring ledger
-    ├── REQUIREMENTS_TRACEABILITY.md
-    ├── TEST_EVIDENCE.md
-    ├── PRODUCTION_VERIFICATION.md
-    ├── IMPLEMENTATION_PLAN.md
-    ├── SCOPE.md
-    ├── RISKS.md
-    ├── DECISIONS.md
-    ├── BLOCKERS.md
-    └── FINAL_HANDOFF.md
-
-/docs/ is the authoritative source for technical specifications.
-/Root .md files are high-level summaries.
+npm run lint            # tsc --noEmit (typecheck — a real ESLint config is a planned fix, see AUDIT.md G.2)
+npm run check:quarantine
+npm run build
+npm run test:evidence
+npm run test:sitemap
+npm run test:ssr
+npm run test:graph
+npm run test:manifest
+npm run test:production
+npm run test:scope-freeze
 ```
 
----
+## Verification status (dated, no aggregate scores)
 
-## Key Metrics
+As of commit `a54d4fa` on the **committed tree** (untracked scratch scripts set aside):
 
-**Platform Score:** 100/100 (verified)  
-**Tests Passing:** 419/419 (100%)  
-**TypeScript Errors:** 0  
-**Build Status:** ✅ SUCCESS  
-**Documentation Files:** 14 complete
+- `npm run lint` → exit 0
+- `npm run build` → produces `dist/server.cjs` + Vite client assets
+- Route registry: ~110 canonical routes + ~171 legacy redirects (regenerate count from `src/routing/routeRegistry.ts`)
 
----
-
-## Support & Questions
-
-**For platform issues:** Check [ARCHITECTURE.md](./ARCHITECTURE.md) and [TEST_REPORT.md](./TEST_REPORT.md)  
-**For deployment:** See [DEPLOYMENT.md](../../DEPLOYMENT.md)  
-**For future phases:** Review specs in [KNOWLEDGE_GRAPH.md](./KNOWLEDGE_GRAPH.md) etc.  
-**For verification:** Run scripts in `/scripts/` directory
-
----
-
-**Last Updated:** 2026-07-24  
-**Maintained By:** ATLAS Development Team  
-**Platform Version:** ATLAS P99 + Safe-Deep OS v5.0
+> To reproduce: `npm ci && npm run lint && npm run build` then the relevant `npm run test:*`. No "100/100" or "X/X passing" aggregate is asserted here — those figures are not part of any reproducible harness in the repo.

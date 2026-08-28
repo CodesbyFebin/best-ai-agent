@@ -1,0 +1,595 @@
+claimId,page,section,exactClaim,classification,sourceId,sourceUrl,sourceType,authorityScore,passageQuote,locator,retrievedAt,temporalValidity,jurisdiction,reviewStatus
+,editorial-methodology,,"---
+slug: editorial-methodology
+title: ""Editorial Methodology — How BestAIAgent.in Reviews, Scores, and Publishes""
+description: ""How BestAIAgent.in authors, reviews, and publishes AI agent content: editorial independence, source hierarchy, corrections, and author identification.""
+canonicalUrl: ""https://bestaiagent.in/trust/editorial-methodology""
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - ""Internal editorial charter (this site)""
+  - ""Anthropic — Claude's Constitution (https://www.anthropic.com/news/claudes-constitution)""
+  - ""OpenAI — Function Calling (https://platform.openai.com/docs/guides/function-calling)""
+---
+
+# Editorial Methodology
+
+BestAIAgent.in publishes entity and topic authority content about AI agents for Indian developers, startups, enterprises, and regulated organizations.",removed,,,,,"---
+slug: editorial-methodology
+title: ""Editorial Methodology — How BestAIAgent.in Reviews, Scores, and Publishes""
+description: ""How BestAIAgent.in authors, reviews, and publishes AI agent content: editorial independence, source hierarchy, corrections, and author identification.""
+canonicalUrl: ""https://bestaiagent.in/trust/editorial-methodology""
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - ""Internal editorial charter (this site)""
+  - ""Anthropic — Claude's Constitution (https://www.anthropic.com/news/claudes-constitution)""
+  - ""OpenAI — Function Calling (https://platform.openai.com/docs/guides/function-calling)""
+---
+
+# Editorial Methodology
+
+BestAIAgent.in publishes entity and topic authority content about AI agents for Indian developers, startups, enterprises, and regulated organizations.",,,,,
+,editorial-methodology,,"## Related methodology pages
+
+- [Evidence methodology](/trust/evidence-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Corrections and version history](/trust/corrections)
+- [Freshness policy](/trust/freshness-policy)
+- [Affiliate disclosure](/trust/affiliate-disclosure)
+- [Author / reviewer policy](/trust/author-reviewer-policy)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+
+## Source receipts
+
+- Anthropic — Claude's Constitution (primary, retrieved 2026-08-22).",unresolved,,,,,"## Related methodology pages
+
+- [Evidence methodology](/trust/evidence-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Corrections and version history](/trust/corrections)
+- [Freshness policy](/trust/freshness-policy)
+- [Affiliate disclosure](/trust/affiliate-disclosure)
+- [Author / reviewer policy](/trust/author-reviewer-policy)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+
+## Source receipts
+
+- Anthropic — Claude's Constitution (primary, retrieved 2026-08-22).",,,,,
+,evidence-methodology,,"## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Freshness policy](/trust/freshness-policy)
+- [Corrections](/trust/corrections)
+- [Author and reviewer policy](/trust/author-reviewer-policy) — reviewer requirements
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy) — evidence standards for legal claims
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`EVIDENCE_RULES`, retrieved 2026-08-22).",unresolved,,,,,"## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Source classification](/trust/source-classification)
+- [Freshness policy](/trust/freshness-policy)
+- [Corrections](/trust/corrections)
+- [Author and reviewer policy](/trust/author-reviewer-policy) — reviewer requirements
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy) — evidence standards for legal claims
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`EVIDENCE_RULES`, retrieved 2026-08-22).",,,,,
+,privacy-dpdp-editorial-policy,,"---
+slug: privacy-dpdp-editorial-policy
+title: ""Privacy and DPDP Editorial Policy""
+description: ""BestAIAgent.in's editorial policy on India privacy law, the Digital Personal Data Protection Act 2023, and how compliance claims are evidenced on this site.""
+canonicalUrl: ""https://bestaiagent.in/trust/privacy-dpdp-editorial-policy""
+pillarGroup: india
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: CRITICAL
+sources:
+  - ""Government of India — Digital Personal Data Protection Act, 2023 (https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)""
+  - ""GST Council — Rate Schedule (https://gstcouncil.gov.in/sites/default/default/files/Rate%20Schedule%20-%20GST.pdf)""
+---
+
+# Privacy and DPDP Editorial Policy
+
+Pages on BestAIAgent.in that touch on Indian data protection law, GST, cross-border data transfer, or India-region product availability must satisfy the `CRITICAL` evidence gate.",unresolved,,,,,"---
+slug: privacy-dpdp-editorial-policy
+title: ""Privacy and DPDP Editorial Policy""
+description: ""BestAIAgent.in's editorial policy on India privacy law, the Digital Personal Data Protection Act 2023, and how compliance claims are evidenced on this site.""
+canonicalUrl: ""https://bestaiagent.in/trust/privacy-dpdp-editorial-policy""
+pillarGroup: india
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: CRITICAL
+sources:
+  - ""Government of India — Digital Personal Data Protection Act, 2023 (https://www.meity.gov.in/content/digital-personal-data-protection-act-2023)""
+  - ""GST Council — Rate Schedule (https://gstcouncil.gov.in/sites/default/default/files/Rate%20Schedule%20-%20GST.pdf)""
+---
+
+# Privacy and DPDP Editorial Policy
+
+Pages on BestAIAgent.in that touch on Indian data protection law, GST, cross-border data transfer, or India-region product availability must satisfy the `CRITICAL` evidence gate.",,,,,
+,privacy-dpdp-editorial-policy,,"MeitY for DPDP, the GST Council for tax rates).",unresolved,,,,,"MeitY for DPDP, the GST Council for tax rates).",,,,,
+,privacy-dpdp-editorial-policy,,"## What we refuse to claim
+
+- We do not state that a product ""is DPDP-compliant"" without a primary source (vendor privacy policy, audit report, or certification) that supports the claim.",unresolved,,,,,"## What we refuse to claim
+
+- We do not state that a product ""is DPDP-compliant"" without a primary source (vendor privacy policy, audit report, or certification) that supports the claim.",,,,,
+,privacy-dpdp-editorial-policy,,"The DPDP Act and its draft rules specify timelines that depend on the nature of the breach and the responsible party's classification.",unresolved,,,,,"The DPDP Act and its draft rules specify timelines that depend on the nature of the breach and the responsible party's classification.",,,,,
+,privacy-dpdp-editorial-policy,,"- We state the GST rate applicable to software / IT services in India, with a primary source citation to the GST Council Rate Schedule.",unresolved,,,,,"- We state the GST rate applicable to software / IT services in India, with a primary source citation to the GST Council Rate Schedule.",,,,,
+,privacy-dpdp-editorial-policy,,"- GST Council — Rate Schedule (primary, retrieved 2026-08-22).",unresolved,,,,,"- GST Council — Rate Schedule (primary, retrieved 2026-08-22).",,,,,
+,privacy-dpdp-editorial-policy,,"Cited as the source for the 18% GST rate referenced on India pricing pages.",unresolved,,,,,"Cited as the source for the 18% GST rate referenced on India pricing pages.",,,,,
+,rating-methodology,,"The function aggregates six signals into a 0-100 score:
+
+| Component | Weight | What it measures |
+|-----------|-------:|------------------|
+| `evidence` | 25% | Share of material claims with at least one receipt |
+| `authority` | 20% | Average authority of cited sources (primary = 100, secondary = 75, community = 50) |
+| `freshness` | 15% | Share of receipts whose freshness date is within 30 days |
+| `contradictionRisk` | 15% | Inverse of contradictions in the claim ledger |
+| `intentSatisfaction` | 10% | Match between the page body and the page's declared search intent |
+| `entityCoverage` | 15% | Coverage of entities referenced by the page |
+
+The function returns an `overall` score that is rounded to the nearest integer and stored on the entity profile.",removed,,,,,"The function aggregates six signals into a 0-100 score:
+
+| Component | Weight | What it measures |
+|-----------|-------:|------------------|
+| `evidence` | 25% | Share of material claims with at least one receipt |
+| `authority` | 20% | Average authority of cited sources (primary = 100, secondary = 75, community = 50) |
+| `freshness` | 15% | Share of receipts whose freshness date is within 30 days |
+| `contradictionRisk` | 15% | Inverse of contradictions in the claim ledger |
+| `intentSatisfaction` | 10% | Match between the page body and the page's declared search intent |
+| `entityCoverage` | 15% | Coverage of entities referenced by the page |
+
+The function returns an `overall` score that is rounded to the nearest integer and stored on the entity profile.",,,,,
+,ai-agents,,"---
+slug: ai-agents
+title: ""AI Agents — Core Definitions, Architecture, and the Evidence Behind Them""
+description: ""Evidence-backed definition of AI agents, the perception-reasoning-action loop, planning, memory, tool calling, multi-agent systems, and orchestration — with primary-source receipts.""
+canonicalUrl: ""https://bestaiagent.in/ai-agents""
+pillarGroup: core
+pageClass: pillar
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: null
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: ""BestAIAgent.in editorial team""
+reviewer: ""BestAIAgent.in editorial board""
+redirectFrom:
+  - ""/what-is-an-ai-agent""
+  - ""/ai-agent""
+  - ""/agents-explained""
+primaryEntityIds:
+  - ""concept:ai-agent""
+  - ""concept:agentic-workflow""
+relatedEntityIds:
+  - ""concept:mcp""
+  - ""concept:tool-calling""
+  - ""concept:orchestration""
+sources:
+  - ""OpenAI — Function Calling (https://platform.openai.com/docs/guides/function-calling)""
+  - ""Anthropic — Claude's Constitution (https://www.anthropic.com/news/claudes-constitution)""
+  - ""Model Context Protocol specification, revision 2025-06-18 (https://modelcontextprotocol.io/specification/2025-06-18)""
+---
+
+# AI Agents — Core Definitions, Architecture, and the Evidence Behind Them
+
+## Direct answer (AEO)
+
+An AI agent is software that combines a large language model with a perception-reasoning-action loop, persistent or episodic memory, and tool-calling interfaces that let the model act on external systems.",removed,,,,,"---
+slug: ai-agents
+title: ""AI Agents — Core Definitions, Architecture, and the Evidence Behind Them""
+description: ""Evidence-backed definition of AI agents, the perception-reasoning-action loop, planning, memory, tool calling, multi-agent systems, and orchestration — with primary-source receipts.""
+canonicalUrl: ""https://bestaiagent.in/ai-agents""
+pillarGroup: core
+pageClass: pillar
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: null
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: ""BestAIAgent.in editorial team""
+reviewer: ""BestAIAgent.in editorial board""
+redirectFrom:
+  - ""/what-is-an-ai-agent""
+  - ""/ai-agent""
+  - ""/agents-explained""
+primaryEntityIds:
+  - ""concept:ai-agent""
+  - ""concept:agentic-workflow""
+relatedEntityIds:
+  - ""concept:mcp""
+  - ""concept:tool-calling""
+  - ""concept:orchestration""
+sources:
+  - ""OpenAI — Function Calling (https://platform.openai.com/docs/guides/function-calling)""
+  - ""Anthropic — Claude's Constitution (https://www.anthropic.com/news/claudes-constitution)""
+  - ""Model Context Protocol specification, revision 2025-06-18 (https://modelcontextprotocol.io/specification/2025-06-18)""
+---
+
+# AI Agents — Core Definitions, Architecture, and the Evidence Behind Them
+
+## Direct answer (AEO)
+
+An AI agent is software that combines a large language model with a perception-reasoning-action loop, persistent or episodic memory, and tool-calling interfaces that let the model act on external systems.",,,,,
+,ai-agents,,"## Tool calling as the defining primitive
+
+Tool calling (also called *function calling*) is the mechanism by which an agent acts.",removed,,,,,"## Tool calling as the defining primitive
+
+Tool calling (also called *function calling*) is the mechanism by which an agent acts.",,,,,
+,ai-agents,,"The same primitive appears in every major provider: OpenAI function calling, Anthropic tool use, Google function calling, Mistral function calling, and open-weights models that expose an OpenAI-compatible tool-calling API.",removed,,,,,"The same primitive appears in every major provider: OpenAI function calling, Anthropic tool use, Google function calling, Mistral function calling, and open-weights models that expose an OpenAI-compatible tool-calling API.",,,,,
+,ai-agents,,"The MCP (Model Context Protocol) standardises how tools are advertised and invoked.",removed,,,,,"The MCP (Model Context Protocol) standardises how tools are advertised and invoked.",,,,,
+,ai-agents,,"| Dimension | What we measure | Evidence class |
+|-----------|-----------------|-----------------|
+| Reasoning | Quality of plan and adaptation | STANDARD |
+| Tool use | Coverage of tools, error handling | STANDARD |
+| Latency | End-to-end response time | COMPARISON |
+| Value / token efficiency | Cost per completed task | STANDARD |
+| Reliability | Uptime, failure modes, recovery | STANDARD |
+| India fit | DPDP posture, INR pricing, regional support | CRITICAL |
+| Enterprise scalability | Growth capacity, audit, role-based access | STANDARD |
+
+(See [evaluation cluster](/ai-agent-evaluation).)
+
+## How the agent connects to other pillars
+
+| If you care about | Read |
+|-------------------|------|
+| Coding agents specifically | [Coding agents hub](/coding-agents-hub) (Pillar 06, Wave 2) |
+| MCP and how it standardises tools | [MCP pillar](/mcp) (Pillar 36, Wave 6) |
+| How agents are orchestrated | [Orchestration cluster](/ai-agent-orchestration) |
+| India-region compliance | [DPDP editorial policy](/trust/privacy-dpdp-editorial-policy) |
+| How numeric scores are computed | [Rating methodology](/trust/rating-methodology) |
+
+## Frequently asked questions
+
+### Is an AI agent the same as a chatbot?",unresolved,,,,,"| Dimension | What we measure | Evidence class |
+|-----------|-----------------|-----------------|
+| Reasoning | Quality of plan and adaptation | STANDARD |
+| Tool use | Coverage of tools, error handling | STANDARD |
+| Latency | End-to-end response time | COMPARISON |
+| Value / token efficiency | Cost per completed task | STANDARD |
+| Reliability | Uptime, failure modes, recovery | STANDARD |
+| India fit | DPDP posture, INR pricing, regional support | CRITICAL |
+| Enterprise scalability | Growth capacity, audit, role-based access | STANDARD |
+
+(See [evaluation cluster](/ai-agent-evaluation).)
+
+## How the agent connects to other pillars
+
+| If you care about | Read |
+|-------------------|------|
+| Coding agents specifically | [Coding agents hub](/coding-agents-hub) (Pillar 06, Wave 2) |
+| MCP and how it standardises tools | [MCP pillar](/mcp) (Pillar 36, Wave 6) |
+| How agents are orchestrated | [Orchestration cluster](/ai-agent-orchestration) |
+| India-region compliance | [DPDP editorial policy](/trust/privacy-dpdp-editorial-policy) |
+| How numeric scores are computed | [Rating methodology](/trust/rating-methodology) |
+
+## Frequently asked questions
+
+### Is an AI agent the same as a chatbot?",,,,,
+,ai-agents,,"DPDP Act obligations apply to any agent that processes Indian user data.",unresolved,,,,,"DPDP Act obligations apply to any agent that processes Indian user data.",,,,,
+,ai-agents,,"We do not certify vendors as ""DPDP-compliant""; we cite the vendor's privacy documentation and let you evaluate.",unresolved,,,,,"We do not certify vendors as ""DPDP-compliant""; we cite the vendor's privacy documentation and let you evaluate.",,,,,
+,ai-agents,,"- [Anthropic — Claude's Constitution](https://www.anthropic.com/news/claudes-constitution) (primary, retrieved 2026-08-22).",removed,,,,,"- [Anthropic — Claude's Constitution](https://www.anthropic.com/news/claudes-constitution) (primary, retrieved 2026-08-22).",,,,,
+,ai-agents,,"Source for the MCP revision reviewed on this site.",removed,,,,,"Source for the MCP revision reviewed on this site.",,,,,
+,ai-agent-autonomy-levels,,"## India-region considerations
+
+- **DPDP.** L2 and L3 deployments that process Indian user data require a documented lawful basis, data principal rights processes, and breach notification.",unresolved,,,,,"## India-region considerations
+
+- **DPDP.** L2 and L3 deployments that process Indian user data require a documented lawful basis, data principal rights processes, and breach notification.",,,,,
+,ai-agent-autonomy-levels,,"- **GST.** Higher autonomy often correlates with higher token / tool-call consumption; the cost impact on an Indian entity includes 18% GST.",unresolved,,,,,"- **GST.** Higher autonomy often correlates with higher token / tool-call consumption; the cost impact on an Indian entity includes 18% GST.",,,,,
+,ai-agent-autonomy-levels,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Human-in-the-loop](/human-in-the-loop-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Orchestration](/ai-agent-orchestration)
+- [Evaluation](/ai-agent-evaluation)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Tool calling](/ai-agent-tool-calling)
+- [Editorial methodology](/trust/editorial-methodology)
+
+## Frequently asked questions
+
+### Is L4 (autonomous) the same as AGI?",unresolved,,,,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Human-in-the-loop](/human-in-the-loop-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Orchestration](/ai-agent-orchestration)
+- [Evaluation](/ai-agent-evaluation)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Tool calling](/ai-agent-tool-calling)
+- [Editorial methodology](/trust/editorial-methodology)
+
+## Frequently asked questions
+
+### Is L4 (autonomous) the same as AGI?",,,,,
+,ai-agent-evaluation,,"Hold out 20% as a test set you never train on.",removed,,,,,"Hold out 20% as a test set you never train on.",,,,,
+,ai-agent-memory,,"- Every memory write needs a **freshness** and a **retention** policy; DPDP applies the moment memory stores Indian user data.",unresolved,,,,,"- Every memory write needs a **freshness** and a **retention** policy; DPDP applies the moment memory stores Indian user data.",,,,,
+,ai-agent-memory,,"## What memory is for
+
+| Goal | Memory layer |
+|------|--------------|
+| ""Remember what we discussed last turn"" | Working |
+| ""Remember what we discussed last week"" | Episodic |
+| ""Remember that the user prefers JSON output"" | Semantic |
+| ""Always escalate refund requests over $500 to a human"" | Procedural |
+
+## Failure modes of memory without governance
+
+1.",removed,,,,,"## What memory is for
+
+| Goal | Memory layer |
+|------|--------------|
+| ""Remember what we discussed last turn"" | Working |
+| ""Remember what we discussed last week"" | Episodic |
+| ""Remember that the user prefers JSON output"" | Semantic |
+| ""Always escalate refund requests over $500 to a human"" | Procedural |
+
+## Failure modes of memory without governance
+
+1.",,,,,
+,ai-agent-memory,,"**Compliance failure.** Memory stores Indian user data without a legal basis under DPDP.",unresolved,,,,,"**Compliance failure.** Memory stores Indian user data without a legal basis under DPDP.",,,,,
+,ai-agent-memory,,"## Memory under DPDP
+
+If memory stores Indian user data, the storage is part of the data fiduciary's processing.",unresolved,,,,,"## Memory under DPDP
+
+If memory stores Indian user data, the storage is part of the data fiduciary's processing.",,,,,
+,ai-agent-memory,,"We do not certify any vendor as DPDP-compliant; we cite the vendor's privacy documentation.",unresolved,,,,,"We do not certify any vendor as DPDP-compliant; we cite the vendor's privacy documentation.",,,,,
+,ai-agent-memory,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Tool calling](/ai-agent-tool-calling)
+- [Agentic workflows](/agentic-workflows)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Evidence methodology](/trust/evidence-methodology)
+
+## Frequently asked questions
+
+### Does more memory make an agent smarter?",unresolved,,,,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Tool calling](/ai-agent-tool-calling)
+- [Agentic workflows](/agentic-workflows)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Evidence methodology](/trust/evidence-methodology)
+
+## Frequently asked questions
+
+### Does more memory make an agent smarter?",,,,,
+,ai-agent-memory,,"The memory storage is part of the data fiduciary's processing under DPDP.",unresolved,,,,,"The memory storage is part of the data fiduciary's processing under DPDP.",,,,,
+,ai-agent-tool-calling,,"- MCP standardises how tools are advertised and invoked.",removed,,,,,"- MCP standardises how tools are advertised and invoked.",,,,,
+,ai-agent-tool-calling,,"See [](/mcp) (when the MCP pillar ships).",removed,,,,,"See [](/mcp) (when the MCP pillar ships).",,,,,
+,ai-agent-tool-calling,,"The same primitive appears in every major provider's API:
+
+| Provider | Primitive name | Documentation |
+|----------|----------------|---------------|
+| OpenAI | Function calling / tool use | platform.openai.com/docs/guides/function-calling |
+| Anthropic | Tool use | docs.anthropic.com |
+| Google | Function calling | ai.google.dev |
+| Mistral | Function calling | docs.mistral.ai |
+| MCP | Tools | modelcontextprotocol.io/specification/2025-06-18 |
+
+## Tool schemas
+
+Every tool the model can call has a schema:
+
+- **Name** — what the model calls it.",removed,,,,,"The same primitive appears in every major provider's API:
+
+| Provider | Primitive name | Documentation |
+|----------|----------------|---------------|
+| OpenAI | Function calling / tool use | platform.openai.com/docs/guides/function-calling |
+| Anthropic | Tool use | docs.anthropic.com |
+| Google | Function calling | ai.google.dev |
+| Mistral | Function calling | docs.mistral.ai |
+| MCP | Tools | modelcontextprotocol.io/specification/2025-06-18 |
+
+## Tool schemas
+
+Every tool the model can call has a schema:
+
+- **Name** — what the model calls it.",,,,,
+,ai-agent-tool-calling,,"## MCP standardisation
+
+The [Model Context Protocol specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) standardises how tools are advertised (the `tools/list` method) and invoked (the `tools/call` method) so that a model and a tool server can communicate without bespoke integration code per pair.",removed,,,,,"## MCP standardisation
+
+The [Model Context Protocol specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) standardises how tools are advertised (the `tools/list` method) and invoked (the `tools/call` method) so that a model and a tool server can communicate without bespoke integration code per pair.",,,,,
+,ai-agent-tool-calling,,"See [](/mcp) (when the MCP pillar ships in Wave 6).",removed,,,,,"See [](/mcp) (when the MCP pillar ships in Wave 6).",,,,,
+,ai-agent-tool-calling,,"Source for the MCP standardisation of tool advertisement and invocation.",removed,,,,,"Source for the MCP standardisation of tool advertisement and invocation.",,,,,
+,ai-agents-for-startups,,"---
+slug: ai-agents-for-startups
+title: ""AI Agents for Startups — What Founders Should Buy, Skip, and Verify""
+description: ""Evidence-backed guide to AI agents for Indian and global startups: tools by use case, INR pricing with GST, DPDP considerations, and a verification checklist.""
+canonicalUrl: ""https://bestaiagent.in/ai-agents-for-startups""
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2026-11-22
+author: ""BestAIAgent.in editorial team""
+reviewer: ""BestAIAgent.in editorial board""
+primaryEntityIds:
+  - ""persona:startup""
+relatedEntityIds:
+  - ""agent:cursor""
+  - ""agent:claude""
+  - ""agent:vapi""
+  - ""agent:n8n""
+sources:
+  - ""Cursor pricing — https://cursor.com/pricing""
+  - ""Anthropic pricing — https://www.anthropic.com/pricing""
+  - ""GitHub Copilot pricing — https://github.com/features/copilot/plans""
+  - ""n8n pricing — https://n8n.io/pricing""
+  - ""Vapi pricing — https://vapi.ai/pricing""
+  - ""GST Council Rate Schedule — https://gstcouncil.gov.in/""
+---
+
+# AI Agents for Startups
+
+## Direct answer (AEO)
+
+AI agents help startups scale without proportional headcount growth by automating customer support, lead generation, operations, and research.",unresolved,,,,,"---
+slug: ai-agents-for-startups
+title: ""AI Agents for Startups — What Founders Should Buy, Skip, and Verify""
+description: ""Evidence-backed guide to AI agents for Indian and global startups: tools by use case, INR pricing with GST, DPDP considerations, and a verification checklist.""
+canonicalUrl: ""https://bestaiagent.in/ai-agents-for-startups""
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2026-11-22
+author: ""BestAIAgent.in editorial team""
+reviewer: ""BestAIAgent.in editorial board""
+primaryEntityIds:
+  - ""persona:startup""
+relatedEntityIds:
+  - ""agent:cursor""
+  - ""agent:claude""
+  - ""agent:vapi""
+  - ""agent:n8n""
+sources:
+  - ""Cursor pricing — https://cursor.com/pricing""
+  - ""Anthropic pricing — https://www.anthropic.com/pricing""
+  - ""GitHub Copilot pricing — https://github.com/features/copilot/plans""
+  - ""n8n pricing — https://n8n.io/pricing""
+  - ""Vapi pricing — https://vapi.ai/pricing""
+  - ""GST Council Rate Schedule — https://gstcouncil.gov.in/""
+---
+
+# AI Agents for Startups
+
+## Direct answer (AEO)
+
+AI agents help startups scale without proportional headcount growth by automating customer support, lead generation, operations, and research.",,,,,
+,ai-agents-for-startups,,"For Indian founders, the right starting set is usually one coding agent (Cursor, Claude, or GitHub Copilot), one workflow agent (n8n or Make), and one customer-facing agent (Vapi or Intercom) — each evaluated against primary-source pricing and DPDP readiness before commitment.",unresolved,,,,,"For Indian founders, the right starting set is usually one coding agent (Cursor, Claude, or GitHub Copilot), one workflow agent (n8n or Make), and one customer-facing agent (Vapi or Intercom) — each evaluated against primary-source pricing and DPDP readiness before commitment.",,,,,
+,ai-agents-for-startups,,"- GST at 18% applies to AI agent services billed to Indian entities.",unresolved,,,,,"- GST at 18% applies to AI agent services billed to Indian entities.",,,,,
+,ai-agents-for-startups,,"- DPDP Act obligations apply the moment an agent processes Indian user data.",unresolved,,,,,"- DPDP Act obligations apply the moment an agent processes Indian user data.",,,,,
+,ai-agents-for-startups,,"See [](/trust/freshness-policy).*
+
+## Workflow agents — evidence-backed pricing
+
+| Agent | Vendor-confirmed price | Source |
+|-------|----------------------:|--------|
+| n8n (self-hosted) | Free under sustainable-use licence | [n8n.io/pricing](https://n8n.io/pricing) |
+| n8n Cloud Starter | €20/month | [n8n.io/pricing](https://n8n.io/pricing) |
+| Make (Core) | From €9/month | make.com |
+| Zapier (Professional) | From $19.99/month | zapier.com |
+
+## Customer-facing agents — evidence-backed pricing
+
+| Agent | Vendor-confirmed price | Source |
+|-------|----------------------:|--------|
+| Vapi | Per-minute; free credits for evaluation | [vapi.ai/pricing](https://vapi.ai/pricing) |
+| Intercom AI | From approximately $50/month | intercom.com |
+
+## India-specific considerations
+
+- **GST.** Software / IT services billed to Indian entities attract GST at 18%.",unresolved,,,,,"See [](/trust/freshness-policy).*
+
+## Workflow agents — evidence-backed pricing
+
+| Agent | Vendor-confirmed price | Source |
+|-------|----------------------:|--------|
+| n8n (self-hosted) | Free under sustainable-use licence | [n8n.io/pricing](https://n8n.io/pricing) |
+| n8n Cloud Starter | €20/month | [n8n.io/pricing](https://n8n.io/pricing) |
+| Make (Core) | From €9/month | make.com |
+| Zapier (Professional) | From $19.99/month | zapier.com |
+
+## Customer-facing agents — evidence-backed pricing
+
+| Agent | Vendor-confirmed price | Source |
+|-------|----------------------:|--------|
+| Vapi | Per-minute; free credits for evaluation | [vapi.ai/pricing](https://vapi.ai/pricing) |
+| Intercom AI | From approximately $50/month | intercom.com |
+
+## India-specific considerations
+
+- **GST.** Software / IT services billed to Indian entities attract GST at 18%.",,,,,
+,ai-agents-for-startups,,"- **DPDP.** Any agent that processes Indian user data triggers DPDP Act obligations.",unresolved,,,,,"- **DPDP.** Any agent that processes Indian user data triggers DPDP Act obligations.",,,,,
+,ai-agents-for-startups,,"USD/EUR invoices trigger FX risk and require the buyer to compute GST and reverse charge as applicable.",unresolved,,,,,"USD/EUR invoices trigger FX risk and require the buyer to compute GST and reverse charge as applicable.",,,,,
+,ai-agents-for-startups,,"- **Cross-border data transfer.** Vendors that store data outside India do not, by themselves, violate DPDP, but they do require a contractual basis under Section 16 of the Act when the data fiduciary is an Indian entity.",unresolved,,,,,"- **Cross-border data transfer.** Vendors that store data outside India do not, by themselves, violate DPDP, but they do require a contractual basis under Section 16 of the Act when the data fiduciary is an Indian entity.",,,,,
+,ai-agents-for-startups,,"We do not certify any vendor as DPDP-compliant; we cite the vendor's documentation.",unresolved,,,,,"We do not certify any vendor as DPDP-compliant; we cite the vendor's documentation.",,,,,
+,ai-agents-for-startups,,"**DPDP posture.** The vendor's documentation addresses India or the vendor confirms in writing that they will support your DPDP obligations (data deletion on request, breach notification, etc.).",unresolved,,,,,"**DPDP posture.** The vendor's documentation addresses India or the vendor confirms in writing that they will support your DPDP obligations (data deletion on request, breach notification, etc.).",,,,,
+,ai-agents-for-startups,,"### Is Cursor or Claude better for a startup team?",removed,,,,,"### Is Cursor or Claude better for a startup team?",,,,,
+,ai-agents-for-startups,,"Cursor is an IDE-first coding agent with a deep file / repo context.",removed,,,,,"Cursor is an IDE-first coding agent with a deep file / repo context.",,,,,
+,ai-agents-for-startups,,"Claude is a chat-first model API you build products on top of.",removed,,,,,"Claude is a chat-first model API you build products on top of.",,,,,
+,ai-agents-for-startups,,"We do not declare a winner on this page; the right choice depends on whether the team's bottleneck is writing code (favour Cursor) or building product features on top of a model (favour Claude).",removed,,,,,"We do not declare a winner on this page; the right choice depends on whether the team's bottleneck is writing code (favour Cursor) or building product features on top of a model (favour Claude).",,,,,
+,ai-agents-for-startups,,"### Do startups need to worry about DPDP if they only have Indian users?",unresolved,,,,,"### Do startups need to worry about DPDP if they only have Indian users?",,,,,
+,ai-agents-for-startups,,"DPDP applies to any processing of digital personal data of data principals located in India.",unresolved,,,,,"DPDP applies to any processing of digital personal data of data principals located in India.",,,,,
+,ai-agents-for-startups,,"## Source receipts
+
+- Cursor pricing page (primary, retrieved 2026-08-22).",removed,,,,,"## Source receipts
+
+- Cursor pricing page (primary, retrieved 2026-08-22).",,,,,
+,ai-agents-for-startups,,"Source for Cursor Pro / Business pricing.",removed,,,,,"Source for Cursor Pro / Business pricing.",,,,,
+,ai-agents-for-startups,,"Source for Claude Team / Enterprise pricing.",removed,,,,,"Source for Claude Team / Enterprise pricing.",,,,,
+,ai-agents-for-startups,,"- GitHub Copilot plans page (primary, retrieved 2026-08-22).",removed,,,,,"- GitHub Copilot plans page (primary, retrieved 2026-08-22).",,,,,
+,ai-agents-for-startups,,"Source for Copilot Individual / Business / Enterprise pricing.",removed,,,,,"Source for Copilot Individual / Business / Enterprise pricing.",,,,,
+,ai-agents-for-startups,,"- GST Council Rate Schedule (primary, retrieved 2026-08-22).",unresolved,,,,,"- GST Council Rate Schedule (primary, retrieved 2026-08-22).",,,,,
+,ai-agents-for-startups,,"Source for the 18% GST rate referenced in this page.",unresolved,,,,,"Source for the 18% GST rate referenced in this page.",,,,,
+,ai-agents-vs-chatbots,,"books a meeting, processes a refund), yes — the disclosure is part of consent under DPDP.",unresolved,,,,,"books a meeting, processes a refund), yes — the disclosure is part of consent under DPDP.",,,,,
+,human-in-the-loop-agents,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Orchestration](/ai-agent-orchestration)
+- [Autonomy levels](/ai-agent-autonomy-levels)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Rating methodology](/trust/rating-methodology)
+
+## Frequently asked questions
+
+### Is HITL the same as human-in-the-middle?",unresolved,,,,,"## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Orchestration](/ai-agent-orchestration)
+- [Autonomy levels](/ai-agent-autonomy-levels)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Rating methodology](/trust/rating-methodology)
+
+## Frequently asked questions
+
+### Is HITL the same as human-in-the-middle?",,,,,
+,human-in-the-loop-agents,,"Track reviewer agreement with the agent's recommendation; a 100% approval rate is a signal that the review is not informative.",removed,,,,,"Track reviewer agreement with the agent's recommendation; a 100% approval rate is a signal that the review is not informative.",,,,,
+,human-in-the-loop-agents,,"refunds under $50 to verified customers) and route the rest to a human.",removed,,,,,"refunds under $50 to verified customers) and route the rest to a human.",,,,,

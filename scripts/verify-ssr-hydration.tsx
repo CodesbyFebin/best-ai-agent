@@ -232,7 +232,7 @@ async function testNoDirectWindowAccessInInitialRender(): Promise<void> {
       /sessionStorage/gi
     ];
 
-    let issues: string[] = [];
+    const issues: string[] = [];
     const lines = content.split('\n');
     
     // Simple heuristic: if window./document. appears at the top-level of the component body (not inside a function), flag it

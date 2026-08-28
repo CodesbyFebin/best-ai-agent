@@ -1,0 +1,156 @@
+{
+  "totalClaims": 68,
+  "supported": 2,
+  "volatile": 2,
+  "unresolved": 37,
+  "removed": 27,
+  "perPage": {
+    "affiliate-disclosure": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "author-reviewer-policy": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "comparison-methodology": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "corrections": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "editorial-methodology": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 1,
+      "removed": 1,
+      "total": 2
+    },
+    "evidence-methodology": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 1,
+      "removed": 0,
+      "total": 1
+    },
+    "freshness-policy": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "privacy-dpdp-editorial-policy": {
+      "supported": 1,
+      "volatile": 0,
+      "unresolved": 7,
+      "removed": 0,
+      "total": 8
+    },
+    "rating-methodology": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 1,
+      "total": 1
+    },
+    "source-classification": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "ai-agents": {
+      "supported": 0,
+      "volatile": 1,
+      "unresolved": 3,
+      "removed": 6,
+      "total": 10
+    },
+    "agentic-workflows": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "ai-agent-autonomy-levels": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 3,
+      "removed": 0,
+      "total": 3
+    },
+    "ai-agent-evaluation": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 1,
+      "total": 1
+    },
+    "ai-agent-memory": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 6,
+      "removed": 1,
+      "total": 7
+    },
+    "ai-agent-orchestration": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    },
+    "ai-agent-tool-calling": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 6,
+      "total": 6
+    },
+    "ai-agents-for-startups": {
+      "supported": 1,
+      "volatile": 1,
+      "unresolved": 14,
+      "removed": 9,
+      "total": 25
+    },
+    "ai-agents-vs-chatbots": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 1,
+      "removed": 0,
+      "total": 1
+    },
+    "human-in-the-loop-agents": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 1,
+      "removed": 2,
+      "total": 3
+    },
+    "multi-agent-systems": {
+      "supported": 0,
+      "volatile": 0,
+      "unresolved": 0,
+      "removed": 0,
+      "total": 0
+    }
+  }
+}

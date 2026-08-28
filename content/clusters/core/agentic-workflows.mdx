@@ -1,0 +1,166 @@
+---
+slug: agentic-workflows
+title: "Agentic Workflows — Patterns, Frameworks, and Failure Modes"
+description: "Evidence-backed guide to agentic workflows: ReAct, plan-and-execute, branching, retries, HITL, and the engineering controls that keep workflows reliable."
+canonicalUrl: "https://bestaiagent.in/agentic-workflows"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/agentic-workflow"
+primaryEntityIds:
+  - "concept:agentic-workflow"
+relatedEntityIds:
+  - "concept:orchestration"
+  - "framework:langgraph"
+  - "framework:temporal"
+sources:
+  - "OpenAI — Function Calling documentation (https://platform.openai.com/docs/guides/function-calling)"
+  - "LangGraph documentation (https://langchain-ai.github.io/langgraph/)"
+  - "Temporal documentation (https://temporal.io/docs)"
+---
+
+# Agentic Workflows
+
+## Direct answer (AEO)
+
+An agentic workflow is an application pattern that uses one or more AI agents to perform a multi-step task with branching, retries, and human approval. The workflow adds engineering controls that the agent loop alone does not provide: state persistence, observability, and the ability to pause for a human decision before taking a consequential action.
+
+## Key takeaways
+
+- A workflow is the **application layer** that hosts agents; the agent is the inner loop.
+- Three execution patterns cover most cases: **ReAct**, **plan-and-execute**, and **event-driven**.
+- Workflows fail in five predictable ways; the engineering controls exist to address each.
+- **Human-in-the-loop** is a workflow feature, not an agent feature.
+- Tool calling is the primitive; workflows decide *when* and *how* to call it. See [](/ai-agent-tool-calling).
+
+## What a workflow adds
+
+The agent loop produces a sequence of actions in response to a goal. A workflow produces a **structured, durable, observable** sequence of actions. The five engineering controls a workflow adds are:
+
+| Control | What it does |
+|---------|--------------|
+| State persistence | The workflow's state survives process restarts. |
+| Branching | Different paths depending on intermediate results. |
+| Bounded retries | Retries on transient failures, with escalation on persistent failures. |
+| Human-in-the-loop checkpoints | Pause for human review before a consequential action. |
+| Observability | Structured logs of every step for debugging and audit. |
+
+Without these controls, an agent loop is a script that happens to involve an LLM. With them, it is a system you can run in production.
+
+## Three execution patterns
+
+### 1. ReAct (Reason + Act)
+
+The agent interleaves reasoning steps and action steps at every turn. ReAct is the simplest pattern and the right starting point for short-lived, exploratory tasks.
+
+```
+Thought → Action → Observation → Thought → Action → Observation → ...
+```
+
+### 2. Plan-and-execute
+
+The agent produces a plan up front, then executes the plan step by step. Plans may be regenerated on failure. Plan-and-execute is more predictable than ReAct for multi-step tasks with well-defined sub-goals.
+
+```
+Plan → Step 1 → Step 2 → ... → (replan on failure) → Final
+```
+
+### 3. Event-driven
+
+The workflow reacts to events from external systems (a webhook, a queue message, a database change) and decides which agent step to run. Event-driven is the right pattern for production systems where the trigger is not a user prompt.
+
+```
+Event → Decide → Agent step → (loop or emit next event)
+```
+
+## Frameworks we evaluate
+
+| Framework | Pattern emphasis | Evidence anchor |
+|-----------|------------------|-----------------|
+| LangGraph | Graph-based workflow with explicit nodes and edges | [langchain-ai.github.io/langgraph](https://langchain-ai.github.io/langgraph/) |
+| Temporal | Durable execution with automatic retries and signals | [temporal.io/docs](https://temporal.io/docs) |
+| Inngest | Event-driven serverless workflows | inngest.com |
+| AutoGen | Multi-agent conversational patterns | microsoft.github.io/autogen |
+| CrewAI | Role-based multi-agent collaboration | docs.crewai.com |
+
+We do not score frameworks numerically on this page because the right choice depends on the task. We do require the framework's documentation to be the primary source for any capability claim.
+
+## Five failure modes
+
+These are the failure modes we see repeatedly in agent deployments:
+
+1. **Tool returns an ambiguous result.** The agent continues without noticing that the result is malformed. Engineering control: validate every tool result against a schema before returning it to the model.
+2. **The agent loops forever.** A retry condition triggers itself. Engineering control: bound every loop with a maximum step count and a deadline.
+3. **The agent takes a consequential action without approval.** A delete, a payment, an outbound email. Engineering control: a human-in-the-loop checkpoint before the consequential action.
+4. **The workflow loses state on crash.** A long-running task restarts from scratch. Engineering control: durable state (Temporal, Inngest, or a queue-backed store).
+5. **The agent's reasoning is unobservable.** The team cannot debug why the agent made the decision it did. Engineering control: structured logs of every reasoning step and tool call.
+
+## Where HITL belongs
+
+HITL belongs at any decision that:
+
+- Is **irreversible** (a delete, a payment, an outbound email).
+- Is **high-cost** (a customer refund over a threshold).
+- Is **regulated** (a medical, legal, or financial decision).
+- Is **low-confidence** (the model assigned a low probability to the chosen action).
+
+HITL is a workflow feature, not an agent feature. The agent emits the action; the workflow decides whether to dispatch it or pause for review. See [](/human-in-the-loop-agents).
+
+## What we will not tell you
+
+- We will not tell you which framework is "the best." The right choice depends on the task and the team.
+- We will not predict the productivity gain from adopting a workflow. We do not have the data; any number would be made up.
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Tool calling](/ai-agent-tool-calling)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Memory](/ai-agent-memory)
+- [Human-in-the-loop](/human-in-the-loop-agents)
+- [Evaluation](/ai-agent-evaluation)
+- [Editorial methodology](/trust/editorial-methodology)
+
+## Frequently asked questions
+
+### Is an agentic workflow the same as a workflow automation tool?
+
+No. Workflow automation tools (Zapier, Make, n8n) move data between systems with deterministic rules. Agentic workflows add an LLM-driven reasoning step in the loop. The two are often combined: a deterministic workflow for routing and retries, an agent for the reasoning step.
+
+### When is a workflow overkill?
+
+When the task can be expressed as a deterministic sequence of system calls, use a script or a deterministic workflow. The LLM adds latency, cost, and a failure mode (hallucination). Add an agent only when the task requires reasoning that a script cannot do.
+
+### What's the difference between LangGraph and Temporal?
+
+LangGraph is a graph-based workflow framework optimised for LLM-driven steps and cycles. Temporal is a durable execution platform optimised for long-running, stateful workflows of any kind. LangGraph is the better fit for tight LLM integration; Temporal is the better fit for durable execution across many hours.
+
+### How do I version a workflow?
+
+Version the workflow definition file (the graph or the Temporal workflow code). Every workflow execution should record the version it ran. When you change the workflow definition, plan a migration path for in-flight executions.
+
+### How do I test a workflow before production?
+
+Test the deterministic parts as unit tests. Test the agent parts as integration tests with frozen model versions and a recorded trajectory. See [](/ai-agent-evaluation).
+
+## Source receipts
+
+- OpenAI Function Calling documentation (primary, retrieved 2026-08-22). Source for the tool-calling primitive this page assumes.
+- LangGraph documentation (primary, retrieved 2026-08-22). Source for the graph-based workflow pattern.
+- Temporal documentation (primary, retrieved 2026-08-22). Source for durable-execution semantics.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

@@ -1,0 +1,93 @@
+---
+slug: source-classification
+title: "Source Classification — How We Classify Evidence by Authority"
+description: "How BestAIAgent.in classifies sources: primary, secondary, and community. Definitions, examples, and how classification interacts with evidence gates."
+canonicalUrl: "https://bestaiagent.in/trust/source-classification"
+pillarGroup: core
+pageClass: methodology
+lifecycleStatus: published
+publicationEligible: true
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+sources:
+  - "Internal — src/data/evidenceSchema.ts (EvidenceSource.authority)"
+---
+
+# Source Classification
+
+Every evidence receipt carries an `authority` field: `primary`, `secondary`, or `community`. The classification determines which evidence gate the receipt satisfies and how the receipt is weighted by [](/trust/rating-methodology). This page documents how we classify each tier.
+
+## Primary
+
+A source is `primary` when it originates the claim or certifies the underlying fact. Examples on this site:
+
+- Vendor pricing pages (e.g. `cursor.com/pricing`, `anthropic.com/pricing`).
+- Vendor product / capability documentation.
+- Vendor security and compliance pages.
+- Official protocol specifications (e.g. `modelcontextprotocol.io/specification`).
+- Statutes, regulations, and official government publications (e.g. the Digital Personal Data Protection Act, 2023).
+- Official repositories and the files they host.
+
+A primary source may still be wrong. We do not treat `primary` as proof; we treat it as the strongest class of source we can cite.
+
+## Secondary
+
+A source is `secondary` when it reports on, analyses, or independently tests a primary claim. Examples on this site:
+
+- Reputable technology publications with editorial standards.
+- Independent benchmark or testing organisations.
+- Conference papers and peer-reviewed research.
+- Standards bodies and their published standards.
+
+Secondary sources are weighted below primary sources in the rating methodology and cannot alone satisfy a `STANDARD` gate for material claims.
+
+## Community
+
+A source is `community` when it is anecdotal or crowd-supplied. Examples on this site:
+
+- Forum threads and discussion boards.
+- Personal blog posts without editorial standards.
+- Social media posts.
+- Conference talks without published proceedings.
+
+Community sources may be cited to illustrate a use case or a reported experience but cannot satisfy any evidence gate on their own. When we cite a community source we mark it as anecdotal.
+
+## Interactions with evidence gates
+
+The `STANDARD`, `COMPARISON`, and `CRITICAL` gates have minimum authority requirements:
+
+- `STANDARD` requires 1+ primary source.
+- `COMPARISON` requires 2+ primary sources (one per product side).
+- `CRITICAL` requires 2+ primary OR 1 primary + 2 secondary.
+
+A claim supported only by secondary or community sources is reclassified as `unresolved` in the claim ledger, regardless of how confident the model appears to be.
+
+## Source classification register
+
+The canonical source classification register lives in `src/content/registry/evidence-ledger.ts`. Each entry carries:
+
+- `url` (canonical URL of the source)
+- `publisher` (entity that controls the source)
+- `authority` (`primary`, `secondary`, `community`)
+- `retrievedAt` (ISO 8601 date)
+
+When we change a source's classification we log the change in [](/trust/corrections).
+
+## Related methodology pages
+
+- [Editorial methodology](/trust/editorial-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Rating methodology](/trust/rating-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+- [Corrections](/trust/corrections)
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`EvidenceSource.authority`, retrieved 2026-08-22). The schema definition referenced on this page.
+- Internal — `src/content/registry/evidence-ledger.ts` (retrieved 2026-08-22). The classification register this page references.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

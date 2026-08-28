@@ -1,0 +1,943 @@
+{
+  "physicalPages": {
+    "trust": [
+      {
+        "slug": "affiliate-disclosure",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/affiliate-disclosure.mdx"
+      },
+      {
+        "slug": "author-reviewer-policy",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/author-reviewer-policy.mdx"
+      },
+      {
+        "slug": "comparison-methodology",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/comparison-methodology.mdx"
+      },
+      {
+        "slug": "corrections",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/corrections.mdx"
+      },
+      {
+        "slug": "editorial-methodology",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/editorial-methodology.mdx"
+      },
+      {
+        "slug": "evidence-methodology",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/evidence-methodology.mdx"
+      },
+      {
+        "slug": "freshness-policy",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/freshness-policy.mdx"
+      },
+      {
+        "slug": "privacy-dpdp-editorial-policy",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/privacy-dpdp-editorial-policy.mdx"
+      },
+      {
+        "slug": "rating-methodology",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/rating-methodology.mdx"
+      },
+      {
+        "slug": "source-classification",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/trust/source-classification.mdx"
+      }
+    ],
+    "pillar": [
+      {
+        "slug": "ai-agents",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/pillars/core/ai-agents.mdx"
+      }
+    ],
+    "cluster": [
+      {
+        "slug": "agentic-workflows",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/agentic-workflows.mdx"
+      },
+      {
+        "slug": "ai-agent-autonomy-levels",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agent-autonomy-levels.mdx"
+      },
+      {
+        "slug": "ai-agent-evaluation",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agent-evaluation.mdx"
+      },
+      {
+        "slug": "ai-agent-memory",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agent-memory.mdx"
+      },
+      {
+        "slug": "ai-agent-orchestration",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agent-orchestration.mdx"
+      },
+      {
+        "slug": "ai-agent-tool-calling",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agent-tool-calling.mdx"
+      },
+      {
+        "slug": "ai-agents-for-startups",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agents-for-startups.mdx"
+      },
+      {
+        "slug": "ai-agents-vs-chatbots",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/ai-agents-vs-chatbots.mdx"
+      },
+      {
+        "slug": "human-in-the-loop-agents",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/human-in-the-loop-agents.mdx"
+      },
+      {
+        "slug": "multi-agent-systems",
+        "path": "/Users/cyberteck/Downloads/final best ai agent/content/clusters/core/multi-agent-systems.mdx"
+      }
+    ]
+  },
+  "authoritativeRecords": [
+    {
+      "topicIndex": 0,
+      "slug": "ai-agents",
+      "title": "AI Agents Core & Definitions",
+      "pageClass": "pillar",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 1,
+      "slug": "ai-agents-for-startups",
+      "title": "AI Agents For Startups",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 2,
+      "slug": "ai-agents-for-small-business",
+      "title": "AI Agents For Small Business",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 3,
+      "slug": "ai-agents-for-enterprises",
+      "title": "AI Agents For Enterprises",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 4,
+      "slug": "ai-agents-for-solopreneurs",
+      "title": "AI Agents For Solopreneurs",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 5,
+      "slug": "ai-agents-for-freelancers",
+      "title": "AI Agents For Freelancers",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 6,
+      "slug": "ai-agents-for-students",
+      "title": "AI Agents For Students",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 7,
+      "slug": "ai-agents-for-developers",
+      "title": "AI Agents For Developers",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 8,
+      "slug": "ai-agents-for-agencies",
+      "title": "AI Agents For Agencies",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 9,
+      "slug": "ai-agents-for-consultants",
+      "title": "AI Agents For Consultants",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 10,
+      "slug": "ai-agents-for-nonprofits",
+      "title": "AI Agents For Nonprofits",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 11,
+      "slug": "ai-agents-for-ctos",
+      "title": "AI Agents For Ctos",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 12,
+      "slug": "ai-agents-for-founders",
+      "title": "AI Agents For Founders",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 13,
+      "slug": "ai-agents-automation",
+      "title": "AI Agents Automation",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 14,
+      "slug": "ai-agents-workflow",
+      "title": "AI Agents Workflow",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 15,
+      "slug": "ai-agents-lead-generation",
+      "title": "AI Agents Lead Generation",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 16,
+      "slug": "ai-agents-data-analysis",
+      "title": "AI Agents Data Analysis",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 17,
+      "slug": "ai-agents-reporting",
+      "title": "AI Agents Reporting",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 18,
+      "slug": "ai-agents-scheduling",
+      "title": "AI Agents Scheduling",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 19,
+      "slug": "ai-agents-onboarding",
+      "title": "AI Agents Onboarding",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 20,
+      "slug": "ai-agents-forecasting",
+      "title": "AI Agents Forecasting",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 21,
+      "slug": "ai-agents-compliance",
+      "title": "AI Agents Compliance",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 22,
+      "slug": "ai-agents-research",
+      "title": "AI Agents Research",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 23,
+      "slug": "ai-agents-content-creation",
+      "title": "AI Agents Content Creation",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 24,
+      "slug": "ai-agents-translation",
+      "title": "AI Agents Translation",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 25,
+      "slug": "ai-agents-fraud-detection",
+      "title": "AI Agents Fraud Detection",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 26,
+      "slug": "ai-agents-risk-management",
+      "title": "AI Agents Risk Management",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 27,
+      "slug": "ai-agents-personalization",
+      "title": "AI Agents Personalization",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 28,
+      "slug": "ai-agents-documentation",
+      "title": "AI Agents Documentation",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 29,
+      "slug": "ai-agents-invoicing",
+      "title": "AI Agents Invoicing",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 30,
+      "slug": "ai-agents-ticketing",
+      "title": "AI Agents Ticketing",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 31,
+      "slug": "ai-agents-auditing",
+      "title": "AI Agents Auditing",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 32,
+      "slug": "ai-agents-monitoring",
+      "title": "AI Agents Monitoring",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 33,
+      "slug": "what-is-an-ai-agent-ai-agents",
+      "title": "What Is An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 34,
+      "slug": "how-does-an-ai-agent-ai-agents",
+      "title": "How Does An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 35,
+      "slug": "why-use-an-ai-agent-ai-agents",
+      "title": "Why Use An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 36,
+      "slug": "is-an-ai-agent-ai-agents",
+      "title": "Is An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 37,
+      "slug": "can-an-ai-agent-ai-agents",
+      "title": "Can An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 38,
+      "slug": "should-you-use-an-ai-agent-ai-agents",
+      "title": "Should You Use An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 39,
+      "slug": "how-to-choose-an-ai-agent-ai-agents",
+      "title": "How To Choose An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 40,
+      "slug": "how-secure-is-an-ai-agent-ai-agents",
+      "title": "How Secure Is An AI Agent AI Agents",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 41,
+      "slug": "ai-agents-examples-in-healthcare",
+      "title": "AI Agents Examples In Healthcare",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 42,
+      "slug": "ai-agents-examples-in-real-estate",
+      "title": "AI Agents Examples In Real Estate",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 43,
+      "slug": "ai-agents-examples-in-banking",
+      "title": "AI Agents Examples In Banking",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 44,
+      "slug": "ai-agents-examples-in-education",
+      "title": "AI Agents Examples In Education",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 45,
+      "slug": "ai-agents-examples-in-retail",
+      "title": "AI Agents Examples In Retail",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 46,
+      "slug": "ai-agents-examples-in-insurance",
+      "title": "AI Agents Examples In Insurance",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 47,
+      "slug": "ai-agents-examples-in-manufacturing",
+      "title": "AI Agents Examples In Manufacturing",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 48,
+      "slug": "ai-agents-examples-in-travel",
+      "title": "AI Agents Examples In Travel",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 49,
+      "slug": "ai-agents-examples-in-legal",
+      "title": "AI Agents Examples In Legal",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    },
+    {
+      "topicIndex": 50,
+      "slug": "ai-agents-examples-in-logistics",
+      "title": "AI Agents Examples In Logistics",
+      "pageClass": "cluster",
+      "pillarId": "p01"
+    }
+  ],
+  "draftedOverlay": [
+    {
+      "slug": "agentic-workflows"
+    },
+    {
+      "slug": "ai-agent-autonomy-levels"
+    },
+    {
+      "slug": "ai-agent-evaluation"
+    },
+    {
+      "slug": "ai-agent-memory"
+    },
+    {
+      "slug": "ai-agent-orchestration"
+    },
+    {
+      "slug": "ai-agent-tool-calling"
+    },
+    {
+      "slug": "human-in-the-loop-agents"
+    },
+    {
+      "slug": "multi-agent-systems"
+    }
+  ],
+  "contentRegistry": [
+    {
+      "inventoryId": "w0-editorial-methodology",
+      "slug": "editorial-methodology",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-evidence-methodology",
+      "slug": "evidence-methodology",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-rating-methodology",
+      "slug": "rating-methodology",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-comparison-methodology",
+      "slug": "comparison-methodology",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-corrections",
+      "slug": "corrections",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-source-classification",
+      "slug": "source-classification",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-affiliate-disclosure",
+      "slug": "affiliate-disclosure",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-author-reviewer-policy",
+      "slug": "author-reviewer-policy",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-privacy-dpdp-editorial",
+      "slug": "privacy-dpdp-editorial-policy",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "w0-freshness-policy",
+      "slug": "freshness-policy",
+      "lifecycleStatus": "approved",
+      "publicationEligible": true,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-pillar",
+      "slug": "ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "/what-are-ai-agents",
+        "/ai-agent-definition"
+      ]
+    },
+    {
+      "inventoryId": "p01-c01",
+      "slug": "ai-agents-for-startups",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c02",
+      "slug": "agentic-workflows",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "/agentic-workflow"
+      ]
+    },
+    {
+      "inventoryId": "p01-c03",
+      "slug": "ai-agents-vs-chatbots",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c04",
+      "slug": "ai-agents-for-solopreneurs",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c05",
+      "slug": "ai-agents-for-freelancers",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c06",
+      "slug": "ai-agents-for-students",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c07",
+      "slug": "ai-agents-for-developers",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c08",
+      "slug": "ai-agents-for-agencies",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c09",
+      "slug": "ai-agents-for-consultants",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c10",
+      "slug": "ai-agents-for-nonprofits",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c11",
+      "slug": "ai-agents-for-ctos",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c12",
+      "slug": "ai-agents-for-founders",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents-for-startups"
+      ]
+    },
+    {
+      "inventoryId": "p01-c13",
+      "slug": "ai-agents-automation",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c14",
+      "slug": "ai-agents-workflow",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "agentic-workflows"
+      ]
+    },
+    {
+      "inventoryId": "p01-c15",
+      "slug": "ai-agents-lead-generation",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c16",
+      "slug": "ai-agents-data-analysis",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c17",
+      "slug": "ai-agents-reporting",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c18",
+      "slug": "ai-agents-scheduling",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c19",
+      "slug": "ai-agents-onboarding",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c20",
+      "slug": "ai-agents-forecasting",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c21",
+      "slug": "ai-agents-compliance",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c22",
+      "slug": "ai-agents-research",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c23",
+      "slug": "ai-agents-content-creation",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c24",
+      "slug": "ai-agents-translation",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c25",
+      "slug": "ai-agents-fraud-detection",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c26",
+      "slug": "ai-agents-risk-management",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c27",
+      "slug": "ai-agents-personalization",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c28",
+      "slug": "ai-agents-documentation",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c29",
+      "slug": "ai-agents-invoicing",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c30",
+      "slug": "ai-agents-ticketing",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c31",
+      "slug": "ai-agents-auditing",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c32",
+      "slug": "ai-agents-monitoring",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c33",
+      "slug": "what-is-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents"
+      ]
+    },
+    {
+      "inventoryId": "p01-c34",
+      "slug": "how-does-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents"
+      ]
+    },
+    {
+      "inventoryId": "p01-c35",
+      "slug": "why-use-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents"
+      ]
+    },
+    {
+      "inventoryId": "p01-c36",
+      "slug": "is-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents"
+      ]
+    },
+    {
+      "inventoryId": "p01-c37",
+      "slug": "can-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents"
+      ]
+    },
+    {
+      "inventoryId": "p01-c38",
+      "slug": "should-you-use-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agents-vs-chatbots"
+      ]
+    },
+    {
+      "inventoryId": "p01-c39",
+      "slug": "how-to-choose-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agent-evaluation"
+      ]
+    },
+    {
+      "inventoryId": "p01-c40",
+      "slug": "how-secure-is-an-ai-agent-ai-agents",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": [
+        "ai-agent-evaluation"
+      ]
+    },
+    {
+      "inventoryId": "p01-c41",
+      "slug": "ai-agents-examples-in-healthcare",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c42",
+      "slug": "ai-agents-examples-in-real-estate",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c43",
+      "slug": "ai-agents-examples-in-banking",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c44",
+      "slug": "ai-agents-examples-in-education",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c45",
+      "slug": "ai-agents-examples-in-retail",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c46",
+      "slug": "ai-agents-examples-in-insurance",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c47",
+      "slug": "ai-agents-examples-in-manufacturing",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c48",
+      "slug": "ai-agents-examples-in-travel",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c49",
+      "slug": "ai-agents-examples-in-legal",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    },
+    {
+      "inventoryId": "p01-c50",
+      "slug": "ai-agents-examples-in-logistics",
+      "lifecycleStatus": "evidence_ready",
+      "publicationEligible": false,
+      "redirectFrom": []
+    }
+  ],
+  "summary": {
+    "physicalPages": {
+      "trust": 10,
+      "pillar": 1,
+      "cluster": 10
+    },
+    "authoritativeRecords": 51,
+    "draftedOverlay": 8,
+    "contentRegistry": 61
+  }
+}

@@ -1,0 +1,149 @@
+---
+slug: ai-agent-memory
+title: "AI Agent Memory — Working, Episodic, Semantic, and Procedural"
+description: "Evidence-backed guide to agent memory: the four layers (working, episodic, semantic, procedural), retrieval, freshness, and the failure modes of memory without governance."
+canonicalUrl: "https://bestaiagent.in/ai-agent-memory"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/agent-memory"
+primaryEntityIds:
+  - "concept:memory"
+sources:
+  - "LangGraph memory documentation (https://langchain-ai.github.io/langgraph/concepts/memory/)"
+  - "OpenAI — Function Calling documentation (https://platform.openai.com/docs/guides/function-calling)"
+---
+
+# AI Agent Memory
+
+## Direct answer (AEO)
+
+An AI agent's memory is the storage layer it reads from and writes to across steps, sessions, and users. We distinguish four layers: working memory (the current context window), episodic memory (a log of past steps or sessions), semantic memory (distilled facts and preferences), and procedural memory (rules and policies). Memory is not the model. Memory is the storage the agent queries.
+
+## Key takeaways
+
+- Memory is **storage**, not model weights.
+- Four layers cover most cases: **working, episodic, semantic, procedural**.
+- Every memory write needs a **freshness** and a **retention** policy; DPDP applies the moment memory stores Indian user data.
+- Memory without governance is how agents leak data across users.
+
+## The four layers
+
+### Working memory
+
+The context window of the current invocation. Bounded by the model's context limit. Lost when the invocation ends unless explicitly persisted.
+
+### Episodic memory
+
+A log of past steps or past sessions, retrieved on demand. Often stored in a vector database with semantic search. Used to give an agent continuity across turns or across sessions.
+
+### Semantic memory
+
+Distilled knowledge — preferences, facts, user profile — retrieved on demand. Updated when the agent learns something new. Often stored as structured records (a profile document) plus a vector index.
+
+### Procedural memory
+
+Rules and policies the agent follows. Often expressed as system prompts, but can be retrieved dynamically from a policy store. Distinct from episodic and semantic memory because the content changes rarely and is read more often than written.
+
+## What memory is for
+
+| Goal | Memory layer |
+|------|--------------|
+| "Remember what we discussed last turn" | Working |
+| "Remember what we discussed last week" | Episodic |
+| "Remember that the user prefers JSON output" | Semantic |
+| "Always escalate refund requests over $500 to a human" | Procedural |
+
+## Failure modes of memory without governance
+
+1. **Cross-user leakage.** One user's memory is retrieved for another user. Engineering control: namespace memory by user and check the namespace on every read.
+2. **Stale memory.** Memory that was true six months ago is no longer true. Engineering control: a freshness field on every record and a TTL on retrieval.
+3. **Memory poisoning.** A user writes a memory that influences future behaviour in a harmful way. Engineering control: validate and rate-limit memory writes; never let user input become a procedural rule without review.
+4. **Memory cost explosion.** Every retrieval is a vector search; every step may write. Engineering control: cap retrieval count per turn; cap write size; profile cost.
+5. **Compliance failure.** Memory stores Indian user data without a legal basis under DPDP. Engineering control: classify memory records by data class; obtain consent or another lawful basis before storing.
+
+## Memory under DPDP
+
+If memory stores Indian user data, the storage is part of the data fiduciary's processing. The agent vendor is typically a data processor. The data fiduciary is responsible for:
+
+- Consent before storage.
+- Data principal rights (access, correction, erasure).
+- Retention and deletion.
+- Cross-border transfer if the storage is outside India.
+
+We do not certify any vendor as DPDP-compliant; we cite the vendor's privacy documentation. See [](/trust/privacy-dpdp-editorial-policy).
+
+## Memory retrieval patterns
+
+| Pattern | When to use |
+|---------|-------------|
+| Always-in-context | Memory is small enough to fit in the system prompt |
+| Vector search | Episodic / semantic memory at scale |
+| Structured query | Procedural memory; user profile records |
+| Hybrid | Combine vector + structured for high-recall retrieval |
+
+## Vendors and frameworks
+
+- LangGraph memory — graph-native working and episodic memory primitives.
+- mem0 — managed episodic + semantic memory layer.
+- Zep — long-term memory for conversational agents.
+- OpenAI Assistants API — built-in thread / message / run state.
+
+We do not score these against each other on this page. The right choice depends on the workload and the team's operational maturity.
+
+## What we will not tell you
+
+- We will not tell you which memory vendor is "the best." The right choice depends on the workload, the retention policy, and the team's operational maturity.
+- We will not predict the cost of memory at scale. The cost is workload-dependent and we do not have the data.
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Tool calling](/ai-agent-tool-calling)
+- [Agentic workflows](/agentic-workflows)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Privacy and DPDP editorial policy](/trust/privacy-dpdp-editorial-policy)
+- [Evidence methodology](/trust/evidence-methodology)
+
+## Frequently asked questions
+
+### Does more memory make an agent smarter?
+
+Not necessarily. Memory makes an agent more consistent across turns or sessions. Whether the agent is "smart" depends on the underlying model and the memory retrieval quality, not the memory size.
+
+### Should memory be vector search or structured records?
+
+Use both. Vector search is good for fuzzy retrieval ("what did we discuss last time we talked about X?"). Structured records are good for precise retrieval ("what is the user's plan?"). A hybrid system combines the two.
+
+### How long should memory persist?
+
+Depends on the use case. Conversation memory is usually per-session. User profile memory persists for the lifetime of the account. Episodic memory (past sessions) is usually pruned after 30-90 days. Define a retention policy and document it.
+
+### Can memory contain PII?
+
+Yes — most production agent memory contains PII. The memory storage is part of the data fiduciary's processing under DPDP. Apply the same consent, retention, and deletion obligations you would to any other PII store.
+
+### What happens when memory and the model's knowledge disagree?
+
+Memory wins. The model is the reasoning engine; memory is the source of truth for the user. If memory says "the user's plan is X" and the model's prior knowledge says "users typically plan Y", follow memory. This is the entire point of memory.
+
+## Source receipts
+
+- LangGraph memory documentation (primary, retrieved 2026-08-22). Source for the graph-native memory primitives.
+- OpenAI Function Calling documentation (primary, retrieved 2026-08-22). Source for the tool-calling primitive that memory writes rely on.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

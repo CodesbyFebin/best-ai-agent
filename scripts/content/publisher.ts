@@ -148,7 +148,7 @@ function convertMarkdownToCleanHtml(markdown: string): string {
   html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
   
   // Handle bullet lists
-  html = html.replace(/^[\*\-] (.+)$/gm, '<li>$1</li>');
+  html = html.replace(/^[*-] (.+)$/gm, '<li>$1</li>');
   html = html.replace(/(<li>.*<\/li>\n?)/gs, '<ul>$1</ul>');
   
   // Convert multiple newlines to paragraph breaks

@@ -1,0 +1,175 @@
+---
+slug: ai-agent-tool-calling
+title: "AI Agent Tool Calling — The Primitive That Turns Models Into Agents"
+description: "Evidence-backed guide to tool calling: how models emit structured payloads, how applications dispatch them, and the engineering controls that keep tool calls safe."
+canonicalUrl: "https://bestaiagent.in/ai-agent-tool-calling"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/tool-calling"
+  - "/function-calling"
+primaryEntityIds:
+  - "concept:tool-calling"
+sources:
+  - "OpenAI — Function Calling documentation (https://platform.openai.com/docs/guides/function-calling)"
+  - "Model Context Protocol specification, revision 2025-06-18 (https://modelcontextprotocol.io/specification/2025-06-18)"
+---
+
+# AI Agent Tool Calling
+
+## Direct answer (AEO)
+
+Tool calling is the primitive that turns a language model into an agent. The model emits a structured payload describing a tool invocation; the application executes the call; the result returns to the model. The model does not execute the call itself. The application is responsible for validating the call, dispatching it, validating the result, and returning it to the model.
+
+## Key takeaways
+
+- The model returns a **payload**; the application executes the **call**.
+- Tool schemas are part of the contract; the model hallucinates less when the schema is precise.
+- Every tool call needs **validation** (inbound and outbound) and **observability**.
+- MCP standardises how tools are advertised and invoked. See [](/mcp) (when the MCP pillar ships).
+
+## How tool calling works
+
+```
+[Model] → emits tool_call payload
+[App]   → validates payload against tool schema
+[App]   → executes call against external system
+[App]   → validates result
+[App]   → returns result to model
+[Model] → reasons about result, decides next step
+```
+
+The key insight: the model never has network access. The application is the only thing that touches external systems.
+
+## The vendor-provided quote
+
+> "Function calling lets you connect models to external tools and APIs. The model does not execute the call — it returns a JSON payload the application then dispatches."
+> — [OpenAI Function Calling documentation](https://platform.openai.com/docs/guides/function-calling) (primary, retrieved 2026-08-22).
+
+The same primitive appears in every major provider's API:
+
+| Provider | Primitive name | Documentation |
+|----------|----------------|---------------|
+| OpenAI | Function calling / tool use | platform.openai.com/docs/guides/function-calling |
+| Anthropic | Tool use | docs.anthropic.com |
+| Google | Function calling | ai.google.dev |
+| Mistral | Function calling | docs.mistral.ai |
+| MCP | Tools | modelcontextprotocol.io/specification/2025-06-18 |
+
+## Tool schemas
+
+Every tool the model can call has a schema:
+
+- **Name** — what the model calls it.
+- **Description** — what the model thinks it does.
+- **Parameters** — the shape of the arguments the model must provide.
+- **Return type** — what the application will return.
+
+Schemas are part of the contract. The model hallucinates less when the schema is precise. The description is the model's only source of truth about the tool — write it for the model.
+
+## Inbound validation
+
+Before dispatching the tool call, validate the payload:
+
+- Required arguments present.
+- Argument types match the schema.
+- Argument values are within allowed ranges.
+- The user has permission to invoke this tool with these arguments.
+
+Reject invalid calls. Do not dispatch them.
+
+## Outbound validation
+
+Before returning the result to the model, validate the result:
+
+- Result shape matches the expected return type.
+- Result is not an error or an ambiguous value.
+- Result is safe to surface to the model (no prompt-injection content from untrusted sources).
+
+Reject results that fail validation. Return an error to the model and let it reason about the failure.
+
+## Engineering controls
+
+| Control | Why |
+|---------|-----|
+| Schema validation (in + out) | Reduces hallucination and silent corruption |
+| Per-tool permissioning | The agent can only call tools it has been granted |
+| Argument scrubbing | Strip secrets, PII, and untrusted content from arguments |
+| Result scrubbing | Strip prompt-injection content from results |
+| Rate limiting | Prevent runaway tool calls |
+| Logging | Every call, every result, every error, with correlation id |
+| HITL | Human review before consequential calls |
+
+## Failure modes
+
+1. **Model hallucinates a tool name.** The application returns a "tool not found" error; the model retries with a corrected name.
+2. **Model hallucinates arguments.** The application rejects the payload; the model retries with valid arguments.
+3. **Tool returns garbage.** The application rejects the result; the model reasons about the failure and either retries or escalates.
+4. **Tool call has side effects the model did not intend.** Engineering control: HITL for consequential tools; sandboxing for exploratory tools.
+
+## MCP standardisation
+
+The [Model Context Protocol specification, revision 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) standardises how tools are advertised (the `tools/list` method) and invoked (the `tools/call` method) so that a model and a tool server can communicate without bespoke integration code per pair. Ledger binding: `claim:mcp-revision-2025-06-18`. See [](/mcp) (when the MCP pillar ships in Wave 6).
+
+## What we will not tell you
+
+- We will not tell you which model is "the best" at tool calling. The right choice depends on the task and the tool schema complexity.
+- We will not predict the tool-call latency for your workload. Latency is workload-dependent and we do not have the data.
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Agentic workflows](/agentic-workflows)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Human-in-the-loop](/human-in-the-loop-agents)
+- [Memory](/ai-agent-memory)
+- [Evaluation](/ai-agent-evaluation) — evaluating tool-use capability
+- [Evidence methodology](/trust/evidence-methodology)
+- [AI agents for startups](/ai-agents-for-startups) — tool-calling patterns for early-stage teams
+
+## Frequently asked questions
+
+### Does the model ever execute tool calls directly?
+
+No. The model returns a payload; the application executes the call. The application is the only thing that touches external systems. This is the security boundary.
+
+### How do I prevent a model from hallucinating tool names?
+
+Use a tight tool schema and validate the tool name before dispatch. If the model hallucinates, the validation fails and the model retries with a corrected name (or escalates).
+
+### What if a tool call has destructive side effects?
+
+Put the tool behind a HITL checkpoint. See [](/human-in-the-loop-agents). For exploratory tasks, run the tool in a sandboxed environment.
+
+### Can a model call multiple tools in one turn?
+
+Yes. Modern tool-calling APIs support parallel tool calls in a single response. The application dispatches them in parallel and returns the results. This is faster but harder to debug — validate and log each call independently.
+
+### Should I expose every API endpoint as a tool?
+
+No. Expose only the endpoints the agent needs. Each tool is a permission grant. The narrower the tool surface, the smaller the blast radius if the model misuses a tool.
+
+### How do I version tool schemas?
+
+Version every tool schema. When the schema changes, the agent framework must be told. Mismatched schemas are a common source of silent failures.
+
+## Source receipts
+
+- OpenAI Function Calling documentation (primary, retrieved 2026-08-22). Source for the tool-calling primitive definition.
+- Model Context Protocol specification, revision 2025-06-18 (primary, retrieved 2026-08-22). Source for the MCP standardisation of tool advertisement and invocation.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

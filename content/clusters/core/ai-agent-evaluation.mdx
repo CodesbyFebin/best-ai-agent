@@ -1,0 +1,155 @@
+---
+slug: ai-agent-evaluation
+title: "AI Agent Evaluation — How to Tell Whether an Agent Actually Works"
+description: "Evidence-backed guide to agent evaluation: offline test sets, online evaluation, golden trajectories, LLM-as-judge, and what we score on this site."
+canonicalUrl: "https://bestaiagent.in/ai-agent-evaluation"
+pillarGroup: core
+pageClass: cluster
+lifecycleStatus: evidence_ready
+publicationEligible: false
+parentPillar: ai-agents
+lifecycleVersion: 2026-08-22
+requiredEvidenceClass: STANDARD
+lastReviewed: 2026-08-22
+nextReviewDue: 2027-02-22
+author: "BestAIAgent.in editorial team"
+reviewer: "BestAIAgent.in editorial board"
+redirectFrom:
+  - "/agent-eval"
+primaryEntityIds:
+  - "concept:evaluation"
+sources:
+  - "Internal — src/data/evidenceSchema.ts (QualityScore, calculateQualityScore)"
+  - "Internal — src/content/registry/evidence-ledger.ts"
+---
+
+# AI Agent Evaluation
+
+## Direct answer (AEO)
+
+Agent evaluation measures whether an agent solves the intended task under realistic conditions. We distinguish offline evaluation (a curated test set run against a frozen agent version) from online evaluation (live traffic monitored with a judge). Every numeric score on this site traces to receipts in our evidence ledger and obeys the gates in [](/trust/evidence-methodology).
+
+## Key takeaways
+
+- Evaluation is not a single number. It is a **process** with declared methodology, evidence, and freshness.
+- Offline evaluation catches regressions; online evaluation catches distribution shift.
+- **LLM-as-judge** is useful but biased. The right pattern is to combine it with human review and rule-based checks.
+- Every evaluation should produce a **trajectory** — the full sequence of reasoning steps and tool calls — not just a final answer.
+
+## What evaluation measures
+
+| Dimension | What it measures | How |
+|-----------|------------------|-----|
+| **Task success** | Did the agent produce the correct outcome? | Compare to ground truth |
+| **Trajectory quality** | Was the path to the outcome reasonable? | Compare to a golden trajectory or to a judge |
+| **Tool-use correctness** | Did the agent call the right tools with valid arguments? | Validate against the tool schema |
+| **Latency** | How long did the task take? | Measure wall-clock time |
+| **Cost** | How much did the task cost in tokens and tool calls? | Sum the costs |
+| **Safety** | Did the agent take any action outside its permission envelope? | Audit the trajectory |
+| **Robustness** | Does the agent handle distribution shift? | Evaluate on held-out and adversarial sets |
+
+## Offline vs. online evaluation
+
+### Offline
+
+- A curated test set of tasks.
+- A frozen agent version.
+- A judge (rule-based, human, or LLM-as-judge).
+- A declared scoring rubric.
+
+Offline evaluation catches regressions before deployment. It does not catch distribution shift in production.
+
+### Online
+
+- Live traffic.
+- A judge on a sample of trajectories.
+- A/B comparison against a baseline.
+- A monitor for distribution shift (input drift, output drift, tool-call drift).
+
+Online evaluation catches what offline evaluation misses. It is more expensive and slower to act on.
+
+## The trajectory is the artifact
+
+A good evaluation captures the full trajectory — every reasoning step, every tool call, every result — not just the final answer. The trajectory is what you debug, audit, and feed to a judge.
+
+If your agent framework does not produce a structured trajectory, your evaluation will be shallow. Refactor the agent to log trajectories before you invest in evaluation infrastructure.
+
+## LLM-as-judge
+
+LLM-as-judge is a pattern in which a model evaluates the output of another model. It is useful but biased:
+
+- The judge may favour outputs that look like its own outputs.
+- The judge may miss factual errors in long outputs.
+- The judge may be sensitive to prompt wording.
+
+The right pattern is to combine LLM-as-judge with:
+
+- **Rule-based checks** for objective properties (schema validity, argument types, output format).
+- **Human review** on a sample, calibrated against the LLM-as-judge.
+- **Reference comparisons** against a golden trajectory when one exists.
+
+## What we score on this site
+
+Every entity profile and comparison page on this site declares:
+
+- The dimensions being scored.
+- The weight of each dimension.
+- The evidence window for each numeric value.
+- The methodology that produced the score.
+
+The score is derived by `calculateQualityScore` in `src/data/evidenceSchema.ts`, which aggregates evidence coverage, source authority, freshness, contradiction risk, intent satisfaction, and entity coverage. See [](/trust/rating-methodology).
+
+## What we will not score
+
+- Adoption or popularity (no audited measurement).
+- "Best in class" without a declared methodology and weight set.
+- Vendor trust or security certification without access to the certification document.
+- User satisfaction or review scores without a verified sample and methodology.
+- Latency, uptime, or cost without our own measurement or a cited primary source.
+
+When a metric is unavailable we say so plainly. See [](/trust/rating-methodology).
+
+## Related pages
+
+- [AI agents pillar](/ai-agents)
+- [Tool calling](/ai-agent-tool-calling)
+- [Agentic workflows](/agentic-workflows)
+- [Multi-agent systems](/multi-agent-systems)
+- [Orchestration](/ai-agent-orchestration)
+- [Autonomy levels](/ai-agent-autonomy-levels)
+- [Rating methodology](/trust/rating-methodology)
+- [Evidence methodology](/trust/evidence-methodology)
+- [Comparison methodology](/trust/comparison-methodology)
+
+## Frequently asked questions
+
+### What's the difference between evaluation and benchmarking?
+
+Evaluation measures whether the agent solves the intended task. Benchmarking measures how the agent performs against a fixed suite of tasks. Benchmarking is a subset of evaluation; evaluation includes task-specific scoring that benchmarks do not.
+
+### Is LLM-as-judge enough?
+
+No. LLM-as-judge is biased (favours outputs that look like its own, misses long-output errors, is prompt-sensitive). The right pattern is LLM-as-judge combined with rule-based checks, human review on a sample, and reference comparisons where possible.
+
+### How do I build an evaluation set?
+
+Start with the most common user task. Add a sample of past failures. Add adversarial cases. Hold out 20% as a test set you never train on. Update the set as the product evolves.
+
+### Should I evaluate every prompt change?
+
+Yes — offline, on the held-out set. The change may improve the average case and regress an edge case; only the test set catches it.
+
+### How do I evaluate an agent I can't reproduce locally?
+
+Use the vendor's evaluation suite if available; cross-check with a small set of your own tasks. Document the gap and the risk. See [](/trust/rating-methodology) for how this site's scores account for that gap.
+
+## Source receipts
+
+- Internal — `src/data/evidenceSchema.ts` (`QualityScore`, `calculateQualityScore`, retrieved 2026-08-22). The score function referenced on this page.
+- Internal — `src/content/registry/evidence-ledger.ts` (retrieved 2026-08-22). The receipt store that backs every score.
+
+## Last reviewed
+
+- Page last reviewed: 2026-08-22
+- Next scheduled review: 2027-02-22
+- Reviewer: BestAIAgent.in editorial board

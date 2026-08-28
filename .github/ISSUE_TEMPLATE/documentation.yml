@@ -1,0 +1,59 @@
+name: Documentation / evidence dispute
+description: Report an inaccurate claim, broken doc, or stale fact — including evidence disputes
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to correct documentation, fix a broken link, or **dispute an evidence receipt** you believe is wrong.
+        Evidence disputes are welcome and encouraged — this project's whole value is that every claim traces to a real source.
+  - type: input
+    id: page
+    attributes:
+      label: Page / file (URL or path)
+      placeholder: "/agents/cursor  ·  docs/ARCHITECTURE.md  ·  evidence/phase-c1/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options:
+        - Factually inaccurate claim
+        - Evidence receipt is wrong / outdated / stale
+        - Broken link / 404 / redirect
+        - Stale doc (counts, version, file refs)
+        - Typo / copy
+        - Missing documentation
+        - Other (describe)
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong, precisely?
+      description: Quote the exact sentence or claim. If it's an evidence receipt, give the `EvidenceClaim` id.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Correct evidence / source
+      description: |
+        Link the primary source that contradicts or supersedes the current claim.
+        Include `retrievedAt` (today's date) if you are proposing a new receipt.
+      placeholder: |
+        Source: https://...
+        Retrieved: 2026-08-20
+        Correction: ...
+    validations:
+      required: true
+  - type: checkboxes
+    id: stash-read
+    attributes:
+      label: Checks
+      options:
+        - label: I am reporting from a primary source (vendor docs / upstream repo / official page), not from a secondary blog or AI summary.
+          required: true
+        - label: This correction does not introduce invented metrics, "verified" badges, or claims without a source.
+          required: true

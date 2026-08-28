@@ -17,7 +17,7 @@ assert('Master sitemap returns non-empty string', typeof indexXml === 'string' &
 assert('Master sitemap contains <sitemapindex> tag', indexXml.includes('<sitemapindex'));
 assert('Master sitemap is well-formed XML (declaration)', indexXml.startsWith('<?xml'));
 assert('Master sitemap closes </sitemapindex>', indexXml.includes('</sitemapindex>'));
-const locMatches = indexXml.match(/<loc>([^<]+)<\/loc>/g) || [];
+const locMatches: string[] = indexXml.match(/<loc>([^<]+)<\/loc>/g) ?? [];
 assert('Master sitemap references >= 6 segmented sitemaps', locMatches.length >= 6, `found ${locMatches.length}`);
 console.log(`\nMaster sitemap references ${locMatches.length} child sitemaps:`);
 locMatches.forEach(m => console.log(`  ${m.replace(/<\/?loc>/g, '')}`));
